@@ -3,7 +3,7 @@
 ## 前端跟踪
 
 ### 1.代码逻辑结构
-[](https://github.com/MRwangmaomao/VSLAM/blob/master/DSO/pic/code_structure.png)
+[代码整体架构](https://github.com/MRwangmaomao/VSLAM/blob/master/DSO/pic/code_structure.png)
 
 ### 2.数据结构
 
