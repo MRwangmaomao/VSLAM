@@ -1,0 +1,102 @@
+\hypertarget{optimization__algorithm__factory_8h}{}\section{Thirdparty/g2o/g2o/core/optimization\+\_\+algorithm\+\_\+factory.h File Reference}
+\label{optimization__algorithm__factory_8h}\index{Thirdparty/g2o/g2o/core/optimization\+\_\+algorithm\+\_\+factory.\+h@{Thirdparty/g2o/g2o/core/optimization\+\_\+algorithm\+\_\+factory.\+h}}
+{\ttfamily \#include \char`\"{}../../config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../stuff/misc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}optimization\+\_\+algorithm\+\_\+property.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include \char`\"{}g2o\+\_\+core\+\_\+api.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator}{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}}
+\begin{DoxyCompactList}\small\item\em base for allocating an optimization algorithm \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory}{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\begin{DoxyCompactList}\small\item\em create solvers based on their short name \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_register_optimization_algorithm_proxy}{g2o\+::\+Register\+Optimization\+Algorithm\+Proxy}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceg2o}{g2o}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{optimization__algorithm__factory_8h_a3f15543b2516d363adadc2a2b0eec964}{G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT}}
+\item 
+\#define \mbox{\hyperlink{optimization__algorithm__factory_8h_aa5041852f640092de125618ac6e67b14}{G2\+O\+\_\+\+O\+A\+F\+\_\+\+I\+M\+P\+O\+RT}}
+\item 
+\#define \mbox{\hyperlink{optimization__algorithm__factory_8h_a6f269806c32a948fabdc63ce3a2a0d6f}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY}}(libraryname)~extern \char`\"{}C\char`\"{} void \mbox{\hyperlink{optimization__algorithm__factory_8h_a3f15543b2516d363adadc2a2b0eec964}{G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT}} g2o\+\_\+optimization\+\_\+library\+\_\+\#\#libraryname(void) \{\}
+\item 
+\#define \mbox{\hyperlink{optimization__algorithm__factory_8h_ae57d464827ff178ae08cb64e93e12cf6}{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY}}(libraryname)
+\item 
+\#define \mbox{\hyperlink{optimization__algorithm__factory_8h_a706f71c4292e3540e2e9608c5b0e9be1}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}(optimizername,  instance)
+\item 
+\#define \mbox{\hyperlink{optimization__algorithm__factory_8h_a5e2ec0694bdcbe2d89c3194b017dc6a0}{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}(optimizername)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{namespaceg2o_a3beb17b066b63dedd1d49fe5c8db1b3e}{g2o\+::\+Optimization\+Algorithm}}
+\item 
+class \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{namespaceg2o_a9b3a9d8e71f5779358eaa12ed7cb8b4c}{g2o\+::\+Sparse\+Optimizer}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{optimization__algorithm__factory_8h_a3f15543b2516d363adadc2a2b0eec964}\label{optimization__algorithm__factory_8h_a3f15543b2516d363adadc2a2b0eec964}} 
+\index{optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}!G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT@{G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT}}
+\index{G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT@{G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT}!optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT}{G2O\_OAF\_EXPORT}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT}
+
+\mbox{\Hypertarget{optimization__algorithm__factory_8h_aa5041852f640092de125618ac6e67b14}\label{optimization__algorithm__factory_8h_aa5041852f640092de125618ac6e67b14}} 
+\index{optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}!G2\+O\+\_\+\+O\+A\+F\+\_\+\+I\+M\+P\+O\+RT@{G2\+O\+\_\+\+O\+A\+F\+\_\+\+I\+M\+P\+O\+RT}}
+\index{G2\+O\+\_\+\+O\+A\+F\+\_\+\+I\+M\+P\+O\+RT@{G2\+O\+\_\+\+O\+A\+F\+\_\+\+I\+M\+P\+O\+RT}!optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+O\+A\+F\+\_\+\+I\+M\+P\+O\+RT}{G2O\_OAF\_IMPORT}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+O\+A\+F\+\_\+\+I\+M\+P\+O\+RT}
+
+\mbox{\Hypertarget{optimization__algorithm__factory_8h_a706f71c4292e3540e2e9608c5b0e9be1}\label{optimization__algorithm__factory_8h_a706f71c4292e3540e2e9608c5b0e9be1}} 
+\index{optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}!optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}{G2O\_REGISTER\_OPTIMIZATION\_ALGORITHM}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM(\begin{DoxyParamCaption}\item[{}]{optimizername,  }\item[{}]{instance }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \mbox{\hyperlink{optimization__algorithm__factory_8h_a3f15543b2516d363adadc2a2b0eec964}{G2O\_OAF\_EXPORT}} g2o\_optimization\_algorithm\_##optimizername(\textcolor{keywordtype}{void}) \{\} \(\backslash\)
+    static \mbox{\hyperlink{classg2o_1_1_register_optimization_algorithm_proxy}{g2o::RegisterOptimizationAlgorithmProxy}} 
+      g\_optimization\_algorithm\_proxy\_##optimizername(instance);
+\end{DoxyCode}
+\mbox{\Hypertarget{optimization__algorithm__factory_8h_a6f269806c32a948fabdc63ce3a2a0d6f}\label{optimization__algorithm__factory_8h_a6f269806c32a948fabdc63ce3a2a0d6f}} 
+\index{optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY}!optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY}{G2O\_REGISTER\_OPTIMIZATION\_LIBRARY}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY(\begin{DoxyParamCaption}\item[{}]{libraryname }\end{DoxyParamCaption})~extern \char`\"{}C\char`\"{} void \mbox{\hyperlink{optimization__algorithm__factory_8h_a3f15543b2516d363adadc2a2b0eec964}{G2\+O\+\_\+\+O\+A\+F\+\_\+\+E\+X\+P\+O\+RT}} g2o\+\_\+optimization\+\_\+library\+\_\+\#\#libraryname(void) \{\}}
+
+\mbox{\Hypertarget{optimization__algorithm__factory_8h_a5e2ec0694bdcbe2d89c3194b017dc6a0}\label{optimization__algorithm__factory_8h_a5e2ec0694bdcbe2d89c3194b017dc6a0}} 
+\index{optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}!G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}}
+\index{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}!optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM}{G2O\_USE\_OPTIMIZATION\_ALGORITHM}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+L\+G\+O\+R\+I\+T\+HM(\begin{DoxyParamCaption}\item[{}]{optimizername }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \mbox{\hyperlink{optimization__algorithm__factory_8h_aa5041852f640092de125618ac6e67b14}{G2O\_OAF\_IMPORT}} g2o\_optimization\_algorithm\_##optimizername(\textcolor{keywordtype}{void}); \(\backslash\)
+    static \mbox{\hyperlink{structg2o_1_1_force_linker}{g2o::ForceLinker}} g2o\_force\_optimization\_algorithm\_link\_##optimizername(
+      g2o\_optimization\_algorithm\_##optimizername);
+\end{DoxyCode}
+\mbox{\Hypertarget{optimization__algorithm__factory_8h_ae57d464827ff178ae08cb64e93e12cf6}\label{optimization__algorithm__factory_8h_ae57d464827ff178ae08cb64e93e12cf6}} 
+\index{optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}!G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY}}
+\index{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY}!optimization\+\_\+algorithm\+\_\+factory.\+h@{optimization\+\_\+algorithm\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY}{G2O\_USE\_OPTIMIZATION\_LIBRARY}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+U\+S\+E\+\_\+\+O\+P\+T\+I\+M\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+L\+I\+B\+R\+A\+RY(\begin{DoxyParamCaption}\item[{}]{libraryname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \mbox{\hyperlink{optimization__algorithm__factory_8h_aa5041852f640092de125618ac6e67b14}{G2O\_OAF\_IMPORT}} g2o\_optimization\_library\_##libraryname(\textcolor{keywordtype}{void}); \(\backslash\)
+    static \mbox{\hyperlink{structg2o_1_1_force_linker}{g2o::ForceLinker}} g2o\_force\_optimization\_algorithm\_library\_##libraryname(
+      g2o\_optimization\_library\_##libraryname);
+\end{DoxyCode}

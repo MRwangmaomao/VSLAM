@@ -1,0 +1,187 @@
+\hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z}{}\section{g2o\+:\+:Edge\+S\+E3\+Project\+X\+YZ Class Reference}
+\label{classg2o_1_1_edge_s_e3_project_x_y_z}\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+
+
+N\+O\+TE uesd in Optimizer\+::\+Bundle\+Adjustment(), Optimizer\+::\+Local\+Bundle\+Adjustment()  
+
+
+
+
+{\ttfamily \#include $<$types\+\_\+six\+\_\+dof\+\_\+expmap.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Edge\+S\+E3\+Project\+X\+YZ\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classg2o_1_1_edge_s_e3_project_x_y_z}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_acdf6cb451767e46e7bbd6a180782feb8}{Edge\+S\+E3\+Project\+X\+YZ}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_a04200f3d6b7fbd47961df696f1ee34ed}{read}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_ad2c5fe36901961700eaa9f38cc4b21ca}{write}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_a79a763e1d42fe9eb5732abe59c7723d9}{compute\+Error}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_a603cc0018b5b05fd193e84e032a66d07}{is\+Depth\+Positive}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_a7454e89740635d782c9e4efaef35ec44}{linearize\+Oplus}} ()
+\begin{DoxyCompactList}\small\item\em Linearization. \end{DoxyCompactList}\item 
+Vector2d \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_ab6d57a3a8bbeafb3405ea39c98dca768}{cam\+\_\+project}} (const Vector3d \&trans\+\_\+xyz) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_a6af0a48bd4e21d060585d7ee9c1ca1ef}{fx}}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_af5f931cd13ef318a3f42f54aa57b9466}{fy}}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_ace052104b07ec272eb5f254254ead5e5}{cx}}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_af590c37d535ce7e71be5ce4ae368e9c1}{cy}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+N\+O\+TE uesd in Optimizer\+::\+Bundle\+Adjustment(), Optimizer\+::\+Local\+Bundle\+Adjustment() 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_acdf6cb451767e46e7bbd6a180782feb8}\label{classg2o_1_1_edge_s_e3_project_x_y_z_acdf6cb451767e46e7bbd6a180782feb8}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!Edge\+S\+E3\+Project\+X\+YZ@{Edge\+S\+E3\+Project\+X\+YZ}}
+\index{Edge\+S\+E3\+Project\+X\+YZ@{Edge\+S\+E3\+Project\+X\+YZ}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{Edge\+S\+E3\+Project\+X\+Y\+Z()}{EdgeSE3ProjectXYZ()}}
+{\footnotesize\ttfamily g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::\+Edge\+S\+E3\+Project\+X\+YZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_ab6d57a3a8bbeafb3405ea39c98dca768}\label{classg2o_1_1_edge_s_e3_project_x_y_z_ab6d57a3a8bbeafb3405ea39c98dca768}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!cam\+\_\+project@{cam\+\_\+project}}
+\index{cam\+\_\+project@{cam\+\_\+project}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{cam\+\_\+project()}{cam\_project()}}
+{\footnotesize\ttfamily Vector2d g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::cam\+\_\+project (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{trans\+\_\+xyz }\end{DoxyParamCaption}) const}
+
+将\+Xw投影到cam的图像坐标系 ~\newline
+ $ u = \frac{f_x X}{Z} + c_x $ ~\newline
+ $ v = \frac{f_y Y}{Z} + c_v $ ~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em trans\+\_\+xyz} & \mbox{[}X Y Z\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}u v\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_a79a763e1d42fe9eb5732abe59c7723d9}\label{classg2o_1_1_edge_s_e3_project_x_y_z_a79a763e1d42fe9eb5732abe59c7723d9}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!compute\+Error@{compute\+Error}}
+\index{compute\+Error@{compute\+Error}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{compute\+Error()}{computeError()}}
+{\footnotesize\ttfamily void g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::compute\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+重投影误差 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a1e6d9f4128866982de5e11e03edd7775}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_a603cc0018b5b05fd193e84e032a66d07}\label{classg2o_1_1_edge_s_e3_project_x_y_z_a603cc0018b5b05fd193e84e032a66d07}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!is\+Depth\+Positive@{is\+Depth\+Positive}}
+\index{is\+Depth\+Positive@{is\+Depth\+Positive}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{is\+Depth\+Positive()}{isDepthPositive()}}
+{\footnotesize\ttfamily bool g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::is\+Depth\+Positive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+检验 $ TX_w $的\+Z是否大于0 \begin{DoxyReturn}{Returns}
+true if the depth is Positive 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_a7454e89740635d782c9e4efaef35ec44}\label{classg2o_1_1_edge_s_e3_project_x_y_z_a7454e89740635d782c9e4efaef35ec44}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{linearize\+Oplus()}{linearizeOplus()}}
+{\footnotesize\ttfamily void g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::linearize\+Oplus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Linearization. 
+
+误差函数对\mbox{[}X Y Z\mbox{]}和增量\mbox{[}w1 w2 w3 v1 v2 v3\mbox{]}求雅克比矩阵 ~\newline
+ $Ji_{2\times3} = \frac{\partial [obs - \Pi(exp(\hat{\xi}) T X_w)]}{\partial X_w} $ ~\newline
+ $Jj_{2\times6} = \frac{\partial [obs - \Pi(exp(\hat{\xi}) T X_w)]}{\partial \xi} $ ~\newline
+\begin{DoxyNote}{Note}
+\+\_\+jacobian\+Oplus\+Xi，\+\_\+jacobian\+Oplus\+Xj 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+采用链式法则求解, 参考(注意以下参考的增量定义为\mbox{[}v1 v2 v3 w1 w2 w3\mbox{]})
+\begin{DoxyItemize}
+\item jlblanco2010geometry3d\+\_\+techrep.\+pdf p56 (A.\+2) 推荐
+\item strasdat\+\_\+thesis\+\_\+2012.\+pdf p194 (B.\+4)
+\end{DoxyItemize}
+\end{DoxySeeAlso}
+线性化, 即同时对重投影误差分别关于位姿vj和路标vi求雅克比矩阵.
+
+\+\_\+jacobian\+Oplus\+Xj是重投影误差关于位姿vj的导数 \+\_\+jacobian\+Oplus\+Xi是重投影误差关于路标vi的导数 xyz即路标在世界坐标系下的三维坐标, xyz\+\_\+trans是路标在相机坐标系下的三维坐标. map()函数就是通过位姿T=\mbox{[}R$\vert$t\mbox{]}进行坐标系映射. 
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_base_binary_edge_af0fb8a693c8c7996fa65566e7263fbc4}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_a04200f3d6b7fbd47961df696f1ee34ed}\label{classg2o_1_1_edge_s_e3_project_x_y_z_a04200f3d6b7fbd47961df696f1ee34ed}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!read@{read}}
+\index{read@{read}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a30cf69b762a06aa35e796d8af71632b0}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_ad2c5fe36901961700eaa9f38cc4b21ca}\label{classg2o_1_1_edge_s_e3_project_x_y_z_ad2c5fe36901961700eaa9f38cc4b21ca}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!write@{write}}
+\index{write@{write}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily bool g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+write the vertex to a stream 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a804b9a2178249b9297c55b8fbbeda56e}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_ace052104b07ec272eb5f254254ead5e5}\label{classg2o_1_1_edge_s_e3_project_x_y_z_ace052104b07ec272eb5f254254ead5e5}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!cx@{cx}}
+\index{cx@{cx}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{cx}{cx}}
+{\footnotesize\ttfamily double g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::cx}
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_af590c37d535ce7e71be5ce4ae368e9c1}\label{classg2o_1_1_edge_s_e3_project_x_y_z_af590c37d535ce7e71be5ce4ae368e9c1}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!cy@{cy}}
+\index{cy@{cy}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{cy}{cy}}
+{\footnotesize\ttfamily double g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::cy}
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_a6af0a48bd4e21d060585d7ee9c1ca1ef}\label{classg2o_1_1_edge_s_e3_project_x_y_z_a6af0a48bd4e21d060585d7ee9c1ca1ef}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!fx@{fx}}
+\index{fx@{fx}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{fx}{fx}}
+{\footnotesize\ttfamily double g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::fx}
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_af5f931cd13ef318a3f42f54aa57b9466}\label{classg2o_1_1_edge_s_e3_project_x_y_z_af5f931cd13ef318a3f42f54aa57b9466}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}!fy@{fy}}
+\index{fy@{fy}!g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ@{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}
+\subsubsection{\texorpdfstring{fy}{fy}}
+{\footnotesize\ttfamily double g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+::fy}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{types__six__dof__expmap_8h}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+h}}\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{types__six__dof__expmap_8cpp}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp}}\end{DoxyCompactItemize}

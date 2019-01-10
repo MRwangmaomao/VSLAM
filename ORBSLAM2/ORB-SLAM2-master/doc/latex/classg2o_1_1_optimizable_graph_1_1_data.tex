@@ -1,0 +1,139 @@
+\hypertarget{classg2o_1_1_optimizable_graph_1_1_data}{}\section{g2o\+:\+:Optimizable\+Graph\+:\+:Data Class Reference}
+\label{classg2o_1_1_optimizable_graph_1_1_data}\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+
+
+data packet for a vertex. Extend this class to store in the vertices the potential additional information you need (e.\+g. images, laser scans, ...).  
+
+
+
+
+{\ttfamily \#include $<$optimizable\+\_\+graph.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Optimizable\+Graph\+:\+:Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_optimizable_graph_1_1_data}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_aa81fb1975f34e3aaf4c5110f7778a54e}{$\sim$\+Data}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_a647b9fcb65aa8309f7103635135ea513}{Data}} ()
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_a4a206c86daba1b47425199befd2e1ed4}{read}} (std\+::istream \&is)=0
+\begin{DoxyCompactList}\small\item\em read the data from a stream \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_ad80cd8ea8013c54c766684ec0ef3daa3}{write}} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em write the data to a stream \end{DoxyCompactList}\item 
+virtual Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_aa98d48f62d4c620cb62fbaeb1775389b}{element\+Type}} () const
+\item 
+const \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_a1e36ab8bfbbd4df1639338330bbaaf3c}{next}} () const
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_af9c0427357f1e81f9008c3173fddf34c}{next}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_a5811aac3f8eab3c19207663e946b343b}{set\+Next}} (\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$next\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_a8e0569f2b8cb8400d3eada1bd13c0ccb}{\+\_\+next}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data_a45d35331ee3deca38c26d1efb6b961ae}{Optimizable\+Graph}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+data packet for a vertex. Extend this class to store in the vertices the potential additional information you need (e.\+g. images, laser scans, ...). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_aa81fb1975f34e3aaf4c5110f7778a54e}\label{classg2o_1_1_optimizable_graph_1_1_data_aa81fb1975f34e3aaf4c5110f7778a54e}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!````~Data@{$\sim$\+Data}}
+\index{````~Data@{$\sim$\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{$\sim$\+Data()}{~Data()}}
+{\footnotesize\ttfamily g2o\+::\+Optimizable\+Graph\+::\+Data\+::$\sim$\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_a647b9fcb65aa8309f7103635135ea513}\label{classg2o_1_1_optimizable_graph_1_1_data_a647b9fcb65aa8309f7103635135ea513}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!Data@{Data}}
+\index{Data@{Data}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{Data()}{Data()}}
+{\footnotesize\ttfamily g2o\+::\+Optimizable\+Graph\+::\+Data\+::\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_aa98d48f62d4c620cb62fbaeb1775389b}\label{classg2o_1_1_optimizable_graph_1_1_data_aa98d48f62d4c620cb62fbaeb1775389b}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{element\+Type()}{elementType()}}
+{\footnotesize\ttfamily virtual Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type g2o\+::\+Optimizable\+Graph\+::\+Data\+::element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+returns the type of the graph element, see Hyper\+Graph\+Element\+Type 
+
+Implements \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element_a1a9d7b748698c09d202373e06e413ef2}{g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph\+Element}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_a1e36ab8bfbbd4df1639338330bbaaf3c}\label{classg2o_1_1_optimizable_graph_1_1_data_a1e36ab8bfbbd4df1639338330bbaaf3c}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!next@{next}}
+\index{next@{next}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Data\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_af9c0427357f1e81f9008c3173fddf34c}\label{classg2o_1_1_optimizable_graph_1_1_data_af9c0427357f1e81f9008c3173fddf34c}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!next@{next}}
+\index{next@{next}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{next()}{next()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Data\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_a4a206c86daba1b47425199befd2e1ed4}\label{classg2o_1_1_optimizable_graph_1_1_data_a4a206c86daba1b47425199befd2e1ed4}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!read@{read}}
+\index{read@{read}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimizable\+Graph\+::\+Data\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+read the data from a stream 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_a5811aac3f8eab3c19207663e946b343b}\label{classg2o_1_1_optimizable_graph_1_1_data_a5811aac3f8eab3c19207663e946b343b}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{set\+Next()}{setNext()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Data\+::set\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$}]{next\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_ad80cd8ea8013c54c766684ec0ef3daa3}\label{classg2o_1_1_optimizable_graph_1_1_data_ad80cd8ea8013c54c766684ec0ef3daa3}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!write@{write}}
+\index{write@{write}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimizable\+Graph\+::\+Data\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+write the data to a stream 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_a45d35331ee3deca38c26d1efb6b961ae}\label{classg2o_1_1_optimizable_graph_1_1_data_a45d35331ee3deca38c26d1efb6b961ae}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!Optimizable\+Graph@{Optimizable\+Graph}}
+\index{Optimizable\+Graph@{Optimizable\+Graph}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{Optimizable\+Graph}{OptimizableGraph}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_data_a8e0569f2b8cb8400d3eada1bd13c0ccb}\label{classg2o_1_1_optimizable_graph_1_1_data_a8e0569f2b8cb8400d3eada1bd13c0ccb}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}!\+\_\+next@{\+\_\+next}}
+\index{\+\_\+next@{\+\_\+next}!g2o\+::\+Optimizable\+Graph\+::\+Data@{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\subsubsection{\texorpdfstring{\+\_\+next}{\_next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Data\+::\+\_\+next\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimizable__graph_8h}{optimizable\+\_\+graph.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimizable__graph_8cpp}{optimizable\+\_\+graph.\+cpp}}\end{DoxyCompactItemize}

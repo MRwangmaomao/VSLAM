@@ -1,0 +1,111 @@
+\hypertarget{classg2o_1_1_robust_kernel}{}\section{g2o\+:\+:Robust\+Kernel Class Reference}
+\label{classg2o_1_1_robust_kernel}\index{g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}}
+
+
+base for all robust cost functions  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Robust\+Kernel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.804020cm]{classg2o_1_1_robust_kernel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_robust_kernel_ae4f7b1e9d0c9925f98c0b828f554a8ab}{Robust\+Kernel}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_robust_kernel_aabd6883d9c5e33b567453585a80c7ad8}{Robust\+Kernel}} (double \mbox{\hyperlink{classg2o_1_1_robust_kernel_affb1dacfd8507540281ff3af2ae6eeb8}{delta}})
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_robust_kernel_a2d0512646603b993efdfc782df0e6df2}{$\sim$\+Robust\+Kernel}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_robust_kernel_ab47b071a0cfe466be063f0104bc41d0f}{robustify}} (double squared\+Error, Eigen\+::\+Vector3d \&rho) const =0
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_robust_kernel_a8d85269635c436fca51324d7cb16a798}{set\+Delta}} (double \mbox{\hyperlink{classg2o_1_1_robust_kernel_affb1dacfd8507540281ff3af2ae6eeb8}{delta}})
+\item 
+double \mbox{\hyperlink{classg2o_1_1_robust_kernel_affb1dacfd8507540281ff3af2ae6eeb8}{delta}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_robust_kernel_a4b03953a6e7bfca64efea37fb98548aa}{\+\_\+delta}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+base for all robust cost functions 
+
+Note in all the implementations for the other cost functions the e in the funtions corresponds to the sqaured errors, i.\+e., the robustification functions gets passed the squared error.
+
+e.\+g. the robustified least squares function is
+
+chi$^\wedge$2 = sum\+\_\+\{e\} rho( e$^\wedge$\+T Omega e ) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_ae4f7b1e9d0c9925f98c0b828f554a8ab}\label{classg2o_1_1_robust_kernel_ae4f7b1e9d0c9925f98c0b828f554a8ab}} 
+\index{g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}!Robust\+Kernel@{Robust\+Kernel}}
+\index{Robust\+Kernel@{Robust\+Kernel}!g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}}
+\subsubsection{\texorpdfstring{Robust\+Kernel()}{RobustKernel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily g2o\+::\+Robust\+Kernel\+::\+Robust\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_aabd6883d9c5e33b567453585a80c7ad8}\label{classg2o_1_1_robust_kernel_aabd6883d9c5e33b567453585a80c7ad8}} 
+\index{g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}!Robust\+Kernel@{Robust\+Kernel}}
+\index{Robust\+Kernel@{Robust\+Kernel}!g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}}
+\subsubsection{\texorpdfstring{Robust\+Kernel()}{RobustKernel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily g2o\+::\+Robust\+Kernel\+::\+Robust\+Kernel (\begin{DoxyParamCaption}\item[{double}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_a2d0512646603b993efdfc782df0e6df2}\label{classg2o_1_1_robust_kernel_a2d0512646603b993efdfc782df0e6df2}} 
+\index{g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}!````~Robust\+Kernel@{$\sim$\+Robust\+Kernel}}
+\index{````~Robust\+Kernel@{$\sim$\+Robust\+Kernel}!g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}}
+\subsubsection{\texorpdfstring{$\sim$\+Robust\+Kernel()}{~RobustKernel()}}
+{\footnotesize\ttfamily virtual g2o\+::\+Robust\+Kernel\+::$\sim$\+Robust\+Kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_affb1dacfd8507540281ff3af2ae6eeb8}\label{classg2o_1_1_robust_kernel_affb1dacfd8507540281ff3af2ae6eeb8}} 
+\index{g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}!delta@{delta}}
+\index{delta@{delta}!g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}}
+\subsubsection{\texorpdfstring{delta()}{delta()}}
+{\footnotesize\ttfamily double g2o\+::\+Robust\+Kernel\+::delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_ab47b071a0cfe466be063f0104bc41d0f}\label{classg2o_1_1_robust_kernel_ab47b071a0cfe466be063f0104bc41d0f}} 
+\index{g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}!robustify@{robustify}}
+\index{robustify@{robustify}!g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}}
+\subsubsection{\texorpdfstring{robustify()}{robustify()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Robust\+Kernel\+::robustify (\begin{DoxyParamCaption}\item[{double}]{squared\+Error,  }\item[{Eigen\+::\+Vector3d \&}]{rho }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+compute the scaling factor for a error\+: The error is e$^\wedge$T Omega e The output rho is rho\mbox{[}0\mbox{]}\+: The actual scaled error value rho\mbox{[}1\mbox{]}\+: First derivative of the scaling function rho\mbox{[}2\mbox{]}\+: Second derivative of the scaling function 
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_robust_kernel_d_c_s_aa469fa37ee76e4483108110b58d5823d}{g2o\+::\+Robust\+Kernel\+D\+CS}}, \mbox{\hyperlink{classg2o_1_1_robust_kernel_saturated_a2f937dd7f393f52b0c947d8a29f0d8aa}{g2o\+::\+Robust\+Kernel\+Saturated}}, \mbox{\hyperlink{classg2o_1_1_robust_kernel_cauchy_abec224380964f491c74ef173e7ae5afd}{g2o\+::\+Robust\+Kernel\+Cauchy}}, \mbox{\hyperlink{classg2o_1_1_robust_kernel_pseudo_huber_a7dab9bbb0e6f204a5f863220d606b0da}{g2o\+::\+Robust\+Kernel\+Pseudo\+Huber}}, \mbox{\hyperlink{classg2o_1_1_robust_kernel_tukey_a415fbc0b4033a8330700e66c60305b13}{g2o\+::\+Robust\+Kernel\+Tukey}}, \mbox{\hyperlink{classg2o_1_1_robust_kernel_huber_aa437e8a62360ba63b56b383aac8e4674}{g2o\+::\+Robust\+Kernel\+Huber}}, and \mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta_a97376c3ba35370fa551e899fd5391a2f}{g2o\+::\+Robust\+Kernel\+Scale\+Delta}}.
+
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_a8d85269635c436fca51324d7cb16a798}\label{classg2o_1_1_robust_kernel_a8d85269635c436fca51324d7cb16a798}} 
+\index{g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}!set\+Delta@{set\+Delta}}
+\index{set\+Delta@{set\+Delta}!g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}}
+\subsubsection{\texorpdfstring{set\+Delta()}{setDelta()}}
+{\footnotesize\ttfamily void g2o\+::\+Robust\+Kernel\+::set\+Delta (\begin{DoxyParamCaption}\item[{double}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+set the window size of the error. A squared error above delta$^\wedge$2 is considered as outlier in the data. 
+
+Reimplemented in \mbox{\hyperlink{classg2o_1_1_robust_kernel_huber_a7e9ee4bbc9483dcd3d10a4c1f506a4d2}{g2o\+::\+Robust\+Kernel\+Huber}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_a4b03953a6e7bfca64efea37fb98548aa}\label{classg2o_1_1_robust_kernel_a4b03953a6e7bfca64efea37fb98548aa}} 
+\index{g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}!\+\_\+delta@{\+\_\+delta}}
+\index{\+\_\+delta@{\+\_\+delta}!g2o\+::\+Robust\+Kernel@{g2o\+::\+Robust\+Kernel}}
+\subsubsection{\texorpdfstring{\+\_\+delta}{\_delta}}
+{\footnotesize\ttfamily double g2o\+::\+Robust\+Kernel\+::\+\_\+delta\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel_8h}{robust\+\_\+kernel.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel_8cpp}{robust\+\_\+kernel.\+cpp}}\end{DoxyCompactItemize}

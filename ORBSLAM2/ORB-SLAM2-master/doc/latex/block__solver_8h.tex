@@ -1,0 +1,37 @@
+\hypertarget{block__solver_8h}{}\section{Thirdparty/g2o/g2o/core/block\+\_\+solver.h File Reference}
+\label{block__solver_8h}\index{Thirdparty/g2o/g2o/core/block\+\_\+solver.\+h@{Thirdparty/g2o/g2o/core/block\+\_\+solver.\+h}}
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include \char`\"{}solver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}linear\+\_\+solver.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sparse\+\_\+block\+\_\+matrix.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sparse\+\_\+block\+\_\+matrix\+\_\+diagonal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openmp\+\_\+mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}block\+\_\+solver.\+hpp\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$}}
+\begin{DoxyCompactList}\small\item\em traits to summarize the properties of the fixed size optimization problem \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_block_solver_traits_3_01_eigen_1_1_dynamic_00_01_eigen_1_1_dynamic_01_4}{g2o\+::\+Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\begin{DoxyCompactList}\small\item\em traits to summarize the properties of the dynamic size optimization problem \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_block_solver_base}{g2o\+::\+Block\+Solver\+Base}}
+\begin{DoxyCompactList}\small\item\em base for the block solvers with some basic function interfaces \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_block_solver}{g2o\+::\+Block\+Solver$<$ Traits $>$}}
+\begin{DoxyCompactList}\small\item\em Implementation of a solver operating on the blocks of the Hessian. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceg2o}{g2o}}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef Block\+Solver$<$ Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ $>$ \mbox{\hyperlink{namespaceg2o_adcc6ea7cf60314982bc91e7b926adf14}{g2o\+::\+Block\+SolverX}}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef Block\+Solver$<$ Block\+Solver\+Traits$<$ 6, 3 $>$ $>$ \mbox{\hyperlink{namespaceg2o_ac2431e417f239680e2d2436970713e84}{g2o\+::\+Block\+Solver\+\_\+6\+\_\+3}}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef Block\+Solver$<$ Block\+Solver\+Traits$<$ 7, 3 $>$ $>$ \mbox{\hyperlink{namespaceg2o_a722b0d55b4695c7968d67107aee7671c}{g2o\+::\+Block\+Solver\+\_\+7\+\_\+3}}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef Block\+Solver$<$ Block\+Solver\+Traits$<$ 3, 2 $>$ $>$ \mbox{\hyperlink{namespaceg2o_a0dc4e6a4c5ab92d4c638aca75ad8219c}{g2o\+::\+Block\+Solver\+\_\+3\+\_\+2}}
+\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{classg2o_1_1_hyper_graph_1_1_edge}{}\section{g2o\+:\+:Hyper\+Graph\+:\+:Edge Class Reference}
+\label{classg2o_1_1_hyper_graph_1_1_edge}\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+
+
+{\ttfamily \#include $<$hyper\+\_\+graph.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Hyper\+Graph\+:\+:Edge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.176471cm]{classg2o_1_1_hyper_graph_1_1_edge}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a891618b34652837ef0bee7084db81f2e}{Edge}} (int \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a93f47febcbd6c654fc3344d4643a087f}{id}}=-\/1)
+\begin{DoxyCompactList}\small\item\em creates and empty edge with no vertices \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a202cb31558caef5a7bf18a49281173a3}{$\sim$\+Edge}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_ad8913f1149a0fd5bb628f0f1c8a91a55}{resize}} (size\+\_\+t size)
+\item 
+const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a9339534c99300a0ddac87ba976ef188c}{Vertex\+Container}} \& \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_aba1717ff01f972bd39ba992c0d9d9e04}{vertices}} () const
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a9339534c99300a0ddac87ba976ef188c}{Vertex\+Container}} \& \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a67d1c5cb557deab9e9e361c63359fe60}{vertices}} ()
+\item 
+const \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Vertex}} $\ast$ \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_ab644c1c4e38a0112db1435fbc0233f25}{vertex}} (size\+\_\+t i) const
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Vertex}} $\ast$ \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_af544d5d17d900c5aa2b5c9219d8e716f}{vertex}} (size\+\_\+t i)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a5e957658d6e65c49b81197d052a7f16f}{set\+Vertex}} (size\+\_\+t i, \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Vertex}} $\ast$v)
+\item 
+int \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a93f47febcbd6c654fc3344d4643a087f}{id}} () const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a1270ed91efa5f7a0fc42229356cc23e1}{set\+Id}} (int \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a93f47febcbd6c654fc3344d4643a087f}{id}})
+\item 
+virtual Hyper\+Graph\+Element\+Type \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_a04f1b4d408aebdf14ac3f0cfd247b776}{element\+Type}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a9339534c99300a0ddac87ba976ef188c}{Vertex\+Container}} \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_aabb036d331fc7f2524ec8611b638de92}{\+\_\+vertices}}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_aa1b6978624f7c165a4e0461cb5ff18fa}{\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em unique id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge}{Edge}} class. Your nice edge classes should inherit from that one. An hyper-\/edge has pointers to the vertices it connects and stores them in a vector. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_a891618b34652837ef0bee7084db81f2e}\label{classg2o_1_1_hyper_graph_1_1_edge_a891618b34652837ef0bee7084db81f2e}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{int}]{id = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+creates and empty edge with no vertices 
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_a202cb31558caef5a7bf18a49281173a3}\label{classg2o_1_1_hyper_graph_1_1_edge_a202cb31558caef5a7bf18a49281173a3}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!````~Edge@{$\sim$\+Edge}}
+\index{````~Edge@{$\sim$\+Edge}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{$\sim$\+Edge()}{~Edge()}}
+{\footnotesize\ttfamily g2o\+::\+Hyper\+Graph\+::\+Edge\+::$\sim$\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a62de61a43d47cf223fe39265dac13ca5}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_a04f1b4d408aebdf14ac3f0cfd247b776}\label{classg2o_1_1_hyper_graph_1_1_edge_a04f1b4d408aebdf14ac3f0cfd247b776}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{element\+Type()}{elementType()}}
+{\footnotesize\ttfamily virtual Hyper\+Graph\+Element\+Type g2o\+::\+Hyper\+Graph\+::\+Edge\+::element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+returns the type of the graph element, see Hyper\+Graph\+Element\+Type 
+
+Implements \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element_a1a9d7b748698c09d202373e06e413ef2}{g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph\+Element}}.
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_a93f47febcbd6c654fc3344d4643a087f}\label{classg2o_1_1_hyper_graph_1_1_edge_a93f47febcbd6c654fc3344d4643a087f}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!id@{id}}
+\index{id@{id}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily int g2o\+::\+Hyper\+Graph\+::\+Edge\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_ad8913f1149a0fd5bb628f0f1c8a91a55}\label{classg2o_1_1_hyper_graph_1_1_edge_ad8913f1149a0fd5bb628f0f1c8a91a55}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!resize@{resize}}
+\index{resize@{resize}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Graph\+::\+Edge\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+resizes the number of vertices connected by this edge 
+
+Reimplemented in \mbox{\hyperlink{classg2o_1_1_base_multi_edge_ae07ec9359cd515d0abc2100ee8aae93f}{g2o\+::\+Base\+Multi\+Edge$<$ D, E $>$}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a06e64067fa5fff4a5e2d058249b55478}{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a06e64067fa5fff4a5e2d058249b55478}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+Sim3\+Expmap $>$}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a06e64067fa5fff4a5e2d058249b55478}{g2o\+::\+Base\+Binary\+Edge$<$ 7, Sim3, Vertex\+Sim3\+Expmap, Vertex\+Sim3\+Expmap $>$}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a06e64067fa5fff4a5e2d058249b55478}{g2o\+::\+Base\+Binary\+Edge$<$ 2, Vector2d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a06e64067fa5fff4a5e2d058249b55478}{g2o\+::\+Base\+Binary\+Edge$<$ 3, Vector3d, Vertex\+S\+B\+A\+Point\+X\+Y\+Z, Vertex\+S\+E3\+Expmap $>$}}, \mbox{\hyperlink{classg2o_1_1_base_unary_edge_a01fcdfd2d3ed0325655bb99db95c0b10}{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}}, \mbox{\hyperlink{classg2o_1_1_base_unary_edge_a01fcdfd2d3ed0325655bb99db95c0b10}{g2o\+::\+Base\+Unary\+Edge$<$ 2, Vector2d, Vertex\+S\+E3\+Expmap $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_unary_edge_a01fcdfd2d3ed0325655bb99db95c0b10}{g2o\+::\+Base\+Unary\+Edge$<$ 3, Vector3d, Vertex\+S\+E3\+Expmap $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_a1270ed91efa5f7a0fc42229356cc23e1}\label{classg2o_1_1_hyper_graph_1_1_edge_a1270ed91efa5f7a0fc42229356cc23e1}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Graph\+::\+Edge\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_a5e957658d6e65c49b81197d052a7f16f}\label{classg2o_1_1_hyper_graph_1_1_edge_a5e957658d6e65c49b81197d052a7f16f}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!set\+Vertex@{set\+Vertex}}
+\index{set\+Vertex@{set\+Vertex}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{set\+Vertex()}{setVertex()}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Graph\+::\+Edge\+::set\+Vertex (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i,  }\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Vertex}} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set the ith vertex on the hyper-\/edge to the pointer supplied \mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_ab644c1c4e38a0112db1435fbc0233f25}\label{classg2o_1_1_hyper_graph_1_1_edge_ab644c1c4e38a0112db1435fbc0233f25}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!vertex@{vertex}}
+\index{vertex@{vertex}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{vertex()}{vertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Vertex}}$\ast$ g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns the pointer to the ith vertex connected to the hyper-\/edge. \mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_af544d5d17d900c5aa2b5c9219d8e716f}\label{classg2o_1_1_hyper_graph_1_1_edge_af544d5d17d900c5aa2b5c9219d8e716f}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!vertex@{vertex}}
+\index{vertex@{vertex}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{vertex()}{vertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Vertex}}$\ast$ g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertex (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns the pointer to the ith vertex connected to the hyper-\/edge. \mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_aba1717ff01f972bd39ba992c0d9d9e04}\label{classg2o_1_1_hyper_graph_1_1_edge_aba1717ff01f972bd39ba992c0d9d9e04}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!vertices@{vertices}}
+\index{vertices@{vertices}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{vertices()}{vertices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a9339534c99300a0ddac87ba976ef188c}{Vertex\+Container}}\& g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns the vector of pointers to the vertices connected by the hyper-\/edge. \mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_a67d1c5cb557deab9e9e361c63359fe60}\label{classg2o_1_1_hyper_graph_1_1_edge_a67d1c5cb557deab9e9e361c63359fe60}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!vertices@{vertices}}
+\index{vertices@{vertices}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{vertices()}{vertices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a9339534c99300a0ddac87ba976ef188c}{Vertex\+Container}}\& g2o\+::\+Hyper\+Graph\+::\+Edge\+::vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns the vector of pointers to the vertices connected by the hyper-\/edge. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_aa1b6978624f7c165a4e0461cb5ff18fa}\label{classg2o_1_1_hyper_graph_1_1_edge_aa1b6978624f7c165a4e0461cb5ff18fa}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!\+\_\+id@{\+\_\+id}}
+\index{\+\_\+id@{\+\_\+id}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+id}{\_id}}
+{\footnotesize\ttfamily int g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+unique id 
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_edge_aabb036d331fc7f2524ec8611b638de92}\label{classg2o_1_1_hyper_graph_1_1_edge_aabb036d331fc7f2524ec8611b638de92}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}!\+\_\+vertices@{\+\_\+vertices}}
+\index{\+\_\+vertices@{\+\_\+vertices}!g2o\+::\+Hyper\+Graph\+::\+Edge@{g2o\+::\+Hyper\+Graph\+::\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+vertices}{\_vertices}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a9339534c99300a0ddac87ba976ef188c}{Vertex\+Container}} g2o\+::\+Hyper\+Graph\+::\+Edge\+::\+\_\+vertices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{hyper__graph_8h}{hyper\+\_\+graph.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{hyper__graph_8cpp}{hyper\+\_\+graph.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,249 @@
+\hypertarget{classg2o_1_1_s_e3_quat}{}\section{g2o\+:\+:S\+E3\+Quat Class Reference}
+\label{classg2o_1_1_s_e3_quat}\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+
+
+{\ttfamily \#include $<$se3quat.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_s_e3_quat_a685de01e417e01f84d5b8389e5f5f333}{S\+E3\+Quat}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_s_e3_quat_abb3e9184aa02bf6ced3f6d4cd0825f33}{S\+E3\+Quat}} (const Matrix3d \&R, const Vector3d \&t)
+\item 
+\mbox{\hyperlink{classg2o_1_1_s_e3_quat_ab22b3fde9b7e0a833b74b3453041c040}{S\+E3\+Quat}} (const Quaterniond \&q, const Vector3d \&t)
+\item 
+{\footnotesize template$<$typename Derived $>$ }\\\mbox{\hyperlink{classg2o_1_1_s_e3_quat_ada36ff00a7a238cef3fe958ff9f7f9cd}{S\+E3\+Quat}} (const Matrix\+Base$<$ Derived $>$ \&v)
+\item 
+const Vector3d \& \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a3f36961ad875394c3d305883bebb26bc}{translation}} () const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_s_e3_quat_aaf12f03b09b2a3a4c9185edcc8b141cb}{set\+Translation}} (const Vector3d \&t\+\_\+)
+\item 
+const Quaterniond \& \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a7345da50450b60ae725083fbdb85eb7d}{rotation}} () const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a1f55879ec2e4801d5de4b12b301ff59c}{set\+Rotation}} (const Quaterniond \&r\+\_\+)
+\item 
+\mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a1258baef15096f3176a3454258a132c9}{operator$\ast$}} (const \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \&tr2) const
+\item 
+\mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \& \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a0b0c9d2ff23d7e1501bc79a32e958239}{operator$\ast$=}} (const \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \&tr2)
+\item 
+Vector3d \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a7cc4e945656a75d927bd584c1bb4cb76}{operator$\ast$}} (const Vector3d \&v) const
+\item 
+\mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a894d361da0f27b25472b3a274deefed3}{inverse}} () const
+\item 
+double \mbox{\hyperlink{classg2o_1_1_s_e3_quat_ac5588c5ae47bbe881f8e3e2782539e66}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\item 
+\mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}} \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a59ecabba8306c7ab111d1cc483561f61}{to\+Vector}} () const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a59aa7dffe9320761ee65bcdfa2bc61fd}{from\+Vector}} (const \mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}} \&v)
+\item 
+\mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}} \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a2b5a5177c2d5e6e637019253e9630a08}{to\+Minimal\+Vector}} () const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a65714851482e99558401d4ea66edb183}{from\+Minimal\+Vector}} (const \mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}} \&v)
+\item 
+\mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}} \mbox{\hyperlink{classg2o_1_1_s_e3_quat_ab19dfa20f3d0ed68f07a81ea90bcfc76}{log}} () const
+\item 
+Vector3d \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a6b2c679d255e1adc8e734215703cf01c}{map}} (const Vector3d \&xyz) const
+\item 
+Matrix$<$ double, 6, 6 $>$ \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a5540394ac7f1a61c5e04ceed9c96617a}{adj}} () const
+\item 
+Matrix$<$ double, 4, 4 $>$ \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a88de9de9db852e2a0414bcd2afdc0fda}{to\+\_\+homogeneous\+\_\+matrix}} () const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}{normalize\+Rotation}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_s_e3_quat_ae7aa654ff10b9f4e2fa0b5583526f026}{operator Eigen\+::\+Isometry3d}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a374a05b202889d09d5a3a25e0fb6c103}{exp}} (const \mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}} \&update)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_s_e3_quat_a5bcd64993957b1a87a113d9a282d4fcb}{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Quaterniond \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a420255bcfca499dc2669b27fd373f665}{\+\_\+r}}
+\item 
+Vector3d \mbox{\hyperlink{classg2o_1_1_s_e3_quat_a7f0078e2750e8f821926f2d51202a809}{\+\_\+t}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a685de01e417e01f84d5b8389e5f5f333}\label{classg2o_1_1_s_e3_quat_a685de01e417e01f84d5b8389e5f5f333}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!S\+E3\+Quat@{S\+E3\+Quat}}
+\index{S\+E3\+Quat@{S\+E3\+Quat}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{S\+E3\+Quat()}{SE3Quat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily g2o\+::\+S\+E3\+Quat\+::\+S\+E3\+Quat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_abb3e9184aa02bf6ced3f6d4cd0825f33}\label{classg2o_1_1_s_e3_quat_abb3e9184aa02bf6ced3f6d4cd0825f33}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!S\+E3\+Quat@{S\+E3\+Quat}}
+\index{S\+E3\+Quat@{S\+E3\+Quat}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{S\+E3\+Quat()}{SE3Quat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily g2o\+::\+S\+E3\+Quat\+::\+S\+E3\+Quat (\begin{DoxyParamCaption}\item[{const Matrix3d \&}]{R,  }\item[{const Vector3d \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_ab22b3fde9b7e0a833b74b3453041c040}\label{classg2o_1_1_s_e3_quat_ab22b3fde9b7e0a833b74b3453041c040}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!S\+E3\+Quat@{S\+E3\+Quat}}
+\index{S\+E3\+Quat@{S\+E3\+Quat}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{S\+E3\+Quat()}{SE3Quat()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily g2o\+::\+S\+E3\+Quat\+::\+S\+E3\+Quat (\begin{DoxyParamCaption}\item[{const Quaterniond \&}]{q,  }\item[{const Vector3d \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_ada36ff00a7a238cef3fe958ff9f7f9cd}\label{classg2o_1_1_s_e3_quat_ada36ff00a7a238cef3fe958ff9f7f9cd}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!S\+E3\+Quat@{S\+E3\+Quat}}
+\index{S\+E3\+Quat@{S\+E3\+Quat}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{S\+E3\+Quat()}{SE3Quat()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Derived $>$ \\
+g2o\+::\+S\+E3\+Quat\+::\+S\+E3\+Quat (\begin{DoxyParamCaption}\item[{const Matrix\+Base$<$ Derived $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+templaized constructor which allows v to be an arbitrary Eigen Vector type, e.\+g., Vector6d or Map$<$\+Vector6d$>$ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a5540394ac7f1a61c5e04ceed9c96617a}\label{classg2o_1_1_s_e3_quat_a5540394ac7f1a61c5e04ceed9c96617a}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!adj@{adj}}
+\index{adj@{adj}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{adj()}{adj()}}
+{\footnotesize\ttfamily Matrix$<$double, 6, 6$>$ g2o\+::\+S\+E3\+Quat\+::adj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a374a05b202889d09d5a3a25e0fb6c103}\label{classg2o_1_1_s_e3_quat_a374a05b202889d09d5a3a25e0fb6c103}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!exp@{exp}}
+\index{exp@{exp}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{exp()}{exp()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} g2o\+::\+S\+E3\+Quat\+::exp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}} \&}]{update }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a65714851482e99558401d4ea66edb183}\label{classg2o_1_1_s_e3_quat_a65714851482e99558401d4ea66edb183}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!from\+Minimal\+Vector@{from\+Minimal\+Vector}}
+\index{from\+Minimal\+Vector@{from\+Minimal\+Vector}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{from\+Minimal\+Vector()}{fromMinimalVector()}}
+{\footnotesize\ttfamily void g2o\+::\+S\+E3\+Quat\+::from\+Minimal\+Vector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a59aa7dffe9320761ee65bcdfa2bc61fd}\label{classg2o_1_1_s_e3_quat_a59aa7dffe9320761ee65bcdfa2bc61fd}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!from\+Vector@{from\+Vector}}
+\index{from\+Vector@{from\+Vector}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{from\+Vector()}{fromVector()}}
+{\footnotesize\ttfamily void g2o\+::\+S\+E3\+Quat\+::from\+Vector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a894d361da0f27b25472b3a274deefed3}\label{classg2o_1_1_s_e3_quat_a894d361da0f27b25472b3a274deefed3}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!inverse@{inverse}}
+\index{inverse@{inverse}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{inverse()}{inverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} g2o\+::\+S\+E3\+Quat\+::inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_ab19dfa20f3d0ed68f07a81ea90bcfc76}\label{classg2o_1_1_s_e3_quat_ab19dfa20f3d0ed68f07a81ea90bcfc76}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!log@{log}}
+\index{log@{log}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}} g2o\+::\+S\+E3\+Quat\+::log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a6b2c679d255e1adc8e734215703cf01c}\label{classg2o_1_1_s_e3_quat_a6b2c679d255e1adc8e734215703cf01c}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!map@{map}}
+\index{map@{map}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{map()}{map()}}
+{\footnotesize\ttfamily Vector3d g2o\+::\+S\+E3\+Quat\+::map (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{xyz }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}\label{classg2o_1_1_s_e3_quat_a0e2c54c6dfdaa71b677556a9d8e4e88a}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!normalize\+Rotation@{normalize\+Rotation}}
+\index{normalize\+Rotation@{normalize\+Rotation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{normalize\+Rotation()}{normalizeRotation()}}
+{\footnotesize\ttfamily void g2o\+::\+S\+E3\+Quat\+::normalize\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_ae7aa654ff10b9f4e2fa0b5583526f026}\label{classg2o_1_1_s_e3_quat_ae7aa654ff10b9f4e2fa0b5583526f026}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator Eigen\+::\+Isometry3d@{operator Eigen\+::\+Isometry3d}}
+\index{operator Eigen\+::\+Isometry3d@{operator Eigen\+::\+Isometry3d}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{operator Eigen\+::\+Isometry3d()}{operator Eigen::Isometry3d()}}
+{\footnotesize\ttfamily g2o\+::\+S\+E3\+Quat\+::operator Eigen\+::\+Isometry3d (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+cast \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} into an Eigen\+::\+Isometry3d \mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a1258baef15096f3176a3454258a132c9}\label{classg2o_1_1_s_e3_quat_a1258baef15096f3176a3454258a132c9}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} g2o\+::\+S\+E3\+Quat\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \&}]{tr2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a7cc4e945656a75d927bd584c1bb4cb76}\label{classg2o_1_1_s_e3_quat_a7cc4e945656a75d927bd584c1bb4cb76}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector3d g2o\+::\+S\+E3\+Quat\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a0b0c9d2ff23d7e1501bc79a32e958239}\label{classg2o_1_1_s_e3_quat_a0b0c9d2ff23d7e1501bc79a32e958239}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}}\& g2o\+::\+S\+E3\+Quat\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \&}]{tr2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_ac5588c5ae47bbe881f8e3e2782539e66}\label{classg2o_1_1_s_e3_quat_ac5588c5ae47bbe881f8e3e2782539e66}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily double g2o\+::\+S\+E3\+Quat\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a7345da50450b60ae725083fbdb85eb7d}\label{classg2o_1_1_s_e3_quat_a7345da50450b60ae725083fbdb85eb7d}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!rotation@{rotation}}
+\index{rotation@{rotation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily const Quaterniond\& g2o\+::\+S\+E3\+Quat\+::rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a1f55879ec2e4801d5de4b12b301ff59c}\label{classg2o_1_1_s_e3_quat_a1f55879ec2e4801d5de4b12b301ff59c}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{set\+Rotation()}{setRotation()}}
+{\footnotesize\ttfamily void g2o\+::\+S\+E3\+Quat\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const Quaterniond \&}]{r\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_aaf12f03b09b2a3a4c9185edcc8b141cb}\label{classg2o_1_1_s_e3_quat_aaf12f03b09b2a3a4c9185edcc8b141cb}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!set\+Translation@{set\+Translation}}
+\index{set\+Translation@{set\+Translation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{set\+Translation()}{setTranslation()}}
+{\footnotesize\ttfamily void g2o\+::\+S\+E3\+Quat\+::set\+Translation (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{t\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a88de9de9db852e2a0414bcd2afdc0fda}\label{classg2o_1_1_s_e3_quat_a88de9de9db852e2a0414bcd2afdc0fda}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!to\+\_\+homogeneous\+\_\+matrix@{to\+\_\+homogeneous\+\_\+matrix}}
+\index{to\+\_\+homogeneous\+\_\+matrix@{to\+\_\+homogeneous\+\_\+matrix}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{to\+\_\+homogeneous\+\_\+matrix()}{to\_homogeneous\_matrix()}}
+{\footnotesize\ttfamily Matrix$<$double,4,4$>$ g2o\+::\+S\+E3\+Quat\+::to\+\_\+homogeneous\+\_\+matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a2b5a5177c2d5e6e637019253e9630a08}\label{classg2o_1_1_s_e3_quat_a2b5a5177c2d5e6e637019253e9630a08}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!to\+Minimal\+Vector@{to\+Minimal\+Vector}}
+\index{to\+Minimal\+Vector@{to\+Minimal\+Vector}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{to\+Minimal\+Vector()}{toMinimalVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}} g2o\+::\+S\+E3\+Quat\+::to\+Minimal\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a59ecabba8306c7ab111d1cc483561f61}\label{classg2o_1_1_s_e3_quat_a59ecabba8306c7ab111d1cc483561f61}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!to\+Vector@{to\+Vector}}
+\index{to\+Vector@{to\+Vector}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{to\+Vector()}{toVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}} g2o\+::\+S\+E3\+Quat\+::to\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a3f36961ad875394c3d305883bebb26bc}\label{classg2o_1_1_s_e3_quat_a3f36961ad875394c3d305883bebb26bc}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!translation@{translation}}
+\index{translation@{translation}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily const Vector3d\& g2o\+::\+S\+E3\+Quat\+::translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a420255bcfca499dc2669b27fd373f665}\label{classg2o_1_1_s_e3_quat_a420255bcfca499dc2669b27fd373f665}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!\+\_\+r@{\+\_\+r}}
+\index{\+\_\+r@{\+\_\+r}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{\+\_\+r}{\_r}}
+{\footnotesize\ttfamily Quaterniond g2o\+::\+S\+E3\+Quat\+::\+\_\+r\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a7f0078e2750e8f821926f2d51202a809}\label{classg2o_1_1_s_e3_quat_a7f0078e2750e8f821926f2d51202a809}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!\+\_\+t@{\+\_\+t}}
+\index{\+\_\+t@{\+\_\+t}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{\+\_\+t}{\_t}}
+{\footnotesize\ttfamily Vector3d g2o\+::\+S\+E3\+Quat\+::\+\_\+t\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_s_e3_quat_a5bcd64993957b1a87a113d9a282d4fcb}\label{classg2o_1_1_s_e3_quat_a5bcd64993957b1a87a113d9a282d4fcb}} 
+\index{g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}!E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW@{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}}
+\index{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW@{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}!g2o\+::\+S\+E3\+Quat@{g2o\+::\+S\+E3\+Quat}}
+\subsubsection{\texorpdfstring{E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}{EIGEN\_MAKE\_ALIGNED\_OPERATOR\_NEW}}
+{\footnotesize\ttfamily g2o\+::\+S\+E3\+Quat\+::\+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{se3quat_8h}{se3quat.\+h}}\end{DoxyCompactItemize}

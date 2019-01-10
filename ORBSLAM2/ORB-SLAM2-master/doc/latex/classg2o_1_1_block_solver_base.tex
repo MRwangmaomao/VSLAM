@@ -1,0 +1,55 @@
+\hypertarget{classg2o_1_1_block_solver_base}{}\section{g2o\+:\+:Block\+Solver\+Base Class Reference}
+\label{classg2o_1_1_block_solver_base}\index{g2o\+::\+Block\+Solver\+Base@{g2o\+::\+Block\+Solver\+Base}}
+
+
+base for the block solvers with some basic function interfaces  
+
+
+
+
+{\ttfamily \#include $<$block\+\_\+solver.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Block\+Solver\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classg2o_1_1_block_solver_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_block_solver_base_a59aabc7d24599a7f7b251cc0040bcb0a}{$\sim$\+Block\+Solver\+Base}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_block_solver_base_a4ff7072751bfa1b7fcf91f8219e18e13}{multiply\+Hessian}} (double $\ast$dest, const double $\ast$src) const =0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+base for the block solvers with some basic function interfaces 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_block_solver_base_a59aabc7d24599a7f7b251cc0040bcb0a}\label{classg2o_1_1_block_solver_base_a59aabc7d24599a7f7b251cc0040bcb0a}} 
+\index{g2o\+::\+Block\+Solver\+Base@{g2o\+::\+Block\+Solver\+Base}!````~Block\+Solver\+Base@{$\sim$\+Block\+Solver\+Base}}
+\index{````~Block\+Solver\+Base@{$\sim$\+Block\+Solver\+Base}!g2o\+::\+Block\+Solver\+Base@{g2o\+::\+Block\+Solver\+Base}}
+\subsubsection{\texorpdfstring{$\sim$\+Block\+Solver\+Base()}{~BlockSolverBase()}}
+{\footnotesize\ttfamily virtual g2o\+::\+Block\+Solver\+Base\+::$\sim$\+Block\+Solver\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_block_solver_base_a4ff7072751bfa1b7fcf91f8219e18e13}\label{classg2o_1_1_block_solver_base_a4ff7072751bfa1b7fcf91f8219e18e13}} 
+\index{g2o\+::\+Block\+Solver\+Base@{g2o\+::\+Block\+Solver\+Base}!multiply\+Hessian@{multiply\+Hessian}}
+\index{multiply\+Hessian@{multiply\+Hessian}!g2o\+::\+Block\+Solver\+Base@{g2o\+::\+Block\+Solver\+Base}}
+\subsubsection{\texorpdfstring{multiply\+Hessian()}{multiplyHessian()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Block\+Solver\+Base\+::multiply\+Hessian (\begin{DoxyParamCaption}\item[{double $\ast$}]{dest,  }\item[{const double $\ast$}]{src }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+compute dest = H $\ast$ src 
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_block_solver_a6eb8f0729e8bcd760e629421cfa7202c}{g2o\+::\+Block\+Solver$<$ Traits $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{block__solver_8h}{block\+\_\+solver.\+h}}\end{DoxyCompactItemize}

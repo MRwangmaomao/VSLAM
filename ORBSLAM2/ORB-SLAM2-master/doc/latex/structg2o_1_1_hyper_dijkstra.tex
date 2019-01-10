@@ -1,0 +1,160 @@
+\hypertarget{structg2o_1_1_hyper_dijkstra}{}\section{g2o\+:\+:Hyper\+Dijkstra Struct Reference}
+\label{structg2o_1_1_hyper_dijkstra}\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+
+
+{\ttfamily \#include $<$hyper\+\_\+dijkstra.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry}{Adjacency\+Map\+Entry}}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_cost_function}{Cost\+Function}}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_tree_action}{Tree\+Action}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Hyper\+Graph\+::\+Vertex}} $\ast$, \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry}{Adjacency\+Map\+Entry}} $>$ \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_a55e844f4b596290cb36a0d9fe4140966}{Hyper\+Dijkstra}} (\mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}} $\ast$g)
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \& \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_a2cb453ed6f1bf6069186bd269a6464da}{visited}} ()
+\item 
+\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}} \& \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_ace002e09514a2eeb76a7b569f9e30f6c}{adjacency\+Map}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}} $\ast$ \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_a578a9eb1874d9802dbd37a2f1681c196}{graph}} ()
+\item 
+void \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_ad88b79c73c8eaa5f1afbe27b778b542e}{shortest\+Paths}} (\mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Hyper\+Graph\+::\+Vertex}} $\ast$v, \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_cost_function}{Hyper\+Dijkstra\+::\+Cost\+Function}} $\ast$cost, double max\+Distance=std\+::numeric\+\_\+limits$<$ double $>$\+::max(), double comparison\+Conditioner=1e-\/3, bool directed=false, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())
+\item 
+void \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_a00d978615ff1bbb9917351e9cba0b4ba}{shortest\+Paths}} (\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \&vset, \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_cost_function}{Hyper\+Dijkstra\+::\+Cost\+Function}} $\ast$cost, double max\+Distance=std\+::numeric\+\_\+limits$<$ double $>$\+::max(), double comparison\+Conditioner=1e-\/3, bool directed=false, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_a84a1d7288e1d76369442f89604c5d6de}{compute\+Tree}} (\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}} \&amap)
+\item 
+static void \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_aa73ae495f10f81823b16f26715f32c58}{visit\+Adjacency\+Map}} (\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}} \&amap, \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_tree_action}{Tree\+Action}} $\ast$action, bool use\+Distance=false)
+\item 
+static void \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_a846232e98c8175ec2fff784fc3271ad7}{connected\+Subset}} (\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \&connected, \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \&\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_a2cb453ed6f1bf6069186bd269a6464da}{visited}}, \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \&starting\+Set, \mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}} $\ast$g, \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Hyper\+Graph\+::\+Vertex}} $\ast$v, \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_cost_function}{Hyper\+Dijkstra\+::\+Cost\+Function}} $\ast$cost, double distance, double comparison\+Conditioner, double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_ad9c39fd01a0740f2beff98c927aaebbd}{reset}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}} \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}{\+\_\+adjacency\+Map}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}{\+\_\+visited}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}} $\ast$ \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}{\+\_\+graph}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}\label{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!Adjacency\+Map@{Adjacency\+Map}}
+\index{Adjacency\+Map@{Adjacency\+Map}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{Adjacency\+Map}{AdjacencyMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Hyper\+Graph\+::\+Vertex}}$\ast$, \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry}{Adjacency\+Map\+Entry}}$>$ \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{g2o\+::\+Hyper\+Dijkstra\+::\+Adjacency\+Map}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_a55e844f4b596290cb36a0d9fe4140966}\label{structg2o_1_1_hyper_dijkstra_a55e844f4b596290cb36a0d9fe4140966}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!Hyper\+Dijkstra@{Hyper\+Dijkstra}}
+\index{Hyper\+Dijkstra@{Hyper\+Dijkstra}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{Hyper\+Dijkstra()}{HyperDijkstra()}}
+{\footnotesize\ttfamily g2o\+::\+Hyper\+Dijkstra\+::\+Hyper\+Dijkstra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_ace002e09514a2eeb76a7b569f9e30f6c}\label{structg2o_1_1_hyper_dijkstra_ace002e09514a2eeb76a7b569f9e30f6c}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!adjacency\+Map@{adjacency\+Map}}
+\index{adjacency\+Map@{adjacency\+Map}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{adjacency\+Map()}{adjacencyMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}}\& g2o\+::\+Hyper\+Dijkstra\+::adjacency\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_a84a1d7288e1d76369442f89604c5d6de}\label{structg2o_1_1_hyper_dijkstra_a84a1d7288e1d76369442f89604c5d6de}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!compute\+Tree@{compute\+Tree}}
+\index{compute\+Tree@{compute\+Tree}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{compute\+Tree()}{computeTree()}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Dijkstra\+::compute\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}} \&}]{amap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_a846232e98c8175ec2fff784fc3271ad7}\label{structg2o_1_1_hyper_dijkstra_a846232e98c8175ec2fff784fc3271ad7}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!connected\+Subset@{connected\+Subset}}
+\index{connected\+Subset@{connected\+Subset}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{connected\+Subset()}{connectedSubset()}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Dijkstra\+::connected\+Subset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \&}]{connected,  }\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \&}]{visited,  }\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \&}]{starting\+Set,  }\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}} $\ast$}]{g,  }\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Hyper\+Graph\+::\+Vertex}} $\ast$}]{v,  }\item[{\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_cost_function}{Hyper\+Dijkstra\+::\+Cost\+Function}} $\ast$}]{cost,  }\item[{double}]{distance,  }\item[{double}]{comparison\+Conditioner,  }\item[{double}]{max\+Edge\+Cost = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_a578a9eb1874d9802dbd37a2f1681c196}\label{structg2o_1_1_hyper_dijkstra_a578a9eb1874d9802dbd37a2f1681c196}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!graph@{graph}}
+\index{graph@{graph}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{graph()}{graph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}}$\ast$ g2o\+::\+Hyper\+Dijkstra\+::graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_ad9c39fd01a0740f2beff98c927aaebbd}\label{structg2o_1_1_hyper_dijkstra_ad9c39fd01a0740f2beff98c927aaebbd}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!reset@{reset}}
+\index{reset@{reset}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Dijkstra\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_ad88b79c73c8eaa5f1afbe27b778b542e}\label{structg2o_1_1_hyper_dijkstra_ad88b79c73c8eaa5f1afbe27b778b542e}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!shortest\+Paths@{shortest\+Paths}}
+\index{shortest\+Paths@{shortest\+Paths}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{shortest\+Paths()}{shortestPaths()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Dijkstra\+::shortest\+Paths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Hyper\+Graph\+::\+Vertex}} $\ast$}]{v,  }\item[{\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_cost_function}{Hyper\+Dijkstra\+::\+Cost\+Function}} $\ast$}]{cost,  }\item[{double}]{max\+Distance = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()},  }\item[{double}]{comparison\+Conditioner = {\ttfamily 1e-\/3},  }\item[{bool}]{directed = {\ttfamily false},  }\item[{double}]{max\+Edge\+Cost = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_a00d978615ff1bbb9917351e9cba0b4ba}\label{structg2o_1_1_hyper_dijkstra_a00d978615ff1bbb9917351e9cba0b4ba}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!shortest\+Paths@{shortest\+Paths}}
+\index{shortest\+Paths@{shortest\+Paths}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{shortest\+Paths()}{shortestPaths()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Dijkstra\+::shortest\+Paths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} \&}]{vset,  }\item[{\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_cost_function}{Hyper\+Dijkstra\+::\+Cost\+Function}} $\ast$}]{cost,  }\item[{double}]{max\+Distance = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()},  }\item[{double}]{comparison\+Conditioner = {\ttfamily 1e-\/3},  }\item[{bool}]{directed = {\ttfamily false},  }\item[{double}]{max\+Edge\+Cost = {\ttfamily std\+:\+:numeric\+\_\+limits$<$~double~$>$\+:\+:max()} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_aa73ae495f10f81823b16f26715f32c58}\label{structg2o_1_1_hyper_dijkstra_aa73ae495f10f81823b16f26715f32c58}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!visit\+Adjacency\+Map@{visit\+Adjacency\+Map}}
+\index{visit\+Adjacency\+Map@{visit\+Adjacency\+Map}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{visit\+Adjacency\+Map()}{visitAdjacencyMap()}}
+{\footnotesize\ttfamily void g2o\+::\+Hyper\+Dijkstra\+::visit\+Adjacency\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}} \&}]{amap,  }\item[{\mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_tree_action}{Tree\+Action}} $\ast$}]{action,  }\item[{bool}]{use\+Distance = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_a2cb453ed6f1bf6069186bd269a6464da}\label{structg2o_1_1_hyper_dijkstra_a2cb453ed6f1bf6069186bd269a6464da}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!visited@{visited}}
+\index{visited@{visited}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{visited()}{visited()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}}\& g2o\+::\+Hyper\+Dijkstra\+::visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}\label{structg2o_1_1_hyper_dijkstra_ae306dd26e901b88fe6c54f02a45c3e7f}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!\+\_\+adjacency\+Map@{\+\_\+adjacency\+Map}}
+\index{\+\_\+adjacency\+Map@{\+\_\+adjacency\+Map}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{\+\_\+adjacency\+Map}{\_adjacencyMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_af12ff8eef95094815a3fa1da0514bda2}{Adjacency\+Map}} g2o\+::\+Hyper\+Dijkstra\+::\+\_\+adjacency\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}\label{structg2o_1_1_hyper_dijkstra_a1bf21d65ddd6e0feeb6a76f58d7f2c6e}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!\+\_\+graph@{\+\_\+graph}}
+\index{\+\_\+graph@{\+\_\+graph}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{\+\_\+graph}{\_graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}}$\ast$ g2o\+::\+Hyper\+Dijkstra\+::\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structg2o_1_1_hyper_dijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}\label{structg2o_1_1_hyper_dijkstra_ad43cae6d9e1df2cf7db839f504ba6cc5}} 
+\index{g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}!\+\_\+visited@{\+\_\+visited}}
+\index{\+\_\+visited@{\+\_\+visited}!g2o\+::\+Hyper\+Dijkstra@{g2o\+::\+Hyper\+Dijkstra}}
+\subsubsection{\texorpdfstring{\+\_\+visited}{\_visited}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Hyper\+Graph\+::\+Vertex\+Set}} g2o\+::\+Hyper\+Dijkstra\+::\+\_\+visited\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{hyper__dijkstra_8h}{hyper\+\_\+dijkstra.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{hyper__dijkstra_8cpp}{hyper\+\_\+dijkstra.\+cpp}}\end{DoxyCompactItemize}

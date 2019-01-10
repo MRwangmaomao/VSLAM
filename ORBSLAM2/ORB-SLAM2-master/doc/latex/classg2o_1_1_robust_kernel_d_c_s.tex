@@ -1,0 +1,49 @@
+\hypertarget{classg2o_1_1_robust_kernel_d_c_s}{}\section{g2o\+:\+:Robust\+Kernel\+D\+CS Class Reference}
+\label{classg2o_1_1_robust_kernel_d_c_s}\index{g2o\+::\+Robust\+Kernel\+D\+CS@{g2o\+::\+Robust\+Kernel\+D\+CS}}
+
+
+Dynamic covariance scaling -\/ D\+CS.  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+impl.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Robust\+Kernel\+D\+CS\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_robust_kernel_d_c_s}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_robust_kernel_d_c_s_aa469fa37ee76e4483108110b58d5823d}{robustify}} (double e2, Eigen\+::\+Vector3d \&rho) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Dynamic covariance scaling -\/ D\+CS. 
+
+See paper Robust Map Optimization from Agarwal et al. I\+C\+RA 2013
+
+delta is used as \$phi\$ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_d_c_s_aa469fa37ee76e4483108110b58d5823d}\label{classg2o_1_1_robust_kernel_d_c_s_aa469fa37ee76e4483108110b58d5823d}} 
+\index{g2o\+::\+Robust\+Kernel\+D\+CS@{g2o\+::\+Robust\+Kernel\+D\+CS}!robustify@{robustify}}
+\index{robustify@{robustify}!g2o\+::\+Robust\+Kernel\+D\+CS@{g2o\+::\+Robust\+Kernel\+D\+CS}}
+\subsubsection{\texorpdfstring{robustify()}{robustify()}}
+{\footnotesize\ttfamily void g2o\+::\+Robust\+Kernel\+D\+C\+S\+::robustify (\begin{DoxyParamCaption}\item[{double}]{squared\+Error,  }\item[{Eigen\+::\+Vector3d \&}]{rho }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+compute the scaling factor for a error\+: The error is e$^\wedge$T Omega e The output rho is rho\mbox{[}0\mbox{]}\+: The actual scaled error value rho\mbox{[}1\mbox{]}\+: First derivative of the scaling function rho\mbox{[}2\mbox{]}\+: Second derivative of the scaling function 
+
+Implements \mbox{\hyperlink{classg2o_1_1_robust_kernel_ab47b071a0cfe466be063f0104bc41d0f}{g2o\+::\+Robust\+Kernel}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel__impl_8h}{robust\+\_\+kernel\+\_\+impl.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel__impl_8cpp}{robust\+\_\+kernel\+\_\+impl.\+cpp}}\end{DoxyCompactItemize}

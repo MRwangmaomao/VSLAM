@@ -1,0 +1,143 @@
+\hypertarget{classg2o_1_1_jacobian_workspace}{}\section{g2o\+:\+:Jacobian\+Workspace Class Reference}
+\label{classg2o_1_1_jacobian_workspace}\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+
+
+provide memory workspace for computing the Jacobians  
+
+
+
+
+{\ttfamily \#include $<$jacobian\+\_\+workspace.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ Eigen\+::\+Vector\+Xd, Eigen\+::aligned\+\_\+allocator$<$ Eigen\+::\+Vector\+Xd $>$ $>$ \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_aee9d767fa1208772a3de83732646e182}{Workspace\+Vector}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_jacobian_workspace_a6c20de27401a40e620ee065c80d24b9e}{Jacobian\+Workspace}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_jacobian_workspace_a0d00e42f6e048268ff5005b8e3f578dd}{$\sim$\+Jacobian\+Workspace}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_a8e1d23ced91b721fdb5bd68c8c4e9fc3}{allocate}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_a2d16ad6db1a51aa93c806cc9c06e223f}{update\+Size}} (const \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge}{Hyper\+Graph\+::\+Edge}} $\ast$e)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_ae3d715bd25e196d8db81661ef0fbd09b}{update\+Size}} (const \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} \&graph)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_aa15a007fee3037116ea0e857855080d2}{update\+Size}} (int num\+Vertices, int dimension)
+\item 
+double $\ast$ \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_ad68c37d7779d3a034bc1b864cd98690b}{workspace\+For\+Vertex}} (int vertex\+Index)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_jacobian_workspace_aee9d767fa1208772a3de83732646e182}{Workspace\+Vector}} \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_af7dbaa3a651808e1bf3f876896bd1bfc}{\+\_\+workspace}}
+\begin{DoxyCompactList}\small\item\em the memory pre-\/allocated for computing the Jacobians \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_a640c84c19a739ce3116fc02c3a66b096}{\+\_\+max\+Num\+Vertices}}
+\begin{DoxyCompactList}\small\item\em the maximum number of vertices connected by a hyper-\/edge \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_aa6cd4fb8bc1bb4fe9ada55d9feefc817}{\+\_\+max\+Dimension}}
+\begin{DoxyCompactList}\small\item\em the maximum dimension (number of elements) for a Jacobian \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+provide memory workspace for computing the Jacobians 
+
+The workspace is used by an \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} to provide temporary memory for computing the Jacobian of the error functions. Before calling linearize\+Oplus on an edge, the workspace needs to be allocated by calling \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_a8e1d23ced91b721fdb5bd68c8c4e9fc3}{allocate()}}. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_aee9d767fa1208772a3de83732646e182}\label{classg2o_1_1_jacobian_workspace_aee9d767fa1208772a3de83732646e182}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!Workspace\+Vector@{Workspace\+Vector}}
+\index{Workspace\+Vector@{Workspace\+Vector}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{Workspace\+Vector}{WorkspaceVector}}
+{\footnotesize\ttfamily typedef std\+::vector$<$Eigen\+::\+Vector\+Xd, Eigen\+::aligned\+\_\+allocator$<$Eigen\+::\+Vector\+Xd$>$ $>$ \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_aee9d767fa1208772a3de83732646e182}{g2o\+::\+Jacobian\+Workspace\+::\+Workspace\+Vector}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_a6c20de27401a40e620ee065c80d24b9e}\label{classg2o_1_1_jacobian_workspace_a6c20de27401a40e620ee065c80d24b9e}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!Jacobian\+Workspace@{Jacobian\+Workspace}}
+\index{Jacobian\+Workspace@{Jacobian\+Workspace}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{Jacobian\+Workspace()}{JacobianWorkspace()}}
+{\footnotesize\ttfamily g2o\+::\+Jacobian\+Workspace\+::\+Jacobian\+Workspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_a0d00e42f6e048268ff5005b8e3f578dd}\label{classg2o_1_1_jacobian_workspace_a0d00e42f6e048268ff5005b8e3f578dd}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!````~Jacobian\+Workspace@{$\sim$\+Jacobian\+Workspace}}
+\index{````~Jacobian\+Workspace@{$\sim$\+Jacobian\+Workspace}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{$\sim$\+Jacobian\+Workspace()}{~JacobianWorkspace()}}
+{\footnotesize\ttfamily g2o\+::\+Jacobian\+Workspace\+::$\sim$\+Jacobian\+Workspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_a8e1d23ced91b721fdb5bd68c8c4e9fc3}\label{classg2o_1_1_jacobian_workspace_a8e1d23ced91b721fdb5bd68c8c4e9fc3}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!allocate@{allocate}}
+\index{allocate@{allocate}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily bool g2o\+::\+Jacobian\+Workspace\+::allocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+allocate the workspace \mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_a2d16ad6db1a51aa93c806cc9c06e223f}\label{classg2o_1_1_jacobian_workspace_a2d16ad6db1a51aa93c806cc9c06e223f}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!update\+Size@{update\+Size}}
+\index{update\+Size@{update\+Size}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{update\+Size()}{updateSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void g2o\+::\+Jacobian\+Workspace\+::update\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge}{Hyper\+Graph\+::\+Edge}} $\ast$}]{e }\end{DoxyParamCaption})}
+
+update the maximum required workspace needed by taking into account this edge \mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_ae3d715bd25e196d8db81661ef0fbd09b}\label{classg2o_1_1_jacobian_workspace_ae3d715bd25e196d8db81661ef0fbd09b}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!update\+Size@{update\+Size}}
+\index{update\+Size@{update\+Size}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{update\+Size()}{updateSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void g2o\+::\+Jacobian\+Workspace\+::update\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} \&}]{graph }\end{DoxyParamCaption})}
+
+update the required workspace by looking at a full graph \mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_aa15a007fee3037116ea0e857855080d2}\label{classg2o_1_1_jacobian_workspace_aa15a007fee3037116ea0e857855080d2}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!update\+Size@{update\+Size}}
+\index{update\+Size@{update\+Size}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{update\+Size()}{updateSize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void g2o\+::\+Jacobian\+Workspace\+::update\+Size (\begin{DoxyParamCaption}\item[{int}]{num\+Vertices,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+manually update with the given parameters \mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_ad68c37d7779d3a034bc1b864cd98690b}\label{classg2o_1_1_jacobian_workspace_ad68c37d7779d3a034bc1b864cd98690b}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!workspace\+For\+Vertex@{workspace\+For\+Vertex}}
+\index{workspace\+For\+Vertex@{workspace\+For\+Vertex}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{workspace\+For\+Vertex()}{workspaceForVertex()}}
+{\footnotesize\ttfamily double$\ast$ g2o\+::\+Jacobian\+Workspace\+::workspace\+For\+Vertex (\begin{DoxyParamCaption}\item[{int}]{vertex\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the workspace for a vertex in an edge 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_aa6cd4fb8bc1bb4fe9ada55d9feefc817}\label{classg2o_1_1_jacobian_workspace_aa6cd4fb8bc1bb4fe9ada55d9feefc817}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!\+\_\+max\+Dimension@{\+\_\+max\+Dimension}}
+\index{\+\_\+max\+Dimension@{\+\_\+max\+Dimension}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{\+\_\+max\+Dimension}{\_maxDimension}}
+{\footnotesize\ttfamily int g2o\+::\+Jacobian\+Workspace\+::\+\_\+max\+Dimension\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the maximum dimension (number of elements) for a Jacobian 
+
+\mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_a640c84c19a739ce3116fc02c3a66b096}\label{classg2o_1_1_jacobian_workspace_a640c84c19a739ce3116fc02c3a66b096}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!\+\_\+max\+Num\+Vertices@{\+\_\+max\+Num\+Vertices}}
+\index{\+\_\+max\+Num\+Vertices@{\+\_\+max\+Num\+Vertices}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{\+\_\+max\+Num\+Vertices}{\_maxNumVertices}}
+{\footnotesize\ttfamily int g2o\+::\+Jacobian\+Workspace\+::\+\_\+max\+Num\+Vertices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the maximum number of vertices connected by a hyper-\/edge 
+
+\mbox{\Hypertarget{classg2o_1_1_jacobian_workspace_af7dbaa3a651808e1bf3f876896bd1bfc}\label{classg2o_1_1_jacobian_workspace_af7dbaa3a651808e1bf3f876896bd1bfc}} 
+\index{g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}!\+\_\+workspace@{\+\_\+workspace}}
+\index{\+\_\+workspace@{\+\_\+workspace}!g2o\+::\+Jacobian\+Workspace@{g2o\+::\+Jacobian\+Workspace}}
+\subsubsection{\texorpdfstring{\+\_\+workspace}{\_workspace}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_jacobian_workspace_aee9d767fa1208772a3de83732646e182}{Workspace\+Vector}} g2o\+::\+Jacobian\+Workspace\+::\+\_\+workspace\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the memory pre-\/allocated for computing the Jacobians 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{jacobian__workspace_8h}{jacobian\+\_\+workspace.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{jacobian__workspace_8cpp}{jacobian\+\_\+workspace.\+cpp}}\end{DoxyCompactItemize}

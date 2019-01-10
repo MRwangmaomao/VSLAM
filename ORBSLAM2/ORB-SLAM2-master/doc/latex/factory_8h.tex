@@ -1,0 +1,95 @@
+\hypertarget{factory_8h}{}\section{Thirdparty/g2o/g2o/core/factory.h File Reference}
+\label{factory_8h}\index{Thirdparty/g2o/g2o/core/factory.\+h@{Thirdparty/g2o/g2o/core/factory.\+h}}
+{\ttfamily \#include \char`\"{}../../config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../stuff/misc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hyper\+\_\+graph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}creators.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}g2o\+\_\+core\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_factory}{g2o\+::\+Factory}}
+\begin{DoxyCompactList}\small\item\em create vertices and edges based on T\+A\+Gs in, for example, a file \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_factory_1_1_creator_information}{g2o\+::\+Factory\+::\+Creator\+Information}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_register_type_proxy}{g2o\+::\+Register\+Type\+Proxy$<$ T $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceg2o}{g2o}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}}
+\item 
+\#define \mbox{\hyperlink{factory_8h_a931d6686e993e609f642e039e0bccb2f}{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}}
+\item 
+\#define \mbox{\hyperlink{factory_8h_a82a848072fa00a3cb536c5619d800940}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}}(name,  classname)
+\item 
+\#define \mbox{\hyperlink{factory_8h_a8a9dfe3b92e8018b8d19e0c512ee63d1}{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}}(classname)
+\item 
+\#define \mbox{\hyperlink{factory_8h_a9f8975b0ea19f8c04d6ba983a5a3ca35}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}}(type\+Group\+Name)~extern \char`\"{}C\char`\"{} void \mbox{\hyperlink{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}} g2o\+\_\+type\+\_\+group\+\_\+\#\#type\+Group\+Name(void) \{\}
+\item 
+\#define \mbox{\hyperlink{factory_8h_af7ab0b7b31135f39038d4152ed3f8298}{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}}(type\+Group\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}\label{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}} 
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT@{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}}
+\index{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT@{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}!factory.\+h@{factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}{G2O\_FACTORY\_EXPORT}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}
+
+\mbox{\Hypertarget{factory_8h_a931d6686e993e609f642e039e0bccb2f}\label{factory_8h_a931d6686e993e609f642e039e0bccb2f}} 
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT@{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}}
+\index{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT@{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}!factory.\+h@{factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}{G2O\_FACTORY\_IMPORT}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}
+
+\mbox{\Hypertarget{factory_8h_a82a848072fa00a3cb536c5619d800940}\label{factory_8h_a82a848072fa00a3cb536c5619d800940}} 
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}!factory.\+h@{factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE}{G2O\_REGISTER\_TYPE}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{classname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \mbox{\hyperlink{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}{G2O\_FACTORY\_EXPORT}} g2o\_type\_##classname(\textcolor{keywordtype}{void}) \{\} \(\backslash\)
+    static \mbox{\hyperlink{classg2o_1_1_register_type_proxy}{g2o::RegisterTypeProxy<classname>}} g\_type\_proxy\_##classname(#
+      name);
+\end{DoxyCode}
+\mbox{\Hypertarget{factory_8h_a9f8975b0ea19f8c04d6ba983a5a3ca35}\label{factory_8h_a9f8975b0ea19f8c04d6ba983a5a3ca35}} 
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}!factory.\+h@{factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}{G2O\_REGISTER\_TYPE\_GROUP}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP(\begin{DoxyParamCaption}\item[{}]{type\+Group\+Name }\end{DoxyParamCaption})~extern \char`\"{}C\char`\"{} void \mbox{\hyperlink{factory_8h_a77ffc0f4450e80a6f6b00da03d8566d2}{G2\+O\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}} g2o\+\_\+type\+\_\+group\+\_\+\#\#type\+Group\+Name(void) \{\}}
+
+\mbox{\Hypertarget{factory_8h_a8a9dfe3b92e8018b8d19e0c512ee63d1}\label{factory_8h_a8a9dfe3b92e8018b8d19e0c512ee63d1}} 
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}}
+\index{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}!factory.\+h@{factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}{G2O\_USE\_TYPE\_BY\_CLASS\_NAME}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+A\+ME(\begin{DoxyParamCaption}\item[{}]{classname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \mbox{\hyperlink{factory_8h_a931d6686e993e609f642e039e0bccb2f}{G2O\_FACTORY\_IMPORT}} g2o\_type\_##classname(\textcolor{keywordtype}{void}); \(\backslash\)
+    static \mbox{\hyperlink{structg2o_1_1_force_linker}{g2o::ForceLinker}} proxy\_##classname(g2o\_type\_##classname);
+\end{DoxyCode}
+\mbox{\Hypertarget{factory_8h_af7ab0b7b31135f39038d4152ed3f8298}\label{factory_8h_af7ab0b7b31135f39038d4152ed3f8298}} 
+\index{factory.\+h@{factory.\+h}!G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}}
+\index{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}!factory.\+h@{factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP}{G2O\_USE\_TYPE\_GROUP}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+U\+S\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+O\+UP(\begin{DoxyParamCaption}\item[{}]{type\+Group\+Name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \mbox{\hyperlink{factory_8h_a931d6686e993e609f642e039e0bccb2f}{G2O\_FACTORY\_IMPORT}} g2o\_type\_group\_##typeGroupName(\textcolor{keywordtype}{void}); \(\backslash\)
+    static \mbox{\hyperlink{structg2o_1_1_force_linker}{g2o::ForceLinker}} g2o\_force\_type\_link\_##typeGroupName(g2o\_type\_group\_##
+      typeGroupName);
+\end{DoxyCode}

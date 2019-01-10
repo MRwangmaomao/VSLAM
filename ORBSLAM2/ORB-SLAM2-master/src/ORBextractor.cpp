@@ -75,7 +75,14 @@ const int PATCH_SIZE = 31;
 const int HALF_PATCH_SIZE = 15;
 const int EDGE_THRESHOLD = 19;
 
-
+/**
+ * @brief 计算每个角点的角度
+ * 
+ * @param image 
+ * @param pt 
+ * @param u_max 
+ * @return float 
+ */
 static float IC_Angle(const Mat& image, Point2f pt,  const vector<int> & u_max)
 {
     int m_01 = 0, m_10 = 0;
@@ -107,6 +114,14 @@ static float IC_Angle(const Mat& image, Point2f pt,  const vector<int> & u_max)
 
 
 const float factorPI = (float)(CV_PI/180.f);
+/**
+ * @brief 计算orb描述子
+ * 
+ * @param kpt 
+ * @param img 
+ * @param pattern 
+ * @param desc 
+ */
 static void computeOrbDescriptor(const KeyPoint& kpt,
                                  const Mat& img, const Point* pattern,
                                  uchar* desc)
@@ -148,7 +163,10 @@ static void computeOrbDescriptor(const KeyPoint& kpt,
     #undef GET_VALUE
 }
 
-
+/**
+ * @brief bit_pattern_31_ 
+ * 
+ */
 static int bit_pattern_31_[256*4] =
 {
     8,-3, 9,5/*mean (0), correlation (0)*/,
@@ -409,6 +427,16 @@ static int bit_pattern_31_[256*4] =
     -1,-6, 0,-11/*mean (0.127148), correlation (0.547401)*/
 };
 
+/** @brief Construct a new ORBextractor::ORBextractor object
+ * 
+ * This is a test doxygen.
+ * 
+ * @param _nfeatures 
+ * @param _scaleFactor 
+ * @param _nlevels 
+ * @param _iniThFAST 
+ * @param _minThFAST 
+ */
 ORBextractor::ORBextractor(int _nfeatures, float _scaleFactor, int _nlevels,
          int _iniThFAST, int _minThFAST):
     nfeatures(_nfeatures), scaleFactor(_scaleFactor), nlevels(_nlevels),
@@ -470,7 +498,14 @@ ORBextractor::ORBextractor(int _nfeatures, float _scaleFactor, int _nlevels,
         ++v0;
     }
 }
-
+/**
+ * @brief 计算每个特征角点的旋转方向
+ * 
+ * @param image 
+ * @param keypoints 
+ * @param umax 
+ */
+//compute Orientation
 static void computeOrientation(const Mat& image, vector<KeyPoint>& keypoints, const vector<int>& umax)
 {
     for (vector<KeyPoint>::iterator keypoint = keypoints.begin(),
@@ -538,6 +573,18 @@ void ExtractorNode::DivideNode(ExtractorNode &n1, ExtractorNode &n2, ExtractorNo
 
 }
 
+/**
+ * @brief Orb extrator distribute octTree
+ * 
+ * @param vToDistributeKeys 
+ * @param minX 
+ * @param maxX 
+ * @param minY 
+ * @param maxY 
+ * @param N 
+ * @param level 
+ * @return vector<cv::KeyPoint> 
+ */
 vector<cv::KeyPoint> ORBextractor::DistributeOctTree(const vector<cv::KeyPoint>& vToDistributeKeys, const int &minX,
                                        const int &maxX, const int &minY, const int &maxY, const int &N, const int &level)
 {
@@ -680,7 +727,7 @@ vector<cv::KeyPoint> ORBextractor::DistributeOctTree(const vector<cv::KeyPoint>&
 
             while(!bFinish)
             {
-
+                
                 prevSize = lNodes.size();
 
                 vector<pair<int,ExtractorNode*> > vPrevSizeAndPointerToNode = vSizeAndPointerToNode;
@@ -1117,8 +1164,9 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
 }
 
 /**
- * 构建图像金字塔
- * @param image 输入图像
+ * @brief 构建图像金字塔
+ * 
+ * @param image 
  */
 void ORBextractor::ComputePyramid(cv::Mat image)
 {

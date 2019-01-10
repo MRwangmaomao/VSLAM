@@ -1,0 +1,440 @@
+\hypertarget{classg2o_1_1_base_vertex}{}\section{g2o\+:\+:Base\+Vertex$<$ D, T $>$ Class Template Reference}
+\label{classg2o_1_1_base_vertex}\index{g2o\+::\+Base\+Vertex$<$ D, T $>$@{g2o\+::\+Base\+Vertex$<$ D, T $>$}}
+
+
+Templatized \mbox{\hyperlink{classg2o_1_1_base_vertex}{Base\+Vertex}}.  
+
+
+
+
+{\ttfamily \#include $<$base\+\_\+vertex.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Base\+Vertex$<$ D, T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classg2o_1_1_base_vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}}
+\item 
+typedef std\+::stack$<$ \mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}}, std\+::vector$<$ \mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}}, Eigen\+::aligned\+\_\+allocator$<$ \mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}} $>$ $>$ $>$ \mbox{\hyperlink{classg2o_1_1_base_vertex_ae6632291d46b458196bdb021a6c8cba1}{Backup\+Stack\+Type}}
+\item 
+typedef Eigen\+::\+Map$<$ Matrix$<$ double, D, D $>$, Matrix$<$ double, D, D $>$\+::Flags \&Aligned\+Bit ? Aligned \+:Unaligned $>$ \mbox{\hyperlink{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}{Hessian\+Block\+Type}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_vertex_a40fcd78e21bb4aedf7e299922c650937}{Base\+Vertex}} ()
+\item 
+virtual const double \& \mbox{\hyperlink{classg2o_1_1_base_vertex_ac35e0c8c62a59e947ac7710ed85fcd7a}{hessian}} (int i, int j) const
+\begin{DoxyCompactList}\small\item\em get the element from the hessian matrix \end{DoxyCompactList}\item 
+virtual double \& \mbox{\hyperlink{classg2o_1_1_base_vertex_a6ab2212fdb00dec460299fdbabe09cb9}{hessian}} (int i, int j)
+\item 
+virtual double \mbox{\hyperlink{classg2o_1_1_base_vertex_a1217e0fe47e7259f039d468397cddb15}{hessian\+Determinant}} () const
+\item 
+virtual double $\ast$ \mbox{\hyperlink{classg2o_1_1_base_vertex_aedf92fbb5c2c86185422a955be02a3a6}{hessian\+Data}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_vertex_a54227ac315e6bc75c63ed117a2c75668}{map\+Hessian\+Memory}} (double $\ast$d)
+\item 
+virtual int \mbox{\hyperlink{classg2o_1_1_base_vertex_a3629d3b15da425476e15867fb03b781b}{copyB}} (double $\ast$b\+\_\+) const
+\item 
+virtual const double \& \mbox{\hyperlink{classg2o_1_1_base_vertex_a837ef1047343d927edb48ad8d510fe90}{b}} (int i) const
+\begin{DoxyCompactList}\small\item\em get the b vector element \end{DoxyCompactList}\item 
+virtual double \& \mbox{\hyperlink{classg2o_1_1_base_vertex_a5c235369ef3fb58de65b90c8cc37d611}{b}} (int i)
+\item 
+virtual double $\ast$ \mbox{\hyperlink{classg2o_1_1_base_vertex_ac8edea7073e5850c90b0ba37092b8f84}{b\+Data}} ()
+\begin{DoxyCompactList}\small\item\em return a pointer to the b vector associated with this vertex \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_vertex_a144f99c7aa36a100dea65b30793e6d76}{clear\+Quadratic\+Form}} ()
+\item 
+virtual double \mbox{\hyperlink{classg2o_1_1_base_vertex_a0bbd9551b7e03f7e422169e396e8ec9b}{solve\+Direct}} (double lambda=0)
+\item 
+Matrix$<$ double, D, 1 $>$ \& \mbox{\hyperlink{classg2o_1_1_base_vertex_af7a70ede844ad023ba32edde16c8c745}{b}} ()
+\begin{DoxyCompactList}\small\item\em return right hand side b of the constructed linear system \end{DoxyCompactList}\item 
+const Matrix$<$ double, D, 1 $>$ \& \mbox{\hyperlink{classg2o_1_1_base_vertex_a6b0bf63c79b2b36186680b2a73ec70bf}{b}} () const
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}{Hessian\+Block\+Type}} \& \mbox{\hyperlink{classg2o_1_1_base_vertex_a43bcf2bb3420a0b2cb80bfd297b464a6}{A}} ()
+\begin{DoxyCompactList}\small\item\em return the hessian block associated with the vertex \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}{Hessian\+Block\+Type}} \& \mbox{\hyperlink{classg2o_1_1_base_vertex_a3efca26127cda4f9b77a06352f1267bb}{A}} () const
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_vertex_ae6edf93fe07aa27579a9352faa83098c}{push}} ()
+\begin{DoxyCompactList}\small\item\em backup the position of the vertex to a stack \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_vertex_a502bf3db2ee32061a2c8257ef81a1552}{pop}} ()
+\begin{DoxyCompactList}\small\item\em restore the position of the vertex by retrieving the position from the stack \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_vertex_a71729c4d91044bde9bfea4c859b0c02d}{discard\+Top}} ()
+\begin{DoxyCompactList}\small\item\em pop the last element from the stack, without restoring the current estimate \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classg2o_1_1_base_vertex_a7d82f4b9669dd123ac7d38c7f4345d8c}{stack\+Size}} () const
+\begin{DoxyCompactList}\small\item\em return the stack size \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}} \& \mbox{\hyperlink{classg2o_1_1_base_vertex_afea20bbcf50eb2a7d9d598b3eae49172}{estimate}} () const
+\begin{DoxyCompactList}\small\item\em return the current estimate of the vertex \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_base_vertex_acb6e8e8f39caa04f62dd93a3dd400e06}{set\+Estimate}} (const \mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}} \&et)
+\begin{DoxyCompactList}\small\item\em set the estimate for the vertex also calls \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ab5972c8ba6834c4dcb8a2319e9bf3070}{update\+Cache()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classg2o_1_1_base_vertex_a9a831bfdf84cfe625d8f942bc4f1c2d1}{Dimension}} = D
+\begin{DoxyCompactList}\small\item\em dimension of the estimate (minimal) in the manifold space \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}{Hessian\+Block\+Type}} \mbox{\hyperlink{classg2o_1_1_base_vertex_afaf73b0e874db76655d90bdb2f156c00}{\+\_\+hessian}}
+\item 
+Matrix$<$ double, D, 1 $>$ \mbox{\hyperlink{classg2o_1_1_base_vertex_a70c672f2997275927efa49c1f5b18ac3}{\+\_\+b}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}} \mbox{\hyperlink{classg2o_1_1_base_vertex_ab188c92c3e906c6e06507ae624c0e7ac}{\+\_\+estimate}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_vertex_ae6632291d46b458196bdb021a6c8cba1}{Backup\+Stack\+Type}} \mbox{\hyperlink{classg2o_1_1_base_vertex_a936082916993857a77c8318bc3e59d23}{\+\_\+backup}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int D, typename T$>$\newline
+class g2o\+::\+Base\+Vertex$<$ D, T $>$}
+
+Templatized \mbox{\hyperlink{classg2o_1_1_base_vertex}{Base\+Vertex}}. 
+
+Templatized \mbox{\hyperlink{classg2o_1_1_base_vertex}{Base\+Vertex}} D \+: minimal dimension of the vertex, e.\+g., 3 for rotation in 3D T \+: internal type to represent the estimate, e.\+g., Quaternion for rotation in 3D 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_ae6632291d46b458196bdb021a6c8cba1}\label{classg2o_1_1_base_vertex_ae6632291d46b458196bdb021a6c8cba1}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!Backup\+Stack\+Type@{Backup\+Stack\+Type}}
+\index{Backup\+Stack\+Type@{Backup\+Stack\+Type}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{Backup\+Stack\+Type}{BackupStackType}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+typedef std\+::stack$<$\mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}}, std\+::vector$<$\mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}}, Eigen\+::aligned\+\_\+allocator$<$\mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}}$>$ $>$ $>$ \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::\mbox{\hyperlink{classg2o_1_1_base_vertex_ae6632291d46b458196bdb021a6c8cba1}{Backup\+Stack\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}\label{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!Estimate\+Type@{Estimate\+Type}}
+\index{Estimate\+Type@{Estimate\+Type}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{Estimate\+Type}{EstimateType}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+typedef T \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::\mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}\label{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!Hessian\+Block\+Type@{Hessian\+Block\+Type}}
+\index{Hessian\+Block\+Type@{Hessian\+Block\+Type}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{Hessian\+Block\+Type}{HessianBlockType}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+typedef Eigen\+::\+Map$<$Matrix$<$double, D, D$>$, Matrix$<$double,D,D$>$\+::Flags \& Aligned\+Bit ? Aligned \+: Unaligned $>$ \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::\mbox{\hyperlink{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}{Hessian\+Block\+Type}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a40fcd78e21bb4aedf7e299922c650937}\label{classg2o_1_1_base_vertex_a40fcd78e21bb4aedf7e299922c650937}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!Base\+Vertex@{Base\+Vertex}}
+\index{Base\+Vertex@{Base\+Vertex}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{Base\+Vertex()}{BaseVertex()}}
+{\footnotesize\ttfamily template$<$int D, typename T $>$ \\
+Base\+Vertex\+::\+Base\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a43bcf2bb3420a0b2cb80bfd297b464a6}\label{classg2o_1_1_base_vertex_a43bcf2bb3420a0b2cb80bfd297b464a6}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!A@{A}}
+\index{A@{A}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{A()}{A()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}{Hessian\+Block\+Type}}\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::A (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the hessian block associated with the vertex 
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a3efca26127cda4f9b77a06352f1267bb}\label{classg2o_1_1_base_vertex_a3efca26127cda4f9b77a06352f1267bb}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!A@{A}}
+\index{A@{A}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{A()}{A()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+const \mbox{\hyperlink{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}{Hessian\+Block\+Type}}\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::A (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a837ef1047343d927edb48ad8d510fe90}\label{classg2o_1_1_base_vertex_a837ef1047343d927edb48ad8d510fe90}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!b@{b}}
+\index{b@{b}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{b()}{b()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual const double\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::b (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get the b vector element 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a79afa60eb11928eeeb1b97f2d2a30732}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a5c235369ef3fb58de65b90c8cc37d611}\label{classg2o_1_1_base_vertex_a5c235369ef3fb58de65b90c8cc37d611}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!b@{b}}
+\index{b@{b}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{b()}{b()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual double\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::b (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af2d92761ad2732b6e9b19bd52fa2a19b}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_af7a70ede844ad023ba32edde16c8c745}\label{classg2o_1_1_base_vertex_af7a70ede844ad023ba32edde16c8c745}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!b@{b}}
+\index{b@{b}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{b()}{b()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+Matrix$<$double, D, 1$>$\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::b (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return right hand side b of the constructed linear system 
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a6b0bf63c79b2b36186680b2a73ec70bf}\label{classg2o_1_1_base_vertex_a6b0bf63c79b2b36186680b2a73ec70bf}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!b@{b}}
+\index{b@{b}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{b()}{b()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+const Matrix$<$double, D, 1$>$\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::b (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_ac8edea7073e5850c90b0ba37092b8f84}\label{classg2o_1_1_base_vertex_ac8edea7073e5850c90b0ba37092b8f84}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!b\+Data@{b\+Data}}
+\index{b\+Data@{b\+Data}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{b\+Data()}{bData()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual double$\ast$ \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::b\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+return a pointer to the b vector associated with this vertex 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a84465a61c6d322f7d64833129cc7d55a}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a144f99c7aa36a100dea65b30793e6d76}\label{classg2o_1_1_base_vertex_a144f99c7aa36a100dea65b30793e6d76}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!clear\+Quadratic\+Form@{clear\+Quadratic\+Form}}
+\index{clear\+Quadratic\+Form@{clear\+Quadratic\+Form}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{clear\+Quadratic\+Form()}{clearQuadraticForm()}}
+{\footnotesize\ttfamily template$<$int D, typename T $>$ \\
+void Base\+Vertex\+::clear\+Quadratic\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+set the b vector part of this vertex to zero 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a803897f6bae25dece4d7e23330f0f9da}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a3629d3b15da425476e15867fb03b781b}\label{classg2o_1_1_base_vertex_a3629d3b15da425476e15867fb03b781b}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!copyB@{copyB}}
+\index{copyB@{copyB}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{copy\+B()}{copyB()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual int \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::copyB (\begin{DoxyParamCaption}\item[{double $\ast$}]{b\+\_\+ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+copies the b vector in the array b\+\_\+ \begin{DoxyReturn}{Returns}
+the number of elements copied 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af544f0050ea6e05950fd6e53931bdf61}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a71729c4d91044bde9bfea4c859b0c02d}\label{classg2o_1_1_base_vertex_a71729c4d91044bde9bfea4c859b0c02d}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!discard\+Top@{discard\+Top}}
+\index{discard\+Top@{discard\+Top}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{discard\+Top()}{discardTop()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual void \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::discard\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+pop the last element from the stack, without restoring the current estimate 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a9509fb5c333988911312fc3d9187a9c3}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_afea20bbcf50eb2a7d9d598b3eae49172}\label{classg2o_1_1_base_vertex_afea20bbcf50eb2a7d9d598b3eae49172}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!estimate@{estimate}}
+\index{estimate@{estimate}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{estimate()}{estimate()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+const \mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}}\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::estimate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the current estimate of the vertex 
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_ac35e0c8c62a59e947ac7710ed85fcd7a}\label{classg2o_1_1_base_vertex_ac35e0c8c62a59e947ac7710ed85fcd7a}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!hessian@{hessian}}
+\index{hessian@{hessian}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{hessian()}{hessian()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual const double\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::hessian (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get the element from the hessian matrix 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af46fa4f0baa4c87e29b137f24e713acb}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a6ab2212fdb00dec460299fdbabe09cb9}\label{classg2o_1_1_base_vertex_a6ab2212fdb00dec460299fdbabe09cb9}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!hessian@{hessian}}
+\index{hessian@{hessian}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{hessian()}{hessian()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual double\& \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::hessian (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ade95d46370bb9a86f64c4e591726ad62}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_aedf92fbb5c2c86185422a955be02a3a6}\label{classg2o_1_1_base_vertex_aedf92fbb5c2c86185422a955be02a3a6}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!hessian\+Data@{hessian\+Data}}
+\index{hessian\+Data@{hessian\+Data}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{hessian\+Data()}{hessianData()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual double$\ast$ \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::hessian\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a4ec536d8c82d839e507d89c7a7e368ae}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a1217e0fe47e7259f039d468397cddb15}\label{classg2o_1_1_base_vertex_a1217e0fe47e7259f039d468397cddb15}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!hessian\+Determinant@{hessian\+Determinant}}
+\index{hessian\+Determinant@{hessian\+Determinant}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{hessian\+Determinant()}{hessianDeterminant()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual double \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::hessian\+Determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_adaed502500d9ddc9f1721aba635da4d6}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a54227ac315e6bc75c63ed117a2c75668}\label{classg2o_1_1_base_vertex_a54227ac315e6bc75c63ed117a2c75668}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!map\+Hessian\+Memory@{map\+Hessian\+Memory}}
+\index{map\+Hessian\+Memory@{map\+Hessian\+Memory}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{map\+Hessian\+Memory()}{mapHessianMemory()}}
+{\footnotesize\ttfamily template$<$int D, typename T $>$ \\
+void Base\+Vertex\+::map\+Hessian\+Memory (\begin{DoxyParamCaption}\item[{double $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+maps the internal matrix to some external memory location 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a1008c0f7981a9fb11be3e3df5c4a9758}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a502bf3db2ee32061a2c8257ef81a1552}\label{classg2o_1_1_base_vertex_a502bf3db2ee32061a2c8257ef81a1552}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!pop@{pop}}
+\index{pop@{pop}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual void \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+restore the position of the vertex by retrieving the position from the stack 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a3e36d925dbda1c574a285826ade5909a}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_ae6edf93fe07aa27579a9352faa83098c}\label{classg2o_1_1_base_vertex_ae6edf93fe07aa27579a9352faa83098c}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!push@{push}}
+\index{push@{push}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual void \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::push (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+backup the position of the vertex to a stack 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_aa477ed33d30a01ed468f33bb2a2f2d9d}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_acb6e8e8f39caa04f62dd93a3dd400e06}\label{classg2o_1_1_base_vertex_acb6e8e8f39caa04f62dd93a3dd400e06}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!set\+Estimate@{set\+Estimate}}
+\index{set\+Estimate@{set\+Estimate}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Estimate()}{setEstimate()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+void \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::set\+Estimate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}} \&}]{et }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set the estimate for the vertex also calls \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ab5972c8ba6834c4dcb8a2319e9bf3070}{update\+Cache()}} 
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a0bbd9551b7e03f7e422169e396e8ec9b}\label{classg2o_1_1_base_vertex_a0bbd9551b7e03f7e422169e396e8ec9b}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!solve\+Direct@{solve\+Direct}}
+\index{solve\+Direct@{solve\+Direct}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{solve\+Direct()}{solveDirect()}}
+{\footnotesize\ttfamily template$<$int D, typename T $>$ \\
+double Base\+Vertex\+::solve\+Direct (\begin{DoxyParamCaption}\item[{double}]{lambda = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+updates the current vertex with the direct solution x += H\+\_\+ii \begin{DoxyReturn}{Returns}
+the determinant of the inverted hessian 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a61c4e7b7a7a61e1f287069a8cb01004f}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a7d82f4b9669dd123ac7d38c7f4345d8c}\label{classg2o_1_1_base_vertex_a7d82f4b9669dd123ac7d38c7f4345d8c}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!stack\+Size@{stack\+Size}}
+\index{stack\+Size@{stack\+Size}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{stack\+Size()}{stackSize()}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+virtual int \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::stack\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+return the stack size 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a0a4ecc894d008d9c3806a3660e7dfe6f}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a70c672f2997275927efa49c1f5b18ac3}\label{classg2o_1_1_base_vertex_a70c672f2997275927efa49c1f5b18ac3}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!\+\_\+b@{\+\_\+b}}
+\index{\+\_\+b@{\+\_\+b}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+b}{\_b}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+Matrix$<$double, D, 1$>$ \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::\+\_\+b\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a936082916993857a77c8318bc3e59d23}\label{classg2o_1_1_base_vertex_a936082916993857a77c8318bc3e59d23}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!\+\_\+backup@{\+\_\+backup}}
+\index{\+\_\+backup@{\+\_\+backup}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+backup}{\_backup}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_vertex_ae6632291d46b458196bdb021a6c8cba1}{Backup\+Stack\+Type}} \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::\+\_\+backup\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_ab188c92c3e906c6e06507ae624c0e7ac}\label{classg2o_1_1_base_vertex_ab188c92c3e906c6e06507ae624c0e7ac}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!\+\_\+estimate@{\+\_\+estimate}}
+\index{\+\_\+estimate@{\+\_\+estimate}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+estimate}{\_estimate}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_vertex_aaffb179a0d591da4769ec7c3fc7f7daa}{Estimate\+Type}} \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::\+\_\+estimate\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_afaf73b0e874db76655d90bdb2f156c00}\label{classg2o_1_1_base_vertex_afaf73b0e874db76655d90bdb2f156c00}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!\+\_\+hessian@{\+\_\+hessian}}
+\index{\+\_\+hessian@{\+\_\+hessian}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+hessian}{\_hessian}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_vertex_a887928bc60710e0ec9acb269ee7411db}{Hessian\+Block\+Type}} \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::\+\_\+hessian\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_vertex_a9a831bfdf84cfe625d8f942bc4f1c2d1}\label{classg2o_1_1_base_vertex_a9a831bfdf84cfe625d8f942bc4f1c2d1}} 
+\index{g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}!Dimension@{Dimension}}
+\index{Dimension@{Dimension}!g2o\+::\+Base\+Vertex@{g2o\+::\+Base\+Vertex}}
+\subsubsection{\texorpdfstring{Dimension}{Dimension}}
+{\footnotesize\ttfamily template$<$int D, typename T$>$ \\
+const int \mbox{\hyperlink{classg2o_1_1_base_vertex}{g2o\+::\+Base\+Vertex}}$<$ D, T $>$\+::Dimension = D\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+dimension of the estimate (minimal) in the manifold space 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{base__vertex_8h}{base\+\_\+vertex.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{base__vertex_8hpp}{base\+\_\+vertex.\+hpp}}\end{DoxyCompactItemize}

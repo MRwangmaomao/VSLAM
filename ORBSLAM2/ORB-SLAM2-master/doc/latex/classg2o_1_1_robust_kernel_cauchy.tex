@@ -1,0 +1,47 @@
+\hypertarget{classg2o_1_1_robust_kernel_cauchy}{}\section{g2o\+:\+:Robust\+Kernel\+Cauchy Class Reference}
+\label{classg2o_1_1_robust_kernel_cauchy}\index{g2o\+::\+Robust\+Kernel\+Cauchy@{g2o\+::\+Robust\+Kernel\+Cauchy}}
+
+
+Cauchy cost function.  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+impl.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Robust\+Kernel\+Cauchy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_robust_kernel_cauchy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_robust_kernel_cauchy_abec224380964f491c74ef173e7ae5afd}{robustify}} (double e2, Eigen\+::\+Vector3d \&rho) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Cauchy cost function. 
+
+2 e d log(-- + 1) 2 d 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_cauchy_abec224380964f491c74ef173e7ae5afd}\label{classg2o_1_1_robust_kernel_cauchy_abec224380964f491c74ef173e7ae5afd}} 
+\index{g2o\+::\+Robust\+Kernel\+Cauchy@{g2o\+::\+Robust\+Kernel\+Cauchy}!robustify@{robustify}}
+\index{robustify@{robustify}!g2o\+::\+Robust\+Kernel\+Cauchy@{g2o\+::\+Robust\+Kernel\+Cauchy}}
+\subsubsection{\texorpdfstring{robustify()}{robustify()}}
+{\footnotesize\ttfamily void g2o\+::\+Robust\+Kernel\+Cauchy\+::robustify (\begin{DoxyParamCaption}\item[{double}]{squared\+Error,  }\item[{Eigen\+::\+Vector3d \&}]{rho }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+compute the scaling factor for a error\+: The error is e$^\wedge$T Omega e The output rho is rho\mbox{[}0\mbox{]}\+: The actual scaled error value rho\mbox{[}1\mbox{]}\+: First derivative of the scaling function rho\mbox{[}2\mbox{]}\+: Second derivative of the scaling function 
+
+Implements \mbox{\hyperlink{classg2o_1_1_robust_kernel_ab47b071a0cfe466be063f0104bc41d0f}{g2o\+::\+Robust\+Kernel}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel__impl_8h}{robust\+\_\+kernel\+\_\+impl.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel__impl_8cpp}{robust\+\_\+kernel\+\_\+impl.\+cpp}}\end{DoxyCompactItemize}

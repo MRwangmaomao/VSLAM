@@ -1,0 +1,803 @@
+\hypertarget{class_d_bo_w2_1_1_templated_vocabulary}{}\section{D\+Bo\+W2\+:\+:Templated\+Vocabulary$<$ T\+Descriptor, F $>$ Class Template Reference}
+\label{class_d_bo_w2_1_1_templated_vocabulary}\index{D\+Bo\+W2\+::\+Templated\+Vocabulary$<$ T\+Descriptor, F $>$@{D\+Bo\+W2\+::\+Templated\+Vocabulary$<$ T\+Descriptor, F $>$}}
+
+
+Generic Vocabulary.  
+
+
+
+
+{\ttfamily \#include $<$Templated\+Vocabulary.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_d_bo_w2_1_1_templated_vocabulary_1_1_node}{Node}}
+\begin{DoxyCompactList}\small\item\em Tree node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a0dbbcb6bf766b09f08d945a2af0dbea8}{Templated\+Vocabulary}} (int k=10, int L=5, \mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}} weighting=\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467aaa3425e88466862008dff6883e07e205d}{T\+F\+\_\+\+I\+DF}}, \mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}} scoring=\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722a2df432e58efd2a13d4950ee96aa6a20f}{L1\+\_\+\+N\+O\+RM}})
+\item 
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a72fc6a164a5174003d19bd3c54615de6}{Templated\+Vocabulary}} (const std\+::string \&filename)
+\item 
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a255d68e7b4235487f8d2d8ea0cbaf43a}{Templated\+Vocabulary}} (const char $\ast$filename)
+\item 
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_aac48ee5331b5d88a4db1a3c93cb0f6a5}{Templated\+Vocabulary}} (const \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$ \&voc)
+\item 
+virtual \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a9d15f985a0c3badc1518be0fbe663099}{$\sim$\+Templated\+Vocabulary}} ()
+\item 
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$ \& \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a5355c25b6f37c11acffe48996e19323f}{operator=}} (const \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$ \&voc)
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a3679b5a8f2043021a4faab99ccfe4ebe}{create}} (const std\+::vector$<$ std\+::vector$<$ T\+Descriptor $>$ $>$ \&training\+\_\+features)
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a94d48231b043a1102af4c35e256f2054}{create}} (const std\+::vector$<$ std\+::vector$<$ T\+Descriptor $>$ $>$ \&training\+\_\+features, int k, int L)
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a1e4a3e90f4aa1e6b6ea4d7491c223fd4}{create}} (const std\+::vector$<$ std\+::vector$<$ T\+Descriptor $>$ $>$ \&training\+\_\+features, int k, int L, \mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}} weighting, \mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}} scoring)
+\item 
+virtual unsigned int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a8baad280d6daf74ee43d7cd911363137}{size}} () const
+\item 
+virtual bool \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_ad7bbb3cf53f8f9f3610b9b67c551ba8e}{empty}} () const
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a01de3bebec37624439c7d3baf6651ff0}{transform}} (const std\+::vector$<$ T\+Descriptor $>$ \&features, \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&v) const
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_af3815440ed610974afc5a2836f54fe07}{transform}} (const std\+::vector$<$ T\+Descriptor $>$ \&features, \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&v, \mbox{\hyperlink{class_d_bo_w2_1_1_feature_vector}{Feature\+Vector}} \&fv, int levelsup) const
+\item 
+virtual \mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_aa5003af19aacb6a322f7fdc0535eb149}{transform}} (const T\+Descriptor \&feature) const
+\item 
+double \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_aedde9cc3255e41fd0441055eeb640346}{score}} (const \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&a, const \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&b) const
+\item 
+virtual \mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a03912634600711fbf70355ed32b07f2c}{get\+Parent\+Node}} (\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} wid, int levelsup) const
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a809f881020a2b953664b1f528828551e}{get\+Words\+From\+Node}} (\mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}} nid, std\+::vector$<$ \mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} $>$ \&words) const
+\item 
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a027d367760c39de816bee5ff0d969837}{get\+Branching\+Factor}} () const
+\item 
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a5a7d1b3ad0c705705d516a9a144e3f38}{get\+Depth\+Levels}} () const
+\item 
+float \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_ae67da4c7b30c15ed4faba2ad6ed4549e}{get\+Effective\+Levels}} () const
+\item 
+virtual T\+Descriptor \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a3f0d8b15b4f673bf9888ff23489430b4}{get\+Word}} (\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} wid) const
+\item 
+virtual \mbox{\hyperlink{namespace_d_bo_w2_a55fcd7333e591a38e96b91f41bc182f6}{Word\+Value}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_ace5645b42739bea1e3da05c6cff60bad}{get\+Word\+Weight}} (\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} wid) const
+\item 
+\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_aadb9343da87e0f00ed3da401c59132b2}{get\+Weighting\+Type}} () const
+\item 
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_ad830e1e3e547e5d9d45971662afca3d5}{get\+Scoring\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_aa8f63a3379debd40214899d996cfc733}{set\+Weighting\+Type}} (\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}} type)
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a05a6c2f46184618c9ea8368f53e6980c}{set\+Scoring\+Type}} (\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}} type)
+\item 
+bool \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a5447d0744100254c4da88ea039fb3414}{load\+From\+Text\+File}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a1338b014b856d0a17e71010f6488548e}{save\+To\+Text\+File}} (const std\+::string \&filename) const
+\item 
+bool \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_aa8c05732a3c2a063b0a8c1cbc418597a}{load\+From\+Binary\+File}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a256d9aaeb91b2ca9e626e3bc76359579}{save\+To\+Binary\+File}} (const std\+::string \&filename) const
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a92ca49bd6600bddbad145fb6e0543fa1}{save}} (const std\+::string \&filename) const
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_afdec2031c98b9109451b1454f73348b0}{load}} (const std\+::string \&filename)
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a3039529c46f02b795450f4fba2207339}{save}} (cv\+::\+File\+Storage \&fs, const std\+::string \&name=\char`\"{}vocabulary\char`\"{}) const
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a037ba240314ff30f3620fb4de6845c66}{load}} (const cv\+::\+File\+Storage \&fs, const std\+::string \&name=\char`\"{}vocabulary\char`\"{})
+\item 
+virtual int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a0b6721fde54bd8cd008f6a120398741e}{stop\+Words}} (double min\+Weight)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef const T\+Descriptor $\ast$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}}
+\begin{DoxyCompactList}\small\item\em Pointer to descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a3244d5a3d0f75ba9c9ae905c5365335d}{create\+Scoring\+Object}} ()
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_ace8155a70fa5163d117dc6a2ef923205}{get\+Features}} (const vector$<$ vector$<$ T\+Descriptor $>$ $>$ \&training\+\_\+features, vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}} $>$ \&features) const
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a5af7e18ab438c3fbbb51bd9930c43444}{transform}} (const T\+Descriptor \&feature, \mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} \&id, \mbox{\hyperlink{namespace_d_bo_w2_a55fcd7333e591a38e96b91f41bc182f6}{Word\+Value}} \&weight, \mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}} $\ast$nid=N\+U\+LL, int levelsup=0) const
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a48a53ffe060c205e44ddd2e173eb96c4}{transform}} (const T\+Descriptor \&feature, \mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} \&id) const
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_ab79623d30a8550414e1f4bf916869f05}{H\+Kmeans\+Step}} (\mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}} parent\+\_\+id, const vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}} $>$ \&descriptors, int current\+\_\+level)
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a3915e44667d32130e17791147730b7da}{initiate\+Clusters}} (const vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}} $>$ \&descriptors, vector$<$ T\+Descriptor $>$ \&clusters) const
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_aa4c94955c7e03ec39fc0d9b9ce60009f}{initiate\+Clusters\+K\+Mpp}} (const vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}} $>$ \&descriptors, vector$<$ T\+Descriptor $>$ \&clusters) const
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a9b74d107b7dc6142cbed4e6ef44a8519}{create\+Words}} ()
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_af7bf0ecd2d1ecc7d31ddca3aa7d1ddc8}{set\+Node\+Weights}} (const vector$<$ vector$<$ T\+Descriptor $>$ $>$ \&features)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_aa5f7f829033a49833fe4fb5652b99337}{m\+\_\+k}}
+\begin{DoxyCompactList}\small\item\em Branching factor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a16735d9e2c8b901f01d541faea67971e}{m\+\_\+L}}
+\begin{DoxyCompactList}\small\item\em Depth levels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_abf03c6430d630674ddca5bab9c120c51}{m\+\_\+weighting}}
+\begin{DoxyCompactList}\small\item\em Weighting method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a89d8aa037f2b5c3c5cc953734bb5cb9f}{m\+\_\+scoring}}
+\begin{DoxyCompactList}\small\item\em Scoring method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_d_bo_w2_1_1_general_scoring}{General\+Scoring}} $\ast$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a34144d0e2056d6ed8b925a2937b67418}{m\+\_\+scoring\+\_\+object}}
+\begin{DoxyCompactList}\small\item\em Object for computing scores. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_d_bo_w2_1_1_templated_vocabulary_1_1_node}{Node}} $>$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a82be6d310eae6f4f57a72d340489320b}{m\+\_\+nodes}}
+\begin{DoxyCompactList}\small\item\em Tree nodes. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_d_bo_w2_1_1_templated_vocabulary_1_1_node}{Node}} $\ast$ $>$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a1665546b54f954d2d54d59a6982df3ca}{m\+\_\+words}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T\+Descriptor, class F$>$\newline
+class D\+Bo\+W2\+::\+Templated\+Vocabulary$<$ T\+Descriptor, F $>$}
+
+Generic Vocabulary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+Descriptor} & class of descriptor \\
+\hline
+{\em F} & class of descriptor functions \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}\label{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!p\+Descriptor@{p\+Descriptor}}
+\index{p\+Descriptor@{p\+Descriptor}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{p\+Descriptor}{pDescriptor}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+typedef const T\+Descriptor$\ast$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pointer to descriptor. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a0dbbcb6bf766b09f08d945a2af0dbea8}\label{class_d_bo_w2_1_1_templated_vocabulary_a0dbbcb6bf766b09f08d945a2af0dbea8}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!Templated\+Vocabulary@{Templated\+Vocabulary}}
+\index{Templated\+Vocabulary@{Templated\+Vocabulary}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{Templated\+Vocabulary()}{TemplatedVocabulary()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}} (\begin{DoxyParamCaption}\item[{int}]{k = {\ttfamily 10},  }\item[{int}]{L = {\ttfamily 5},  }\item[{\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}}}]{weighting = {\ttfamily \mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467aaa3425e88466862008dff6883e07e205d}{T\+F\+\_\+\+I\+DF}}},  }\item[{\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}}}]{scoring = {\ttfamily \mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722a2df432e58efd2a13d4950ee96aa6a20f}{L1\+\_\+\+N\+O\+RM}}} }\end{DoxyParamCaption})}
+
+Initiates an empty vocabulary 
+\begin{DoxyParams}{Parameters}
+{\em k} & branching factor \\
+\hline
+{\em L} & depth levels \\
+\hline
+{\em weighting} & weighting type \\
+\hline
+{\em scoring} & scoring type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a72fc6a164a5174003d19bd3c54615de6}\label{class_d_bo_w2_1_1_templated_vocabulary_a72fc6a164a5174003d19bd3c54615de6}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!Templated\+Vocabulary@{Templated\+Vocabulary}}
+\index{Templated\+Vocabulary@{Templated\+Vocabulary}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{Templated\+Vocabulary()}{TemplatedVocabulary()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Creates the vocabulary by loading a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a255d68e7b4235487f8d2d8ea0cbaf43a}\label{class_d_bo_w2_1_1_templated_vocabulary_a255d68e7b4235487f8d2d8ea0cbaf43a}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!Templated\+Vocabulary@{Templated\+Vocabulary}}
+\index{Templated\+Vocabulary@{Templated\+Vocabulary}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{Templated\+Vocabulary()}{TemplatedVocabulary()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Creates the vocabulary by loading a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_aac48ee5331b5d88a4db1a3c93cb0f6a5}\label{class_d_bo_w2_1_1_templated_vocabulary_aac48ee5331b5d88a4db1a3c93cb0f6a5}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!Templated\+Vocabulary@{Templated\+Vocabulary}}
+\index{Templated\+Vocabulary@{Templated\+Vocabulary}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{Templated\+Vocabulary()}{TemplatedVocabulary()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$ \&}]{voc }\end{DoxyParamCaption})}
+
+Copy constructor 
+\begin{DoxyParams}{Parameters}
+{\em voc} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a9d15f985a0c3badc1518be0fbe663099}\label{class_d_bo_w2_1_1_templated_vocabulary_a9d15f985a0c3badc1518be0fbe663099}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!````~Templated\+Vocabulary@{$\sim$\+Templated\+Vocabulary}}
+\index{````~Templated\+Vocabulary@{$\sim$\+Templated\+Vocabulary}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{$\sim$\+Templated\+Vocabulary()}{~TemplatedVocabulary()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::$\sim$\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a3679b5a8f2043021a4faab99ccfe4ebe}\label{class_d_bo_w2_1_1_templated_vocabulary_a3679b5a8f2043021a4faab99ccfe4ebe}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!create@{create}}
+\index{create@{create}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::create (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ T\+Descriptor $>$ $>$ \&}]{training\+\_\+features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a vocabulary from the training features with the already defined parameters 
+\begin{DoxyParams}{Parameters}
+{\em training\+\_\+features} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a94d48231b043a1102af4c35e256f2054}\label{class_d_bo_w2_1_1_templated_vocabulary_a94d48231b043a1102af4c35e256f2054}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!create@{create}}
+\index{create@{create}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::create (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ T\+Descriptor $>$ $>$ \&}]{training\+\_\+features,  }\item[{int}]{k,  }\item[{int}]{L }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a vocabulary from the training features, setting the branching factor and the depth levels of the tree 
+\begin{DoxyParams}{Parameters}
+{\em training\+\_\+features} & \\
+\hline
+{\em k} & branching factor \\
+\hline
+{\em L} & depth levels \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a1e4a3e90f4aa1e6b6ea4d7491c223fd4}\label{class_d_bo_w2_1_1_templated_vocabulary_a1e4a3e90f4aa1e6b6ea4d7491c223fd4}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!create@{create}}
+\index{create@{create}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::create (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ T\+Descriptor $>$ $>$ \&}]{training\+\_\+features,  }\item[{int}]{k,  }\item[{int}]{L,  }\item[{\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}}}]{weighting,  }\item[{\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}}}]{scoring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a vocabulary from the training features, setting the branching factor nad the depth levels of the tree, and the weighting and scoring schemes \mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a3244d5a3d0f75ba9c9ae905c5365335d}\label{class_d_bo_w2_1_1_templated_vocabulary_a3244d5a3d0f75ba9c9ae905c5365335d}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!create\+Scoring\+Object@{create\+Scoring\+Object}}
+\index{create\+Scoring\+Object@{create\+Scoring\+Object}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{create\+Scoring\+Object()}{createScoringObject()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::create\+Scoring\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates an instance of the scoring object accoring to m\+\_\+scoring \mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a9b74d107b7dc6142cbed4e6ef44a8519}\label{class_d_bo_w2_1_1_templated_vocabulary_a9b74d107b7dc6142cbed4e6ef44a8519}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!create\+Words@{create\+Words}}
+\index{create\+Words@{create\+Words}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{create\+Words()}{createWords()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::create\+Words (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Create the words of the vocabulary once the tree has been built \mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_ad7bbb3cf53f8f9f3610b9b67c551ba8e}\label{class_d_bo_w2_1_1_templated_vocabulary_ad7bbb3cf53f8f9f3610b9b67c551ba8e}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!empty@{empty}}
+\index{empty@{empty}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+bool \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns whether the vocabulary is empty (i.\+e. it has not been trained) \begin{DoxyReturn}{Returns}
+true iff the vocabulary is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a027d367760c39de816bee5ff0d969837}\label{class_d_bo_w2_1_1_templated_vocabulary_a027d367760c39de816bee5ff0d969837}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Branching\+Factor@{get\+Branching\+Factor}}
+\index{get\+Branching\+Factor@{get\+Branching\+Factor}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Branching\+Factor()}{getBranchingFactor()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Branching\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the branching factor of the tree (k) \begin{DoxyReturn}{Returns}
+k 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a5a7d1b3ad0c705705d516a9a144e3f38}\label{class_d_bo_w2_1_1_templated_vocabulary_a5a7d1b3ad0c705705d516a9a144e3f38}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Depth\+Levels@{get\+Depth\+Levels}}
+\index{get\+Depth\+Levels@{get\+Depth\+Levels}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Depth\+Levels()}{getDepthLevels()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Depth\+Levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the depth levels of the tree (L) \begin{DoxyReturn}{Returns}
+L 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_ae67da4c7b30c15ed4faba2ad6ed4549e}\label{class_d_bo_w2_1_1_templated_vocabulary_ae67da4c7b30c15ed4faba2ad6ed4549e}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Effective\+Levels@{get\+Effective\+Levels}}
+\index{get\+Effective\+Levels@{get\+Effective\+Levels}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Effective\+Levels()}{getEffectiveLevels()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+float \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Effective\+Levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the real depth levels of the tree on average \begin{DoxyReturn}{Returns}
+average of depth levels of leaves 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_ace8155a70fa5163d117dc6a2ef923205}\label{class_d_bo_w2_1_1_templated_vocabulary_ace8155a70fa5163d117dc6a2ef923205}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Features@{get\+Features}}
+\index{get\+Features@{get\+Features}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Features()}{getFeatures()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Features (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ T\+Descriptor $>$ $>$ \&}]{training\+\_\+features,  }\item[{vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}} $>$ \&}]{features }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns a set of pointers to descriptores 
+\begin{DoxyParams}{Parameters}
+{\em training\+\_\+features} & all the features \\
+\hline
+{\em features} & (out) pointers to the training features \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a03912634600711fbf70355ed32b07f2c}\label{class_d_bo_w2_1_1_templated_vocabulary_a03912634600711fbf70355ed32b07f2c}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Parent\+Node@{get\+Parent\+Node}}
+\index{get\+Parent\+Node@{get\+Parent\+Node}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Parent\+Node()}{getParentNode()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Parent\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}}}]{wid,  }\item[{int}]{levelsup }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the id of the node that is \char`\"{}levelsup\char`\"{} levels from the word given 
+\begin{DoxyParams}{Parameters}
+{\em wid} & word id \\
+\hline
+{\em levelsup} & 0..L \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node id. if levelsup is 0, returns the node id associated to the word id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_ad830e1e3e547e5d9d45971662afca3d5}\label{class_d_bo_w2_1_1_templated_vocabulary_ad830e1e3e547e5d9d45971662afca3d5}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Scoring\+Type@{get\+Scoring\+Type}}
+\index{get\+Scoring\+Type@{get\+Scoring\+Type}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Scoring\+Type()}{getScoringType()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Scoring\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the scoring method \begin{DoxyReturn}{Returns}
+scoring method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_aadb9343da87e0f00ed3da401c59132b2}\label{class_d_bo_w2_1_1_templated_vocabulary_aadb9343da87e0f00ed3da401c59132b2}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Weighting\+Type@{get\+Weighting\+Type}}
+\index{get\+Weighting\+Type@{get\+Weighting\+Type}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Weighting\+Type()}{getWeightingType()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Weighting\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the weighting method \begin{DoxyReturn}{Returns}
+weighting method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a3f0d8b15b4f673bf9888ff23489430b4}\label{class_d_bo_w2_1_1_templated_vocabulary_a3f0d8b15b4f673bf9888ff23489430b4}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Word@{get\+Word}}
+\index{get\+Word@{get\+Word}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Word()}{getWord()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+T\+Descriptor \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}}}]{wid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns the descriptor of a word 
+\begin{DoxyParams}{Parameters}
+{\em wid} & word id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+descriptor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a809f881020a2b953664b1f528828551e}\label{class_d_bo_w2_1_1_templated_vocabulary_a809f881020a2b953664b1f528828551e}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Words\+From\+Node@{get\+Words\+From\+Node}}
+\index{get\+Words\+From\+Node@{get\+Words\+From\+Node}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Words\+From\+Node()}{getWordsFromNode()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Words\+From\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}}}]{nid,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} $>$ \&}]{words }\end{DoxyParamCaption}) const}
+
+Returns the ids of all the words that are under the given node id, by traversing any of the branches that goes down from the node 
+\begin{DoxyParams}{Parameters}
+{\em nid} & starting node id \\
+\hline
+{\em words} & ids of words \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_ace5645b42739bea1e3da05c6cff60bad}\label{class_d_bo_w2_1_1_templated_vocabulary_ace5645b42739bea1e3da05c6cff60bad}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!get\+Word\+Weight@{get\+Word\+Weight}}
+\index{get\+Word\+Weight@{get\+Word\+Weight}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{get\+Word\+Weight()}{getWordWeight()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{namespace_d_bo_w2_a55fcd7333e591a38e96b91f41bc182f6}{Word\+Value}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::get\+Word\+Weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}}}]{wid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns the weight of a word 
+\begin{DoxyParams}{Parameters}
+{\em wid} & word id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+weight 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_ab79623d30a8550414e1f4bf916869f05}\label{class_d_bo_w2_1_1_templated_vocabulary_ab79623d30a8550414e1f4bf916869f05}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!H\+Kmeans\+Step@{H\+Kmeans\+Step}}
+\index{H\+Kmeans\+Step@{H\+Kmeans\+Step}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{H\+Kmeans\+Step()}{HKmeansStep()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::H\+Kmeans\+Step (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}}}]{parent\+\_\+id,  }\item[{const vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}} $>$ \&}]{descriptors,  }\item[{int}]{current\+\_\+level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates a level in the tree, under the parent, by running kmeans with a descriptor set, and recursively creates the subsequent levels too 
+\begin{DoxyParams}{Parameters}
+{\em parent\+\_\+id} & id of parent node \\
+\hline
+{\em descriptors} & descriptors to run the kmeans on \\
+\hline
+{\em current\+\_\+level} & current level in the tree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a3915e44667d32130e17791147730b7da}\label{class_d_bo_w2_1_1_templated_vocabulary_a3915e44667d32130e17791147730b7da}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!initiate\+Clusters@{initiate\+Clusters}}
+\index{initiate\+Clusters@{initiate\+Clusters}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{initiate\+Clusters()}{initiateClusters()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::initiate\+Clusters (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}} $>$ \&}]{descriptors,  }\item[{vector$<$ T\+Descriptor $>$ \&}]{clusters }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Creates k clusters from the given descriptors with some seeding algorithm. \begin{DoxyNote}{Note}
+In this class, kmeans++ is used, but this function should be overriden by inherited classes. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_aa4c94955c7e03ec39fc0d9b9ce60009f}\label{class_d_bo_w2_1_1_templated_vocabulary_aa4c94955c7e03ec39fc0d9b9ce60009f}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!initiate\+Clusters\+K\+Mpp@{initiate\+Clusters\+K\+Mpp}}
+\index{initiate\+Clusters\+K\+Mpp@{initiate\+Clusters\+K\+Mpp}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{initiate\+Clusters\+K\+Mpp()}{initiateClustersKMpp()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::initiate\+Clusters\+K\+Mpp (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary_a40913d67e369e6993c2eab80a968f829}{p\+Descriptor}} $>$ \&}]{descriptors,  }\item[{vector$<$ T\+Descriptor $>$ \&}]{clusters }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates k clusters from the given descriptor sets by running the initial step of kmeans++ 
+\begin{DoxyParams}{Parameters}
+{\em descriptors} & \\
+\hline
+{\em clusters} & resulting clusters \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_afdec2031c98b9109451b1454f73348b0}\label{class_d_bo_w2_1_1_templated_vocabulary_afdec2031c98b9109451b1454f73348b0}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!load@{load}}
+\index{load@{load}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Loads the vocabulary from a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a037ba240314ff30f3620fb4de6845c66}\label{class_d_bo_w2_1_1_templated_vocabulary_a037ba240314ff30f3620fb4de6845c66}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!load@{load}}
+\index{load@{load}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{load()}{load()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::load (\begin{DoxyParamCaption}\item[{const cv\+::\+File\+Storage \&}]{fs,  }\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}vocabulary\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Loads the vocabulary from a file storage node 
+\begin{DoxyParams}{Parameters}
+{\em fn} & first node \\
+\hline
+{\em subname} & name of the child node of fn where the tree is stored. If not given, the fn node is used instead \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_aa8c05732a3c2a063b0a8c1cbc418597a}\label{class_d_bo_w2_1_1_templated_vocabulary_aa8c05732a3c2a063b0a8c1cbc418597a}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!load\+From\+Binary\+File@{load\+From\+Binary\+File}}
+\index{load\+From\+Binary\+File@{load\+From\+Binary\+File}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{load\+From\+Binary\+File()}{loadFromBinaryFile()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+bool \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::load\+From\+Binary\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Loads the vocabulary from a binary file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a5447d0744100254c4da88ea039fb3414}\label{class_d_bo_w2_1_1_templated_vocabulary_a5447d0744100254c4da88ea039fb3414}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!load\+From\+Text\+File@{load\+From\+Text\+File}}
+\index{load\+From\+Text\+File@{load\+From\+Text\+File}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{load\+From\+Text\+File()}{loadFromTextFile()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+bool \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::load\+From\+Text\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Loads the vocabulary from a text file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a5355c25b6f37c11acffe48996e19323f}\label{class_d_bo_w2_1_1_templated_vocabulary_a5355c25b6f37c11acffe48996e19323f}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!operator=@{operator=}}
+\index{operator=@{operator=}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$ \& \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$ \&}]{voc }\end{DoxyParamCaption})}
+
+Assigns the given vocabulary to this by copying its data and removing all the data contained by this vocabulary before 
+\begin{DoxyParams}{Parameters}
+{\em voc} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this vocabulary 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a92ca49bd6600bddbad145fb6e0543fa1}\label{class_d_bo_w2_1_1_templated_vocabulary_a92ca49bd6600bddbad145fb6e0543fa1}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!save@{save}}
+\index{save@{save}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+Saves the vocabulary into a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a3039529c46f02b795450f4fba2207339}\label{class_d_bo_w2_1_1_templated_vocabulary_a3039529c46f02b795450f4fba2207339}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!save@{save}}
+\index{save@{save}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::save (\begin{DoxyParamCaption}\item[{cv\+::\+File\+Storage \&}]{fs,  }\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}vocabulary\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Saves the vocabulary to a file storage structure 
+\begin{DoxyParams}{Parameters}
+{\em fn} & node in file storage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a256d9aaeb91b2ca9e626e3bc76359579}\label{class_d_bo_w2_1_1_templated_vocabulary_a256d9aaeb91b2ca9e626e3bc76359579}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!save\+To\+Binary\+File@{save\+To\+Binary\+File}}
+\index{save\+To\+Binary\+File@{save\+To\+Binary\+File}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{save\+To\+Binary\+File()}{saveToBinaryFile()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::save\+To\+Binary\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+Saves the vocabulary into a binary file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a1338b014b856d0a17e71010f6488548e}\label{class_d_bo_w2_1_1_templated_vocabulary_a1338b014b856d0a17e71010f6488548e}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!save\+To\+Text\+File@{save\+To\+Text\+File}}
+\index{save\+To\+Text\+File@{save\+To\+Text\+File}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{save\+To\+Text\+File()}{saveToTextFile()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::save\+To\+Text\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+Saves the vocabulary into a text file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_aedde9cc3255e41fd0441055eeb640346}\label{class_d_bo_w2_1_1_templated_vocabulary_aedde9cc3255e41fd0441055eeb640346}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!score@{score}}
+\index{score@{score}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{score()}{score()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+double \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::score (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the score of two vectors 
+\begin{DoxyParams}{Parameters}
+{\em a} & vector \\
+\hline
+{\em b} & vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+score between vectors 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+the vectors must be already sorted and normalized if necessary 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_af7bf0ecd2d1ecc7d31ddca3aa7d1ddc8}\label{class_d_bo_w2_1_1_templated_vocabulary_af7bf0ecd2d1ecc7d31ddca3aa7d1ddc8}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!set\+Node\+Weights@{set\+Node\+Weights}}
+\index{set\+Node\+Weights@{set\+Node\+Weights}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{set\+Node\+Weights()}{setNodeWeights()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::set\+Node\+Weights (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ T\+Descriptor $>$ $>$ \&}]{features }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets the weights of the nodes of tree according to the given features. Before calling this function, the nodes and the words must be already created (by calling H\+Kmeans\+Step and create\+Words) 
+\begin{DoxyParams}{Parameters}
+{\em features} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a05a6c2f46184618c9ea8368f53e6980c}\label{class_d_bo_w2_1_1_templated_vocabulary_a05a6c2f46184618c9ea8368f53e6980c}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!set\+Scoring\+Type@{set\+Scoring\+Type}}
+\index{set\+Scoring\+Type@{set\+Scoring\+Type}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{set\+Scoring\+Type()}{setScoringType()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::set\+Scoring\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}}}]{type }\end{DoxyParamCaption})}
+
+Changes the scoring method 
+\begin{DoxyParams}{Parameters}
+{\em type} & new scoring type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_aa8f63a3379debd40214899d996cfc733}\label{class_d_bo_w2_1_1_templated_vocabulary_aa8f63a3379debd40214899d996cfc733}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!set\+Weighting\+Type@{set\+Weighting\+Type}}
+\index{set\+Weighting\+Type@{set\+Weighting\+Type}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{set\+Weighting\+Type()}{setWeightingType()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::set\+Weighting\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes the weighting method 
+\begin{DoxyParams}{Parameters}
+{\em type} & new weighting type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a8baad280d6daf74ee43d7cd911363137}\label{class_d_bo_w2_1_1_templated_vocabulary_a8baad280d6daf74ee43d7cd911363137}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!size@{size}}
+\index{size@{size}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+unsigned int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns the number of words in the vocabulary \begin{DoxyReturn}{Returns}
+number of words 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a0b6721fde54bd8cd008f6a120398741e}\label{class_d_bo_w2_1_1_templated_vocabulary_a0b6721fde54bd8cd008f6a120398741e}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!stop\+Words@{stop\+Words}}
+\index{stop\+Words@{stop\+Words}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{stop\+Words()}{stopWords()}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::stop\+Words (\begin{DoxyParamCaption}\item[{double}]{min\+Weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Stops those words whose weight is below min\+Weight. Words are stopped by setting their weight to 0. There are not returned later when transforming image features into vectors. Note that when using I\+DF or T\+F\+\_\+\+I\+DF, the weight is the idf part, which is equivalent to -\/log(f), where f is the frequency of the word (f = Ni/N, Ni\+: number of training images where the word is present, N\+: number of training images). Note that the old weight is forgotten, and subsequent calls to this function with a lower min\+Weight have no effect. \begin{DoxyReturn}{Returns}
+number of words stopped now 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a01de3bebec37624439c7d3baf6651ff0}\label{class_d_bo_w2_1_1_templated_vocabulary_a01de3bebec37624439c7d3baf6651ff0}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!transform@{transform}}
+\index{transform@{transform}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::transform (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T\+Descriptor $>$ \&}]{features,  }\item[{\mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Transforms a set of descriptores into a bow vector 
+\begin{DoxyParams}{Parameters}
+{\em features} & \\
+\hline
+{\em v} & (out) bow vector of weighted words \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_af3815440ed610974afc5a2836f54fe07}\label{class_d_bo_w2_1_1_templated_vocabulary_af3815440ed610974afc5a2836f54fe07}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!transform@{transform}}
+\index{transform@{transform}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::transform (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T\+Descriptor $>$ \&}]{features,  }\item[{\mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&}]{v,  }\item[{\mbox{\hyperlink{class_d_bo_w2_1_1_feature_vector}{Feature\+Vector}} \&}]{fv,  }\item[{int}]{levelsup }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Transform a set of descriptors into a bow vector and a feature vector 
+\begin{DoxyParams}{Parameters}
+{\em features} & \\
+\hline
+{\em v} & (out) bow vector \\
+\hline
+{\em fv} & (out) feature vector of nodes and feature indexes \\
+\hline
+{\em levelsup} & levels to go up the vocabulary tree to get the node index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_aa5003af19aacb6a322f7fdc0535eb149}\label{class_d_bo_w2_1_1_templated_vocabulary_aa5003af19aacb6a322f7fdc0535eb149}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!transform@{transform}}
+\index{transform@{transform}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::transform (\begin{DoxyParamCaption}\item[{const T\+Descriptor \&}]{feature }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Transforms a single feature into a word (without weight) 
+\begin{DoxyParams}{Parameters}
+{\em feature} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+word id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a5af7e18ab438c3fbbb51bd9930c43444}\label{class_d_bo_w2_1_1_templated_vocabulary_a5af7e18ab438c3fbbb51bd9930c43444}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!transform@{transform}}
+\index{transform@{transform}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::transform (\begin{DoxyParamCaption}\item[{const T\+Descriptor \&}]{feature,  }\item[{\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} \&}]{id,  }\item[{\mbox{\hyperlink{namespace_d_bo_w2_a55fcd7333e591a38e96b91f41bc182f6}{Word\+Value}} \&}]{weight,  }\item[{\mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}} $\ast$}]{nid = {\ttfamily NULL},  }\item[{int}]{levelsup = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Returns the word id associated to a feature 
+\begin{DoxyParams}{Parameters}
+{\em feature} & \\
+\hline
+{\em id} & (out) word id \\
+\hline
+{\em weight} & (out) word weight \\
+\hline
+{\em nid} & (out) if given, id of the node \char`\"{}levelsup\char`\"{} levels up \\
+\hline
+{\em levelsup} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a48a53ffe060c205e44ddd2e173eb96c4}\label{class_d_bo_w2_1_1_templated_vocabulary_a48a53ffe060c205e44ddd2e173eb96c4}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!transform@{transform}}
+\index{transform@{transform}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{transform()}{transform()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor , class F $>$ \\
+void \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::transform (\begin{DoxyParamCaption}\item[{const T\+Descriptor \&}]{feature,  }\item[{\mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{Word\+Id}} \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Returns the word id associated to a feature 
+\begin{DoxyParams}{Parameters}
+{\em feature} & \\
+\hline
+{\em id} & (out) word id \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_aa5f7f829033a49833fe4fb5652b99337}\label{class_d_bo_w2_1_1_templated_vocabulary_aa5f7f829033a49833fe4fb5652b99337}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!m\+\_\+k@{m\+\_\+k}}
+\index{m\+\_\+k@{m\+\_\+k}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{m\+\_\+k}{m\_k}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::m\+\_\+k\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Branching factor. 
+
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a16735d9e2c8b901f01d541faea67971e}\label{class_d_bo_w2_1_1_templated_vocabulary_a16735d9e2c8b901f01d541faea67971e}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!m\+\_\+L@{m\+\_\+L}}
+\index{m\+\_\+L@{m\+\_\+L}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{m\+\_\+L}{m\_L}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+int \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::m\+\_\+L\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Depth levels. 
+
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a82be6d310eae6f4f57a72d340489320b}\label{class_d_bo_w2_1_1_templated_vocabulary_a82be6d310eae6f4f57a72d340489320b}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!m\+\_\+nodes@{m\+\_\+nodes}}
+\index{m\+\_\+nodes@{m\+\_\+nodes}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{m\+\_\+nodes}{m\_nodes}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+std\+::vector$<$\mbox{\hyperlink{struct_d_bo_w2_1_1_templated_vocabulary_1_1_node}{Node}}$>$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::m\+\_\+nodes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Tree nodes. 
+
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a89d8aa037f2b5c3c5cc953734bb5cb9f}\label{class_d_bo_w2_1_1_templated_vocabulary_a89d8aa037f2b5c3c5cc953734bb5cb9f}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!m\+\_\+scoring@{m\+\_\+scoring}}
+\index{m\+\_\+scoring@{m\+\_\+scoring}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{m\+\_\+scoring}{m\_scoring}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{Scoring\+Type}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::m\+\_\+scoring\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Scoring method. 
+
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a34144d0e2056d6ed8b925a2937b67418}\label{class_d_bo_w2_1_1_templated_vocabulary_a34144d0e2056d6ed8b925a2937b67418}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!m\+\_\+scoring\+\_\+object@{m\+\_\+scoring\+\_\+object}}
+\index{m\+\_\+scoring\+\_\+object@{m\+\_\+scoring\+\_\+object}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{m\+\_\+scoring\+\_\+object}{m\_scoring\_object}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+\mbox{\hyperlink{class_d_bo_w2_1_1_general_scoring}{General\+Scoring}}$\ast$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::m\+\_\+scoring\+\_\+object\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Object for computing scores. 
+
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_abf03c6430d630674ddca5bab9c120c51}\label{class_d_bo_w2_1_1_templated_vocabulary_abf03c6430d630674ddca5bab9c120c51}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!m\+\_\+weighting@{m\+\_\+weighting}}
+\index{m\+\_\+weighting@{m\+\_\+weighting}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{m\+\_\+weighting}{m\_weighting}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{Weighting\+Type}} \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::m\+\_\+weighting\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Weighting method. 
+
+\mbox{\Hypertarget{class_d_bo_w2_1_1_templated_vocabulary_a1665546b54f954d2d54d59a6982df3ca}\label{class_d_bo_w2_1_1_templated_vocabulary_a1665546b54f954d2d54d59a6982df3ca}} 
+\index{D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}!m\+\_\+words@{m\+\_\+words}}
+\index{m\+\_\+words@{m\+\_\+words}!D\+Bo\+W2\+::\+Templated\+Vocabulary@{D\+Bo\+W2\+::\+Templated\+Vocabulary}}
+\subsubsection{\texorpdfstring{m\+\_\+words}{m\_words}}
+{\footnotesize\ttfamily template$<$class T\+Descriptor, class F$>$ \\
+std\+::vector$<$\mbox{\hyperlink{struct_d_bo_w2_1_1_templated_vocabulary_1_1_node}{Node}}$\ast$$>$ \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ T\+Descriptor, F $>$\+::m\+\_\+words\hspace{0.3cm}{\ttfamily [protected]}}
+
+Words of the vocabulary (tree leaves) this condition holds\+: m\+\_\+words\mbox{[}wid\mbox{]}-\/$>$word\+\_\+id == wid 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\mbox{\hyperlink{_templated_vocabulary_8h}{Templated\+Vocabulary.\+h}}\end{DoxyCompactItemize}

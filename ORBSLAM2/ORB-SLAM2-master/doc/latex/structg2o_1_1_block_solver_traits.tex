@@ -1,0 +1,133 @@
+\hypertarget{structg2o_1_1_block_solver_traits}{}\section{g2o\+:\+:Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$ Struct Template Reference}
+\label{structg2o_1_1_block_solver_traits}\index{g2o\+::\+Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$@{g2o\+::\+Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$}}
+
+
+traits to summarize the properties of the fixed size optimization problem  
+
+
+
+
+{\ttfamily \#include $<$block\+\_\+solver.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Matrix$<$ double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}}, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}} $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type}}
+\item 
+typedef Matrix$<$ double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}}, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}} $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_add9b9fbfef352b7654d41914d5eaa58c}{Landmark\+Matrix\+Type}}
+\item 
+typedef Matrix$<$ double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}}, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}} $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a91e6510ad42179701d22c3ac312237cd}{Pose\+Landmark\+Matrix\+Type}}
+\item 
+typedef Matrix$<$ double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}}, 1 $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a032ed57e9bc44c36093f97b32e1506f6}{Pose\+Vector\+Type}}
+\item 
+typedef Matrix$<$ double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}}, 1 $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_af5154a15abb566ff5bffc0adb9f0458d}{Landmark\+Vector\+Type}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type}} $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a03351362339d8e6609c577123350bb2a}{Pose\+Hessian\+Type}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_add9b9fbfef352b7654d41914d5eaa58c}{Landmark\+Matrix\+Type}} $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_ae761bb32d5267e4d74e5d9c2c7e7ad2f}{Landmark\+Hessian\+Type}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a91e6510ad42179701d22c3ac312237cd}{Pose\+Landmark\+Matrix\+Type}} $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_af8ef27915a056caae3b12a9ca609eba6}{Pose\+Landmark\+Hessian\+Type}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_linear_solver}{Linear\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type}} $>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits_add6edae08cb0665c2b1e7c641cdb4dc4}{Linear\+Solver\+Type}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}} = \+\_\+\+Pose\+Dim
+\item 
+static const int \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}} = \+\_\+\+Landmark\+Dim
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$\newline
+struct g2o\+::\+Block\+Solver\+Traits$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$}
+
+traits to summarize the properties of the fixed size optimization problem 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_ae761bb32d5267e4d74e5d9c2c7e7ad2f}\label{structg2o_1_1_block_solver_traits_ae761bb32d5267e4d74e5d9c2c7e7ad2f}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Landmark\+Hessian\+Type@{Landmark\+Hessian\+Type}}
+\index{Landmark\+Hessian\+Type@{Landmark\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Landmark\+Hessian\+Type}{LandmarkHessianType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$\mbox{\hyperlink{structg2o_1_1_block_solver_traits_add9b9fbfef352b7654d41914d5eaa58c}{Landmark\+Matrix\+Type}}$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_ae761bb32d5267e4d74e5d9c2c7e7ad2f}{Landmark\+Hessian\+Type}}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_add9b9fbfef352b7654d41914d5eaa58c}\label{structg2o_1_1_block_solver_traits_add9b9fbfef352b7654d41914d5eaa58c}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Landmark\+Matrix\+Type@{Landmark\+Matrix\+Type}}
+\index{Landmark\+Matrix\+Type@{Landmark\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Landmark\+Matrix\+Type}{LandmarkMatrixType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef Matrix$<$double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}}, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}}$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_add9b9fbfef352b7654d41914d5eaa58c}{Landmark\+Matrix\+Type}}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_af5154a15abb566ff5bffc0adb9f0458d}\label{structg2o_1_1_block_solver_traits_af5154a15abb566ff5bffc0adb9f0458d}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Landmark\+Vector\+Type@{Landmark\+Vector\+Type}}
+\index{Landmark\+Vector\+Type@{Landmark\+Vector\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Landmark\+Vector\+Type}{LandmarkVectorType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef Matrix$<$double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}}, 1$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_af5154a15abb566ff5bffc0adb9f0458d}{Landmark\+Vector\+Type}}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_add6edae08cb0665c2b1e7c641cdb4dc4}\label{structg2o_1_1_block_solver_traits_add6edae08cb0665c2b1e7c641cdb4dc4}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Linear\+Solver\+Type@{Linear\+Solver\+Type}}
+\index{Linear\+Solver\+Type@{Linear\+Solver\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Linear\+Solver\+Type}{LinearSolverType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef \mbox{\hyperlink{classg2o_1_1_linear_solver}{Linear\+Solver}}$<$\mbox{\hyperlink{structg2o_1_1_block_solver_traits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type}}$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_add6edae08cb0665c2b1e7c641cdb4dc4}{Linear\+Solver\+Type}}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_a03351362339d8e6609c577123350bb2a}\label{structg2o_1_1_block_solver_traits_a03351362339d8e6609c577123350bb2a}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Hessian\+Type@{Pose\+Hessian\+Type}}
+\index{Pose\+Hessian\+Type@{Pose\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Pose\+Hessian\+Type}{PoseHessianType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$\mbox{\hyperlink{structg2o_1_1_block_solver_traits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type}}$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_a03351362339d8e6609c577123350bb2a}{Pose\+Hessian\+Type}}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_af8ef27915a056caae3b12a9ca609eba6}\label{structg2o_1_1_block_solver_traits_af8ef27915a056caae3b12a9ca609eba6}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Landmark\+Hessian\+Type@{Pose\+Landmark\+Hessian\+Type}}
+\index{Pose\+Landmark\+Hessian\+Type@{Pose\+Landmark\+Hessian\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Pose\+Landmark\+Hessian\+Type}{PoseLandmarkHessianType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$\mbox{\hyperlink{structg2o_1_1_block_solver_traits_a91e6510ad42179701d22c3ac312237cd}{Pose\+Landmark\+Matrix\+Type}}$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_af8ef27915a056caae3b12a9ca609eba6}{Pose\+Landmark\+Hessian\+Type}}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_a91e6510ad42179701d22c3ac312237cd}\label{structg2o_1_1_block_solver_traits_a91e6510ad42179701d22c3ac312237cd}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Landmark\+Matrix\+Type@{Pose\+Landmark\+Matrix\+Type}}
+\index{Pose\+Landmark\+Matrix\+Type@{Pose\+Landmark\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Pose\+Landmark\+Matrix\+Type}{PoseLandmarkMatrixType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef Matrix$<$double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}}, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}{Landmark\+Dim}}$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_a91e6510ad42179701d22c3ac312237cd}{Pose\+Landmark\+Matrix\+Type}}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_a35e6e4bad138dcfcaa3b1339e168bf30}\label{structg2o_1_1_block_solver_traits_a35e6e4bad138dcfcaa3b1339e168bf30}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Matrix\+Type@{Pose\+Matrix\+Type}}
+\index{Pose\+Matrix\+Type@{Pose\+Matrix\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Pose\+Matrix\+Type}{PoseMatrixType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef Matrix$<$double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}}, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}}$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_a35e6e4bad138dcfcaa3b1339e168bf30}{Pose\+Matrix\+Type}}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_a032ed57e9bc44c36093f97b32e1506f6}\label{structg2o_1_1_block_solver_traits_a032ed57e9bc44c36093f97b32e1506f6}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Vector\+Type@{Pose\+Vector\+Type}}
+\index{Pose\+Vector\+Type@{Pose\+Vector\+Type}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Pose\+Vector\+Type}{PoseVectorType}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+typedef Matrix$<$double, \mbox{\hyperlink{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}{Pose\+Dim}}, 1$>$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::\mbox{\hyperlink{structg2o_1_1_block_solver_traits_a032ed57e9bc44c36093f97b32e1506f6}{Pose\+Vector\+Type}}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}\label{structg2o_1_1_block_solver_traits_a7e6e33971e5243e020a9f41cd3182218}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Landmark\+Dim@{Landmark\+Dim}}
+\index{Landmark\+Dim@{Landmark\+Dim}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Landmark\+Dim}{LandmarkDim}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+const int \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::Landmark\+Dim = \+\_\+\+Landmark\+Dim\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}\label{structg2o_1_1_block_solver_traits_a90a03bcfc60b629da5601f6df9514297}} 
+\index{g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}!Pose\+Dim@{Pose\+Dim}}
+\index{Pose\+Dim@{Pose\+Dim}!g2o\+::\+Block\+Solver\+Traits@{g2o\+::\+Block\+Solver\+Traits}}
+\subsubsection{\texorpdfstring{Pose\+Dim}{PoseDim}}
+{\footnotesize\ttfamily template$<$int \+\_\+\+Pose\+Dim, int \+\_\+\+Landmark\+Dim$>$ \\
+const int \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{g2o\+::\+Block\+Solver\+Traits}}$<$ \+\_\+\+Pose\+Dim, \+\_\+\+Landmark\+Dim $>$\+::Pose\+Dim = \+\_\+\+Pose\+Dim\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{block__solver_8h}{block\+\_\+solver.\+h}}\end{DoxyCompactItemize}

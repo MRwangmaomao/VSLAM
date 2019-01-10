@@ -1,0 +1,87 @@
+\hypertarget{class_d_bo_w2_1_1_feature_vector}{}\section{D\+Bo\+W2\+:\+:Feature\+Vector Class Reference}
+\label{class_d_bo_w2_1_1_feature_vector}\index{D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}}
+
+
+Vector of nodes with indexes of local features.  
+
+
+
+
+{\ttfamily \#include $<$Feature\+Vector.\+h$>$}
+
+Inheritance diagram for D\+Bo\+W2\+:\+:Feature\+Vector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_bo_w2_1_1_feature_vector}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_d_bo_w2_1_1_feature_vector_a66c069d269c8c98dcf3ae39cbc6f861b}{Feature\+Vector}} (void)
+\item 
+\mbox{\hyperlink{class_d_bo_w2_1_1_feature_vector_a44514a020719b7e5ac552332a9922bd9}{$\sim$\+Feature\+Vector}} (void)
+\item 
+void \mbox{\hyperlink{class_d_bo_w2_1_1_feature_vector_ae9554bfcbebc85439616de08f47f2238}{add\+Feature}} (\mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}} id, unsigned int i\+\_\+feature)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_d_bo_w2_1_1_feature_vector_a34aa65c93dc5f6be269610e3f238d9b1}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_d_bo_w2_1_1_feature_vector}{Feature\+Vector}} \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Vector of nodes with indexes of local features. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_feature_vector_a66c069d269c8c98dcf3ae39cbc6f861b}\label{class_d_bo_w2_1_1_feature_vector_a66c069d269c8c98dcf3ae39cbc6f861b}} 
+\index{D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}!Feature\+Vector@{Feature\+Vector}}
+\index{Feature\+Vector@{Feature\+Vector}!D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}}
+\subsubsection{\texorpdfstring{Feature\+Vector()}{FeatureVector()}}
+{\footnotesize\ttfamily D\+Bo\+W2\+::\+Feature\+Vector\+::\+Feature\+Vector (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Constructor \mbox{\Hypertarget{class_d_bo_w2_1_1_feature_vector_a44514a020719b7e5ac552332a9922bd9}\label{class_d_bo_w2_1_1_feature_vector_a44514a020719b7e5ac552332a9922bd9}} 
+\index{D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}!````~Feature\+Vector@{$\sim$\+Feature\+Vector}}
+\index{````~Feature\+Vector@{$\sim$\+Feature\+Vector}!D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}}
+\subsubsection{\texorpdfstring{$\sim$\+Feature\+Vector()}{~FeatureVector()}}
+{\footnotesize\ttfamily D\+Bo\+W2\+::\+Feature\+Vector\+::$\sim$\+Feature\+Vector (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_feature_vector_ae9554bfcbebc85439616de08f47f2238}\label{class_d_bo_w2_1_1_feature_vector_ae9554bfcbebc85439616de08f47f2238}} 
+\index{D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}!add\+Feature@{add\+Feature}}
+\index{add\+Feature@{add\+Feature}!D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}}
+\subsubsection{\texorpdfstring{add\+Feature()}{addFeature()}}
+{\footnotesize\ttfamily void D\+Bo\+W2\+::\+Feature\+Vector\+::add\+Feature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{Node\+Id}}}]{id,  }\item[{unsigned int}]{i\+\_\+feature }\end{DoxyParamCaption})}
+
+Adds a feature to an existing node, or adds a new node with an initial feature 
+\begin{DoxyParams}{Parameters}
+{\em id} & node id to add or to modify \\
+\hline
+{\em i\+\_\+feature} & index of feature to add to the given node \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_feature_vector_a34aa65c93dc5f6be269610e3f238d9b1}\label{class_d_bo_w2_1_1_feature_vector_a34aa65c93dc5f6be269610e3f238d9b1}} 
+\index{D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!D\+Bo\+W2\+::\+Feature\+Vector@{D\+Bo\+W2\+::\+Feature\+Vector}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_d_bo_w2_1_1_feature_vector}{Feature\+Vector}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Sends a string versions of the feature vector through the stream 
+\begin{DoxyParams}{Parameters}
+{\em out} & stream \\
+\hline
+{\em v} & feature vector \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\mbox{\hyperlink{_feature_vector_8h}{Feature\+Vector.\+h}}\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\mbox{\hyperlink{_feature_vector_8cpp}{Feature\+Vector.\+cpp}}\end{DoxyCompactItemize}

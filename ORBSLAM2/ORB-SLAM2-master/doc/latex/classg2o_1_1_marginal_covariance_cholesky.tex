@@ -1,0 +1,198 @@
+\hypertarget{classg2o_1_1_marginal_covariance_cholesky}{}\section{g2o\+:\+:Marginal\+Covariance\+Cholesky Class Reference}
+\label{classg2o_1_1_marginal_covariance_cholesky}\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+
+
+computing the marginal covariance given a cholesky factor (lower triangle of the factor)  
+
+
+
+
+{\ttfamily \#include $<$marginal\+\_\+covariance\+\_\+cholesky.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a1fab5946726badbb38c2b2aa54a0118c}{Marginal\+Covariance\+Cholesky}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_aafdc3a753d5b6f3fca95d5bcbca44442}{$\sim$\+Marginal\+Covariance\+Cholesky}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a0ea50dbda0558ca98faacafc8c9f48c9}{compute\+Covariance}} (double $\ast$$\ast$cov\+Blocks, const std\+::vector$<$ int $>$ \&block\+Indices)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a77e7396fb18b334b4d707f41e5e05399}{compute\+Covariance}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ int $>$ \&row\+Block\+Indices, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a53bda8bc29bee2a7fb871c25a58ab191}{set\+Cholesky\+Factor}} (int n, int $\ast$Lp, int $\ast$Li, double $\ast$Lx, int $\ast$perm\+Inv)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::tr1\+::unordered\+\_\+map$<$ int, double $>$ \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a9925dd2e45479a7feb783ff71d93fdbc}{Lookup\+Map}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a9b0816374af957f23aa2d6b015e4b9bf}{compute\+Index}} (int r, int c) const
+\begin{DoxyCompactList}\small\item\em compute the index used for hashing \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a556f8da80f0873b74b57c82b587b4f97}{compute\+Entry}} (int r, int c)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a086c541bde9958af88146788a9ac2611}{\+\_\+n}}
+\begin{DoxyCompactList}\small\item\em L is an n X n matrix. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a5998463e23c716bb1abb02e9b3e40e0b}{\+\_\+\+Ap}}
+\begin{DoxyCompactList}\small\item\em column pointer of the C\+CS storage \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a516fa45fe98edfa0cc68fc2b0e0d5de4}{\+\_\+\+Ai}}
+\begin{DoxyCompactList}\small\item\em row indices of the C\+CS storage \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a2ac05a8c32b6a2e0cdb0b6a071a7552d}{\+\_\+\+Ax}}
+\begin{DoxyCompactList}\small\item\em values of the cholesky factor \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a404f5d0ce82c2877324bafb8997b96aa}{\+\_\+perm}}
+\begin{DoxyCompactList}\small\item\em permutation of the cholesky factor. Variable re-\/ordering for better fill-\/in \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a9925dd2e45479a7feb783ff71d93fdbc}{Lookup\+Map}} \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a7a9d21e9ee6654b9e6d69a62e87c201a}{\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em hash look up table for the already computed entries \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a6ceee33e0cde1d9a4888abab8b6ad712}{\+\_\+diag}}
+\begin{DoxyCompactList}\small\item\em cache 1 / H\+\_\+ii to avoid recalculations \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+computing the marginal covariance given a cholesky factor (lower triangle of the factor) 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a9925dd2e45479a7feb783ff71d93fdbc}\label{classg2o_1_1_marginal_covariance_cholesky_a9925dd2e45479a7feb783ff71d93fdbc}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!Lookup\+Map@{Lookup\+Map}}
+\index{Lookup\+Map@{Lookup\+Map}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{Lookup\+Map}{LookupMap}}
+{\footnotesize\ttfamily typedef std\+::tr1\+::unordered\+\_\+map$<$int, double$>$ \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a9925dd2e45479a7feb783ff71d93fdbc}{g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+Lookup\+Map}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+hash struct for storing the matrix elements needed to compute the covariance 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a1fab5946726badbb38c2b2aa54a0118c}\label{classg2o_1_1_marginal_covariance_cholesky_a1fab5946726badbb38c2b2aa54a0118c}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!Marginal\+Covariance\+Cholesky@{Marginal\+Covariance\+Cholesky}}
+\index{Marginal\+Covariance\+Cholesky@{Marginal\+Covariance\+Cholesky}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{Marginal\+Covariance\+Cholesky()}{MarginalCovarianceCholesky()}}
+{\footnotesize\ttfamily g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+Marginal\+Covariance\+Cholesky (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_aafdc3a753d5b6f3fca95d5bcbca44442}\label{classg2o_1_1_marginal_covariance_cholesky_aafdc3a753d5b6f3fca95d5bcbca44442}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!````~Marginal\+Covariance\+Cholesky@{$\sim$\+Marginal\+Covariance\+Cholesky}}
+\index{````~Marginal\+Covariance\+Cholesky@{$\sim$\+Marginal\+Covariance\+Cholesky}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{$\sim$\+Marginal\+Covariance\+Cholesky()}{~MarginalCovarianceCholesky()}}
+{\footnotesize\ttfamily g2o\+::\+Marginal\+Covariance\+Cholesky\+::$\sim$\+Marginal\+Covariance\+Cholesky (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a0ea50dbda0558ca98faacafc8c9f48c9}\label{classg2o_1_1_marginal_covariance_cholesky_a0ea50dbda0558ca98faacafc8c9f48c9}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!compute\+Covariance@{compute\+Covariance}}
+\index{compute\+Covariance@{compute\+Covariance}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{compute\+Covariance()}{computeCovariance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Covariance (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{cov\+Blocks,  }\item[{const std\+::vector$<$ int $>$ \&}]{block\+Indices }\end{DoxyParamCaption})}
+
+compute the marginal cov for the given block indices, write the result to the cov\+Blocks memory (which has to be provided by the caller). \mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a77e7396fb18b334b4d707f41e5e05399}\label{classg2o_1_1_marginal_covariance_cholesky_a77e7396fb18b334b4d707f41e5e05399}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!compute\+Covariance@{compute\+Covariance}}
+\index{compute\+Covariance@{compute\+Covariance}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{compute\+Covariance()}{computeCovariance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Covariance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Xd $>$ \&}]{spinv,  }\item[{const std\+::vector$<$ int $>$ \&}]{row\+Block\+Indices,  }\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices }\end{DoxyParamCaption})}
+
+compute the marginal cov for the given block indices, write the result in spinv). \mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a556f8da80f0873b74b57c82b587b4f97}\label{classg2o_1_1_marginal_covariance_cholesky_a556f8da80f0873b74b57c82b587b4f97}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!compute\+Entry@{compute\+Entry}}
+\index{compute\+Entry@{compute\+Entry}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{compute\+Entry()}{computeEntry()}}
+{\footnotesize\ttfamily double g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Entry (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+compute one entry in the covariance, r and c are values after applying the permutation, and upper triangular. May issue recursive calls to itself to compute the missing values. \mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a9b0816374af957f23aa2d6b015e4b9bf}\label{classg2o_1_1_marginal_covariance_cholesky_a9b0816374af957f23aa2d6b015e4b9bf}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!compute\+Index@{compute\+Index}}
+\index{compute\+Index@{compute\+Index}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{compute\+Index()}{computeIndex()}}
+{\footnotesize\ttfamily int g2o\+::\+Marginal\+Covariance\+Cholesky\+::compute\+Index (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+compute the index used for hashing 
+
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a53bda8bc29bee2a7fb871c25a58ab191}\label{classg2o_1_1_marginal_covariance_cholesky_a53bda8bc29bee2a7fb871c25a58ab191}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!set\+Cholesky\+Factor@{set\+Cholesky\+Factor}}
+\index{set\+Cholesky\+Factor@{set\+Cholesky\+Factor}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{set\+Cholesky\+Factor()}{setCholeskyFactor()}}
+{\footnotesize\ttfamily void g2o\+::\+Marginal\+Covariance\+Cholesky\+::set\+Cholesky\+Factor (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int $\ast$}]{Lp,  }\item[{int $\ast$}]{Li,  }\item[{double $\ast$}]{Lx,  }\item[{int $\ast$}]{perm\+Inv }\end{DoxyParamCaption})}
+
+set the C\+CS representation of the cholesky factor along with the inverse permutation used to reduce the fill-\/in. perm\+Inv might be 0, will then not permute the entries.
+
+The pointers provided by the user need to be still valid when calling \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a0ea50dbda0558ca98faacafc8c9f48c9}{compute\+Covariance()}}. The pointers are owned by the caller, \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky}{Marginal\+Covariance\+Cholesky}} does not free the pointers. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a516fa45fe98edfa0cc68fc2b0e0d5de4}\label{classg2o_1_1_marginal_covariance_cholesky_a516fa45fe98edfa0cc68fc2b0e0d5de4}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!\+\_\+\+Ai@{\+\_\+\+Ai}}
+\index{\+\_\+\+Ai@{\+\_\+\+Ai}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{\+\_\+\+Ai}{\_Ai}}
+{\footnotesize\ttfamily int$\ast$ g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+\_\+\+Ai\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+row indices of the C\+CS storage 
+
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a5998463e23c716bb1abb02e9b3e40e0b}\label{classg2o_1_1_marginal_covariance_cholesky_a5998463e23c716bb1abb02e9b3e40e0b}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!\+\_\+\+Ap@{\+\_\+\+Ap}}
+\index{\+\_\+\+Ap@{\+\_\+\+Ap}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{\+\_\+\+Ap}{\_Ap}}
+{\footnotesize\ttfamily int$\ast$ g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+\_\+\+Ap\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+column pointer of the C\+CS storage 
+
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a2ac05a8c32b6a2e0cdb0b6a071a7552d}\label{classg2o_1_1_marginal_covariance_cholesky_a2ac05a8c32b6a2e0cdb0b6a071a7552d}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!\+\_\+\+Ax@{\+\_\+\+Ax}}
+\index{\+\_\+\+Ax@{\+\_\+\+Ax}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{\+\_\+\+Ax}{\_Ax}}
+{\footnotesize\ttfamily double$\ast$ g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+\_\+\+Ax\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+values of the cholesky factor 
+
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a6ceee33e0cde1d9a4888abab8b6ad712}\label{classg2o_1_1_marginal_covariance_cholesky_a6ceee33e0cde1d9a4888abab8b6ad712}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!\+\_\+diag@{\+\_\+diag}}
+\index{\+\_\+diag@{\+\_\+diag}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{\+\_\+diag}{\_diag}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+\_\+diag\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+cache 1 / H\+\_\+ii to avoid recalculations 
+
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a7a9d21e9ee6654b9e6d69a62e87c201a}\label{classg2o_1_1_marginal_covariance_cholesky_a7a9d21e9ee6654b9e6d69a62e87c201a}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!\+\_\+map@{\+\_\+map}}
+\index{\+\_\+map@{\+\_\+map}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{\+\_\+map}{\_map}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky_a9925dd2e45479a7feb783ff71d93fdbc}{Lookup\+Map}} g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+hash look up table for the already computed entries 
+
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a086c541bde9958af88146788a9ac2611}\label{classg2o_1_1_marginal_covariance_cholesky_a086c541bde9958af88146788a9ac2611}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!\+\_\+n@{\+\_\+n}}
+\index{\+\_\+n@{\+\_\+n}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{\+\_\+n}{\_n}}
+{\footnotesize\ttfamily int g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+\_\+n\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+L is an n X n matrix. 
+
+\mbox{\Hypertarget{classg2o_1_1_marginal_covariance_cholesky_a404f5d0ce82c2877324bafb8997b96aa}\label{classg2o_1_1_marginal_covariance_cholesky_a404f5d0ce82c2877324bafb8997b96aa}} 
+\index{g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}!\+\_\+perm@{\+\_\+perm}}
+\index{\+\_\+perm@{\+\_\+perm}!g2o\+::\+Marginal\+Covariance\+Cholesky@{g2o\+::\+Marginal\+Covariance\+Cholesky}}
+\subsubsection{\texorpdfstring{\+\_\+perm}{\_perm}}
+{\footnotesize\ttfamily int$\ast$ g2o\+::\+Marginal\+Covariance\+Cholesky\+::\+\_\+perm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+permutation of the cholesky factor. Variable re-\/ordering for better fill-\/in 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{marginal__covariance__cholesky_8h}{marginal\+\_\+covariance\+\_\+cholesky.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{marginal__covariance__cholesky_8cpp}{marginal\+\_\+covariance\+\_\+cholesky.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{classg2o_1_1_optimization_algorithm_gauss_newton}{}\section{g2o\+:\+:Optimization\+Algorithm\+Gauss\+Newton Class Reference}
+\label{classg2o_1_1_optimization_algorithm_gauss_newton}\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+
+
+Implementation of the Gauss Newton Algorithm.  
+
+
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Optimization\+Algorithm\+Gauss\+Newton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classg2o_1_1_optimization_algorithm_gauss_newton}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_gauss_newton_aca16df79fa14caf3e77bef0ca9aaedc4}{Optimization\+Algorithm\+Gauss\+Newton}} (\mbox{\hyperlink{classg2o_1_1_solver}{Solver}} $\ast$\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a85473a4073c76b1a52cf9cf175e31c45}{solver}})
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_gauss_newton_ac86bc6829b12453693ee2c3967b11f0b}{$\sim$\+Optimization\+Algorithm\+Gauss\+Newton}} ()
+\item 
+virtual Solver\+Result \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_gauss_newton_aba0b67eecaca01c576de7e605e5af5f1}{solve}} (int iteration, bool online=false)
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_gauss_newton_aff4c1b6a9f8a2e5c6777cfef9d4a18ba}{print\+Verbose}} (std\+::ostream \&os) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Implementation of the Gauss Newton Algorithm. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_gauss_newton_aca16df79fa14caf3e77bef0ca9aaedc4}\label{classg2o_1_1_optimization_algorithm_gauss_newton_aca16df79fa14caf3e77bef0ca9aaedc4}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}!Optimization\+Algorithm\+Gauss\+Newton@{Optimization\+Algorithm\+Gauss\+Newton}}
+\index{Optimization\+Algorithm\+Gauss\+Newton@{Optimization\+Algorithm\+Gauss\+Newton}!g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+\subsubsection{\texorpdfstring{Optimization\+Algorithm\+Gauss\+Newton()}{OptimizationAlgorithmGaussNewton()}}
+{\footnotesize\ttfamily g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::\+Optimization\+Algorithm\+Gauss\+Newton (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_solver}{Solver}} $\ast$}]{solver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+construct the Gauss Newton algorithm, which use the given \mbox{\hyperlink{classg2o_1_1_solver}{Solver}} for solving the linearized system. \mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_gauss_newton_ac86bc6829b12453693ee2c3967b11f0b}\label{classg2o_1_1_optimization_algorithm_gauss_newton_ac86bc6829b12453693ee2c3967b11f0b}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}!````~Optimization\+Algorithm\+Gauss\+Newton@{$\sim$\+Optimization\+Algorithm\+Gauss\+Newton}}
+\index{````~Optimization\+Algorithm\+Gauss\+Newton@{$\sim$\+Optimization\+Algorithm\+Gauss\+Newton}!g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+\subsubsection{\texorpdfstring{$\sim$\+Optimization\+Algorithm\+Gauss\+Newton()}{~OptimizationAlgorithmGaussNewton()}}
+{\footnotesize\ttfamily g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::$\sim$\+Optimization\+Algorithm\+Gauss\+Newton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_gauss_newton_aff4c1b6a9f8a2e5c6777cfef9d4a18ba}\label{classg2o_1_1_optimization_algorithm_gauss_newton_aff4c1b6a9f8a2e5c6777cfef9d4a18ba}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}!print\+Verbose@{print\+Verbose}}
+\index{print\+Verbose@{print\+Verbose}!g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+\subsubsection{\texorpdfstring{print\+Verbose()}{printVerbose()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::print\+Verbose (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+called by the optimizer if verbose. re-\/implement, if you want to print something 
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_a6683d35e67402b50924bc4744b6e282a}{g2o\+::\+Optimization\+Algorithm}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_gauss_newton_aba0b67eecaca01c576de7e605e5af5f1}\label{classg2o_1_1_optimization_algorithm_gauss_newton_aba0b67eecaca01c576de7e605e5af5f1}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton@{g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton}}
+\subsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily Optimization\+Algorithm\+::\+Solver\+Result g2o\+::\+Optimization\+Algorithm\+Gauss\+Newton\+::solve (\begin{DoxyParamCaption}\item[{int}]{iteration,  }\item[{bool}]{online = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Solve one iteration. The \mbox{\hyperlink{classg2o_1_1_sparse_optimizer}{Sparse\+Optimizer}} running on-\/top will call this for the given number of iterations. 
+\begin{DoxyParams}{Parameters}
+{\em iteration} & indicates the current iteration \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_ab174deeeb2551ceaf715ea09f0f9c077}{g2o\+::\+Optimization\+Algorithm}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__gauss__newton_8h}{optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__gauss__newton_8cpp}{optimization\+\_\+algorithm\+\_\+gauss\+\_\+newton.\+cpp}}\end{DoxyCompactItemize}

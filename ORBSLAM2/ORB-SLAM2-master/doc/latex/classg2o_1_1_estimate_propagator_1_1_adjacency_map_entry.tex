@@ -1,0 +1,153 @@
+\hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry}{}\section{g2o\+:\+:Estimate\+Propagator\+:\+:Adjacency\+Map\+Entry Class Reference}
+\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry}\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+
+
+data structure for loopuk during Dijkstra  
+
+
+
+
+{\ttfamily \#include $<$estimate\+\_\+propagator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a5fe6ab271c62be13c363ea3807e6d357}{Adjacency\+Map\+Entry}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a6d2f95439aa6ee608f2e2d110de553e8}{reset}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a4e31105d4e88c399ec95aa6c184b649e}{child}} () const
+\item 
+const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \& \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_afdc412171a1828e9d588f587ba27f7aa}{parent}} () const
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge}{Optimizable\+Graph\+::\+Edge}} $\ast$ \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a7082664efdadcd6031ab441830cb7ac4}{edge}} () const
+\item 
+double \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a6a7bbf0ae959ece486cea3549dec5c0a}{distance}} () const
+\item 
+int \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a291b75bdb7c37467a6d4e7e7d839e0fc}{frontier\+Level}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_ab6f716e85cc15e6d9c570132fe889fd6}{\+\_\+child}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a72384502361d60e1f3ae1644de1e7379}{\+\_\+parent}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge}{Optimizable\+Graph\+::\+Edge}} $\ast$ \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a738795d0b3989374ba51821354629d64}{\+\_\+edge}}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a3558503af9d9f56088ff1593398f86d4}{\+\_\+distance}}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a56bfab4074fa692f03378526007758f7}{\+\_\+frontier\+Level}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a84fd16bbb058a331370b1b9983896264}{Estimate\+Propagator}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_afde21c6f1b41de5a73362b2fcfec056b}{Priority\+Queue}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+data structure for loopuk during Dijkstra 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a5fe6ab271c62be13c363ea3807e6d357}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a5fe6ab271c62be13c363ea3807e6d357}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!Adjacency\+Map\+Entry@{Adjacency\+Map\+Entry}}
+\index{Adjacency\+Map\+Entry@{Adjacency\+Map\+Entry}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{Adjacency\+Map\+Entry()}{AdjacencyMapEntry()}}
+{\footnotesize\ttfamily g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::\+Adjacency\+Map\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a4e31105d4e88c399ec95aa6c184b649e}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a4e31105d4e88c399ec95aa6c184b649e}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!child@{child}}
+\index{child@{child}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{child()}{child()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}}$\ast$ g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::child (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a6a7bbf0ae959ece486cea3549dec5c0a}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a6a7bbf0ae959ece486cea3549dec5c0a}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!distance@{distance}}
+\index{distance@{distance}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::distance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a7082664efdadcd6031ab441830cb7ac4}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a7082664efdadcd6031ab441830cb7ac4}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!edge@{edge}}
+\index{edge@{edge}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{edge()}{edge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge}{Optimizable\+Graph\+::\+Edge}}$\ast$ g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a291b75bdb7c37467a6d4e7e7d839e0fc}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a291b75bdb7c37467a6d4e7e7d839e0fc}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!frontier\+Level@{frontier\+Level}}
+\index{frontier\+Level@{frontier\+Level}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{frontier\+Level()}{frontierLevel()}}
+{\footnotesize\ttfamily int g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::frontier\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_afdc412171a1828e9d588f587ba27f7aa}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_afdc412171a1828e9d588f587ba27f7aa}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!parent@{parent}}
+\index{parent@{parent}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}}\& g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a6d2f95439aa6ee608f2e2d110de553e8}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a6d2f95439aa6ee608f2e2d110de553e8}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!reset@{reset}}
+\index{reset@{reset}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a84fd16bbb058a331370b1b9983896264}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a84fd16bbb058a331370b1b9983896264}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!Estimate\+Propagator@{Estimate\+Propagator}}
+\index{Estimate\+Propagator@{Estimate\+Propagator}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{Estimate\+Propagator}{EstimatePropagator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classg2o_1_1_estimate_propagator}{Estimate\+Propagator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_afde21c6f1b41de5a73362b2fcfec056b}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_afde21c6f1b41de5a73362b2fcfec056b}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!Priority\+Queue@{Priority\+Queue}}
+\index{Priority\+Queue@{Priority\+Queue}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{Priority\+Queue}{PriorityQueue}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_priority_queue}{Priority\+Queue}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_ab6f716e85cc15e6d9c570132fe889fd6}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_ab6f716e85cc15e6d9c570132fe889fd6}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!\+\_\+child@{\+\_\+child}}
+\index{\+\_\+child@{\+\_\+child}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{\+\_\+child}{\_child}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}}$\ast$ g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::\+\_\+child\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a3558503af9d9f56088ff1593398f86d4}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a3558503af9d9f56088ff1593398f86d4}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!\+\_\+distance@{\+\_\+distance}}
+\index{\+\_\+distance@{\+\_\+distance}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{\+\_\+distance}{\_distance}}
+{\footnotesize\ttfamily double g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::\+\_\+distance\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a738795d0b3989374ba51821354629d64}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a738795d0b3989374ba51821354629d64}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!\+\_\+edge@{\+\_\+edge}}
+\index{\+\_\+edge@{\+\_\+edge}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{\+\_\+edge}{\_edge}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge}{Optimizable\+Graph\+::\+Edge}}$\ast$ g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::\+\_\+edge\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a56bfab4074fa692f03378526007758f7}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a56bfab4074fa692f03378526007758f7}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!\+\_\+frontier\+Level@{\+\_\+frontier\+Level}}
+\index{\+\_\+frontier\+Level@{\+\_\+frontier\+Level}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{\+\_\+frontier\+Level}{\_frontierLevel}}
+{\footnotesize\ttfamily int g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::\+\_\+frontier\+Level\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a72384502361d60e1f3ae1644de1e7379}\label{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry_a72384502361d60e1f3ae1644de1e7379}} 
+\index{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}!\+\_\+parent@{\+\_\+parent}}
+\index{\+\_\+parent@{\+\_\+parent}!g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry@{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry}}
+\subsubsection{\texorpdfstring{\+\_\+parent}{\_parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map\+Entry\+::\+\_\+parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{estimate__propagator_8h}{estimate\+\_\+propagator.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{estimate__propagator_8cpp}{estimate\+\_\+propagator.\+cpp}}\end{DoxyCompactItemize}

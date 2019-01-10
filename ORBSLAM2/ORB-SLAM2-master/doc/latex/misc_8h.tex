@@ -1,0 +1,70 @@
+\hypertarget{misc_8h}{}\section{Thirdparty/g2o/g2o/stuff/misc.h File Reference}
+\label{misc_8h}\index{Thirdparty/g2o/g2o/stuff/misc.\+h@{Thirdparty/g2o/g2o/stuff/misc.\+h}}
+
+
+some general case utility functions  
+
+
+{\ttfamily \#include \char`\"{}macros.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_force_linker}{g2o\+::\+Force\+Linker}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceg2o}{g2o}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{namespaceg2o_a3be76fea59d320255e89425439f18f48}{g2o\+::\+Force\+Link\+Function}}) (void)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_ada3127f4fe72b228407fabe23b72a50b}{g2o\+::square}} (T x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_a586ee8937cdc8de49303abd1611da387}{g2o\+::hypot}} (T x, T y)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_ac2989135761e62b40066193a11950d21}{g2o\+::hypot\+\_\+sqr}} (T x, T y)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a8f29adce7d7b9855e1d0ba43835c34b3}{g2o\+::deg2rad}} (double degree)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a3965702cbb6051fa2bdb0c75c0358126}{g2o\+::rad2deg}} (double rad)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a9f036eb4c147ddf174aa56fa031f3867}{g2o\+::normalize\+\_\+theta}} (double theta)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a9ae48fc8caba4b009642ca53d69a3b98}{g2o\+::inverse\+\_\+theta}} (double th)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a25f6d3c7415a89f7a5bc1875a7fa5009}{g2o\+::average\+\_\+angle}} (double theta1, double theta2)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespaceg2o_a821ae3df8a97b37daf8804ef3a26ef1d}{g2o\+::sign}} (T x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_a50939862674314724dd800c41f82e7fe}{g2o\+::clamp}} (T l, T x, T u)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_a207912b4849eaff934f6384bc79d07ce}{g2o\+::wrap}} (T l, T x, T u)
+\item 
+bool \mbox{\hyperlink{namespaceg2o_a123840a60e0d1dde58088d15a1e1fffa}{g2o\+::array\+Has\+NaN}} (const double $\ast$array, int size, int $\ast$nan\+Index=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+some general case utility functions 
+
+This file specifies some general case utility functions 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{misc.\+h@{misc.\+h}!M\+\_\+\+PI@{M\+\_\+\+PI}}
+\index{M\+\_\+\+PI@{M\+\_\+\+PI}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{M\+\_\+\+PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846}
+

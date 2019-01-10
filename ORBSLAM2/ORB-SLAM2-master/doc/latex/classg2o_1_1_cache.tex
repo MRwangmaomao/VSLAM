@@ -1,0 +1,193 @@
+\hypertarget{classg2o_1_1_cache}{}\section{g2o\+:\+:Cache Class Reference}
+\label{classg2o_1_1_cache}\index{g2o\+::\+Cache@{g2o\+::\+Cache}}
+
+
+{\ttfamily \#include $<$cache.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_cache}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_cache_1_1_cache_key}{Cache\+Key}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_cache_adb5e57e9f06505511fdedb247a977cc3}{Cache}} (\mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}} $\ast$container\+\_\+=0, const \mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}} \&parameters\+\_\+=\mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}}())
+\item 
+\mbox{\hyperlink{classg2o_1_1_cache_1_1_cache_key}{Cache\+Key}} \mbox{\hyperlink{classg2o_1_1_cache_a2e0a0de318ff4a0f50c263869a87908b}{key}} () const
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ \mbox{\hyperlink{classg2o_1_1_cache_ab94788e39d7e81201d14bc8ac58325c7}{vertex}} ()
+\item 
+\mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$ \mbox{\hyperlink{classg2o_1_1_cache_a1a4480a445469d2d02b8db449e6cb57c}{graph}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}} $\ast$ \mbox{\hyperlink{classg2o_1_1_cache_a249ffa5c8ac120b3123bd151200082c9}{container}} ()
+\item 
+\mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}} \& \mbox{\hyperlink{classg2o_1_1_cache_a16e471be92f9fe24a3abdf11a0c546d2}{parameters}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_cache_aaea446a5eb59569acc67c94793975a0b}{update}} ()
+\item 
+virtual Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type \mbox{\hyperlink{classg2o_1_1_cache_ace402a9e59f3fe28ae7e44854cbc5e97}{element\+Type}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_cache_ae46e4a4e37c034925edd6bbfdfaa1cb2}{update\+Impl}} ()=0
+\begin{DoxyCompactList}\small\item\em redefine this to do the update \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_cache}{Cache}} $\ast$ \mbox{\hyperlink{classg2o_1_1_cache_a776574fb98726ff61bc1280ea624c6e5}{install\+Dependency}} (const std\+::string \&type\+\_\+, const std\+::vector$<$ int $>$ \&parameter\+Indices)
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_cache_a0c26f0baa33a5902002f1ca2d5f57ece}{resolve\+Dependancies}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_cache_a28d0ad45da71d9b7bc6de4cf1fb0f9e4}{\+\_\+update\+Needed}}
+\item 
+\mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}} \mbox{\hyperlink{classg2o_1_1_cache_ad596a1a7591adece4664a43fc87b881d}{\+\_\+parameters}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classg2o_1_1_cache}{Cache}} $\ast$ $>$ \mbox{\hyperlink{classg2o_1_1_cache_a0b38f0c773c02903acf8964f73c3aa26}{\+\_\+parent\+Caches}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}} $\ast$ \mbox{\hyperlink{classg2o_1_1_cache_a098aeecd7f0daa19a58f710ae7cb27c3}{\+\_\+container}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_cache_a86dec1e0424aa4ae4e6867c69efd7868}{Cache\+Container}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_cache_adb5e57e9f06505511fdedb247a977cc3}\label{classg2o_1_1_cache_adb5e57e9f06505511fdedb247a977cc3}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!Cache@{Cache}}
+\index{Cache@{Cache}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{Cache()}{Cache()}}
+{\footnotesize\ttfamily g2o\+::\+Cache\+::\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}} $\ast$}]{container\+\_\+ = {\ttfamily 0},  }\item[{const \mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}} \&}]{parameters\+\_\+ = {\ttfamily \mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}}()} }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_cache_a249ffa5c8ac120b3123bd151200082c9}\label{classg2o_1_1_cache_a249ffa5c8ac120b3123bd151200082c9}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!container@{container}}
+\index{container@{container}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{container()}{container()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}} $\ast$ g2o\+::\+Cache\+::container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_cache_ace402a9e59f3fe28ae7e44854cbc5e97}\label{classg2o_1_1_cache_ace402a9e59f3fe28ae7e44854cbc5e97}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{element\+Type()}{elementType()}}
+{\footnotesize\ttfamily virtual Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type g2o\+::\+Cache\+::element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+returns the type of the graph element, see Hyper\+Graph\+Element\+Type 
+
+Implements \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element_a1a9d7b748698c09d202373e06e413ef2}{g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph\+Element}}.
+
+\mbox{\Hypertarget{classg2o_1_1_cache_a1a4480a445469d2d02b8db449e6cb57c}\label{classg2o_1_1_cache_a1a4480a445469d2d02b8db449e6cb57c}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!graph@{graph}}
+\index{graph@{graph}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{graph()}{graph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$ g2o\+::\+Cache\+::graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_cache_a776574fb98726ff61bc1280ea624c6e5}\label{classg2o_1_1_cache_a776574fb98726ff61bc1280ea624c6e5}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!install\+Dependency@{install\+Dependency}}
+\index{install\+Dependency@{install\+Dependency}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{install\+Dependency()}{installDependency()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_cache}{Cache}} $\ast$ g2o\+::\+Cache\+::install\+Dependency (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type\+\_\+,  }\item[{const std\+::vector$<$ int $>$ \&}]{parameter\+Indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+this function installs and satisfies a cache 
+\begin{DoxyParams}{Parameters}
+{\em type\+\_\+} & the typename of the dependency \\
+\hline
+{\em parameter\+Indices} & a vector containing the indices if the parameters in \+\_\+parameters that will be used to assemble the Key of the cache being created For example if I have a cache of type C2, having parameters \char`\"{}\+A, B, and C\char`\"{}, and it depends on a cache of type C1 that depends on the parameters A and C, the parameter\+Indices should contain \char`\"{}0, 2\char`\"{}, since they are the positions in the parameter vector of C2 of the parameters needed to construct C1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly created cache 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_cache_a2e0a0de318ff4a0f50c263869a87908b}\label{classg2o_1_1_cache_a2e0a0de318ff4a0f50c263869a87908b}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!key@{key}}
+\index{key@{key}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{key()}{key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_cache_1_1_cache_key}{Cache\+::\+Cache\+Key}} g2o\+::\+Cache\+::key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classg2o_1_1_cache_a16e471be92f9fe24a3abdf11a0c546d2}\label{classg2o_1_1_cache_a16e471be92f9fe24a3abdf11a0c546d2}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!parameters@{parameters}}
+\index{parameters@{parameters}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{parameters()}{parameters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}} \& g2o\+::\+Cache\+::parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_cache_a0c26f0baa33a5902002f1ca2d5f57ece}\label{classg2o_1_1_cache_a0c26f0baa33a5902002f1ca2d5f57ece}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!resolve\+Dependancies@{resolve\+Dependancies}}
+\index{resolve\+Dependancies@{resolve\+Dependancies}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{resolve\+Dependancies()}{resolveDependancies()}}
+{\footnotesize\ttfamily bool g2o\+::\+Cache\+::resolve\+Dependancies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Function to be called from a cache that has dependencies. It just invokes a sequence of \mbox{\hyperlink{classg2o_1_1_cache_a776574fb98726ff61bc1280ea624c6e5}{install\+Dependency()}}. Although the caches returned are stored in the \+\_\+parent\+Cache vector, it is better that you redefine your own cache member variables, for better readability \mbox{\Hypertarget{classg2o_1_1_cache_aaea446a5eb59569acc67c94793975a0b}\label{classg2o_1_1_cache_aaea446a5eb59569acc67c94793975a0b}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!update@{update}}
+\index{update@{update}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void g2o\+::\+Cache\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_cache_ae46e4a4e37c034925edd6bbfdfaa1cb2}\label{classg2o_1_1_cache_ae46e4a4e37c034925edd6bbfdfaa1cb2}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!update\+Impl@{update\+Impl}}
+\index{update\+Impl@{update\+Impl}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{update\+Impl()}{updateImpl()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Cache\+::update\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+redefine this to do the update 
+
+\mbox{\Hypertarget{classg2o_1_1_cache_ab94788e39d7e81201d14bc8ac58325c7}\label{classg2o_1_1_cache_ab94788e39d7e81201d14bc8ac58325c7}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!vertex@{vertex}}
+\index{vertex@{vertex}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{vertex()}{vertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ g2o\+::\+Cache\+::vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_cache_a86dec1e0424aa4ae4e6867c69efd7868}\label{classg2o_1_1_cache_a86dec1e0424aa4ae4e6867c69efd7868}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!Cache\+Container@{Cache\+Container}}
+\index{Cache\+Container@{Cache\+Container}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{Cache\+Container}{CacheContainer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_cache_a098aeecd7f0daa19a58f710ae7cb27c3}\label{classg2o_1_1_cache_a098aeecd7f0daa19a58f710ae7cb27c3}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!\+\_\+container@{\+\_\+container}}
+\index{\+\_\+container@{\+\_\+container}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{\+\_\+container}{\_container}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}}$\ast$ g2o\+::\+Cache\+::\+\_\+container\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_cache_ad596a1a7591adece4664a43fc87b881d}\label{classg2o_1_1_cache_ad596a1a7591adece4664a43fc87b881d}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!\+\_\+parameters@{\+\_\+parameters}}
+\index{\+\_\+parameters@{\+\_\+parameters}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{\+\_\+parameters}{\_parameters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}} g2o\+::\+Cache\+::\+\_\+parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_cache_a0b38f0c773c02903acf8964f73c3aa26}\label{classg2o_1_1_cache_a0b38f0c773c02903acf8964f73c3aa26}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!\+\_\+parent\+Caches@{\+\_\+parent\+Caches}}
+\index{\+\_\+parent\+Caches@{\+\_\+parent\+Caches}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{\+\_\+parent\+Caches}{\_parentCaches}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classg2o_1_1_cache}{Cache}}$\ast$$>$ g2o\+::\+Cache\+::\+\_\+parent\+Caches\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_cache_a28d0ad45da71d9b7bc6de4cf1fb0f9e4}\label{classg2o_1_1_cache_a28d0ad45da71d9b7bc6de4cf1fb0f9e4}} 
+\index{g2o\+::\+Cache@{g2o\+::\+Cache}!\+\_\+update\+Needed@{\+\_\+update\+Needed}}
+\index{\+\_\+update\+Needed@{\+\_\+update\+Needed}!g2o\+::\+Cache@{g2o\+::\+Cache}}
+\subsubsection{\texorpdfstring{\+\_\+update\+Needed}{\_updateNeeded}}
+{\footnotesize\ttfamily bool g2o\+::\+Cache\+::\+\_\+update\+Needed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{cache_8h}{cache.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{cache_8cpp}{cache.\+cpp}}\end{DoxyCompactItemize}

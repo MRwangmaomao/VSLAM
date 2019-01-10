@@ -1,0 +1,59 @@
+\hypertarget{classg2o_1_1_robust_kernel_tukey}{}\section{g2o\+:\+:Robust\+Kernel\+Tukey Class Reference}
+\label{classg2o_1_1_robust_kernel_tukey}\index{g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}}
+
+
+Tukey Cost Function.  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+impl.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Robust\+Kernel\+Tukey\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_robust_kernel_tukey}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_robust_kernel_tukey_a0602ba130364506d65fb86f3473209aa}{set\+Delta\+Sqr}} (const double \&delta\+Sqr, const double \&inv)
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_robust_kernel_tukey_a415fbc0b4033a8330700e66c60305b13}{robustify}} (double e2, Eigen\+::\+Vector3d \&rho) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Tukey Cost Function. 
+
+If e$^\wedge$(1/2) $<$ d rho(e) = delta2(1-\/(1-\/e/delta2)$^\wedge$3)
+
+else
+
+rho(e) = delta2 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_tukey_a415fbc0b4033a8330700e66c60305b13}\label{classg2o_1_1_robust_kernel_tukey_a415fbc0b4033a8330700e66c60305b13}} 
+\index{g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}!robustify@{robustify}}
+\index{robustify@{robustify}!g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}}
+\subsubsection{\texorpdfstring{robustify()}{robustify()}}
+{\footnotesize\ttfamily void g2o\+::\+Robust\+Kernel\+Tukey\+::robustify (\begin{DoxyParamCaption}\item[{double}]{squared\+Error,  }\item[{Eigen\+::\+Vector3d \&}]{rho }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+compute the scaling factor for a error\+: The error is e$^\wedge$T Omega e The output rho is rho\mbox{[}0\mbox{]}\+: The actual scaled error value rho\mbox{[}1\mbox{]}\+: First derivative of the scaling function rho\mbox{[}2\mbox{]}\+: Second derivative of the scaling function 
+
+Implements \mbox{\hyperlink{classg2o_1_1_robust_kernel_ab47b071a0cfe466be063f0104bc41d0f}{g2o\+::\+Robust\+Kernel}}.
+
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_tukey_a0602ba130364506d65fb86f3473209aa}\label{classg2o_1_1_robust_kernel_tukey_a0602ba130364506d65fb86f3473209aa}} 
+\index{g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}!set\+Delta\+Sqr@{set\+Delta\+Sqr}}
+\index{set\+Delta\+Sqr@{set\+Delta\+Sqr}!g2o\+::\+Robust\+Kernel\+Tukey@{g2o\+::\+Robust\+Kernel\+Tukey}}
+\subsubsection{\texorpdfstring{set\+Delta\+Sqr()}{setDeltaSqr()}}
+{\footnotesize\ttfamily void g2o\+::\+Robust\+Kernel\+Tukey\+::set\+Delta\+Sqr (\begin{DoxyParamCaption}\item[{const double \&}]{delta\+Sqr,  }\item[{const double \&}]{inv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel__impl_8h}{robust\+\_\+kernel\+\_\+impl.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel__impl_8cpp}{robust\+\_\+kernel\+\_\+impl.\+cpp}}\end{DoxyCompactItemize}

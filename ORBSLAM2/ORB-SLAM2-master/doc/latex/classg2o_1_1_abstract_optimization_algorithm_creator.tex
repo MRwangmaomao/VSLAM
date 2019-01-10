@@ -1,0 +1,85 @@
+\hypertarget{classg2o_1_1_abstract_optimization_algorithm_creator}{}\section{g2o\+:\+:Abstract\+Optimization\+Algorithm\+Creator Class Reference}
+\label{classg2o_1_1_abstract_optimization_algorithm_creator}\index{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}}
+
+
+base for allocating an optimization algorithm  
+
+
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+factory.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator_ae9f64a630d2e641043aabc98660495d8}{Abstract\+Optimization\+Algorithm\+Creator}} (const \mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}} \&p)
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator_a8832e6083876766797176fb0d93b4554}{$\sim$\+Abstract\+Optimization\+Algorithm\+Creator}} ()
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimization_algorithm}{Optimization\+Algorithm}} $\ast$ \mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator_a96a737bda0f932ac7dd51aa468795353}{construct}} ()=0
+\begin{DoxyCompactList}\small\item\em allocate a solver operating on optimizer, re-\/implement for your creator \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}} \& \mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator_ab074710276ea3496d5bff118e48c6030}{property}} () const
+\begin{DoxyCompactList}\small\item\em return the properties of the solver \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}} \mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator_acf2663d0d6dec71049e4853a9825eafb}{\+\_\+property}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+base for allocating an optimization algorithm 
+
+Allocating a solver for a given optimizer. The method \mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator_a96a737bda0f932ac7dd51aa468795353}{construct()}} has to be implemented in your derived class to allocate the desired solver. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_abstract_optimization_algorithm_creator_ae9f64a630d2e641043aabc98660495d8}\label{classg2o_1_1_abstract_optimization_algorithm_creator_ae9f64a630d2e641043aabc98660495d8}} 
+\index{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}!Abstract\+Optimization\+Algorithm\+Creator@{Abstract\+Optimization\+Algorithm\+Creator}}
+\index{Abstract\+Optimization\+Algorithm\+Creator@{Abstract\+Optimization\+Algorithm\+Creator}!g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}}
+\subsubsection{\texorpdfstring{Abstract\+Optimization\+Algorithm\+Creator()}{AbstractOptimizationAlgorithmCreator()}}
+{\footnotesize\ttfamily g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator\+::\+Abstract\+Optimization\+Algorithm\+Creator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}} \&}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_abstract_optimization_algorithm_creator_a8832e6083876766797176fb0d93b4554}\label{classg2o_1_1_abstract_optimization_algorithm_creator_a8832e6083876766797176fb0d93b4554}} 
+\index{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}!````~Abstract\+Optimization\+Algorithm\+Creator@{$\sim$\+Abstract\+Optimization\+Algorithm\+Creator}}
+\index{````~Abstract\+Optimization\+Algorithm\+Creator@{$\sim$\+Abstract\+Optimization\+Algorithm\+Creator}!g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}}
+\subsubsection{\texorpdfstring{$\sim$\+Abstract\+Optimization\+Algorithm\+Creator()}{~AbstractOptimizationAlgorithmCreator()}}
+{\footnotesize\ttfamily virtual g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator\+::$\sim$\+Abstract\+Optimization\+Algorithm\+Creator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_abstract_optimization_algorithm_creator_a96a737bda0f932ac7dd51aa468795353}\label{classg2o_1_1_abstract_optimization_algorithm_creator_a96a737bda0f932ac7dd51aa468795353}} 
+\index{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}!construct@{construct}}
+\index{construct@{construct}!g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}}
+\subsubsection{\texorpdfstring{construct()}{construct()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classg2o_1_1_optimization_algorithm}{Optimization\+Algorithm}}$\ast$ g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator\+::construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+allocate a solver operating on optimizer, re-\/implement for your creator 
+
+\mbox{\Hypertarget{classg2o_1_1_abstract_optimization_algorithm_creator_ab074710276ea3496d5bff118e48c6030}\label{classg2o_1_1_abstract_optimization_algorithm_creator_ab074710276ea3496d5bff118e48c6030}} 
+\index{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}!property@{property}}
+\index{property@{property}!g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}}
+\subsubsection{\texorpdfstring{property()}{property()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}}\& g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator\+::property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the properties of the solver 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_abstract_optimization_algorithm_creator_acf2663d0d6dec71049e4853a9825eafb}\label{classg2o_1_1_abstract_optimization_algorithm_creator_acf2663d0d6dec71049e4853a9825eafb}} 
+\index{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}!\+\_\+property@{\+\_\+property}}
+\index{\+\_\+property@{\+\_\+property}!g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator@{g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator}}
+\subsubsection{\texorpdfstring{\+\_\+property}{\_property}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}} g2o\+::\+Abstract\+Optimization\+Algorithm\+Creator\+::\+\_\+property\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__factory_8h}{optimization\+\_\+algorithm\+\_\+factory.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__factory_8cpp}{optimization\+\_\+algorithm\+\_\+factory.\+cpp}}\end{DoxyCompactItemize}

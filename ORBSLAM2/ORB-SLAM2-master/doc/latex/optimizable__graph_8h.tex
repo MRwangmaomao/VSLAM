@@ -1,0 +1,35 @@
+\hypertarget{optimizable__graph_8h}{}\section{Thirdparty/g2o/g2o/core/optimizable\+\_\+graph.h File Reference}
+\label{optimizable__graph_8h}\index{Thirdparty/g2o/g2o/core/optimizable\+\_\+graph.\+h@{Thirdparty/g2o/g2o/core/optimizable\+\_\+graph.\+h}}
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include \char`\"{}openmp\+\_\+mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hyper\+\_\+graph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parameter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parameter\+\_\+container.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}jacobian\+\_\+workspace.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../stuff/macros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}g2o\+\_\+core\+\_\+api.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{g2o\+::\+Optimizable\+Graph}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{g2o\+::\+Optimizable\+Graph\+::\+Data}}
+\begin{DoxyCompactList}\small\item\em data packet for a vertex. Extend this class to store in the vertices the potential additional information you need (e.\+g. images, laser scans, ...). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_optimizable_graph_1_1_vertex_i_d_compare}{g2o\+::\+Optimizable\+Graph\+::\+Vertex\+I\+D\+Compare}}
+\begin{DoxyCompactList}\small\item\em order vertices based on their ID \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_optimizable_graph_1_1_edge_i_d_compare}{g2o\+::\+Optimizable\+Graph\+::\+Edge\+I\+D\+Compare}}
+\begin{DoxyCompactList}\small\item\em order edges based on the internal ID, which is assigned to the edge in \mbox{\hyperlink{structg2o_1_1_optimizable_graph_a6831ed69fce3dba691f53302a2813070}{add\+Edge()}} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\begin{DoxyCompactList}\small\item\em A general case \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Vertex}} for optimization. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceg2o}{g2o}}
+\end{DoxyCompactItemize}

@@ -1,0 +1,169 @@
+\hypertarget{classg2o_1_1_optimization_algorithm_factory}{}\section{g2o\+:\+:Optimization\+Algorithm\+Factory Class Reference}
+\label{classg2o_1_1_optimization_algorithm_factory}\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+
+
+create solvers based on their short name  
+
+
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+factory.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list$<$ \mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator}{Abstract\+Optimization\+Algorithm\+Creator}} $\ast$ $>$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a3ed210b94bf09b47e30d07da3766b4ec}{Creator\+List}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a7726ae90dc3d5baf62fa364517e0fed7}{register\+Solver}} (\mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator}{Abstract\+Optimization\+Algorithm\+Creator}} $\ast$c)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_adf79430f6176c9e9309a703ba2dbd14b}{unregister\+Solver}} (\mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator}{Abstract\+Optimization\+Algorithm\+Creator}} $\ast$c)
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm}{Optimization\+Algorithm}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a3d48f9c7c6be0428ae3d222d85f65686}{construct}} (const std\+::string \&tag, \mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}} \&solver\+Property) const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a89704fe7093e03eb4f2d568a1969bc45}{list\+Solvers}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em list the known solvers into a stream \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a3ed210b94bf09b47e30d07da3766b4ec}{Creator\+List}} \& \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_ae17f0e3d3f60e5cda96651a7ded37b4c}{creator\+List}} () const
+\begin{DoxyCompactList}\small\item\em return the underlying list of creators \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory}{Optimization\+Algorithm\+Factory}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a4fe827a82f01c74ef124e7a9a9c98707}{instance}} ()
+\begin{DoxyCompactList}\small\item\em return the instance \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a80b6a74ac262e6192064ec264f965bd7}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em free the instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_ac0e56515170544768e4cad9f2fede55c}{Optimization\+Algorithm\+Factory}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a172879a5ecbbe9ec7c4771c87aef1c57}{$\sim$\+Optimization\+Algorithm\+Factory}} ()
+\item 
+Creator\+List\+::const\+\_\+iterator \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a33368953cc13fc69bad64ce440d90a39}{find\+Solver}} (const std\+::string \&name) const
+\item 
+Creator\+List\+::iterator \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a75857fd4977318d51412f4ebae20157d}{find\+Solver}} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a3ed210b94bf09b47e30d07da3766b4ec}{Creator\+List}} \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a1d7f67d60df0d0b26a7694dcea4879db}{\+\_\+creator}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+create solvers based on their short name 
+
+\mbox{\hyperlink{classg2o_1_1_factory}{Factory}} to allocate solvers based on their short name. The \mbox{\hyperlink{classg2o_1_1_factory}{Factory}} is implemented as a sigleton and the single instance can be accessed via the \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a4fe827a82f01c74ef124e7a9a9c98707}{instance()}} function. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a3ed210b94bf09b47e30d07da3766b4ec}\label{classg2o_1_1_optimization_algorithm_factory_a3ed210b94bf09b47e30d07da3766b4ec}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!Creator\+List@{Creator\+List}}
+\index{Creator\+List@{Creator\+List}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{Creator\+List}{CreatorList}}
+{\footnotesize\ttfamily typedef std\+::list$<$\mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator}{Abstract\+Optimization\+Algorithm\+Creator}}$\ast$$>$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a3ed210b94bf09b47e30d07da3766b4ec}{g2o\+::\+Optimization\+Algorithm\+Factory\+::\+Creator\+List}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_ac0e56515170544768e4cad9f2fede55c}\label{classg2o_1_1_optimization_algorithm_factory_ac0e56515170544768e4cad9f2fede55c}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!Optimization\+Algorithm\+Factory@{Optimization\+Algorithm\+Factory}}
+\index{Optimization\+Algorithm\+Factory@{Optimization\+Algorithm\+Factory}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{Optimization\+Algorithm\+Factory()}{OptimizationAlgorithmFactory()}}
+{\footnotesize\ttfamily g2o\+::\+Optimization\+Algorithm\+Factory\+::\+Optimization\+Algorithm\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a172879a5ecbbe9ec7c4771c87aef1c57}\label{classg2o_1_1_optimization_algorithm_factory_a172879a5ecbbe9ec7c4771c87aef1c57}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!````~Optimization\+Algorithm\+Factory@{$\sim$\+Optimization\+Algorithm\+Factory}}
+\index{````~Optimization\+Algorithm\+Factory@{$\sim$\+Optimization\+Algorithm\+Factory}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{$\sim$\+Optimization\+Algorithm\+Factory()}{~OptimizationAlgorithmFactory()}}
+{\footnotesize\ttfamily g2o\+::\+Optimization\+Algorithm\+Factory\+::$\sim$\+Optimization\+Algorithm\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a3d48f9c7c6be0428ae3d222d85f65686}\label{classg2o_1_1_optimization_algorithm_factory_a3d48f9c7c6be0428ae3d222d85f65686}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!construct@{construct}}
+\index{construct@{construct}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{construct()}{construct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimization_algorithm}{Optimization\+Algorithm}} $\ast$ g2o\+::\+Optimization\+Algorithm\+Factory\+::construct (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tag,  }\item[{\mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}} \&}]{solver\+Property }\end{DoxyParamCaption}) const}
+
+construct a solver based on its name, e.\+g., var, fix3\+\_\+2\+\_\+cholmod \mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_ae17f0e3d3f60e5cda96651a7ded37b4c}\label{classg2o_1_1_optimization_algorithm_factory_ae17f0e3d3f60e5cda96651a7ded37b4c}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!creator\+List@{creator\+List}}
+\index{creator\+List@{creator\+List}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{creator\+List()}{creatorList()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a3ed210b94bf09b47e30d07da3766b4ec}{Creator\+List}}\& g2o\+::\+Optimization\+Algorithm\+Factory\+::creator\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the underlying list of creators 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a80b6a74ac262e6192064ec264f965bd7}\label{classg2o_1_1_optimization_algorithm_factory_a80b6a74ac262e6192064ec264f965bd7}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!destroy@{destroy}}
+\index{destroy@{destroy}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimization\+Algorithm\+Factory\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+free the instance 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a33368953cc13fc69bad64ce440d90a39}\label{classg2o_1_1_optimization_algorithm_factory_a33368953cc13fc69bad64ce440d90a39}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!find\+Solver@{find\+Solver}}
+\index{find\+Solver@{find\+Solver}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{find\+Solver()}{findSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Optimization\+Algorithm\+Factory\+::\+Creator\+List\+::const\+\_\+iterator g2o\+::\+Optimization\+Algorithm\+Factory\+::find\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a75857fd4977318d51412f4ebae20157d}\label{classg2o_1_1_optimization_algorithm_factory_a75857fd4977318d51412f4ebae20157d}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!find\+Solver@{find\+Solver}}
+\index{find\+Solver@{find\+Solver}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{find\+Solver()}{findSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Optimization\+Algorithm\+Factory\+::\+Creator\+List\+::iterator g2o\+::\+Optimization\+Algorithm\+Factory\+::find\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a4fe827a82f01c74ef124e7a9a9c98707}\label{classg2o_1_1_optimization_algorithm_factory_a4fe827a82f01c74ef124e7a9a9c98707}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!instance@{instance}}
+\index{instance@{instance}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory}{Optimization\+Algorithm\+Factory}} $\ast$ g2o\+::\+Optimization\+Algorithm\+Factory\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+return the instance 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a89704fe7093e03eb4f2d568a1969bc45}\label{classg2o_1_1_optimization_algorithm_factory_a89704fe7093e03eb4f2d568a1969bc45}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!list\+Solvers@{list\+Solvers}}
+\index{list\+Solvers@{list\+Solvers}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{list\+Solvers()}{listSolvers()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimization\+Algorithm\+Factory\+::list\+Solvers (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const}
+
+
+
+list the known solvers into a stream 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a7726ae90dc3d5baf62fa364517e0fed7}\label{classg2o_1_1_optimization_algorithm_factory_a7726ae90dc3d5baf62fa364517e0fed7}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!register\+Solver@{register\+Solver}}
+\index{register\+Solver@{register\+Solver}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{register\+Solver()}{registerSolver()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimization\+Algorithm\+Factory\+::register\+Solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator}{Abstract\+Optimization\+Algorithm\+Creator}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+register a specific creator for allocating a solver \mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_adf79430f6176c9e9309a703ba2dbd14b}\label{classg2o_1_1_optimization_algorithm_factory_adf79430f6176c9e9309a703ba2dbd14b}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!unregister\+Solver@{unregister\+Solver}}
+\index{unregister\+Solver@{unregister\+Solver}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{unregister\+Solver()}{unregisterSolver()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimization\+Algorithm\+Factory\+::unregister\+Solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator}{Abstract\+Optimization\+Algorithm\+Creator}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+unregister a specific creator for allocating a solver 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_factory_a1d7f67d60df0d0b26a7694dcea4879db}\label{classg2o_1_1_optimization_algorithm_factory_a1d7f67d60df0d0b26a7694dcea4879db}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}!\+\_\+creator@{\+\_\+creator}}
+\index{\+\_\+creator@{\+\_\+creator}!g2o\+::\+Optimization\+Algorithm\+Factory@{g2o\+::\+Optimization\+Algorithm\+Factory}}
+\subsubsection{\texorpdfstring{\+\_\+creator}{\_creator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory_a3ed210b94bf09b47e30d07da3766b4ec}{Creator\+List}} g2o\+::\+Optimization\+Algorithm\+Factory\+::\+\_\+creator\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__factory_8h}{optimization\+\_\+algorithm\+\_\+factory.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__factory_8cpp}{optimization\+\_\+algorithm\+\_\+factory.\+cpp}}\end{DoxyCompactItemize}

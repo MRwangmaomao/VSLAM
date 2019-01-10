@@ -1,0 +1,287 @@
+\hypertarget{classg2o_1_1_optimization_algorithm_dogleg}{}\section{g2o\+:\+:Optimization\+Algorithm\+Dogleg Class Reference}
+\label{classg2o_1_1_optimization_algorithm_dogleg}\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+
+
+Implementation of Powell\textquotesingle{}s Dogleg Algorithm.  
+
+
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+dogleg.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Optimization\+Algorithm\+Dogleg\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classg2o_1_1_optimization_algorithm_dogleg}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390ae098265840915f1d6877b4e27fbec1d8}{S\+T\+E\+P\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}}, 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a02cb99985ea3c35b57591e6c55f5e037}{S\+T\+E\+P\+\_\+\+SD}}, 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a27f521fdfb791c330af5e59dd989507d}{S\+T\+E\+P\+\_\+\+GN}}, 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a1bc0276b59002bc8892ea9fc39348d1d}{S\+T\+E\+P\+\_\+\+DL}}
+ \}
+\begin{DoxyCompactList}\small\item\em type of the step to take \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_ab332f8fb049d1a1fecba18105083052a}{Optimization\+Algorithm\+Dogleg}} (\mbox{\hyperlink{classg2o_1_1_block_solver_base}{Block\+Solver\+Base}} $\ast$\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a85473a4073c76b1a52cf9cf175e31c45}{solver}})
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_ac5ebd46eeca170f6a923c75556504d2b}{$\sim$\+Optimization\+Algorithm\+Dogleg}} ()
+\item 
+virtual Solver\+Result \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_ace62fd809c18655bd7ff104285748610}{solve}} (int iteration, bool online=false)
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a48f424443a7b2b6e8c532204cd7334cd}{print\+Verbose}} (std\+::ostream \&os) const
+\item 
+int \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a0ca98964e7bcde0c893eb9d720a26fd1}{last\+Step}} () const
+\begin{DoxyCompactList}\small\item\em return the type of the last step taken by the algorithm \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a3c6fdb2f8296330fd754d635a67b3696}{trust\+Region}} () const
+\begin{DoxyCompactList}\small\item\em return the diameter of the trust region \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a65f193c6451ffcd2bd6fd8f8d19e2a12}{step\+Type2\+Str}} (int step\+Type)
+\begin{DoxyCompactList}\small\item\em convert the type into an integer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ int $>$ $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a5993c68e69cd037b1420b4addf9f7e50}{\+\_\+max\+Trials\+After\+Failure}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ double $>$ $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_ae77ffaea89872affeb61f122f20efeb9}{\+\_\+user\+Delta\+Init}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ double $>$ $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a3a94c7696f07e3def38ec96a1979babd}{\+\_\+initial\+Lambda}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ double $>$ $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a6855a511dc998efef7eaa0ef99e1b814}{\+\_\+lamdba\+Factor}}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a8f4ee408fbf3999063d094cf61e852b7}{\+\_\+hsd}}
+\begin{DoxyCompactList}\small\item\em steepest decent step \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_aaf433c824153a7bd76b27690eb53113b}{\+\_\+hdl}}
+\begin{DoxyCompactList}\small\item\em final dogleg step \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a225092fe67ce75eb64011c1f45d8d936}{\+\_\+aux\+Vector}}
+\begin{DoxyCompactList}\small\item\em auxilary vector used to perform multiplications or other stuff \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_aacc051a6740fc6017dac7c424dc7df3d}{\+\_\+current\+Lambda}}
+\begin{DoxyCompactList}\small\item\em the damping factor to force positive definite matrix \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a3484b12efddd9fc0051100634effecd6}{\+\_\+delta}}
+\begin{DoxyCompactList}\small\item\em trust region \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_a3bf898af0087c0ed8287d0cd13e4c943}{\+\_\+last\+Step}}
+\begin{DoxyCompactList}\small\item\em type of the step taken by the algorithm \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_af921ebbebaf059f73e410fc751616ec2}{\+\_\+was\+P\+D\+In\+All\+Iterations}}
+\begin{DoxyCompactList}\small\item\em the matrix we solve was positive definite in all iterations -\/$>$ if not apply damping \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg_aeab37f3f587dc8b37b5a42d36fd8217c}{\+\_\+last\+Num\+Tries}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of Powell\textquotesingle{}s Dogleg Algorithm. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390}\label{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+type of the step to take 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+P\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED@{S\+T\+E\+P\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!S\+T\+E\+P\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED@{S\+T\+E\+P\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}}}\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390ae098265840915f1d6877b4e27fbec1d8}\label{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390ae098265840915f1d6877b4e27fbec1d8}} 
+S\+T\+E\+P\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+P\+\_\+\+SD@{S\+T\+E\+P\+\_\+\+SD}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!S\+T\+E\+P\+\_\+\+SD@{S\+T\+E\+P\+\_\+\+SD}}}\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a02cb99985ea3c35b57591e6c55f5e037}\label{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a02cb99985ea3c35b57591e6c55f5e037}} 
+S\+T\+E\+P\+\_\+\+SD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+P\+\_\+\+GN@{S\+T\+E\+P\+\_\+\+GN}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!S\+T\+E\+P\+\_\+\+GN@{S\+T\+E\+P\+\_\+\+GN}}}\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a27f521fdfb791c330af5e59dd989507d}\label{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a27f521fdfb791c330af5e59dd989507d}} 
+S\+T\+E\+P\+\_\+\+GN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+E\+P\+\_\+\+DL@{S\+T\+E\+P\+\_\+\+DL}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!S\+T\+E\+P\+\_\+\+DL@{S\+T\+E\+P\+\_\+\+DL}}}\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a1bc0276b59002bc8892ea9fc39348d1d}\label{classg2o_1_1_optimization_algorithm_dogleg_a431b0b88011685955381bdeb68bb5390a1bc0276b59002bc8892ea9fc39348d1d}} 
+S\+T\+E\+P\+\_\+\+DL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_ab332f8fb049d1a1fecba18105083052a}\label{classg2o_1_1_optimization_algorithm_dogleg_ab332f8fb049d1a1fecba18105083052a}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!Optimization\+Algorithm\+Dogleg@{Optimization\+Algorithm\+Dogleg}}
+\index{Optimization\+Algorithm\+Dogleg@{Optimization\+Algorithm\+Dogleg}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{Optimization\+Algorithm\+Dogleg()}{OptimizationAlgorithmDogleg()}}
+{\footnotesize\ttfamily g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+Optimization\+Algorithm\+Dogleg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_block_solver_base}{Block\+Solver\+Base}} $\ast$}]{solver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+construct the Dogleg algorithm, which will use the given \mbox{\hyperlink{classg2o_1_1_solver}{Solver}} for solving the linearized system. \mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_ac5ebd46eeca170f6a923c75556504d2b}\label{classg2o_1_1_optimization_algorithm_dogleg_ac5ebd46eeca170f6a923c75556504d2b}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!````~Optimization\+Algorithm\+Dogleg@{$\sim$\+Optimization\+Algorithm\+Dogleg}}
+\index{````~Optimization\+Algorithm\+Dogleg@{$\sim$\+Optimization\+Algorithm\+Dogleg}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{$\sim$\+Optimization\+Algorithm\+Dogleg()}{~OptimizationAlgorithmDogleg()}}
+{\footnotesize\ttfamily g2o\+::\+Optimization\+Algorithm\+Dogleg\+::$\sim$\+Optimization\+Algorithm\+Dogleg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a0ca98964e7bcde0c893eb9d720a26fd1}\label{classg2o_1_1_optimization_algorithm_dogleg_a0ca98964e7bcde0c893eb9d720a26fd1}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!last\+Step@{last\+Step}}
+\index{last\+Step@{last\+Step}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{last\+Step()}{lastStep()}}
+{\footnotesize\ttfamily int g2o\+::\+Optimization\+Algorithm\+Dogleg\+::last\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the type of the last step taken by the algorithm 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a48f424443a7b2b6e8c532204cd7334cd}\label{classg2o_1_1_optimization_algorithm_dogleg_a48f424443a7b2b6e8c532204cd7334cd}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!print\+Verbose@{print\+Verbose}}
+\index{print\+Verbose@{print\+Verbose}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{print\+Verbose()}{printVerbose()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimization\+Algorithm\+Dogleg\+::print\+Verbose (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+called by the optimizer if verbose. re-\/implement, if you want to print something 
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_a6683d35e67402b50924bc4744b6e282a}{g2o\+::\+Optimization\+Algorithm}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_ace62fd809c18655bd7ff104285748610}\label{classg2o_1_1_optimization_algorithm_dogleg_ace62fd809c18655bd7ff104285748610}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!solve@{solve}}
+\index{solve@{solve}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily Optimization\+Algorithm\+::\+Solver\+Result g2o\+::\+Optimization\+Algorithm\+Dogleg\+::solve (\begin{DoxyParamCaption}\item[{int}]{iteration,  }\item[{bool}]{online = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Solve one iteration. The \mbox{\hyperlink{classg2o_1_1_sparse_optimizer}{Sparse\+Optimizer}} running on-\/top will call this for the given number of iterations. 
+\begin{DoxyParams}{Parameters}
+{\em iteration} & indicates the current iteration \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_ab174deeeb2551ceaf715ea09f0f9c077}{g2o\+::\+Optimization\+Algorithm}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a65f193c6451ffcd2bd6fd8f8d19e2a12}\label{classg2o_1_1_optimization_algorithm_dogleg_a65f193c6451ffcd2bd6fd8f8d19e2a12}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!step\+Type2\+Str@{step\+Type2\+Str}}
+\index{step\+Type2\+Str@{step\+Type2\+Str}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{step\+Type2\+Str()}{stepType2Str()}}
+{\footnotesize\ttfamily const char $\ast$ g2o\+::\+Optimization\+Algorithm\+Dogleg\+::step\+Type2\+Str (\begin{DoxyParamCaption}\item[{int}]{step\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+convert the type into an integer 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a3c6fdb2f8296330fd754d635a67b3696}\label{classg2o_1_1_optimization_algorithm_dogleg_a3c6fdb2f8296330fd754d635a67b3696}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!trust\+Region@{trust\+Region}}
+\index{trust\+Region@{trust\+Region}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{trust\+Region()}{trustRegion()}}
+{\footnotesize\ttfamily double g2o\+::\+Optimization\+Algorithm\+Dogleg\+::trust\+Region (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the diameter of the trust region 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a225092fe67ce75eb64011c1f45d8d936}\label{classg2o_1_1_optimization_algorithm_dogleg_a225092fe67ce75eb64011c1f45d8d936}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+aux\+Vector@{\+\_\+aux\+Vector}}
+\index{\+\_\+aux\+Vector@{\+\_\+aux\+Vector}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+aux\+Vector}{\_auxVector}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+aux\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+auxilary vector used to perform multiplications or other stuff 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_aacc051a6740fc6017dac7c424dc7df3d}\label{classg2o_1_1_optimization_algorithm_dogleg_aacc051a6740fc6017dac7c424dc7df3d}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+current\+Lambda@{\+\_\+current\+Lambda}}
+\index{\+\_\+current\+Lambda@{\+\_\+current\+Lambda}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+current\+Lambda}{\_currentLambda}}
+{\footnotesize\ttfamily double g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+current\+Lambda\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the damping factor to force positive definite matrix 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a3484b12efddd9fc0051100634effecd6}\label{classg2o_1_1_optimization_algorithm_dogleg_a3484b12efddd9fc0051100634effecd6}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+delta@{\+\_\+delta}}
+\index{\+\_\+delta@{\+\_\+delta}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+delta}{\_delta}}
+{\footnotesize\ttfamily double g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+delta\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+trust region 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_aaf433c824153a7bd76b27690eb53113b}\label{classg2o_1_1_optimization_algorithm_dogleg_aaf433c824153a7bd76b27690eb53113b}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+hdl@{\+\_\+hdl}}
+\index{\+\_\+hdl@{\+\_\+hdl}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+hdl}{\_hdl}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+hdl\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+final dogleg step 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a8f4ee408fbf3999063d094cf61e852b7}\label{classg2o_1_1_optimization_algorithm_dogleg_a8f4ee408fbf3999063d094cf61e852b7}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+hsd@{\+\_\+hsd}}
+\index{\+\_\+hsd@{\+\_\+hsd}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+hsd}{\_hsd}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+hsd\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+steepest decent step 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a3a94c7696f07e3def38ec96a1979babd}\label{classg2o_1_1_optimization_algorithm_dogleg_a3a94c7696f07e3def38ec96a1979babd}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+initial\+Lambda@{\+\_\+initial\+Lambda}}
+\index{\+\_\+initial\+Lambda@{\+\_\+initial\+Lambda}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+initial\+Lambda}{\_initialLambda}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$double$>$$\ast$ g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+initial\+Lambda\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a6855a511dc998efef7eaa0ef99e1b814}\label{classg2o_1_1_optimization_algorithm_dogleg_a6855a511dc998efef7eaa0ef99e1b814}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+lamdba\+Factor@{\+\_\+lamdba\+Factor}}
+\index{\+\_\+lamdba\+Factor@{\+\_\+lamdba\+Factor}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+lamdba\+Factor}{\_lamdbaFactor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$double$>$$\ast$ g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+lamdba\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_aeab37f3f587dc8b37b5a42d36fd8217c}\label{classg2o_1_1_optimization_algorithm_dogleg_aeab37f3f587dc8b37b5a42d36fd8217c}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+last\+Num\+Tries@{\+\_\+last\+Num\+Tries}}
+\index{\+\_\+last\+Num\+Tries@{\+\_\+last\+Num\+Tries}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+last\+Num\+Tries}{\_lastNumTries}}
+{\footnotesize\ttfamily int g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+last\+Num\+Tries\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a3bf898af0087c0ed8287d0cd13e4c943}\label{classg2o_1_1_optimization_algorithm_dogleg_a3bf898af0087c0ed8287d0cd13e4c943}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+last\+Step@{\+\_\+last\+Step}}
+\index{\+\_\+last\+Step@{\+\_\+last\+Step}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+last\+Step}{\_lastStep}}
+{\footnotesize\ttfamily int g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+last\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+type of the step taken by the algorithm 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_a5993c68e69cd037b1420b4addf9f7e50}\label{classg2o_1_1_optimization_algorithm_dogleg_a5993c68e69cd037b1420b4addf9f7e50}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+max\+Trials\+After\+Failure@{\+\_\+max\+Trials\+After\+Failure}}
+\index{\+\_\+max\+Trials\+After\+Failure@{\+\_\+max\+Trials\+After\+Failure}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+max\+Trials\+After\+Failure}{\_maxTrialsAfterFailure}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$int$>$$\ast$ g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+max\+Trials\+After\+Failure\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_ae77ffaea89872affeb61f122f20efeb9}\label{classg2o_1_1_optimization_algorithm_dogleg_ae77ffaea89872affeb61f122f20efeb9}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+user\+Delta\+Init@{\+\_\+user\+Delta\+Init}}
+\index{\+\_\+user\+Delta\+Init@{\+\_\+user\+Delta\+Init}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+user\+Delta\+Init}{\_userDeltaInit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$double$>$$\ast$ g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+user\+Delta\+Init\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_dogleg_af921ebbebaf059f73e410fc751616ec2}\label{classg2o_1_1_optimization_algorithm_dogleg_af921ebbebaf059f73e410fc751616ec2}} 
+\index{g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}!\+\_\+was\+P\+D\+In\+All\+Iterations@{\+\_\+was\+P\+D\+In\+All\+Iterations}}
+\index{\+\_\+was\+P\+D\+In\+All\+Iterations@{\+\_\+was\+P\+D\+In\+All\+Iterations}!g2o\+::\+Optimization\+Algorithm\+Dogleg@{g2o\+::\+Optimization\+Algorithm\+Dogleg}}
+\subsubsection{\texorpdfstring{\+\_\+was\+P\+D\+In\+All\+Iterations}{\_wasPDInAllIterations}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimization\+Algorithm\+Dogleg\+::\+\_\+was\+P\+D\+In\+All\+Iterations\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the matrix we solve was positive definite in all iterations -\/$>$ if not apply damping 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__dogleg_8h}{optimization\+\_\+algorithm\+\_\+dogleg.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__dogleg_8cpp}{optimization\+\_\+algorithm\+\_\+dogleg.\+cpp}}\end{DoxyCompactItemize}

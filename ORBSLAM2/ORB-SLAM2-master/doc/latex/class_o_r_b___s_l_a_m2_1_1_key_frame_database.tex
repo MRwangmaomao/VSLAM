@@ -1,0 +1,169 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:Key\+Frame\+Database Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+
+
+{\ttfamily \#include $<$Key\+Frame\+Database.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a83495a11d1fb3cd98e82fa1e2efb6920}{Key\+Frame\+Database}} (const \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}} \&voc)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a1b3a362116e3ecf2cd7e151be2ca3fcb}{add}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF)
+\begin{DoxyCompactList}\small\item\em 根据关键帧的词包，更新数据库的倒排索引 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_aa5b56ae1d1cb827fb4602abd61d77a06}{erase}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF)
+\begin{DoxyCompactList}\small\item\em 关键帧被删除后，更新数据库的倒排索引 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a3eccf99ba2e387d0273f919fd0574ea2}{clear}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a2d396aae02c4318ea8c7e7eff8059c69}{Detect\+Loop\+Candidates}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF, float min\+Score)
+\begin{DoxyCompactList}\small\item\em 在闭环检测中找到与该关键帧可能闭环的关键帧 \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a008586e4d07ece0d948d0f1633447a2b}{Detect\+Relocalization\+Candidates}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} $\ast$F)
+\begin{DoxyCompactList}\small\item\em 在重定位中找到与该帧相似的关键帧 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_ad11a653313a5f0ef6f6fbc4880df0b7d}{mp\+Voc}}
+\begin{DoxyCompactList}\small\item\em 预先训练好的词典 \end{DoxyCompactList}\item 
+std\+::vector$<$ list$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ $>$ $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a3b6d73823fcd1b96f3ba5a66be0b2227}{mv\+Inverted\+File}}
+\begin{DoxyCompactList}\small\item\em 倒排索引，mv\+Inverted\+File\mbox{[}i\mbox{]}表示包含了第i个word id的所有关键帧 \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a31fc30f1474b8c97d81c96135e6912a1}{m\+Mutex}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a83495a11d1fb3cd98e82fa1e2efb6920}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a83495a11d1fb3cd98e82fa1e2efb6920}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!Key\+Frame\+Database@{Key\+Frame\+Database}}
+\index{Key\+Frame\+Database@{Key\+Frame\+Database}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{Key\+Frame\+Database()}{KeyFrameDatabase()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::\+Key\+Frame\+Database (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}} \&}]{voc }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a1b3a362116e3ecf2cd7e151be2ca3fcb}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a1b3a362116e3ecf2cd7e151be2ca3fcb}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!add@{add}}
+\index{add@{add}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF }\end{DoxyParamCaption})}
+
+
+
+根据关键帧的词包，更新数据库的倒排索引 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+KF} & 关键帧 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a3eccf99ba2e387d0273f919fd0574ea2}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a3eccf99ba2e387d0273f919fd0574ea2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!clear@{clear}}
+\index{clear@{clear}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a2d396aae02c4318ea8c7e7eff8059c69}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a2d396aae02c4318ea8c7e7eff8059c69}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!Detect\+Loop\+Candidates@{Detect\+Loop\+Candidates}}
+\index{Detect\+Loop\+Candidates@{Detect\+Loop\+Candidates}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{Detect\+Loop\+Candidates()}{DetectLoopCandidates()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ $>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::\+Detect\+Loop\+Candidates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF,  }\item[{float}]{min\+Score }\end{DoxyParamCaption})}
+
+
+
+在闭环检测中找到与该关键帧可能闭环的关键帧 
+
+
+\begin{DoxyEnumerate}
+\item 找出和当前帧具有公共单词的所有关键帧（不包括与当前帧相连的关键帧）
+\item 只和具有共同单词较多的关键帧进行相似度计算
+\item 将与关键帧相连（权值最高）的前十个关键帧归为一组，计算累计得分
+\item 只返回累计得分较高的组中分数最高的关键帧 
+\begin{DoxyParams}{Parameters}
+{\em p\+KF} & 需要闭环的关键帧 \\
+\hline
+{\em min\+Score} & 相似性分数最低要求 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+可能闭环的关键帧 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+I\+I\+I-\/E Bags of Words Place Recognition 
+\end{DoxySeeAlso}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a008586e4d07ece0d948d0f1633447a2b}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a008586e4d07ece0d948d0f1633447a2b}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!Detect\+Relocalization\+Candidates@{Detect\+Relocalization\+Candidates}}
+\index{Detect\+Relocalization\+Candidates@{Detect\+Relocalization\+Candidates}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{Detect\+Relocalization\+Candidates()}{DetectRelocalizationCandidates()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ $>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::\+Detect\+Relocalization\+Candidates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} $\ast$}]{F }\end{DoxyParamCaption})}
+
+
+
+在重定位中找到与该帧相似的关键帧 
+
+
+\begin{DoxyEnumerate}
+\item 找出和当前帧具有公共单词的所有关键帧
+\item 只和具有共同单词较多的关键帧进行相似度计算
+\item 将与关键帧相连（权值最高）的前十个关键帧归为一组，计算累计得分
+\item 只返回累计得分较高的组中分数最高的关键帧 
+\begin{DoxyParams}{Parameters}
+{\em F} & 需要重定位的帧 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+相似的关键帧 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+I\+I\+I-\/E Bags of Words Place Recognition 
+\end{DoxySeeAlso}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_aa5b56ae1d1cb827fb4602abd61d77a06}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_aa5b56ae1d1cb827fb4602abd61d77a06}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!erase@{erase}}
+\index{erase@{erase}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF }\end{DoxyParamCaption})}
+
+
+
+关键帧被删除后，更新数据库的倒排索引 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+KF} & 关键帧 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a31fc30f1474b8c97d81c96135e6912a1}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a31fc30f1474b8c97d81c96135e6912a1}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!m\+Mutex@{m\+Mutex}}
+\index{m\+Mutex@{m\+Mutex}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{m\+Mutex}{mMutex}}
+{\footnotesize\ttfamily std\+::mutex O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::m\+Mutex\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_ad11a653313a5f0ef6f6fbc4880df0b7d}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_ad11a653313a5f0ef6f6fbc4880df0b7d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!mp\+Voc@{mp\+Voc}}
+\index{mp\+Voc@{mp\+Voc}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{mp\+Voc}{mpVoc}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::mp\+Voc\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+预先训练好的词典 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a3b6d73823fcd1b96f3ba5a66be0b2227}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_database_a3b6d73823fcd1b96f3ba5a66be0b2227}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}!mv\+Inverted\+File@{mv\+Inverted\+File}}
+\index{mv\+Inverted\+File@{mv\+Inverted\+File}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database}}
+\subsubsection{\texorpdfstring{mv\+Inverted\+File}{mvInvertedFile}}
+{\footnotesize\ttfamily std\+::vector$<$list$<$\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}$\ast$$>$ $>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+Database\+::mv\+Inverted\+File\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+倒排索引，mv\+Inverted\+File\mbox{[}i\mbox{]}表示包含了第i个word id的所有关键帧 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_key_frame_database_8h}{Key\+Frame\+Database.\+h}}\item 
+src/\mbox{\hyperlink{_key_frame_database_8cpp}{Key\+Frame\+Database.\+cpp}}\end{DoxyCompactItemize}

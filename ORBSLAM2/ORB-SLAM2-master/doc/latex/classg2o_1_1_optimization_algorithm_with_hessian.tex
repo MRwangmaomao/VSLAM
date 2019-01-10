@@ -1,0 +1,153 @@
+\hypertarget{classg2o_1_1_optimization_algorithm_with_hessian}{}\section{g2o\+:\+:Optimization\+Algorithm\+With\+Hessian Class Reference}
+\label{classg2o_1_1_optimization_algorithm_with_hessian}\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+
+
+Base for solvers operating on the approximated Hessian, e.\+g., Gauss-\/\+Newton, Levenberg.  
+
+
+
+
+{\ttfamily \#include $<$optimization\+\_\+algorithm\+\_\+with\+\_\+hessian.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Optimization\+Algorithm\+With\+Hessian\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.285714cm]{classg2o_1_1_optimization_algorithm_with_hessian}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a1358f3500efe8b95a5af4a1b0edecdf0}{Optimization\+Algorithm\+With\+Hessian}} (\mbox{\hyperlink{classg2o_1_1_solver}{Solver}} $\ast$\mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a85473a4073c76b1a52cf9cf175e31c45}{solver}})
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a9cfed4c23f1b09829cf4857cf2213745}{$\sim$\+Optimization\+Algorithm\+With\+Hessian}} ()
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_ae067a9c2961718dc8a37e3b8478b6d01}{init}} (bool online=false)
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_af1959727df2b7cf233a171cfed246e9a}{compute\+Marginals}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Xd $>$ \&spinv, const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&block\+Indices)
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_aa84732c8554039ba0152693837bd1b4a}{build\+Linear\+Structure}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a3ceacb3dddb14121b03e0afe7b7cfeaa}{update\+Linear\+System}} ()
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_adadb23f135e037ce760f4415a0f26269}{update\+Structure}} (const std\+::vector$<$ \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Hyper\+Graph\+::\+Vertex}} $\ast$$>$ \&vset, const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Hyper\+Graph\+::\+Edge\+Set}} \&edges)
+\item 
+\mbox{\hyperlink{classg2o_1_1_solver}{Solver}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a85473a4073c76b1a52cf9cf175e31c45}{solver}} ()
+\begin{DoxyCompactList}\small\item\em return the underlying solver used to solve the linear system \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a655aee24aae72b55f5edafb0a7a15137}{set\+Write\+Debug}} (bool \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_aee8fc3dadc8bfbd50409f2e9940cbebd}{write\+Debug}})
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_aee8fc3dadc8bfbd50409f2e9940cbebd}{write\+Debug}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_solver}{Solver}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a88a2d1dccee8f7481ece407f2681a151}{\+\_\+solver}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ bool $>$ $\ast$ \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian_a6dd1e4e8dc2d09233c40de02b2c9fe8c}{\+\_\+write\+Debug}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base for solvers operating on the approximated Hessian, e.\+g., Gauss-\/\+Newton, Levenberg. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_a1358f3500efe8b95a5af4a1b0edecdf0}\label{classg2o_1_1_optimization_algorithm_with_hessian_a1358f3500efe8b95a5af4a1b0edecdf0}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!Optimization\+Algorithm\+With\+Hessian@{Optimization\+Algorithm\+With\+Hessian}}
+\index{Optimization\+Algorithm\+With\+Hessian@{Optimization\+Algorithm\+With\+Hessian}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{Optimization\+Algorithm\+With\+Hessian()}{OptimizationAlgorithmWithHessian()}}
+{\footnotesize\ttfamily g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+Optimization\+Algorithm\+With\+Hessian (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_solver}{Solver}} $\ast$}]{solver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_a9cfed4c23f1b09829cf4857cf2213745}\label{classg2o_1_1_optimization_algorithm_with_hessian_a9cfed4c23f1b09829cf4857cf2213745}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!````~Optimization\+Algorithm\+With\+Hessian@{$\sim$\+Optimization\+Algorithm\+With\+Hessian}}
+\index{````~Optimization\+Algorithm\+With\+Hessian@{$\sim$\+Optimization\+Algorithm\+With\+Hessian}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{$\sim$\+Optimization\+Algorithm\+With\+Hessian()}{~OptimizationAlgorithmWithHessian()}}
+{\footnotesize\ttfamily g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::$\sim$\+Optimization\+Algorithm\+With\+Hessian (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_aa84732c8554039ba0152693837bd1b4a}\label{classg2o_1_1_optimization_algorithm_with_hessian_aa84732c8554039ba0152693837bd1b4a}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!build\+Linear\+Structure@{build\+Linear\+Structure}}
+\index{build\+Linear\+Structure@{build\+Linear\+Structure}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{build\+Linear\+Structure()}{buildLinearStructure()}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::build\+Linear\+Structure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_af1959727df2b7cf233a171cfed246e9a}\label{classg2o_1_1_optimization_algorithm_with_hessian_af1959727df2b7cf233a171cfed246e9a}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!compute\+Marginals@{compute\+Marginals}}
+\index{compute\+Marginals@{compute\+Marginals}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{compute\+Marginals()}{computeMarginals()}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::compute\+Marginals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Xd $>$ \&}]{spinv,  }\item[{const std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \&}]{block\+Indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+computes the block diagonal elements of the pattern specified in the input and stores them in given \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}. If your solver does not support computing the marginals, return false. 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_a67b159f3a83471ba9ebcc0a9162a0e23}{g2o\+::\+Optimization\+Algorithm}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_ae067a9c2961718dc8a37e3b8478b6d01}\label{classg2o_1_1_optimization_algorithm_with_hessian_ae067a9c2961718dc8a37e3b8478b6d01}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!init@{init}}
+\index{init@{init}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::init (\begin{DoxyParamCaption}\item[{bool}]{online = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+initialize the solver, called once before the first call to \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_ab174deeeb2551ceaf715ea09f0f9c077}{solve()}} 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_af5b54ea6d40a8ab4c16d448ba02a0c80}{g2o\+::\+Optimization\+Algorithm}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_a655aee24aae72b55f5edafb0a7a15137}\label{classg2o_1_1_optimization_algorithm_with_hessian_a655aee24aae72b55f5edafb0a7a15137}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!set\+Write\+Debug@{set\+Write\+Debug}}
+\index{set\+Write\+Debug@{set\+Write\+Debug}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{set\+Write\+Debug()}{setWriteDebug()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::set\+Write\+Debug (\begin{DoxyParamCaption}\item[{bool}]{write\+Debug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+write debug output of the Hessian if system is not positive definite \mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_a85473a4073c76b1a52cf9cf175e31c45}\label{classg2o_1_1_optimization_algorithm_with_hessian_a85473a4073c76b1a52cf9cf175e31c45}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!solver@{solver}}
+\index{solver@{solver}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{solver()}{solver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_solver}{Solver}}$\ast$ g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the underlying solver used to solve the linear system 
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_a3ceacb3dddb14121b03e0afe7b7cfeaa}\label{classg2o_1_1_optimization_algorithm_with_hessian_a3ceacb3dddb14121b03e0afe7b7cfeaa}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!update\+Linear\+System@{update\+Linear\+System}}
+\index{update\+Linear\+System@{update\+Linear\+System}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{update\+Linear\+System()}{updateLinearSystem()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::update\+Linear\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_adadb23f135e037ce760f4415a0f26269}\label{classg2o_1_1_optimization_algorithm_with_hessian_adadb23f135e037ce760f4415a0f26269}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!update\+Structure@{update\+Structure}}
+\index{update\+Structure@{update\+Structure}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{update\+Structure()}{updateStructure()}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::update\+Structure (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Hyper\+Graph\+::\+Vertex}} $\ast$$>$ \&}]{vset,  }\item[{const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Hyper\+Graph\+::\+Edge\+Set}} \&}]{edges }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+update the structures for online processing 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_a350d9bb4ee701e40b75e67d26293a4bd}{g2o\+::\+Optimization\+Algorithm}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_aee8fc3dadc8bfbd50409f2e9940cbebd}\label{classg2o_1_1_optimization_algorithm_with_hessian_aee8fc3dadc8bfbd50409f2e9940cbebd}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!write\+Debug@{write\+Debug}}
+\index{write\+Debug@{write\+Debug}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{write\+Debug()}{writeDebug()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::write\+Debug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_a88a2d1dccee8f7481ece407f2681a151}\label{classg2o_1_1_optimization_algorithm_with_hessian_a88a2d1dccee8f7481ece407f2681a151}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!\+\_\+solver@{\+\_\+solver}}
+\index{\+\_\+solver@{\+\_\+solver}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{\+\_\+solver}{\_solver}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_solver}{Solver}}$\ast$ g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+\_\+solver\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimization_algorithm_with_hessian_a6dd1e4e8dc2d09233c40de02b2c9fe8c}\label{classg2o_1_1_optimization_algorithm_with_hessian_a6dd1e4e8dc2d09233c40de02b2c9fe8c}} 
+\index{g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}!\+\_\+write\+Debug@{\+\_\+write\+Debug}}
+\index{\+\_\+write\+Debug@{\+\_\+write\+Debug}!g2o\+::\+Optimization\+Algorithm\+With\+Hessian@{g2o\+::\+Optimization\+Algorithm\+With\+Hessian}}
+\subsubsection{\texorpdfstring{\+\_\+write\+Debug}{\_writeDebug}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$bool$>$$\ast$ g2o\+::\+Optimization\+Algorithm\+With\+Hessian\+::\+\_\+write\+Debug\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__with__hessian_8h}{optimization\+\_\+algorithm\+\_\+with\+\_\+hessian.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimization__algorithm__with__hessian_8cpp}{optimization\+\_\+algorithm\+\_\+with\+\_\+hessian.\+cpp}}\end{DoxyCompactItemize}

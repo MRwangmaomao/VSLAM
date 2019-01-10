@@ -1,0 +1,160 @@
+\hypertarget{classg2o_1_1_parameter_container}{}\section{g2o\+:\+:Parameter\+Container Class Reference}
+\label{classg2o_1_1_parameter_container}\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+
+
+map id to parameters  
+
+
+
+
+{\ttfamily \#include $<$parameter\+\_\+container.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Parameter\+Container\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_parameter_container}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ int, \mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}} $\ast$ $>$ \mbox{\hyperlink{classg2o_1_1_parameter_container_a200fdfdce01f7fb5f96e02a8ddf666ac}{Base\+Class}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_parameter_container_a6047d0206008b5cbb366be0fe03246b4}{Parameter\+Container}} (bool is\+Main\+Storage\+\_\+=true)
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_parameter_container_a186660e1ef0350798a549b247365b295}{$\sim$\+Parameter\+Container}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_parameter_container_a9c0b1376e780b177f2d36c4ee4f873d7}{add\+Parameter}} (\mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em add parameter to the container \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}} $\ast$ \mbox{\hyperlink{classg2o_1_1_parameter_container_ad55d9e6d2adaa4680f74be98e2ae3784}{get\+Parameter}} (int id)
+\begin{DoxyCompactList}\small\item\em return a parameter based on its ID \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}} $\ast$ \mbox{\hyperlink{classg2o_1_1_parameter_container_a6e57cf684d92f0ceeba8b4923fa41864}{detach\+Parameter}} (int id)
+\begin{DoxyCompactList}\small\item\em remove a parameter from the container, i.\+e., the user now owns the pointer \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_parameter_container_ae5883ac8e2313cab310cf067b0ba12bf}{read}} (std\+::istream \&is, const std\+::map$<$ std\+::string, std\+::string $>$ $\ast$renamed\+Map=0)
+\begin{DoxyCompactList}\small\item\em read parameters from a stream \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_parameter_container_a15c92fab12ad8f3bd51b3f555e95b00e}{write}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em write the data to a stream \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classg2o_1_1_parameter_container_a201d0b120e7b8d54c99d73c8f4d04846}{is\+Main\+Storage}} () const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_parameter_container_aff4d3792e2ebd022ebd4a1534b88b773}{clear}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_parameter_container_a2ff1e92bc6a486d48043e2191807bd47}{\+\_\+is\+Main\+Storage}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+map id to parameters 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_a200fdfdce01f7fb5f96e02a8ddf666ac}\label{classg2o_1_1_parameter_container_a200fdfdce01f7fb5f96e02a8ddf666ac}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!Base\+Class@{Base\+Class}}
+\index{Base\+Class@{Base\+Class}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{Base\+Class}{BaseClass}}
+{\footnotesize\ttfamily typedef std\+::map$<$int, \mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}}$\ast$$>$ \mbox{\hyperlink{classg2o_1_1_parameter_container_a200fdfdce01f7fb5f96e02a8ddf666ac}{g2o\+::\+Parameter\+Container\+::\+Base\+Class}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_a6047d0206008b5cbb366be0fe03246b4}\label{classg2o_1_1_parameter_container_a6047d0206008b5cbb366be0fe03246b4}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!Parameter\+Container@{Parameter\+Container}}
+\index{Parameter\+Container@{Parameter\+Container}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{Parameter\+Container()}{ParameterContainer()}}
+{\footnotesize\ttfamily g2o\+::\+Parameter\+Container\+::\+Parameter\+Container (\begin{DoxyParamCaption}\item[{bool}]{is\+Main\+Storage\+\_\+ = {\ttfamily true} }\end{DoxyParamCaption})}
+
+create a container for the parameters. 
+\begin{DoxyParams}{Parameters}
+{\em is\+Main\+Storage\+\_\+} & pointers to the parameters are owned by this container, i.\+e., freed in its constructor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_a186660e1ef0350798a549b247365b295}\label{classg2o_1_1_parameter_container_a186660e1ef0350798a549b247365b295}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!````~Parameter\+Container@{$\sim$\+Parameter\+Container}}
+\index{````~Parameter\+Container@{$\sim$\+Parameter\+Container}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{$\sim$\+Parameter\+Container()}{~ParameterContainer()}}
+{\footnotesize\ttfamily g2o\+::\+Parameter\+Container\+::$\sim$\+Parameter\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_a9c0b1376e780b177f2d36c4ee4f873d7}\label{classg2o_1_1_parameter_container_a9c0b1376e780b177f2d36c4ee4f873d7}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!add\+Parameter@{add\+Parameter}}
+\index{add\+Parameter@{add\+Parameter}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{add\+Parameter()}{addParameter()}}
+{\footnotesize\ttfamily bool g2o\+::\+Parameter\+Container\+::add\+Parameter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+add parameter to the container 
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_aff4d3792e2ebd022ebd4a1534b88b773}\label{classg2o_1_1_parameter_container_aff4d3792e2ebd022ebd4a1534b88b773}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!clear@{clear}}
+\index{clear@{clear}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void g2o\+::\+Parameter\+Container\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_a6e57cf684d92f0ceeba8b4923fa41864}\label{classg2o_1_1_parameter_container_a6e57cf684d92f0ceeba8b4923fa41864}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!detach\+Parameter@{detach\+Parameter}}
+\index{detach\+Parameter@{detach\+Parameter}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{detach\+Parameter()}{detachParameter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}} $\ast$ g2o\+::\+Parameter\+Container\+::detach\+Parameter (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+remove a parameter from the container, i.\+e., the user now owns the pointer 
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_ad55d9e6d2adaa4680f74be98e2ae3784}\label{classg2o_1_1_parameter_container_ad55d9e6d2adaa4680f74be98e2ae3784}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!get\+Parameter@{get\+Parameter}}
+\index{get\+Parameter@{get\+Parameter}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{get\+Parameter()}{getParameter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}} $\ast$ g2o\+::\+Parameter\+Container\+::get\+Parameter (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+return a parameter based on its ID 
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_a201d0b120e7b8d54c99d73c8f4d04846}\label{classg2o_1_1_parameter_container_a201d0b120e7b8d54c99d73c8f4d04846}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!is\+Main\+Storage@{is\+Main\+Storage}}
+\index{is\+Main\+Storage@{is\+Main\+Storage}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{is\+Main\+Storage()}{isMainStorage()}}
+{\footnotesize\ttfamily bool g2o\+::\+Parameter\+Container\+::is\+Main\+Storage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_ae5883ac8e2313cab310cf067b0ba12bf}\label{classg2o_1_1_parameter_container_ae5883ac8e2313cab310cf067b0ba12bf}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!read@{read}}
+\index{read@{read}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool g2o\+::\+Parameter\+Container\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{const std\+::map$<$ std\+::string, std\+::string $>$ $\ast$}]{renamed\+Map = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+read parameters from a stream 
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_a15c92fab12ad8f3bd51b3f555e95b00e}\label{classg2o_1_1_parameter_container_a15c92fab12ad8f3bd51b3f555e95b00e}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!write@{write}}
+\index{write@{write}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily bool g2o\+::\+Parameter\+Container\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+write the data to a stream 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_parameter_container_a2ff1e92bc6a486d48043e2191807bd47}\label{classg2o_1_1_parameter_container_a2ff1e92bc6a486d48043e2191807bd47}} 
+\index{g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}!\+\_\+is\+Main\+Storage@{\+\_\+is\+Main\+Storage}}
+\index{\+\_\+is\+Main\+Storage@{\+\_\+is\+Main\+Storage}!g2o\+::\+Parameter\+Container@{g2o\+::\+Parameter\+Container}}
+\subsubsection{\texorpdfstring{\+\_\+is\+Main\+Storage}{\_isMainStorage}}
+{\footnotesize\ttfamily bool g2o\+::\+Parameter\+Container\+::\+\_\+is\+Main\+Storage\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{parameter__container_8h}{parameter\+\_\+container.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{parameter__container_8cpp}{parameter\+\_\+container.\+cpp}}\end{DoxyCompactItemize}

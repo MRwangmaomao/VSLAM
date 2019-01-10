@@ -1,0 +1,200 @@
+\hypertarget{classg2o_1_1_factory}{}\section{g2o\+:\+:Factory Class Reference}
+\label{classg2o_1_1_factory}\index{g2o\+::\+Factory@{g2o\+::\+Factory}}
+
+
+create vertices and edges based on T\+A\+Gs in, for example, a file  
+
+
+
+
+{\ttfamily \#include $<$factory.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_factory_1_1_creator_information}{Creator\+Information}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classg2o_1_1_factory_aba2f2e40635fd1b996981cefdb65c346}{register\+Type}} (const std\+::string \&\mbox{\hyperlink{classg2o_1_1_factory_ae6b0fb89dc45ea1e506401d349c869f0}{tag}}, \mbox{\hyperlink{classg2o_1_1_abstract_hyper_graph_element_creator}{Abstract\+Hyper\+Graph\+Element\+Creator}} $\ast$c)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_factory_a01b16c7d5a49ddab5ccd5980f76900b7}{unregister\+Type}} (const std\+::string \&\mbox{\hyperlink{classg2o_1_1_factory_ae6b0fb89dc45ea1e506401d349c869f0}{tag}})
+\item 
+\mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$ \mbox{\hyperlink{classg2o_1_1_factory_aa61fcb8861afb1dd4c4af5d9cc03d3ec}{construct}} (const std\+::string \&\mbox{\hyperlink{classg2o_1_1_factory_ae6b0fb89dc45ea1e506401d349c869f0}{tag}}) const
+\item 
+\mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$ \mbox{\hyperlink{classg2o_1_1_factory_a8c3800dfa57718d2ceb4f6150611540d}{construct}} (const std\+::string \&\mbox{\hyperlink{classg2o_1_1_factory_ae6b0fb89dc45ea1e506401d349c869f0}{tag}}, const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a7b8fda20e1b03e92aeceeac6e8218b73}{Hyper\+Graph\+::\+Graph\+Elem\+Bitset}} \&elems\+To\+Construct) const
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_factory_a20292a9c8417303fec92057826ba2430}{knows\+Tag}} (const std\+::string \&\mbox{\hyperlink{classg2o_1_1_factory_ae6b0fb89dc45ea1e506401d349c869f0}{tag}}, int $\ast$element\+Type=0) const
+\item 
+const std\+::string \& \mbox{\hyperlink{classg2o_1_1_factory_ae6b0fb89dc45ea1e506401d349c869f0}{tag}} (const \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em return the T\+AG given a vertex \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_factory_af31924e76d04bcfd77a53cec8f1b778c}{fill\+Known\+Types}} (std\+::vector$<$ std\+::string $>$ \&types) const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_factory_a564b37b3ccbdd559a386b40ca16d219b}{print\+Registered\+Types}} (std\+::ostream \&os, bool comment=false) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classg2o_1_1_factory}{Factory}} $\ast$ \mbox{\hyperlink{classg2o_1_1_factory_a8a1f33e017c5ad59399cef48972578ae}{instance}} ()
+\begin{DoxyCompactList}\small\item\em return the instance \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classg2o_1_1_factory_ab40f0aa18dabb91a35de7186ede9355a}{destroy}} ()
+\begin{DoxyCompactList}\small\item\em free the instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classg2o_1_1_factory_1_1_creator_information}{Creator\+Information}} $\ast$ $>$ \mbox{\hyperlink{classg2o_1_1_factory_a639c8d850892dddc20098e9aa97ef9e8}{Creator\+Map}}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classg2o_1_1_factory_aba274179c053b3b71dcef6a20c898496}{Tag\+Lookup}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_factory_af8b5afc514363e6f00c61e8acd67b495}{Factory}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_factory_a4b7c6970f55045ee632e6276387d0223}{$\sim$\+Factory}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_factory_a639c8d850892dddc20098e9aa97ef9e8}{Creator\+Map}} \mbox{\hyperlink{classg2o_1_1_factory_a38e27fb1014dfb8691f4df045ebb5130}{\+\_\+creator}}
+\begin{DoxyCompactList}\small\item\em look-\/up map for the existing creators \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_factory_aba274179c053b3b71dcef6a20c898496}{Tag\+Lookup}} \mbox{\hyperlink{classg2o_1_1_factory_a93fbd79ea000ed88101c1f23b19e6e2a}{\+\_\+tag\+Lookup}}
+\begin{DoxyCompactList}\small\item\em reverse look-\/up, class name to tag \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+create vertices and edges based on T\+A\+Gs in, for example, a file 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_factory_a639c8d850892dddc20098e9aa97ef9e8}\label{classg2o_1_1_factory_a639c8d850892dddc20098e9aa97ef9e8}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!Creator\+Map@{Creator\+Map}}
+\index{Creator\+Map@{Creator\+Map}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{Creator\+Map}{CreatorMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, \mbox{\hyperlink{classg2o_1_1_factory_1_1_creator_information}{Creator\+Information}}$\ast$$>$ \mbox{\hyperlink{classg2o_1_1_factory_a639c8d850892dddc20098e9aa97ef9e8}{g2o\+::\+Factory\+::\+Creator\+Map}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_factory_aba274179c053b3b71dcef6a20c898496}\label{classg2o_1_1_factory_aba274179c053b3b71dcef6a20c898496}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!Tag\+Lookup@{Tag\+Lookup}}
+\index{Tag\+Lookup@{Tag\+Lookup}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{Tag\+Lookup}{TagLookup}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, std\+::string$>$ \mbox{\hyperlink{classg2o_1_1_factory_aba274179c053b3b71dcef6a20c898496}{g2o\+::\+Factory\+::\+Tag\+Lookup}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_factory_af8b5afc514363e6f00c61e8acd67b495}\label{classg2o_1_1_factory_af8b5afc514363e6f00c61e8acd67b495}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!Factory@{Factory}}
+\index{Factory@{Factory}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{Factory()}{Factory()}}
+{\footnotesize\ttfamily g2o\+::\+Factory\+::\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_factory_a4b7c6970f55045ee632e6276387d0223}\label{classg2o_1_1_factory_a4b7c6970f55045ee632e6276387d0223}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!````~Factory@{$\sim$\+Factory}}
+\index{````~Factory@{$\sim$\+Factory}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{$\sim$\+Factory()}{~Factory()}}
+{\footnotesize\ttfamily g2o\+::\+Factory\+::$\sim$\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_factory_aa61fcb8861afb1dd4c4af5d9cc03d3ec}\label{classg2o_1_1_factory_aa61fcb8861afb1dd4c4af5d9cc03d3ec}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!construct@{construct}}
+\index{construct@{construct}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{construct()}{construct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$ g2o\+::\+Factory\+::construct (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tag }\end{DoxyParamCaption}) const}
+
+construct a graph element based on its tag \mbox{\Hypertarget{classg2o_1_1_factory_a8c3800dfa57718d2ceb4f6150611540d}\label{classg2o_1_1_factory_a8c3800dfa57718d2ceb4f6150611540d}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!construct@{construct}}
+\index{construct@{construct}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{construct()}{construct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$ g2o\+::\+Factory\+::construct (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tag,  }\item[{const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a7b8fda20e1b03e92aeceeac6e8218b73}{Hyper\+Graph\+::\+Graph\+Elem\+Bitset}} \&}]{elems\+To\+Construct }\end{DoxyParamCaption}) const}
+
+construct a graph element based on its tag, but only if it\textquotesingle{}s type (a bitmask) matches. A bitmask without any bit set will construct any item. Otherwise a bit has to be set to allow construction of a graph element. \mbox{\Hypertarget{classg2o_1_1_factory_ab40f0aa18dabb91a35de7186ede9355a}\label{classg2o_1_1_factory_ab40f0aa18dabb91a35de7186ede9355a}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!destroy@{destroy}}
+\index{destroy@{destroy}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily void g2o\+::\+Factory\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+free the instance 
+
+\mbox{\Hypertarget{classg2o_1_1_factory_af31924e76d04bcfd77a53cec8f1b778c}\label{classg2o_1_1_factory_af31924e76d04bcfd77a53cec8f1b778c}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!fill\+Known\+Types@{fill\+Known\+Types}}
+\index{fill\+Known\+Types@{fill\+Known\+Types}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{fill\+Known\+Types()}{fillKnownTypes()}}
+{\footnotesize\ttfamily void g2o\+::\+Factory\+::fill\+Known\+Types (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{types }\end{DoxyParamCaption}) const}
+
+get a list of all known types \mbox{\Hypertarget{classg2o_1_1_factory_a8a1f33e017c5ad59399cef48972578ae}\label{classg2o_1_1_factory_a8a1f33e017c5ad59399cef48972578ae}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!instance@{instance}}
+\index{instance@{instance}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_factory}{Factory}} $\ast$ g2o\+::\+Factory\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+return the instance 
+
+\mbox{\Hypertarget{classg2o_1_1_factory_a20292a9c8417303fec92057826ba2430}\label{classg2o_1_1_factory_a20292a9c8417303fec92057826ba2430}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!knows\+Tag@{knows\+Tag}}
+\index{knows\+Tag@{knows\+Tag}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{knows\+Tag()}{knowsTag()}}
+{\footnotesize\ttfamily bool g2o\+::\+Factory\+::knows\+Tag (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tag,  }\item[{int $\ast$}]{element\+Type = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+return whether the factory knows this tag or not \mbox{\Hypertarget{classg2o_1_1_factory_a564b37b3ccbdd559a386b40ca16d219b}\label{classg2o_1_1_factory_a564b37b3ccbdd559a386b40ca16d219b}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!print\+Registered\+Types@{print\+Registered\+Types}}
+\index{print\+Registered\+Types@{print\+Registered\+Types}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{print\+Registered\+Types()}{printRegisteredTypes()}}
+{\footnotesize\ttfamily void g2o\+::\+Factory\+::print\+Registered\+Types (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{bool}]{comment = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+print a list of the known registered types to the given stream \mbox{\Hypertarget{classg2o_1_1_factory_aba2f2e40635fd1b996981cefdb65c346}\label{classg2o_1_1_factory_aba2f2e40635fd1b996981cefdb65c346}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!register\+Type@{register\+Type}}
+\index{register\+Type@{register\+Type}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{register\+Type()}{registerType()}}
+{\footnotesize\ttfamily void g2o\+::\+Factory\+::register\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tag,  }\item[{\mbox{\hyperlink{classg2o_1_1_abstract_hyper_graph_element_creator}{Abstract\+Hyper\+Graph\+Element\+Creator}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+register a tag for a specific creator \mbox{\Hypertarget{classg2o_1_1_factory_ae6b0fb89dc45ea1e506401d349c869f0}\label{classg2o_1_1_factory_ae6b0fb89dc45ea1e506401d349c869f0}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!tag@{tag}}
+\index{tag@{tag}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{tag()}{tag()}}
+{\footnotesize\ttfamily const std\+::string \& g2o\+::\+Factory\+::tag (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$}]{v }\end{DoxyParamCaption}) const}
+
+
+
+return the T\+AG given a vertex 
+
+\mbox{\Hypertarget{classg2o_1_1_factory_a01b16c7d5a49ddab5ccd5980f76900b7}\label{classg2o_1_1_factory_a01b16c7d5a49ddab5ccd5980f76900b7}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!unregister\+Type@{unregister\+Type}}
+\index{unregister\+Type@{unregister\+Type}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{unregister\+Type()}{unregisterType()}}
+{\footnotesize\ttfamily void g2o\+::\+Factory\+::unregister\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tag }\end{DoxyParamCaption})}
+
+unregister a tag for a specific creator 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_factory_a38e27fb1014dfb8691f4df045ebb5130}\label{classg2o_1_1_factory_a38e27fb1014dfb8691f4df045ebb5130}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!\+\_\+creator@{\+\_\+creator}}
+\index{\+\_\+creator@{\+\_\+creator}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{\+\_\+creator}{\_creator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_factory_a639c8d850892dddc20098e9aa97ef9e8}{Creator\+Map}} g2o\+::\+Factory\+::\+\_\+creator\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+look-\/up map for the existing creators 
+
+\mbox{\Hypertarget{classg2o_1_1_factory_a93fbd79ea000ed88101c1f23b19e6e2a}\label{classg2o_1_1_factory_a93fbd79ea000ed88101c1f23b19e6e2a}} 
+\index{g2o\+::\+Factory@{g2o\+::\+Factory}!\+\_\+tag\+Lookup@{\+\_\+tag\+Lookup}}
+\index{\+\_\+tag\+Lookup@{\+\_\+tag\+Lookup}!g2o\+::\+Factory@{g2o\+::\+Factory}}
+\subsubsection{\texorpdfstring{\+\_\+tag\+Lookup}{\_tagLookup}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_factory_aba274179c053b3b71dcef6a20c898496}{Tag\+Lookup}} g2o\+::\+Factory\+::\+\_\+tag\+Lookup\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+reverse look-\/up, class name to tag 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{factory_8h}{factory.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{factory_8cpp}{factory.\+cpp}}\end{DoxyCompactItemize}

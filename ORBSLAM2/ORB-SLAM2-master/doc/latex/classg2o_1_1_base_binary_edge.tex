@@ -1,0 +1,346 @@
+\hypertarget{classg2o_1_1_base_binary_edge}{}\section{g2o\+:\+:Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$ Class Template Reference}
+\label{classg2o_1_1_base_binary_edge}\index{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$@{g2o\+::\+Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$}}
+
+
+{\ttfamily \#include $<$base\+\_\+binary\+\_\+edge.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Base\+Binary\+Edge$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classg2o_1_1_base_binary_edge}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Vertex\+Xi \mbox{\hyperlink{classg2o_1_1_base_binary_edge_aa8e2b04b2c0c90adc48384d6d41063cc}{Vertex\+Xi\+Type}}
+\item 
+typedef Vertex\+Xj \mbox{\hyperlink{classg2o_1_1_base_binary_edge_aa489ae37680c37d7b2c3c1a197f90de9}{Vertex\+Xj\+Type}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}$<$ D, E $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ac1e9249e9906747a6669a9c90013944b}{Measurement}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ac1e9249e9906747a6669a9c90013944b}{Measurement}}
+\item 
+typedef Matrix$<$ double, D, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}} $>$\+::Aligned\+Map\+Type \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab1cde84224b129603bcd95db027e0167}{Jacobian\+Xi\+Oplus\+Type}}
+\item 
+typedef Matrix$<$ double, D, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}} $>$\+::Aligned\+Map\+Type \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a83e5dec2135b33e86255c87be3b5d062}{Jacobian\+Xj\+Oplus\+Type}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}$<$ D, E $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ae1cccf6068b2446ece316b6a69a46acf}{Error\+Vector}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ae1cccf6068b2446ece316b6a69a46acf}{Error\+Vector}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}$<$ D, E $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a4530ef6462aadaf2ab826d440d3b3318}{Information\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a4530ef6462aadaf2ab826d440d3b3318}{Information\+Type}}
+\item 
+typedef Eigen\+::\+Map$<$ Matrix$<$ double, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}} $>$, Matrix$<$ double, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}} $>$\+::Flags \&Aligned\+Bit ? Aligned \+:Unaligned $>$ \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a7eadbbe6abffe4d2ebdf6231272789a5}{Hessian\+Block\+Type}}
+\item 
+typedef Eigen\+::\+Map$<$ Matrix$<$ double, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}} $>$, Matrix$<$ double, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}} $>$\+::Flags \&Aligned\+Bit ? Aligned \+:Unaligned $>$ \mbox{\hyperlink{classg2o_1_1_base_binary_edge_aec0d5b1819f702b7658574fcd6324b49}{Hessian\+Block\+Transposed\+Type}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_aacfc6e1d439f2f0fb09c6b069f478cf4}{Base\+Binary\+Edge}} ()
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a32bfc93b6dede619c7d99db2fb60f80d}{create\+From}} ()
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ac7cce17e3229445e5a33c3cb8a569320}{create\+To}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a06e64067fa5fff4a5e2d058249b55478}{resize}} (size\+\_\+t size)
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_base_binary_edge_adc9ce883a63aa7bdba86e552d72e1de9}{all\+Vertices\+Fixed}} () const
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_binary_edge_afc3b6470e7679f027c2614484b394925}{linearize\+Oplus}} (\mbox{\hyperlink{classg2o_1_1_jacobian_workspace}{Jacobian\+Workspace}} \&jacobian\+Workspace)
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_binary_edge_af0fb8a693c8c7996fa65566e7263fbc4}{linearize\+Oplus}} ()
+\item 
+const \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab1cde84224b129603bcd95db027e0167}{Jacobian\+Xi\+Oplus\+Type}} \& \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a5232f0a5f116e7106b7968ab3bff036c}{jacobian\+Oplus\+Xi}} () const
+\begin{DoxyCompactList}\small\item\em returns the result of the linearization in the manifold space for the node xi \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a83e5dec2135b33e86255c87be3b5d062}{Jacobian\+Xj\+Oplus\+Type}} \& \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a71c1a583816399cf7db1a91ebe5dbf18}{jacobian\+Oplus\+Xj}} () const
+\begin{DoxyCompactList}\small\item\em returns the result of the linearization in the manifold space for the node xj \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a06a18745d95017c6d3c841f838a65364}{construct\+Quadratic\+Form}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ada358930854d386a4e8c32f64078e052}{map\+Hessian\+Memory}} (double $\ast$d, int i, int j, bool row\+Major)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}} = Vertex\+Xi\+Type\+::\+Dimension
+\item 
+static const int \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}} = Vertex\+Xj\+Type\+::\+Dimension
+\item 
+static const int \mbox{\hyperlink{classg2o_1_1_base_binary_edge_af3c134948e48c446762fa4e427d1cca5}{Dimension}} = \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}$<$D, E$>$\+::Dimension
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_base_binary_edge_aeb5c1f09a4433a6bd76ce4ab67bd9a64}{\+\_\+hessian\+Row\+Major}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a7eadbbe6abffe4d2ebdf6231272789a5}{Hessian\+Block\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a5036f75e3b20c79cb014fcc929d8eef9}{\+\_\+hessian}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_aec0d5b1819f702b7658574fcd6324b49}{Hessian\+Block\+Transposed\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge_aa61657904b00fcfa19df382094386f11}{\+\_\+hessian\+Transposed}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab1cde84224b129603bcd95db027e0167}{Jacobian\+Xi\+Oplus\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge_aa21b9d84924ec93192374761ee0adfa7}{\+\_\+jacobian\+Oplus\+Xi}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a83e5dec2135b33e86255c87be3b5d062}{Jacobian\+Xj\+Oplus\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ad448518247044496cb99c9d70bd1a363}{\+\_\+jacobian\+Oplus\+Xj}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_ae1cccf6068b2446ece316b6a69a46acf}\label{classg2o_1_1_base_binary_edge_ae1cccf6068b2446ece316b6a69a46acf}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Error\+Vector@{Error\+Vector}}
+\index{Error\+Vector@{Error\+Vector}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Error\+Vector}{ErrorVector}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}$<$D,E$>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ae1cccf6068b2446ece316b6a69a46acf}{Error\+Vector}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ae1cccf6068b2446ece316b6a69a46acf}{Error\+Vector}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_aec0d5b1819f702b7658574fcd6324b49}\label{classg2o_1_1_base_binary_edge_aec0d5b1819f702b7658574fcd6324b49}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Hessian\+Block\+Transposed\+Type@{Hessian\+Block\+Transposed\+Type}}
+\index{Hessian\+Block\+Transposed\+Type@{Hessian\+Block\+Transposed\+Type}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Hessian\+Block\+Transposed\+Type}{HessianBlockTransposedType}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef Eigen\+::\+Map$<$Matrix$<$double, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}}$>$, Matrix$<$double, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}}$>$\+::Flags \& Aligned\+Bit ? Aligned \+: Unaligned $>$ \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_aec0d5b1819f702b7658574fcd6324b49}{Hessian\+Block\+Transposed\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a7eadbbe6abffe4d2ebdf6231272789a5}\label{classg2o_1_1_base_binary_edge_a7eadbbe6abffe4d2ebdf6231272789a5}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Hessian\+Block\+Type@{Hessian\+Block\+Type}}
+\index{Hessian\+Block\+Type@{Hessian\+Block\+Type}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Hessian\+Block\+Type}{HessianBlockType}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef Eigen\+::\+Map$<$Matrix$<$double, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}}$>$, Matrix$<$double, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}}, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}}$>$\+::Flags \& Aligned\+Bit ? Aligned \+: Unaligned $>$ \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a7eadbbe6abffe4d2ebdf6231272789a5}{Hessian\+Block\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a4530ef6462aadaf2ab826d440d3b3318}\label{classg2o_1_1_base_binary_edge_a4530ef6462aadaf2ab826d440d3b3318}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Information\+Type@{Information\+Type}}
+\index{Information\+Type@{Information\+Type}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Information\+Type}{InformationType}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}$<$D,E$>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a4530ef6462aadaf2ab826d440d3b3318}{Information\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a4530ef6462aadaf2ab826d440d3b3318}{Information\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_ab1cde84224b129603bcd95db027e0167}\label{classg2o_1_1_base_binary_edge_ab1cde84224b129603bcd95db027e0167}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Jacobian\+Xi\+Oplus\+Type@{Jacobian\+Xi\+Oplus\+Type}}
+\index{Jacobian\+Xi\+Oplus\+Type@{Jacobian\+Xi\+Oplus\+Type}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Jacobian\+Xi\+Oplus\+Type}{JacobianXiOplusType}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef Matrix$<$double, D, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}{Di}}$>$\+::Aligned\+Map\+Type \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab1cde84224b129603bcd95db027e0167}{Jacobian\+Xi\+Oplus\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a83e5dec2135b33e86255c87be3b5d062}\label{classg2o_1_1_base_binary_edge_a83e5dec2135b33e86255c87be3b5d062}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Jacobian\+Xj\+Oplus\+Type@{Jacobian\+Xj\+Oplus\+Type}}
+\index{Jacobian\+Xj\+Oplus\+Type@{Jacobian\+Xj\+Oplus\+Type}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Jacobian\+Xj\+Oplus\+Type}{JacobianXjOplusType}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef Matrix$<$double, D, \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}{Dj}}$>$\+::Aligned\+Map\+Type \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a83e5dec2135b33e86255c87be3b5d062}{Jacobian\+Xj\+Oplus\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_ac1e9249e9906747a6669a9c90013944b}\label{classg2o_1_1_base_binary_edge_ac1e9249e9906747a6669a9c90013944b}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Measurement}{Measurement}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}$<$D,E$>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ac1e9249e9906747a6669a9c90013944b}{Measurement}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ac1e9249e9906747a6669a9c90013944b}{Measurement}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_aa8e2b04b2c0c90adc48384d6d41063cc}\label{classg2o_1_1_base_binary_edge_aa8e2b04b2c0c90adc48384d6d41063cc}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Vertex\+Xi\+Type@{Vertex\+Xi\+Type}}
+\index{Vertex\+Xi\+Type@{Vertex\+Xi\+Type}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Vertex\+Xi\+Type}{VertexXiType}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef Vertex\+Xi \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_aa8e2b04b2c0c90adc48384d6d41063cc}{Vertex\+Xi\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_aa489ae37680c37d7b2c3c1a197f90de9}\label{classg2o_1_1_base_binary_edge_aa489ae37680c37d7b2c3c1a197f90de9}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Vertex\+Xj\+Type@{Vertex\+Xj\+Type}}
+\index{Vertex\+Xj\+Type@{Vertex\+Xj\+Type}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Vertex\+Xj\+Type}{VertexXjType}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+typedef Vertex\+Xj \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge_aa489ae37680c37d7b2c3c1a197f90de9}{Vertex\+Xj\+Type}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_aacfc6e1d439f2f0fb09c6b069f478cf4}\label{classg2o_1_1_base_binary_edge_aacfc6e1d439f2f0fb09c6b069f478cf4}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Base\+Binary\+Edge@{Base\+Binary\+Edge}}
+\index{Base\+Binary\+Edge@{Base\+Binary\+Edge}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Base\+Binary\+Edge()}{BaseBinaryEdge()}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\mbox{\hyperlink{classg2o_1_1_base_binary_edge}{Base\+Binary\+Edge}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_adc9ce883a63aa7bdba86e552d72e1de9}\label{classg2o_1_1_base_binary_edge_adc9ce883a63aa7bdba86e552d72e1de9}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!all\+Vertices\+Fixed@{all\+Vertices\+Fixed}}
+\index{all\+Vertices\+Fixed@{all\+Vertices\+Fixed}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{all\+Vertices\+Fixed()}{allVerticesFixed()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi\+Type , typename Vertex\+Xj\+Type $>$ \\
+bool Base\+Binary\+Edge\+::all\+Vertices\+Fixed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a414c69ca1617a4d3b620e39f2ffbcea7}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a06a18745d95017c6d3c841f838a65364}\label{classg2o_1_1_base_binary_edge_a06a18745d95017c6d3c841f838a65364}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!construct\+Quadratic\+Form@{construct\+Quadratic\+Form}}
+\index{construct\+Quadratic\+Form@{construct\+Quadratic\+Form}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{construct\+Quadratic\+Form()}{constructQuadraticForm()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi\+Type , typename Vertex\+Xj\+Type $>$ \\
+void Base\+Binary\+Edge\+::construct\+Quadratic\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Linearizes the constraint in the edge. Makes side effect on the vertices of the graph by changing the parameter vector b and the hessian blocks ii and jj. The off diagoinal block is accesed via \+\_\+hessian. 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a56fbf3430ddf591e3c619bdd1b7e4499}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a32bfc93b6dede619c7d99db2fb60f80d}\label{classg2o_1_1_base_binary_edge_a32bfc93b6dede619c7d99db2fb60f80d}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!create\+From@{create\+From}}
+\index{create\+From@{create\+From}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{create\+From()}{createFrom()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi\+Type , typename Vertex\+Xj\+Type $>$ \\
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ Base\+Binary\+Edge\+::create\+From (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_abd98d7a174df25bcc82cfdacba682fec}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_ac7cce17e3229445e5a33c3cb8a569320}\label{classg2o_1_1_base_binary_edge_ac7cce17e3229445e5a33c3cb8a569320}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!create\+To@{create\+To}}
+\index{create\+To@{create\+To}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{create\+To()}{createTo()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi\+Type , typename Vertex\+Xj\+Type $>$ \\
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ Base\+Binary\+Edge\+::create\+To (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a39c22b396ab312059ea8fa4c2776be2e}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a5232f0a5f116e7106b7968ab3bff036c}\label{classg2o_1_1_base_binary_edge_a5232f0a5f116e7106b7968ab3bff036c}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!jacobian\+Oplus\+Xi@{jacobian\+Oplus\+Xi}}
+\index{jacobian\+Oplus\+Xi@{jacobian\+Oplus\+Xi}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{jacobian\+Oplus\+Xi()}{jacobianOplusXi()}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+const \mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab1cde84224b129603bcd95db027e0167}{Jacobian\+Xi\+Oplus\+Type}}\& \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::jacobian\+Oplus\+Xi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the result of the linearization in the manifold space for the node xi 
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a71c1a583816399cf7db1a91ebe5dbf18}\label{classg2o_1_1_base_binary_edge_a71c1a583816399cf7db1a91ebe5dbf18}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!jacobian\+Oplus\+Xj@{jacobian\+Oplus\+Xj}}
+\index{jacobian\+Oplus\+Xj@{jacobian\+Oplus\+Xj}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{jacobian\+Oplus\+Xj()}{jacobianOplusXj()}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+const \mbox{\hyperlink{classg2o_1_1_base_binary_edge_a83e5dec2135b33e86255c87be3b5d062}{Jacobian\+Xj\+Oplus\+Type}}\& \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::jacobian\+Oplus\+Xj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the result of the linearization in the manifold space for the node xj 
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_afc3b6470e7679f027c2614484b394925}\label{classg2o_1_1_base_binary_edge_afc3b6470e7679f027c2614484b394925}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{linearize\+Oplus()}{linearizeOplus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi\+Type , typename Vertex\+Xj\+Type $>$ \\
+void Base\+Binary\+Edge\+::linearize\+Oplus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_jacobian_workspace}{Jacobian\+Workspace}} \&}]{jacobian\+Workspace }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Linearizes the constraint in the edge in the manifold space, and store the result in the given workspace 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a0fdad5ebfb4efec9f893b57f67e0fbe1}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_af0fb8a693c8c7996fa65566e7263fbc4}\label{classg2o_1_1_base_binary_edge_af0fb8a693c8c7996fa65566e7263fbc4}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{linearize\+Oplus()}{linearizeOplus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi\+Type , typename Vertex\+Xj\+Type $>$ \\
+void Base\+Binary\+Edge\+::linearize\+Oplus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Linearizes the oplus operator in the vertex, and stores the result in temporary variables \+\_\+jacobian\+Oplus\+Xi and \+\_\+jacobian\+Oplus\+Xj 
+
+Reimplemented in \mbox{\hyperlink{classg2o_1_1_edge_stereo_s_e3_project_x_y_z_aea04d86a304c6cb4e2a3f34b35166f30}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}, and \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_a7454e89740635d782c9e4efaef35ec44}{g2o\+::\+Edge\+S\+E3\+Project\+X\+YZ}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_ada358930854d386a4e8c32f64078e052}\label{classg2o_1_1_base_binary_edge_ada358930854d386a4e8c32f64078e052}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!map\+Hessian\+Memory@{map\+Hessian\+Memory}}
+\index{map\+Hessian\+Memory@{map\+Hessian\+Memory}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{map\+Hessian\+Memory()}{mapHessianMemory()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi\+Type , typename Vertex\+Xj\+Type $>$ \\
+void Base\+Binary\+Edge\+::map\+Hessian\+Memory (\begin{DoxyParamCaption}\item[{double $\ast$}]{d,  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{bool}]{row\+Major }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+maps the internal matrix to some external memory location, you need to provide the memory before calling construct\+Quadratic\+Form 
+\begin{DoxyParams}{Parameters}
+{\em d} & the memory location to which we map \\
+\hline
+{\em i} & index of the vertex i \\
+\hline
+{\em j} & index of the vertex j (j $>$ i, upper triangular fashion) \\
+\hline
+{\em row\+Major} & if true, will write in row\+Major order to the block. Since E\+I\+G\+EN is column\+Major by default, this results in writing the transposed \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a3bd233fd552daa166039acf47b69a5a7}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a06e64067fa5fff4a5e2d058249b55478}\label{classg2o_1_1_base_binary_edge_a06e64067fa5fff4a5e2d058249b55478}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!resize@{resize}}
+\index{resize@{resize}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$int D, typename E , typename Vertex\+Xi\+Type , typename Vertex\+Xj\+Type $>$ \\
+void Base\+Binary\+Edge\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+resizes the number of vertices connected by this edge 
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_edge_ad8913f1149a0fd5bb628f0f1c8a91a55}{g2o\+::\+Hyper\+Graph\+::\+Edge}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_a5036f75e3b20c79cb014fcc929d8eef9}\label{classg2o_1_1_base_binary_edge_a5036f75e3b20c79cb014fcc929d8eef9}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!\+\_\+hessian@{\+\_\+hessian}}
+\index{\+\_\+hessian@{\+\_\+hessian}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+hessian}{\_hessian}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a7eadbbe6abffe4d2ebdf6231272789a5}{Hessian\+Block\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\+\_\+hessian\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_aeb5c1f09a4433a6bd76ce4ab67bd9a64}\label{classg2o_1_1_base_binary_edge_aeb5c1f09a4433a6bd76ce4ab67bd9a64}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!\+\_\+hessian\+Row\+Major@{\+\_\+hessian\+Row\+Major}}
+\index{\+\_\+hessian\+Row\+Major@{\+\_\+hessian\+Row\+Major}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+hessian\+Row\+Major}{\_hessianRowMajor}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+bool \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\+\_\+hessian\+Row\+Major\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_aa61657904b00fcfa19df382094386f11}\label{classg2o_1_1_base_binary_edge_aa61657904b00fcfa19df382094386f11}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!\+\_\+hessian\+Transposed@{\+\_\+hessian\+Transposed}}
+\index{\+\_\+hessian\+Transposed@{\+\_\+hessian\+Transposed}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+hessian\+Transposed}{\_hessianTransposed}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_aec0d5b1819f702b7658574fcd6324b49}{Hessian\+Block\+Transposed\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\+\_\+hessian\+Transposed\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_aa21b9d84924ec93192374761ee0adfa7}\label{classg2o_1_1_base_binary_edge_aa21b9d84924ec93192374761ee0adfa7}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!\+\_\+jacobian\+Oplus\+Xi@{\+\_\+jacobian\+Oplus\+Xi}}
+\index{\+\_\+jacobian\+Oplus\+Xi@{\+\_\+jacobian\+Oplus\+Xi}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+jacobian\+Oplus\+Xi}{\_jacobianOplusXi}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_ab1cde84224b129603bcd95db027e0167}{Jacobian\+Xi\+Oplus\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\+\_\+jacobian\+Oplus\+Xi\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_ad448518247044496cb99c9d70bd1a363}\label{classg2o_1_1_base_binary_edge_ad448518247044496cb99c9d70bd1a363}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!\+\_\+jacobian\+Oplus\+Xj@{\+\_\+jacobian\+Oplus\+Xj}}
+\index{\+\_\+jacobian\+Oplus\+Xj@{\+\_\+jacobian\+Oplus\+Xj}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+jacobian\+Oplus\+Xj}{\_jacobianOplusXj}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_binary_edge_a83e5dec2135b33e86255c87be3b5d062}{Jacobian\+Xj\+Oplus\+Type}} \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::\+\_\+jacobian\+Oplus\+Xj\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}\label{classg2o_1_1_base_binary_edge_abfe232196405a7204bc299a747c1cc8b}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Di@{Di}}
+\index{Di@{Di}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Di}{Di}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+const int \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::Di = Vertex\+Xi\+Type\+::\+Dimension\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_af3c134948e48c446762fa4e427d1cca5}\label{classg2o_1_1_base_binary_edge_af3c134948e48c446762fa4e427d1cca5}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Dimension@{Dimension}}
+\index{Dimension@{Dimension}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Dimension}{Dimension}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+const int \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::Dimension = \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}$<$D, E$>$\+::Dimension\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}\label{classg2o_1_1_base_binary_edge_ab718b94950a34d589371fe6f5583b259}} 
+\index{g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}!Dj@{Dj}}
+\index{Dj@{Dj}!g2o\+::\+Base\+Binary\+Edge@{g2o\+::\+Base\+Binary\+Edge}}
+\subsubsection{\texorpdfstring{Dj}{Dj}}
+{\footnotesize\ttfamily template$<$int D, typename E, typename Vertex\+Xi, typename Vertex\+Xj$>$ \\
+const int \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{g2o\+::\+Base\+Binary\+Edge}}$<$ D, E, Vertex\+Xi, Vertex\+Xj $>$\+::Dj = Vertex\+Xj\+Type\+::\+Dimension\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{base__binary__edge_8h}{base\+\_\+binary\+\_\+edge.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{base__binary__edge_8hpp}{base\+\_\+binary\+\_\+edge.\+hpp}}\end{DoxyCompactItemize}

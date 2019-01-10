@@ -1,0 +1,325 @@
+\hypertarget{structg2o_1_1_g2_o_batch_statistics}{}\section{g2o\+:\+:G2\+O\+Batch\+Statistics Struct Reference}
+\label{structg2o_1_1_g2_o_batch_statistics}\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+
+
+statistics about the optimization  
+
+
+
+
+{\ttfamily \#include $<$batch\+\_\+stats.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a99b348cf1d6a913ab6683c44b36a8c55}{G2\+O\+Batch\+Statistics}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}} $\ast$ \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a85d57b829bde666635a26d52e17f20b5}{global\+Stats}} ()
+\item 
+static \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} void \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a8c56e85d25e346ba87718621407247fc}{set\+Global\+Stats}} (\mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}} $\ast$b)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a63e30077b9dad65c321b322a2a6f0aea}{iteration}}
+\begin{DoxyCompactList}\small\item\em which iteration \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a2a3ecd684cb9e60c34afeee0d8f35d23}{num\+Vertices}}
+\begin{DoxyCompactList}\small\item\em how many vertices are involved \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_ae8924cd0e0e7fee183cba73b706eb5a5}{num\+Edges}}
+\begin{DoxyCompactList}\small\item\em how many edges \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a719152d550dd4fe3300d06558fe0a6d5}{chi2}}
+\begin{DoxyCompactList}\small\item\em total chi2 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a1815f0fb0a84cd1977d72c83cefdb76b}{time\+Residuals}}
+\begin{DoxyCompactList}\small\item\em residuals \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_ac288190f875b8777b3c24c860a3741d7}{time\+Linearize}}
+\begin{DoxyCompactList}\small\item\em jacobians \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_af949afd7e25ceef08379220ed242aa36}{time\+Quadratic\+Form}}
+\begin{DoxyCompactList}\small\item\em construct the quadratic form in the graph \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_acd6b82e7401ec8c04e00b14bf76892a9}{levenberg\+Iterations}}
+\begin{DoxyCompactList}\small\item\em number of iterations performed by LM \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a79d8935c9af46d716ef2b85b777fabe1}{time\+Schur\+Complement}}
+\begin{DoxyCompactList}\small\item\em compute schur complement (0 if not done) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a456a521ccb1e4c69940475a92a1f5d29}{time\+Symbolic\+Decomposition}}
+\begin{DoxyCompactList}\small\item\em symbolic decomposition (0 if not done) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a31f4a361dba1f3eb8dba2ca2aa326905}{time\+Numeric\+Decomposition}}
+\begin{DoxyCompactList}\small\item\em numeric decomposition (0 if not done) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a01fea9876aab94b1e69a6a03c20fd98f}{time\+Linear\+Solution}}
+\begin{DoxyCompactList}\small\item\em total time for solving Ax=b (including detup for schur) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_adb423c3dac9262b7f4a315bbb108464a}{time\+Linear\+Solver}}
+\begin{DoxyCompactList}\small\item\em time for solving, excluding Schur setup \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a0ef94423b56f6d842e33a7c277c930a0}{iterations\+Linear\+Solver}}
+\begin{DoxyCompactList}\small\item\em iterations of P\+CG, (0 if not used, i.\+e., Cholesky) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a510e287e5a3e1f608219147b53e6dc69}{time\+Update}}
+\begin{DoxyCompactList}\small\item\em time to apply the update \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a60fbec94ce0b7f26ed99d3f6d2080e47}{time\+Iteration}}
+\begin{DoxyCompactList}\small\item\em total time; \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a58e5d0960dc35e682424dce2b50e4fa9}{time\+Marginals}}
+\begin{DoxyCompactList}\small\item\em computing the inverse elements (solve blocks) and thus the marginal covariances \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a618a15ba153da1a99b19a2d779cf3764}{hessian\+Dimension}}
+\begin{DoxyCompactList}\small\item\em rows / cols of the Hessian \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_ae2af64720e3f99557924b9cf92ab6f20}{hessian\+Pose\+Dimension}}
+\begin{DoxyCompactList}\small\item\em dimension of the pose matrix in Schur \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a0cfa7018402074f47defb9cd5d9d4b64}{hessian\+Landmark\+Dimension}}
+\begin{DoxyCompactList}\small\item\em dimension of the landmark matrix in Schur \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_a5996c5ba000bdfcbcf5c0375a3c62643}{cholesky\+N\+NZ}}
+\begin{DoxyCompactList}\small\item\em number of non-\/zeros in the cholesky factor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}} $\ast$ \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics_ab2afc355eadf0e686507ff621f60d3eb}{\+\_\+global\+Stats}} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+statistics about the optimization 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a99b348cf1d6a913ab6683c44b36a8c55}\label{structg2o_1_1_g2_o_batch_statistics_a99b348cf1d6a913ab6683c44b36a8c55}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!G2\+O\+Batch\+Statistics@{G2\+O\+Batch\+Statistics}}
+\index{G2\+O\+Batch\+Statistics@{G2\+O\+Batch\+Statistics}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{G2\+O\+Batch\+Statistics()}{G2OBatchStatistics()}}
+{\footnotesize\ttfamily g2o\+::\+G2\+O\+Batch\+Statistics\+::\+G2\+O\+Batch\+Statistics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a85d57b829bde666635a26d52e17f20b5}\label{structg2o_1_1_g2_o_batch_statistics_a85d57b829bde666635a26d52e17f20b5}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!global\+Stats@{global\+Stats}}
+\index{global\+Stats@{global\+Stats}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{global\+Stats()}{globalStats()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}}$\ast$ g2o\+::\+G2\+O\+Batch\+Statistics\+::global\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a8c56e85d25e346ba87718621407247fc}\label{structg2o_1_1_g2_o_batch_statistics_a8c56e85d25e346ba87718621407247fc}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!set\+Global\+Stats@{set\+Global\+Stats}}
+\index{set\+Global\+Stats@{set\+Global\+Stats}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{set\+Global\+Stats()}{setGlobalStats()}}
+{\footnotesize\ttfamily void g2o\+::\+G2\+O\+Batch\+Statistics\+::set\+Global\+Stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}} $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_ab2afc355eadf0e686507ff621f60d3eb}\label{structg2o_1_1_g2_o_batch_statistics_ab2afc355eadf0e686507ff621f60d3eb}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!\+\_\+global\+Stats@{\+\_\+global\+Stats}}
+\index{\+\_\+global\+Stats@{\+\_\+global\+Stats}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{\+\_\+global\+Stats}{\_globalStats}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}} $\ast$ g2o\+::\+G2\+O\+Batch\+Statistics\+::\+\_\+global\+Stats =0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a719152d550dd4fe3300d06558fe0a6d5}\label{structg2o_1_1_g2_o_batch_statistics_a719152d550dd4fe3300d06558fe0a6d5}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!chi2@{chi2}}
+\index{chi2@{chi2}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{chi2}{chi2}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::chi2}
+
+
+
+total chi2 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a5996c5ba000bdfcbcf5c0375a3c62643}\label{structg2o_1_1_g2_o_batch_statistics_a5996c5ba000bdfcbcf5c0375a3c62643}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!cholesky\+N\+NZ@{cholesky\+N\+NZ}}
+\index{cholesky\+N\+NZ@{cholesky\+N\+NZ}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{cholesky\+N\+NZ}{choleskyNNZ}}
+{\footnotesize\ttfamily size\+\_\+t g2o\+::\+G2\+O\+Batch\+Statistics\+::cholesky\+N\+NZ}
+
+
+
+number of non-\/zeros in the cholesky factor 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a618a15ba153da1a99b19a2d779cf3764}\label{structg2o_1_1_g2_o_batch_statistics_a618a15ba153da1a99b19a2d779cf3764}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!hessian\+Dimension@{hessian\+Dimension}}
+\index{hessian\+Dimension@{hessian\+Dimension}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{hessian\+Dimension}{hessianDimension}}
+{\footnotesize\ttfamily size\+\_\+t g2o\+::\+G2\+O\+Batch\+Statistics\+::hessian\+Dimension}
+
+
+
+rows / cols of the Hessian 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a0cfa7018402074f47defb9cd5d9d4b64}\label{structg2o_1_1_g2_o_batch_statistics_a0cfa7018402074f47defb9cd5d9d4b64}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!hessian\+Landmark\+Dimension@{hessian\+Landmark\+Dimension}}
+\index{hessian\+Landmark\+Dimension@{hessian\+Landmark\+Dimension}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{hessian\+Landmark\+Dimension}{hessianLandmarkDimension}}
+{\footnotesize\ttfamily size\+\_\+t g2o\+::\+G2\+O\+Batch\+Statistics\+::hessian\+Landmark\+Dimension}
+
+
+
+dimension of the landmark matrix in Schur 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_ae2af64720e3f99557924b9cf92ab6f20}\label{structg2o_1_1_g2_o_batch_statistics_ae2af64720e3f99557924b9cf92ab6f20}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!hessian\+Pose\+Dimension@{hessian\+Pose\+Dimension}}
+\index{hessian\+Pose\+Dimension@{hessian\+Pose\+Dimension}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{hessian\+Pose\+Dimension}{hessianPoseDimension}}
+{\footnotesize\ttfamily size\+\_\+t g2o\+::\+G2\+O\+Batch\+Statistics\+::hessian\+Pose\+Dimension}
+
+
+
+dimension of the pose matrix in Schur 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a63e30077b9dad65c321b322a2a6f0aea}\label{structg2o_1_1_g2_o_batch_statistics_a63e30077b9dad65c321b322a2a6f0aea}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!iteration@{iteration}}
+\index{iteration@{iteration}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{iteration}{iteration}}
+{\footnotesize\ttfamily int g2o\+::\+G2\+O\+Batch\+Statistics\+::iteration}
+
+
+
+which iteration 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a0ef94423b56f6d842e33a7c277c930a0}\label{structg2o_1_1_g2_o_batch_statistics_a0ef94423b56f6d842e33a7c277c930a0}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!iterations\+Linear\+Solver@{iterations\+Linear\+Solver}}
+\index{iterations\+Linear\+Solver@{iterations\+Linear\+Solver}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{iterations\+Linear\+Solver}{iterationsLinearSolver}}
+{\footnotesize\ttfamily int g2o\+::\+G2\+O\+Batch\+Statistics\+::iterations\+Linear\+Solver}
+
+
+
+iterations of P\+CG, (0 if not used, i.\+e., Cholesky) 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_acd6b82e7401ec8c04e00b14bf76892a9}\label{structg2o_1_1_g2_o_batch_statistics_acd6b82e7401ec8c04e00b14bf76892a9}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!levenberg\+Iterations@{levenberg\+Iterations}}
+\index{levenberg\+Iterations@{levenberg\+Iterations}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{levenberg\+Iterations}{levenbergIterations}}
+{\footnotesize\ttfamily int g2o\+::\+G2\+O\+Batch\+Statistics\+::levenberg\+Iterations}
+
+
+
+number of iterations performed by LM 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_ae8924cd0e0e7fee183cba73b706eb5a5}\label{structg2o_1_1_g2_o_batch_statistics_ae8924cd0e0e7fee183cba73b706eb5a5}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!num\+Edges@{num\+Edges}}
+\index{num\+Edges@{num\+Edges}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{num\+Edges}{numEdges}}
+{\footnotesize\ttfamily int g2o\+::\+G2\+O\+Batch\+Statistics\+::num\+Edges}
+
+
+
+how many edges 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a2a3ecd684cb9e60c34afeee0d8f35d23}\label{structg2o_1_1_g2_o_batch_statistics_a2a3ecd684cb9e60c34afeee0d8f35d23}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!num\+Vertices@{num\+Vertices}}
+\index{num\+Vertices@{num\+Vertices}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{num\+Vertices}{numVertices}}
+{\footnotesize\ttfamily int g2o\+::\+G2\+O\+Batch\+Statistics\+::num\+Vertices}
+
+
+
+how many vertices are involved 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a60fbec94ce0b7f26ed99d3f6d2080e47}\label{structg2o_1_1_g2_o_batch_statistics_a60fbec94ce0b7f26ed99d3f6d2080e47}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Iteration@{time\+Iteration}}
+\index{time\+Iteration@{time\+Iteration}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Iteration}{timeIteration}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Iteration}
+
+
+
+total time; 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_ac288190f875b8777b3c24c860a3741d7}\label{structg2o_1_1_g2_o_batch_statistics_ac288190f875b8777b3c24c860a3741d7}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Linearize@{time\+Linearize}}
+\index{time\+Linearize@{time\+Linearize}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Linearize}{timeLinearize}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Linearize}
+
+
+
+jacobians 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a01fea9876aab94b1e69a6a03c20fd98f}\label{structg2o_1_1_g2_o_batch_statistics_a01fea9876aab94b1e69a6a03c20fd98f}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Linear\+Solution@{time\+Linear\+Solution}}
+\index{time\+Linear\+Solution@{time\+Linear\+Solution}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Linear\+Solution}{timeLinearSolution}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Linear\+Solution}
+
+
+
+total time for solving Ax=b (including detup for schur) 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_adb423c3dac9262b7f4a315bbb108464a}\label{structg2o_1_1_g2_o_batch_statistics_adb423c3dac9262b7f4a315bbb108464a}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Linear\+Solver@{time\+Linear\+Solver}}
+\index{time\+Linear\+Solver@{time\+Linear\+Solver}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Linear\+Solver}{timeLinearSolver}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Linear\+Solver}
+
+
+
+time for solving, excluding Schur setup 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a58e5d0960dc35e682424dce2b50e4fa9}\label{structg2o_1_1_g2_o_batch_statistics_a58e5d0960dc35e682424dce2b50e4fa9}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Marginals@{time\+Marginals}}
+\index{time\+Marginals@{time\+Marginals}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Marginals}{timeMarginals}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Marginals}
+
+
+
+computing the inverse elements (solve blocks) and thus the marginal covariances 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a31f4a361dba1f3eb8dba2ca2aa326905}\label{structg2o_1_1_g2_o_batch_statistics_a31f4a361dba1f3eb8dba2ca2aa326905}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Numeric\+Decomposition@{time\+Numeric\+Decomposition}}
+\index{time\+Numeric\+Decomposition@{time\+Numeric\+Decomposition}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Numeric\+Decomposition}{timeNumericDecomposition}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Numeric\+Decomposition}
+
+
+
+numeric decomposition (0 if not done) 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_af949afd7e25ceef08379220ed242aa36}\label{structg2o_1_1_g2_o_batch_statistics_af949afd7e25ceef08379220ed242aa36}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Quadratic\+Form@{time\+Quadratic\+Form}}
+\index{time\+Quadratic\+Form@{time\+Quadratic\+Form}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Quadratic\+Form}{timeQuadraticForm}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Quadratic\+Form}
+
+
+
+construct the quadratic form in the graph 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a1815f0fb0a84cd1977d72c83cefdb76b}\label{structg2o_1_1_g2_o_batch_statistics_a1815f0fb0a84cd1977d72c83cefdb76b}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Residuals@{time\+Residuals}}
+\index{time\+Residuals@{time\+Residuals}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Residuals}{timeResiduals}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Residuals}
+
+
+
+residuals 
+
+timings \mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a79d8935c9af46d716ef2b85b777fabe1}\label{structg2o_1_1_g2_o_batch_statistics_a79d8935c9af46d716ef2b85b777fabe1}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Schur\+Complement@{time\+Schur\+Complement}}
+\index{time\+Schur\+Complement@{time\+Schur\+Complement}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Schur\+Complement}{timeSchurComplement}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Schur\+Complement}
+
+
+
+compute schur complement (0 if not done) 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a456a521ccb1e4c69940475a92a1f5d29}\label{structg2o_1_1_g2_o_batch_statistics_a456a521ccb1e4c69940475a92a1f5d29}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Symbolic\+Decomposition@{time\+Symbolic\+Decomposition}}
+\index{time\+Symbolic\+Decomposition@{time\+Symbolic\+Decomposition}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Symbolic\+Decomposition}{timeSymbolicDecomposition}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Symbolic\+Decomposition}
+
+
+
+symbolic decomposition (0 if not done) 
+
+\mbox{\Hypertarget{structg2o_1_1_g2_o_batch_statistics_a510e287e5a3e1f608219147b53e6dc69}\label{structg2o_1_1_g2_o_batch_statistics_a510e287e5a3e1f608219147b53e6dc69}} 
+\index{g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}!time\+Update@{time\+Update}}
+\index{time\+Update@{time\+Update}!g2o\+::\+G2\+O\+Batch\+Statistics@{g2o\+::\+G2\+O\+Batch\+Statistics}}
+\subsubsection{\texorpdfstring{time\+Update}{timeUpdate}}
+{\footnotesize\ttfamily double g2o\+::\+G2\+O\+Batch\+Statistics\+::time\+Update}
+
+
+
+time to apply the update 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{batch__stats_8h}{batch\+\_\+stats.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{batch__stats_8cpp}{batch\+\_\+stats.\+cpp}}\end{DoxyCompactItemize}

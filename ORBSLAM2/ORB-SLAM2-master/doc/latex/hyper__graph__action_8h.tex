@@ -1,0 +1,67 @@
+\hypertarget{hyper__graph__action_8h}{}\section{Thirdparty/g2o/g2o/core/hyper\+\_\+graph\+\_\+action.h File Reference}
+\label{hyper__graph__action_8h}\index{Thirdparty/g2o/g2o/core/hyper\+\_\+graph\+\_\+action.\+h@{Thirdparty/g2o/g2o/core/hyper\+\_\+graph\+\_\+action.\+h}}
+{\ttfamily \#include \char`\"{}hyper\+\_\+graph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../stuff/property.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}g2o\+\_\+core\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$typeinfo$>$}\newline
+{\ttfamily \#include $<$iosfwd$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_action}{g2o\+::\+Hyper\+Graph\+Action}}
+\begin{DoxyCompactList}\small\item\em Abstract action that operates on an entire graph. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_action_1_1_parameters}{g2o\+::\+Hyper\+Graph\+Action\+::\+Parameters}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_action_1_1_parameters_iteration}{g2o\+::\+Hyper\+Graph\+Action\+::\+Parameters\+Iteration}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{g2o\+::\+Hyper\+Graph\+Element\+Action}}
+\begin{DoxyCompactList}\small\item\em Abstract action that operates on a graph entity. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_hyper_graph_element_action_1_1_parameters}{g2o\+::\+Hyper\+Graph\+Element\+Action\+::\+Parameters}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection}{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\begin{DoxyCompactList}\small\item\em collection of actions \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_action_library}{g2o\+::\+Hyper\+Graph\+Action\+Library}}
+\begin{DoxyCompactList}\small\item\em library of actions, indexed by the action name; \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_write_gnuplot_action}{g2o\+::\+Write\+Gnuplot\+Action}}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_write_gnuplot_action_1_1_parameters}{g2o\+::\+Write\+Gnuplot\+Action\+::\+Parameters}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_draw_action}{g2o\+::\+Draw\+Action}}
+\begin{DoxyCompactList}\small\item\em draw actions \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_draw_action_1_1_parameters}{g2o\+::\+Draw\+Action\+::\+Parameters}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_register_action_proxy}{g2o\+::\+Register\+Action\+Proxy$<$ T $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceg2o}{g2o}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hyper__graph__action_8h_a917c9372b6aeabdf00458df985464223}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON}}(classname)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceg2o_ac2ef8b73c930abdd15131f8fb02cd42f}{g2o\+::apply\+Action}} (Hyper\+Graph $\ast$graph, Hyper\+Graph\+Element\+Action $\ast$action, Hyper\+Graph\+Element\+Action\+::\+Parameters $\ast$params, const std\+::string \&type\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hyper__graph__action_8h_a917c9372b6aeabdf00458df985464223}\label{hyper__graph__action_8h_a917c9372b6aeabdf00458df985464223}} 
+\index{hyper\+\_\+graph\+\_\+action.\+h@{hyper\+\_\+graph\+\_\+action.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON}!hyper\+\_\+graph\+\_\+action.\+h@{hyper\+\_\+graph\+\_\+action.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON}{G2O\_REGISTER\_ACTION}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+A\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{classname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} g2o\_action\_##classname(\textcolor{keywordtype}{void}) \{\} \(\backslash\)
+    static \mbox{\hyperlink{classg2o_1_1_register_action_proxy}{g2o::RegisterActionProxy<classname>}} g\_action\_proxy\_##
+      classname;
+\end{DoxyCode}

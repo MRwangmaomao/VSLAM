@@ -1,0 +1,200 @@
+\hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose}{}\section{g2o\+:\+:Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose Class Reference}
+\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose}\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+
+
+N\+O\+TE uesd in Optimizer\+::\+Pose\+Optimization()  
+
+
+
+
+{\ttfamily \#include $<$types\+\_\+six\+\_\+dof\+\_\+expmap.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a617972556497ab31cc745f6d3eb59c58}{Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a28994ddf2cab7b61566ce55ad4b43388}{read}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ac0132c975af1a49cdf490a6dbe8f450c}{write}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a6752098d3322d30e43a6a3a668a3b009}{compute\+Error}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_abd6f619de5af8855c8ee21fcfad51c9e}{is\+Depth\+Positive}} ()
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_abe6d775aade1277786274c328aa2c38b}{linearize\+Oplus}} ()
+\begin{DoxyCompactList}\small\item\em Linearization. \end{DoxyCompactList}\item 
+Vector2d \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ad557e880209ef1a49c4b54a60872fe68}{cam\+\_\+project}} (const Vector3d \&trans\+\_\+xyz) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector3d \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a66318605e8e9c2276b100cf73e718ea8}{Xw}}
+\begin{DoxyCompactList}\small\item\em Map\+Point在世界坐标系的位置 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a413ca1179697e29d5476f582d2b29ff6}{fx}}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a2f645f770962dc9d8c4862c0c6dbb497}{fy}}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ab4d7078a2d9a628afd6022c983843904}{cx}}
+\item 
+double \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_aa6f6f24382d0f9b03d6ae47747e6d95d}{cy}}
+\begin{DoxyCompactList}\small\item\em 内参数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+N\+O\+TE uesd in Optimizer\+::\+Pose\+Optimization() 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a617972556497ab31cc745f6d3eb59c58}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a617972556497ab31cc745f6d3eb59c58}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\index{Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose()}{EdgeSE3ProjectXYZOnlyPose()}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ad557e880209ef1a49c4b54a60872fe68}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ad557e880209ef1a49c4b54a60872fe68}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!cam\+\_\+project@{cam\+\_\+project}}
+\index{cam\+\_\+project@{cam\+\_\+project}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{cam\+\_\+project()}{cam\_project()}}
+{\footnotesize\ttfamily Vector2d g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cam\+\_\+project (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{trans\+\_\+xyz }\end{DoxyParamCaption}) const}
+
+将\+Xw投影到cam的图像坐标系 ~\newline
+ $ u = \frac{f_x X}{Z} + c_x $ ~\newline
+ $ v = \frac{f_y Y}{Z} + c_v $ ~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em trans\+\_\+xyz} & \mbox{[}X Y Z\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}u v\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a6752098d3322d30e43a6a3a668a3b009}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a6752098d3322d30e43a6a3a668a3b009}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!compute\+Error@{compute\+Error}}
+\index{compute\+Error@{compute\+Error}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{compute\+Error()}{computeError()}}
+{\footnotesize\ttfamily void g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::compute\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+重投影误差 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a1e6d9f4128866982de5e11e03edd7775}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_abd6f619de5af8855c8ee21fcfad51c9e}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_abd6f619de5af8855c8ee21fcfad51c9e}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!is\+Depth\+Positive@{is\+Depth\+Positive}}
+\index{is\+Depth\+Positive@{is\+Depth\+Positive}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{is\+Depth\+Positive()}{isDepthPositive()}}
+{\footnotesize\ttfamily bool g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::is\+Depth\+Positive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+检验 $ TX_w $的\+Z是否大于0 \begin{DoxyReturn}{Returns}
+true if the depth is Positive 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_abe6d775aade1277786274c328aa2c38b}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_abe6d775aade1277786274c328aa2c38b}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!linearize\+Oplus@{linearize\+Oplus}}
+\index{linearize\+Oplus@{linearize\+Oplus}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{linearize\+Oplus()}{linearizeOplus()}}
+{\footnotesize\ttfamily void g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::linearize\+Oplus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Linearization. 
+
+误差函数对增量\mbox{[}w1 w2 w3 v1 v2 v3\mbox{]}求雅克比矩阵 $J_{2\times6}$ $ = \frac{\partial [obs - \Pi(exp(\hat{\xi}) T X_w)]}{\partial \xi} $ \begin{DoxyNote}{Note}
+\+\_\+jacobian\+Oplus\+Xi，雅可比矩阵的正负号没有关系 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+采用链式法则求解, 参考(注意以下参考的增量定义为\mbox{[}v1 v2 v3 w1 w2 w3\mbox{]})
+\begin{DoxyItemize}
+\item jlblanco2010geometry3d\+\_\+techrep.\+pdf p56 (A.\+2) 推荐
+\item strasdat\+\_\+thesis\+\_\+2012.\+pdf p194 (B.\+4)
+\end{DoxyItemize}
+\end{DoxySeeAlso}
+线性化, 只对位姿vi求导
+
+\+\_\+jacobian\+Oplus\+Xi是重投影误差关于位姿vj的导数 xyz\+\_\+trans是路标在新一帧相机坐标系下的估计位置(3\+D),优化时用逆深度. 
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_base_unary_edge_a367f19b903938faf6e89dd1b0e4e722b}{g2o\+::\+Base\+Unary\+Edge$<$ 2, Vector2d, Vertex\+S\+E3\+Expmap $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a28994ddf2cab7b61566ce55ad4b43388}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a28994ddf2cab7b61566ce55ad4b43388}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!read@{read}}
+\index{read@{read}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a30cf69b762a06aa35e796d8af71632b0}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ac0132c975af1a49cdf490a6dbe8f450c}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ac0132c975af1a49cdf490a6dbe8f450c}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!write@{write}}
+\index{write@{write}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily bool g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+write the vertex to a stream 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a804b9a2178249b9297c55b8fbbeda56e}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ab4d7078a2d9a628afd6022c983843904}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_ab4d7078a2d9a628afd6022c983843904}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!cx@{cx}}
+\index{cx@{cx}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{cx}{cx}}
+{\footnotesize\ttfamily double g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cx}
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_aa6f6f24382d0f9b03d6ae47747e6d95d}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_aa6f6f24382d0f9b03d6ae47747e6d95d}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!cy@{cy}}
+\index{cy@{cy}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{cy}{cy}}
+{\footnotesize\ttfamily double g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::cy}
+
+
+
+内参数 
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a413ca1179697e29d5476f582d2b29ff6}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a413ca1179697e29d5476f582d2b29ff6}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!fx@{fx}}
+\index{fx@{fx}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{fx}{fx}}
+{\footnotesize\ttfamily double g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::fx}
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a2f645f770962dc9d8c4862c0c6dbb497}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a2f645f770962dc9d8c4862c0c6dbb497}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!fy@{fy}}
+\index{fy@{fy}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{fy}{fy}}
+{\footnotesize\ttfamily double g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::fy}
+
+\mbox{\Hypertarget{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a66318605e8e9c2276b100cf73e718ea8}\label{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose_a66318605e8e9c2276b100cf73e718ea8}} 
+\index{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}!Xw@{Xw}}
+\index{Xw@{Xw}!g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose@{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\subsubsection{\texorpdfstring{Xw}{Xw}}
+{\footnotesize\ttfamily Vector3d g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose\+::\+Xw}
+
+
+
+Map\+Point在世界坐标系的位置 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{types__six__dof__expmap_8h}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+h}}\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{types__six__dof__expmap_8cpp}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp}}\end{DoxyCompactItemize}

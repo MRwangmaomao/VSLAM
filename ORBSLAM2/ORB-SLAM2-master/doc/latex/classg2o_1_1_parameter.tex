@@ -1,0 +1,109 @@
+\hypertarget{classg2o_1_1_parameter}{}\section{g2o\+:\+:Parameter Class Reference}
+\label{classg2o_1_1_parameter}\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+
+
+{\ttfamily \#include $<$parameter.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Parameter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_parameter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_parameter_a34ef4c50461a0ab0ae9bd26944fac4de}{Parameter}} ()
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_parameter_a03a4d78df10d25ddf14a52872f872913}{$\sim$\+Parameter}} ()
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_parameter_a77d9d88d8bde52198631fcd0fc4c9d0e}{read}} (std\+::istream \&is)=0
+\begin{DoxyCompactList}\small\item\em read the data from a stream \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_parameter_a18e66a40cd71a4da2ab9be5ba318abb7}{write}} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em write the data to a stream \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_parameter_a1bca491a08b68a7a6b85204a5a8b0f2c}{id}} () const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_parameter_a2872398ab7d8c95d0a1b5ca5bbfae461}{set\+Id}} (int id\+\_\+)
+\item 
+virtual Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type \mbox{\hyperlink{classg2o_1_1_parameter_a44ace751794dcde7a5fd52d16e2f4f21}{element\+Type}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_parameter_a602d08079c6a3a5f868e41a102e1db0b}{\+\_\+id}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_parameter_a34ef4c50461a0ab0ae9bd26944fac4de}\label{classg2o_1_1_parameter_a34ef4c50461a0ab0ae9bd26944fac4de}} 
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection{\texorpdfstring{Parameter()}{Parameter()}}
+{\footnotesize\ttfamily g2o\+::\+Parameter\+::\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_a03a4d78df10d25ddf14a52872f872913}\label{classg2o_1_1_parameter_a03a4d78df10d25ddf14a52872f872913}} 
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!````~Parameter@{$\sim$\+Parameter}}
+\index{````~Parameter@{$\sim$\+Parameter}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection{\texorpdfstring{$\sim$\+Parameter()}{~Parameter()}}
+{\footnotesize\ttfamily virtual g2o\+::\+Parameter\+::$\sim$\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_parameter_a44ace751794dcde7a5fd52d16e2f4f21}\label{classg2o_1_1_parameter_a44ace751794dcde7a5fd52d16e2f4f21}} 
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection{\texorpdfstring{element\+Type()}{elementType()}}
+{\footnotesize\ttfamily virtual Hyper\+Graph\+::\+Hyper\+Graph\+Element\+Type g2o\+::\+Parameter\+::element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+returns the type of the graph element, see Hyper\+Graph\+Element\+Type 
+
+Implements \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element_a1a9d7b748698c09d202373e06e413ef2}{g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph\+Element}}.
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_a1bca491a08b68a7a6b85204a5a8b0f2c}\label{classg2o_1_1_parameter_a1bca491a08b68a7a6b85204a5a8b0f2c}} 
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!id@{id}}
+\index{id@{id}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily int g2o\+::\+Parameter\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_a77d9d88d8bde52198631fcd0fc4c9d0e}\label{classg2o_1_1_parameter_a77d9d88d8bde52198631fcd0fc4c9d0e}} 
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!read@{read}}
+\index{read@{read}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Parameter\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+read the data from a stream 
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_a2872398ab7d8c95d0a1b5ca5bbfae461}\label{classg2o_1_1_parameter_a2872398ab7d8c95d0a1b5ca5bbfae461}} 
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void g2o\+::\+Parameter\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_parameter_a18e66a40cd71a4da2ab9be5ba318abb7}\label{classg2o_1_1_parameter_a18e66a40cd71a4da2ab9be5ba318abb7}} 
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!write@{write}}
+\index{write@{write}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Parameter\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+write the data to a stream 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_parameter_a602d08079c6a3a5f868e41a102e1db0b}\label{classg2o_1_1_parameter_a602d08079c6a3a5f868e41a102e1db0b}} 
+\index{g2o\+::\+Parameter@{g2o\+::\+Parameter}!\+\_\+id@{\+\_\+id}}
+\index{\+\_\+id@{\+\_\+id}!g2o\+::\+Parameter@{g2o\+::\+Parameter}}
+\subsubsection{\texorpdfstring{\+\_\+id}{\_id}}
+{\footnotesize\ttfamily int g2o\+::\+Parameter\+::\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{parameter_8h}{parameter.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{parameter_8cpp}{parameter.\+cpp}}\end{DoxyCompactItemize}

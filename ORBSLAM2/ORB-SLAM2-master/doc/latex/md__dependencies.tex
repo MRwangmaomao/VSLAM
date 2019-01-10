@@ -1,0 +1,32 @@
+\subsubsection*{O\+R\+B-\/\+S\+L\+A\+M2 version 1.\+0}
+
+In this document we list all the pieces of code included by O\+R\+B-\/\+S\+L\+A\+M2 and linked libraries which are not property of the authors of O\+R\+B-\/\+S\+L\+A\+M2.
+
+\subparagraph*{Code in {\bfseries src} and {\bfseries include} folders}
+
+
+\begin{DoxyItemize}
+\item {\itshape O\+R\+Bextractor.\+cc}. This is a modified version of orb.\+cpp of Open\+CV library. The original code is B\+SD licensed.
+\item {\itshape \mbox{\hyperlink{_pn_psolver_8h}{Pn\+Psolver.\+h}}, Pn\+Psolver.\+cc}. This is a modified version of the epnp.\+h and epnp.\+cc of Vincent Lepetit. This code can be found in popular B\+SD licensed computer vision libraries as \href{https://github.com/Itseez/opencv/blob/master/modules/calib3d/src/epnp.cpp}{\tt Open\+CV} and \href{https://github.com/laurentkneip/opengv/blob/master/src/absolute_pose/modules/Epnp.cpp}{\tt Open\+GV}. The original code is Free\+B\+SD.
+\item Function {\itshape O\+R\+Bmatcher\+::\+Descriptor\+Distance} in {\itshape O\+R\+Bmatcher.\+cc}. The code is from\+: \href{http://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel}{\tt http\+://graphics.\+stanford.\+edu/$\sim$seander/bithacks.\+html\#\+Count\+Bits\+Set\+Parallel}. The code is in the public domain.
+\end{DoxyItemize}
+
+\subparagraph*{Code in Thirdparty folder}
+
+
+\begin{DoxyItemize}
+\item All code in {\bfseries \mbox{\hyperlink{namespace_d_bo_w2}{D\+Bo\+W2}}} folder. This is a modified version of \href{https://github.com/dorian3d/DBoW2}{\tt D\+Bo\+W2} and \href{https://github.com/dorian3d/DLib}{\tt D\+Lib} library. All files included are B\+SD licensed.
+\item All code in {\bfseries \mbox{\hyperlink{namespaceg2o}{g2o}}} folder. This is a modified version of \href{https://github.com/RainerKuemmerle/g2o}{\tt g2o}. All files included are B\+SD licensed.
+\end{DoxyItemize}
+
+\subparagraph*{Library dependencies}
+
+
+\begin{DoxyItemize}
+\item {\bfseries Pangolin (visualization and user interface)}. \href{https://en.wikipedia.org/wiki/MIT_License}{\tt M\+IT license}.
+\item {\bfseries Open\+CV}. B\+SD license.
+\item {\bfseries Eigen3}. For versions greater than 3.\+1.\+1 is M\+P\+L2, earlier versions are L\+G\+P\+Lv3.
+\item {\bfseries B\+L\+AS} (required by \mbox{\hyperlink{namespaceg2o}{g2o}}). \href{http://www.netlib.org/blas/#_licensing}{\tt Freely-\/available software}.
+\item {\bfseries L\+A\+P\+A\+CK}(required by \mbox{\hyperlink{namespaceg2o}{g2o}}). B\+SD license.
+\item {\bfseries R\+OS (Optional, only if you build Examples/\+R\+OS)}. B\+SD license. In the manifest.\+xml the only declared package dependencies are roscpp, tf, sensor\+\_\+msgs, image\+\_\+transport, cv\+\_\+bridge, which are all B\+SD licensed. 
+\end{DoxyItemize}

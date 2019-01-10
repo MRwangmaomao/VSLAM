@@ -1,0 +1,186 @@
+\hypertarget{structg2o_1_1_sim3}{}\section{g2o\+:\+:Sim3 Struct Reference}
+\label{structg2o_1_1_sim3}\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+
+
+{\ttfamily \#include $<$sim3.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structg2o_1_1_sim3_adf1277575fc039d1ae643ae018e464fe}{Sim3}} ()
+\item 
+\mbox{\hyperlink{structg2o_1_1_sim3_a3f7bc6953078a87865575192221def7e}{Sim3}} (const Quaterniond \&\mbox{\hyperlink{structg2o_1_1_sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}}, const Vector3d \&\mbox{\hyperlink{structg2o_1_1_sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}}, double \mbox{\hyperlink{structg2o_1_1_sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}})
+\item 
+\mbox{\hyperlink{structg2o_1_1_sim3_a8163b7b417a91a758b10593929bae6c5}{Sim3}} (const Matrix3d \&R, const Vector3d \&\mbox{\hyperlink{structg2o_1_1_sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}}, double \mbox{\hyperlink{structg2o_1_1_sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}})
+\item 
+\mbox{\hyperlink{structg2o_1_1_sim3_a252f62d72e8449ecc929a6ca0320fcbc}{Sim3}} (const \mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}} \&update)
+\item 
+Vector3d \mbox{\hyperlink{structg2o_1_1_sim3_a577ba985864cab536688123df6063b39}{map}} (const Vector3d \&xyz) const
+\item 
+\mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}} \mbox{\hyperlink{structg2o_1_1_sim3_a63fedc1606012b8ce197554f6489080b}{log}} () const
+\item 
+\mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \mbox{\hyperlink{structg2o_1_1_sim3_aad881b9ea79640adac90d8ae58b4a5f0}{inverse}} () const
+\item 
+double \mbox{\hyperlink{structg2o_1_1_sim3_a39eb382deb0f9c006d18b9e5241ac076}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\item 
+double \& \mbox{\hyperlink{structg2o_1_1_sim3_ac48ebd09209c2484896f2dfe8bc673bf}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\item 
+\mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \mbox{\hyperlink{structg2o_1_1_sim3_a6bf3dee27d6c5e634c7c07974bf59d39}{operator$\ast$}} (const \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \&other) const
+\item 
+\mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \& \mbox{\hyperlink{structg2o_1_1_sim3_aaad597f4a82aef284896be4c6a79aeb9}{operator$\ast$=}} (const \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \&other)
+\item 
+const Vector3d \& \mbox{\hyperlink{structg2o_1_1_sim3_a835afb1f821f19ad4ef3c7c2408c8660}{translation}} () const
+\item 
+Vector3d \& \mbox{\hyperlink{structg2o_1_1_sim3_a1429af2d97c44cd364d748ef07998593}{translation}} ()
+\item 
+const Quaterniond \& \mbox{\hyperlink{structg2o_1_1_sim3_a617d35def39dbe374432980982bb9073}{rotation}} () const
+\item 
+Quaterniond \& \mbox{\hyperlink{structg2o_1_1_sim3_a4528a501c958cd71fcc6fdef74db99cc}{rotation}} ()
+\item 
+const double \& \mbox{\hyperlink{structg2o_1_1_sim3_a1eede88e7b9485c1de90a0c79cb095a3}{scale}} () const
+\item 
+double \& \mbox{\hyperlink{structg2o_1_1_sim3_a062649c3de81c514518e1095c0e49eeb}{scale}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Quaterniond \mbox{\hyperlink{structg2o_1_1_sim3_a55dbe5c6ffe22526f20e05f0c23aa832}{r}}
+\item 
+Vector3d \mbox{\hyperlink{structg2o_1_1_sim3_a3ef879fb13b88732428bd2f2a558d11c}{t}}
+\item 
+double \mbox{\hyperlink{structg2o_1_1_sim3_a2cad7c49340494d4bdd28a497e4cb486}{s}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structg2o_1_1_sim3_adf1277575fc039d1ae643ae018e464fe}\label{structg2o_1_1_sim3_adf1277575fc039d1ae643ae018e464fe}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!Sim3@{Sim3}}
+\index{Sim3@{Sim3}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{Sim3()}{Sim3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily g2o\+::\+Sim3\+::\+Sim3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a3f7bc6953078a87865575192221def7e}\label{structg2o_1_1_sim3_a3f7bc6953078a87865575192221def7e}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!Sim3@{Sim3}}
+\index{Sim3@{Sim3}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{Sim3()}{Sim3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily g2o\+::\+Sim3\+::\+Sim3 (\begin{DoxyParamCaption}\item[{const Quaterniond \&}]{r,  }\item[{const Vector3d \&}]{t,  }\item[{double}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a8163b7b417a91a758b10593929bae6c5}\label{structg2o_1_1_sim3_a8163b7b417a91a758b10593929bae6c5}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!Sim3@{Sim3}}
+\index{Sim3@{Sim3}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{Sim3()}{Sim3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily g2o\+::\+Sim3\+::\+Sim3 (\begin{DoxyParamCaption}\item[{const Matrix3d \&}]{R,  }\item[{const Vector3d \&}]{t,  }\item[{double}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a252f62d72e8449ecc929a6ca0320fcbc}\label{structg2o_1_1_sim3_a252f62d72e8449ecc929a6ca0320fcbc}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!Sim3@{Sim3}}
+\index{Sim3@{Sim3}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{Sim3()}{Sim3()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily g2o\+::\+Sim3\+::\+Sim3 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}} \&}]{update }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structg2o_1_1_sim3_aad881b9ea79640adac90d8ae58b4a5f0}\label{structg2o_1_1_sim3_aad881b9ea79640adac90d8ae58b4a5f0}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!inverse@{inverse}}
+\index{inverse@{inverse}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{inverse()}{inverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} g2o\+::\+Sim3\+::inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a63fedc1606012b8ce197554f6489080b}\label{structg2o_1_1_sim3_a63fedc1606012b8ce197554f6489080b}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!log@{log}}
+\index{log@{log}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}} g2o\+::\+Sim3\+::log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a577ba985864cab536688123df6063b39}\label{structg2o_1_1_sim3_a577ba985864cab536688123df6063b39}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!map@{map}}
+\index{map@{map}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{map()}{map()}}
+{\footnotesize\ttfamily Vector3d g2o\+::\+Sim3\+::map (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{xyz }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a6bf3dee27d6c5e634c7c07974bf59d39}\label{structg2o_1_1_sim3_a6bf3dee27d6c5e634c7c07974bf59d39}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} g2o\+::\+Sim3\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_aaad597f4a82aef284896be4c6a79aeb9}\label{structg2o_1_1_sim3_aaad597f4a82aef284896be4c6a79aeb9}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}}\& g2o\+::\+Sim3\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a39eb382deb0f9c006d18b9e5241ac076}\label{structg2o_1_1_sim3_a39eb382deb0f9c006d18b9e5241ac076}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double g2o\+::\+Sim3\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_ac48ebd09209c2484896f2dfe8bc673bf}\label{structg2o_1_1_sim3_ac48ebd09209c2484896f2dfe8bc673bf}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double\& g2o\+::\+Sim3\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a617d35def39dbe374432980982bb9073}\label{structg2o_1_1_sim3_a617d35def39dbe374432980982bb9073}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!rotation@{rotation}}
+\index{rotation@{rotation}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const Quaterniond\& g2o\+::\+Sim3\+::rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a4528a501c958cd71fcc6fdef74db99cc}\label{structg2o_1_1_sim3_a4528a501c958cd71fcc6fdef74db99cc}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!rotation@{rotation}}
+\index{rotation@{rotation}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Quaterniond\& g2o\+::\+Sim3\+::rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a1eede88e7b9485c1de90a0c79cb095a3}\label{structg2o_1_1_sim3_a1eede88e7b9485c1de90a0c79cb095a3}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!scale@{scale}}
+\index{scale@{scale}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const double\& g2o\+::\+Sim3\+::scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a062649c3de81c514518e1095c0e49eeb}\label{structg2o_1_1_sim3_a062649c3de81c514518e1095c0e49eeb}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!scale@{scale}}
+\index{scale@{scale}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double\& g2o\+::\+Sim3\+::scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a835afb1f821f19ad4ef3c7c2408c8660}\label{structg2o_1_1_sim3_a835afb1f821f19ad4ef3c7c2408c8660}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!translation@{translation}}
+\index{translation@{translation}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{translation()}{translation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const Vector3d\& g2o\+::\+Sim3\+::translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a1429af2d97c44cd364d748ef07998593}\label{structg2o_1_1_sim3_a1429af2d97c44cd364d748ef07998593}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!translation@{translation}}
+\index{translation@{translation}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{translation()}{translation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector3d\& g2o\+::\+Sim3\+::translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structg2o_1_1_sim3_a55dbe5c6ffe22526f20e05f0c23aa832}\label{structg2o_1_1_sim3_a55dbe5c6ffe22526f20e05f0c23aa832}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!r@{r}}
+\index{r@{r}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily Quaterniond g2o\+::\+Sim3\+::r\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a2cad7c49340494d4bdd28a497e4cb486}\label{structg2o_1_1_sim3_a2cad7c49340494d4bdd28a497e4cb486}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!s@{s}}
+\index{s@{s}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily double g2o\+::\+Sim3\+::s\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structg2o_1_1_sim3_a3ef879fb13b88732428bd2f2a558d11c}\label{structg2o_1_1_sim3_a3ef879fb13b88732428bd2f2a558d11c}} 
+\index{g2o\+::\+Sim3@{g2o\+::\+Sim3}!t@{t}}
+\index{t@{t}!g2o\+::\+Sim3@{g2o\+::\+Sim3}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily Vector3d g2o\+::\+Sim3\+::t\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{sim3_8h}{sim3.\+h}}\end{DoxyCompactItemize}

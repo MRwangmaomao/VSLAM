@@ -1,0 +1,103 @@
+\hypertarget{classg2o_1_1_robust_kernel_scale_delta}{}\section{g2o\+:\+:Robust\+Kernel\+Scale\+Delta Class Reference}
+\label{classg2o_1_1_robust_kernel_scale_delta}\index{g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}}
+
+
+scale a robust kernel to another delta (window size)  
+
+
+
+
+{\ttfamily \#include $<$robust\+\_\+kernel\+\_\+impl.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Robust\+Kernel\+Scale\+Delta\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_robust_kernel_scale_delta}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta_acffeae7f685e69018f5b0222155a6eb2}{Robust\+Kernel\+Scale\+Delta}} (const \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}} \&\mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta_a0d7d1119654f6e604609bb5b62e79cf2}{kernel}}, double \mbox{\hyperlink{classg2o_1_1_robust_kernel_affb1dacfd8507540281ff3af2ae6eeb8}{delta}}=1.)
+\item 
+\mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta_a537a88b2ff5432fb9e1ad2aaa85f60b9}{Robust\+Kernel\+Scale\+Delta}} (double \mbox{\hyperlink{classg2o_1_1_robust_kernel_affb1dacfd8507540281ff3af2ae6eeb8}{delta}}=1.)
+\item 
+const \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}} \mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta_a0d7d1119654f6e604609bb5b62e79cf2}{kernel}} () const
+\begin{DoxyCompactList}\small\item\em return the underlying kernel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta_a3bcc51d0cf3127e8c0431d1cddc1c75b}{set\+Kernel}} (const \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}} \&ptr)
+\begin{DoxyCompactList}\small\item\em use another kernel for the underlying operation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta_a97376c3ba35370fa551e899fd5391a2f}{robustify}} (double error, Eigen\+::\+Vector3d \&rho) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}} \mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta_a4a2976cb5f12553f0e00dfdf239b1231}{\+\_\+kernel}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+scale a robust kernel to another delta (window size) 
+
+Scales a robust kernel to another window size. Useful, in case if one implements a kernel which only is designed for a fixed window size. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_scale_delta_acffeae7f685e69018f5b0222155a6eb2}\label{classg2o_1_1_robust_kernel_scale_delta_acffeae7f685e69018f5b0222155a6eb2}} 
+\index{g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}!Robust\+Kernel\+Scale\+Delta@{Robust\+Kernel\+Scale\+Delta}}
+\index{Robust\+Kernel\+Scale\+Delta@{Robust\+Kernel\+Scale\+Delta}!g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}}
+\subsubsection{\texorpdfstring{Robust\+Kernel\+Scale\+Delta()}{RobustKernelScaleDelta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily g2o\+::\+Robust\+Kernel\+Scale\+Delta\+::\+Robust\+Kernel\+Scale\+Delta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}} \&}]{kernel,  }\item[{double}]{delta = {\ttfamily 1.} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+construct the scaled kernel ontop of another kernel which might be shared accross several scaled kernels \mbox{\Hypertarget{classg2o_1_1_robust_kernel_scale_delta_a537a88b2ff5432fb9e1ad2aaa85f60b9}\label{classg2o_1_1_robust_kernel_scale_delta_a537a88b2ff5432fb9e1ad2aaa85f60b9}} 
+\index{g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}!Robust\+Kernel\+Scale\+Delta@{Robust\+Kernel\+Scale\+Delta}}
+\index{Robust\+Kernel\+Scale\+Delta@{Robust\+Kernel\+Scale\+Delta}!g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}}
+\subsubsection{\texorpdfstring{Robust\+Kernel\+Scale\+Delta()}{RobustKernelScaleDelta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily g2o\+::\+Robust\+Kernel\+Scale\+Delta\+::\+Robust\+Kernel\+Scale\+Delta (\begin{DoxyParamCaption}\item[{double}]{delta = {\ttfamily 1.} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_scale_delta_a0d7d1119654f6e604609bb5b62e79cf2}\label{classg2o_1_1_robust_kernel_scale_delta_a0d7d1119654f6e604609bb5b62e79cf2}} 
+\index{g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}!kernel@{kernel}}
+\index{kernel@{kernel}!g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}}
+\subsubsection{\texorpdfstring{kernel()}{kernel()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}} g2o\+::\+Robust\+Kernel\+Scale\+Delta\+::kernel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the underlying kernel 
+
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_scale_delta_a97376c3ba35370fa551e899fd5391a2f}\label{classg2o_1_1_robust_kernel_scale_delta_a97376c3ba35370fa551e899fd5391a2f}} 
+\index{g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}!robustify@{robustify}}
+\index{robustify@{robustify}!g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}}
+\subsubsection{\texorpdfstring{robustify()}{robustify()}}
+{\footnotesize\ttfamily void g2o\+::\+Robust\+Kernel\+Scale\+Delta\+::robustify (\begin{DoxyParamCaption}\item[{double}]{squared\+Error,  }\item[{Eigen\+::\+Vector3d \&}]{rho }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+compute the scaling factor for a error\+: The error is e$^\wedge$T Omega e The output rho is rho\mbox{[}0\mbox{]}\+: The actual scaled error value rho\mbox{[}1\mbox{]}\+: First derivative of the scaling function rho\mbox{[}2\mbox{]}\+: Second derivative of the scaling function 
+
+Implements \mbox{\hyperlink{classg2o_1_1_robust_kernel_ab47b071a0cfe466be063f0104bc41d0f}{g2o\+::\+Robust\+Kernel}}.
+
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_scale_delta_a3bcc51d0cf3127e8c0431d1cddc1c75b}\label{classg2o_1_1_robust_kernel_scale_delta_a3bcc51d0cf3127e8c0431d1cddc1c75b}} 
+\index{g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}!set\+Kernel@{set\+Kernel}}
+\index{set\+Kernel@{set\+Kernel}!g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}}
+\subsubsection{\texorpdfstring{set\+Kernel()}{setKernel()}}
+{\footnotesize\ttfamily void g2o\+::\+Robust\+Kernel\+Scale\+Delta\+::set\+Kernel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}} \&}]{ptr }\end{DoxyParamCaption})}
+
+
+
+use another kernel for the underlying operation 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_robust_kernel_scale_delta_a4a2976cb5f12553f0e00dfdf239b1231}\label{classg2o_1_1_robust_kernel_scale_delta_a4a2976cb5f12553f0e00dfdf239b1231}} 
+\index{g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}!\+\_\+kernel@{\+\_\+kernel}}
+\index{\+\_\+kernel@{\+\_\+kernel}!g2o\+::\+Robust\+Kernel\+Scale\+Delta@{g2o\+::\+Robust\+Kernel\+Scale\+Delta}}
+\subsubsection{\texorpdfstring{\+\_\+kernel}{\_kernel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}} g2o\+::\+Robust\+Kernel\+Scale\+Delta\+::\+\_\+kernel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel__impl_8h}{robust\+\_\+kernel\+\_\+impl.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{robust__kernel__impl_8cpp}{robust\+\_\+kernel\+\_\+impl.\+cpp}}\end{DoxyCompactItemize}

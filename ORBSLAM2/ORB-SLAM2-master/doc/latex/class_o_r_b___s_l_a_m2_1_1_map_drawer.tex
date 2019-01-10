@@ -1,0 +1,91 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:Map\+Drawer Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_map_drawer}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+
+
+{\ttfamily \#include $<$Map\+Drawer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a649a10671736e192e85a6d824d776fc1}{Map\+Drawer}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$p\+Map, const string \&str\+Setting\+Path)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a79991cc944076440e4ce4326436da285}{Draw\+Map\+Points}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a5e00f408c3c2d1878ca53930903caa5f}{Draw\+Key\+Frames}} (const bool b\+Draw\+KF, const bool b\+Draw\+Graph)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_af8d3dec705fc048dac229cf682bfceb1}{Draw\+Current\+Camera}} (pangolin\+::\+Open\+Gl\+Matrix \&Twc)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_ac8c03502b5878303b31816ce5dfd9c0a}{Set\+Current\+Camera\+Pose}} (const cv\+::\+Mat \&Tcw)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_ac72cc0b3e9e3a92527b38ca12230e79c}{Set\+Reference\+Key\+Frame}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a872b93687086460e398e912191c91aca}{Get\+Current\+Open\+G\+L\+Camera\+Matrix}} (pangolin\+::\+Open\+Gl\+Matrix \&M)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_aa10e7a80919749c11774eb84219f0a4b}{mp\+Map}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_a649a10671736e192e85a6d824d776fc1}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_a649a10671736e192e85a6d824d776fc1}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!Map\+Drawer@{Map\+Drawer}}
+\index{Map\+Drawer@{Map\+Drawer}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{Map\+Drawer()}{MapDrawer()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::\+Map\+Drawer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$}]{p\+Map,  }\item[{const string \&}]{str\+Setting\+Path }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_af8d3dec705fc048dac229cf682bfceb1}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_af8d3dec705fc048dac229cf682bfceb1}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!Draw\+Current\+Camera@{Draw\+Current\+Camera}}
+\index{Draw\+Current\+Camera@{Draw\+Current\+Camera}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{Draw\+Current\+Camera()}{DrawCurrentCamera()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::\+Draw\+Current\+Camera (\begin{DoxyParamCaption}\item[{pangolin\+::\+Open\+Gl\+Matrix \&}]{Twc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_a5e00f408c3c2d1878ca53930903caa5f}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_a5e00f408c3c2d1878ca53930903caa5f}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!Draw\+Key\+Frames@{Draw\+Key\+Frames}}
+\index{Draw\+Key\+Frames@{Draw\+Key\+Frames}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{Draw\+Key\+Frames()}{DrawKeyFrames()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::\+Draw\+Key\+Frames (\begin{DoxyParamCaption}\item[{const bool}]{b\+Draw\+KF,  }\item[{const bool}]{b\+Draw\+Graph }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_a79991cc944076440e4ce4326436da285}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_a79991cc944076440e4ce4326436da285}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!Draw\+Map\+Points@{Draw\+Map\+Points}}
+\index{Draw\+Map\+Points@{Draw\+Map\+Points}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{Draw\+Map\+Points()}{DrawMapPoints()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::\+Draw\+Map\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_a872b93687086460e398e912191c91aca}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_a872b93687086460e398e912191c91aca}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!Get\+Current\+Open\+G\+L\+Camera\+Matrix@{Get\+Current\+Open\+G\+L\+Camera\+Matrix}}
+\index{Get\+Current\+Open\+G\+L\+Camera\+Matrix@{Get\+Current\+Open\+G\+L\+Camera\+Matrix}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{Get\+Current\+Open\+G\+L\+Camera\+Matrix()}{GetCurrentOpenGLCameraMatrix()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::\+Get\+Current\+Open\+G\+L\+Camera\+Matrix (\begin{DoxyParamCaption}\item[{pangolin\+::\+Open\+Gl\+Matrix \&}]{M }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_ac8c03502b5878303b31816ce5dfd9c0a}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_ac8c03502b5878303b31816ce5dfd9c0a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!Set\+Current\+Camera\+Pose@{Set\+Current\+Camera\+Pose}}
+\index{Set\+Current\+Camera\+Pose@{Set\+Current\+Camera\+Pose}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{Set\+Current\+Camera\+Pose()}{SetCurrentCameraPose()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::\+Set\+Current\+Camera\+Pose (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{Tcw }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_ac72cc0b3e9e3a92527b38ca12230e79c}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_ac72cc0b3e9e3a92527b38ca12230e79c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!Set\+Reference\+Key\+Frame@{Set\+Reference\+Key\+Frame}}
+\index{Set\+Reference\+Key\+Frame@{Set\+Reference\+Key\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{Set\+Reference\+Key\+Frame()}{SetReferenceKeyFrame()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::\+Set\+Reference\+Key\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_aa10e7a80919749c11774eb84219f0a4b}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_aa10e7a80919749c11774eb84219f0a4b}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!mp\+Map@{mp\+Map}}
+\index{mp\+Map@{mp\+Map}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{mp\+Map}{mpMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::mp\+Map}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_map_drawer_8h}{Map\+Drawer.\+h}}\item 
+src/\mbox{\hyperlink{_map_drawer_8cpp}{Map\+Drawer.\+cpp}}\end{DoxyCompactItemize}

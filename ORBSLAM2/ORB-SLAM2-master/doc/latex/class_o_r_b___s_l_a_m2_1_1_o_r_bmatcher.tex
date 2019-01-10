@@ -1,0 +1,315 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:O\+R\+Bmatcher Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+
+
+{\ttfamily \#include $<$O\+R\+Bmatcher.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a6ca536b80e44da0f56fcd35ff8c6a833}{O\+R\+Bmatcher}} (float nnratio=0.\+6, bool check\+Ori=true)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ae43d042858a3a3ca4238bb4ca519f196}{Search\+By\+Projection}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&F, const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Map\+Points, const float th=3)
+\begin{DoxyCompactList}\small\item\em 通过投影，对\+Local Map\+Point进行跟踪 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a0dba0b2bed7d16ca56e27ff4df00f557}{Search\+By\+Projection}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&Current\+Frame, const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&Last\+Frame, const float th, const bool b\+Mono)
+\begin{DoxyCompactList}\small\item\em 通过投影，对上一帧的特征点进行跟踪 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_af83a014848a63b5a3b3086386f7a865e}{Search\+By\+Projection}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&Current\+Frame, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF, const std\+::set$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&s\+Already\+Found, const float th, const int O\+R\+Bdist)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ac1c0dcdeed922c9a96760aa9a76a2fdb}{Search\+By\+Projection}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF, cv\+::\+Mat Scw, const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Points, std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Matched, int th)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a024fe40fa89785df914ef0a59cdf605d}{Search\+By\+BoW}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&F, std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Map\+Point\+Matches)
+\begin{DoxyCompactList}\small\item\em 通过词包，对关键帧的特征点进行跟踪 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ad62ee37a7d926719f16ddd17f7e48e10}{Search\+By\+BoW}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+K\+F1, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+K\+F2, std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Matches12)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aff9b6dde7878d59e334ed5ad2ddd04eb}{Search\+For\+Initialization}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&F1, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&F2, std\+::vector$<$ cv\+::\+Point2f $>$ \&vb\+Prev\+Matched, std\+::vector$<$ int $>$ \&vn\+Matches12, int window\+Size=10)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a0ecb7f018e9184c67c4a48ad8616217d}{Search\+For\+Triangulation}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+K\+F1, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+K\+F2, cv\+::\+Mat F12, std\+::vector$<$ pair$<$ size\+\_\+t, size\+\_\+t $>$ $>$ \&v\+Matched\+Pairs, const bool b\+Only\+Stereo)
+\begin{DoxyCompactList}\small\item\em 利用基本矩阵\+F12，在两个关键帧之间未匹配的特征点中产生新的3d点 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a9b9c641423a8075aa2a6f1d5bab4d211}{Search\+By\+Sim3}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+K\+F1, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+K\+F2, std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Matches12, const float \&s12, const cv\+::\+Mat \&R12, const cv\+::\+Mat \&t12, const float th)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_add796fcf9f5cae91393d4c0b767e0183}{Fuse}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF, const vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Map\+Points, const float th=3.\+0)
+\begin{DoxyCompactList}\small\item\em 将\+Map\+Points投影到关键帧p\+K\+F中，并判断是否有重复的\+Map\+Points 1.如果\+Map\+Point能匹配关键帧的特征点，并且该点有对应的\+Map\+Point，那么将两个\+Map\+Point合并（选择观测数多的） 2.如果\+Map\+Point能匹配关键帧的特征点，并且该点没有对应的\+Map\+Point，那么为该点添加\+Map\+Point \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a16efd376a838e1edf18c04229b86059d}{Fuse}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF, cv\+::\+Mat Scw, const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Points, float th, vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Replace\+Point)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a63ff10561753f23220c2bfcea9b599f3}{Descriptor\+Distance}} (const cv\+::\+Mat \&a, const cv\+::\+Mat \&b)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a810252607722e100efe4c4e941ae00a6}{T\+H\+\_\+\+L\+OW}} = 50
+\item 
+static const int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aeb28265794388e19763e9a3dabd51473}{T\+H\+\_\+\+H\+I\+GH}} = 100
+\item 
+static const int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aa2f2d9094b4f31db4f65c93778f71494}{H\+I\+S\+T\+O\+\_\+\+L\+E\+N\+G\+TH}} = 30
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a10df000eeb05466a5bbfd7b40c7db45d}{Check\+Dist\+Epipolar\+Line}} (const cv\+::\+Key\+Point \&kp1, const cv\+::\+Key\+Point \&kp2, const cv\+::\+Mat \&F12, const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF)
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ae6ae0904b9919f1141ef4a790cd34bfe}{Radius\+By\+Viewing\+Cos}} (const float \&view\+Cos)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ad6613e26706798c507b5266cdd101311}{Compute\+Three\+Maxima}} (std\+::vector$<$ int $>$ $\ast$histo, const int L, int \&ind1, int \&ind2, int \&ind3)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a08f6ee66568fa5a79600ed5ad8443893}{mf\+N\+Nratio}}
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a996a27217749aa15d2210c6dc6228495}{mb\+Check\+Orientation}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a6ca536b80e44da0f56fcd35ff8c6a833}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a6ca536b80e44da0f56fcd35ff8c6a833}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!O\+R\+Bmatcher@{O\+R\+Bmatcher}}
+\index{O\+R\+Bmatcher@{O\+R\+Bmatcher}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{O\+R\+Bmatcher()}{ORBmatcher()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+O\+R\+Bmatcher (\begin{DoxyParamCaption}\item[{float}]{nnratio = {\ttfamily 0.6},  }\item[{bool}]{check\+Ori = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em nnratio} & ratio of the best and the second score \\
+\hline
+{\em check\+Ori} & check orientation \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a10df000eeb05466a5bbfd7b40c7db45d}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a10df000eeb05466a5bbfd7b40c7db45d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Check\+Dist\+Epipolar\+Line@{Check\+Dist\+Epipolar\+Line}}
+\index{Check\+Dist\+Epipolar\+Line@{Check\+Dist\+Epipolar\+Line}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Check\+Dist\+Epipolar\+Line()}{CheckDistEpipolarLine()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Check\+Dist\+Epipolar\+Line (\begin{DoxyParamCaption}\item[{const cv\+::\+Key\+Point \&}]{kp1,  }\item[{const cv\+::\+Key\+Point \&}]{kp2,  }\item[{const cv\+::\+Mat \&}]{F12,  }\item[{const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ad6613e26706798c507b5266cdd101311}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ad6613e26706798c507b5266cdd101311}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Compute\+Three\+Maxima@{Compute\+Three\+Maxima}}
+\index{Compute\+Three\+Maxima@{Compute\+Three\+Maxima}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Compute\+Three\+Maxima()}{ComputeThreeMaxima()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Compute\+Three\+Maxima (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ $\ast$}]{histo,  }\item[{const int}]{L,  }\item[{int \&}]{ind1,  }\item[{int \&}]{ind2,  }\item[{int \&}]{ind3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a63ff10561753f23220c2bfcea9b599f3}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a63ff10561753f23220c2bfcea9b599f3}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Descriptor\+Distance@{Descriptor\+Distance}}
+\index{Descriptor\+Distance@{Descriptor\+Distance}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Descriptor\+Distance()}{DescriptorDistance()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Descriptor\+Distance (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{a,  }\item[{const cv\+::\+Mat \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_add796fcf9f5cae91393d4c0b767e0183}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_add796fcf9f5cae91393d4c0b767e0183}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Fuse@{Fuse}}
+\index{Fuse@{Fuse}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Fuse()}{Fuse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Fuse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF,  }\item[{const vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Map\+Points,  }\item[{const float}]{th = {\ttfamily 3.0} }\end{DoxyParamCaption})}
+
+
+
+将\+Map\+Points投影到关键帧p\+K\+F中，并判断是否有重复的\+Map\+Points 1.如果\+Map\+Point能匹配关键帧的特征点，并且该点有对应的\+Map\+Point，那么将两个\+Map\+Point合并（选择观测数多的） 2.如果\+Map\+Point能匹配关键帧的特征点，并且该点没有对应的\+Map\+Point，那么为该点添加\+Map\+Point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+KF} & 相邻关键帧 \\
+\hline
+{\em vp\+Map\+Points} & 当前关键帧的\+Map\+Points \\
+\hline
+{\em th} & 搜索半径的因子 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+重复\+Map\+Points的数量 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a16efd376a838e1edf18c04229b86059d}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a16efd376a838e1edf18c04229b86059d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Fuse@{Fuse}}
+\index{Fuse@{Fuse}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Fuse()}{Fuse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Fuse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF,  }\item[{cv\+::\+Mat}]{Scw,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Points,  }\item[{float}]{th,  }\item[{vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Replace\+Point }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ae6ae0904b9919f1141ef4a790cd34bfe}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ae6ae0904b9919f1141ef4a790cd34bfe}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Radius\+By\+Viewing\+Cos@{Radius\+By\+Viewing\+Cos}}
+\index{Radius\+By\+Viewing\+Cos@{Radius\+By\+Viewing\+Cos}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Radius\+By\+Viewing\+Cos()}{RadiusByViewingCos()}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Radius\+By\+Viewing\+Cos (\begin{DoxyParamCaption}\item[{const float \&}]{view\+Cos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a024fe40fa89785df914ef0a59cdf605d}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a024fe40fa89785df914ef0a59cdf605d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+By\+BoW@{Search\+By\+BoW}}
+\index{Search\+By\+BoW@{Search\+By\+BoW}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+By\+Bo\+W()}{SearchByBoW()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+By\+BoW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{F,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Map\+Point\+Matches }\end{DoxyParamCaption})}
+
+
+
+通过词包，对关键帧的特征点进行跟踪 
+
+Key\+Frame中包含了\+Map\+Points，对这些\+Map\+Points进行tracking ~\newline
+由于每一个\+Map\+Point对应有描述子，因此可以通过描述子距离进行跟踪 ~\newline
+为了加速匹配过程，将关键帧和当前帧的描述子划分到特定层的nodes中 ~\newline
+对属于同一node的描述子计算距离进行匹配 ~\newline
+通过距离阈值、比例阈值和角度投票进行剔除误匹配 
+\begin{DoxyParams}{Parameters}
+{\em p\+KF} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} \\
+\hline
+{\em F} & Current \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \\
+\hline
+{\em vp\+Map\+Point\+Matches} & F中\+Map\+Points对应的匹配，\+N\+U\+L\+L表示未匹配 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功匹配的数量 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ad62ee37a7d926719f16ddd17f7e48e10}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ad62ee37a7d926719f16ddd17f7e48e10}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+By\+BoW@{Search\+By\+BoW}}
+\index{Search\+By\+BoW@{Search\+By\+BoW}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+By\+Bo\+W()}{SearchByBoW()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+By\+BoW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+K\+F1,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+K\+F2,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Matches12 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ae43d042858a3a3ca4238bb4ca519f196}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ae43d042858a3a3ca4238bb4ca519f196}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+By\+Projection@{Search\+By\+Projection}}
+\index{Search\+By\+Projection@{Search\+By\+Projection}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+By\+Projection()}{SearchByProjection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+By\+Projection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{F,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Map\+Points,  }\item[{const float}]{th = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+
+
+通过投影，对\+Local Map\+Point进行跟踪 
+
+将\+Local Map\+Point投影到当前帧中, 由此增加当前帧的\+Map\+Points ~\newline
+在\+Search\+Local\+Points()中已经将\+Local Map\+Points重投影（is\+In\+Frustum()）到当前帧 ~\newline
+并标记了这些点是否在当前帧的视野中，即mb\+Track\+In\+View ~\newline
+对这些\+Map\+Points，在其投影点附近根据描述子距离选取匹配，以及最终的方向投票机制进行剔除 
+\begin{DoxyParams}{Parameters}
+{\em F} & 当前帧 \\
+\hline
+{\em vp\+Map\+Points} & Local Map\+Points \\
+\hline
+{\em th} & 阈值 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功匹配的数量 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Search\+Local\+Points() is\+In\+Frustum() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a0dba0b2bed7d16ca56e27ff4df00f557}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a0dba0b2bed7d16ca56e27ff4df00f557}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+By\+Projection@{Search\+By\+Projection}}
+\index{Search\+By\+Projection@{Search\+By\+Projection}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+By\+Projection()}{SearchByProjection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+By\+Projection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{Current\+Frame,  }\item[{const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{Last\+Frame,  }\item[{const float}]{th,  }\item[{const bool}]{b\+Mono }\end{DoxyParamCaption})}
+
+
+
+通过投影，对上一帧的特征点进行跟踪 
+
+上一帧中包含了\+Map\+Points，对这些\+Map\+Points进行tracking，由此增加当前帧的\+Map\+Points ~\newline
+
+\begin{DoxyEnumerate}
+\item 将上一帧的\+Map\+Points投影到当前帧(根据速度模型可以估计当前帧的\+Tcw)
+\item 在投影点附近根据描述子距离选取匹配，以及最终的方向投票机制进行剔除 
+\begin{DoxyParams}{Parameters}
+{\em Current\+Frame} & 当前帧 \\
+\hline
+{\em Last\+Frame} & 上一帧 \\
+\hline
+{\em th} & 阈值 \\
+\hline
+{\em b\+Mono} & 是否为单目 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功匹配的数量 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a024fe40fa89785df914ef0a59cdf605d}{Search\+By\+Bo\+W()}} 
+\end{DoxySeeAlso}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_af83a014848a63b5a3b3086386f7a865e}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_af83a014848a63b5a3b3086386f7a865e}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+By\+Projection@{Search\+By\+Projection}}
+\index{Search\+By\+Projection@{Search\+By\+Projection}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+By\+Projection()}{SearchByProjection()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+By\+Projection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{Current\+Frame,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF,  }\item[{const std\+::set$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{s\+Already\+Found,  }\item[{const float}]{th,  }\item[{const int}]{O\+R\+Bdist }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ac1c0dcdeed922c9a96760aa9a76a2fdb}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_ac1c0dcdeed922c9a96760aa9a76a2fdb}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+By\+Projection@{Search\+By\+Projection}}
+\index{Search\+By\+Projection@{Search\+By\+Projection}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+By\+Projection()}{SearchByProjection()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+By\+Projection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF,  }\item[{cv\+::\+Mat}]{Scw,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Points,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Matched,  }\item[{int}]{th }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a9b9c641423a8075aa2a6f1d5bab4d211}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a9b9c641423a8075aa2a6f1d5bab4d211}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+By\+Sim3@{Search\+By\+Sim3}}
+\index{Search\+By\+Sim3@{Search\+By\+Sim3}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+By\+Sim3()}{SearchBySim3()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+By\+Sim3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+K\+F1,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+K\+F2,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Matches12,  }\item[{const float \&}]{s12,  }\item[{const cv\+::\+Mat \&}]{R12,  }\item[{const cv\+::\+Mat \&}]{t12,  }\item[{const float}]{th }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aff9b6dde7878d59e334ed5ad2ddd04eb}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aff9b6dde7878d59e334ed5ad2ddd04eb}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+For\+Initialization@{Search\+For\+Initialization}}
+\index{Search\+For\+Initialization@{Search\+For\+Initialization}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+For\+Initialization()}{SearchForInitialization()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+For\+Initialization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{F1,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{F2,  }\item[{std\+::vector$<$ cv\+::\+Point2f $>$ \&}]{vb\+Prev\+Matched,  }\item[{std\+::vector$<$ int $>$ \&}]{vn\+Matches12,  }\item[{int}]{window\+Size = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a0ecb7f018e9184c67c4a48ad8616217d}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a0ecb7f018e9184c67c4a48ad8616217d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!Search\+For\+Triangulation@{Search\+For\+Triangulation}}
+\index{Search\+For\+Triangulation@{Search\+For\+Triangulation}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{Search\+For\+Triangulation()}{SearchForTriangulation()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+Search\+For\+Triangulation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+K\+F1,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+K\+F2,  }\item[{cv\+::\+Mat}]{F12,  }\item[{std\+::vector$<$ pair$<$ size\+\_\+t, size\+\_\+t $>$ $>$ \&}]{v\+Matched\+Pairs,  }\item[{const bool}]{b\+Only\+Stereo }\end{DoxyParamCaption})}
+
+
+
+利用基本矩阵\+F12，在两个关键帧之间未匹配的特征点中产生新的3d点 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+K\+F1} & 关键帧1 \\
+\hline
+{\em p\+K\+F2} & 关键帧2 \\
+\hline
+{\em F12} & 基础矩阵 \\
+\hline
+{\em v\+Matched\+Pairs} & 存储匹配特征点对，特征点用其在关键帧中的索引表示 \\
+\hline
+{\em b\+Only\+Stereo} & 在双目和rgbd情况下，要求特征点在右图存在匹配 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功匹配的数量 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aa2f2d9094b4f31db4f65c93778f71494}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aa2f2d9094b4f31db4f65c93778f71494}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!H\+I\+S\+T\+O\+\_\+\+L\+E\+N\+G\+TH@{H\+I\+S\+T\+O\+\_\+\+L\+E\+N\+G\+TH}}
+\index{H\+I\+S\+T\+O\+\_\+\+L\+E\+N\+G\+TH@{H\+I\+S\+T\+O\+\_\+\+L\+E\+N\+G\+TH}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{H\+I\+S\+T\+O\+\_\+\+L\+E\+N\+G\+TH}{HISTO\_LENGTH}}
+{\footnotesize\ttfamily const int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+H\+I\+S\+T\+O\+\_\+\+L\+E\+N\+G\+TH = 30\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a996a27217749aa15d2210c6dc6228495}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a996a27217749aa15d2210c6dc6228495}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!mb\+Check\+Orientation@{mb\+Check\+Orientation}}
+\index{mb\+Check\+Orientation@{mb\+Check\+Orientation}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{mb\+Check\+Orientation}{mbCheckOrientation}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::mb\+Check\+Orientation\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a08f6ee66568fa5a79600ed5ad8443893}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a08f6ee66568fa5a79600ed5ad8443893}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!mf\+N\+Nratio@{mf\+N\+Nratio}}
+\index{mf\+N\+Nratio@{mf\+N\+Nratio}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{mf\+N\+Nratio}{mfNNratio}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::mf\+N\+Nratio\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aeb28265794388e19763e9a3dabd51473}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_aeb28265794388e19763e9a3dabd51473}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!T\+H\+\_\+\+H\+I\+GH@{T\+H\+\_\+\+H\+I\+GH}}
+\index{T\+H\+\_\+\+H\+I\+GH@{T\+H\+\_\+\+H\+I\+GH}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{T\+H\+\_\+\+H\+I\+GH}{TH\_HIGH}}
+{\footnotesize\ttfamily const int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+T\+H\+\_\+\+H\+I\+GH = 100\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a810252607722e100efe4c4e941ae00a6}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher_a810252607722e100efe4c4e941ae00a6}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}!T\+H\+\_\+\+L\+OW@{T\+H\+\_\+\+L\+OW}}
+\index{T\+H\+\_\+\+L\+OW@{T\+H\+\_\+\+L\+OW}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher}}
+\subsubsection{\texorpdfstring{T\+H\+\_\+\+L\+OW}{TH\_LOW}}
+{\footnotesize\ttfamily const int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bmatcher\+::\+T\+H\+\_\+\+L\+OW = 50\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_o_r_bmatcher_8h}{O\+R\+Bmatcher.\+h}}\item 
+src/\mbox{\hyperlink{_o_r_bmatcher_8cpp}{O\+R\+Bmatcher.\+cpp}}\end{DoxyCompactItemize}

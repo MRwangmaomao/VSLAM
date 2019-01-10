@@ -1,0 +1,141 @@
+\hypertarget{classg2o_1_1_hyper_graph_1_1_vertex}{}\section{g2o\+:\+:Hyper\+Graph\+:\+:Vertex Class Reference}
+\label{classg2o_1_1_hyper_graph_1_1_vertex}\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+
+
+abstract \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Vertex}}, your types must derive from that one  
+
+
+
+
+{\ttfamily \#include $<$hyper\+\_\+graph.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Hyper\+Graph\+:\+:Vertex\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.953586cm]{classg2o_1_1_hyper_graph_1_1_vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a7f2e986815608e5ac4a44671ed9794ae}{Vertex}} (int \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a48191960395856d1b686287489e53da3}{id}}=-\/1)
+\begin{DoxyCompactList}\small\item\em creates a vertex having an ID specified by the argument \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a4c3da5bcc97c960c43bc49cc2ade649c}{$\sim$\+Vertex}} ()
+\item 
+int \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a48191960395856d1b686287489e53da3}{id}} () const
+\begin{DoxyCompactList}\small\item\em returns the id \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_ac861d25447d8ff167d23c45458f7382f}{set\+Id}} (int new\+Id)
+\item 
+const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set}} \& \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a3794ff3310c1dc05619bf0b77eaa4caa}{edges}} () const
+\begin{DoxyCompactList}\small\item\em returns the set of hyper-\/edges that are leaving/entering in this vertex \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set}} \& \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a35cbf4ea796797bb5d9c35a41454e8fb}{edges}} ()
+\begin{DoxyCompactList}\small\item\em returns the set of hyper-\/edges that are leaving/entering in this vertex \end{DoxyCompactList}\item 
+virtual Hyper\+Graph\+Element\+Type \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a8f214b9065b88a3aafff7442380476ab}{element\+Type}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_ac643fa36a6d666d64925281b11de9b92}{\+\_\+id}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set}} \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a8d732ebb72a545332a5bdc478b558430}{\+\_\+edges}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+abstract \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex}{Vertex}}, your types must derive from that one 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_a7f2e986815608e5ac4a44671ed9794ae}\label{classg2o_1_1_hyper_graph_1_1_vertex_a7f2e986815608e5ac4a44671ed9794ae}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{Vertex()}{Vertex()}}
+{\footnotesize\ttfamily g2o\+::\+Hyper\+Graph\+::\+Vertex\+::\+Vertex (\begin{DoxyParamCaption}\item[{int}]{id = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+creates a vertex having an ID specified by the argument 
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_a4c3da5bcc97c960c43bc49cc2ade649c}\label{classg2o_1_1_hyper_graph_1_1_vertex_a4c3da5bcc97c960c43bc49cc2ade649c}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!````~Vertex@{$\sim$\+Vertex}}
+\index{````~Vertex@{$\sim$\+Vertex}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{$\sim$\+Vertex()}{~Vertex()}}
+{\footnotesize\ttfamily g2o\+::\+Hyper\+Graph\+::\+Vertex\+::$\sim$\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ac2208bfef95bba9670f13933d68fb929}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_a3794ff3310c1dc05619bf0b77eaa4caa}\label{classg2o_1_1_hyper_graph_1_1_vertex_a3794ff3310c1dc05619bf0b77eaa4caa}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!edges@{edges}}
+\index{edges@{edges}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{edges()}{edges()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set}}\& g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the set of hyper-\/edges that are leaving/entering in this vertex 
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_a35cbf4ea796797bb5d9c35a41454e8fb}\label{classg2o_1_1_hyper_graph_1_1_vertex_a35cbf4ea796797bb5d9c35a41454e8fb}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!edges@{edges}}
+\index{edges@{edges}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{edges()}{edges()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set}}\& g2o\+::\+Hyper\+Graph\+::\+Vertex\+::edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the set of hyper-\/edges that are leaving/entering in this vertex 
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_a8f214b9065b88a3aafff7442380476ab}\label{classg2o_1_1_hyper_graph_1_1_vertex_a8f214b9065b88a3aafff7442380476ab}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{element\+Type()}{elementType()}}
+{\footnotesize\ttfamily virtual Hyper\+Graph\+Element\+Type g2o\+::\+Hyper\+Graph\+::\+Vertex\+::element\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+returns the type of the graph element, see Hyper\+Graph\+Element\+Type 
+
+Implements \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element_a1a9d7b748698c09d202373e06e413ef2}{g2o\+::\+Hyper\+Graph\+::\+Hyper\+Graph\+Element}}.
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_a48191960395856d1b686287489e53da3}\label{classg2o_1_1_hyper_graph_1_1_vertex_a48191960395856d1b686287489e53da3}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!id@{id}}
+\index{id@{id}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily int g2o\+::\+Hyper\+Graph\+::\+Vertex\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the id 
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_ac861d25447d8ff167d23c45458f7382f}\label{classg2o_1_1_hyper_graph_1_1_vertex_ac861d25447d8ff167d23c45458f7382f}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Hyper\+Graph\+::\+Vertex\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{new\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ac57651173d6ce4bb4eebf8cb1d917551}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_a8d732ebb72a545332a5bdc478b558430}\label{classg2o_1_1_hyper_graph_1_1_vertex_a8d732ebb72a545332a5bdc478b558430}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!\+\_\+edges@{\+\_\+edges}}
+\index{\+\_\+edges@{\+\_\+edges}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+edges}{\_edges}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a5e2970e236c0dcb4eff7c205d7b6b4ae}{Edge\+Set}} g2o\+::\+Hyper\+Graph\+::\+Vertex\+::\+\_\+edges\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_1_1_vertex_ac643fa36a6d666d64925281b11de9b92}\label{classg2o_1_1_hyper_graph_1_1_vertex_ac643fa36a6d666d64925281b11de9b92}} 
+\index{g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}!\+\_\+id@{\+\_\+id}}
+\index{\+\_\+id@{\+\_\+id}!g2o\+::\+Hyper\+Graph\+::\+Vertex@{g2o\+::\+Hyper\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+id}{\_id}}
+{\footnotesize\ttfamily int g2o\+::\+Hyper\+Graph\+::\+Vertex\+::\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{hyper__graph_8h}{hyper\+\_\+graph.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{hyper__graph_8cpp}{hyper\+\_\+graph.\+cpp}}\end{DoxyCompactItemize}

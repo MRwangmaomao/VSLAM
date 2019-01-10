@@ -1,0 +1,54 @@
+\hypertarget{_bow_vector_8h}{}\section{Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\+Bow\+Vector.h File Reference}
+\label{_bow_vector_8h}\index{Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\+Bow\+Vector.\+h@{Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\+Bow\+Vector.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../\+D\+Utils/config.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{D\+Bo\+W2\+::\+Bow\+Vector}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_d_bo_w2}{D\+Bo\+W2}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \mbox{\hyperlink{namespace_d_bo_w2_ab1a0d3283b2d4690a383372ed20bfeb5}{D\+Bo\+W2\+::\+Word\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of words. \end{DoxyCompactList}\item 
+typedef double \mbox{\hyperlink{namespace_d_bo_w2_a55fcd7333e591a38e96b91f41bc182f6}{D\+Bo\+W2\+::\+Word\+Value}}
+\begin{DoxyCompactList}\small\item\em Value of a word. \end{DoxyCompactList}\item 
+typedef unsigned int \mbox{\hyperlink{namespace_d_bo_w2_a3a0fa9c50c0df508759362d6204566f2}{D\+Bo\+W2\+::\+Node\+Id}}
+\begin{DoxyCompactList}\small\item\em Id of nodes in the vocabulary treee. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{_d_bo_w2_2_d_utils_2config_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} enum \mbox{\hyperlink{namespace_d_bo_w2_a53e9e0bcfc25c861815e413a7cf3fa51}{D\+Bo\+W2\+::\+L\+Norm}} \mbox{\hyperlink{namespace_d_bo_w2_a350a8bb9e38231cbf68ef07399d7a0c8}{D\+Bo\+W2\+::\+L\+Norm}}
+\begin{DoxyCompactList}\small\item\em L-\/norms for normalization. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{_d_bo_w2_2_d_utils_2config_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} enum \mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{D\+Bo\+W2\+::\+Weighting\+Type}} \mbox{\hyperlink{namespace_d_bo_w2_a66be5c3cd2567ff15eeaf56fd55fffcc}{D\+Bo\+W2\+::\+Weighting\+Type}}
+\begin{DoxyCompactList}\small\item\em Weighting type. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{_d_bo_w2_2_d_utils_2config_8h_a3472d8cdbb788d5f1815b3522595bc49}{E\+X\+P\+O\+RT}} enum \mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{D\+Bo\+W2\+::\+Scoring\+Type}} \mbox{\hyperlink{namespace_d_bo_w2_ad047d6578eacc8aaae7d9cbcd3ded537}{D\+Bo\+W2\+::\+Scoring\+Type}}
+\begin{DoxyCompactList}\small\item\em Scoring type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_d_bo_w2_a53e9e0bcfc25c861815e413a7cf3fa51}{D\+Bo\+W2\+::\+L\+Norm}} \{ \mbox{\hyperlink{namespace_d_bo_w2_a53e9e0bcfc25c861815e413a7cf3fa51a94f5879ff083c0a8364805ae4f9c2d5c}{D\+Bo\+W2\+::\+L1}}, 
+\mbox{\hyperlink{namespace_d_bo_w2_a53e9e0bcfc25c861815e413a7cf3fa51aff96c9503798aa8504a954d3832e5eaa}{D\+Bo\+W2\+::\+L2}}
+ \}
+\begin{DoxyCompactList}\small\item\em L-\/norms for normalization. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467a}{D\+Bo\+W2\+::\+Weighting\+Type}} \{ \mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467aaa3425e88466862008dff6883e07e205d}{D\+Bo\+W2\+::\+T\+F\+\_\+\+I\+DF}}, 
+\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467aa15d1950b5707de9ac0760c2c6dae48bd}{D\+Bo\+W2\+::\+TF}}, 
+\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467aa5a1c1f7cd866c8bea4551e296298c3bc}{D\+Bo\+W2\+::\+I\+DF}}, 
+\mbox{\hyperlink{namespace_d_bo_w2_a5de5c8a307aca9a84ffefda2a9bc467aae517632073c3a0b980558ebb6519d759}{D\+Bo\+W2\+::\+B\+I\+N\+A\+RY}}
+ \}
+\begin{DoxyCompactList}\small\item\em Weighting type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722}{D\+Bo\+W2\+::\+Scoring\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722a2df432e58efd2a13d4950ee96aa6a20f}{D\+Bo\+W2\+::\+L1\+\_\+\+N\+O\+RM}}, 
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722ad1a4e066e848e5247e4d94dd3e08f509}{D\+Bo\+W2\+::\+L2\+\_\+\+N\+O\+RM}}, 
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722ad0bd4548b18fb1c165961506e199f38d}{D\+Bo\+W2\+::\+C\+H\+I\+\_\+\+S\+Q\+U\+A\+RE}}, 
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722a607c4948ab28605098d7cedb9bce14ae}{D\+Bo\+W2\+::\+KL}}, 
+\newline
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722a22de570628b33a2662630def802a23cb}{D\+Bo\+W2\+::\+B\+H\+A\+T\+T\+A\+C\+H\+A\+R\+Y\+YA}}, 
+\mbox{\hyperlink{namespace_d_bo_w2_aa252a592dd607c6e60dede06ceef2722a14556ffa1d80b1c7540ea68506eb5b56}{D\+Bo\+W2\+::\+D\+O\+T\+\_\+\+P\+R\+O\+D\+U\+CT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Scoring type. \end{DoxyCompactList}\end{DoxyCompactItemize}

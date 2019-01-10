@@ -1,0 +1,310 @@
+
+\begin{DoxyItemize}
+\item Wiki 参考博客
+\item 附件 参考论文、ppt以及程序
+\end{DoxyItemize}
+
+\section*{O\+R\+B-\/\+S\+L\+A\+M2}
+
+{\bfseries Authors\+:} \href{http://webdiis.unizar.es/~raulmur/}{\tt Raul Mur-\/\+Artal}, \href{http://webdiis.unizar.es/~jdtardos/}{\tt Juan D. Tardos}, \href{http://webdiis.unizar.es/~josemari/}{\tt J. M. M. Montiel} and \href{http://doriangalvez.com/}{\tt Dorian Galvez-\/\+Lopez} (\href{https://github.com/dorian3d/DBoW2}{\tt D\+Bo\+W2})
+
+{\bfseries Current version\+:} 1.\+0.\+0
+
+O\+R\+B-\/\+S\+L\+A\+M2 is a real-\/time S\+L\+AM library for {\bfseries Monocular}, {\bfseries Stereo} and {\bfseries R\+G\+B-\/D} cameras that computes the camera trajectory and a sparse 3D reconstruction (in the stereo and R\+G\+B-\/D case with true scale). It is able to detect loops and relocalize the camera in real time. We provide examples to run the S\+L\+AM system in the \href{http://www.cvlibs.net/datasets/kitti/eval_odometry.php}{\tt K\+I\+T\+TI dataset} as stereo or monocular, in the \href{http://vision.in.tum.de/data/datasets/rgbd-dataset}{\tt T\+UM dataset} as R\+G\+B-\/D or monocular, and in the \href{http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets}{\tt Eu\+RoC dataset} as stereo or monocular. We also provide a R\+OS node to process live monocular, stereo or R\+G\+B-\/D streams. {\bfseries The library can be compiled without R\+OS}. O\+R\+B-\/\+S\+L\+A\+M2 provides a G\+UI to change between a {\itshape S\+L\+AM Mode} and {\itshape Localization Mode}, see section 9 of this document.
+
+\href{https://www.youtube.com/embed/ufvPS5wJAx0}{\tt }
+
+\subsubsection*{Related Publications\+:}
+
+\mbox{[}Monocular\mbox{]} Raúl Mur-\/\+Artal, J. M. M. Montiel and Juan D. Tardós. {\bfseries O\+R\+B-\/\+S\+L\+AM\+: A Versatile and Accurate Monocular S\+L\+AM System}. {\itshape I\+E\+EE Transactions on Robotics,} vol. 31, no. 5, pp. 1147-\/1163, 2015. ({\bfseries 2015 I\+E\+EE Transactions on Robotics Best Paper Award}). {\bfseries \href{http://webdiis.unizar.es/~raulmur/MurMontielTardosTRO15.pdf}{\tt P\+DF}}.
+
+\mbox{[}Stereo and R\+G\+B-\/D\mbox{]} Raúl Mur-\/\+Artal and Juan D. Tardós. {\bfseries O\+R\+B-\/\+S\+L\+A\+M2\+: an Open-\/\+Source S\+L\+AM System for Monocular, Stereo and R\+G\+B-\/D Cameras}. {\itshape Ar\+Xiv preprint ar\+Xiv\+:1610.\+06475} {\bfseries \href{https://128.84.21.199/pdf/1610.06475.pdf}{\tt P\+DF}}.
+
+\mbox{[}\mbox{\hyperlink{namespace_d_bo_w2}{D\+Bo\+W2}} Place Recognizer\mbox{]} Dorian Gálvez-\/\+López and Juan D. Tardós. {\bfseries Bags of Binary Words for Fast Place Recognition in Image Sequences}. {\itshape I\+E\+EE Transactions on Robotics,} vol. 28, no. 5, pp. 1188-\/1197, 2012. {\bfseries \href{http://doriangalvez.com/php/dl.php?dlp=GalvezTRO12.pdf}{\tt P\+DF}}
+
+\section*{1. License}
+
+O\+R\+B-\/\+S\+L\+A\+M2 is released under a \href{https://github.com/raulmur/ORB_SLAM2/blob/master/License-gpl.txt}{\tt G\+P\+Lv3 license}. For a list of all code/library dependencies (and associated licenses), please see https\+://github.com/raulmur/\+O\+R\+B\+\_\+\+S\+L\+A\+M2/blob/master/\+Dependencies.\+md \char`\"{}\+Dependencies.\+md\char`\"{}.
+
+For a closed-\/source version of O\+R\+B-\/\+S\+L\+A\+M2 for commercial purposes, please contact the authors\+: orbslam (at) unizar (dot) es.
+
+If you use O\+R\+B-\/\+S\+L\+A\+M2 (Monocular) in an academic work, please cite\+: \begin{DoxyVerb}@article{murTRO2015,
+  title={{ORB-SLAM}: a Versatile and Accurate Monocular {SLAM} System},
+  author={Mur-Artal, Ra\'ul, Montiel, J. M. M. and Tard\'os, Juan D.},
+  journal={IEEE Transactions on Robotics},
+  volume={31},
+  number={5},
+  pages={1147--1163},
+  doi = {10.1109/TRO.2015.2463671},
+  year={2015}
+ }
+\end{DoxyVerb}
+
+
+if you use O\+R\+B-\/\+S\+L\+A\+M2 (Stereo or R\+G\+B-\/D) in an academic work, please cite\+: \begin{DoxyVerb}@article{murORB2,
+  title={{ORB-SLAM2}: an Open-Source {SLAM} System for Monocular, Stereo and {RGB-D} Cameras},
+  author={Mur-Artal, Ra\'ul and Tard\'os, Juan D.},
+  journal={arXiv preprint arXiv:1610.06475},
+  year={2016}
+ }
+\end{DoxyVerb}
+
+
+\section*{2. Prerequisites}
+
+We have tested the library in {\bfseries Ubuntu 12.\+04} and {\bfseries 14.\+04}, but it should be easy to compile in other platforms. A powerful computer (e.\+g. i7) will ensure real-\/time performance and provide more stable and accurate results.
+
+\subsection*{C++11 or C++0x Compiler}
+
+We use the new thread and chrono functionalities of C++11.
+
+\subsection*{Pangolin}
+
+We use \href{https://github.com/stevenlovegrove/Pangolin}{\tt Pangolin} for visualization and user interface. Dowload and install instructions can be found at\+: \href{https://github.com/stevenlovegrove/Pangolin}{\tt https\+://github.\+com/stevenlovegrove/\+Pangolin}.
+
+\subsection*{Open\+CV}
+
+We use \href{http://opencv.org}{\tt Open\+CV} to manipulate images and features. Dowload and install instructions can be found at\+: \href{http://opencv.org}{\tt http\+://opencv.\+org}. {\bfseries Required at leat 2.\+4.\+3. Tested with Open\+CV 2.\+4.\+11}.
+
+\subsection*{Eigen3}
+
+Required by \mbox{\hyperlink{namespaceg2o}{g2o}} (see below). Download and install instructions can be found at\+: \href{http://eigen.tuxfamily.org}{\tt http\+://eigen.\+tuxfamily.\+org}. {\bfseries Required at least 3.\+1.\+0}.
+
+\subsection*{B\+L\+AS and L\+A\+P\+A\+CK}
+
+\href{http://www.netlib.org/blas}{\tt B\+L\+AS} and \href{http://www.netlib.org/lapack}{\tt L\+A\+P\+A\+CK} libraries are requiered by \mbox{\hyperlink{namespaceg2o}{g2o}} (see below). On ubuntu\+: 
+\begin{DoxyCode}
+sudo apt-get install libblas-dev
+sudo apt-get install liblapack-dev
+\end{DoxyCode}
+
+
+\subsection*{\mbox{\hyperlink{namespace_d_bo_w2}{D\+Bo\+W2}} and \mbox{\hyperlink{namespaceg2o}{g2o}} (Included in Thirdparty folder)}
+
+We use modified versions of the \href{https://github.com/dorian3d/DBoW2}{\tt D\+Bo\+W2} library to perform place recognition and \href{https://github.com/RainerKuemmerle/g2o}{\tt g2o} library to perform non-\/linear optimizations. Both modified libraries (which are B\+SD) are included in the {\itshape Thirdparty} folder.
+
+\subsection*{R\+OS (optional)}
+
+We provide some examples to process the live input of a monocular, stereo or R\+G\+B-\/D camera using \href{ros.org}{\tt R\+OS}. Building these examples is optional. In case you want to use R\+OS, a version Hydro or newer is needed.
+
+\#3. Building O\+R\+B-\/\+S\+L\+A\+M2 library and T\+U\+M/\+K\+I\+T\+TI examples
+
+Clone the repository\+: 
+\begin{DoxyCode}
+git clone https://github.com/raulmur/ORB\_SLAM2.git ORB\_SLAM2
+\end{DoxyCode}
+
+
+We provide a script {\ttfamily build.\+sh} to build the {\itshape Thirdparty} libraries and {\itshape O\+R\+B-\/\+S\+L\+A\+M2}. Please make sure you have installed all required dependencies (see section 2). Execute\+: 
+\begin{DoxyCode}
+cd ORB\_SLAM2
+chmod +x build.sh
+./build.sh
+\end{DoxyCode}
+
+
+This will create {\bfseries lib\+O\+R\+B\+\_\+\+S\+L\+A\+M2.\+so} at {\itshape lib} folder and the executables {\bfseries mono\+\_\+tum}, {\bfseries mono\+\_\+kitti}, {\bfseries rgbd\+\_\+tum}, {\bfseries stereo\+\_\+kitti}, {\bfseries mono\+\_\+euroc} and {\bfseries stereo\+\_\+euroc} in {\itshape Examples} folder.
+
+\section*{4. Monocular Examples}
+
+\subsection*{T\+UM Dataset}
+
+
+\begin{DoxyEnumerate}
+\item Download a sequence from \href{http://vision.in.tum.de/data/datasets/rgbd-dataset/download}{\tt http\+://vision.\+in.\+tum.\+de/data/datasets/rgbd-\/dataset/download} and uncompress it.
+\item Execute the following command. Change {\ttfamily T\+U\+M\+X.\+yaml} to T\+U\+M1.\+yaml,T\+U\+M2.\+yaml or T\+U\+M3.\+yaml for freiburg1, freiburg2 and freiburg3 sequences respectively. Change {\ttfamily P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+F\+O\+L\+D\+ER}to the uncompressed sequence folder. 
+\begin{DoxyCode}
+./Examples/Monocular/mono\_tum Vocabulary/ORBvoc.txt Examples/Monocular/TUMX.yaml PATH\_TO\_SEQUENCE\_FOLDER
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\subsection*{K\+I\+T\+TI Dataset}
+
+
+\begin{DoxyEnumerate}
+\item Download the dataset (grayscale images) from \href{http://www.cvlibs.net/datasets/kitti/eval_odometry.php}{\tt http\+://www.\+cvlibs.\+net/datasets/kitti/eval\+\_\+odometry.\+php}
+\item Execute the following command. Change {\ttfamily K\+I\+T\+T\+I\+X.\+yaml}by K\+I\+T\+T\+I00-\/02.\+yaml, K\+I\+T\+T\+I03.\+yaml or K\+I\+T\+T\+I04-\/12.\+yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change {\ttfamily P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+D\+A\+T\+A\+S\+E\+T\+\_\+\+F\+O\+L\+D\+ER} to the uncompressed dataset folder. Change {\ttfamily S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+N\+U\+M\+B\+ER} to 00, 01, 02,.., 11. 
+\begin{DoxyCode}
+./Examples/Monocular/mono\_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTIX.yaml
+       PATH\_TO\_DATASET\_FOLDER/dataset/sequences/SEQUENCE\_NUMBER
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\subsection*{Eu\+RoC Dataset}
+
+
+\begin{DoxyEnumerate}
+\item Download a sequence (A\+SL format) from \href{http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets}{\tt http\+://projects.\+asl.\+ethz.\+ch/datasets/doku.\+php?id=kmavvisualinertialdatasets}
+\item Execute the following first command for V1 and V2 sequences, or the second command for MH sequences. Change P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+F\+O\+L\+D\+ER and S\+E\+Q\+U\+E\+N\+CE according to the sequence you want to run. 
+\begin{DoxyCode}
+./Examples/Monocular/mono\_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml
+       PATH\_TO\_SEQUENCE\_FOLDER/mav0/cam0/data Examples/Monocular/EuRoC\_TimeStamps/SEQUENCE.txt 
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+./Examples/Monocular/mono\_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml
+       PATH\_TO\_SEQUENCE/cam0/data Examples/Monocular/EuRoC\_TimeStamps/SEQUENCE.txt 
+\end{DoxyCode}
+
+
+\section*{5. Stereo Examples}
+
+\subsection*{K\+I\+T\+TI Dataset}
+
+
+\begin{DoxyEnumerate}
+\item Download the dataset (grayscale images) from \href{http://www.cvlibs.net/datasets/kitti/eval_odometry.php}{\tt http\+://www.\+cvlibs.\+net/datasets/kitti/eval\+\_\+odometry.\+php}
+\item Execute the following command. Change {\ttfamily K\+I\+T\+T\+I\+X.\+yaml}to K\+I\+T\+T\+I00-\/02.\+yaml, K\+I\+T\+T\+I03.\+yaml or K\+I\+T\+T\+I04-\/12.\+yaml for sequence 0 to 2, 3, and 4 to 12 respectively. Change {\ttfamily P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+D\+A\+T\+A\+S\+E\+T\+\_\+\+F\+O\+L\+D\+ER} to the uncompressed dataset folder. Change {\ttfamily S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+N\+U\+M\+B\+ER} to 00, 01, 02,.., 11. 
+\begin{DoxyCode}
+./Examples/Stereo/stereo\_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTIX.yaml
+       PATH\_TO\_DATASET\_FOLDER/dataset/sequences/SEQUENCE\_NUMBER
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\subsection*{Eu\+RoC Dataset}
+
+
+\begin{DoxyEnumerate}
+\item Download a sequence (A\+SL format) from \href{http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets}{\tt http\+://projects.\+asl.\+ethz.\+ch/datasets/doku.\+php?id=kmavvisualinertialdatasets}
+\item Execute the following first command for V1 and V2 sequences, or the second command for MH sequences. Change P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+F\+O\+L\+D\+ER and S\+E\+Q\+U\+E\+N\+CE according to the sequence you want to run. 
+\begin{DoxyCode}
+./Examples/Stereo/stereo\_euroc Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml
+       PATH\_TO\_SEQUENCE/mav0/cam0/data PATH\_TO\_SEQUENCE/mav0/cam1/data Examples/Stereo/EuRoC\_TimeStamps/SEQUENCE.txt
+\end{DoxyCode}
+ 
+\begin{DoxyCode}
+./Examples/Stereo/stereo\_euroc Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml PATH\_TO\_SEQUENCE/cam0/data
+       PATH\_TO\_SEQUENCE/cam1/data Examples/Stereo/EuRoC\_TimeStamps/SEQUENCE.txt
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\section*{6. R\+G\+B-\/D Example}
+
+\subsection*{T\+UM Dataset}
+
+
+\begin{DoxyEnumerate}
+\item Download a sequence from \href{http://vision.in.tum.de/data/datasets/rgbd-dataset/download}{\tt http\+://vision.\+in.\+tum.\+de/data/datasets/rgbd-\/dataset/download} and uncompress it.
+\item Associate R\+GB images and depth images using the python script \href{http://vision.in.tum.de/data/datasets/rgbd-dataset/tools}{\tt associate.\+py}. We already provide associations for some of the sequences in {\itshape Examples/\+R\+G\+B-\/\+D/associations/}. You can generate your own associations file executing\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+python associate.py PATH\_TO\_SEQUENCE/rgb.txt PATH\_TO\_SEQUENCE/depth.txt > associations.txt
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Execute the following command. Change {\ttfamily T\+U\+M\+X.\+yaml} to T\+U\+M1.\+yaml,T\+U\+M2.\+yaml or T\+U\+M3.\+yaml for freiburg1, freiburg2 and freiburg3 sequences respectively. Change {\ttfamily P\+A\+T\+H\+\_\+\+T\+O\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+F\+O\+L\+D\+ER}to the uncompressed sequence folder. Change {\ttfamily A\+S\+S\+O\+C\+I\+A\+T\+I\+O\+N\+S\+\_\+\+F\+I\+LE} to the path to the corresponding associations file.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+./Examples/RGB-D/rgbd\_tum Vocabulary/ORBvoc.txt Examples/RGB-D/TUMX.yaml PATH\_TO\_SEQUENCE\_FOLDER
+       ASSOCIATIONS\_FILE
+\end{DoxyCode}
+
+
+\section*{7. R\+OS Examples}
+
+\subsubsection*{Building the nodes for mono, stereo and R\+G\+B-\/D}
+
+
+\begin{DoxyEnumerate}
+\item Add the path including {\itshape Examples/\+R\+O\+S/\+O\+R\+B\+\_\+\+S\+L\+A\+M2} to the R\+O\+S\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+P\+A\+TH environment variable. Open .bashrc file and add at the end the following line. Replace P\+A\+TH by the folder where you cloned \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2}{O\+R\+B\+\_\+\+S\+L\+A\+M2}}\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+export ROS\_PACKAGE\_PATH=$\{ROS\_PACKAGE\_PATH\}:PATH/ORB\_SLAM2/Examples/ROS
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Go to {\itshape Examples/\+R\+O\+S/\+O\+R\+B\+\_\+\+S\+L\+A\+M2} folder and execute\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+mkdir build
+cd build
+cmake .. -DROS\_BUILD\_TYPE=Release
+make -j
+\end{DoxyCode}
+
+
+\subsubsection*{Running Monocular Node}
+
+For a monocular input from topic {\ttfamily /camera/image\+\_\+raw} run node O\+R\+B\+\_\+\+S\+L\+A\+M2/\+Mono. You will need to provide the vocabulary file and a settings file. See the monocular examples above.
+
+
+\begin{DoxyCode}
+rosrun ORB\_SLAM2 Mono PATH\_TO\_VOCABULARY PATH\_TO\_SETTINGS\_FILE
+\end{DoxyCode}
+
+
+\subsubsection*{Running Stereo Node}
+
+For a stereo input from topic {\ttfamily /camera/left/image\+\_\+raw} and {\ttfamily /camera/right/image\+\_\+raw} run node O\+R\+B\+\_\+\+S\+L\+A\+M2/\+Stereo. You will need to provide the vocabulary file and a settings file. If you {\bfseries provide rectification matrices} (see Examples/\+Stereo/\+Eu\+Ro\+C.\+yaml example), the node will recitify the images online, {\bfseries otherwise images must be pre-\/rectified}.
+
+
+\begin{DoxyCode}
+rosrun ORB\_SLAM2 Stereo PATH\_TO\_VOCABULARY PATH\_TO\_SETTINGS\_FILE ONLINE\_RECTIFICATION
+\end{DoxyCode}
+
+
+{\bfseries Example}\+: Download a rosbag (e.\+g. V1\+\_\+01\+\_\+easy.\+bag) from the Eu\+RoC dataset (\href{http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets}{\tt http\+://projects.\+asl.\+ethz.\+ch/datasets/doku.\+php?id=kmavvisualinertialdatasets}). Open 3 tabs on the terminal and run the following command at each tab\+: 
+\begin{DoxyCode}
+roscore
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+rosrun ORB\_SLAM2 Stereo Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml true
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}
+rosbag play --pause V1\_01\_easy.bag /cam0/image\_raw:=/camera/left/image\_raw
+       /cam1/image\_raw:=/camera/right/image\_raw
+\end{DoxyCode}
+
+
+Once O\+R\+B-\/\+S\+L\+A\+M2 has loaded the vocabulary, press space in the rosbag tab. Enjoy!. Note\+: a powerful computer is required to run the most exigent sequences of this dataset.
+
+\subsubsection*{Running R\+G\+B\+\_\+D Node}
+
+For an R\+G\+B-\/D input from topics {\ttfamily /camera/rgb/image\+\_\+raw} and {\ttfamily /camera/depth\+\_\+registered/image\+\_\+raw}, run node O\+R\+B\+\_\+\+S\+L\+A\+M2/\+R\+G\+BD. You will need to provide the vocabulary file and a settings file. See the R\+G\+B-\/D example above.
+
+
+\begin{DoxyCode}
+rosrun ORB\_SLAM2 RGBD PATH\_TO\_VOCABULARY PATH\_TO\_SETTINGS\_FILE
+\end{DoxyCode}
+
+
+\section*{8. Processing your own sequences}
+
+You will need to create a settings file with the calibration of your camera. See the settings file provided for the T\+UM and K\+I\+T\+TI datasets for monocular, stereo and R\+G\+B-\/D cameras. We use the calibration model of Open\+CV. See the examples to learn how to create a program that makes use of the O\+R\+B-\/\+S\+L\+A\+M2 library and how to pass images to the S\+L\+AM system. Stereo input must be synchronized and rectified. R\+G\+B-\/D input must be synchronized and depth registered.
+
+\section*{9. S\+L\+AM and Localization Modes}
+
+You can change between the {\itshape S\+L\+AM} and {\itshape Localization mode} using the G\+UI of the map viewer.
+
+\subsubsection*{S\+L\+AM Mode}
+
+This is the default mode. The system runs in parallal three threads\+: Tracking, Local Mapping and Loop Closing. The system localizes the camera, builds new map and tries to close loops.
+
+\subsubsection*{Localization Mode}
+
+This mode can be used when you have a good map of your working area. In this mode the Local Mapping and Loop Closing are deactivated. The system localizes the camera in the map (which is no longer updated), using relocalization if needed. 

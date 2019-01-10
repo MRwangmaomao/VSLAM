@@ -1,0 +1,93 @@
+\hypertarget{class_d_bo_w2_1_1_general_scoring}{}\section{D\+Bo\+W2\+:\+:General\+Scoring Class Reference}
+\label{class_d_bo_w2_1_1_general_scoring}\index{D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}}
+
+
+Base class of scoring functions.  
+
+
+
+
+{\ttfamily \#include $<$Scoring\+Object.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_d_bo_w2_1_1_general_scoring_a43b3f5fedb19e6a19e17b9813efd17e8}{score}} (const \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&v, const \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&w) const =0
+\item 
+virtual bool \mbox{\hyperlink{class_d_bo_w2_1_1_general_scoring_ab0cadafd50b0f2f559f6325a6944f72f}{must\+Normalize}} (\mbox{\hyperlink{namespace_d_bo_w2_a53e9e0bcfc25c861815e413a7cf3fa51}{L\+Norm}} \&norm) const =0
+\item 
+virtual \mbox{\hyperlink{class_d_bo_w2_1_1_general_scoring_a1796812280a5188e06d8137baa977776}{$\sim$\+General\+Scoring}} ()
+\begin{DoxyCompactList}\small\item\em Required for virtual base classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const double \mbox{\hyperlink{class_d_bo_w2_1_1_general_scoring_af470bccf750689525622f216f07d6f3c}{L\+O\+G\+\_\+\+E\+PS}} = log(D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)
+\begin{DoxyCompactList}\small\item\em Log of epsilon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class of scoring functions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_general_scoring_a1796812280a5188e06d8137baa977776}\label{class_d_bo_w2_1_1_general_scoring_a1796812280a5188e06d8137baa977776}} 
+\index{D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}!````~General\+Scoring@{$\sim$\+General\+Scoring}}
+\index{````~General\+Scoring@{$\sim$\+General\+Scoring}!D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}}
+\subsubsection{\texorpdfstring{$\sim$\+General\+Scoring()}{~GeneralScoring()}}
+{\footnotesize\ttfamily virtual D\+Bo\+W2\+::\+General\+Scoring\+::$\sim$\+General\+Scoring (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Required for virtual base classes. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_general_scoring_ab0cadafd50b0f2f559f6325a6944f72f}\label{class_d_bo_w2_1_1_general_scoring_ab0cadafd50b0f2f559f6325a6944f72f}} 
+\index{D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}!must\+Normalize@{must\+Normalize}}
+\index{must\+Normalize@{must\+Normalize}!D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}}
+\subsubsection{\texorpdfstring{must\+Normalize()}{mustNormalize()}}
+{\footnotesize\ttfamily virtual bool D\+Bo\+W2\+::\+General\+Scoring\+::must\+Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_d_bo_w2_a53e9e0bcfc25c861815e413a7cf3fa51}{L\+Norm}} \&}]{norm }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns whether a vector must be normalized before scoring according to the scoring scheme 
+\begin{DoxyParams}{Parameters}
+{\em norm} & norm to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff must normalize 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_general_scoring_a43b3f5fedb19e6a19e17b9813efd17e8}\label{class_d_bo_w2_1_1_general_scoring_a43b3f5fedb19e6a19e17b9813efd17e8}} 
+\index{D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}!score@{score}}
+\index{score@{score}!D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}}
+\subsubsection{\texorpdfstring{score()}{score()}}
+{\footnotesize\ttfamily virtual double D\+Bo\+W2\+::\+General\+Scoring\+::score (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&}]{v,  }\item[{const \mbox{\hyperlink{class_d_bo_w2_1_1_bow_vector}{Bow\+Vector}} \&}]{w }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Computes the score between two vectors. Vectors must be sorted and normalized if necessary 
+\begin{DoxyParams}{Parameters}
+{\em v} & (in/out) \\
+\hline
+{\em w} & (in/out) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+score 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_general_scoring_af470bccf750689525622f216f07d6f3c}\label{class_d_bo_w2_1_1_general_scoring_af470bccf750689525622f216f07d6f3c}} 
+\index{D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}!L\+O\+G\+\_\+\+E\+PS@{L\+O\+G\+\_\+\+E\+PS}}
+\index{L\+O\+G\+\_\+\+E\+PS@{L\+O\+G\+\_\+\+E\+PS}!D\+Bo\+W2\+::\+General\+Scoring@{D\+Bo\+W2\+::\+General\+Scoring}}
+\subsubsection{\texorpdfstring{L\+O\+G\+\_\+\+E\+PS}{LOG\_EPS}}
+{\footnotesize\ttfamily const double General\+Scoring\+::\+L\+O\+G\+\_\+\+E\+PS = log(D\+B\+L\+\_\+\+E\+P\+S\+I\+L\+ON)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Log of epsilon. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\mbox{\hyperlink{_scoring_object_8h}{Scoring\+Object.\+h}}\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\mbox{\hyperlink{_scoring_object_8cpp}{Scoring\+Object.\+cpp}}\end{DoxyCompactItemize}

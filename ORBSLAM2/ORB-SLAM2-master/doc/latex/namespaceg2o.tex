@@ -1,0 +1,865 @@
+\hypertarget{namespaceg2o}{}\section{g2o Namespace Reference}
+\label{namespaceg2o}\index{g2o@{g2o}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceg2o_1_1internal}{internal}}
+\item 
+ \mbox{\hyperlink{namespaceg2o_1_1types__six__dof__expmap}{types\+\_\+six\+\_\+dof\+\_\+expmap}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_abstract_hyper_graph_element_creator}{Abstract\+Hyper\+Graph\+Element\+Creator}}
+\begin{DoxyCompactList}\small\item\em Abstract interface for allocating Hyper\+Graph\+Element. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_abstract_optimization_algorithm_creator}{Abstract\+Optimization\+Algorithm\+Creator}}
+\begin{DoxyCompactList}\small\item\em base for allocating an optimization algorithm \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_abstract_robust_kernel_creator}{Abstract\+Robust\+Kernel\+Creator}}
+\begin{DoxyCompactList}\small\item\em Abstract interface for allocating a robust kernel. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_base_binary_edge}{Base\+Binary\+Edge}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_base_multi_edge}{Base\+Multi\+Edge}}
+\begin{DoxyCompactList}\small\item\em base class to represent an edge connecting an arbitrary number of nodes \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_base_property}{Base\+Property}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_base_unary_edge}{Base\+Unary\+Edge}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_base_vertex}{Base\+Vertex}}
+\begin{DoxyCompactList}\small\item\em Templatized \mbox{\hyperlink{classg2o_1_1_base_vertex}{Base\+Vertex}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}
+\begin{DoxyCompactList}\small\item\em Implementation of a solver operating on the blocks of the Hessian. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_block_solver_base}{Block\+Solver\+Base}}
+\begin{DoxyCompactList}\small\item\em base for the block solvers with some basic function interfaces \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}
+\begin{DoxyCompactList}\small\item\em traits to summarize the properties of the fixed size optimization problem \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_block_solver_traits_3_01_eigen_1_1_dynamic_00_01_eigen_1_1_dynamic_01_4}{Block\+Solver\+Traits$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$}}
+\begin{DoxyCompactList}\small\item\em traits to summarize the properties of the dynamic size optimization problem \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_cache}{Cache}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_col_sort}{Col\+Sort}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_draw_action}{Draw\+Action}}
+\begin{DoxyCompactList}\small\item\em draw actions \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_edge_inverse_sim3_project_x_y_z}{Edge\+Inverse\+Sim3\+Project\+X\+YZ}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z}{Edge\+S\+E3\+Project\+X\+YZ}}
+\begin{DoxyCompactList}\small\item\em N\+O\+TE uesd in Optimizer\+::\+Bundle\+Adjustment(), Optimizer\+::\+Local\+Bundle\+Adjustment() \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose}{Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\begin{DoxyCompactList}\small\item\em N\+O\+TE uesd in Optimizer\+::\+Pose\+Optimization() \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_edge_sim3}{Edge\+Sim3}}
+\begin{DoxyCompactList}\small\item\em 7D edge between two Vertex7 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_edge_sim3_project_x_y_z}{Edge\+Sim3\+Project\+X\+YZ}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_edge_stereo_s_e3_project_x_y_z}{Edge\+Stereo\+S\+E3\+Project\+X\+YZ}}
+\begin{DoxyCompactList}\small\item\em N\+O\+TE uesd in Optimizer\+::\+Bundle\+Adjustment(), Optimizer\+::\+Local\+Bundle\+Adjustment() \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_edge_stereo_s_e3_project_x_y_z_only_pose}{Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose}}
+\begin{DoxyCompactList}\small\item\em N\+O\+TE uesd in Optimizer\+::\+Pose\+Optimization() \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_estimate_propagator}{Estimate\+Propagator}}
+\begin{DoxyCompactList}\small\item\em propagation of an initial guess \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_estimate_propagator_cost}{Estimate\+Propagator\+Cost}}
+\begin{DoxyCompactList}\small\item\em cost for traversing along active edges in the optimizer \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_estimate_propagator_cost_odometry}{Estimate\+Propagator\+Cost\+Odometry}}
+\begin{DoxyCompactList}\small\item\em cost for traversing only odometry edges. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_factory}{Factory}}
+\begin{DoxyCompactList}\small\item\em create vertices and edges based on T\+A\+Gs in, for example, a file \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_force_linker}{Force\+Linker}}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}}
+\begin{DoxyCompactList}\small\item\em statistics about the optimization \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra}{Hyper\+Dijkstra}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_action}{Hyper\+Graph\+Action}}
+\begin{DoxyCompactList}\small\item\em Abstract action that operates on an entire graph. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_action_library}{Hyper\+Graph\+Action\+Library}}
+\begin{DoxyCompactList}\small\item\em library of actions, indexed by the action name; \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}}
+\begin{DoxyCompactList}\small\item\em Abstract action that operates on a graph entity. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection}{Hyper\+Graph\+Element\+Action\+Collection}}
+\begin{DoxyCompactList}\small\item\em collection of actions \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_creator}{Hyper\+Graph\+Element\+Creator}}
+\begin{DoxyCompactList}\small\item\em templatized creator class which creates graph elements \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_jacobian_workspace}{Jacobian\+Workspace}}
+\begin{DoxyCompactList}\small\item\em provide memory workspace for computing the Jacobians \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_linear_solver}{Linear\+Solver}}
+\begin{DoxyCompactList}\small\item\em basic solver for Ax = b \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_linear_solver_c_c_s}{Linear\+Solver\+C\+CS}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classg2o_1_1_solver}{Solver}} with faster iterating structure for the linear matrix. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{Linear\+Solver\+Dense}}
+\begin{DoxyCompactList}\small\item\em linear solver using dense cholesky decomposition \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_linear_solver_eigen}{Linear\+Solver\+Eigen}}
+\begin{DoxyCompactList}\small\item\em linear solver which uses the sparse Cholesky solver from Eigen \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_marginal_covariance_cholesky}{Marginal\+Covariance\+Cholesky}}
+\begin{DoxyCompactList}\small\item\em computing the marginal covariance given a cholesky factor (lower triangle of the factor) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_matrix_elem}{Matrix\+Elem}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_matrix_structure}{Matrix\+Structure}}
+\begin{DoxyCompactList}\small\item\em representing the structure of a matrix in column compressed structure (only the upper triangular part of the matrix) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_open_m_p_mutex}{Open\+M\+P\+Mutex}}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_optimization_algorithm}{Optimization\+Algorithm}}
+\begin{DoxyCompactList}\small\item\em Generic interface for a non-\/linear solver operating on a graph. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_dogleg}{Optimization\+Algorithm\+Dogleg}}
+\begin{DoxyCompactList}\small\item\em Implementation of Powell\textquotesingle{}s Dogleg Algorithm. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_factory}{Optimization\+Algorithm\+Factory}}
+\begin{DoxyCompactList}\small\item\em create solvers based on their short name \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_gauss_newton}{Optimization\+Algorithm\+Gauss\+Newton}}
+\begin{DoxyCompactList}\small\item\em Implementation of the Gauss Newton Algorithm. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_levenberg}{Optimization\+Algorithm\+Levenberg}}
+\begin{DoxyCompactList}\small\item\em Implementation of the Levenberg Algorithm. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_optimization_algorithm_property}{Optimization\+Algorithm\+Property}}
+\begin{DoxyCompactList}\small\item\em describe the properties of a solver \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_optimization_algorithm_with_hessian}{Optimization\+Algorithm\+With\+Hessian}}
+\begin{DoxyCompactList}\small\item\em Base for solvers operating on the approximated Hessian, e.\+g., Gauss-\/\+Newton, Levenberg. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_parameter_container}{Parameter\+Container}}
+\begin{DoxyCompactList}\small\item\em map id to parameters \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_property}{Property}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_property_map}{Property\+Map}}
+\begin{DoxyCompactList}\small\item\em a collection of properties mapping from name to the property itself \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_register_action_proxy}{Register\+Action\+Proxy}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_register_optimization_algorithm_proxy}{Register\+Optimization\+Algorithm\+Proxy}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_register_robust_kernel_proxy}{Register\+Robust\+Kernel\+Proxy}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_register_type_proxy}{Register\+Type\+Proxy}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel}{Robust\+Kernel}}
+\begin{DoxyCompactList}\small\item\em base for all robust cost functions \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_cauchy}{Robust\+Kernel\+Cauchy}}
+\begin{DoxyCompactList}\small\item\em Cauchy cost function. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_creator}{Robust\+Kernel\+Creator}}
+\begin{DoxyCompactList}\small\item\em templatized creator class which creates graph elements \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_d_c_s}{Robust\+Kernel\+D\+CS}}
+\begin{DoxyCompactList}\small\item\em Dynamic covariance scaling -\/ D\+CS. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_factory}{Robust\+Kernel\+Factory}}
+\begin{DoxyCompactList}\small\item\em create robust kernels based on their human readable name \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_huber}{Robust\+Kernel\+Huber}}
+\begin{DoxyCompactList}\small\item\em Huber Cost Function. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_pseudo_huber}{Robust\+Kernel\+Pseudo\+Huber}}
+\begin{DoxyCompactList}\small\item\em Pseudo Huber Cost Function. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_saturated}{Robust\+Kernel\+Saturated}}
+\begin{DoxyCompactList}\small\item\em Saturated cost function. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_scale_delta}{Robust\+Kernel\+Scale\+Delta}}
+\begin{DoxyCompactList}\small\item\em scale a robust kernel to another delta (window size) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_tukey}{Robust\+Kernel\+Tukey}}
+\begin{DoxyCompactList}\small\item\em Tukey Cost Function. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_scoped_open_m_p_mutex}{Scoped\+Open\+M\+P\+Mutex}}
+\begin{DoxyCompactList}\small\item\em lock a mutex within a scope \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_scope_time}{Scope\+Time}}
+\begin{DoxyCompactList}\small\item\em Class to measure the time spent in a scope. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_solver}{Solver}}
+\begin{DoxyCompactList}\small\item\em Generic interface for a sparse solver operating on a graph which solves one iteration of the linearized objective function. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}
+\begin{DoxyCompactList}\small\item\em Sparse matrix which uses blocks. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_c_c_s}{Sparse\+Block\+Matrix\+C\+CS}}
+\begin{DoxyCompactList}\small\item\em Sparse matrix which uses blocks. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_diagonal}{Sparse\+Block\+Matrix\+Diagonal}}
+\begin{DoxyCompactList}\small\item\em Sparse matrix which uses blocks on the diagonal. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_hash_map}{Sparse\+Block\+Matrix\+Hash\+Map}}
+\begin{DoxyCompactList}\small\item\em Sparse matrix which uses blocks based on hash structures. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_sparse_optimizer}{Sparse\+Optimizer}}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_uniform_cost_function}{Uniform\+Cost\+Function}}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_vertex_s_b_a_point_x_y_z}{Vertex\+S\+B\+A\+Point\+X\+YZ}}
+\begin{DoxyCompactList}\small\item\em Point vertex, X\+YZ. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap}{Vertex\+S\+E3\+Expmap}}
+\begin{DoxyCompactList}\small\item\em S\+E3 Vertex parameterized internally with a transformation matrix and externally with its exponential map. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_vertex_sim3_expmap}{Vertex\+Sim3\+Expmap}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} Vertex, (x,y,z,qw,qx,qy,qz) the parameterization for the increments constructed is a 7d vector (x,y,z,qx,qy,qz) (note that we leave out the w part of the quaternion. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_write_gnuplot_action}{Write\+Gnuplot\+Action}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}} $>$ \mbox{\hyperlink{namespaceg2o_a526b32fde21f83173acb2bb29db68275}{Batch\+Statistics\+Container}}
+\item 
+typedef Eigen\+::\+Matrix$<$ int, 2, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_affca5cbeca977d670b96298de84c5d2c}{Vector2I}}
+\item 
+typedef Eigen\+::\+Matrix$<$ int, 3, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a501b6f80eef8d521f6fd1a31e8413f3a}{Vector3I}}
+\item 
+typedef Eigen\+::\+Matrix$<$ int, 4, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a7a368c33c15d52cca214b779a5fb32ce}{Vector4I}}
+\item 
+typedef Eigen\+::\+Matrix$<$ int, Eigen\+::\+Dynamic, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a2797ddaf7a7a6dc22843a38d34754e55}{Vector\+XI}}
+\item 
+typedef Eigen\+::\+Matrix$<$ float, 2, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_ab48f53e68ad9d381fcad63c4901af2e2}{Vector2F}}
+\item 
+typedef Eigen\+::\+Matrix$<$ float, 3, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a0c03efd6b49abac71bfb012cc3237288}{Vector3F}}
+\item 
+typedef Eigen\+::\+Matrix$<$ float, 4, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_aebecb51a41734608aeea377a31ee88c6}{Vector4F}}
+\item 
+typedef Eigen\+::\+Matrix$<$ float, Eigen\+::\+Dynamic, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a79143ea34679a74ee7ab02342b3a21df}{Vector\+XF}}
+\item 
+typedef Eigen\+::\+Matrix$<$ double, 2, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a98731c1a538fbbbb105bc81434ebdecb}{Vector2D}}
+\item 
+typedef Eigen\+::\+Matrix$<$ double, 3, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a944c2b1b0f84d33a7b297a4a585bf319}{Vector3D}}
+\item 
+typedef Eigen\+::\+Matrix$<$ double, 4, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_afd9c8c912186d1f96141027c854fce42}{Vector4D}}
+\item 
+typedef Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_ab67b68e8bc395b2085174937de1a634d}{Vector\+XD}}
+\item 
+typedef Eigen\+::\+Matrix$<$ int, 2, 2, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_ac9319963099ff600cf7c6251d7e937e1}{Matrix2I}}
+\item 
+typedef Eigen\+::\+Matrix$<$ int, 3, 3, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_ab8a98dad54fdc966987b61b750e03201}{Matrix3I}}
+\item 
+typedef Eigen\+::\+Matrix$<$ int, 4, 4, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a10216d68ff0555e64c628cf7f5f3bb7a}{Matrix4I}}
+\item 
+typedef Eigen\+::\+Matrix$<$ int, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a43b1af9ed52619c66479d4820a126aef}{Matrix\+XI}}
+\item 
+typedef Eigen\+::\+Matrix$<$ float, 2, 2, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a07b62708470b4ff9ade2f9609e30310c}{Matrix2F}}
+\item 
+typedef Eigen\+::\+Matrix$<$ float, 3, 3, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_aff36b18c387a854e64af640ad5cb0bd7}{Matrix3F}}
+\item 
+typedef Eigen\+::\+Matrix$<$ float, 4, 4, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_afe979d0d6b88b375b29c06eb49df71fb}{Matrix4F}}
+\item 
+typedef Eigen\+::\+Matrix$<$ float, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a9cf1a3355d8ef3a852aa23866754758c}{Matrix\+XF}}
+\item 
+typedef Eigen\+::\+Matrix$<$ double, 2, 2, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_ab45dbd73bc096222cf5688ea45b04eba}{Matrix2D}}
+\item 
+typedef Eigen\+::\+Matrix$<$ double, 3, 3, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_ae968373755b3be75547f97573021dc8a}{Matrix3D}}
+\item 
+typedef Eigen\+::\+Matrix$<$ double, 4, 4, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_aed3721c4efdc0f727e94569cc22ddd42}{Matrix4D}}
+\item 
+typedef Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a8a808fe01b0b4e0afe637fe680853d0a}{Matrix\+XD}}
+\item 
+typedef Eigen\+::\+Transform$<$ double, 2, Eigen\+::\+Isometry, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_a24614fc78fff981b779fbf4850b19101}{Isometry2D}}
+\item 
+typedef Eigen\+::\+Transform$<$ double, 3, Eigen\+::\+Isometry, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_af8f6c8f7db82618f6bab6bbe448806eb}{Isometry3D}}
+\item 
+typedef Eigen\+::\+Transform$<$ double, 2, Eigen\+::\+Affine, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_ad7410532a9e2e255e93781c6beb0feb8}{Affine2D}}
+\item 
+typedef Eigen\+::\+Transform$<$ double, 3, Eigen\+::\+Affine, Eigen\+::\+Col\+Major $>$ \mbox{\hyperlink{namespaceg2o_ab3cae84956b78f00b9091c56c42af5eb}{Affine3D}}
+\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}} $\ast$ $>$ \mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{Parameter\+Vector}}
+\item 
+typedef std\+::tr1\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classg2o_1_1_robust_kernel}{Robust\+Kernel}} $>$ \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{Robust\+Kernel\+Ptr}}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{namespaceg2o_a3be76fea59d320255e89425439f18f48}{Force\+Link\+Function}}) (void)
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ int $>$ \mbox{\hyperlink{namespaceg2o_aa44e64803eabdb592175e27f1e3ebf59}{Int\+Property}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ bool $>$ \mbox{\hyperlink{namespaceg2o_a28e624fedcafeb2b049be2930421071f}{Bool\+Property}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ float $>$ \mbox{\hyperlink{namespaceg2o_af8e55b06b00e915fcf0475b00acea270}{Float\+Property}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ double $>$ \mbox{\hyperlink{namespaceg2o_a9b4e25cbdaf9d69afa4431d6af6d7bed}{Double\+Property}}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$ std\+::string $>$ \mbox{\hyperlink{namespaceg2o_a40c5b0f5bf1dd1e5b9c25c20fcf43920}{String\+Property}}
+\item 
+typedef Matrix$<$ double, 6, 1 $>$ \mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{Vector6d}}
+\item 
+typedef Matrix$<$ double, 7, 1 $>$ \mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{Vector7d}}
+\item 
+typedef Matrix$<$ double, 7, 7 $>$ \mbox{\hyperlink{namespaceg2o_a3ce3dfdcb313ec3483b8cee099402e54}{Matrix7d}}
+\item 
+typedef Matrix$<$ double, 6, 6 $>$ \mbox{\hyperlink{namespaceg2o_afff8bcc18e5be58eef0961900ddda24b}{Matrix6d}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceg2o_aab743f811f4b7b6a6e724d64e26b450d}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}} \&st)
+\item 
+bool \mbox{\hyperlink{namespaceg2o_a2a6eaf50f7bfb542915d123feee52f6a}{operator$<$}} (const \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry}{Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry}} \&a, const \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry}{Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry}} \&b)
+\item 
+void \mbox{\hyperlink{namespaceg2o_ac2ef8b73c930abdd15131f8fb02cd42f}{apply\+Action}} (\mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}} $\ast$graph, \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$action, \mbox{\hyperlink{structg2o_1_1_hyper_graph_element_action_1_1_parameters}{Hyper\+Graph\+Element\+Action\+::\+Parameters}} $\ast$params, const std\+::string \&type\+Name)
+\item 
+{\footnotesize template$<$class Matrix\+Type $>$ }\\\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} std\+::ostream \& \mbox{\hyperlink{namespaceg2o_a0f97d92b12af077b9a7f5139b60bbf3e}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ \&m)
+\item 
+{\footnotesize template$<$class Matrix\+Type $>$ }\\std\+::ostream \& \mbox{\hyperlink{namespaceg2o_a93a7a7ba5b97550aa30b946537663e05}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ \&m)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_ada3127f4fe72b228407fabe23b72a50b}{square}} (T x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_a586ee8937cdc8de49303abd1611da387}{hypot}} (T x, T y)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_ac2989135761e62b40066193a11950d21}{hypot\+\_\+sqr}} (T x, T y)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a8f29adce7d7b9855e1d0ba43835c34b3}{deg2rad}} (double degree)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a3965702cbb6051fa2bdb0c75c0358126}{rad2deg}} (double rad)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a9f036eb4c147ddf174aa56fa031f3867}{normalize\+\_\+theta}} (double theta)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a9ae48fc8caba4b009642ca53d69a3b98}{inverse\+\_\+theta}} (double th)
+\item 
+double \mbox{\hyperlink{namespaceg2o_a25f6d3c7415a89f7a5bc1875a7fa5009}{average\+\_\+angle}} (double theta1, double theta2)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespaceg2o_a821ae3df8a97b37daf8804ef3a26ef1d}{sign}} (T x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_a50939862674314724dd800c41f82e7fe}{clamp}} (T l, T x, T u)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespaceg2o_a207912b4849eaff934f6384bc79d07ce}{wrap}} (T l, T x, T u)
+\item 
+bool \mbox{\hyperlink{namespaceg2o_a123840a60e0d1dde58088d15a1e1fffa}{array\+Has\+NaN}} (const double $\ast$array, int size, int $\ast$nan\+Index=0)
+\item 
+std\+::string \mbox{\hyperlink{group__utils_ga437d185a62afe16a99f27f3b12e108d7}{trim}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{group__utils_gad2277aa8d0784f7001f7f27396d59f98}{trim\+Left}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{group__utils_ga7305cbf5d345c0e352ac2baa93b7d30a}{trim\+Right}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{group__utils_ga18235ef006dc52e266590591f895157d}{str\+To\+Lower}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{group__utils_ga70dfb4dd2aeae37635cf2b5bef6321a9}{str\+To\+Upper}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{group__utils_gadc1d37473e0e8c6a73fb46b19239d2d1}{format\+String}} (const char $\ast$fmt,...)
+\item 
+int \mbox{\hyperlink{group__utils_gacce5cae59e8c97bf3f4ff581c6534d03}{str\+Printf}} (std\+::string \&str, const char $\ast$fmt,...)
+\item 
+std\+::string \mbox{\hyperlink{group__utils_ga45c2648d8a8a5f5bed13741bc8a501d1}{str\+Expand\+Filename}} (const std\+::string \&filename)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{group__utils_ga0a56de67e98afa3f8307e7b4ddb4cc83}{str\+Split}} (const std\+::string \&str, const std\+::string \&delimiters)
+\item 
+bool \mbox{\hyperlink{group__utils_ga98f10a2fabad17ef7ed1534b39eb2bc5}{str\+Starts\+With}} (const std\+::string \&s, const std\+::string \&start)
+\item 
+bool \mbox{\hyperlink{group__utils_ga7a0e6ad89c4c86b2b60ddf392a57c963}{str\+Ends\+With}} (const std\+::string \&s, const std\+::string \&end)
+\item 
+int \mbox{\hyperlink{group__utils_ga570513203e2bbf23d692460c0aef07e8}{read\+Line}} (std\+::istream \&is, std\+::stringstream \&current\+Line)
+\item 
+{\footnotesize template$<$typename Output\+Iterator $>$ }\\Output\+Iterator \mbox{\hyperlink{group__utils_gae501003a8f6b60afb846857fdb82174d}{read\+Ints}} (const char $\ast$str, Output\+Iterator out)
+\item 
+{\footnotesize template$<$typename Output\+Iterator $>$ }\\Output\+Iterator \mbox{\hyperlink{group__utils_ga88353c6cfc2e519df07814ca577e71ec}{read\+Floats}} (const char $\ast$str, Output\+Iterator out)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{group__utils_ga599c46f6984e9a2147fac39324e9fadc}{convert\+String}} (const std\+::string \&s, T \&x, bool fail\+If\+Leftover\+Chars=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{group__utils_ga9dac39a213d269b8d68fb698bf82873a}{string\+To\+Type}} (const std\+::string \&s, bool fail\+If\+Leftover\+Chars=true)
+\item 
+double \mbox{\hyperlink{namespaceg2o_af1595a641cd3ed21c3d9739c72a39422}{get\+\_\+monotonic\+\_\+time}} ()
+\item 
+double \mbox{\hyperlink{namespaceg2o_a6baa8fdfd973b5b970df14f14fd5d844}{get\+\_\+time}} ()
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} Matrix3d \mbox{\hyperlink{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}{skew}} (const Vector3d \&v)
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} Vector3d \mbox{\hyperlink{namespaceg2o_a2e39915fb420fd7dc2d3802435e4a6a9}{deltaR}} (const Matrix3d \&R)
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} Vector2d \mbox{\hyperlink{namespaceg2o_a45b89a0471d862c09167e7ce718df000}{project}} (const Vector3d \&)
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} Vector3d \mbox{\hyperlink{namespaceg2o_a3d337768fe9db907df691e3624ca4e1e}{project}} (const Vector4d \&)
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} Vector3d \mbox{\hyperlink{namespaceg2o_ab8746174c3f8c25af4188fc24b2dc3d4}{unproject}} (const Vector2d \&)
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} Vector4d \mbox{\hyperlink{namespaceg2o_a46785a7417bd703d67107c2b5f649007}{unproject}} (const Vector3d \&)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceg2o_a613d60098b4ebe03626c13f9432b7834}{operator$<$$<$}} (std\+::ostream \&out\+\_\+str, const \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \&se3)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespaceg2o_a8ab958f2ec4a80e849def091d38f1131}{operator$<$$<$}} (std\+::ostream \&out\+\_\+str, const \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \&sim3)
+\item 
+Vector2d \mbox{\hyperlink{namespaceg2o_acc3b6db544c564fb29c4ea60c1fcb775}{project2d}} (const Vector3d \&v)
+\item 
+Vector3d \mbox{\hyperlink{namespaceg2o_a6edbda6681de50df71048c5b72778998}{unproject2d}} (const Vector2d \&v)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}$<$ Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ $>$ \mbox{\hyperlink{namespaceg2o_adcc6ea7cf60314982bc91e7b926adf14}{Block\+SolverX}}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}$<$ 6, 3 $>$ $>$ \mbox{\hyperlink{namespaceg2o_ac2431e417f239680e2d2436970713e84}{Block\+Solver\+\_\+6\+\_\+3}}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}$<$ 7, 3 $>$ $>$ \mbox{\hyperlink{namespaceg2o_a722b0d55b4695c7968d67107aee7671c}{Block\+Solver\+\_\+7\+\_\+3}}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}$<$ 3, 2 $>$ $>$ \mbox{\hyperlink{namespaceg2o_a0dc4e6a4c5ab92d4c638aca75ad8219c}{Block\+Solver\+\_\+3\+\_\+2}}
+\item 
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Xd $>$ \mbox{\hyperlink{namespaceg2o_a711432ca707cf7aee387c3cca80d84e7}{Sparse\+Block\+Matrix\+Xd}}
+\item 
+class \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{namespaceg2o_a3beb17b066b63dedd1d49fe5c8db1b3e}{Optimization\+Algorithm}}
+\item 
+class \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{namespaceg2o_a9b3a9d8e71f5779358eaa12ed7cb8b4c}{Sparse\+Optimizer}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{namespaceg2o_ad7410532a9e2e255e93781c6beb0feb8}\label{namespaceg2o_ad7410532a9e2e255e93781c6beb0feb8}} 
+\index{g2o@{g2o}!Affine2D@{Affine2D}}
+\index{Affine2D@{Affine2D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Affine2D}{Affine2D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Transform$<$double,2,Eigen\+::\+Affine,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_ad7410532a9e2e255e93781c6beb0feb8}{g2o\+::\+Affine2D}}}
+
+\mbox{\Hypertarget{namespaceg2o_ab3cae84956b78f00b9091c56c42af5eb}\label{namespaceg2o_ab3cae84956b78f00b9091c56c42af5eb}} 
+\index{g2o@{g2o}!Affine3D@{Affine3D}}
+\index{Affine3D@{Affine3D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Affine3D}{Affine3D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Transform$<$double,3,Eigen\+::\+Affine,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_ab3cae84956b78f00b9091c56c42af5eb}{g2o\+::\+Affine3D}}}
+
+\mbox{\Hypertarget{namespaceg2o_a526b32fde21f83173acb2bb29db68275}\label{namespaceg2o_a526b32fde21f83173acb2bb29db68275}} 
+\index{g2o@{g2o}!Batch\+Statistics\+Container@{Batch\+Statistics\+Container}}
+\index{Batch\+Statistics\+Container@{Batch\+Statistics\+Container}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Batch\+Statistics\+Container}{BatchStatisticsContainer}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}}$>$ \mbox{\hyperlink{namespaceg2o_a526b32fde21f83173acb2bb29db68275}{g2o\+::\+Batch\+Statistics\+Container}}}
+
+\mbox{\Hypertarget{namespaceg2o_a28e624fedcafeb2b049be2930421071f}\label{namespaceg2o_a28e624fedcafeb2b049be2930421071f}} 
+\index{g2o@{g2o}!Bool\+Property@{Bool\+Property}}
+\index{Bool\+Property@{Bool\+Property}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Bool\+Property}{BoolProperty}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$bool$>$ \mbox{\hyperlink{namespaceg2o_a28e624fedcafeb2b049be2930421071f}{g2o\+::\+Bool\+Property}}}
+
+\mbox{\Hypertarget{namespaceg2o_a9b4e25cbdaf9d69afa4431d6af6d7bed}\label{namespaceg2o_a9b4e25cbdaf9d69afa4431d6af6d7bed}} 
+\index{g2o@{g2o}!Double\+Property@{Double\+Property}}
+\index{Double\+Property@{Double\+Property}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Double\+Property}{DoubleProperty}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$double$>$ \mbox{\hyperlink{namespaceg2o_a9b4e25cbdaf9d69afa4431d6af6d7bed}{g2o\+::\+Double\+Property}}}
+
+\mbox{\Hypertarget{namespaceg2o_af8e55b06b00e915fcf0475b00acea270}\label{namespaceg2o_af8e55b06b00e915fcf0475b00acea270}} 
+\index{g2o@{g2o}!Float\+Property@{Float\+Property}}
+\index{Float\+Property@{Float\+Property}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Float\+Property}{FloatProperty}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$float$>$ \mbox{\hyperlink{namespaceg2o_af8e55b06b00e915fcf0475b00acea270}{g2o\+::\+Float\+Property}}}
+
+\mbox{\Hypertarget{namespaceg2o_a3be76fea59d320255e89425439f18f48}\label{namespaceg2o_a3be76fea59d320255e89425439f18f48}} 
+\index{g2o@{g2o}!Force\+Link\+Function@{Force\+Link\+Function}}
+\index{Force\+Link\+Function@{Force\+Link\+Function}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Force\+Link\+Function}{ForceLinkFunction}}
+{\footnotesize\ttfamily typedef void($\ast$  g2o\+::\+Force\+Link\+Function) (void)}
+
+The following two functions are used to force linkage with static libraries. \mbox{\Hypertarget{namespaceg2o_aa44e64803eabdb592175e27f1e3ebf59}\label{namespaceg2o_aa44e64803eabdb592175e27f1e3ebf59}} 
+\index{g2o@{g2o}!Int\+Property@{Int\+Property}}
+\index{Int\+Property@{Int\+Property}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Int\+Property}{IntProperty}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$int$>$ \mbox{\hyperlink{namespaceg2o_aa44e64803eabdb592175e27f1e3ebf59}{g2o\+::\+Int\+Property}}}
+
+\mbox{\Hypertarget{namespaceg2o_a24614fc78fff981b779fbf4850b19101}\label{namespaceg2o_a24614fc78fff981b779fbf4850b19101}} 
+\index{g2o@{g2o}!Isometry2D@{Isometry2D}}
+\index{Isometry2D@{Isometry2D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Isometry2D}{Isometry2D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Transform$<$double,2,Eigen\+::\+Isometry,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a24614fc78fff981b779fbf4850b19101}{g2o\+::\+Isometry2D}}}
+
+\mbox{\Hypertarget{namespaceg2o_af8f6c8f7db82618f6bab6bbe448806eb}\label{namespaceg2o_af8f6c8f7db82618f6bab6bbe448806eb}} 
+\index{g2o@{g2o}!Isometry3D@{Isometry3D}}
+\index{Isometry3D@{Isometry3D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Isometry3D}{Isometry3D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Transform$<$double,3,Eigen\+::\+Isometry,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_af8f6c8f7db82618f6bab6bbe448806eb}{g2o\+::\+Isometry3D}}}
+
+\mbox{\Hypertarget{namespaceg2o_ab45dbd73bc096222cf5688ea45b04eba}\label{namespaceg2o_ab45dbd73bc096222cf5688ea45b04eba}} 
+\index{g2o@{g2o}!Matrix2D@{Matrix2D}}
+\index{Matrix2D@{Matrix2D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix2D}{Matrix2D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$double,2,2,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_ab45dbd73bc096222cf5688ea45b04eba}{g2o\+::\+Matrix2D}}}
+
+\mbox{\Hypertarget{namespaceg2o_a07b62708470b4ff9ade2f9609e30310c}\label{namespaceg2o_a07b62708470b4ff9ade2f9609e30310c}} 
+\index{g2o@{g2o}!Matrix2F@{Matrix2F}}
+\index{Matrix2F@{Matrix2F}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix2F}{Matrix2F}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$float,2,2,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a07b62708470b4ff9ade2f9609e30310c}{g2o\+::\+Matrix2F}}}
+
+\mbox{\Hypertarget{namespaceg2o_ac9319963099ff600cf7c6251d7e937e1}\label{namespaceg2o_ac9319963099ff600cf7c6251d7e937e1}} 
+\index{g2o@{g2o}!Matrix2I@{Matrix2I}}
+\index{Matrix2I@{Matrix2I}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix2I}{Matrix2I}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$int,2,2,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_ac9319963099ff600cf7c6251d7e937e1}{g2o\+::\+Matrix2I}}}
+
+\mbox{\Hypertarget{namespaceg2o_ae968373755b3be75547f97573021dc8a}\label{namespaceg2o_ae968373755b3be75547f97573021dc8a}} 
+\index{g2o@{g2o}!Matrix3D@{Matrix3D}}
+\index{Matrix3D@{Matrix3D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix3D}{Matrix3D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$double,3,3,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_ae968373755b3be75547f97573021dc8a}{g2o\+::\+Matrix3D}}}
+
+\mbox{\Hypertarget{namespaceg2o_aff36b18c387a854e64af640ad5cb0bd7}\label{namespaceg2o_aff36b18c387a854e64af640ad5cb0bd7}} 
+\index{g2o@{g2o}!Matrix3F@{Matrix3F}}
+\index{Matrix3F@{Matrix3F}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix3F}{Matrix3F}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$float,3,3,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_aff36b18c387a854e64af640ad5cb0bd7}{g2o\+::\+Matrix3F}}}
+
+\mbox{\Hypertarget{namespaceg2o_ab8a98dad54fdc966987b61b750e03201}\label{namespaceg2o_ab8a98dad54fdc966987b61b750e03201}} 
+\index{g2o@{g2o}!Matrix3I@{Matrix3I}}
+\index{Matrix3I@{Matrix3I}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix3I}{Matrix3I}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$int,3,3,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_ab8a98dad54fdc966987b61b750e03201}{g2o\+::\+Matrix3I}}}
+
+\mbox{\Hypertarget{namespaceg2o_aed3721c4efdc0f727e94569cc22ddd42}\label{namespaceg2o_aed3721c4efdc0f727e94569cc22ddd42}} 
+\index{g2o@{g2o}!Matrix4D@{Matrix4D}}
+\index{Matrix4D@{Matrix4D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix4D}{Matrix4D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$double,4,4,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_aed3721c4efdc0f727e94569cc22ddd42}{g2o\+::\+Matrix4D}}}
+
+\mbox{\Hypertarget{namespaceg2o_afe979d0d6b88b375b29c06eb49df71fb}\label{namespaceg2o_afe979d0d6b88b375b29c06eb49df71fb}} 
+\index{g2o@{g2o}!Matrix4F@{Matrix4F}}
+\index{Matrix4F@{Matrix4F}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix4F}{Matrix4F}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$float,4,4,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_afe979d0d6b88b375b29c06eb49df71fb}{g2o\+::\+Matrix4F}}}
+
+\mbox{\Hypertarget{namespaceg2o_a10216d68ff0555e64c628cf7f5f3bb7a}\label{namespaceg2o_a10216d68ff0555e64c628cf7f5f3bb7a}} 
+\index{g2o@{g2o}!Matrix4I@{Matrix4I}}
+\index{Matrix4I@{Matrix4I}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix4I}{Matrix4I}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$int,4,4,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a10216d68ff0555e64c628cf7f5f3bb7a}{g2o\+::\+Matrix4I}}}
+
+\mbox{\Hypertarget{namespaceg2o_afff8bcc18e5be58eef0961900ddda24b}\label{namespaceg2o_afff8bcc18e5be58eef0961900ddda24b}} 
+\index{g2o@{g2o}!Matrix6d@{Matrix6d}}
+\index{Matrix6d@{Matrix6d}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix6d}{Matrix6d}}
+{\footnotesize\ttfamily typedef Matrix$<$double, 6, 6$>$ \mbox{\hyperlink{namespaceg2o_afff8bcc18e5be58eef0961900ddda24b}{g2o\+::\+Matrix6d}}}
+
+\mbox{\Hypertarget{namespaceg2o_a3ce3dfdcb313ec3483b8cee099402e54}\label{namespaceg2o_a3ce3dfdcb313ec3483b8cee099402e54}} 
+\index{g2o@{g2o}!Matrix7d@{Matrix7d}}
+\index{Matrix7d@{Matrix7d}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix7d}{Matrix7d}}
+{\footnotesize\ttfamily typedef Matrix$<$double, 7, 7$>$ \mbox{\hyperlink{namespaceg2o_a3ce3dfdcb313ec3483b8cee099402e54}{g2o\+::\+Matrix7d}}}
+
+\mbox{\Hypertarget{namespaceg2o_a8a808fe01b0b4e0afe637fe680853d0a}\label{namespaceg2o_a8a808fe01b0b4e0afe637fe680853d0a}} 
+\index{g2o@{g2o}!Matrix\+XD@{Matrix\+XD}}
+\index{Matrix\+XD@{Matrix\+XD}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix\+XD}{MatrixXD}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$double,Eigen\+::\+Dynamic,Eigen\+::\+Dynamic,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a8a808fe01b0b4e0afe637fe680853d0a}{g2o\+::\+Matrix\+XD}}}
+
+\mbox{\Hypertarget{namespaceg2o_a9cf1a3355d8ef3a852aa23866754758c}\label{namespaceg2o_a9cf1a3355d8ef3a852aa23866754758c}} 
+\index{g2o@{g2o}!Matrix\+XF@{Matrix\+XF}}
+\index{Matrix\+XF@{Matrix\+XF}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix\+XF}{MatrixXF}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$float,Eigen\+::\+Dynamic,Eigen\+::\+Dynamic,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a9cf1a3355d8ef3a852aa23866754758c}{g2o\+::\+Matrix\+XF}}}
+
+\mbox{\Hypertarget{namespaceg2o_a43b1af9ed52619c66479d4820a126aef}\label{namespaceg2o_a43b1af9ed52619c66479d4820a126aef}} 
+\index{g2o@{g2o}!Matrix\+XI@{Matrix\+XI}}
+\index{Matrix\+XI@{Matrix\+XI}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Matrix\+XI}{MatrixXI}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$int,Eigen\+::\+Dynamic,Eigen\+::\+Dynamic,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a43b1af9ed52619c66479d4820a126aef}{g2o\+::\+Matrix\+XI}}}
+
+\mbox{\Hypertarget{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}\label{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}} 
+\index{g2o@{g2o}!Parameter\+Vector@{Parameter\+Vector}}
+\index{Parameter\+Vector@{Parameter\+Vector}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Parameter\+Vector}{ParameterVector}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{classg2o_1_1_parameter}{Parameter}}$\ast$$>$ \mbox{\hyperlink{namespaceg2o_a85cc8f2c7db8cab47b2b269a7acd6785}{g2o\+::\+Parameter\+Vector}}}
+
+\mbox{\Hypertarget{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}\label{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}} 
+\index{g2o@{g2o}!Robust\+Kernel\+Ptr@{Robust\+Kernel\+Ptr}}
+\index{Robust\+Kernel\+Ptr@{Robust\+Kernel\+Ptr}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Robust\+Kernel\+Ptr}{RobustKernelPtr}}
+{\footnotesize\ttfamily typedef std\+::tr1\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classg2o_1_1_robust_kernel}{Robust\+Kernel}}$>$ \mbox{\hyperlink{namespaceg2o_a0802a5e01a6b1861ae01013220dec6ac}{g2o\+::\+Robust\+Kernel\+Ptr}}}
+
+\mbox{\Hypertarget{namespaceg2o_a40c5b0f5bf1dd1e5b9c25c20fcf43920}\label{namespaceg2o_a40c5b0f5bf1dd1e5b9c25c20fcf43920}} 
+\index{g2o@{g2o}!String\+Property@{String\+Property}}
+\index{String\+Property@{String\+Property}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{String\+Property}{StringProperty}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classg2o_1_1_property}{Property}}$<$std\+::string$>$ \mbox{\hyperlink{namespaceg2o_a40c5b0f5bf1dd1e5b9c25c20fcf43920}{g2o\+::\+String\+Property}}}
+
+\mbox{\Hypertarget{namespaceg2o_a98731c1a538fbbbb105bc81434ebdecb}\label{namespaceg2o_a98731c1a538fbbbb105bc81434ebdecb}} 
+\index{g2o@{g2o}!Vector2D@{Vector2D}}
+\index{Vector2D@{Vector2D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector2D}{Vector2D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$double,2,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a98731c1a538fbbbb105bc81434ebdecb}{g2o\+::\+Vector2D}}}
+
+\mbox{\Hypertarget{namespaceg2o_ab48f53e68ad9d381fcad63c4901af2e2}\label{namespaceg2o_ab48f53e68ad9d381fcad63c4901af2e2}} 
+\index{g2o@{g2o}!Vector2F@{Vector2F}}
+\index{Vector2F@{Vector2F}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector2F}{Vector2F}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$float,2,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_ab48f53e68ad9d381fcad63c4901af2e2}{g2o\+::\+Vector2F}}}
+
+\mbox{\Hypertarget{namespaceg2o_affca5cbeca977d670b96298de84c5d2c}\label{namespaceg2o_affca5cbeca977d670b96298de84c5d2c}} 
+\index{g2o@{g2o}!Vector2I@{Vector2I}}
+\index{Vector2I@{Vector2I}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector2I}{Vector2I}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$int,2,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_affca5cbeca977d670b96298de84c5d2c}{g2o\+::\+Vector2I}}}
+
+\mbox{\Hypertarget{namespaceg2o_a944c2b1b0f84d33a7b297a4a585bf319}\label{namespaceg2o_a944c2b1b0f84d33a7b297a4a585bf319}} 
+\index{g2o@{g2o}!Vector3D@{Vector3D}}
+\index{Vector3D@{Vector3D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector3D}{Vector3D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$double,3,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a944c2b1b0f84d33a7b297a4a585bf319}{g2o\+::\+Vector3D}}}
+
+\mbox{\Hypertarget{namespaceg2o_a0c03efd6b49abac71bfb012cc3237288}\label{namespaceg2o_a0c03efd6b49abac71bfb012cc3237288}} 
+\index{g2o@{g2o}!Vector3F@{Vector3F}}
+\index{Vector3F@{Vector3F}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector3F}{Vector3F}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$float,3,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a0c03efd6b49abac71bfb012cc3237288}{g2o\+::\+Vector3F}}}
+
+\mbox{\Hypertarget{namespaceg2o_a501b6f80eef8d521f6fd1a31e8413f3a}\label{namespaceg2o_a501b6f80eef8d521f6fd1a31e8413f3a}} 
+\index{g2o@{g2o}!Vector3I@{Vector3I}}
+\index{Vector3I@{Vector3I}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector3I}{Vector3I}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$int,3,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a501b6f80eef8d521f6fd1a31e8413f3a}{g2o\+::\+Vector3I}}}
+
+\mbox{\Hypertarget{namespaceg2o_afd9c8c912186d1f96141027c854fce42}\label{namespaceg2o_afd9c8c912186d1f96141027c854fce42}} 
+\index{g2o@{g2o}!Vector4D@{Vector4D}}
+\index{Vector4D@{Vector4D}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector4D}{Vector4D}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$double,4,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_afd9c8c912186d1f96141027c854fce42}{g2o\+::\+Vector4D}}}
+
+\mbox{\Hypertarget{namespaceg2o_aebecb51a41734608aeea377a31ee88c6}\label{namespaceg2o_aebecb51a41734608aeea377a31ee88c6}} 
+\index{g2o@{g2o}!Vector4F@{Vector4F}}
+\index{Vector4F@{Vector4F}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector4F}{Vector4F}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$float,4,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_aebecb51a41734608aeea377a31ee88c6}{g2o\+::\+Vector4F}}}
+
+\mbox{\Hypertarget{namespaceg2o_a7a368c33c15d52cca214b779a5fb32ce}\label{namespaceg2o_a7a368c33c15d52cca214b779a5fb32ce}} 
+\index{g2o@{g2o}!Vector4I@{Vector4I}}
+\index{Vector4I@{Vector4I}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector4I}{Vector4I}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$int,4,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a7a368c33c15d52cca214b779a5fb32ce}{g2o\+::\+Vector4I}}}
+
+\mbox{\Hypertarget{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}\label{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}} 
+\index{g2o@{g2o}!Vector6d@{Vector6d}}
+\index{Vector6d@{Vector6d}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector6d}{Vector6d}}
+{\footnotesize\ttfamily typedef Matrix$<$double, 6, 1$>$ \mbox{\hyperlink{namespaceg2o_a3bc8a4fbac86f158d548be81af2f929b}{g2o\+::\+Vector6d}}}
+
+\mbox{\Hypertarget{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}\label{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}} 
+\index{g2o@{g2o}!Vector7d@{Vector7d}}
+\index{Vector7d@{Vector7d}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector7d}{Vector7d}}
+{\footnotesize\ttfamily typedef Matrix$<$ double, 7, 1 $>$ \mbox{\hyperlink{namespaceg2o_a4740ec41130f2ecc628c81f71261c8de}{g2o\+::\+Vector7d}}}
+
+\mbox{\Hypertarget{namespaceg2o_ab67b68e8bc395b2085174937de1a634d}\label{namespaceg2o_ab67b68e8bc395b2085174937de1a634d}} 
+\index{g2o@{g2o}!Vector\+XD@{Vector\+XD}}
+\index{Vector\+XD@{Vector\+XD}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector\+XD}{VectorXD}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$double,Eigen\+::\+Dynamic,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_ab67b68e8bc395b2085174937de1a634d}{g2o\+::\+Vector\+XD}}}
+
+\mbox{\Hypertarget{namespaceg2o_a79143ea34679a74ee7ab02342b3a21df}\label{namespaceg2o_a79143ea34679a74ee7ab02342b3a21df}} 
+\index{g2o@{g2o}!Vector\+XF@{Vector\+XF}}
+\index{Vector\+XF@{Vector\+XF}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector\+XF}{VectorXF}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$float,Eigen\+::\+Dynamic,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a79143ea34679a74ee7ab02342b3a21df}{g2o\+::\+Vector\+XF}}}
+
+\mbox{\Hypertarget{namespaceg2o_a2797ddaf7a7a6dc22843a38d34754e55}\label{namespaceg2o_a2797ddaf7a7a6dc22843a38d34754e55}} 
+\index{g2o@{g2o}!Vector\+XI@{Vector\+XI}}
+\index{Vector\+XI@{Vector\+XI}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Vector\+XI}{VectorXI}}
+{\footnotesize\ttfamily typedef Eigen\+::\+Matrix$<$int,Eigen\+::\+Dynamic,1,Eigen\+::\+Col\+Major$>$ \mbox{\hyperlink{namespaceg2o_a2797ddaf7a7a6dc22843a38d34754e55}{g2o\+::\+Vector\+XI}}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceg2o_ac2ef8b73c930abdd15131f8fb02cd42f}\label{namespaceg2o_ac2ef8b73c930abdd15131f8fb02cd42f}} 
+\index{g2o@{g2o}!apply\+Action@{apply\+Action}}
+\index{apply\+Action@{apply\+Action}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{apply\+Action()}{applyAction()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} g2o\+::apply\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph}{Hyper\+Graph}} $\ast$}]{graph,  }\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$}]{action,  }\item[{\mbox{\hyperlink{structg2o_1_1_hyper_graph_element_action_1_1_parameters}{Hyper\+Graph\+Element\+Action\+::\+Parameters}} $\ast$}]{parameters = {\ttfamily 0},  }\item[{const std\+::string \&}]{type\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+apply an action to all the elements of the graph. \mbox{\Hypertarget{namespaceg2o_a123840a60e0d1dde58088d15a1e1fffa}\label{namespaceg2o_a123840a60e0d1dde58088d15a1e1fffa}} 
+\index{g2o@{g2o}!array\+Has\+NaN@{array\+Has\+NaN}}
+\index{array\+Has\+NaN@{array\+Has\+NaN}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{array\+Has\+Na\+N()}{arrayHasNaN()}}
+{\footnotesize\ttfamily bool g2o\+::array\+Has\+NaN (\begin{DoxyParamCaption}\item[{const double $\ast$}]{array,  }\item[{int}]{size,  }\item[{int $\ast$}]{nan\+Index = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+tests whether there is a NaN in the array \mbox{\Hypertarget{namespaceg2o_a25f6d3c7415a89f7a5bc1875a7fa5009}\label{namespaceg2o_a25f6d3c7415a89f7a5bc1875a7fa5009}} 
+\index{g2o@{g2o}!average\+\_\+angle@{average\+\_\+angle}}
+\index{average\+\_\+angle@{average\+\_\+angle}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{average\+\_\+angle()}{average\_angle()}}
+{\footnotesize\ttfamily double g2o\+::average\+\_\+angle (\begin{DoxyParamCaption}\item[{double}]{theta1,  }\item[{double}]{theta2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+average two angles \mbox{\Hypertarget{namespaceg2o_a50939862674314724dd800c41f82e7fe}\label{namespaceg2o_a50939862674314724dd800c41f82e7fe}} 
+\index{g2o@{g2o}!clamp@{clamp}}
+\index{clamp@{clamp}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{clamp()}{clamp()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::clamp (\begin{DoxyParamCaption}\item[{T}]{l,  }\item[{T}]{x,  }\item[{T}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+clamp x to the interval \mbox{[}l, u\mbox{]} \mbox{\Hypertarget{namespaceg2o_a8f29adce7d7b9855e1d0ba43835c34b3}\label{namespaceg2o_a8f29adce7d7b9855e1d0ba43835c34b3}} 
+\index{g2o@{g2o}!deg2rad@{deg2rad}}
+\index{deg2rad@{deg2rad}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{deg2rad()}{deg2rad()}}
+{\footnotesize\ttfamily double g2o\+::deg2rad (\begin{DoxyParamCaption}\item[{double}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+convert from degree to radian \mbox{\Hypertarget{namespaceg2o_a2e39915fb420fd7dc2d3802435e4a6a9}\label{namespaceg2o_a2e39915fb420fd7dc2d3802435e4a6a9}} 
+\index{g2o@{g2o}!deltaR@{deltaR}}
+\index{deltaR@{deltaR}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{delta\+R()}{deltaR()}}
+{\footnotesize\ttfamily Vector3d g2o\+::deltaR (\begin{DoxyParamCaption}\item[{const Matrix3d \&}]{R }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceg2o_af1595a641cd3ed21c3d9739c72a39422}\label{namespaceg2o_af1595a641cd3ed21c3d9739c72a39422}} 
+\index{g2o@{g2o}!get\+\_\+monotonic\+\_\+time@{get\+\_\+monotonic\+\_\+time}}
+\index{get\+\_\+monotonic\+\_\+time@{get\+\_\+monotonic\+\_\+time}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{get\+\_\+monotonic\+\_\+time()}{get\_monotonic\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} double g2o\+::get\+\_\+monotonic\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+return a monotonic increasing time which basically does not need to have a reference point. Consider this for measuring how long some code fragments required to execute.
+
+On Linux we call clock\+\_\+gettime() on other systems we currently call \mbox{\hyperlink{namespaceg2o_a6baa8fdfd973b5b970df14f14fd5d844}{get\+\_\+time()}}. \mbox{\Hypertarget{namespaceg2o_a6baa8fdfd973b5b970df14f14fd5d844}\label{namespaceg2o_a6baa8fdfd973b5b970df14f14fd5d844}} 
+\index{g2o@{g2o}!get\+\_\+time@{get\+\_\+time}}
+\index{get\+\_\+time@{get\+\_\+time}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{get\+\_\+time()}{get\_time()}}
+{\footnotesize\ttfamily double g2o\+::get\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the current time in seconds since 1. Jan 1970 \mbox{\Hypertarget{namespaceg2o_a586ee8937cdc8de49303abd1611da387}\label{namespaceg2o_a586ee8937cdc8de49303abd1611da387}} 
+\index{g2o@{g2o}!hypot@{hypot}}
+\index{hypot@{hypot}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{hypot()}{hypot()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::hypot (\begin{DoxyParamCaption}\item[{T}]{x,  }\item[{T}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the hypot of x and y \mbox{\Hypertarget{namespaceg2o_ac2989135761e62b40066193a11950d21}\label{namespaceg2o_ac2989135761e62b40066193a11950d21}} 
+\index{g2o@{g2o}!hypot\+\_\+sqr@{hypot\+\_\+sqr}}
+\index{hypot\+\_\+sqr@{hypot\+\_\+sqr}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{hypot\+\_\+sqr()}{hypot\_sqr()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::hypot\+\_\+sqr (\begin{DoxyParamCaption}\item[{T}]{x,  }\item[{T}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the squared hypot of x and y \mbox{\Hypertarget{namespaceg2o_a9ae48fc8caba4b009642ca53d69a3b98}\label{namespaceg2o_a9ae48fc8caba4b009642ca53d69a3b98}} 
+\index{g2o@{g2o}!inverse\+\_\+theta@{inverse\+\_\+theta}}
+\index{inverse\+\_\+theta@{inverse\+\_\+theta}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{inverse\+\_\+theta()}{inverse\_theta()}}
+{\footnotesize\ttfamily double g2o\+::inverse\+\_\+theta (\begin{DoxyParamCaption}\item[{double}]{th }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+inverse of an angle, i.\+e., +180 degree \mbox{\Hypertarget{namespaceg2o_a9f036eb4c147ddf174aa56fa031f3867}\label{namespaceg2o_a9f036eb4c147ddf174aa56fa031f3867}} 
+\index{g2o@{g2o}!normalize\+\_\+theta@{normalize\+\_\+theta}}
+\index{normalize\+\_\+theta@{normalize\+\_\+theta}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{normalize\+\_\+theta()}{normalize\_theta()}}
+{\footnotesize\ttfamily double g2o\+::normalize\+\_\+theta (\begin{DoxyParamCaption}\item[{double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+normalize the angle \mbox{\Hypertarget{namespaceg2o_a2a6eaf50f7bfb542915d123feee52f6a}\label{namespaceg2o_a2a6eaf50f7bfb542915d123feee52f6a}} 
+\index{g2o@{g2o}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool g2o\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry}{Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry}} \&}]{a,  }\item[{const \mbox{\hyperlink{structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry}{Hyper\+Dijkstra\+::\+Adjacency\+Map\+Entry}} \&}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceg2o_aab743f811f4b7b6a6e724d64e26b450d}\label{namespaceg2o_aab743f811f4b7b6a6e724d64e26b450d}} 
+\index{g2o@{g2o}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} std\+::ostream \& g2o\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structg2o_1_1_g2_o_batch_statistics}{G2\+O\+Batch\+Statistics}} \&}]{st }\end{DoxyParamCaption})}
+
+timings \mbox{\Hypertarget{namespaceg2o_a0f97d92b12af077b9a7f5139b60bbf3e}\label{namespaceg2o_a0f97d92b12af077b9a7f5139b60bbf3e}} 
+\index{g2o@{g2o}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+\mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} std\+::ostream\& g2o\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ \&}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceg2o_a8ab958f2ec4a80e849def091d38f1131}\label{namespaceg2o_a8ab958f2ec4a80e849def091d38f1131}} 
+\index{g2o@{g2o}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily std\+::ostream\& g2o\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out\+\_\+str,  }\item[{const \mbox{\hyperlink{structg2o_1_1_sim3}{Sim3}} \&}]{sim3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceg2o_a613d60098b4ebe03626c13f9432b7834}\label{namespaceg2o_a613d60098b4ebe03626c13f9432b7834}} 
+\index{g2o@{g2o}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily std\+::ostream\& g2o\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out\+\_\+str,  }\item[{const \mbox{\hyperlink{classg2o_1_1_s_e3_quat}{S\+E3\+Quat}} \&}]{se3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceg2o_a93a7a7ba5b97550aa30b946537663e05}\label{namespaceg2o_a93a7a7ba5b97550aa30b946537663e05}} 
+\index{g2o@{g2o}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+std\+::ostream\& g2o\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ \&}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceg2o_a45b89a0471d862c09167e7ce718df000}\label{namespaceg2o_a45b89a0471d862c09167e7ce718df000}} 
+\index{g2o@{g2o}!project@{project}}
+\index{project@{project}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vector2d g2o\+::project (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceg2o_a3d337768fe9db907df691e3624ca4e1e}\label{namespaceg2o_a3d337768fe9db907df691e3624ca4e1e}} 
+\index{g2o@{g2o}!project@{project}}
+\index{project@{project}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{project()}{project()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector3d g2o\+::project (\begin{DoxyParamCaption}\item[{const Vector4d \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceg2o_acc3b6db544c564fb29c4ea60c1fcb775}\label{namespaceg2o_acc3b6db544c564fb29c4ea60c1fcb775}} 
+\index{g2o@{g2o}!project2d@{project2d}}
+\index{project2d@{project2d}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{project2d()}{project2d()}}
+{\footnotesize\ttfamily Vector2d g2o\+::project2d (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceg2o_a3965702cbb6051fa2bdb0c75c0358126}\label{namespaceg2o_a3965702cbb6051fa2bdb0c75c0358126}} 
+\index{g2o@{g2o}!rad2deg@{rad2deg}}
+\index{rad2deg@{rad2deg}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{rad2deg()}{rad2deg()}}
+{\footnotesize\ttfamily double g2o\+::rad2deg (\begin{DoxyParamCaption}\item[{double}]{rad }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+convert from radian to degree \mbox{\Hypertarget{namespaceg2o_a821ae3df8a97b37daf8804ef3a26ef1d}\label{namespaceg2o_a821ae3df8a97b37daf8804ef3a26ef1d}} 
+\index{g2o@{g2o}!sign@{sign}}
+\index{sign@{sign}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int g2o\+::sign (\begin{DoxyParamCaption}\item[{T}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+sign function. \begin{DoxyReturn}{Returns}
+the sign of x. +1 for x $>$ 0, -\/1 for x $<$ 0, 0 for x == 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}\label{namespaceg2o_adb3143a37b9bc002f4f7b6423061ef81}} 
+\index{g2o@{g2o}!skew@{skew}}
+\index{skew@{skew}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{skew()}{skew()}}
+{\footnotesize\ttfamily Matrix3d g2o\+::skew (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceg2o_ada3127f4fe72b228407fabe23b72a50b}\label{namespaceg2o_ada3127f4fe72b228407fabe23b72a50b}} 
+\index{g2o@{g2o}!square@{square}}
+\index{square@{square}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{square()}{square()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::square (\begin{DoxyParamCaption}\item[{T}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the square value \mbox{\Hypertarget{namespaceg2o_ab8746174c3f8c25af4188fc24b2dc3d4}\label{namespaceg2o_ab8746174c3f8c25af4188fc24b2dc3d4}} 
+\index{g2o@{g2o}!unproject@{unproject}}
+\index{unproject@{unproject}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{unproject()}{unproject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Vector3d g2o\+::unproject (\begin{DoxyParamCaption}\item[{const Vector2d \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceg2o_a46785a7417bd703d67107c2b5f649007}\label{namespaceg2o_a46785a7417bd703d67107c2b5f649007}} 
+\index{g2o@{g2o}!unproject@{unproject}}
+\index{unproject@{unproject}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{unproject()}{unproject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Vector4d g2o\+::unproject (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespaceg2o_a6edbda6681de50df71048c5b72778998}\label{namespaceg2o_a6edbda6681de50df71048c5b72778998}} 
+\index{g2o@{g2o}!unproject2d@{unproject2d}}
+\index{unproject2d@{unproject2d}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{unproject2d()}{unproject2d()}}
+{\footnotesize\ttfamily Vector3d g2o\+::unproject2d (\begin{DoxyParamCaption}\item[{const Vector2d \&}]{v }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceg2o_a207912b4849eaff934f6384bc79d07ce}\label{namespaceg2o_a207912b4849eaff934f6384bc79d07ce}} 
+\index{g2o@{g2o}!wrap@{wrap}}
+\index{wrap@{wrap}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{wrap()}{wrap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::wrap (\begin{DoxyParamCaption}\item[{T}]{l,  }\item[{T}]{x,  }\item[{T}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+wrap x to be in the interval \mbox{[}l, u\mbox{]} 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceg2o_a0dc4e6a4c5ab92d4c638aca75ad8219c}\label{namespaceg2o_a0dc4e6a4c5ab92d4c638aca75ad8219c}} 
+\index{g2o@{g2o}!Block\+Solver\+\_\+3\+\_\+2@{Block\+Solver\+\_\+3\+\_\+2}}
+\index{Block\+Solver\+\_\+3\+\_\+2@{Block\+Solver\+\_\+3\+\_\+2}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Block\+Solver\+\_\+3\+\_\+2}{BlockSolver\_3\_2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}$<$3, 2$>$ $>$ g2o\+::\+Block\+Solver\+\_\+3\+\_\+2}
+
+\mbox{\Hypertarget{namespaceg2o_ac2431e417f239680e2d2436970713e84}\label{namespaceg2o_ac2431e417f239680e2d2436970713e84}} 
+\index{g2o@{g2o}!Block\+Solver\+\_\+6\+\_\+3@{Block\+Solver\+\_\+6\+\_\+3}}
+\index{Block\+Solver\+\_\+6\+\_\+3@{Block\+Solver\+\_\+6\+\_\+3}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Block\+Solver\+\_\+6\+\_\+3}{BlockSolver\_6\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}$<$6, 3$>$ $>$ g2o\+::\+Block\+Solver\+\_\+6\+\_\+3}
+
+\mbox{\Hypertarget{namespaceg2o_a722b0d55b4695c7968d67107aee7671c}\label{namespaceg2o_a722b0d55b4695c7968d67107aee7671c}} 
+\index{g2o@{g2o}!Block\+Solver\+\_\+7\+\_\+3@{Block\+Solver\+\_\+7\+\_\+3}}
+\index{Block\+Solver\+\_\+7\+\_\+3@{Block\+Solver\+\_\+7\+\_\+3}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Block\+Solver\+\_\+7\+\_\+3}{BlockSolver\_7\_3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}$<$7, 3$>$ $>$ g2o\+::\+Block\+Solver\+\_\+7\+\_\+3}
+
+\mbox{\Hypertarget{namespaceg2o_adcc6ea7cf60314982bc91e7b926adf14}\label{namespaceg2o_adcc6ea7cf60314982bc91e7b926adf14}} 
+\index{g2o@{g2o}!Block\+SolverX@{Block\+SolverX}}
+\index{Block\+SolverX@{Block\+SolverX}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Block\+SolverX}{BlockSolverX}}
+{\footnotesize\ttfamily \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_block_solver}{Block\+Solver}}$<$ \mbox{\hyperlink{structg2o_1_1_block_solver_traits}{Block\+Solver\+Traits}}$<$Eigen\+::\+Dynamic, Eigen\+::\+Dynamic$>$ $>$ g2o\+::\+Block\+SolverX}
+
+\mbox{\Hypertarget{namespaceg2o_a3beb17b066b63dedd1d49fe5c8db1b3e}\label{namespaceg2o_a3beb17b066b63dedd1d49fe5c8db1b3e}} 
+\index{g2o@{g2o}!Optimization\+Algorithm@{Optimization\+Algorithm}}
+\index{Optimization\+Algorithm@{Optimization\+Algorithm}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Optimization\+Algorithm}{OptimizationAlgorithm}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{classg2o_1_1_optimization_algorithm}{g2o\+::\+Optimization\+Algorithm}}}
+
+\mbox{\Hypertarget{namespaceg2o_a711432ca707cf7aee387c3cca80d84e7}\label{namespaceg2o_a711432ca707cf7aee387c3cca80d84e7}} 
+\index{g2o@{g2o}!Sparse\+Block\+Matrix\+Xd@{Sparse\+Block\+Matrix\+Xd}}
+\index{Sparse\+Block\+Matrix\+Xd@{Sparse\+Block\+Matrix\+Xd}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Sparse\+Block\+Matrix\+Xd}{SparseBlockMatrixXd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} typedef \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$Matrix\+Xd$>$ g2o\+::\+Sparse\+Block\+Matrix\+Xd}
+
+\mbox{\Hypertarget{namespaceg2o_a9b3a9d8e71f5779358eaa12ed7cb8b4c}\label{namespaceg2o_a9b3a9d8e71f5779358eaa12ed7cb8b4c}} 
+\index{g2o@{g2o}!Sparse\+Optimizer@{Sparse\+Optimizer}}
+\index{Sparse\+Optimizer@{Sparse\+Optimizer}!g2o@{g2o}}
+\subsubsection{\texorpdfstring{Sparse\+Optimizer}{SparseOptimizer}}
+{\footnotesize\ttfamily class \mbox{\hyperlink{g2o__core__api_8h_a7a8d7648d6f1e26632566f335751d064}{G2\+O\+\_\+\+C\+O\+R\+E\+\_\+\+A\+PI}} \mbox{\hyperlink{classg2o_1_1_sparse_optimizer}{g2o\+::\+Sparse\+Optimizer}}}
+

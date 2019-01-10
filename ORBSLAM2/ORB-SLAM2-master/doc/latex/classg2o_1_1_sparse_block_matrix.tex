@@ -1,0 +1,573 @@
+\hypertarget{classg2o_1_1_sparse_block_matrix}{}\section{g2o\+:\+:Sparse\+Block\+Matrix$<$ Matrix\+Type $>$ Class Template Reference}
+\label{classg2o_1_1_sparse_block_matrix}\index{g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$@{g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$}}
+
+
+Sparse matrix which uses blocks.  
+
+
+
+
+{\ttfamily \#include $<$sparse\+\_\+block\+\_\+matrix.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Matrix\+Type \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}}
+\begin{DoxyCompactList}\small\item\em this is the type of the elementary block, it is an Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ int, \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}} $\ast$ $>$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ac9dfcc991976a6c21dcbed961f06282d}{cols}} () const
+\begin{DoxyCompactList}\small\item\em columns of the matrix \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaad7b1558369203795419345ee014852}{rows}} () const
+\begin{DoxyCompactList}\small\item\em rows of the matrix \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a0407f26837522322d7b7fd7a5259ee3c}{Sparse\+Block\+Matrix}} (const int $\ast$rbi, const int $\ast$cbi, int rb, int cb, bool has\+Storage=true)
+\item 
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_af9b8a9cb09a88bc444775a9974db8760}{Sparse\+Block\+Matrix}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a70d18ec0265a69e1291083e20a5bc95e}{$\sim$\+Sparse\+Block\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_af14b7aaa588b339f2c06793fcc0d4e09}{clear}} (bool dealloc=false)
+\begin{DoxyCompactList}\small\item\em this zeroes all the blocks. If dealloc=true the blocks are removed from memory \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}} $\ast$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}{block}} (int r, int c, bool alloc=false)
+\begin{DoxyCompactList}\small\item\em returns the block at location r,c. if alloc=true he block is created if it does not exist \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}} $\ast$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aa8268815dbc660a4aa04c4360e3e9e2c}{block}} (int r, int c) const
+\begin{DoxyCompactList}\small\item\em returns the block at location r,c \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a637d4a6d2d6f444be55a158497c8a07c}{rows\+Of\+Block}} (int r) const
+\begin{DoxyCompactList}\small\item\em how many rows does the block at block-\/row r has? \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_afe3ef87aecd7a76eab27e91131dbe0c1}{cols\+Of\+Block}} (int c) const
+\begin{DoxyCompactList}\small\item\em how many cols does the block at block-\/col c has? \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_af718590d044a1b44e4079136c29efcd1}{row\+Base\+Of\+Block}} (int r) const
+\begin{DoxyCompactList}\small\item\em where does the row at block-\/row r starts? \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a502857f0a792ad37055964705a983590}{col\+Base\+Of\+Block}} (int c) const
+\begin{DoxyCompactList}\small\item\em where does the col at block-\/col r starts? \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a06dc97167a923119bdf99818033104d8}{non\+Zeros}} () const
+\begin{DoxyCompactList}\small\item\em number of non-\/zero elements \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a3f9e289e4039e668d33ad565a637e39a}{non\+Zero\+Blocks}} () const
+\begin{DoxyCompactList}\small\item\em number of allocated blocks \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}} $\ast$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aacf3c757056cfb81e510e3005a07278e}{clone}} () const
+\begin{DoxyCompactList}\small\item\em deep copy of a sparse-\/block-\/matrix; \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}} $\ast$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a7ccb3f90afe0d190fbc94df5f0313763}{slice}} (int rmin, int rmax, int cmin, int cmax, bool alloc=true) const
+\item 
+{\footnotesize template$<$class Matrix\+Transposed\+Type $>$ }\\bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a2d449bb4054991867a9b50b6c0d978eb}{transpose}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Transposed\+Type $>$ $\ast$\&dest) const
+\begin{DoxyCompactList}\small\item\em transposes a block matrix, The transposed type should match the argument false on failure \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ae873eb42e1b3fbbe44d3cee48959c09a}{add}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ $\ast$\&dest) const
+\begin{DoxyCompactList}\small\item\em adds the current matrix to the destination \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Matrix\+Result\+Type , class Matrix\+Factor\+Type $>$ }\\bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_abd1aa3a3ed3278b82945151b02223e1c}{multiply}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Result\+Type $>$ $\ast$\&dest, const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Factor\+Type $>$ $\ast$M) const
+\begin{DoxyCompactList}\small\item\em dest = ($\ast$this) $\ast$ M \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ae71075d1c8e421389316712d12ba1598}{multiply}} (double $\ast$\&dest, const double $\ast$src) const
+\begin{DoxyCompactList}\small\item\em dest = ($\ast$this) $\ast$ src \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a87a57d96e63668c7131dee642c25ac5f}{multiply\+Symmetric\+Upper\+Triangle}} (double $\ast$\&dest, const double $\ast$src) const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a7efaf2e4ea855f6faf500f9feacf3d3e}{right\+Multiply}} (double $\ast$\&dest, const double $\ast$src) const
+\begin{DoxyCompactList}\small\item\em dest = M $\ast$ ($\ast$this) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_afbccb3c0404beeba566e21429089e288}{scale}} (double a)
+\begin{DoxyCompactList}\small\item\em $\ast$this $\ast$= a \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a0dcf826fe329e922eae1ea92c73c7b23}{symm\+Permutation}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ $\ast$\&dest, const int $\ast$pinv, bool only\+Upper=false) const
+\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a54b93e3ed8ccb6c30e694d417f7c336f}{fill\+C\+CS}} (int $\ast$Cp, int $\ast$Ci, double $\ast$Cx, bool upper\+Triangle=false) const
+\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ac01f380ada64511737cb97631d39a9e8}{fill\+C\+CS}} (double $\ast$Cx, bool upper\+Triangle=false) const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_add5e7a5c95f2a6be69ededec4a043a94}{fill\+Block\+Structure}} (\mbox{\hyperlink{classg2o_1_1_matrix_structure}{Matrix\+Structure}} \&ms) const
+\begin{DoxyCompactList}\small\item\em exports the non zero blocks in the structure matrix ms \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}} $>$ \& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab818f8923b845d08a38e8de1145fbb65}{block\+Cols}} () const
+\begin{DoxyCompactList}\small\item\em the block matrices per block-\/column \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}} $>$ \& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a31236f3e11cb7af4979d68fdba3d5e33}{block\+Cols}} ()
+\item 
+const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a4fff500693b46e4f62a2f828934d198c}{row\+Block\+Indices}} () const
+\begin{DoxyCompactList}\small\item\em indices of the row blocks \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a03a2cfdb856c2dac4875889d55ecda84}{row\+Block\+Indices}} ()
+\item 
+const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a1dc1115273da4863f4625b1dc9569d89}{col\+Block\+Indices}} () const
+\begin{DoxyCompactList}\small\item\em indices of the column blocks \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aba255bdbb8e0a0d2802ae27e6d4f7cc7}{col\+Block\+Indices}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a21725f29b3f1bbc4e4ba77ee3f960ddc}{write\+Octave}} (const char $\ast$filename, bool upper\+Triangle=true) const
+\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a783a9c976391f0c698866e34eeef43f5}{fill\+Sparse\+Block\+Matrix\+C\+CS}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_c_c_s}{Sparse\+Block\+Matrix\+C\+CS}}$<$ Matrix\+Type $>$ \&block\+C\+CS) const
+\item 
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a3808d27b1def55e9dd6e26b678d8f728}{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_c_c_s}{Sparse\+Block\+Matrix\+C\+CS}}$<$ Matrix\+Type $>$ \&block\+C\+CS) const
+\item 
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_a0b1e9dc3a24b0ab41d7002396a61c833}{take\+Pattern\+From\+Hash}} (\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_hash_map}{Sparse\+Block\+Matrix\+Hash\+Map}}$<$ Matrix\+Type $>$ \&hash\+Matrix)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab0bd9c6d5b7b8704af1bc679032382e3}{\+\_\+row\+Block\+Indices}}
+\begin{DoxyCompactList}\small\item\em vector of the indices of the blocks along the rows. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aca008740c37d2d00b90f696ab19abb59}{\+\_\+col\+Block\+Indices}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}} $>$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ae236d56a01ba4d292450a518621b41f8}{\+\_\+block\+Cols}}
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ae3f063a5efc2708b41806ac361fd3ca6}{\+\_\+has\+Storage}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Matrix\+Type = Matrix\+Xd$>$\newline
+class g2o\+::\+Sparse\+Block\+Matrix$<$ Matrix\+Type $>$}
+
+Sparse matrix which uses blocks. 
+
+Template class that specifies a sparse block matrix. A block matrix is a sparse matrix made of dense blocks. These blocks cannot have a random pattern, but follow a (variable) grid structure. This structure is specified by a partition of the rows and the columns of the matrix. The blocks are represented by the Eigen\+::\+Matrix structure, thus they can be statically or dynamically allocated. For efficiency reasons it is convenient to allocate them statically, when possible. A static block matrix has all blocks of the same size, and the size of the block is specified by the template argument. If this is not the case, and you have different block sizes than you have to use a dynamic-\/block matrix (default template argument). 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}\label{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!Int\+Block\+Map@{Int\+Block\+Map}}
+\index{Int\+Block\+Map@{Int\+Block\+Map}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{Int\+Block\+Map}{IntBlockMap}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+typedef std\+::map$<$int, \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}}$\ast$$>$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}}}
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}\label{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!Sparse\+Matrix\+Block@{Sparse\+Matrix\+Block}}
+\index{Sparse\+Matrix\+Block@{Sparse\+Matrix\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{Sparse\+Matrix\+Block}{SparseMatrixBlock}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+typedef Matrix\+Type \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}}}
+
+
+
+this is the type of the elementary block, it is an Eigen\+::\+Matrix. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a0407f26837522322d7b7fd7a5259ee3c}\label{classg2o_1_1_sparse_block_matrix_a0407f26837522322d7b7fd7a5259ee3c}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!Sparse\+Block\+Matrix@{Sparse\+Block\+Matrix}}
+\index{Sparse\+Block\+Matrix@{Sparse\+Block\+Matrix}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{Sparse\+Block\+Matrix()}{SparseBlockMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}} (\begin{DoxyParamCaption}\item[{const int $\ast$}]{rbi,  }\item[{const int $\ast$}]{cbi,  }\item[{int}]{rb,  }\item[{int}]{cb,  }\item[{bool}]{has\+Storage = {\ttfamily true} }\end{DoxyParamCaption})}
+
+constructs a sparse block matrix having a specific layout 
+\begin{DoxyParams}{Parameters}
+{\em rbi} & array of int containing the row layout of the blocks. the component i of the array should contain the index of the first row of the block i+1. \\
+\hline
+{\em rbi} & array of int containing the column layout of the blocks. the component i of the array should contain the index of the first col of the block i+1. \\
+\hline
+{\em rb} & number of row blocks \\
+\hline
+{\em cb} & number of col blocks \\
+\hline
+{\em has\+Storage} & set it to true if the matrix \char`\"{}owns\char`\"{} the blocks, thus it deletes it on destruction. if false the matrix is only a \char`\"{}view\char`\"{} over an existing structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_af9b8a9cb09a88bc444775a9974db8760}\label{classg2o_1_1_sparse_block_matrix_af9b8a9cb09a88bc444775a9974db8760}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!Sparse\+Block\+Matrix@{Sparse\+Block\+Matrix}}
+\index{Sparse\+Block\+Matrix@{Sparse\+Block\+Matrix}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{Sparse\+Block\+Matrix()}{SparseBlockMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a70d18ec0265a69e1291083e20a5bc95e}\label{classg2o_1_1_sparse_block_matrix_a70d18ec0265a69e1291083e20a5bc95e}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!````~Sparse\+Block\+Matrix@{$\sim$\+Sparse\+Block\+Matrix}}
+\index{````~Sparse\+Block\+Matrix@{$\sim$\+Sparse\+Block\+Matrix}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{$\sim$\+Sparse\+Block\+Matrix()}{~SparseBlockMatrix()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::$\sim$\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ae873eb42e1b3fbbe44d3cee48959c09a}\label{classg2o_1_1_sparse_block_matrix_ae873eb42e1b3fbbe44d3cee48959c09a}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!add@{add}}
+\index{add@{add}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type$>$ \\
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ $\ast$\&}]{dest }\end{DoxyParamCaption}) const}
+
+
+
+adds the current matrix to the destination 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}\label{classg2o_1_1_sparse_block_matrix_aaca7b38d2e9a18eebf9e6f5957af0cf7}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!block@{block}}
+\index{block@{block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{block()}{block()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}} $\ast$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::block (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{bool}]{alloc = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+returns the block at location r,c. if alloc=true he block is created if it does not exist 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_aa8268815dbc660a4aa04c4360e3e9e2c}\label{classg2o_1_1_sparse_block_matrix_aa8268815dbc660a4aa04c4360e3e9e2c}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!block@{block}}
+\index{block@{block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{block()}{block()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_ab2f7376cbf055803fda6527dcc43e3be}{Sparse\+Matrix\+Block}} $\ast$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::block (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption}) const}
+
+
+
+returns the block at location r,c 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ab818f8923b845d08a38e8de1145fbb65}\label{classg2o_1_1_sparse_block_matrix_ab818f8923b845d08a38e8de1145fbb65}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!block\+Cols@{block\+Cols}}
+\index{block\+Cols@{block\+Cols}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{block\+Cols()}{blockCols()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+const std\+::vector$<$\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}}$>$\& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::block\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+the block matrices per block-\/column 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a31236f3e11cb7af4979d68fdba3d5e33}\label{classg2o_1_1_sparse_block_matrix_a31236f3e11cb7af4979d68fdba3d5e33}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!block\+Cols@{block\+Cols}}
+\index{block\+Cols@{block\+Cols}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{block\+Cols()}{blockCols()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+std\+::vector$<$\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}}$>$\& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::block\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_af14b7aaa588b339f2c06793fcc0d4e09}\label{classg2o_1_1_sparse_block_matrix_af14b7aaa588b339f2c06793fcc0d4e09}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!clear@{clear}}
+\index{clear@{clear}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::clear (\begin{DoxyParamCaption}\item[{bool}]{dealloc = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+this zeroes all the blocks. If dealloc=true the blocks are removed from memory 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_aacf3c757056cfb81e510e3005a07278e}\label{classg2o_1_1_sparse_block_matrix_aacf3c757056cfb81e510e3005a07278e}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!clone@{clone}}
+\index{clone@{clone}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ $\ast$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+deep copy of a sparse-\/block-\/matrix; 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a502857f0a792ad37055964705a983590}\label{classg2o_1_1_sparse_block_matrix_a502857f0a792ad37055964705a983590}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!col\+Base\+Of\+Block@{col\+Base\+Of\+Block}}
+\index{col\+Base\+Of\+Block@{col\+Base\+Of\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{col\+Base\+Of\+Block()}{colBaseOfBlock()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::col\+Base\+Of\+Block (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+where does the col at block-\/col r starts? 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a1dc1115273da4863f4625b1dc9569d89}\label{classg2o_1_1_sparse_block_matrix_a1dc1115273da4863f4625b1dc9569d89}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!col\+Block\+Indices@{col\+Block\+Indices}}
+\index{col\+Block\+Indices@{col\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{col\+Block\+Indices()}{colBlockIndices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+const std\+::vector$<$int$>$\& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::col\+Block\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+indices of the column blocks 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_aba255bdbb8e0a0d2802ae27e6d4f7cc7}\label{classg2o_1_1_sparse_block_matrix_aba255bdbb8e0a0d2802ae27e6d4f7cc7}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!col\+Block\+Indices@{col\+Block\+Indices}}
+\index{col\+Block\+Indices@{col\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{col\+Block\+Indices()}{colBlockIndices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+std\+::vector$<$int$>$\& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::col\+Block\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ac9dfcc991976a6c21dcbed961f06282d}\label{classg2o_1_1_sparse_block_matrix_ac9dfcc991976a6c21dcbed961f06282d}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!cols@{cols}}
+\index{cols@{cols}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{cols()}{cols()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+columns of the matrix 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_afe3ef87aecd7a76eab27e91131dbe0c1}\label{classg2o_1_1_sparse_block_matrix_afe3ef87aecd7a76eab27e91131dbe0c1}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!cols\+Of\+Block@{cols\+Of\+Block}}
+\index{cols\+Of\+Block@{cols\+Of\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{cols\+Of\+Block()}{colsOfBlock()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::cols\+Of\+Block (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+how many cols does the block at block-\/col c has? 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_add5e7a5c95f2a6be69ededec4a043a94}\label{classg2o_1_1_sparse_block_matrix_add5e7a5c95f2a6be69ededec4a043a94}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+Block\+Structure@{fill\+Block\+Structure}}
+\index{fill\+Block\+Structure@{fill\+Block\+Structure}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{fill\+Block\+Structure()}{fillBlockStructure()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::fill\+Block\+Structure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_matrix_structure}{Matrix\+Structure}} \&}]{ms }\end{DoxyParamCaption}) const}
+
+
+
+exports the non zero blocks in the structure matrix ms 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a54b93e3ed8ccb6c30e694d417f7c336f}\label{classg2o_1_1_sparse_block_matrix_a54b93e3ed8ccb6c30e694d417f7c336f}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+C\+CS@{fill\+C\+CS}}
+\index{fill\+C\+CS@{fill\+C\+CS}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{fill\+C\+C\+S()}{fillCCS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::fill\+C\+CS (\begin{DoxyParamCaption}\item[{int $\ast$}]{Cp,  }\item[{int $\ast$}]{Ci,  }\item[{double $\ast$}]{Cx,  }\item[{bool}]{upper\+Triangle = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+fill the C\+CS arrays of a matrix, arrays have to be allocated beforehand \mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ac01f380ada64511737cb97631d39a9e8}\label{classg2o_1_1_sparse_block_matrix_ac01f380ada64511737cb97631d39a9e8}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+C\+CS@{fill\+C\+CS}}
+\index{fill\+C\+CS@{fill\+C\+CS}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{fill\+C\+C\+S()}{fillCCS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::fill\+C\+CS (\begin{DoxyParamCaption}\item[{double $\ast$}]{Cx,  }\item[{bool}]{upper\+Triangle = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+fill the C\+CS arrays of a matrix, arrays have to be allocated beforehand. This function only writes the values and assumes that column and row structures have already been written. \mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a783a9c976391f0c698866e34eeef43f5}\label{classg2o_1_1_sparse_block_matrix_a783a9c976391f0c698866e34eeef43f5}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+Sparse\+Block\+Matrix\+C\+CS@{fill\+Sparse\+Block\+Matrix\+C\+CS}}
+\index{fill\+Sparse\+Block\+Matrix\+C\+CS@{fill\+Sparse\+Block\+Matrix\+C\+CS}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{fill\+Sparse\+Block\+Matrix\+C\+C\+S()}{fillSparseBlockMatrixCCS()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type$>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+CS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_c_c_s}{Sparse\+Block\+Matrix\+C\+CS}}$<$ Matrix\+Type $>$ \&}]{block\+C\+CS }\end{DoxyParamCaption}) const}
+
+copy into C\+CS structure \begin{DoxyReturn}{Returns}
+number of processed blocks, -\/1 on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a3808d27b1def55e9dd6e26b678d8f728}\label{classg2o_1_1_sparse_block_matrix_a3808d27b1def55e9dd6e26b678d8f728}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed@{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed}}
+\index{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed@{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed()}{fillSparseBlockMatrixCCSTransposed()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type$>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::fill\+Sparse\+Block\+Matrix\+C\+C\+S\+Transposed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_c_c_s}{Sparse\+Block\+Matrix\+C\+CS}}$<$ Matrix\+Type $>$ \&}]{block\+C\+CS }\end{DoxyParamCaption}) const}
+
+copy as transposed into a C\+CS structure \begin{DoxyReturn}{Returns}
+number of processed blocks, -\/1 on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_abd1aa3a3ed3278b82945151b02223e1c}\label{classg2o_1_1_sparse_block_matrix_abd1aa3a3ed3278b82945151b02223e1c}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!multiply@{multiply}}
+\index{multiply@{multiply}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+template$<$class Matrix\+Result\+Type , class Matrix\+Factor\+Type $>$ \\
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Result\+Type $>$ $\ast$\&}]{dest,  }\item[{const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Factor\+Type $>$ $\ast$}]{M }\end{DoxyParamCaption}) const}
+
+
+
+dest = ($\ast$this) $\ast$ M 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ae71075d1c8e421389316712d12ba1598}\label{classg2o_1_1_sparse_block_matrix_ae71075d1c8e421389316712d12ba1598}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!multiply@{multiply}}
+\index{multiply@{multiply}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{multiply()}{multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::multiply (\begin{DoxyParamCaption}\item[{double $\ast$\&}]{dest,  }\item[{const double $\ast$}]{src }\end{DoxyParamCaption}) const}
+
+
+
+dest = ($\ast$this) $\ast$ src 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a87a57d96e63668c7131dee642c25ac5f}\label{classg2o_1_1_sparse_block_matrix_a87a57d96e63668c7131dee642c25ac5f}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!multiply\+Symmetric\+Upper\+Triangle@{multiply\+Symmetric\+Upper\+Triangle}}
+\index{multiply\+Symmetric\+Upper\+Triangle@{multiply\+Symmetric\+Upper\+Triangle}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{multiply\+Symmetric\+Upper\+Triangle()}{multiplySymmetricUpperTriangle()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::multiply\+Symmetric\+Upper\+Triangle (\begin{DoxyParamCaption}\item[{double $\ast$\&}]{dest,  }\item[{const double $\ast$}]{src }\end{DoxyParamCaption}) const}
+
+compute dest = ($\ast$this) $\ast$ src However, assuming that this is a symmetric matrix where only the upper triangle is stored \mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a3f9e289e4039e668d33ad565a637e39a}\label{classg2o_1_1_sparse_block_matrix_a3f9e289e4039e668d33ad565a637e39a}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!non\+Zero\+Blocks@{non\+Zero\+Blocks}}
+\index{non\+Zero\+Blocks@{non\+Zero\+Blocks}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{non\+Zero\+Blocks()}{nonZeroBlocks()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+size\+\_\+t \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::non\+Zero\+Blocks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+number of allocated blocks 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a06dc97167a923119bdf99818033104d8}\label{classg2o_1_1_sparse_block_matrix_a06dc97167a923119bdf99818033104d8}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!non\+Zeros@{non\+Zeros}}
+\index{non\+Zeros@{non\+Zeros}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{non\+Zeros()}{nonZeros()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+size\+\_\+t \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::non\+Zeros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+number of non-\/zero elements 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a7efaf2e4ea855f6faf500f9feacf3d3e}\label{classg2o_1_1_sparse_block_matrix_a7efaf2e4ea855f6faf500f9feacf3d3e}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!right\+Multiply@{right\+Multiply}}
+\index{right\+Multiply@{right\+Multiply}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{right\+Multiply()}{rightMultiply()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::right\+Multiply (\begin{DoxyParamCaption}\item[{double $\ast$\&}]{dest,  }\item[{const double $\ast$}]{src }\end{DoxyParamCaption}) const}
+
+
+
+dest = M $\ast$ ($\ast$this) 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_af718590d044a1b44e4079136c29efcd1}\label{classg2o_1_1_sparse_block_matrix_af718590d044a1b44e4079136c29efcd1}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!row\+Base\+Of\+Block@{row\+Base\+Of\+Block}}
+\index{row\+Base\+Of\+Block@{row\+Base\+Of\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{row\+Base\+Of\+Block()}{rowBaseOfBlock()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::row\+Base\+Of\+Block (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+where does the row at block-\/row r starts? 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a4fff500693b46e4f62a2f828934d198c}\label{classg2o_1_1_sparse_block_matrix_a4fff500693b46e4f62a2f828934d198c}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!row\+Block\+Indices@{row\+Block\+Indices}}
+\index{row\+Block\+Indices@{row\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{row\+Block\+Indices()}{rowBlockIndices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+const std\+::vector$<$int$>$\& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::row\+Block\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+indices of the row blocks 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a03a2cfdb856c2dac4875889d55ecda84}\label{classg2o_1_1_sparse_block_matrix_a03a2cfdb856c2dac4875889d55ecda84}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!row\+Block\+Indices@{row\+Block\+Indices}}
+\index{row\+Block\+Indices@{row\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{row\+Block\+Indices()}{rowBlockIndices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+std\+::vector$<$int$>$\& \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::row\+Block\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_aaad7b1558369203795419345ee014852}\label{classg2o_1_1_sparse_block_matrix_aaad7b1558369203795419345ee014852}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!rows@{rows}}
+\index{rows@{rows}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{rows()}{rows()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+rows of the matrix 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a637d4a6d2d6f444be55a158497c8a07c}\label{classg2o_1_1_sparse_block_matrix_a637d4a6d2d6f444be55a158497c8a07c}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!rows\+Of\+Block@{rows\+Of\+Block}}
+\index{rows\+Of\+Block@{rows\+Of\+Block}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{rows\+Of\+Block()}{rowsOfBlock()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+int \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::rows\+Of\+Block (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+how many rows does the block at block-\/row r has? 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_afbccb3c0404beeba566e21429089e288}\label{classg2o_1_1_sparse_block_matrix_afbccb3c0404beeba566e21429089e288}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!scale@{scale}}
+\index{scale@{scale}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::scale (\begin{DoxyParamCaption}\item[{double}]{a }\end{DoxyParamCaption})}
+
+
+
+$\ast$this $\ast$= a 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a7ccb3f90afe0d190fbc94df5f0313763}\label{classg2o_1_1_sparse_block_matrix_a7ccb3f90afe0d190fbc94df5f0313763}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!slice@{slice}}
+\index{slice@{slice}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{slice()}{slice()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ $\ast$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::slice (\begin{DoxyParamCaption}\item[{int}]{rmin,  }\item[{int}]{rmax,  }\item[{int}]{cmin,  }\item[{int}]{cmax,  }\item[{bool}]{alloc = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+returns a view or a copy of the block matrix 
+\begin{DoxyParams}{Parameters}
+{\em rmin} & starting block row \\
+\hline
+{\em rmax} & ending block row \\
+\hline
+{\em cmin} & starting block col \\
+\hline
+{\em cmax} & ending block col \\
+\hline
+{\em alloc} & if true it makes a deep copy, if false it creates a view. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a0dcf826fe329e922eae1ea92c73c7b23}\label{classg2o_1_1_sparse_block_matrix_a0dcf826fe329e922eae1ea92c73c7b23}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!symm\+Permutation@{symm\+Permutation}}
+\index{symm\+Permutation@{symm\+Permutation}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{symm\+Permutation()}{symmPermutation()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type$>$ \\
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::symm\+Permutation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ $\ast$\&}]{dest,  }\item[{const int $\ast$}]{pinv,  }\item[{bool}]{only\+Upper = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+writes in dest a block permutaton specified by pinv. 
+\begin{DoxyParams}{Parameters}
+{\em pinv} & array such that new\+\_\+block\mbox{[}i\mbox{]} = old\+\_\+block\mbox{[}pinv\mbox{[}i\mbox{]}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a0b1e9dc3a24b0ab41d7002396a61c833}\label{classg2o_1_1_sparse_block_matrix_a0b1e9dc3a24b0ab41d7002396a61c833}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!take\+Pattern\+From\+Hash@{take\+Pattern\+From\+Hash}}
+\index{take\+Pattern\+From\+Hash@{take\+Pattern\+From\+Hash}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{take\+Pattern\+From\+Hash()}{takePatternFromHash()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type$>$ \\
+void \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::take\+Pattern\+From\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_hash_map}{Sparse\+Block\+Matrix\+Hash\+Map}}$<$ Matrix\+Type $>$ \&}]{hash\+Matrix }\end{DoxyParamCaption})}
+
+take over the memory and matrix pattern from a hash matrix. The structure of the hash matrix will be cleared. \mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a2d449bb4054991867a9b50b6c0d978eb}\label{classg2o_1_1_sparse_block_matrix_a2d449bb4054991867a9b50b6c0d978eb}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+template$<$class Matrix\+Transposed\+Type $>$ \\
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Transposed\+Type $>$ $\ast$\&}]{dest }\end{DoxyParamCaption}) const}
+
+
+
+transposes a block matrix, The transposed type should match the argument false on failure 
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_a21725f29b3f1bbc4e4ba77ee3f960ddc}\label{classg2o_1_1_sparse_block_matrix_a21725f29b3f1bbc4e4ba77ee3f960ddc}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!write\+Octave@{write\+Octave}}
+\index{write\+Octave@{write\+Octave}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{write\+Octave()}{writeOctave()}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type $>$ \\
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::write\+Octave (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{bool}]{upper\+Triangle = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+write the content of this matrix to a stream loadable by Octave 
+\begin{DoxyParams}{Parameters}
+{\em upper\+Triangle} & does this matrix store only the upper triangular blocks \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ae236d56a01ba4d292450a518621b41f8}\label{classg2o_1_1_sparse_block_matrix_ae236d56a01ba4d292450a518621b41f8}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!\+\_\+block\+Cols@{\+\_\+block\+Cols}}
+\index{\+\_\+block\+Cols@{\+\_\+block\+Cols}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{\+\_\+block\+Cols}{\_blockCols}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+std\+::vector$<$\mbox{\hyperlink{classg2o_1_1_sparse_block_matrix_aaa6ca1ae454ed70f62992b6401645f4e}{Int\+Block\+Map}}$>$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\+\_\+block\+Cols\hspace{0.3cm}{\ttfamily [protected]}}
+
+array of maps of blocks. The index of the array represent a block column of the matrix and the block column is stored as a map row\+\_\+block -\/$>$ matrix\+\_\+block\+\_\+ptr. \mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_aca008740c37d2d00b90f696ab19abb59}\label{classg2o_1_1_sparse_block_matrix_aca008740c37d2d00b90f696ab19abb59}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!\+\_\+col\+Block\+Indices@{\+\_\+col\+Block\+Indices}}
+\index{\+\_\+col\+Block\+Indices@{\+\_\+col\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{\+\_\+col\+Block\+Indices}{\_colBlockIndices}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\+\_\+col\+Block\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+vector of the indices of the blocks along the cols \mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ae3f063a5efc2708b41806ac361fd3ca6}\label{classg2o_1_1_sparse_block_matrix_ae3f063a5efc2708b41806ac361fd3ca6}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!\+\_\+has\+Storage@{\+\_\+has\+Storage}}
+\index{\+\_\+has\+Storage@{\+\_\+has\+Storage}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{\+\_\+has\+Storage}{\_hasStorage}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+bool \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\+\_\+has\+Storage\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_sparse_block_matrix_ab0bd9c6d5b7b8704af1bc679032382e3}\label{classg2o_1_1_sparse_block_matrix_ab0bd9c6d5b7b8704af1bc679032382e3}} 
+\index{g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}!\+\_\+row\+Block\+Indices@{\+\_\+row\+Block\+Indices}}
+\index{\+\_\+row\+Block\+Indices@{\+\_\+row\+Block\+Indices}!g2o\+::\+Sparse\+Block\+Matrix@{g2o\+::\+Sparse\+Block\+Matrix}}
+\subsubsection{\texorpdfstring{\+\_\+row\+Block\+Indices}{\_rowBlockIndices}}
+{\footnotesize\ttfamily template$<$class Matrix\+Type = Matrix\+Xd$>$ \\
+std\+::vector$<$int$>$ \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{g2o\+::\+Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$\+::\+\_\+row\+Block\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+vector of the indices of the blocks along the rows. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{sparse__block__matrix_8h}{sparse\+\_\+block\+\_\+matrix.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{sparse__block__matrix_8hpp}{sparse\+\_\+block\+\_\+matrix.\+hpp}}\end{DoxyCompactItemize}

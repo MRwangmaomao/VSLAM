@@ -1,0 +1,806 @@
+\hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex}{}\section{g2o\+:\+:Optimizable\+Graph\+:\+:Vertex Class Reference}
+\label{classg2o_1_1_optimizable_graph_1_1_vertex}\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+
+
+A general case \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Vertex}} for optimization.  
+
+
+
+
+{\ttfamily \#include $<$optimizable\+\_\+graph.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Optimizable\+Graph\+:\+:Vertex\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.953586cm]{classg2o_1_1_optimizable_graph_1_1_vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a1f5fd4210abfa0f8b8e7dd279f561986}{Vertex}} ()
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Vertex}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a32e33f86c169e234a0dde54d1309e5e3}{clone}} () const
+\begin{DoxyCompactList}\small\item\em returns a deep copy of the current vertex \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a506c9664e88d886ba612d3ea95b6c76b}{user\+Data}} () const
+\begin{DoxyCompactList}\small\item\em the user data associated with this vertex \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a768057be134ffe93bc88b020d031eee5}{user\+Data}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a858d15a4fadebfc8bce0162ac675f608}{set\+User\+Data}} (\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$obs)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a8f7ac810cad82a004365c1221fd16234}{add\+User\+Data}} (\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$obs)
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ac2208bfef95bba9670f13933d68fb929}{$\sim$\+Vertex}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ab10678592b5e707bf4abdc0ff6b8e4bf}{set\+To\+Origin}} ()
+\begin{DoxyCompactList}\small\item\em sets the node to the origin (used in the multilevel stuff) \end{DoxyCompactList}\item 
+virtual const double \& \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af46fa4f0baa4c87e29b137f24e713acb}{hessian}} (int i, int j) const =0
+\begin{DoxyCompactList}\small\item\em get the element from the hessian matrix \end{DoxyCompactList}\item 
+virtual double \& \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ade95d46370bb9a86f64c4e591726ad62}{hessian}} (int i, int j)=0
+\item 
+virtual double \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_adaed502500d9ddc9f1721aba635da4d6}{hessian\+Determinant}} () const =0
+\item 
+virtual double $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a4ec536d8c82d839e507d89c7a7e368ae}{hessian\+Data}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a1008c0f7981a9fb11be3e3df5c4a9758}{map\+Hessian\+Memory}} (double $\ast$d)=0
+\item 
+virtual int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af544f0050ea6e05950fd6e53931bdf61}{copyB}} (double $\ast$b\+\_\+) const =0
+\item 
+virtual const double \& \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a79afa60eb11928eeeb1b97f2d2a30732}{b}} (int i) const =0
+\begin{DoxyCompactList}\small\item\em get the b vector element \end{DoxyCompactList}\item 
+virtual double \& \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af2d92761ad2732b6e9b19bd52fa2a19b}{b}} (int i)=0
+\item 
+virtual double $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a84465a61c6d322f7d64833129cc7d55a}{b\+Data}} ()=0
+\begin{DoxyCompactList}\small\item\em return a pointer to the b vector associated with this vertex \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a803897f6bae25dece4d7e23330f0f9da}{clear\+Quadratic\+Form}} ()=0
+\item 
+virtual double \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a61c4e7b7a7a61e1f287069a8cb01004f}{solve\+Direct}} (double lambda=0)=0
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_acebbe12160c0df7c859a349781badc30}{set\+Estimate\+Data}} (const double $\ast$estimate)
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a1cf16cd3b2e99169cdd6dfc139f926bc}{set\+Estimate\+Data}} (const std\+::vector$<$ double $>$ \&estimate)
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a7303e52b5e41a0b5ee8751cce4095a57}{get\+Estimate\+Data}} (double $\ast$estimate) const
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_acc3b27eab95474c09ad52e6931f1d635}{get\+Estimate\+Data}} (std\+::vector$<$ double $>$ \&estimate) const
+\item 
+virtual int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ae9d94367931458af6ca3d5589801b1e6}{estimate\+Dimension}} () const
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a57d42a1288d7377c593c91a8cf8a754c}{set\+Minimal\+Estimate\+Data}} (const double $\ast$estimate)
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ac41fda9360e81bf704681831b1df11f8}{set\+Minimal\+Estimate\+Data}} (const std\+::vector$<$ double $>$ \&estimate)
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ac9cae6014e4bc7df2565638ad0699958}{get\+Minimal\+Estimate\+Data}} (double $\ast$estimate) const
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af928d21e7304cb21d75acf56bc40470a}{get\+Minimal\+Estimate\+Data}} (std\+::vector$<$ double $>$ \&estimate) const
+\item 
+virtual int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ae14027b23254032d30319eeb7f487ca5}{minimal\+Estimate\+Dimension}} () const
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_aa477ed33d30a01ed468f33bb2a2f2d9d}{push}} ()=0
+\begin{DoxyCompactList}\small\item\em backup the position of the vertex to a stack \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a3e36d925dbda1c574a285826ade5909a}{pop}} ()=0
+\begin{DoxyCompactList}\small\item\em restore the position of the vertex by retrieving the position from the stack \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a9509fb5c333988911312fc3d9187a9c3}{discard\+Top}} ()=0
+\begin{DoxyCompactList}\small\item\em pop the last element from the stack, without restoring the current estimate \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a0a4ecc894d008d9c3806a3660e7dfe6f}{stack\+Size}} () const =0
+\begin{DoxyCompactList}\small\item\em return the stack size \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af4357b634cfd884cd2fa1abb05832ec8}{oplus}} (const double $\ast$v)
+\item 
+int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a05a371cfa6314d0f2d209289b01cc922}{hessian\+Index}} () const
+\begin{DoxyCompactList}\small\item\em temporary index of this node in the parameter vector obtained from linearization \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a8f22181a161d724e95631d5da742b66a}{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}} (temp\+Index() const)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a440f24c0108be5247f3529369aa1e53c}{set\+Hessian\+Index}} (int ti)
+\begin{DoxyCompactList}\small\item\em set the temporary index of the vertex in the parameter blocks \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_abdcd545b6870b37135b055d18dae7a36}{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}} (set\+Temp\+Index(int ti))
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a97294e6a1a573a44fe82ba36fc52c619}{fixed}} () const
+\begin{DoxyCompactList}\small\item\em true =$>$ this node is fixed during the optimization \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af92ef49e1bcd6a8166afa151d367b905}{set\+Fixed}} (bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a97294e6a1a573a44fe82ba36fc52c619}{fixed}})
+\begin{DoxyCompactList}\small\item\em true =$>$ this node should be considered fixed during the optimization \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a216d79149edcfa9f666140205159fde8}{marginalized}} () const
+\begin{DoxyCompactList}\small\item\em true =$>$ this node is marginalized out during the optimization \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_afabf1782886c78bf7b312bb1f2c90524}{set\+Marginalized}} (bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a216d79149edcfa9f666140205159fde8}{marginalized}})
+\begin{DoxyCompactList}\small\item\em true =$>$ this node should be marginalized out during the optimization \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a86feed80301950b100142575b48e4fca}{dimension}} () const
+\begin{DoxyCompactList}\small\item\em dimension of the estimated state belonging to this node \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ac57651173d6ce4bb4eebf8cb1d917551}{set\+Id}} (int \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a48191960395856d1b686287489e53da3}{id}})
+\begin{DoxyCompactList}\small\item\em sets the id of the node in the graph be sure that the graph keeps consistent after changing the id \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_aa605891d46b99ed97accf659f10bc8d5}{set\+Col\+In\+Hessian}} (int c)
+\begin{DoxyCompactList}\small\item\em set the row of this vertex in the Hessian \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a4d22b2e6832ae2ec040bfc0acb4cabb9}{col\+In\+Hessian}} () const
+\begin{DoxyCompactList}\small\item\em get the row of this vertex in the Hessian \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a8cf4be7e2442444d9d43a80cc8388b1e}{graph}} () const
+\item 
+\mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a3f845c6f0ba9a87ab15caaddba5a4037}{graph}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a2eb3dbe08fd20ca8feeeaecc63ce240c}{lock\+Quadratic\+Form}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a5badd602625433ee1ce8e2aa7bb3b2ac}{unlock\+Quadratic\+Form}} ()
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a356c40d33c3f1e07afa938dfb4870230}{read}} (std\+::istream \&is)=0
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a4cac277db656fddb5f844d9009d601eb}{write}} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ab5972c8ba6834c4dcb8a2319e9bf3070}{update\+Cache}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ab381120a2c00fc8ae90e5c298dfbb967}{cache\+Container}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a4537a46afb8d12c3f18c88ba9601c625}{oplus\+Impl}} (const double $\ast$v)=0
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_abd5fe36815f27a9c174ad41c2070c247}{set\+To\+Origin\+Impl}} ()=0
+\begin{DoxyCompactList}\small\item\em sets the node to the origin (used in the multilevel stuff) \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a35ab439967fd3a3d3e5608e3883d8487}{set\+Estimate\+Data\+Impl}} (const double $\ast$)
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a088ecbdde86968f3896b2320f80ee396}{set\+Minimal\+Estimate\+Data\+Impl}} (const double $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a6e14fd3ad8e531ead03b4d83cc7362ad}{\+\_\+graph}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a71eb5fdfaf5c9a442135502e23504500}{\+\_\+user\+Data}}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_aebf035f2c8177b5dac1bc650e0f0cf62}{\+\_\+hessian\+Index}}
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_af98461471e6b58664a9fc4bba9340501}{\+\_\+fixed}}
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a5e9b3906c8ff800b9a0b16b10ed9fff0}{\+\_\+marginalized}}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ab053ffd8851cd3b0f61576ffd349d68e}{\+\_\+dimension}}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_add1f5a0236a175784a824524244f7085}{\+\_\+col\+In\+Hessian}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_open_m_p_mutex}{Open\+M\+P\+Mutex}} \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ab9b85ddb487ad4818bc53e0c00ff7bcc}{\+\_\+quadratic\+Form\+Mutex}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}} $\ast$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a6eed5b850221cd76f0af46b97860f2e8}{\+\_\+cache\+Container}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a45d35331ee3deca38c26d1efb6b961ae}{Optimizable\+Graph}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A general case \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Vertex}} for optimization. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a1f5fd4210abfa0f8b8e7dd279f561986}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a1f5fd4210abfa0f8b8e7dd279f561986}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{Vertex()}{Vertex()}}
+{\footnotesize\ttfamily g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ac2208bfef95bba9670f13933d68fb929}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ac2208bfef95bba9670f13933d68fb929}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!````~Vertex@{$\sim$\+Vertex}}
+\index{````~Vertex@{$\sim$\+Vertex}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{$\sim$\+Vertex()}{~Vertex()}}
+{\footnotesize\ttfamily g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::$\sim$\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_a4c3da5bcc97c960c43bc49cc2ade649c}{g2o\+::\+Hyper\+Graph\+::\+Vertex}}.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a8f7ac810cad82a004365c1221fd16234}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a8f7ac810cad82a004365c1221fd16234}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!add\+User\+Data@{add\+User\+Data}}
+\index{add\+User\+Data@{add\+User\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{add\+User\+Data()}{addUserData()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::add\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$}]{obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a79afa60eb11928eeeb1b97f2d2a30732}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a79afa60eb11928eeeb1b97f2d2a30732}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!b@{b}}
+\index{b@{b}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{b()}{b()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const double\& g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::b (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the b vector element 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a837ef1047343d927edb48ad8d510fe90}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a837ef1047343d927edb48ad8d510fe90}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a837ef1047343d927edb48ad8d510fe90}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a837ef1047343d927edb48ad8d510fe90}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_af2d92761ad2732b6e9b19bd52fa2a19b}\label{classg2o_1_1_optimizable_graph_1_1_vertex_af2d92761ad2732b6e9b19bd52fa2a19b}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!b@{b}}
+\index{b@{b}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{b()}{b()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual double\& g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::b (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a5c235369ef3fb58de65b90c8cc37d611}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a5c235369ef3fb58de65b90c8cc37d611}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a5c235369ef3fb58de65b90c8cc37d611}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a5c235369ef3fb58de65b90c8cc37d611}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a84465a61c6d322f7d64833129cc7d55a}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a84465a61c6d322f7d64833129cc7d55a}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!b\+Data@{b\+Data}}
+\index{b\+Data@{b\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{b\+Data()}{bData()}}
+{\footnotesize\ttfamily virtual double$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::b\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+return a pointer to the b vector associated with this vertex 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_ac8edea7073e5850c90b0ba37092b8f84}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_ac8edea7073e5850c90b0ba37092b8f84}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_ac8edea7073e5850c90b0ba37092b8f84}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_ac8edea7073e5850c90b0ba37092b8f84}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ab381120a2c00fc8ae90e5c298dfbb967}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ab381120a2c00fc8ae90e5c298dfbb967}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!cache\+Container@{cache\+Container}}
+\index{cache\+Container@{cache\+Container}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{cache\+Container()}{cacheContainer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}} $\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::cache\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a803897f6bae25dece4d7e23330f0f9da}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a803897f6bae25dece4d7e23330f0f9da}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!clear\+Quadratic\+Form@{clear\+Quadratic\+Form}}
+\index{clear\+Quadratic\+Form@{clear\+Quadratic\+Form}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{clear\+Quadratic\+Form()}{clearQuadraticForm()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::clear\+Quadratic\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+set the b vector part of this vertex to zero 
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a144f99c7aa36a100dea65b30793e6d76}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a144f99c7aa36a100dea65b30793e6d76}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a144f99c7aa36a100dea65b30793e6d76}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a144f99c7aa36a100dea65b30793e6d76}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a32e33f86c169e234a0dde54d1309e5e3}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a32e33f86c169e234a0dde54d1309e5e3}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!clone@{clone}}
+\index{clone@{clone}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+returns a deep copy of the current vertex 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a4d22b2e6832ae2ec040bfc0acb4cabb9}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a4d22b2e6832ae2ec040bfc0acb4cabb9}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!col\+In\+Hessian@{col\+In\+Hessian}}
+\index{col\+In\+Hessian@{col\+In\+Hessian}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{col\+In\+Hessian()}{colInHessian()}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::col\+In\+Hessian (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the row of this vertex in the Hessian 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_af544f0050ea6e05950fd6e53931bdf61}\label{classg2o_1_1_optimizable_graph_1_1_vertex_af544f0050ea6e05950fd6e53931bdf61}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!copyB@{copyB}}
+\index{copyB@{copyB}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{copy\+B()}{copyB()}}
+{\footnotesize\ttfamily virtual int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::copyB (\begin{DoxyParamCaption}\item[{double $\ast$}]{b\+\_\+ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+copies the b vector in the array b\+\_\+ \begin{DoxyReturn}{Returns}
+the number of elements copied 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a3629d3b15da425476e15867fb03b781b}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a3629d3b15da425476e15867fb03b781b}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a3629d3b15da425476e15867fb03b781b}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a3629d3b15da425476e15867fb03b781b}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a86feed80301950b100142575b48e4fca}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a86feed80301950b100142575b48e4fca}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!dimension@{dimension}}
+\index{dimension@{dimension}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{dimension()}{dimension()}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+dimension of the estimated state belonging to this node 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a9509fb5c333988911312fc3d9187a9c3}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a9509fb5c333988911312fc3d9187a9c3}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!discard\+Top@{discard\+Top}}
+\index{discard\+Top@{discard\+Top}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{discard\+Top()}{discardTop()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::discard\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+pop the last element from the stack, without restoring the current estimate 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a71729c4d91044bde9bfea4c859b0c02d}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a71729c4d91044bde9bfea4c859b0c02d}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a71729c4d91044bde9bfea4c859b0c02d}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a71729c4d91044bde9bfea4c859b0c02d}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ae9d94367931458af6ca3d5589801b1e6}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ae9d94367931458af6ca3d5589801b1e6}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!estimate\+Dimension@{estimate\+Dimension}}
+\index{estimate\+Dimension@{estimate\+Dimension}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{estimate\+Dimension()}{estimateDimension()}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::estimate\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+returns the dimension of the extended representation used by get/set\+Estimate(double$\ast$) -\/1 if it is not supported \mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a97294e6a1a573a44fe82ba36fc52c619}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a97294e6a1a573a44fe82ba36fc52c619}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!fixed@{fixed}}
+\index{fixed@{fixed}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{fixed()}{fixed()}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::fixed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+true =$>$ this node is fixed during the optimization 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a8f22181a161d724e95631d5da742b66a}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a8f22181a161d724e95631d5da742b66a}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D()}{G2O\_ATTRIBUTE\_DEPRECATED()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED (\begin{DoxyParamCaption}\item[{temp\+Index()}]{const }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_abdcd545b6870b37135b055d18dae7a36}\label{classg2o_1_1_optimizable_graph_1_1_vertex_abdcd545b6870b37135b055d18dae7a36}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}}
+\index{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED@{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D()}{G2O\_ATTRIBUTE\_DEPRECATED()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+G2\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+ED (\begin{DoxyParamCaption}\item[{set\+Temp\+Index(int ti)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a7303e52b5e41a0b5ee8751cce4095a57}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a7303e52b5e41a0b5ee8751cce4095a57}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!get\+Estimate\+Data@{get\+Estimate\+Data}}
+\index{get\+Estimate\+Data@{get\+Estimate\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{get\+Estimate\+Data()}{getEstimateData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::get\+Estimate\+Data (\begin{DoxyParamCaption}\item[{double $\ast$}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+writes the estimater to an array of double \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_acc3b27eab95474c09ad52e6931f1d635}\label{classg2o_1_1_optimizable_graph_1_1_vertex_acc3b27eab95474c09ad52e6931f1d635}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!get\+Estimate\+Data@{get\+Estimate\+Data}}
+\index{get\+Estimate\+Data@{get\+Estimate\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{get\+Estimate\+Data()}{getEstimateData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::get\+Estimate\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+writes the estimater to an array of double \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ac9cae6014e4bc7df2565638ad0699958}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ac9cae6014e4bc7df2565638ad0699958}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!get\+Minimal\+Estimate\+Data@{get\+Minimal\+Estimate\+Data}}
+\index{get\+Minimal\+Estimate\+Data@{get\+Minimal\+Estimate\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{get\+Minimal\+Estimate\+Data()}{getMinimalEstimateData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::get\+Minimal\+Estimate\+Data (\begin{DoxyParamCaption}\item[{double $\ast$}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+writes the estimate to an array of double \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_af928d21e7304cb21d75acf56bc40470a}\label{classg2o_1_1_optimizable_graph_1_1_vertex_af928d21e7304cb21d75acf56bc40470a}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!get\+Minimal\+Estimate\+Data@{get\+Minimal\+Estimate\+Data}}
+\index{get\+Minimal\+Estimate\+Data@{get\+Minimal\+Estimate\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{get\+Minimal\+Estimate\+Data()}{getMinimalEstimateData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::get\+Minimal\+Estimate\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{estimate }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+writes the estimate to an array of double \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a8cf4be7e2442444d9d43a80cc8388b1e}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a8cf4be7e2442444d9d43a80cc8388b1e}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!graph@{graph}}
+\index{graph@{graph}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a3f845c6f0ba9a87ab15caaddba5a4037}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a3f845c6f0ba9a87ab15caaddba5a4037}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!graph@{graph}}
+\index{graph@{graph}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_af46fa4f0baa4c87e29b137f24e713acb}\label{classg2o_1_1_optimizable_graph_1_1_vertex_af46fa4f0baa4c87e29b137f24e713acb}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!hessian@{hessian}}
+\index{hessian@{hessian}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{hessian()}{hessian()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual const double\& g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+get the element from the hessian matrix 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_ac35e0c8c62a59e947ac7710ed85fcd7a}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_ac35e0c8c62a59e947ac7710ed85fcd7a}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_ac35e0c8c62a59e947ac7710ed85fcd7a}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_ac35e0c8c62a59e947ac7710ed85fcd7a}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ade95d46370bb9a86f64c4e591726ad62}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ade95d46370bb9a86f64c4e591726ad62}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!hessian@{hessian}}
+\index{hessian@{hessian}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{hessian()}{hessian()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual double\& g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a6ab2212fdb00dec460299fdbabe09cb9}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a6ab2212fdb00dec460299fdbabe09cb9}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a6ab2212fdb00dec460299fdbabe09cb9}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a6ab2212fdb00dec460299fdbabe09cb9}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a4ec536d8c82d839e507d89c7a7e368ae}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a4ec536d8c82d839e507d89c7a7e368ae}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!hessian\+Data@{hessian\+Data}}
+\index{hessian\+Data@{hessian\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{hessian\+Data()}{hessianData()}}
+{\footnotesize\ttfamily virtual double$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_aedf92fbb5c2c86185422a955be02a3a6}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_aedf92fbb5c2c86185422a955be02a3a6}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_aedf92fbb5c2c86185422a955be02a3a6}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_aedf92fbb5c2c86185422a955be02a3a6}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_adaed502500d9ddc9f1721aba635da4d6}\label{classg2o_1_1_optimizable_graph_1_1_vertex_adaed502500d9ddc9f1721aba635da4d6}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!hessian\+Determinant@{hessian\+Determinant}}
+\index{hessian\+Determinant@{hessian\+Determinant}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{hessian\+Determinant()}{hessianDeterminant()}}
+{\footnotesize\ttfamily virtual double g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian\+Determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a1217e0fe47e7259f039d468397cddb15}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a1217e0fe47e7259f039d468397cddb15}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a1217e0fe47e7259f039d468397cddb15}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a1217e0fe47e7259f039d468397cddb15}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a05a371cfa6314d0f2d209289b01cc922}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a05a371cfa6314d0f2d209289b01cc922}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!hessian\+Index@{hessian\+Index}}
+\index{hessian\+Index@{hessian\+Index}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{hessian\+Index()}{hessianIndex()}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::hessian\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+temporary index of this node in the parameter vector obtained from linearization 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a2eb3dbe08fd20ca8feeeaecc63ce240c}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a2eb3dbe08fd20ca8feeeaecc63ce240c}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!lock\+Quadratic\+Form@{lock\+Quadratic\+Form}}
+\index{lock\+Quadratic\+Form@{lock\+Quadratic\+Form}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{lock\+Quadratic\+Form()}{lockQuadraticForm()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::lock\+Quadratic\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+lock for the block of the hessian and the b vector associated with this vertex, to avoid race-\/conditions if multi-\/threaded. \mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a1008c0f7981a9fb11be3e3df5c4a9758}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a1008c0f7981a9fb11be3e3df5c4a9758}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!map\+Hessian\+Memory@{map\+Hessian\+Memory}}
+\index{map\+Hessian\+Memory@{map\+Hessian\+Memory}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{map\+Hessian\+Memory()}{mapHessianMemory()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::map\+Hessian\+Memory (\begin{DoxyParamCaption}\item[{double $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+maps the internal matrix to some external memory location 
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a54227ac315e6bc75c63ed117a2c75668}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a54227ac315e6bc75c63ed117a2c75668}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a54227ac315e6bc75c63ed117a2c75668}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a54227ac315e6bc75c63ed117a2c75668}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a216d79149edcfa9f666140205159fde8}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a216d79149edcfa9f666140205159fde8}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!marginalized@{marginalized}}
+\index{marginalized@{marginalized}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{marginalized()}{marginalized()}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::marginalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+true =$>$ this node is marginalized out during the optimization 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ae14027b23254032d30319eeb7f487ca5}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ae14027b23254032d30319eeb7f487ca5}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!minimal\+Estimate\+Dimension@{minimal\+Estimate\+Dimension}}
+\index{minimal\+Estimate\+Dimension@{minimal\+Estimate\+Dimension}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{minimal\+Estimate\+Dimension()}{minimalEstimateDimension()}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::minimal\+Estimate\+Dimension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+returns the dimension of the extended representation used by get/set\+Estimate(double$\ast$) -\/1 if it is not supported \mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_af4357b634cfd884cd2fa1abb05832ec8}\label{classg2o_1_1_optimizable_graph_1_1_vertex_af4357b634cfd884cd2fa1abb05832ec8}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!oplus@{oplus}}
+\index{oplus@{oplus}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{oplus()}{oplus()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::oplus (\begin{DoxyParamCaption}\item[{const double $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Update the position of the node from the parameters in v. Depends on the implementation of oplus\+Impl in derived classes to actually carry out the update. Will also call \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_ab5972c8ba6834c4dcb8a2319e9bf3070}{update\+Cache()}} to update the caches of depending on the vertex. \mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a4537a46afb8d12c3f18c88ba9601c625}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a4537a46afb8d12c3f18c88ba9601c625}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!oplus\+Impl@{oplus\+Impl}}
+\index{oplus\+Impl@{oplus\+Impl}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{oplus\+Impl()}{oplusImpl()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::oplus\+Impl (\begin{DoxyParamCaption}\item[{const double $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+update the position of the node from the parameters in v. Implement in your class! 
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_a52592993e7ab5de6fe4bb0f9e00c4d39}{g2o\+::\+Vertex\+S\+E3\+Expmap}}, \mbox{\hyperlink{classg2o_1_1_vertex_sim3_expmap_abef7e4d10825caa129984f69251508c2}{g2o\+::\+Vertex\+Sim3\+Expmap}}, and \mbox{\hyperlink{classg2o_1_1_vertex_s_b_a_point_x_y_z_aa2a13838edc46ed5395fee5c07c4c8ea}{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a3e36d925dbda1c574a285826ade5909a}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a3e36d925dbda1c574a285826ade5909a}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!pop@{pop}}
+\index{pop@{pop}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+restore the position of the vertex by retrieving the position from the stack 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a502bf3db2ee32061a2c8257ef81a1552}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a502bf3db2ee32061a2c8257ef81a1552}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a502bf3db2ee32061a2c8257ef81a1552}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a502bf3db2ee32061a2c8257ef81a1552}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_aa477ed33d30a01ed468f33bb2a2f2d9d}\label{classg2o_1_1_optimizable_graph_1_1_vertex_aa477ed33d30a01ed468f33bb2a2f2d9d}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!push@{push}}
+\index{push@{push}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::push (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+backup the position of the vertex to a stack 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_ae6edf93fe07aa27579a9352faa83098c}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_ae6edf93fe07aa27579a9352faa83098c}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_ae6edf93fe07aa27579a9352faa83098c}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_ae6edf93fe07aa27579a9352faa83098c}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a356c40d33c3f1e07afa938dfb4870230}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a356c40d33c3f1e07afa938dfb4870230}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!read@{read}}
+\index{read@{read}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_a4f5913373d24ea5963fffc6830406a52}{g2o\+::\+Vertex\+S\+E3\+Expmap}}, \mbox{\hyperlink{classg2o_1_1_vertex_sim3_expmap_a16b4ef216ad1c4709a6fc6aa452d8e61}{g2o\+::\+Vertex\+Sim3\+Expmap}}, and \mbox{\hyperlink{classg2o_1_1_vertex_s_b_a_point_x_y_z_a3668aa23ed3fc7e2c3e6bddda7ddcd1a}{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_aa605891d46b99ed97accf659f10bc8d5}\label{classg2o_1_1_optimizable_graph_1_1_vertex_aa605891d46b99ed97accf659f10bc8d5}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Col\+In\+Hessian@{set\+Col\+In\+Hessian}}
+\index{set\+Col\+In\+Hessian@{set\+Col\+In\+Hessian}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Col\+In\+Hessian()}{setColInHessian()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Col\+In\+Hessian (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set the row of this vertex in the Hessian 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_acebbe12160c0df7c859a349781badc30}\label{classg2o_1_1_optimizable_graph_1_1_vertex_acebbe12160c0df7c859a349781badc30}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Estimate\+Data@{set\+Estimate\+Data}}
+\index{set\+Estimate\+Data@{set\+Estimate\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Estimate\+Data()}{setEstimateData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Estimate\+Data (\begin{DoxyParamCaption}\item[{const double $\ast$}]{estimate }\end{DoxyParamCaption})}
+
+sets the initial estimate from an array of double Implement \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a35ab439967fd3a3d3e5608e3883d8487}{set\+Estimate\+Data\+Impl()}} \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a1cf16cd3b2e99169cdd6dfc139f926bc}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a1cf16cd3b2e99169cdd6dfc139f926bc}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Estimate\+Data@{set\+Estimate\+Data}}
+\index{set\+Estimate\+Data@{set\+Estimate\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Estimate\+Data()}{setEstimateData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Estimate\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{estimate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+sets the initial estimate from an array of double Implement \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a35ab439967fd3a3d3e5608e3883d8487}{set\+Estimate\+Data\+Impl()}} \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a35ab439967fd3a3d3e5608e3883d8487}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a35ab439967fd3a3d3e5608e3883d8487}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Estimate\+Data\+Impl@{set\+Estimate\+Data\+Impl}}
+\index{set\+Estimate\+Data\+Impl@{set\+Estimate\+Data\+Impl}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Estimate\+Data\+Impl()}{setEstimateDataImpl()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Estimate\+Data\+Impl (\begin{DoxyParamCaption}\item[{const double $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+writes the estimater to an array of double \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_af92ef49e1bcd6a8166afa151d367b905}\label{classg2o_1_1_optimizable_graph_1_1_vertex_af92ef49e1bcd6a8166afa151d367b905}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Fixed@{set\+Fixed}}
+\index{set\+Fixed@{set\+Fixed}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Fixed()}{setFixed()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Fixed (\begin{DoxyParamCaption}\item[{bool}]{fixed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+true =$>$ this node should be considered fixed during the optimization 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a440f24c0108be5247f3529369aa1e53c}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a440f24c0108be5247f3529369aa1e53c}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Hessian\+Index@{set\+Hessian\+Index}}
+\index{set\+Hessian\+Index@{set\+Hessian\+Index}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Hessian\+Index()}{setHessianIndex()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Hessian\+Index (\begin{DoxyParamCaption}\item[{int}]{ti }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set the temporary index of the vertex in the parameter blocks 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ac57651173d6ce4bb4eebf8cb1d917551}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ac57651173d6ce4bb4eebf8cb1d917551}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+sets the id of the node in the graph be sure that the graph keeps consistent after changing the id 
+
+
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_hyper_graph_1_1_vertex_ac861d25447d8ff167d23c45458f7382f}{g2o\+::\+Hyper\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_afabf1782886c78bf7b312bb1f2c90524}\label{classg2o_1_1_optimizable_graph_1_1_vertex_afabf1782886c78bf7b312bb1f2c90524}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Marginalized@{set\+Marginalized}}
+\index{set\+Marginalized@{set\+Marginalized}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Marginalized()}{setMarginalized()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Marginalized (\begin{DoxyParamCaption}\item[{bool}]{marginalized }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+true =$>$ this node should be marginalized out during the optimization 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a57d42a1288d7377c593c91a8cf8a754c}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a57d42a1288d7377c593c91a8cf8a754c}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Minimal\+Estimate\+Data@{set\+Minimal\+Estimate\+Data}}
+\index{set\+Minimal\+Estimate\+Data@{set\+Minimal\+Estimate\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Minimal\+Estimate\+Data()}{setMinimalEstimateData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Minimal\+Estimate\+Data (\begin{DoxyParamCaption}\item[{const double $\ast$}]{estimate }\end{DoxyParamCaption})}
+
+sets the initial estimate from an array of double. Implement \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a088ecbdde86968f3896b2320f80ee396}{set\+Minimal\+Estimate\+Data\+Impl()}} \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ac41fda9360e81bf704681831b1df11f8}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ac41fda9360e81bf704681831b1df11f8}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Minimal\+Estimate\+Data@{set\+Minimal\+Estimate\+Data}}
+\index{set\+Minimal\+Estimate\+Data@{set\+Minimal\+Estimate\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Minimal\+Estimate\+Data()}{setMinimalEstimateData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Minimal\+Estimate\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{estimate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+sets the initial estimate from an array of double. Implement \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a088ecbdde86968f3896b2320f80ee396}{set\+Minimal\+Estimate\+Data\+Impl()}} \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a088ecbdde86968f3896b2320f80ee396}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a088ecbdde86968f3896b2320f80ee396}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+Minimal\+Estimate\+Data\+Impl@{set\+Minimal\+Estimate\+Data\+Impl}}
+\index{set\+Minimal\+Estimate\+Data\+Impl@{set\+Minimal\+Estimate\+Data\+Impl}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+Minimal\+Estimate\+Data\+Impl()}{setMinimalEstimateDataImpl()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+Minimal\+Estimate\+Data\+Impl (\begin{DoxyParamCaption}\item[{const double $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+sets the initial estimate from an array of double \begin{DoxyReturn}{Returns}
+true on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ab10678592b5e707bf4abdc0ff6b8e4bf}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ab10678592b5e707bf4abdc0ff6b8e4bf}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+To\+Origin@{set\+To\+Origin}}
+\index{set\+To\+Origin@{set\+To\+Origin}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+To\+Origin()}{setToOrigin()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+To\+Origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets the node to the origin (used in the multilevel stuff) 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_abd5fe36815f27a9c174ad41c2070c247}\label{classg2o_1_1_optimizable_graph_1_1_vertex_abd5fe36815f27a9c174ad41c2070c247}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}}
+\index{set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+To\+Origin\+Impl()}{setToOriginImpl()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+To\+Origin\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+sets the node to the origin (used in the multilevel stuff) 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_a0d12948c1fb058698bc58177db3806b1}{g2o\+::\+Vertex\+S\+E3\+Expmap}}, \mbox{\hyperlink{classg2o_1_1_vertex_sim3_expmap_ab076d5964ab55f95251a75bcf341ce05}{g2o\+::\+Vertex\+Sim3\+Expmap}}, and \mbox{\hyperlink{classg2o_1_1_vertex_s_b_a_point_x_y_z_a787b72465f35a3f30fcbb6b8056b47c4}{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a858d15a4fadebfc8bce0162ac675f608}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a858d15a4fadebfc8bce0162ac675f608}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!set\+User\+Data@{set\+User\+Data}}
+\index{set\+User\+Data@{set\+User\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{set\+User\+Data()}{setUserData()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::set\+User\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}} $\ast$}]{obs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a61c4e7b7a7a61e1f287069a8cb01004f}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a61c4e7b7a7a61e1f287069a8cb01004f}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!solve\+Direct@{solve\+Direct}}
+\index{solve\+Direct@{solve\+Direct}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{solve\+Direct()}{solveDirect()}}
+{\footnotesize\ttfamily virtual double g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::solve\+Direct (\begin{DoxyParamCaption}\item[{double}]{lambda = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+updates the current vertex with the direct solution x += H\+\_\+ii \begin{DoxyReturn}{Returns}
+the determinant of the inverted hessian 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a0bbd9551b7e03f7e422169e396e8ec9b}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a0bbd9551b7e03f7e422169e396e8ec9b}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a0bbd9551b7e03f7e422169e396e8ec9b}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a0bbd9551b7e03f7e422169e396e8ec9b}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a0a4ecc894d008d9c3806a3660e7dfe6f}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a0a4ecc894d008d9c3806a3660e7dfe6f}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!stack\+Size@{stack\+Size}}
+\index{stack\+Size@{stack\+Size}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{stack\+Size()}{stackSize()}}
+{\footnotesize\ttfamily virtual int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::stack\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+return the stack size 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_base_vertex_a7d82f4b9669dd123ac7d38c7f4345d8c}{g2o\+::\+Base\+Vertex$<$ D, T $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a7d82f4b9669dd123ac7d38c7f4345d8c}{g2o\+::\+Base\+Vertex$<$ 7, Sim3 $>$}}, \mbox{\hyperlink{classg2o_1_1_base_vertex_a7d82f4b9669dd123ac7d38c7f4345d8c}{g2o\+::\+Base\+Vertex$<$ 3, Vector3d $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_vertex_a7d82f4b9669dd123ac7d38c7f4345d8c}{g2o\+::\+Base\+Vertex$<$ 6, S\+E3\+Quat $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a5badd602625433ee1ce8e2aa7bb3b2ac}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a5badd602625433ee1ce8e2aa7bb3b2ac}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!unlock\+Quadratic\+Form@{unlock\+Quadratic\+Form}}
+\index{unlock\+Quadratic\+Form@{unlock\+Quadratic\+Form}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{unlock\+Quadratic\+Form()}{unlockQuadraticForm()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::unlock\+Quadratic\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+unlock the block of the hessian and the b vector associated with this vertex \mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ab5972c8ba6834c4dcb8a2319e9bf3070}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ab5972c8ba6834c4dcb8a2319e9bf3070}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!update\+Cache@{update\+Cache}}
+\index{update\+Cache@{update\+Cache}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{update\+Cache()}{updateCache()}}
+{\footnotesize\ttfamily void g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::update\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a506c9664e88d886ba612d3ea95b6c76b}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a506c9664e88d886ba612d3ea95b6c76b}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!user\+Data@{user\+Data}}
+\index{user\+Data@{user\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{user\+Data()}{userData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::user\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+the user data associated with this vertex 
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a768057be134ffe93bc88b020d031eee5}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a768057be134ffe93bc88b020d031eee5}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!user\+Data@{user\+Data}}
+\index{user\+Data@{user\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{user\+Data()}{userData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::user\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a4cac277db656fddb5f844d9009d601eb}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a4cac277db656fddb5f844d9009d601eb}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!write@{write}}
+\index{write@{write}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+write the vertex to a stream 
+
+
+
+Implemented in \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_ac1dfa6c71532f2e0bed236220bc1b604}{g2o\+::\+Vertex\+S\+E3\+Expmap}}, \mbox{\hyperlink{classg2o_1_1_vertex_sim3_expmap_ab5725f98a0d40f4cdb5d352a45c79fc7}{g2o\+::\+Vertex\+Sim3\+Expmap}}, and \mbox{\hyperlink{classg2o_1_1_vertex_s_b_a_point_x_y_z_a6b2fc33f2107c039d441e1bd2a17973a}{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+YZ}}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a45d35331ee3deca38c26d1efb6b961ae}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a45d35331ee3deca38c26d1efb6b961ae}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!Optimizable\+Graph@{Optimizable\+Graph}}
+\index{Optimizable\+Graph@{Optimizable\+Graph}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{Optimizable\+Graph}{OptimizableGraph}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a6eed5b850221cd76f0af46b97860f2e8}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a6eed5b850221cd76f0af46b97860f2e8}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+cache\+Container@{\+\_\+cache\+Container}}
+\index{\+\_\+cache\+Container@{\+\_\+cache\+Container}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+cache\+Container}{\_cacheContainer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_cache_container}{Cache\+Container}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+cache\+Container\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_add1f5a0236a175784a824524244f7085}\label{classg2o_1_1_optimizable_graph_1_1_vertex_add1f5a0236a175784a824524244f7085}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+col\+In\+Hessian@{\+\_\+col\+In\+Hessian}}
+\index{\+\_\+col\+In\+Hessian@{\+\_\+col\+In\+Hessian}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+col\+In\+Hessian}{\_colInHessian}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+col\+In\+Hessian\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ab053ffd8851cd3b0f61576ffd349d68e}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ab053ffd8851cd3b0f61576ffd349d68e}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+dimension@{\+\_\+dimension}}
+\index{\+\_\+dimension@{\+\_\+dimension}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+dimension}{\_dimension}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+dimension\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_af98461471e6b58664a9fc4bba9340501}\label{classg2o_1_1_optimizable_graph_1_1_vertex_af98461471e6b58664a9fc4bba9340501}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+fixed@{\+\_\+fixed}}
+\index{\+\_\+fixed@{\+\_\+fixed}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+fixed}{\_fixed}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+fixed\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a6e14fd3ad8e531ead03b4d83cc7362ad}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a6e14fd3ad8e531ead03b4d83cc7362ad}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+graph@{\+\_\+graph}}
+\index{\+\_\+graph@{\+\_\+graph}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+graph}{\_graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_aebf035f2c8177b5dac1bc650e0f0cf62}\label{classg2o_1_1_optimizable_graph_1_1_vertex_aebf035f2c8177b5dac1bc650e0f0cf62}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+hessian\+Index@{\+\_\+hessian\+Index}}
+\index{\+\_\+hessian\+Index@{\+\_\+hessian\+Index}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+hessian\+Index}{\_hessianIndex}}
+{\footnotesize\ttfamily int g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+hessian\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a5e9b3906c8ff800b9a0b16b10ed9fff0}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a5e9b3906c8ff800b9a0b16b10ed9fff0}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+marginalized@{\+\_\+marginalized}}
+\index{\+\_\+marginalized@{\+\_\+marginalized}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+marginalized}{\_marginalized}}
+{\footnotesize\ttfamily bool g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+marginalized\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_ab9b85ddb487ad4818bc53e0c00ff7bcc}\label{classg2o_1_1_optimizable_graph_1_1_vertex_ab9b85ddb487ad4818bc53e0c00ff7bcc}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+quadratic\+Form\+Mutex@{\+\_\+quadratic\+Form\+Mutex}}
+\index{\+\_\+quadratic\+Form\+Mutex@{\+\_\+quadratic\+Form\+Mutex}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+quadratic\+Form\+Mutex}{\_quadraticFormMutex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_open_m_p_mutex}{Open\+M\+P\+Mutex}} g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+quadratic\+Form\+Mutex\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_optimizable_graph_1_1_vertex_a71eb5fdfaf5c9a442135502e23504500}\label{classg2o_1_1_optimizable_graph_1_1_vertex_a71eb5fdfaf5c9a442135502e23504500}} 
+\index{g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}!\+\_\+user\+Data@{\+\_\+user\+Data}}
+\index{\+\_\+user\+Data@{\+\_\+user\+Data}!g2o\+::\+Optimizable\+Graph\+::\+Vertex@{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}
+\subsubsection{\texorpdfstring{\+\_\+user\+Data}{\_userData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_data}{Data}}$\ast$ g2o\+::\+Optimizable\+Graph\+::\+Vertex\+::\+\_\+user\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimizable__graph_8h}{optimizable\+\_\+graph.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{optimizable__graph_8cpp}{optimizable\+\_\+graph.\+cpp}}\end{DoxyCompactItemize}

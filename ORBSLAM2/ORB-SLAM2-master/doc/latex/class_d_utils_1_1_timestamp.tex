@@ -1,0 +1,409 @@
+\hypertarget{class_d_utils_1_1_timestamp}{}\section{D\+Utils\+:\+:Timestamp Class Reference}
+\label{class_d_utils_1_1_timestamp}\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+
+
+\mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}}.  
+
+
+
+
+{\ttfamily \#include $<$Timestamp.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8}{t\+Options}} \{ \mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a786d448832975701b79c18f24f1d52c9}{N\+O\+NE}} = 0, 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a2b8a10e2984fac4c048daa8af7ceee5e}{C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+ME}} = 0x1, 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a8bb8c1ae23bdd2bbfb578fc27db83d80}{Z\+E\+RO}} = 0x2
+ \}
+\begin{DoxyCompactList}\small\item\em Options to initiate a timestamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp_a7edd67789d60b27acbee7f591ed3e2da}{Timestamp}} (\mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8}{Timestamp\+::t\+Options}} option=\mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a786d448832975701b79c18f24f1d52c9}{N\+O\+NE}})
+\item 
+virtual \mbox{\hyperlink{class_d_utils_1_1_timestamp_a06ea20fe67d9e7177818ba219ea3137f}{$\sim$\+Timestamp}} (void)
+\item 
+bool \mbox{\hyperlink{class_d_utils_1_1_timestamp_a0aaa878aee63c543dea866892c003a62}{empty}} () const
+\item 
+void \mbox{\hyperlink{class_d_utils_1_1_timestamp_ae27c920f3833c104096213c6fb17f4d8}{set\+To\+Current\+Time}} ()
+\item 
+void \mbox{\hyperlink{class_d_utils_1_1_timestamp_a439bcff577f3ae30e8918897ecb33e76}{set\+Time}} (unsigned long secs, unsigned long usecs)
+\item 
+void \mbox{\hyperlink{class_d_utils_1_1_timestamp_a15e5c1a751a3faef596437a69d4c3d88}{get\+Time}} (unsigned long \&secs, unsigned long \&usecs) const
+\item 
+void \mbox{\hyperlink{class_d_utils_1_1_timestamp_ac35ad9d35e9ce5ff6fea159e9b060bf0}{set\+Time}} (const string \&stime)
+\item 
+void \mbox{\hyperlink{class_d_utils_1_1_timestamp_a797856da2823ee26814151ea97aea5e1}{set\+Time}} (double s)
+\item 
+double \mbox{\hyperlink{class_d_utils_1_1_timestamp_a360ea9b3a339c315f1a1eb2416787088}{get\+Float\+Time}} () const
+\item 
+string \mbox{\hyperlink{class_d_utils_1_1_timestamp_af1db3a964b6a7b88e73f7bd3110efd79}{get\+String\+Time}} () const
+\item 
+double \mbox{\hyperlink{class_d_utils_1_1_timestamp_ac7f07414867eaa6bea6acd7b41e9f60c}{operator-\/}} (const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&t) const
+\item 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \mbox{\hyperlink{class_d_utils_1_1_timestamp_aaee4b5b30d2130e622636350c1332fcf}{plus}} (unsigned long s, unsigned long us) const
+\item 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \mbox{\hyperlink{class_d_utils_1_1_timestamp_a5777e11b3f04827e2c310c0ab147e5bf}{minus}} (unsigned long s, unsigned long us) const
+\item 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \& \mbox{\hyperlink{class_d_utils_1_1_timestamp_a609bb289c3833fd6c26c9ee831074a11}{operator+=}} (double s)
+\item 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \& \mbox{\hyperlink{class_d_utils_1_1_timestamp_a775ece4a7fab156430da57da985a8965}{operator-\/=}} (double s)
+\item 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \mbox{\hyperlink{class_d_utils_1_1_timestamp_a12ecf62650e5582707cf9fb30f1b2d87}{operator+}} (double s) const
+\item 
+\mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \mbox{\hyperlink{class_d_utils_1_1_timestamp_adfccd22d119468b931e7144ceb9d08da}{operator-\/}} (double s) const
+\item 
+bool \mbox{\hyperlink{class_d_utils_1_1_timestamp_ad77ef43cab29f8f588bd47d74c1a8cce}{operator$>$}} (const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&t) const
+\item 
+bool \mbox{\hyperlink{class_d_utils_1_1_timestamp_ade494d1dad26c52bf93c189342a1a69a}{operator$>$=}} (const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&t) const
+\item 
+bool \mbox{\hyperlink{class_d_utils_1_1_timestamp_a42280e1193a6af2ac41362cf18a1185c}{operator==}} (const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&t) const
+\item 
+bool \mbox{\hyperlink{class_d_utils_1_1_timestamp_a5ec33cb0b7230946e02e4afa050c445c}{operator$<$}} (const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&t) const
+\item 
+bool \mbox{\hyperlink{class_d_utils_1_1_timestamp_a4fe0620f1df3aaa4d30ce9a8ba989f77}{operator$<$=}} (const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&t) const
+\item 
+string \mbox{\hyperlink{class_d_utils_1_1_timestamp_ad2ce60eeec43f9fa86379ed8b269ab64}{Format}} (bool machine\+\_\+friendly=false) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_d_utils_1_1_timestamp_abd63d0a2abc2209f9300296ee3e85265}{Format}} (double s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \mbox{\hyperlink{class_d_utils_1_1_timestamp_a88b8dff916bb011ef4142ca5cc655425}{m\+\_\+secs}}
+\begin{DoxyCompactList}\small\item\em Seconds. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{class_d_utils_1_1_timestamp_afb8947a2cf3b04919f782f4490ca0935}{m\+\_\+usecs}}
+\begin{DoxyCompactList}\small\item\em Microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}}. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8}\label{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!t\+Options@{t\+Options}}
+\index{t\+Options@{t\+Options}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{t\+Options}{tOptions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8}{D\+Utils\+::\+Timestamp\+::t\+Options}}}
+
+
+
+Options to initiate a timestamp. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a786d448832975701b79c18f24f1d52c9}\label{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a786d448832975701b79c18f24f1d52c9}} 
+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+ME@{C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+ME}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+ME@{C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+ME}}}\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a2b8a10e2984fac4c048daa8af7ceee5e}\label{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a2b8a10e2984fac4c048daa8af7ceee5e}} 
+C\+U\+R\+R\+E\+N\+T\+\_\+\+T\+I\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z\+E\+RO@{Z\+E\+RO}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!Z\+E\+RO@{Z\+E\+RO}}}\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a8bb8c1ae23bdd2bbfb578fc27db83d80}\label{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a8bb8c1ae23bdd2bbfb578fc27db83d80}} 
+Z\+E\+RO&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a7edd67789d60b27acbee7f591ed3e2da}\label{class_d_utils_1_1_timestamp_a7edd67789d60b27acbee7f591ed3e2da}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!Timestamp@{Timestamp}}
+\index{Timestamp@{Timestamp}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{Timestamp()}{Timestamp()}}
+{\footnotesize\ttfamily Timestamp\+::\+Timestamp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8}{Timestamp\+::t\+Options}}}]{option = {\ttfamily \mbox{\hyperlink{class_d_utils_1_1_timestamp_a5a8a3cb7f9e0f73bf11fce42688b06c8a786d448832975701b79c18f24f1d52c9}{N\+O\+NE}}} }\end{DoxyParamCaption})}
+
+Creates a timestamp 
+\begin{DoxyParams}{Parameters}
+{\em option} & option to set the initial time stamp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a06ea20fe67d9e7177818ba219ea3137f}\label{class_d_utils_1_1_timestamp_a06ea20fe67d9e7177818ba219ea3137f}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!````~Timestamp@{$\sim$\+Timestamp}}
+\index{````~Timestamp@{$\sim$\+Timestamp}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{$\sim$\+Timestamp()}{~Timestamp()}}
+{\footnotesize\ttfamily Timestamp\+::$\sim$\+Timestamp (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a0aaa878aee63c543dea866892c003a62}\label{class_d_utils_1_1_timestamp_a0aaa878aee63c543dea866892c003a62}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!empty@{empty}}
+\index{empty@{empty}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Timestamp\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Says if the timestamp is \char`\"{}empty\char`\"{}\+: seconds and usecs are both 0, as when initiated with the Z\+E\+RO flag \begin{DoxyReturn}{Returns}
+true iif secs == usecs == 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_ad2ce60eeec43f9fa86379ed8b269ab64}\label{class_d_utils_1_1_timestamp_ad2ce60eeec43f9fa86379ed8b269ab64}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!Format@{Format}}
+\index{Format@{Format}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{Format()}{Format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Timestamp\+::\+Format (\begin{DoxyParamCaption}\item[{bool}]{machine\+\_\+friendly = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+Returns the timestamp in a human-\/readable string 
+\begin{DoxyParams}{Parameters}
+{\em machine\+\_\+friendly} & if true, the returned string is formatted to yyyymmdd\+\_\+hhmmss, without weekday or spaces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This has not been tested under Windows 
+
+The timestamp is truncated to seconds 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_abd63d0a2abc2209f9300296ee3e85265}\label{class_d_utils_1_1_timestamp_abd63d0a2abc2209f9300296ee3e85265}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!Format@{Format}}
+\index{Format@{Format}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{Format()}{Format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Timestamp\+::\+Format (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a string version of the elapsed time in seconds, with the format xd hh\+:mm\+:ss, hh\+:mm\+:ss, mm\+:ss or s.\+us 
+\begin{DoxyParams}{Parameters}
+{\em s} & elapsed seconds (given by get\+Float\+Time) to format \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a360ea9b3a339c315f1a1eb2416787088}\label{class_d_utils_1_1_timestamp_a360ea9b3a339c315f1a1eb2416787088}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!get\+Float\+Time@{get\+Float\+Time}}
+\index{get\+Float\+Time@{get\+Float\+Time}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{get\+Float\+Time()}{getFloatTime()}}
+{\footnotesize\ttfamily double Timestamp\+::get\+Float\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns this timestamp as the number of seconds in (long) float format \mbox{\Hypertarget{class_d_utils_1_1_timestamp_af1db3a964b6a7b88e73f7bd3110efd79}\label{class_d_utils_1_1_timestamp_af1db3a964b6a7b88e73f7bd3110efd79}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!get\+String\+Time@{get\+String\+Time}}
+\index{get\+String\+Time@{get\+String\+Time}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{get\+String\+Time()}{getStringTime()}}
+{\footnotesize\ttfamily string Timestamp\+::get\+String\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns this timestamp as the number of seconds in fixed length string format \mbox{\Hypertarget{class_d_utils_1_1_timestamp_a15e5c1a751a3faef596437a69d4c3d88}\label{class_d_utils_1_1_timestamp_a15e5c1a751a3faef596437a69d4c3d88}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
+{\footnotesize\ttfamily void D\+Utils\+::\+Timestamp\+::get\+Time (\begin{DoxyParamCaption}\item[{unsigned long \&}]{secs,  }\item[{unsigned long \&}]{usecs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the timestamp in seconds and microseconds 
+\begin{DoxyParams}{Parameters}
+{\em secs} & seconds \\
+\hline
+{\em usecs} & microseconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a5777e11b3f04827e2c310c0ab147e5bf}\label{class_d_utils_1_1_timestamp_a5777e11b3f04827e2c310c0ab147e5bf}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!minus@{minus}}
+\index{minus@{minus}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{minus()}{minus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} Timestamp\+::minus (\begin{DoxyParamCaption}\item[{unsigned long}]{s,  }\item[{unsigned long}]{us }\end{DoxyParamCaption}) const}
+
+Returns a copy of this timestamp -\/ s seconds -\/ us microseconds 
+\begin{DoxyParams}{Parameters}
+{\em s} & seconds \\
+\hline
+{\em us} & microseconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a12ecf62650e5582707cf9fb30f1b2d87}\label{class_d_utils_1_1_timestamp_a12ecf62650e5582707cf9fb30f1b2d87}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator+@{operator+}}
+\index{operator+@{operator+}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} Timestamp\+::operator+ (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const}
+
+Returns a copy of this timestamp + s seconds 
+\begin{DoxyParams}{Parameters}
+{\em s} & seconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a609bb289c3833fd6c26c9ee831074a11}\label{class_d_utils_1_1_timestamp_a609bb289c3833fd6c26c9ee831074a11}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \& Timestamp\+::operator+= (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption})}
+
+Adds s seconds to this timestamp and returns a reference to itself 
+\begin{DoxyParams}{Parameters}
+{\em s} & seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this timestamp 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_ac7f07414867eaa6bea6acd7b41e9f60c}\label{class_d_utils_1_1_timestamp_ac7f07414867eaa6bea6acd7b41e9f60c}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Timestamp\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&}]{t }\end{DoxyParamCaption}) const}
+
+Returns the difference in seconds between this timestamp (greater) and t (smaller) If the order is swapped, a negative number is returned 
+\begin{DoxyParams}{Parameters}
+{\em t} & timestamp to subtract from this timestamp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+difference in seconds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_adfccd22d119468b931e7144ceb9d08da}\label{class_d_utils_1_1_timestamp_adfccd22d119468b931e7144ceb9d08da}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} Timestamp\+::operator-\/ (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const}
+
+Returns a copy of this timestamp -\/ s seconds 
+\begin{DoxyParams}{Parameters}
+{\em s} & seconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a775ece4a7fab156430da57da985a8965}\label{class_d_utils_1_1_timestamp_a775ece4a7fab156430da57da985a8965}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \& Timestamp\+::operator-\/= (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption})}
+
+Substracts s seconds to this timestamp and returns a reference to itself 
+\begin{DoxyParams}{Parameters}
+{\em s} & seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this timestamp 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a5ec33cb0b7230946e02e4afa050c445c}\label{class_d_utils_1_1_timestamp_a5ec33cb0b7230946e02e4afa050c445c}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Timestamp\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&}]{t }\end{DoxyParamCaption}) const}
+
+Returns whether this timestamp is at the past of t 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a4fe0620f1df3aaa4d30ce9a8ba989f77}\label{class_d_utils_1_1_timestamp_a4fe0620f1df3aaa4d30ce9a8ba989f77}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool Timestamp\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&}]{t }\end{DoxyParamCaption}) const}
+
+Returns whether this timestamp is at the past of (or is the same as) t 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a42280e1193a6af2ac41362cf18a1185c}\label{class_d_utils_1_1_timestamp_a42280e1193a6af2ac41362cf18a1185c}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator==@{operator==}}
+\index{operator==@{operator==}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Timestamp\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&}]{t }\end{DoxyParamCaption}) const}
+
+Returns whether this timestamp and t represent the same instant 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_ad77ef43cab29f8f588bd47d74c1a8cce}\label{class_d_utils_1_1_timestamp_ad77ef43cab29f8f588bd47d74c1a8cce}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Timestamp\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&}]{t }\end{DoxyParamCaption}) const}
+
+Returns whether this timestamp is at the future of t 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_ade494d1dad26c52bf93c189342a1a69a}\label{class_d_utils_1_1_timestamp_ade494d1dad26c52bf93c189342a1a69a}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool Timestamp\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} \&}]{t }\end{DoxyParamCaption}) const}
+
+Returns whether this timestamp is at the future of (or is the same as) t 
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_aaee4b5b30d2130e622636350c1332fcf}\label{class_d_utils_1_1_timestamp_aaee4b5b30d2130e622636350c1332fcf}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!plus@{plus}}
+\index{plus@{plus}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{plus()}{plus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_utils_1_1_timestamp}{Timestamp}} Timestamp\+::plus (\begin{DoxyParamCaption}\item[{unsigned long}]{s,  }\item[{unsigned long}]{us }\end{DoxyParamCaption}) const}
+
+Returns a copy of this timestamp + s seconds + us microseconds 
+\begin{DoxyParams}{Parameters}
+{\em s} & seconds \\
+\hline
+{\em us} & microseconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a439bcff577f3ae30e8918897ecb33e76}\label{class_d_utils_1_1_timestamp_a439bcff577f3ae30e8918897ecb33e76}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{set\+Time()}{setTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void D\+Utils\+::\+Timestamp\+::set\+Time (\begin{DoxyParamCaption}\item[{unsigned long}]{secs,  }\item[{unsigned long}]{usecs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the timestamp from seconds and microseconds 
+\begin{DoxyParams}{Parameters}
+{\em secs} & seconds \\
+\hline
+{\em usecs} & microseconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_ac35ad9d35e9ce5ff6fea159e9b060bf0}\label{class_d_utils_1_1_timestamp_ac35ad9d35e9ce5ff6fea159e9b060bf0}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{set\+Time()}{setTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Timestamp\+::set\+Time (\begin{DoxyParamCaption}\item[{const string \&}]{stime }\end{DoxyParamCaption})}
+
+Sets the timestamp from a string with the time in seconds 
+\begin{DoxyParams}{Parameters}
+{\em stime} & string such as \char`\"{}1235603336.\+036609\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a797856da2823ee26814151ea97aea5e1}\label{class_d_utils_1_1_timestamp_a797856da2823ee26814151ea97aea5e1}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{set\+Time()}{setTime()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Timestamp\+::set\+Time (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption})}
+
+Sets the timestamp from a number of seconds from the epoch 
+\begin{DoxyParams}{Parameters}
+{\em s} & seconds from the epoch \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_ae27c920f3833c104096213c6fb17f4d8}\label{class_d_utils_1_1_timestamp_ae27c920f3833c104096213c6fb17f4d8}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!set\+To\+Current\+Time@{set\+To\+Current\+Time}}
+\index{set\+To\+Current\+Time@{set\+To\+Current\+Time}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{set\+To\+Current\+Time()}{setToCurrentTime()}}
+{\footnotesize\ttfamily void Timestamp\+::set\+To\+Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets this instance to the current time 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_a88b8dff916bb011ef4142ca5cc655425}\label{class_d_utils_1_1_timestamp_a88b8dff916bb011ef4142ca5cc655425}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!m\+\_\+secs@{m\+\_\+secs}}
+\index{m\+\_\+secs@{m\+\_\+secs}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{m\+\_\+secs}{m\_secs}}
+{\footnotesize\ttfamily unsigned long D\+Utils\+::\+Timestamp\+::m\+\_\+secs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Seconds. 
+
+\mbox{\Hypertarget{class_d_utils_1_1_timestamp_afb8947a2cf3b04919f782f4490ca0935}\label{class_d_utils_1_1_timestamp_afb8947a2cf3b04919f782f4490ca0935}} 
+\index{D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}!m\+\_\+usecs@{m\+\_\+usecs}}
+\index{m\+\_\+usecs@{m\+\_\+usecs}!D\+Utils\+::\+Timestamp@{D\+Utils\+::\+Timestamp}}
+\subsubsection{\texorpdfstring{m\+\_\+usecs}{m\_usecs}}
+{\footnotesize\ttfamily unsigned long D\+Utils\+::\+Timestamp\+::m\+\_\+usecs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Microseconds. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Utils/\mbox{\hyperlink{_timestamp_8h}{Timestamp.\+h}}\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Utils/\mbox{\hyperlink{_timestamp_8cpp}{Timestamp.\+cpp}}\end{DoxyCompactItemize}

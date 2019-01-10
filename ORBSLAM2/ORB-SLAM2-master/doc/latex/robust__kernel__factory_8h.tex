@@ -1,0 +1,75 @@
+\hypertarget{robust__kernel__factory_8h}{}\section{Thirdparty/g2o/g2o/core/robust\+\_\+kernel\+\_\+factory.h File Reference}
+\label{robust__kernel__factory_8h}\index{Thirdparty/g2o/g2o/core/robust\+\_\+kernel\+\_\+factory.\+h@{Thirdparty/g2o/g2o/core/robust\+\_\+kernel\+\_\+factory.\+h}}
+{\ttfamily \#include \char`\"{}../stuff/misc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}g2o\+\_\+core\+\_\+api.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_abstract_robust_kernel_creator}{g2o\+::\+Abstract\+Robust\+Kernel\+Creator}}
+\begin{DoxyCompactList}\small\item\em Abstract interface for allocating a robust kernel. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_creator}{g2o\+::\+Robust\+Kernel\+Creator$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em templatized creator class which creates graph elements \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_robust_kernel_factory}{g2o\+::\+Robust\+Kernel\+Factory}}
+\begin{DoxyCompactList}\small\item\em create robust kernels based on their human readable name \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_register_robust_kernel_proxy}{g2o\+::\+Register\+Robust\+Kernel\+Proxy$<$ T $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceg2o}{g2o}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{robust__kernel__factory_8h_a2197d9563f6d29b47971e4ad16c2ffcf}{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}}
+\item 
+\#define \mbox{\hyperlink{robust__kernel__factory_8h_a13f6eb912b19652422d3e3e7e7c41c14}{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}}
+\item 
+\#define \mbox{\hyperlink{robust__kernel__factory_8h_a9ead0decaafe0a95f92d96669444d17e}{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL}}(name,  classname)
+\item 
+\#define \mbox{\hyperlink{robust__kernel__factory_8h_ab56433f8002af3facebfa87587af842f}{G2\+O\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL}}(classname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{robust__kernel__factory_8h_a9ead0decaafe0a95f92d96669444d17e}\label{robust__kernel__factory_8h_a9ead0decaafe0a95f92d96669444d17e}} 
+\index{robust\+\_\+kernel\+\_\+factory.\+h@{robust\+\_\+kernel\+\_\+factory.\+h}!G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL}}
+\index{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL@{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL}!robust\+\_\+kernel\+\_\+factory.\+h@{robust\+\_\+kernel\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL}{G2O\_REGISTER\_ROBUST\_KERNEL}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{classname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \mbox{\hyperlink{robust__kernel__factory_8h_a2197d9563f6d29b47971e4ad16c2ffcf}{G2O\_ROBUST\_KERNEL\_FACTORY\_EXPORT}} g2o\_robust\_kernel\_##
+      classname(\textcolor{keywordtype}{void}) \{\} \(\backslash\)
+    static \mbox{\hyperlink{classg2o_1_1_register_robust_kernel_proxy}{g2o::RegisterRobustKernelProxy<classname>}} 
+      g\_robust\_kernel\_proxy\_##classname(#name);
+\end{DoxyCode}
+\mbox{\Hypertarget{robust__kernel__factory_8h_a2197d9563f6d29b47971e4ad16c2ffcf}\label{robust__kernel__factory_8h_a2197d9563f6d29b47971e4ad16c2ffcf}} 
+\index{robust\+\_\+kernel\+\_\+factory.\+h@{robust\+\_\+kernel\+\_\+factory.\+h}!G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT@{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}}
+\index{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT@{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}!robust\+\_\+kernel\+\_\+factory.\+h@{robust\+\_\+kernel\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}{G2O\_ROBUST\_KERNEL\_FACTORY\_EXPORT}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+E\+X\+P\+O\+RT}
+
+\mbox{\Hypertarget{robust__kernel__factory_8h_a13f6eb912b19652422d3e3e7e7c41c14}\label{robust__kernel__factory_8h_a13f6eb912b19652422d3e3e7e7c41c14}} 
+\index{robust\+\_\+kernel\+\_\+factory.\+h@{robust\+\_\+kernel\+\_\+factory.\+h}!G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT@{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}}
+\index{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT@{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}!robust\+\_\+kernel\+\_\+factory.\+h@{robust\+\_\+kernel\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}{G2O\_ROBUST\_KERNEL\_FACTORY\_IMPORT}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+E\+L\+\_\+\+F\+A\+C\+T\+O\+R\+Y\+\_\+\+I\+M\+P\+O\+RT}
+
+\mbox{\Hypertarget{robust__kernel__factory_8h_ab56433f8002af3facebfa87587af842f}\label{robust__kernel__factory_8h_ab56433f8002af3facebfa87587af842f}} 
+\index{robust\+\_\+kernel\+\_\+factory.\+h@{robust\+\_\+kernel\+\_\+factory.\+h}!G2\+O\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL}}
+\index{G2\+O\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL@{G2\+O\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL}!robust\+\_\+kernel\+\_\+factory.\+h@{robust\+\_\+kernel\+\_\+factory.\+h}}
+\subsubsection{\texorpdfstring{G2\+O\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL}{G2O\_USE\_ROBUST\_KERNEL}}
+{\footnotesize\ttfamily \#define G2\+O\+\_\+\+U\+S\+E\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+K\+E\+R\+N\+EL(\begin{DoxyParamCaption}\item[{}]{classname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} \textcolor{keywordtype}{void} \mbox{\hyperlink{robust__kernel__factory_8h_a13f6eb912b19652422d3e3e7e7c41c14}{G2O\_ROBUST\_KERNEL\_FACTORY\_IMPORT}} g2o\_robust\_kernel\_##
+      classname(\textcolor{keywordtype}{void}); \(\backslash\)
+    static g2o::TypeFunctionProxy proxy\_##classname(g2o\_robust\_kernel\_##classname);
+\end{DoxyCode}

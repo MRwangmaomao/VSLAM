@@ -1,0 +1,765 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:Tracking Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_tracking}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+
+
+{\ttfamily \#include $<$Tracking.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36}{e\+Tracking\+State}} \{ \newline
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a95b60cb653a85df000eb93e0c3f00ea0}{S\+Y\+S\+T\+E\+M\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY}} =-\/1, 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a3a0bc2ff9eb062e5f00e8f0bac6f9783}{N\+O\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+Y\+ET}} =0, 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a063250df8b0588a484883bc986defef7}{N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}} =1, 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36af16e000dbb1927cf7f48e97b5e8e78dd}{OK}} =2, 
+\newline
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36affaf8b66b0b767f1eb2b0214b3f37fb2}{L\+O\+ST}} =3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a2e5ff2f26f1518166a028911b830c5b1}{Tracking}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_system}{System}} $\ast$p\+Sys, \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}} $\ast$p\+Voc, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_drawer}{Frame\+Drawer}} $\ast$p\+Frame\+Drawer, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer}{Map\+Drawer}} $\ast$p\+Map\+Drawer, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$p\+Map, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database}{Key\+Frame\+Database}} $\ast$p\+K\+F\+DB, const string \&str\+Setting\+Path, const int sensor)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a7cba47a41978fc1c83f47547813aff2c}{Grab\+Image\+Stereo}} (const cv\+::\+Mat \&im\+Rect\+Left, const cv\+::\+Mat \&im\+Rect\+Right, const double \&timestamp)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a99cf542c9a7cc551745877cc11ce8ef9}{Grab\+Image\+R\+G\+BD}} (const cv\+::\+Mat \&im\+R\+GB, const cv\+::\+Mat \&imD, const double \&timestamp)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ad3de28bf6f7638c4da2248c9d595f394}{Grab\+Image\+Monocular}} (const cv\+::\+Mat \&im, const double \&timestamp)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a95061551f3756408221df3b1a996b777}{Set\+Local\+Mapper}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_local_mapping}{Local\+Mapping}} $\ast$p\+Local\+Mapper)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a92b878e0559740646f8b1c635ac068dc}{Set\+Loop\+Closing}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_loop_closing}{Loop\+Closing}} $\ast$p\+Loop\+Closing)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ac86c2461ac6cf3bec906759f4fbea15c}{Set\+Viewer}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_viewer}{Viewer}} $\ast$p\+Viewer)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a7be9bebf51fda1413d253224cdacf7cd}{Change\+Calibration}} (const string \&str\+Setting\+Path)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_abb047099ca3376f7aabc9a90c74aecfc}{Inform\+Only\+Tracking}} (const bool \&flag)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a899967ca49b1c3446854ecce3873323c}{Reset}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36}{e\+Tracking\+State}} \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a37cadc53a335fd802fed2fd9b24e93e1}{m\+State}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36}{e\+Tracking\+State}} \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a98be1e579a7e9271449d079c4f3c8769}{m\+Last\+Processed\+State}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a18bffeb950dd18e5d74807cd9741c013}{m\+Sensor}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ad21299ab1995c8fb7115bda57773d307}{m\+Current\+Frame}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_af7ef78c9eed81f0701a1d12b3f377875}{m\+Im\+Gray}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ace08a986d9cbe3fe578c189242b94489}{mv\+Ini\+Last\+Matches}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a1c89fa1b3512238f15283857ed94c79a}{mv\+Ini\+Matches}}
+\item 
+std\+::vector$<$ cv\+::\+Point2f $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a9ee7c26c1db845fef73c55ee0bb5c9f2}{mvb\+Prev\+Matched}}
+\item 
+std\+::vector$<$ cv\+::\+Point3f $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_adced44c2c047c18f3db6c7bfd7b289f0}{mv\+Ini\+P3D}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a691ba65eb45f76829c8a2622f42ba446}{m\+Initial\+Frame}}
+\item 
+list$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a5e0bb2d9fe720c4f4dc9eef57ad1f168}{ml\+Relative\+Frame\+Poses}}
+\item 
+list$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ad214f6515a2cf4996d0c7765d9de73a8}{mlp\+References}}
+\item 
+list$<$ double $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ae867f703e70c18b7ff0798191807cb4d}{ml\+Frame\+Times}}
+\item 
+list$<$ bool $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_aca83e100e47cfcc0cba1bcfac72764cc}{mlb\+Lost}}
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ae8c6db8ff320af10acacd5078a0801f6}{mb\+Only\+Tracking}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_af1f2c9c533642d8c33854540e90d1918}{Track}} ()
+\begin{DoxyCompactList}\small\item\em Main tracking function. It is independent of the input sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ad3da849e4204d766e5db4ac47b52132c}{Stereo\+Initialization}} ()
+\begin{DoxyCompactList}\small\item\em 双目和rgbd的地图初始化 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a7e81c68bb6ced27fcbfa2edec38ef6e0}{Monocular\+Initialization}} ()
+\begin{DoxyCompactList}\small\item\em 单目的地图初始化 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_afeb077c81cd700d779348b80698086e8}{Create\+Initial\+Map\+Monocular}} ()
+\begin{DoxyCompactList}\small\item\em Create\+Initial\+Map\+Monocular. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a2ca003d3234b2e8444f70dcd2132126f}{Check\+Replaced\+In\+Last\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em 检查上一帧中的\+Map\+Points是否被替换 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a737c5409c93844353561a0fe724ed1c2}{Track\+Reference\+Key\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em 对参考关键帧的\+Map\+Points进行跟踪 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_aa84a20277d5bd022b527d79a58830bc5}{Update\+Last\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em 双目或rgbd摄像头根据深度值为上一帧产生新的\+Map\+Points \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_aca19f1d69b30a6c6e49281d422ac8298}{Track\+With\+Motion\+Model}} ()
+\begin{DoxyCompactList}\small\item\em 根据匀速度模型对上一帧的\+Map\+Points进行跟踪 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_acd4ea9e7097bed16428a4b78fe4b6a67}{Relocalization}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a22723e9972c18a888dd51a82eec27b0a}{Update\+Local\+Map}} ()
+\begin{DoxyCompactList}\small\item\em 更新\+Local\+Map \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a25843575116bf18c065d6cc7645f5b26}{Update\+Local\+Points}} ()
+\begin{DoxyCompactList}\small\item\em 更新局部关键点，called by \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a22723e9972c18a888dd51a82eec27b0a}{Update\+Local\+Map()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a42bed56bbbe8282eb77733e7168d8599}{Update\+Local\+Key\+Frames}} ()
+\begin{DoxyCompactList}\small\item\em 更新局部关键帧，called by \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a22723e9972c18a888dd51a82eec27b0a}{Update\+Local\+Map()}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_af670c614f4e10d58c9f7aad9865b5c08}{Track\+Local\+Map}} ()
+\begin{DoxyCompactList}\small\item\em 对\+Local Map的\+Map\+Points进行跟踪 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a451c0e5372c24645c7634fcebc8fa847}{Search\+Local\+Points}} ()
+\begin{DoxyCompactList}\small\item\em 对\+Local Map\+Points进行跟踪 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_afc013c5a20bc6beb772b96a875b19216}{Need\+New\+Key\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em 断当前帧是否为关键帧 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a8c7fb6c4b1f952524512023df690bf4d}{Create\+New\+Key\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em 创建新的关键帧 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a44ad79261b565797bdf53d503f6defca}{mb\+VO}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_local_mapping}{Local\+Mapping}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a83692a6e9626c3c11b329d3b0a35c2f1}{mp\+Local\+Mapper}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_loop_closing}{Loop\+Closing}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_aed45d56071fcbba3db0552726c897e0d}{mp\+Loop\+Closing}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}{O\+R\+Bextractor}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_abd41b4020d02e8ca272263964ae400b2}{mp\+O\+R\+Bextractor\+Left}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}{O\+R\+Bextractor}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a6eaa5950f4ed2503392ecf240914ddac}{mp\+O\+R\+Bextractor\+Right}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}{O\+R\+Bextractor}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a8d25e231894baf85a6a48ab57ce0ddb3}{mp\+Ini\+O\+R\+Bextractor}}
+\item 
+\mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a79358a4f15c71538e37e874a5646f43e}{mp\+O\+R\+B\+Vocabulary}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database}{Key\+Frame\+Database}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a0ee7e13527e3bb18adb24bc511fd5800}{mp\+Key\+Frame\+DB}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer}{Initializer}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a9194420033fe0d556053685844a534be}{mp\+Initializer}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ade9676c7c26eb653beddaa05b37ecc08}{mp\+Reference\+KF}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a46ade9f7ec2c89544ae77f2906000b3a}{mvp\+Local\+Key\+Frames}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$ $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a89074acc520094ba0d0fc7f4c0f8cf09}{mvp\+Local\+Map\+Points}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_system}{System}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a1ab3d15e53005d5147620b0ee37c33ed}{mp\+System}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_viewer}{Viewer}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a4952ab24b73effdbba6266e2fb26548e}{mp\+Viewer}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_drawer}{Frame\+Drawer}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_afc0759bfbd1d8d83e86c9d677a35429b}{mp\+Frame\+Drawer}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer}{Map\+Drawer}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3fb103211ff7b984910943f0975d5ceb}{mp\+Map\+Drawer}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_acc0b5ae59012946da8238d84a331d72c}{mp\+Map}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a6926ae3c49c09bf9f402d13900740405}{mK}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a7df0851817d1a1345324c196b6a79c3a}{m\+Dist\+Coef}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a8de5f87734670485f6b6097b14dd1fcb}{mbf}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a53369ce9ebf152a1a76e93445821e395}{m\+Min\+Frames}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a8a96fe16c7ed5c29d8714c1af036f1da}{m\+Max\+Frames}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_aded3124bdf36aba88411327024a7c2d3}{m\+Th\+Depth}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_abbe2cb26c58f023bab9c95b251778208}{m\+Depth\+Map\+Factor}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ad58b66226a6345581227560aae2ea72f}{mn\+Matches\+Inliers}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_aa833de1f76843c64dbcc1631c12de7fd}{mp\+Last\+Key\+Frame}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a4f0a80cfb3ddadcb43d7745d15ac9f35}{m\+Last\+Frame}}
+\item 
+unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_abe5270bc94032722923f43efe7a7bac6}{mn\+Last\+Key\+Frame\+Id}}
+\item 
+unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_af95975f569dcc3e378c556b8199604b2}{mn\+Last\+Reloc\+Frame\+Id}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_ac2283c13ccf08207c90a6a163d8dbe3c}{m\+Velocity}}
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a01522faf940cc80402f0750b0d90ecf2}{mb\+R\+GB}}
+\item 
+list$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$ $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_aadc2690944688adbebeef4a60bdf3cad}{mlp\+Temporal\+Points}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!e\+Tracking\+State@{e\+Tracking\+State}}
+\index{e\+Tracking\+State@{e\+Tracking\+State}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{e\+Tracking\+State}{eTrackingState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::e\+Tracking\+State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+Y\+S\+T\+E\+M\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY@{S\+Y\+S\+T\+E\+M\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!S\+Y\+S\+T\+E\+M\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY@{S\+Y\+S\+T\+E\+M\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY}}}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a95b60cb653a85df000eb93e0c3f00ea0}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a95b60cb653a85df000eb93e0c3f00ea0}} 
+S\+Y\+S\+T\+E\+M\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+DY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+Y\+ET@{N\+O\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+Y\+ET}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!N\+O\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+Y\+ET@{N\+O\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+Y\+ET}}}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a3a0bc2ff9eb062e5f00e8f0bac6f9783}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a3a0bc2ff9eb062e5f00e8f0bac6f9783}} 
+N\+O\+\_\+\+I\+M\+A\+G\+E\+S\+\_\+\+Y\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED@{N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}}}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a063250df8b0588a484883bc986defef7}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36a063250df8b0588a484883bc986defef7}} 
+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!OK@{OK}}}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36af16e000dbb1927cf7f48e97b5e8e78dd}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36af16e000dbb1927cf7f48e97b5e8e78dd}} 
+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+O\+ST@{L\+O\+ST}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!L\+O\+ST@{L\+O\+ST}}}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36affaf8b66b0b767f1eb2b0214b3f37fb2}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36affaf8b66b0b767f1eb2b0214b3f37fb2}} 
+L\+O\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a2e5ff2f26f1518166a028911b830c5b1}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a2e5ff2f26f1518166a028911b830c5b1}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Tracking@{Tracking}}
+\index{Tracking@{Tracking}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Tracking()}{Tracking()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Tracking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_system}{System}} $\ast$}]{p\+Sys,  }\item[{\mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}} $\ast$}]{p\+Voc,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_drawer}{Frame\+Drawer}} $\ast$}]{p\+Frame\+Drawer,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer}{Map\+Drawer}} $\ast$}]{p\+Map\+Drawer,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$}]{p\+Map,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database}{Key\+Frame\+Database}} $\ast$}]{p\+K\+F\+DB,  }\item[{const string \&}]{str\+Setting\+Path,  }\item[{const int}]{sensor }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a7be9bebf51fda1413d253224cdacf7cd}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a7be9bebf51fda1413d253224cdacf7cd}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Change\+Calibration@{Change\+Calibration}}
+\index{Change\+Calibration@{Change\+Calibration}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Change\+Calibration()}{ChangeCalibration()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Change\+Calibration (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Setting\+Path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a2ca003d3234b2e8444f70dcd2132126f}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a2ca003d3234b2e8444f70dcd2132126f}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Check\+Replaced\+In\+Last\+Frame@{Check\+Replaced\+In\+Last\+Frame}}
+\index{Check\+Replaced\+In\+Last\+Frame@{Check\+Replaced\+In\+Last\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Check\+Replaced\+In\+Last\+Frame()}{CheckReplacedInLastFrame()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Check\+Replaced\+In\+Last\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+检查上一帧中的\+Map\+Points是否被替换 
+
+Local Mapping线程可能会将关键帧中某些\+Map\+Points进行替换，由于tracking中需要用到m\+Last\+Frame，这里检查并更新上一帧中被替换的\+Map\+Points \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_local_mapping_a5d5e0bc6fd15d9a6bf1ca8a258f104f1}{Local\+Mapping\+::\+Search\+In\+Neighbors()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_afeb077c81cd700d779348b80698086e8}\label{class_o_r_b___s_l_a_m2_1_1_tracking_afeb077c81cd700d779348b80698086e8}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Create\+Initial\+Map\+Monocular@{Create\+Initial\+Map\+Monocular}}
+\index{Create\+Initial\+Map\+Monocular@{Create\+Initial\+Map\+Monocular}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Create\+Initial\+Map\+Monocular()}{CreateInitialMapMonocular()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Create\+Initial\+Map\+Monocular (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Create\+Initial\+Map\+Monocular. 
+
+为单目摄像头三角化生成\+Map\+Points \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a8c7fb6c4b1f952524512023df690bf4d}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a8c7fb6c4b1f952524512023df690bf4d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Create\+New\+Key\+Frame@{Create\+New\+Key\+Frame}}
+\index{Create\+New\+Key\+Frame@{Create\+New\+Key\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Create\+New\+Key\+Frame()}{CreateNewKeyFrame()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Create\+New\+Key\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+创建新的关键帧 
+
+对于非单目的情况，同时创建新的\+Map\+Points \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ad3de28bf6f7638c4da2248c9d595f394}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ad3de28bf6f7638c4da2248c9d595f394}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Grab\+Image\+Monocular@{Grab\+Image\+Monocular}}
+\index{Grab\+Image\+Monocular@{Grab\+Image\+Monocular}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Grab\+Image\+Monocular()}{GrabImageMonocular()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Grab\+Image\+Monocular (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{im,  }\item[{const double \&}]{timestamp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a99cf542c9a7cc551745877cc11ce8ef9}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a99cf542c9a7cc551745877cc11ce8ef9}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Grab\+Image\+R\+G\+BD@{Grab\+Image\+R\+G\+BD}}
+\index{Grab\+Image\+R\+G\+BD@{Grab\+Image\+R\+G\+BD}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Grab\+Image\+R\+G\+B\+D()}{GrabImageRGBD()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Grab\+Image\+R\+G\+BD (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{im\+R\+GB,  }\item[{const cv\+::\+Mat \&}]{imD,  }\item[{const double \&}]{timestamp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a7cba47a41978fc1c83f47547813aff2c}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a7cba47a41978fc1c83f47547813aff2c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Grab\+Image\+Stereo@{Grab\+Image\+Stereo}}
+\index{Grab\+Image\+Stereo@{Grab\+Image\+Stereo}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Grab\+Image\+Stereo()}{GrabImageStereo()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Grab\+Image\+Stereo (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{im\+Rect\+Left,  }\item[{const cv\+::\+Mat \&}]{im\+Rect\+Right,  }\item[{const double \&}]{timestamp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_abb047099ca3376f7aabc9a90c74aecfc}\label{class_o_r_b___s_l_a_m2_1_1_tracking_abb047099ca3376f7aabc9a90c74aecfc}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Inform\+Only\+Tracking@{Inform\+Only\+Tracking}}
+\index{Inform\+Only\+Tracking@{Inform\+Only\+Tracking}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Inform\+Only\+Tracking()}{InformOnlyTracking()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Inform\+Only\+Tracking (\begin{DoxyParamCaption}\item[{const bool \&}]{flag }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a7e81c68bb6ced27fcbfa2edec38ef6e0}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a7e81c68bb6ced27fcbfa2edec38ef6e0}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Monocular\+Initialization@{Monocular\+Initialization}}
+\index{Monocular\+Initialization@{Monocular\+Initialization}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Monocular\+Initialization()}{MonocularInitialization()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Monocular\+Initialization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+单目的地图初始化 
+
+并行地计算基础矩阵和单应性矩阵，选取其中一个模型，恢复出最开始两帧之间的相对姿态以及点云 得到初始两帧的匹配、相对运动、初始\+Map\+Points \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_afc013c5a20bc6beb772b96a875b19216}\label{class_o_r_b___s_l_a_m2_1_1_tracking_afc013c5a20bc6beb772b96a875b19216}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Need\+New\+Key\+Frame@{Need\+New\+Key\+Frame}}
+\index{Need\+New\+Key\+Frame@{Need\+New\+Key\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Need\+New\+Key\+Frame()}{NeedNewKeyFrame()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Need\+New\+Key\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+断当前帧是否为关键帧 
+
+\begin{DoxyReturn}{Returns}
+true if needed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_acd4ea9e7097bed16428a4b78fe4b6a67}\label{class_o_r_b___s_l_a_m2_1_1_tracking_acd4ea9e7097bed16428a4b78fe4b6a67}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Relocalization@{Relocalization}}
+\index{Relocalization@{Relocalization}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Relocalization()}{Relocalization()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Relocalization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a899967ca49b1c3446854ecce3873323c}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a899967ca49b1c3446854ecce3873323c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Reset@{Reset}}
+\index{Reset@{Reset}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a451c0e5372c24645c7634fcebc8fa847}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a451c0e5372c24645c7634fcebc8fa847}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Search\+Local\+Points@{Search\+Local\+Points}}
+\index{Search\+Local\+Points@{Search\+Local\+Points}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Search\+Local\+Points()}{SearchLocalPoints()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Search\+Local\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+对\+Local Map\+Points进行跟踪 
+
+在局部地图中查找在当前帧视野范围内的点，将视野范围内的点和当前帧的特征点进行投影匹配 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a95061551f3756408221df3b1a996b777}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a95061551f3756408221df3b1a996b777}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Set\+Local\+Mapper@{Set\+Local\+Mapper}}
+\index{Set\+Local\+Mapper@{Set\+Local\+Mapper}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Set\+Local\+Mapper()}{SetLocalMapper()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Set\+Local\+Mapper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_local_mapping}{Local\+Mapping}} $\ast$}]{p\+Local\+Mapper }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a92b878e0559740646f8b1c635ac068dc}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a92b878e0559740646f8b1c635ac068dc}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Set\+Loop\+Closing@{Set\+Loop\+Closing}}
+\index{Set\+Loop\+Closing@{Set\+Loop\+Closing}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Set\+Loop\+Closing()}{SetLoopClosing()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Set\+Loop\+Closing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_loop_closing}{Loop\+Closing}} $\ast$}]{p\+Loop\+Closing }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ac86c2461ac6cf3bec906759f4fbea15c}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ac86c2461ac6cf3bec906759f4fbea15c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Set\+Viewer@{Set\+Viewer}}
+\index{Set\+Viewer@{Set\+Viewer}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Set\+Viewer()}{SetViewer()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Set\+Viewer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_viewer}{Viewer}} $\ast$}]{p\+Viewer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ad3da849e4204d766e5db4ac47b52132c}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ad3da849e4204d766e5db4ac47b52132c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Stereo\+Initialization@{Stereo\+Initialization}}
+\index{Stereo\+Initialization@{Stereo\+Initialization}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Stereo\+Initialization()}{StereoInitialization()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Stereo\+Initialization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+双目和rgbd的地图初始化 
+
+由于具有深度信息，直接生成\+Map\+Points \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_af1f2c9c533642d8c33854540e90d1918}\label{class_o_r_b___s_l_a_m2_1_1_tracking_af1f2c9c533642d8c33854540e90d1918}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Track@{Track}}
+\index{Track@{Track}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Track()}{Track()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Main tracking function. It is independent of the input sensor. 
+
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking}{Tracking}} 线程 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_af670c614f4e10d58c9f7aad9865b5c08}\label{class_o_r_b___s_l_a_m2_1_1_tracking_af670c614f4e10d58c9f7aad9865b5c08}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Track\+Local\+Map@{Track\+Local\+Map}}
+\index{Track\+Local\+Map@{Track\+Local\+Map}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Track\+Local\+Map()}{TrackLocalMap()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Track\+Local\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+对\+Local Map的\+Map\+Points进行跟踪 
+
+
+\begin{DoxyEnumerate}
+\item 更新局部地图，包括局部关键帧和关键点
+\item 对局部\+Map\+Points进行投影匹配
+\item 根据匹配对估计当前帧的姿态
+\item 根据姿态剔除误匹配 \begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+V-\/D track Local \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} 
+\end{DoxySeeAlso}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a737c5409c93844353561a0fe724ed1c2}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a737c5409c93844353561a0fe724ed1c2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Track\+Reference\+Key\+Frame@{Track\+Reference\+Key\+Frame}}
+\index{Track\+Reference\+Key\+Frame@{Track\+Reference\+Key\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Track\+Reference\+Key\+Frame()}{TrackReferenceKeyFrame()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Track\+Reference\+Key\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+对参考关键帧的\+Map\+Points进行跟踪 
+
+
+\begin{DoxyEnumerate}
+\item 计算当前帧的词包，将当前帧的特征点分到特定层的nodes上
+\item 对属于同一node的描述子进行匹配
+\item 根据匹配对估计当前帧的姿态
+\item 根据姿态剔除误匹配 \begin{DoxyReturn}{Returns}
+如果匹配数大于10，返回true 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_aca19f1d69b30a6c6e49281d422ac8298}\label{class_o_r_b___s_l_a_m2_1_1_tracking_aca19f1d69b30a6c6e49281d422ac8298}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Track\+With\+Motion\+Model@{Track\+With\+Motion\+Model}}
+\index{Track\+With\+Motion\+Model@{Track\+With\+Motion\+Model}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Track\+With\+Motion\+Model()}{TrackWithMotionModel()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Track\+With\+Motion\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+根据匀速度模型对上一帧的\+Map\+Points进行跟踪 
+
+
+\begin{DoxyEnumerate}
+\item 非单目情况，需要对上一帧产生一些新的\+Map\+Points（临时）
+\item 将上一帧的\+Map\+Points投影到当前帧的图像平面上，在投影的位置进行区域匹配
+\item 根据匹配对估计当前帧的姿态
+\item 根据姿态剔除误匹配 \begin{DoxyReturn}{Returns}
+如果匹配数大于10，返回true 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+V-\/B Initial Pose Estimation From Previous \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} 
+\end{DoxySeeAlso}
+
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_aa84a20277d5bd022b527d79a58830bc5}\label{class_o_r_b___s_l_a_m2_1_1_tracking_aa84a20277d5bd022b527d79a58830bc5}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Update\+Last\+Frame@{Update\+Last\+Frame}}
+\index{Update\+Last\+Frame@{Update\+Last\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Update\+Last\+Frame()}{UpdateLastFrame()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Update\+Last\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+双目或rgbd摄像头根据深度值为上一帧产生新的\+Map\+Points 
+
+在双目和rgbd情况下，选取一些深度小一些的点（可靠一些） ~\newline
+可以通过深度值产生一些新的\+Map\+Points \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a42bed56bbbe8282eb77733e7168d8599}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a42bed56bbbe8282eb77733e7168d8599}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Update\+Local\+Key\+Frames@{Update\+Local\+Key\+Frames}}
+\index{Update\+Local\+Key\+Frames@{Update\+Local\+Key\+Frames}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Update\+Local\+Key\+Frames()}{UpdateLocalKeyFrames()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Update\+Local\+Key\+Frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+更新局部关键帧，called by \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a22723e9972c18a888dd51a82eec27b0a}{Update\+Local\+Map()}} 
+
+遍历当前帧的\+Map\+Points，将观测到这些\+Map\+Points的关键帧和相邻的关键帧取出，更新mvp\+Local\+Key\+Frames \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a22723e9972c18a888dd51a82eec27b0a}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a22723e9972c18a888dd51a82eec27b0a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Update\+Local\+Map@{Update\+Local\+Map}}
+\index{Update\+Local\+Map@{Update\+Local\+Map}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Update\+Local\+Map()}{UpdateLocalMap()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Update\+Local\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+更新\+Local\+Map 
+
+局部地图包括： ~\newline
+
+\begin{DoxyItemize}
+\item K1个关键帧、\+K2个临近关键帧和参考关键帧
+\item 由这些关键帧观测到的\+Map\+Points 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a25843575116bf18c065d6cc7645f5b26}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a25843575116bf18c065d6cc7645f5b26}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!Update\+Local\+Points@{Update\+Local\+Points}}
+\index{Update\+Local\+Points@{Update\+Local\+Points}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{Update\+Local\+Points()}{UpdateLocalPoints()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::\+Update\+Local\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+更新局部关键点，called by \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a22723e9972c18a888dd51a82eec27b0a}{Update\+Local\+Map()}} 
+
+局部关键帧mvp\+Local\+Key\+Frames的\+Map\+Points，更新mvp\+Local\+Map\+Points 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a8de5f87734670485f6b6097b14dd1fcb}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a8de5f87734670485f6b6097b14dd1fcb}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mbf@{mbf}}
+\index{mbf@{mbf}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mbf}{mbf}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mbf\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ae8c6db8ff320af10acacd5078a0801f6}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ae8c6db8ff320af10acacd5078a0801f6}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mb\+Only\+Tracking@{mb\+Only\+Tracking}}
+\index{mb\+Only\+Tracking@{mb\+Only\+Tracking}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mb\+Only\+Tracking}{mbOnlyTracking}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mb\+Only\+Tracking}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a01522faf940cc80402f0750b0d90ecf2}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a01522faf940cc80402f0750b0d90ecf2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mb\+R\+GB@{mb\+R\+GB}}
+\index{mb\+R\+GB@{mb\+R\+GB}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mb\+R\+GB}{mbRGB}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mb\+R\+GB\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a44ad79261b565797bdf53d503f6defca}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a44ad79261b565797bdf53d503f6defca}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mb\+VO@{mb\+VO}}
+\index{mb\+VO@{mb\+VO}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mb\+VO}{mbVO}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mb\+VO\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ad21299ab1995c8fb7115bda57773d307}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ad21299ab1995c8fb7115bda57773d307}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Current\+Frame@{m\+Current\+Frame}}
+\index{m\+Current\+Frame@{m\+Current\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Current\+Frame}{mCurrentFrame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Current\+Frame}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_abbe2cb26c58f023bab9c95b251778208}\label{class_o_r_b___s_l_a_m2_1_1_tracking_abbe2cb26c58f023bab9c95b251778208}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Depth\+Map\+Factor@{m\+Depth\+Map\+Factor}}
+\index{m\+Depth\+Map\+Factor@{m\+Depth\+Map\+Factor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Depth\+Map\+Factor}{mDepthMapFactor}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Depth\+Map\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a7df0851817d1a1345324c196b6a79c3a}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a7df0851817d1a1345324c196b6a79c3a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Dist\+Coef@{m\+Dist\+Coef}}
+\index{m\+Dist\+Coef@{m\+Dist\+Coef}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Dist\+Coef}{mDistCoef}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Dist\+Coef\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_af7ef78c9eed81f0701a1d12b3f377875}\label{class_o_r_b___s_l_a_m2_1_1_tracking_af7ef78c9eed81f0701a1d12b3f377875}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Im\+Gray@{m\+Im\+Gray}}
+\index{m\+Im\+Gray@{m\+Im\+Gray}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Im\+Gray}{mImGray}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Im\+Gray}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a691ba65eb45f76829c8a2622f42ba446}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a691ba65eb45f76829c8a2622f42ba446}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Initial\+Frame@{m\+Initial\+Frame}}
+\index{m\+Initial\+Frame@{m\+Initial\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Initial\+Frame}{mInitialFrame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Initial\+Frame}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a6926ae3c49c09bf9f402d13900740405}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a6926ae3c49c09bf9f402d13900740405}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mK@{mK}}
+\index{mK@{mK}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mK}{mK}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mK\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a4f0a80cfb3ddadcb43d7745d15ac9f35}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a4f0a80cfb3ddadcb43d7745d15ac9f35}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Last\+Frame@{m\+Last\+Frame}}
+\index{m\+Last\+Frame@{m\+Last\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Last\+Frame}{mLastFrame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Last\+Frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a98be1e579a7e9271449d079c4f3c8769}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a98be1e579a7e9271449d079c4f3c8769}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Last\+Processed\+State@{m\+Last\+Processed\+State}}
+\index{m\+Last\+Processed\+State@{m\+Last\+Processed\+State}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Last\+Processed\+State}{mLastProcessedState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36}{e\+Tracking\+State}} O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Last\+Processed\+State}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_aca83e100e47cfcc0cba1bcfac72764cc}\label{class_o_r_b___s_l_a_m2_1_1_tracking_aca83e100e47cfcc0cba1bcfac72764cc}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mlb\+Lost@{mlb\+Lost}}
+\index{mlb\+Lost@{mlb\+Lost}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mlb\+Lost}{mlbLost}}
+{\footnotesize\ttfamily list$<$bool$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mlb\+Lost}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ae867f703e70c18b7ff0798191807cb4d}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ae867f703e70c18b7ff0798191807cb4d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!ml\+Frame\+Times@{ml\+Frame\+Times}}
+\index{ml\+Frame\+Times@{ml\+Frame\+Times}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{ml\+Frame\+Times}{mlFrameTimes}}
+{\footnotesize\ttfamily list$<$double$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::ml\+Frame\+Times}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ad214f6515a2cf4996d0c7765d9de73a8}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ad214f6515a2cf4996d0c7765d9de73a8}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mlp\+References@{mlp\+References}}
+\index{mlp\+References@{mlp\+References}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mlp\+References}{mlpReferences}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}$\ast$$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mlp\+References}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_aadc2690944688adbebeef4a60bdf3cad}\label{class_o_r_b___s_l_a_m2_1_1_tracking_aadc2690944688adbebeef4a60bdf3cad}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mlp\+Temporal\+Points@{mlp\+Temporal\+Points}}
+\index{mlp\+Temporal\+Points@{mlp\+Temporal\+Points}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mlp\+Temporal\+Points}{mlpTemporalPoints}}
+{\footnotesize\ttfamily list$<$\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}}$\ast$$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mlp\+Temporal\+Points\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a5e0bb2d9fe720c4f4dc9eef57ad1f168}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a5e0bb2d9fe720c4f4dc9eef57ad1f168}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!ml\+Relative\+Frame\+Poses@{ml\+Relative\+Frame\+Poses}}
+\index{ml\+Relative\+Frame\+Poses@{ml\+Relative\+Frame\+Poses}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{ml\+Relative\+Frame\+Poses}{mlRelativeFramePoses}}
+{\footnotesize\ttfamily list$<$cv\+::\+Mat$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::ml\+Relative\+Frame\+Poses}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a8a96fe16c7ed5c29d8714c1af036f1da}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a8a96fe16c7ed5c29d8714c1af036f1da}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Max\+Frames@{m\+Max\+Frames}}
+\index{m\+Max\+Frames@{m\+Max\+Frames}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Max\+Frames}{mMaxFrames}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Max\+Frames\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a53369ce9ebf152a1a76e93445821e395}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a53369ce9ebf152a1a76e93445821e395}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Min\+Frames@{m\+Min\+Frames}}
+\index{m\+Min\+Frames@{m\+Min\+Frames}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Min\+Frames}{mMinFrames}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Min\+Frames\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_abe5270bc94032722923f43efe7a7bac6}\label{class_o_r_b___s_l_a_m2_1_1_tracking_abe5270bc94032722923f43efe7a7bac6}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mn\+Last\+Key\+Frame\+Id@{mn\+Last\+Key\+Frame\+Id}}
+\index{mn\+Last\+Key\+Frame\+Id@{mn\+Last\+Key\+Frame\+Id}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mn\+Last\+Key\+Frame\+Id}{mnLastKeyFrameId}}
+{\footnotesize\ttfamily unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mn\+Last\+Key\+Frame\+Id\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_af95975f569dcc3e378c556b8199604b2}\label{class_o_r_b___s_l_a_m2_1_1_tracking_af95975f569dcc3e378c556b8199604b2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mn\+Last\+Reloc\+Frame\+Id@{mn\+Last\+Reloc\+Frame\+Id}}
+\index{mn\+Last\+Reloc\+Frame\+Id@{mn\+Last\+Reloc\+Frame\+Id}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mn\+Last\+Reloc\+Frame\+Id}{mnLastRelocFrameId}}
+{\footnotesize\ttfamily unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mn\+Last\+Reloc\+Frame\+Id\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ad58b66226a6345581227560aae2ea72f}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ad58b66226a6345581227560aae2ea72f}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mn\+Matches\+Inliers@{mn\+Matches\+Inliers}}
+\index{mn\+Matches\+Inliers@{mn\+Matches\+Inliers}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mn\+Matches\+Inliers}{mnMatchesInliers}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mn\+Matches\+Inliers\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_afc0759bfbd1d8d83e86c9d677a35429b}\label{class_o_r_b___s_l_a_m2_1_1_tracking_afc0759bfbd1d8d83e86c9d677a35429b}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Frame\+Drawer@{mp\+Frame\+Drawer}}
+\index{mp\+Frame\+Drawer@{mp\+Frame\+Drawer}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Frame\+Drawer}{mpFrameDrawer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_drawer}{Frame\+Drawer}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Frame\+Drawer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a8d25e231894baf85a6a48ab57ce0ddb3}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a8d25e231894baf85a6a48ab57ce0ddb3}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Ini\+O\+R\+Bextractor@{mp\+Ini\+O\+R\+Bextractor}}
+\index{mp\+Ini\+O\+R\+Bextractor@{mp\+Ini\+O\+R\+Bextractor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Ini\+O\+R\+Bextractor}{mpIniORBextractor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}{O\+R\+Bextractor}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Ini\+O\+R\+Bextractor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a9194420033fe0d556053685844a534be}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a9194420033fe0d556053685844a534be}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Initializer@{mp\+Initializer}}
+\index{mp\+Initializer@{mp\+Initializer}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Initializer}{mpInitializer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer}{Initializer}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Initializer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a0ee7e13527e3bb18adb24bc511fd5800}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a0ee7e13527e3bb18adb24bc511fd5800}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Key\+Frame\+DB@{mp\+Key\+Frame\+DB}}
+\index{mp\+Key\+Frame\+DB@{mp\+Key\+Frame\+DB}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Key\+Frame\+DB}{mpKeyFrameDB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database}{Key\+Frame\+Database}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Key\+Frame\+DB\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_aa833de1f76843c64dbcc1631c12de7fd}\label{class_o_r_b___s_l_a_m2_1_1_tracking_aa833de1f76843c64dbcc1631c12de7fd}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Last\+Key\+Frame@{mp\+Last\+Key\+Frame}}
+\index{mp\+Last\+Key\+Frame@{mp\+Last\+Key\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Last\+Key\+Frame}{mpLastKeyFrame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Last\+Key\+Frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a83692a6e9626c3c11b329d3b0a35c2f1}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a83692a6e9626c3c11b329d3b0a35c2f1}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Local\+Mapper@{mp\+Local\+Mapper}}
+\index{mp\+Local\+Mapper@{mp\+Local\+Mapper}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Local\+Mapper}{mpLocalMapper}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_local_mapping}{Local\+Mapping}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Local\+Mapper\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_aed45d56071fcbba3db0552726c897e0d}\label{class_o_r_b___s_l_a_m2_1_1_tracking_aed45d56071fcbba3db0552726c897e0d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Loop\+Closing@{mp\+Loop\+Closing}}
+\index{mp\+Loop\+Closing@{mp\+Loop\+Closing}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Loop\+Closing}{mpLoopClosing}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_loop_closing}{Loop\+Closing}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Loop\+Closing\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_acc0b5ae59012946da8238d84a331d72c}\label{class_o_r_b___s_l_a_m2_1_1_tracking_acc0b5ae59012946da8238d84a331d72c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Map@{mp\+Map}}
+\index{mp\+Map@{mp\+Map}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Map}{mpMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a3fb103211ff7b984910943f0975d5ceb}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a3fb103211ff7b984910943f0975d5ceb}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Map\+Drawer@{mp\+Map\+Drawer}}
+\index{mp\+Map\+Drawer@{mp\+Map\+Drawer}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Map\+Drawer}{mpMapDrawer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer}{Map\+Drawer}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Map\+Drawer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_abd41b4020d02e8ca272263964ae400b2}\label{class_o_r_b___s_l_a_m2_1_1_tracking_abd41b4020d02e8ca272263964ae400b2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+O\+R\+Bextractor\+Left@{mp\+O\+R\+Bextractor\+Left}}
+\index{mp\+O\+R\+Bextractor\+Left@{mp\+O\+R\+Bextractor\+Left}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+O\+R\+Bextractor\+Left}{mpORBextractorLeft}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}{O\+R\+Bextractor}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+O\+R\+Bextractor\+Left\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a6eaa5950f4ed2503392ecf240914ddac}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a6eaa5950f4ed2503392ecf240914ddac}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+O\+R\+Bextractor\+Right@{mp\+O\+R\+Bextractor\+Right}}
+\index{mp\+O\+R\+Bextractor\+Right@{mp\+O\+R\+Bextractor\+Right}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+O\+R\+Bextractor\+Right}{mpORBextractorRight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}{O\+R\+Bextractor}} $\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+O\+R\+Bextractor\+Right\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a79358a4f15c71538e37e874a5646f43e}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a79358a4f15c71538e37e874a5646f43e}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+O\+R\+B\+Vocabulary@{mp\+O\+R\+B\+Vocabulary}}
+\index{mp\+O\+R\+B\+Vocabulary@{mp\+O\+R\+B\+Vocabulary}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+O\+R\+B\+Vocabulary}{mpORBVocabulary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+O\+R\+B\+Vocabulary\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ade9676c7c26eb653beddaa05b37ecc08}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ade9676c7c26eb653beddaa05b37ecc08}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Reference\+KF@{mp\+Reference\+KF}}
+\index{mp\+Reference\+KF@{mp\+Reference\+KF}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Reference\+KF}{mpReferenceKF}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Reference\+KF\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a1ab3d15e53005d5147620b0ee37c33ed}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a1ab3d15e53005d5147620b0ee37c33ed}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+System@{mp\+System}}
+\index{mp\+System@{mp\+System}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+System}{mpSystem}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_system}{System}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+System\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a4952ab24b73effdbba6266e2fb26548e}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a4952ab24b73effdbba6266e2fb26548e}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mp\+Viewer@{mp\+Viewer}}
+\index{mp\+Viewer@{mp\+Viewer}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mp\+Viewer}{mpViewer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_viewer}{Viewer}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mp\+Viewer\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a18bffeb950dd18e5d74807cd9741c013}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a18bffeb950dd18e5d74807cd9741c013}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Sensor@{m\+Sensor}}
+\index{m\+Sensor@{m\+Sensor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Sensor}{mSensor}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Sensor}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a37cadc53a335fd802fed2fd9b24e93e1}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a37cadc53a335fd802fed2fd9b24e93e1}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+State@{m\+State}}
+\index{m\+State@{m\+State}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+State}{mState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_a3995b5e23b910c6ee30b7fe21732fe36}{e\+Tracking\+State}} O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+State}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_aded3124bdf36aba88411327024a7c2d3}\label{class_o_r_b___s_l_a_m2_1_1_tracking_aded3124bdf36aba88411327024a7c2d3}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Th\+Depth@{m\+Th\+Depth}}
+\index{m\+Th\+Depth@{m\+Th\+Depth}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Th\+Depth}{mThDepth}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Th\+Depth\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a9ee7c26c1db845fef73c55ee0bb5c9f2}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a9ee7c26c1db845fef73c55ee0bb5c9f2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mvb\+Prev\+Matched@{mvb\+Prev\+Matched}}
+\index{mvb\+Prev\+Matched@{mvb\+Prev\+Matched}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mvb\+Prev\+Matched}{mvbPrevMatched}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point2f$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mvb\+Prev\+Matched}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ac2283c13ccf08207c90a6a163d8dbe3c}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ac2283c13ccf08207c90a6a163d8dbe3c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!m\+Velocity@{m\+Velocity}}
+\index{m\+Velocity@{m\+Velocity}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{m\+Velocity}{mVelocity}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::m\+Velocity\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_ace08a986d9cbe3fe578c189242b94489}\label{class_o_r_b___s_l_a_m2_1_1_tracking_ace08a986d9cbe3fe578c189242b94489}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mv\+Ini\+Last\+Matches@{mv\+Ini\+Last\+Matches}}
+\index{mv\+Ini\+Last\+Matches@{mv\+Ini\+Last\+Matches}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mv\+Ini\+Last\+Matches}{mvIniLastMatches}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mv\+Ini\+Last\+Matches}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a1c89fa1b3512238f15283857ed94c79a}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a1c89fa1b3512238f15283857ed94c79a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mv\+Ini\+Matches@{mv\+Ini\+Matches}}
+\index{mv\+Ini\+Matches@{mv\+Ini\+Matches}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mv\+Ini\+Matches}{mvIniMatches}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mv\+Ini\+Matches}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_adced44c2c047c18f3db6c7bfd7b289f0}\label{class_o_r_b___s_l_a_m2_1_1_tracking_adced44c2c047c18f3db6c7bfd7b289f0}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mv\+Ini\+P3D@{mv\+Ini\+P3D}}
+\index{mv\+Ini\+P3D@{mv\+Ini\+P3D}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mv\+Ini\+P3D}{mvIniP3D}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point3f$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mv\+Ini\+P3D}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a46ade9f7ec2c89544ae77f2906000b3a}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a46ade9f7ec2c89544ae77f2906000b3a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mvp\+Local\+Key\+Frames@{mvp\+Local\+Key\+Frames}}
+\index{mvp\+Local\+Key\+Frames@{mvp\+Local\+Key\+Frames}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mvp\+Local\+Key\+Frames}{mvpLocalKeyFrames}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}$\ast$$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mvp\+Local\+Key\+Frames\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_tracking_a89074acc520094ba0d0fc7f4c0f8cf09}\label{class_o_r_b___s_l_a_m2_1_1_tracking_a89074acc520094ba0d0fc7f4c0f8cf09}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}!mvp\+Local\+Map\+Points@{mvp\+Local\+Map\+Points}}
+\index{mvp\+Local\+Map\+Points@{mvp\+Local\+Map\+Points}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking}}
+\subsubsection{\texorpdfstring{mvp\+Local\+Map\+Points}{mvpLocalMapPoints}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}}$\ast$$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Tracking\+::mvp\+Local\+Map\+Points\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_tracking_8h}{Tracking.\+h}}\item 
+src/\mbox{\hyperlink{_tracking_8cpp}{Tracking.\+cpp}}\end{DoxyCompactItemize}

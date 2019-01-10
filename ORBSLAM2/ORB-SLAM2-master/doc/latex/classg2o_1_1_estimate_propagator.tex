@@ -1,0 +1,151 @@
+\hypertarget{classg2o_1_1_estimate_propagator}{}\section{g2o\+:\+:Estimate\+Propagator Class Reference}
+\label{classg2o_1_1_estimate_propagator}\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+
+
+propagation of an initial guess  
+
+
+
+
+{\ttfamily \#include $<$estimate\+\_\+propagator.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry}{Adjacency\+Map\+Entry}}
+\begin{DoxyCompactList}\small\item\em data structure for loopuk during Dijkstra \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_priority_queue}{Priority\+Queue}}
+\begin{DoxyCompactList}\small\item\em priority queue for \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry}{Adjacency\+Map\+Entry}} \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Propagate\+Action}}
+\begin{DoxyCompactList}\small\item\em Applying the action for propagating. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_vertex_i_d_hash_function}{Vertex\+I\+D\+Hash\+Function}}
+\begin{DoxyCompactList}\small\item\em hash function for a vertex \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classg2o_1_1_estimate_propagator_cost}{Estimate\+Propagator\+Cost}} \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}{Propagate\+Cost}}
+\item 
+typedef std\+::tr1\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$, \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry}{Adjacency\+Map\+Entry}}, \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_vertex_i_d_hash_function}{Vertex\+I\+D\+Hash\+Function}} $>$ \mbox{\hyperlink{classg2o_1_1_estimate_propagator_aa450038ec206c089ecf023cb88cb2847}{Adjacency\+Map}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_estimate_propagator_af245037ba41bfb02d531c11f5de4f7e8}{Estimate\+Propagator}} (\mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$g)
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \& \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a2d346a2411d969caa81817c15052cd58}{visited}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_estimate_propagator_aa450038ec206c089ecf023cb88cb2847}{Adjacency\+Map}} \& \mbox{\hyperlink{classg2o_1_1_estimate_propagator_ad6dc3d18c4057915af4cc4986b568855}{adjacency\+Map}} ()
+\item 
+\mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$ \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a97064a86789b496b590f4848fdb59bc8}{graph}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a3b1df65f9b89d81dff33cb140d4f75d4}{propagate}} (\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$v, const \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}{Estimate\+Propagator\+::\+Propagate\+Cost}} \&cost, const \mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Estimate\+Propagator\+::\+Propagate\+Action}} \&action=\mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Propagate\+Action}}(), double max\+Distance=std\+::numeric\+\_\+limits$<$ double $>$\+::max(), double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())
+\item 
+void \mbox{\hyperlink{classg2o_1_1_estimate_propagator_ae24b104ec3e8162bc75a70db9941f342}{propagate}} (\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \&vset, const \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}{Estimate\+Propagator\+::\+Propagate\+Cost}} \&cost, const \mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Estimate\+Propagator\+::\+Propagate\+Action}} \&action=\mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Propagate\+Action}}(), double max\+Distance=std\+::numeric\+\_\+limits$<$ double $>$\+::max(), double max\+Edge\+Cost=std\+::numeric\+\_\+limits$<$ double $>$\+::max())
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a8319099eda0552b9ef62a0bb40bb0785}{reset}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_estimate_propagator_aa450038ec206c089ecf023cb88cb2847}{Adjacency\+Map}} \mbox{\hyperlink{classg2o_1_1_estimate_propagator_ac3f6429938db62696444fd7ee765439a}{\+\_\+adjacency\+Map}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a1256927d6d1832ee300daa53d1c845a2}{\+\_\+visited}}
+\item 
+\mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$ \mbox{\hyperlink{classg2o_1_1_estimate_propagator_ac2dcd3169696692ce3f0679235933e8a}{\+\_\+graph}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+propagation of an initial guess 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_aa450038ec206c089ecf023cb88cb2847}\label{classg2o_1_1_estimate_propagator_aa450038ec206c089ecf023cb88cb2847}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!Adjacency\+Map@{Adjacency\+Map}}
+\index{Adjacency\+Map@{Adjacency\+Map}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{Adjacency\+Map}{AdjacencyMap}}
+{\footnotesize\ttfamily typedef std\+::tr1\+::unordered\+\_\+map$<$\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}}$\ast$, \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry}{Adjacency\+Map\+Entry}}, \mbox{\hyperlink{classg2o_1_1_estimate_propagator_1_1_vertex_i_d_hash_function}{Vertex\+I\+D\+Hash\+Function}}$>$ \mbox{\hyperlink{classg2o_1_1_estimate_propagator_aa450038ec206c089ecf023cb88cb2847}{g2o\+::\+Estimate\+Propagator\+::\+Adjacency\+Map}}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}\label{classg2o_1_1_estimate_propagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!Propagate\+Cost@{Propagate\+Cost}}
+\index{Propagate\+Cost@{Propagate\+Cost}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{Propagate\+Cost}{PropagateCost}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classg2o_1_1_estimate_propagator_cost}{Estimate\+Propagator\+Cost}} \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}{g2o\+::\+Estimate\+Propagator\+::\+Propagate\+Cost}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_af245037ba41bfb02d531c11f5de4f7e8}\label{classg2o_1_1_estimate_propagator_af245037ba41bfb02d531c11f5de4f7e8}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!Estimate\+Propagator@{Estimate\+Propagator}}
+\index{Estimate\+Propagator@{Estimate\+Propagator}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{Estimate\+Propagator()}{EstimatePropagator()}}
+{\footnotesize\ttfamily g2o\+::\+Estimate\+Propagator\+::\+Estimate\+Propagator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_ad6dc3d18c4057915af4cc4986b568855}\label{classg2o_1_1_estimate_propagator_ad6dc3d18c4057915af4cc4986b568855}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!adjacency\+Map@{adjacency\+Map}}
+\index{adjacency\+Map@{adjacency\+Map}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{adjacency\+Map()}{adjacencyMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_estimate_propagator_aa450038ec206c089ecf023cb88cb2847}{Adjacency\+Map}}\& g2o\+::\+Estimate\+Propagator\+::adjacency\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_a97064a86789b496b590f4848fdb59bc8}\label{classg2o_1_1_estimate_propagator_a97064a86789b496b590f4848fdb59bc8}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!graph@{graph}}
+\index{graph@{graph}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{graph()}{graph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}}$\ast$ g2o\+::\+Estimate\+Propagator\+::graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_a3b1df65f9b89d81dff33cb140d4f75d4}\label{classg2o_1_1_estimate_propagator_a3b1df65f9b89d81dff33cb140d4f75d4}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!propagate@{propagate}}
+\index{propagate@{propagate}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{propagate()}{propagate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void g2o\+::\+Estimate\+Propagator\+::propagate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$}]{v,  }\item[{const \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}{Estimate\+Propagator\+::\+Propagate\+Cost}} \&}]{cost,  }\item[{const \mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Estimate\+Propagator\+::\+Propagate\+Action}} \&}]{action = {\ttfamily \mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Propagate\+Action}}()},  }\item[{double}]{max\+Distance = {\ttfamily std\+:\+:numeric\+\_\+limits$<$double$>$\+:\+:max()},  }\item[{double}]{max\+Edge\+Cost = {\ttfamily std\+:\+:numeric\+\_\+limits$<$double$>$\+:\+:max()} }\end{DoxyParamCaption})}
+
+propagate an initial guess starting from v. The function computes a spanning tree whereas the cost for each edge is determined by calling cost() and the action applied to each vertex is action(). \mbox{\Hypertarget{classg2o_1_1_estimate_propagator_ae24b104ec3e8162bc75a70db9941f342}\label{classg2o_1_1_estimate_propagator_ae24b104ec3e8162bc75a70db9941f342}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!propagate@{propagate}}
+\index{propagate@{propagate}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{propagate()}{propagate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void g2o\+::\+Estimate\+Propagator\+::propagate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \&}]{vset,  }\item[{const \mbox{\hyperlink{classg2o_1_1_estimate_propagator_a67a42f9c6d5f92562ac4ea12f81c8d9c}{Estimate\+Propagator\+::\+Propagate\+Cost}} \&}]{cost,  }\item[{const \mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Estimate\+Propagator\+::\+Propagate\+Action}} \&}]{action = {\ttfamily \mbox{\hyperlink{structg2o_1_1_estimate_propagator_1_1_propagate_action}{Propagate\+Action}}()},  }\item[{double}]{max\+Distance = {\ttfamily std\+:\+:numeric\+\_\+limits$<$double$>$\+:\+:max()},  }\item[{double}]{max\+Edge\+Cost = {\ttfamily std\+:\+:numeric\+\_\+limits$<$double$>$\+:\+:max()} }\end{DoxyParamCaption})}
+
+same as above but starting to propagate from a set of vertices instead of just a single one. \mbox{\Hypertarget{classg2o_1_1_estimate_propagator_a8319099eda0552b9ef62a0bb40bb0785}\label{classg2o_1_1_estimate_propagator_a8319099eda0552b9ef62a0bb40bb0785}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!reset@{reset}}
+\index{reset@{reset}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void g2o\+::\+Estimate\+Propagator\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_a2d346a2411d969caa81817c15052cd58}\label{classg2o_1_1_estimate_propagator_a2d346a2411d969caa81817c15052cd58}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!visited@{visited}}
+\index{visited@{visited}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{visited()}{visited()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}}\& g2o\+::\+Estimate\+Propagator\+::visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_ac3f6429938db62696444fd7ee765439a}\label{classg2o_1_1_estimate_propagator_ac3f6429938db62696444fd7ee765439a}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!\+\_\+adjacency\+Map@{\+\_\+adjacency\+Map}}
+\index{\+\_\+adjacency\+Map@{\+\_\+adjacency\+Map}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{\+\_\+adjacency\+Map}{\_adjacencyMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_estimate_propagator_aa450038ec206c089ecf023cb88cb2847}{Adjacency\+Map}} g2o\+::\+Estimate\+Propagator\+::\+\_\+adjacency\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_ac2dcd3169696692ce3f0679235933e8a}\label{classg2o_1_1_estimate_propagator_ac2dcd3169696692ce3f0679235933e8a}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!\+\_\+graph@{\+\_\+graph}}
+\index{\+\_\+graph@{\+\_\+graph}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{\+\_\+graph}{\_graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structg2o_1_1_optimizable_graph}{Optimizable\+Graph}}$\ast$ g2o\+::\+Estimate\+Propagator\+::\+\_\+graph\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_estimate_propagator_a1256927d6d1832ee300daa53d1c845a2}\label{classg2o_1_1_estimate_propagator_a1256927d6d1832ee300daa53d1c845a2}} 
+\index{g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}!\+\_\+visited@{\+\_\+visited}}
+\index{\+\_\+visited@{\+\_\+visited}!g2o\+::\+Estimate\+Propagator@{g2o\+::\+Estimate\+Propagator}}
+\subsubsection{\texorpdfstring{\+\_\+visited}{\_visited}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} g2o\+::\+Estimate\+Propagator\+::\+\_\+visited\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{estimate__propagator_8h}{estimate\+\_\+propagator.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{estimate__propagator_8cpp}{estimate\+\_\+propagator.\+cpp}}\end{DoxyCompactItemize}

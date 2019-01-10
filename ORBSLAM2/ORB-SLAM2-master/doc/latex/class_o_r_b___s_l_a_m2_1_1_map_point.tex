@@ -1,0 +1,643 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:Map\+Point Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_map_point}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+
+
+Map\+Point是一个地图点  
+
+
+
+
+{\ttfamily \#include $<$Map\+Point.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ae8b6d24a7f79cfd260502859cb5b6901}{Map\+Point}} (const cv\+::\+Mat \&Pos, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+Ref\+KF, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$p\+Map)
+\begin{DoxyCompactList}\small\item\em 给定坐标与keyframe构造\+Map\+Point \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_abbb2b679ea956845f315a69773618fa7}{Map\+Point}} (const cv\+::\+Mat \&Pos, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$p\+Map, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} $\ast$p\+Frame, const int \&idxF)
+\begin{DoxyCompactList}\small\item\em 给定坐标与frame构造\+Map\+Point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ad65e6322e9d06314db235ff4d072509f}{Set\+World\+Pos}} (const cv\+::\+Mat \&Pos)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a0e59b21447d5d889b39ad2fcc1b1db49}{Get\+World\+Pos}} ()
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_af0198d242a96476faa52da0ede3c8f10}{Get\+Normal}} ()
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a98f595f0421fd95e406d1de6f48e05f3}{Get\+Reference\+Key\+Frame}} ()
+\item 
+std\+::map$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$, size\+\_\+t $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ae91e056d3b79e08a3fadd976888f6b09}{Get\+Observations}} ()
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a7fbc2a95f49eb6facdc5d5fa35de3287}{Observations}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a37277ee3c7d8657976e749ab920bb13f}{Add\+Observation}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF, size\+\_\+t idx)
+\begin{DoxyCompactList}\small\item\em 添加观测 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a79e6a93ea0c39329a082f4f69560f1be}{Erase\+Observation}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_afbe3f2cf7f4d5e4596fa9f7ff0d44470}{Get\+Index\+In\+Key\+Frame}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF)
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a7a8c48a885598ba4da3b188791dfd009}{Is\+In\+Key\+Frame}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF)
+\begin{DoxyCompactList}\small\item\em check \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} is in keyframe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a7ed2a66b528165d6c39cb6f84f684308}{Set\+Bad\+Flag}} ()
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a46bb6b57cd914c9ebad30007f3af469a}{is\+Bad}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a8f2e205afcfae3dc70196bcd29194440}{Replace}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$p\+MP)
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ad8814ed8121bd730c640c620ed623baf}{Get\+Replaced}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a0a234f5bd6bc19a9ea55fad0c9e6db5f}{Increase\+Visible}} (int n=1)
+\begin{DoxyCompactList}\small\item\em Increase Visible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aa097cd8cf993a54e999f297e05729392}{Increase\+Found}} (int n=1)
+\begin{DoxyCompactList}\small\item\em Increase Found. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ac1b7c69a2d9f6bd785d465380844ce10}{Get\+Found\+Ratio}} ()
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a0d081d56b0f398c52581b3e0eaa1cb15}{Get\+Found}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ab4c3dfd8f5f05a4b1888021f1fac3d84}{Compute\+Distinctive\+Descriptors}} ()
+\begin{DoxyCompactList}\small\item\em 计算具有代表的描述子 \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a8f9faa5b4cc513795485dcfb460ea3d0}{Get\+Descriptor}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ac5b8e4ec6a7737860af57058bdd16124}{Update\+Normal\+And\+Depth}} ()
+\begin{DoxyCompactList}\small\item\em 更新平均观测方向以及观测距离范围 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aac7224845c1d39016c50dcaacc0ebe40}{Get\+Min\+Distance\+Invariance}} ()
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_abf921da31ee4d522181bb6b8d9149fff}{Get\+Max\+Distance\+Invariance}} ()
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aa0e884ba7dc5b85ddb5ccb64113a8594}{Predict\+Scale}} (const float \&current\+Dist, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_af083bd50463ee191a1abb540bb40ea3d}{Predict\+Scale}} (const float \&current\+Dist, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} $\ast$pF)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_afba2eb4d8400a0c822ee991ba445d9be}{mn\+Id}}
+\begin{DoxyCompactList}\small\item\em Global ID for \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}}. \end{DoxyCompactList}\item 
+const long int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ad3f9757b633aac7c026a0e5330e4b10c}{mn\+First\+K\+Fid}}
+\begin{DoxyCompactList}\small\item\em 创建该\+Map\+Point的关键帧\+ID \end{DoxyCompactList}\item 
+const long int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a68929d6ead18e19745ec358f2ef8776d}{mn\+First\+Frame}}
+\begin{DoxyCompactList}\small\item\em 创建该\+Map\+Point的帧\+I\+D（即每一关键帧有一个帧\+I\+D） \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a2653a4c69121627fcc5ae812b1809a28}{n\+Obs}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a7d735552c42630c00bca4c2094fbbbf3}{m\+Track\+ProjX}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a5ab59610931a5c2e14f502e8233571e4}{m\+Track\+ProjY}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a4f0a0671a3587e2aac0708eed07c5170}{m\+Track\+Proj\+XR}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aac515bf003cea5f99737d13475c46816}{mn\+Track\+Scale\+Level}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a728107bc670ba47d79bad5ba288256d6}{m\+Track\+View\+Cos}}
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a0187350fa3fddd0bf89ccf354acb4766}{mb\+Track\+In\+View}}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a19152183cfddc71b63650175def6aec7}{mn\+Track\+Reference\+For\+Frame}}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aea3a63ce27fc39e536a6ceef7c1f3473}{mn\+Last\+Frame\+Seen}}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ad4da26d02aa54a3e0be6a09e90fa39ec}{mn\+B\+A\+Local\+For\+KF}}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aedba463c6440c2b448e9ec21acd58b9a}{mn\+Fuse\+Candidate\+For\+KF}}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a44172716cac5a56004a60d165de8cfa2}{mn\+Loop\+Point\+For\+KF}}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a86626462be01ad9a133dca0f5b49e688}{mn\+Corrected\+By\+KF}}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ade5858af14ed7924d48dbf191ea5448c}{mn\+Corrected\+Reference}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a2669d92452bb1347a6a09700e369f049}{m\+Pos\+G\+BA}}
+\item 
+long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_abcef580d7b3562ea9025ea1dc2141b92}{mn\+B\+A\+Global\+For\+KF}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static long unsigned int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aa79702928d566db4fcd7716249bd96a2}{n\+Next\+Id}} =0
+\item 
+static std\+::mutex \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a58d0ed9067593833efa652ea671ebf62}{m\+Global\+Mutex}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a39741adada8dcd302afbf45ec2e72af0}{m\+World\+Pos}}
+\begin{DoxyCompactList}\small\item\em Map\+Point在世界坐标系下的坐标 \end{DoxyCompactList}\item 
+std\+::map$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$, size\+\_\+t $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a189bea541f860af75ceb60300b59d8e3}{m\+Observations}}
+\begin{DoxyCompactList}\small\item\em 观测到该\+Map\+Point的\+K\+F和该\+Map\+Point在\+K\+F中的索引 \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aba0cff72e2182ff72d32edd77dc7832d}{m\+Normal\+Vector}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ac2a05b8ddc806ecc6939f42d13828876}{m\+Descriptor}}
+\begin{DoxyCompactList}\small\item\em 通过 \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ab4c3dfd8f5f05a4b1888021f1fac3d84}{Compute\+Distinctive\+Descriptors()}} 得到的最优描述子 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a27cc4fee44b1ae77b24a8c766c617058}{mp\+Ref\+KF}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aadb2c83e36dc01e47983f57e831bac7b}{mn\+Visible}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a1defea85441b8063ef9ebb47c9959289}{mn\+Found}}
+\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aa8f2fc3c4b67c04e97162a5084e1dada}{mb\+Bad}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_abf1fe1c8a41919e1890b70baa18bd2fb}{mp\+Replaced}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ac179383327d65067da6febe55cbfc32a}{mf\+Min\+Distance}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_afc04bae1b7819dd158a572de56074f63}{mf\+Max\+Distance}}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_aad9ad02a540966d12b75460238290d90}{mp\+Map}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a592b97bed3453c0a599336fa848a8cef}{m\+Mutex\+Pos}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_a3ab20d400977581ac45a109f5544ffda}{m\+Mutex\+Features}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Map\+Point是一个地图点 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ae8b6d24a7f79cfd260502859cb5b6901}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ae8b6d24a7f79cfd260502859cb5b6901}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Map\+Point@{Map\+Point}}
+\index{Map\+Point@{Map\+Point}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Map\+Point()}{MapPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Map\+Point (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{Pos,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+Ref\+KF,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$}]{p\+Map }\end{DoxyParamCaption})}
+
+
+
+给定坐标与keyframe构造\+Map\+Point 
+
+双目：\+Stereo\+Initialization()，\+Create\+New\+Key\+Frame()，\+Local\+Mapping\+::\+Create\+New\+Map\+Points() 单目：\+Create\+Initial\+Map\+Monocular()，\+Local\+Mapping\+::\+Create\+New\+Map\+Points() 
+\begin{DoxyParams}{Parameters}
+{\em Pos} & Map\+Point的坐标（wrt世界坐标系） \\
+\hline
+{\em p\+Ref\+KF} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} \\
+\hline
+{\em p\+Map} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_abbb2b679ea956845f315a69773618fa7}\label{class_o_r_b___s_l_a_m2_1_1_map_point_abbb2b679ea956845f315a69773618fa7}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Map\+Point@{Map\+Point}}
+\index{Map\+Point@{Map\+Point}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Map\+Point()}{MapPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Map\+Point (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{Pos,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$}]{p\+Map,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} $\ast$}]{p\+Frame,  }\item[{const int \&}]{idxF }\end{DoxyParamCaption})}
+
+
+
+给定坐标与frame构造\+Map\+Point 
+
+双目：\+Update\+Last\+Frame() 
+\begin{DoxyParams}{Parameters}
+{\em Pos} & Map\+Point的坐标（wrt世界坐标系） \\
+\hline
+{\em p\+Map} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} \\
+\hline
+{\em p\+Frame} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \\
+\hline
+{\em idxF} & Map\+Point在\+Frame中的索引，即对应的特征点的编号 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a37277ee3c7d8657976e749ab920bb13f}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a37277ee3c7d8657976e749ab920bb13f}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Add\+Observation@{Add\+Observation}}
+\index{Add\+Observation@{Add\+Observation}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Add\+Observation()}{AddObservation()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Add\+Observation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF,  }\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption})}
+
+
+
+添加观测 
+
+记录哪些\+Key\+Frame的那个特征点能观测到该\+Map\+Point ~\newline
+并增加观测的相机数目n\+Obs，单目+1，双目或者grbd+2 这个函数是建立关键帧共视关系的核心函数，能共同观测到某些\+Map\+Points的关键帧是共视关键帧 
+\begin{DoxyParams}{Parameters}
+{\em p\+KF} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} \\
+\hline
+{\em idx} & Map\+Point在\+Key\+Frame中的索引 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ab4c3dfd8f5f05a4b1888021f1fac3d84}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ab4c3dfd8f5f05a4b1888021f1fac3d84}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Compute\+Distinctive\+Descriptors@{Compute\+Distinctive\+Descriptors}}
+\index{Compute\+Distinctive\+Descriptors@{Compute\+Distinctive\+Descriptors}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Compute\+Distinctive\+Descriptors()}{ComputeDistinctiveDescriptors()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Compute\+Distinctive\+Descriptors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+计算具有代表的描述子 
+
+由于一个\+Map\+Point会被许多相机观测到，因此在插入关键帧后，需要判断是否更新当前点的最适合的描述子 ~\newline
+先获得当前点的所有描述子，然后计算描述子之间的两两距离，最好的描述子与其他描述子应该具有最小的距离中值 \begin{DoxySeeAlso}{See also}
+I\+II -\/ C3.\+3 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a79e6a93ea0c39329a082f4f69560f1be}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a79e6a93ea0c39329a082f4f69560f1be}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Erase\+Observation@{Erase\+Observation}}
+\index{Erase\+Observation@{Erase\+Observation}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Erase\+Observation()}{EraseObservation()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Erase\+Observation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a8f9faa5b4cc513795485dcfb460ea3d0}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a8f9faa5b4cc513795485dcfb460ea3d0}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Descriptor@{Get\+Descriptor}}
+\index{Get\+Descriptor@{Get\+Descriptor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Descriptor()}{GetDescriptor()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Descriptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a0d081d56b0f398c52581b3e0eaa1cb15}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a0d081d56b0f398c52581b3e0eaa1cb15}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Found@{Get\+Found}}
+\index{Get\+Found@{Get\+Found}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Found()}{GetFound()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Found (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ac1b7c69a2d9f6bd785d465380844ce10}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ac1b7c69a2d9f6bd785d465380844ce10}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Found\+Ratio@{Get\+Found\+Ratio}}
+\index{Get\+Found\+Ratio@{Get\+Found\+Ratio}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Found\+Ratio()}{GetFoundRatio()}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Found\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_afbe3f2cf7f4d5e4596fa9f7ff0d44470}\label{class_o_r_b___s_l_a_m2_1_1_map_point_afbe3f2cf7f4d5e4596fa9f7ff0d44470}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Index\+In\+Key\+Frame@{Get\+Index\+In\+Key\+Frame}}
+\index{Get\+Index\+In\+Key\+Frame@{Get\+Index\+In\+Key\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Index\+In\+Key\+Frame()}{GetIndexInKeyFrame()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Index\+In\+Key\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_abf921da31ee4d522181bb6b8d9149fff}\label{class_o_r_b___s_l_a_m2_1_1_map_point_abf921da31ee4d522181bb6b8d9149fff}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Max\+Distance\+Invariance@{Get\+Max\+Distance\+Invariance}}
+\index{Get\+Max\+Distance\+Invariance@{Get\+Max\+Distance\+Invariance}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Max\+Distance\+Invariance()}{GetMaxDistanceInvariance()}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Max\+Distance\+Invariance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aac7224845c1d39016c50dcaacc0ebe40}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aac7224845c1d39016c50dcaacc0ebe40}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Min\+Distance\+Invariance@{Get\+Min\+Distance\+Invariance}}
+\index{Get\+Min\+Distance\+Invariance@{Get\+Min\+Distance\+Invariance}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Min\+Distance\+Invariance()}{GetMinDistanceInvariance()}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Min\+Distance\+Invariance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_af0198d242a96476faa52da0ede3c8f10}\label{class_o_r_b___s_l_a_m2_1_1_map_point_af0198d242a96476faa52da0ede3c8f10}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Normal@{Get\+Normal}}
+\index{Get\+Normal@{Get\+Normal}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Normal()}{GetNormal()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ae91e056d3b79e08a3fadd976888f6b09}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ae91e056d3b79e08a3fadd976888f6b09}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Observations@{Get\+Observations}}
+\index{Get\+Observations@{Get\+Observations}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Observations()}{GetObservations()}}
+{\footnotesize\ttfamily map$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$, size\+\_\+t $>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Observations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a98f595f0421fd95e406d1de6f48e05f3}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a98f595f0421fd95e406d1de6f48e05f3}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Reference\+Key\+Frame@{Get\+Reference\+Key\+Frame}}
+\index{Get\+Reference\+Key\+Frame@{Get\+Reference\+Key\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Reference\+Key\+Frame()}{GetReferenceKeyFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Reference\+Key\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ad8814ed8121bd730c640c620ed623baf}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ad8814ed8121bd730c640c620ed623baf}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+Replaced@{Get\+Replaced}}
+\index{Get\+Replaced@{Get\+Replaced}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+Replaced()}{GetReplaced()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+Replaced (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a0e59b21447d5d889b39ad2fcc1b1db49}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a0e59b21447d5d889b39ad2fcc1b1db49}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Get\+World\+Pos@{Get\+World\+Pos}}
+\index{Get\+World\+Pos@{Get\+World\+Pos}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Get\+World\+Pos()}{GetWorldPos()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Get\+World\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aa097cd8cf993a54e999f297e05729392}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aa097cd8cf993a54e999f297e05729392}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Increase\+Found@{Increase\+Found}}
+\index{Increase\+Found@{Increase\+Found}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Increase\+Found()}{IncreaseFound()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Increase\+Found (\begin{DoxyParamCaption}\item[{int}]{n = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Increase Found. 
+
+能找到该点的帧数+n，n默认为1 \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_tracking_af670c614f4e10d58c9f7aad9865b5c08}{Tracking\+::\+Track\+Local\+Map()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a0a234f5bd6bc19a9ea55fad0c9e6db5f}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a0a234f5bd6bc19a9ea55fad0c9e6db5f}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Increase\+Visible@{Increase\+Visible}}
+\index{Increase\+Visible@{Increase\+Visible}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Increase\+Visible()}{IncreaseVisible()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Increase\+Visible (\begin{DoxyParamCaption}\item[{int}]{n = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Increase Visible. 
+
+Visible表示：
+\begin{DoxyEnumerate}
+\item 该\+Map\+Point在某些帧的视野范围内，通过\+Frame\+::is\+In\+Frustum()函数判断
+\item 该\+Map\+Point被这些帧观测到，但并不一定能和这些帧的特征点匹配上 例如：有一个\+Map\+Point（记为\+M），在某一帧\+F的视野范围内， 但并不表明该点\+M可以和\+F这一帧的某个特征点能匹配上 
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a46bb6b57cd914c9ebad30007f3af469a}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a46bb6b57cd914c9ebad30007f3af469a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!is\+Bad@{is\+Bad}}
+\index{is\+Bad@{is\+Bad}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{is\+Bad()}{isBad()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::is\+Bad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a7a8c48a885598ba4da3b188791dfd009}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a7a8c48a885598ba4da3b188791dfd009}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Is\+In\+Key\+Frame@{Is\+In\+Key\+Frame}}
+\index{Is\+In\+Key\+Frame@{Is\+In\+Key\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Is\+In\+Key\+Frame()}{IsInKeyFrame()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Is\+In\+Key\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF }\end{DoxyParamCaption})}
+
+
+
+check \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} is in keyframe 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+KF} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if in p\+KF 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a7fbc2a95f49eb6facdc5d5fa35de3287}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a7fbc2a95f49eb6facdc5d5fa35de3287}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Observations@{Observations}}
+\index{Observations@{Observations}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Observations()}{Observations()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Observations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aa0e884ba7dc5b85ddb5ccb64113a8594}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aa0e884ba7dc5b85ddb5ccb64113a8594}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Predict\+Scale@{Predict\+Scale}}
+\index{Predict\+Scale@{Predict\+Scale}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Predict\+Scale()}{PredictScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Predict\+Scale (\begin{DoxyParamCaption}\item[{const float \&}]{current\+Dist,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_af083bd50463ee191a1abb540bb40ea3d}\label{class_o_r_b___s_l_a_m2_1_1_map_point_af083bd50463ee191a1abb540bb40ea3d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Predict\+Scale@{Predict\+Scale}}
+\index{Predict\+Scale@{Predict\+Scale}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Predict\+Scale()}{PredictScale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Predict\+Scale (\begin{DoxyParamCaption}\item[{const float \&}]{current\+Dist,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} $\ast$}]{pF }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a8f2e205afcfae3dc70196bcd29194440}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a8f2e205afcfae3dc70196bcd29194440}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Replace@{Replace}}
+\index{Replace@{Replace}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Replace()}{Replace()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Replace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$}]{p\+MP }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a7ed2a66b528165d6c39cb6f84f684308}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a7ed2a66b528165d6c39cb6f84f684308}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Set\+Bad\+Flag@{Set\+Bad\+Flag}}
+\index{Set\+Bad\+Flag@{Set\+Bad\+Flag}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Set\+Bad\+Flag()}{SetBadFlag()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Set\+Bad\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ad65e6322e9d06314db235ff4d072509f}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ad65e6322e9d06314db235ff4d072509f}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Set\+World\+Pos@{Set\+World\+Pos}}
+\index{Set\+World\+Pos@{Set\+World\+Pos}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Set\+World\+Pos()}{SetWorldPos()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Set\+World\+Pos (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{Pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ac5b8e4ec6a7737860af57058bdd16124}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ac5b8e4ec6a7737860af57058bdd16124}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!Update\+Normal\+And\+Depth@{Update\+Normal\+And\+Depth}}
+\index{Update\+Normal\+And\+Depth@{Update\+Normal\+And\+Depth}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{Update\+Normal\+And\+Depth()}{UpdateNormalAndDepth()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::\+Update\+Normal\+And\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+更新平均观测方向以及观测距离范围 
+
+由于一个\+Map\+Point会被许多相机观测到，因此在插入关键帧后，需要更新相应变量 \begin{DoxySeeAlso}{See also}
+I\+II -\/ C2.\+2 c2.\+4 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aa8f2fc3c4b67c04e97162a5084e1dada}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aa8f2fc3c4b67c04e97162a5084e1dada}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mb\+Bad@{mb\+Bad}}
+\index{mb\+Bad@{mb\+Bad}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mb\+Bad}{mbBad}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mb\+Bad\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a0187350fa3fddd0bf89ccf354acb4766}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a0187350fa3fddd0bf89ccf354acb4766}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mb\+Track\+In\+View@{mb\+Track\+In\+View}}
+\index{mb\+Track\+In\+View@{mb\+Track\+In\+View}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mb\+Track\+In\+View}{mbTrackInView}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mb\+Track\+In\+View}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ac2a05b8ddc806ecc6939f42d13828876}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ac2a05b8ddc806ecc6939f42d13828876}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Descriptor@{m\+Descriptor}}
+\index{m\+Descriptor@{m\+Descriptor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Descriptor}{mDescriptor}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Descriptor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+通过 \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point_ab4c3dfd8f5f05a4b1888021f1fac3d84}{Compute\+Distinctive\+Descriptors()}} 得到的最优描述子 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_afc04bae1b7819dd158a572de56074f63}\label{class_o_r_b___s_l_a_m2_1_1_map_point_afc04bae1b7819dd158a572de56074f63}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mf\+Max\+Distance@{mf\+Max\+Distance}}
+\index{mf\+Max\+Distance@{mf\+Max\+Distance}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mf\+Max\+Distance}{mfMaxDistance}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mf\+Max\+Distance\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ac179383327d65067da6febe55cbfc32a}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ac179383327d65067da6febe55cbfc32a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mf\+Min\+Distance@{mf\+Min\+Distance}}
+\index{mf\+Min\+Distance@{mf\+Min\+Distance}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mf\+Min\+Distance}{mfMinDistance}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mf\+Min\+Distance\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a58d0ed9067593833efa652ea671ebf62}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a58d0ed9067593833efa652ea671ebf62}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Global\+Mutex@{m\+Global\+Mutex}}
+\index{m\+Global\+Mutex@{m\+Global\+Mutex}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Global\+Mutex}{mGlobalMutex}}
+{\footnotesize\ttfamily mutex O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Global\+Mutex\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a3ab20d400977581ac45a109f5544ffda}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a3ab20d400977581ac45a109f5544ffda}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Mutex\+Features@{m\+Mutex\+Features}}
+\index{m\+Mutex\+Features@{m\+Mutex\+Features}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Mutex\+Features}{mMutexFeatures}}
+{\footnotesize\ttfamily std\+::mutex O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Mutex\+Features\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a592b97bed3453c0a599336fa848a8cef}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a592b97bed3453c0a599336fa848a8cef}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Mutex\+Pos@{m\+Mutex\+Pos}}
+\index{m\+Mutex\+Pos@{m\+Mutex\+Pos}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Mutex\+Pos}{mMutexPos}}
+{\footnotesize\ttfamily std\+::mutex O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Mutex\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_abcef580d7b3562ea9025ea1dc2141b92}\label{class_o_r_b___s_l_a_m2_1_1_map_point_abcef580d7b3562ea9025ea1dc2141b92}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+B\+A\+Global\+For\+KF@{mn\+B\+A\+Global\+For\+KF}}
+\index{mn\+B\+A\+Global\+For\+KF@{mn\+B\+A\+Global\+For\+KF}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+B\+A\+Global\+For\+KF}{mnBAGlobalForKF}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+B\+A\+Global\+For\+KF}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ad4da26d02aa54a3e0be6a09e90fa39ec}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ad4da26d02aa54a3e0be6a09e90fa39ec}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+B\+A\+Local\+For\+KF@{mn\+B\+A\+Local\+For\+KF}}
+\index{mn\+B\+A\+Local\+For\+KF@{mn\+B\+A\+Local\+For\+KF}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+B\+A\+Local\+For\+KF}{mnBALocalForKF}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+B\+A\+Local\+For\+KF}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a86626462be01ad9a133dca0f5b49e688}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a86626462be01ad9a133dca0f5b49e688}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Corrected\+By\+KF@{mn\+Corrected\+By\+KF}}
+\index{mn\+Corrected\+By\+KF@{mn\+Corrected\+By\+KF}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Corrected\+By\+KF}{mnCorrectedByKF}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Corrected\+By\+KF}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ade5858af14ed7924d48dbf191ea5448c}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ade5858af14ed7924d48dbf191ea5448c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Corrected\+Reference@{mn\+Corrected\+Reference}}
+\index{mn\+Corrected\+Reference@{mn\+Corrected\+Reference}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Corrected\+Reference}{mnCorrectedReference}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Corrected\+Reference}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a68929d6ead18e19745ec358f2ef8776d}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a68929d6ead18e19745ec358f2ef8776d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+First\+Frame@{mn\+First\+Frame}}
+\index{mn\+First\+Frame@{mn\+First\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+First\+Frame}{mnFirstFrame}}
+{\footnotesize\ttfamily const long int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+First\+Frame}
+
+
+
+创建该\+Map\+Point的帧\+I\+D（即每一关键帧有一个帧\+I\+D） 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_ad3f9757b633aac7c026a0e5330e4b10c}\label{class_o_r_b___s_l_a_m2_1_1_map_point_ad3f9757b633aac7c026a0e5330e4b10c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+First\+K\+Fid@{mn\+First\+K\+Fid}}
+\index{mn\+First\+K\+Fid@{mn\+First\+K\+Fid}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+First\+K\+Fid}{mnFirstKFid}}
+{\footnotesize\ttfamily const long int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+First\+K\+Fid}
+
+
+
+创建该\+Map\+Point的关键帧\+ID 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a1defea85441b8063ef9ebb47c9959289}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a1defea85441b8063ef9ebb47c9959289}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Found@{mn\+Found}}
+\index{mn\+Found@{mn\+Found}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Found}{mnFound}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Found\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aedba463c6440c2b448e9ec21acd58b9a}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aedba463c6440c2b448e9ec21acd58b9a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Fuse\+Candidate\+For\+KF@{mn\+Fuse\+Candidate\+For\+KF}}
+\index{mn\+Fuse\+Candidate\+For\+KF@{mn\+Fuse\+Candidate\+For\+KF}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Fuse\+Candidate\+For\+KF}{mnFuseCandidateForKF}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Fuse\+Candidate\+For\+KF}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_afba2eb4d8400a0c822ee991ba445d9be}\label{class_o_r_b___s_l_a_m2_1_1_map_point_afba2eb4d8400a0c822ee991ba445d9be}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Id@{mn\+Id}}
+\index{mn\+Id@{mn\+Id}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Id}{mnId}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Id}
+
+
+
+Global ID for \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}}. 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aea3a63ce27fc39e536a6ceef7c1f3473}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aea3a63ce27fc39e536a6ceef7c1f3473}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Last\+Frame\+Seen@{mn\+Last\+Frame\+Seen}}
+\index{mn\+Last\+Frame\+Seen@{mn\+Last\+Frame\+Seen}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Last\+Frame\+Seen}{mnLastFrameSeen}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Last\+Frame\+Seen}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a44172716cac5a56004a60d165de8cfa2}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a44172716cac5a56004a60d165de8cfa2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Loop\+Point\+For\+KF@{mn\+Loop\+Point\+For\+KF}}
+\index{mn\+Loop\+Point\+For\+KF@{mn\+Loop\+Point\+For\+KF}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Loop\+Point\+For\+KF}{mnLoopPointForKF}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Loop\+Point\+For\+KF}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aba0cff72e2182ff72d32edd77dc7832d}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aba0cff72e2182ff72d32edd77dc7832d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Normal\+Vector@{m\+Normal\+Vector}}
+\index{m\+Normal\+Vector@{m\+Normal\+Vector}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Normal\+Vector}{mNormalVector}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Normal\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a19152183cfddc71b63650175def6aec7}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a19152183cfddc71b63650175def6aec7}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Track\+Reference\+For\+Frame@{mn\+Track\+Reference\+For\+Frame}}
+\index{mn\+Track\+Reference\+For\+Frame@{mn\+Track\+Reference\+For\+Frame}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Track\+Reference\+For\+Frame}{mnTrackReferenceForFrame}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Track\+Reference\+For\+Frame}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aac515bf003cea5f99737d13475c46816}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aac515bf003cea5f99737d13475c46816}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Track\+Scale\+Level@{mn\+Track\+Scale\+Level}}
+\index{mn\+Track\+Scale\+Level@{mn\+Track\+Scale\+Level}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Track\+Scale\+Level}{mnTrackScaleLevel}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Track\+Scale\+Level}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aadb2c83e36dc01e47983f57e831bac7b}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aadb2c83e36dc01e47983f57e831bac7b}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mn\+Visible@{mn\+Visible}}
+\index{mn\+Visible@{mn\+Visible}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mn\+Visible}{mnVisible}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mn\+Visible\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a189bea541f860af75ceb60300b59d8e3}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a189bea541f860af75ceb60300b59d8e3}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Observations@{m\+Observations}}
+\index{m\+Observations@{m\+Observations}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Observations}{mObservations}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}$\ast$,size\+\_\+t$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Observations\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+观测到该\+Map\+Point的\+K\+F和该\+Map\+Point在\+K\+F中的索引 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aad9ad02a540966d12b75460238290d90}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aad9ad02a540966d12b75460238290d90}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mp\+Map@{mp\+Map}}
+\index{mp\+Map@{mp\+Map}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mp\+Map}{mpMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mp\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a2669d92452bb1347a6a09700e369f049}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a2669d92452bb1347a6a09700e369f049}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Pos\+G\+BA@{m\+Pos\+G\+BA}}
+\index{m\+Pos\+G\+BA@{m\+Pos\+G\+BA}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Pos\+G\+BA}{mPosGBA}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Pos\+G\+BA}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a27cc4fee44b1ae77b24a8c766c617058}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a27cc4fee44b1ae77b24a8c766c617058}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mp\+Ref\+KF@{mp\+Ref\+KF}}
+\index{mp\+Ref\+KF@{mp\+Ref\+KF}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mp\+Ref\+KF}{mpRefKF}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mp\+Ref\+KF\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_abf1fe1c8a41919e1890b70baa18bd2fb}\label{class_o_r_b___s_l_a_m2_1_1_map_point_abf1fe1c8a41919e1890b70baa18bd2fb}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!mp\+Replaced@{mp\+Replaced}}
+\index{mp\+Replaced@{mp\+Replaced}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{mp\+Replaced}{mpReplaced}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::mp\+Replaced\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a7d735552c42630c00bca4c2094fbbbf3}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a7d735552c42630c00bca4c2094fbbbf3}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Track\+ProjX@{m\+Track\+ProjX}}
+\index{m\+Track\+ProjX@{m\+Track\+ProjX}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Track\+ProjX}{mTrackProjX}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Track\+ProjX}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a4f0a0671a3587e2aac0708eed07c5170}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a4f0a0671a3587e2aac0708eed07c5170}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Track\+Proj\+XR@{m\+Track\+Proj\+XR}}
+\index{m\+Track\+Proj\+XR@{m\+Track\+Proj\+XR}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Track\+Proj\+XR}{mTrackProjXR}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Track\+Proj\+XR}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a5ab59610931a5c2e14f502e8233571e4}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a5ab59610931a5c2e14f502e8233571e4}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Track\+ProjY@{m\+Track\+ProjY}}
+\index{m\+Track\+ProjY@{m\+Track\+ProjY}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Track\+ProjY}{mTrackProjY}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Track\+ProjY}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a728107bc670ba47d79bad5ba288256d6}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a728107bc670ba47d79bad5ba288256d6}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+Track\+View\+Cos@{m\+Track\+View\+Cos}}
+\index{m\+Track\+View\+Cos@{m\+Track\+View\+Cos}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+Track\+View\+Cos}{mTrackViewCos}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+Track\+View\+Cos}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a39741adada8dcd302afbf45ec2e72af0}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a39741adada8dcd302afbf45ec2e72af0}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!m\+World\+Pos@{m\+World\+Pos}}
+\index{m\+World\+Pos@{m\+World\+Pos}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{m\+World\+Pos}{mWorldPos}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::m\+World\+Pos\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+Point在世界坐标系下的坐标 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_aa79702928d566db4fcd7716249bd96a2}\label{class_o_r_b___s_l_a_m2_1_1_map_point_aa79702928d566db4fcd7716249bd96a2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!n\+Next\+Id@{n\+Next\+Id}}
+\index{n\+Next\+Id@{n\+Next\+Id}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{n\+Next\+Id}{nNextId}}
+{\footnotesize\ttfamily long unsigned int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::n\+Next\+Id =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_point_a2653a4c69121627fcc5ae812b1809a28}\label{class_o_r_b___s_l_a_m2_1_1_map_point_a2653a4c69121627fcc5ae812b1809a28}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}!n\+Obs@{n\+Obs}}
+\index{n\+Obs@{n\+Obs}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point}}
+\subsubsection{\texorpdfstring{n\+Obs}{nObs}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Point\+::n\+Obs}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_map_point_8h}{Map\+Point.\+h}}\item 
+src/\mbox{\hyperlink{_map_point_8cpp}{Map\+Point.\+cpp}}\end{DoxyCompactItemize}

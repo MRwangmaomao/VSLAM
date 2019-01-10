@@ -1,0 +1,138 @@
+\hypertarget{class_d_utils_1_1_random}{}\section{D\+Utils\+:\+:Random Class Reference}
+\label{class_d_utils_1_1_random}\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+
+
+Functions to generate pseudo-\/random numbers.  
+
+
+
+
+{\ttfamily \#include $<$Random.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_d_utils_1_1_random_1_1_unrepeated_randomizer}{Unrepeated\+Randomizer}}
+\begin{DoxyCompactList}\small\item\em Provides pseudo-\/random numbers with no repetitions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_d_utils_1_1_random_a719a6489316343a771e062f0be58050f}{Seed\+Rand}} ()
+\item 
+static void \mbox{\hyperlink{class_d_utils_1_1_random_a168e77d82ce1e66c6759e97ef27adbbc}{Seed\+Rand\+Once}} ()
+\item 
+static void \mbox{\hyperlink{class_d_utils_1_1_random_aec19d58856a0cf0b48d783119a497233}{Seed\+Rand}} (int seed)
+\item 
+static void \mbox{\hyperlink{class_d_utils_1_1_random_ad3652f5d105ca4f6f22696b64f2a4a5d}{Seed\+Rand\+Once}} (int seed)
+\item 
+{\footnotesize template$<$class T $>$ }\\static T \mbox{\hyperlink{class_d_utils_1_1_random_ac5d2e4d977afdec30071c531a7a96d88}{Random\+Value}} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\static T \mbox{\hyperlink{class_d_utils_1_1_random_a13760f5d6d4b866fbcc350dbb0d39d02}{Random\+Value}} (T min, T max)
+\item 
+static int \mbox{\hyperlink{class_d_utils_1_1_random_aa25012101ecbca54025d5430bcf93d86}{Random\+Int}} (int min, int max)
+\item 
+{\footnotesize template$<$class T $>$ }\\static T \mbox{\hyperlink{class_d_utils_1_1_random_a2c769bcd60a08fc3eba3ef4abf9761d5}{Random\+Gaussian\+Value}} (T mean, T sigma)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions to generate pseudo-\/random numbers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_utils_1_1_random_a2c769bcd60a08fc3eba3ef4abf9761d5}\label{class_d_utils_1_1_random_a2c769bcd60a08fc3eba3ef4abf9761d5}} 
+\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}!Random\+Gaussian\+Value@{Random\+Gaussian\+Value}}
+\index{Random\+Gaussian\+Value@{Random\+Gaussian\+Value}!D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+\subsubsection{\texorpdfstring{Random\+Gaussian\+Value()}{RandomGaussianValue()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static T D\+Utils\+::\+Random\+::\+Random\+Gaussian\+Value (\begin{DoxyParamCaption}\item[{T}]{mean,  }\item[{T}]{sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a random number from a gaussian distribution 
+\begin{DoxyParams}{Parameters}
+{\em mean} & \\
+\hline
+{\em sigma} & standard deviation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_random_aa25012101ecbca54025d5430bcf93d86}\label{class_d_utils_1_1_random_aa25012101ecbca54025d5430bcf93d86}} 
+\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}!Random\+Int@{Random\+Int}}
+\index{Random\+Int@{Random\+Int}!D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+\subsubsection{\texorpdfstring{Random\+Int()}{RandomInt()}}
+{\footnotesize\ttfamily int D\+Utils\+::\+Random\+::\+Random\+Int (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a random int in the range \mbox{[}min..max\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em min} & \\
+\hline
+{\em max} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random int in \mbox{[}min..max\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_utils_1_1_random_ac5d2e4d977afdec30071c531a7a96d88}\label{class_d_utils_1_1_random_ac5d2e4d977afdec30071c531a7a96d88}} 
+\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}!Random\+Value@{Random\+Value}}
+\index{Random\+Value@{Random\+Value}!D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+\subsubsection{\texorpdfstring{Random\+Value()}{RandomValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static T D\+Utils\+::\+Random\+::\+Random\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a random number in the range \mbox{[}0..1\mbox{]} \begin{DoxyReturn}{Returns}
+random T number in \mbox{[}0..1\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_utils_1_1_random_a13760f5d6d4b866fbcc350dbb0d39d02}\label{class_d_utils_1_1_random_a13760f5d6d4b866fbcc350dbb0d39d02}} 
+\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}!Random\+Value@{Random\+Value}}
+\index{Random\+Value@{Random\+Value}!D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+\subsubsection{\texorpdfstring{Random\+Value()}{RandomValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static T D\+Utils\+::\+Random\+::\+Random\+Value (\begin{DoxyParamCaption}\item[{T}]{min,  }\item[{T}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns a random number in the range \mbox{[}min..max\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em min} & \\
+\hline
+{\em max} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+random T number in \mbox{[}min..max\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_utils_1_1_random_a719a6489316343a771e062f0be58050f}\label{class_d_utils_1_1_random_a719a6489316343a771e062f0be58050f}} 
+\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}!Seed\+Rand@{Seed\+Rand}}
+\index{Seed\+Rand@{Seed\+Rand}!D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+\subsubsection{\texorpdfstring{Seed\+Rand()}{SeedRand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void D\+Utils\+::\+Random\+::\+Seed\+Rand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the random number seed to the current time \mbox{\Hypertarget{class_d_utils_1_1_random_aec19d58856a0cf0b48d783119a497233}\label{class_d_utils_1_1_random_aec19d58856a0cf0b48d783119a497233}} 
+\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}!Seed\+Rand@{Seed\+Rand}}
+\index{Seed\+Rand@{Seed\+Rand}!D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+\subsubsection{\texorpdfstring{Seed\+Rand()}{SeedRand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void D\+Utils\+::\+Random\+::\+Seed\+Rand (\begin{DoxyParamCaption}\item[{int}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the given random number seed 
+\begin{DoxyParams}{Parameters}
+{\em seed} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_utils_1_1_random_a168e77d82ce1e66c6759e97ef27adbbc}\label{class_d_utils_1_1_random_a168e77d82ce1e66c6759e97ef27adbbc}} 
+\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}!Seed\+Rand\+Once@{Seed\+Rand\+Once}}
+\index{Seed\+Rand\+Once@{Seed\+Rand\+Once}!D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+\subsubsection{\texorpdfstring{Seed\+Rand\+Once()}{SeedRandOnce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void D\+Utils\+::\+Random\+::\+Seed\+Rand\+Once (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the random number seed to the current time only the first time this function is called \mbox{\Hypertarget{class_d_utils_1_1_random_ad3652f5d105ca4f6f22696b64f2a4a5d}\label{class_d_utils_1_1_random_ad3652f5d105ca4f6f22696b64f2a4a5d}} 
+\index{D\+Utils\+::\+Random@{D\+Utils\+::\+Random}!Seed\+Rand\+Once@{Seed\+Rand\+Once}}
+\index{Seed\+Rand\+Once@{Seed\+Rand\+Once}!D\+Utils\+::\+Random@{D\+Utils\+::\+Random}}
+\subsubsection{\texorpdfstring{Seed\+Rand\+Once()}{SeedRandOnce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void D\+Utils\+::\+Random\+::\+Seed\+Rand\+Once (\begin{DoxyParamCaption}\item[{int}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets the given random number seed only the first time this function is called 
+\begin{DoxyParams}{Parameters}
+{\em seed} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Utils/\mbox{\hyperlink{_random_8h}{Random.\+h}}\item 
+Thirdparty/\+D\+Bo\+W2/\+D\+Utils/\mbox{\hyperlink{_random_8cpp}{Random.\+cpp}}\end{DoxyCompactItemize}

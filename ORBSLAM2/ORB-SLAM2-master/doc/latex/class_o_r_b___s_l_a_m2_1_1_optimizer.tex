@@ -1,0 +1,242 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_optimizer}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:Optimizer Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_optimizer}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}}
+
+
+{\ttfamily \#include $<$Optimizer.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_optimizer_aac6bf926792ed8a013d64897879a89ec}{Bundle\+Adjustment}} (const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$$>$ \&vp\+KF, const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+MP, int n\+Iterations=5, bool $\ast$pb\+Stop\+Flag=N\+U\+LL, const unsigned long n\+Loop\+KF=0, const bool b\+Robust=true)
+\begin{DoxyCompactList}\small\item\em bundle adjustment Optimization \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_optimizer_aaa9b8a4c16296bf2981b0aaf4ee3189c}{Global\+Bundle\+Adjustemnt}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$p\+Map, int n\+Iterations=5, bool $\ast$pb\+Stop\+Flag=N\+U\+LL, const unsigned long n\+Loop\+KF=0, const bool b\+Robust=true)
+\item 
+static void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_optimizer_ab70e0b4f366b65a0c1ae8b2def19d339}{Local\+Bundle\+Adjustment}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+KF, bool $\ast$pb\+Stop\+Flag, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$p\+Map)
+\begin{DoxyCompactList}\small\item\em Local Bundle Adjustment. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_optimizer_a7415d78b8a2323b88e108fa1ea3bf2d3}{Pose\+Optimization}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} $\ast$p\+Frame)
+\begin{DoxyCompactList}\small\item\em Pose Only Optimization. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_optimizer_a5a53ab409feed7f92547eb79a2d7f6e9}{Optimize\+Essential\+Graph}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$p\+Map, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+Loop\+KF, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+Cur\+KF, const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_loop_closing_ae9ada143a8308ce32990a7c7b5d533ab}{Loop\+Closing\+::\+Key\+Frame\+And\+Pose}} \&Non\+Corrected\+Sim3, const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_loop_closing_ae9ada143a8308ce32990a7c7b5d533ab}{Loop\+Closing\+::\+Key\+Frame\+And\+Pose}} \&Corrected\+Sim3, const map$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$, set$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$$>$ $>$ \&Loop\+Connections, const bool \&b\+Fix\+Scale)
+\begin{DoxyCompactList}\small\item\em 闭环检测后，\+Essential\+Graph优化 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_optimizer_a91fbb960965c99e9802a5de45515813c}{Optimize\+Sim3}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+K\+F1, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$p\+K\+F2, std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Matches1, \mbox{\hyperlink{structg2o_1_1_sim3}{g2o\+::\+Sim3}} \&g2o\+S12, const float th2, const bool b\+Fix\+Scale)
+\begin{DoxyCompactList}\small\item\em 形成闭环时进行\+Sim3优化 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_optimizer_aac6bf926792ed8a013d64897879a89ec}\label{class_o_r_b___s_l_a_m2_1_1_optimizer_aac6bf926792ed8a013d64897879a89ec}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}!Bundle\+Adjustment@{Bundle\+Adjustment}}
+\index{Bundle\+Adjustment@{Bundle\+Adjustment}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}}
+\subsubsection{\texorpdfstring{Bundle\+Adjustment()}{BundleAdjustment()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer\+::\+Bundle\+Adjustment (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$$>$ \&}]{vp\+KF,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+MP,  }\item[{int}]{n\+Iterations = {\ttfamily 5},  }\item[{bool $\ast$}]{pb\+Stop\+Flag = {\ttfamily NULL},  }\item[{const unsigned long}]{n\+Loop\+KF = {\ttfamily 0},  }\item[{const bool}]{b\+Robust = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+bundle adjustment Optimization 
+
+3\+D-\/2D 最小化重投影误差 e = (u,v) -\/ project(\+Tcw$\ast$\+Pw) ~\newline
+
+\begin{DoxyEnumerate}
+\item Vertex\+: \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap}{g2o\+::\+Vertex\+S\+E3\+Expmap()}}，即当前帧的\+Tcw \mbox{\hyperlink{classg2o_1_1_vertex_s_b_a_point_x_y_z}{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+Y\+Z()}}，\+Map\+Point的m\+World\+Pos
+\item Edge\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z}{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z()}}，\+Base\+Binary\+Edge
+\begin{DoxyItemize}
+\item Vertex：待优化当前帧的\+Tcw
+\item Vertex：待优化\+Map\+Point的m\+World\+Pos
+\item measurement：\+Map\+Point在当前帧中的二维位置(u,v)
+\item Info\+Matrix\+: inv\+Sigma2(与特征点所在的尺度有关)
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em vp\+K\+Fs} & 关键帧 vp\+MP Map\+Points n\+Iterations 迭代次数（20次） pb\+Stop\+Flag 是否强制暂停 n\+Loop\+KF 关键帧的个数 b\+Robust 是否使用核函数 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_optimizer_aaa9b8a4c16296bf2981b0aaf4ee3189c}\label{class_o_r_b___s_l_a_m2_1_1_optimizer_aaa9b8a4c16296bf2981b0aaf4ee3189c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}!Global\+Bundle\+Adjustemnt@{Global\+Bundle\+Adjustemnt}}
+\index{Global\+Bundle\+Adjustemnt@{Global\+Bundle\+Adjustemnt}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}}
+\subsubsection{\texorpdfstring{Global\+Bundle\+Adjustemnt()}{GlobalBundleAdjustemnt()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer\+::\+Global\+Bundle\+Adjustemnt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$}]{p\+Map,  }\item[{int}]{n\+Iterations = {\ttfamily 5},  }\item[{bool $\ast$}]{pb\+Stop\+Flag = {\ttfamily NULL},  }\item[{const unsigned long}]{n\+Loop\+KF = {\ttfamily 0},  }\item[{const bool}]{b\+Robust = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_optimizer_ab70e0b4f366b65a0c1ae8b2def19d339}\label{class_o_r_b___s_l_a_m2_1_1_optimizer_ab70e0b4f366b65a0c1ae8b2def19d339}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}!Local\+Bundle\+Adjustment@{Local\+Bundle\+Adjustment}}
+\index{Local\+Bundle\+Adjustment@{Local\+Bundle\+Adjustment}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}}
+\subsubsection{\texorpdfstring{Local\+Bundle\+Adjustment()}{LocalBundleAdjustment()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer\+::\+Local\+Bundle\+Adjustment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+KF,  }\item[{bool $\ast$}]{pb\+Stop\+Flag,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$}]{p\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Local Bundle Adjustment. 
+
+
+\begin{DoxyEnumerate}
+\item Vertex\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap}{g2o\+::\+Vertex\+S\+E3\+Expmap()}}，\+Local\+Key\+Frames，即当前关键帧的位姿、与当前关键帧相连的关键帧的位姿
+\item \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap}{g2o\+::\+Vertex\+S\+E3\+Expmap()}}，\+Fixed\+Cameras，即能观测到\+Local\+Map\+Points的关键帧（并且不属于\+Local\+Key\+Frames）的位姿，在优化中这些关键帧的位姿不变
+\item \mbox{\hyperlink{classg2o_1_1_vertex_s_b_a_point_x_y_z}{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+Y\+Z()}}，\+Local\+Map\+Points，即\+Local\+Key\+Frames能观测到的所有\+Map\+Points的位置
+\end{DoxyItemize}
+\item Edge\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z}{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z()}}，\+Base\+Binary\+Edge
+\begin{DoxyItemize}
+\item Vertex：关键帧的\+Tcw，\+Map\+Point的\+Pw
+\item measurement：\+Map\+Point在关键帧中的二维位置(u,v)
+\item Info\+Matrix\+: inv\+Sigma2(与特征点所在的尺度有关)
+\end{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_edge_stereo_s_e3_project_x_y_z}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z()}}，\+Base\+Binary\+Edge
+\begin{DoxyItemize}
+\item Vertex：关键帧的\+Tcw，\+Map\+Point的\+Pw
+\item measurement：\+Map\+Point在关键帧中的二维位置(ul,v,ur)
+\item Info\+Matrix\+: inv\+Sigma2(与特征点所在的尺度有关)
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+KF} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} \\
+\hline
+{\em pb\+Stop\+Flag} & 是否停止优化的标志 \\
+\hline
+{\em p\+Map} & 在优化后，更新状态时需要用到\+Map的互斥量m\+Mutex\+Map\+Update \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_optimizer_a5a53ab409feed7f92547eb79a2d7f6e9}\label{class_o_r_b___s_l_a_m2_1_1_optimizer_a5a53ab409feed7f92547eb79a2d7f6e9}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}!Optimize\+Essential\+Graph@{Optimize\+Essential\+Graph}}
+\index{Optimize\+Essential\+Graph@{Optimize\+Essential\+Graph}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}}
+\subsubsection{\texorpdfstring{Optimize\+Essential\+Graph()}{OptimizeEssentialGraph()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer\+::\+Optimize\+Essential\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$}]{p\+Map,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+Loop\+KF,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+Cur\+KF,  }\item[{const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_loop_closing_ae9ada143a8308ce32990a7c7b5d533ab}{Loop\+Closing\+::\+Key\+Frame\+And\+Pose}} \&}]{Non\+Corrected\+Sim3,  }\item[{const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_loop_closing_ae9ada143a8308ce32990a7c7b5d533ab}{Loop\+Closing\+::\+Key\+Frame\+And\+Pose}} \&}]{Corrected\+Sim3,  }\item[{const map$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$, set$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$$>$ $>$ \&}]{Loop\+Connections,  }\item[{const bool \&}]{b\+Fix\+Scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+闭环检测后，\+Essential\+Graph优化 
+
+
+\begin{DoxyEnumerate}
+\item Vertex\+:
+\begin{DoxyItemize}
+\item g2o\+::\+Vertex\+Sim3\+Expmap，\+Essential graph中关键帧的位姿
+\end{DoxyItemize}
+\item Edge\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_edge_sim3}{g2o\+::\+Edge\+Sim3()}}，\+Base\+Binary\+Edge
+\begin{DoxyItemize}
+\item Vertex：关键帧的\+Tcw，\+Map\+Point的\+Pw
+\item measurement：经过\+Correct\+Loop函数步骤2，\+Sim3传播校正后的位姿
+\item Info\+Matrix\+: 单位矩阵 ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em p\+Map} & 全局地图 \\
+\hline
+{\em p\+Loop\+KF} & 闭环匹配上的关键帧 \\
+\hline
+{\em p\+Cur\+KF} & 当前关键帧 \\
+\hline
+{\em Non\+Corrected\+Sim3} & 未经过\+Sim3传播调整过的关键帧位姿 \\
+\hline
+{\em Corrected\+Sim3} & 经过\+Sim3传播调整过的关键帧位姿 \\
+\hline
+{\em Loop\+Connections} & 因闭环时\+Map\+Points调整而新生成的边 \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_optimizer_a91fbb960965c99e9802a5de45515813c}\label{class_o_r_b___s_l_a_m2_1_1_optimizer_a91fbb960965c99e9802a5de45515813c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}!Optimize\+Sim3@{Optimize\+Sim3}}
+\index{Optimize\+Sim3@{Optimize\+Sim3}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}}
+\subsubsection{\texorpdfstring{Optimize\+Sim3()}{OptimizeSim3()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer\+::\+Optimize\+Sim3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+K\+F1,  }\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} $\ast$}]{p\+K\+F2,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Matches1,  }\item[{\mbox{\hyperlink{structg2o_1_1_sim3}{g2o\+::\+Sim3}} \&}]{g2o\+S12,  }\item[{const float}]{th2,  }\item[{const bool}]{b\+Fix\+Scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+形成闭环时进行\+Sim3优化 
+
+
+\begin{DoxyEnumerate}
+\item Vertex\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_vertex_sim3_expmap}{g2o\+::\+Vertex\+Sim3\+Expmap()}}，两个关键帧的位姿
+\item \mbox{\hyperlink{classg2o_1_1_vertex_s_b_a_point_x_y_z}{g2o\+::\+Vertex\+S\+B\+A\+Point\+X\+Y\+Z()}}，两个关键帧共有的\+Map\+Points
+\end{DoxyItemize}
+\item Edge\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_edge_sim3_project_x_y_z}{g2o\+::\+Edge\+Sim3\+Project\+X\+Y\+Z()}}，\+Base\+Binary\+Edge
+\begin{DoxyItemize}
+\item Vertex：关键帧的\+Sim3，\+Map\+Point的\+Pw
+\item measurement：\+Map\+Point在关键帧中的二维位置(u,v)
+\item Info\+Matrix\+: inv\+Sigma2(与特征点所在的尺度有关)
+\end{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_edge_inverse_sim3_project_x_y_z}{g2o\+::\+Edge\+Inverse\+Sim3\+Project\+X\+Y\+Z()}}，\+Base\+Binary\+Edge
+\begin{DoxyItemize}
+\item Vertex：关键帧的\+Sim3，\+Map\+Point的\+Pw
+\item measurement：\+Map\+Point在关键帧中的二维位置(u,v)
+\item Info\+Matrix\+: inv\+Sigma2(与特征点所在的尺度有关)
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+K\+F1} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} \\
+\hline
+{\em p\+K\+F2} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}} \\
+\hline
+{\em vp\+Matches1} & 两个关键帧的匹配关系 \\
+\hline
+{\em g2o\+S12} & 两个关键帧间的\+Sim3变换 \\
+\hline
+{\em th2} & 核函数阈值 \\
+\hline
+{\em b\+Fix\+Scale} & 是否优化尺度，弹目进行尺度优化，双目不进行尺度优化 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_optimizer_a7415d78b8a2323b88e108fa1ea3bf2d3}\label{class_o_r_b___s_l_a_m2_1_1_optimizer_a7415d78b8a2323b88e108fa1ea3bf2d3}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}!Pose\+Optimization@{Pose\+Optimization}}
+\index{Pose\+Optimization@{Pose\+Optimization}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer}}
+\subsubsection{\texorpdfstring{Pose\+Optimization()}{PoseOptimization()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Optimizer\+::\+Pose\+Optimization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} $\ast$}]{p\+Frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pose Only Optimization. 
+
+3\+D-\/2D 最小化重投影误差 e = (u,v) -\/ project(\+Tcw$\ast$\+Pw) ~\newline
+只优化\+Frame的\+Tcw，不优化\+Map\+Points的坐标
+
+
+\begin{DoxyEnumerate}
+\item Vertex\+: \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap}{g2o\+::\+Vertex\+S\+E3\+Expmap()}}，即当前帧的\+Tcw
+\item Edge\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_edge_s_e3_project_x_y_z_only_pose}{g2o\+::\+Edge\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose()}}，\+Base\+Unary\+Edge
+\begin{DoxyItemize}
+\item Vertex：待优化当前帧的\+Tcw
+\item measurement：\+Map\+Point在当前帧中的二维位置(u,v)
+\item Info\+Matrix\+: inv\+Sigma2(与特征点所在的尺度有关)
+\end{DoxyItemize}
+\item \mbox{\hyperlink{classg2o_1_1_edge_stereo_s_e3_project_x_y_z_only_pose}{g2o\+::\+Edge\+Stereo\+S\+E3\+Project\+X\+Y\+Z\+Only\+Pose()}}，\+Base\+Unary\+Edge
+\begin{DoxyItemize}
+\item Vertex：待优化当前帧的\+Tcw
+\item measurement：\+Map\+Point在当前帧中的二维位置(ul,v,ur)
+\item Info\+Matrix\+: inv\+Sigma2(与特征点所在的尺度有关)
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Frame} & \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+inliers数量 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_optimizer_8h}{Optimizer.\+h}}\item 
+src/\mbox{\hyperlink{_optimizer_8cpp}{Optimizer.\+cpp}}\end{DoxyCompactItemize}

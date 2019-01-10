@@ -1,0 +1,62 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:Initializer Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_initializer}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+
+
+单目\+S\+L\+A\+M初始化相关，双目和\+R\+G\+B\+D不会使用这个类  
+
+
+
+
+{\ttfamily \#include $<$Initializer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ac492345a970665cd8a1b1d8cf41d44af}{Initializer}} (const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&Reference\+Frame, float sigma=1.\+0, int iterations=200)
+\begin{DoxyCompactList}\small\item\em 给定参考帧构造\+Initializer \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199ab024871d028c2c}{Initialize}} (const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&Current\+Frame, const vector$<$ int $>$ \&v\+Matches12, cv\+::\+Mat \&R21, cv\+::\+Mat \&t21, vector$<$ cv\+::\+Point3f $>$ \&v\+P3D, vector$<$ bool $>$ \&vb\+Triangulated)
+\begin{DoxyCompactList}\small\item\em 并行地计算基础矩阵和单应性矩阵，选取其中一个模型，恢复出最开始两帧之间的相对姿态以及点云 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+单目\+S\+L\+A\+M初始化相关，双目和\+R\+G\+B\+D不会使用这个类 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_ac492345a970665cd8a1b1d8cf41d44af}\label{class_o_r_b___s_l_a_m2_1_1_initializer_ac492345a970665cd8a1b1d8cf41d44af}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Initializer@{Initializer}}
+\index{Initializer@{Initializer}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Initializer()}{Initializer()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Initializer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{Reference\+Frame,  }\item[{float}]{sigma = {\ttfamily 1.0},  }\item[{int}]{iterations = {\ttfamily 200} }\end{DoxyParamCaption})}
+
+
+
+给定参考帧构造\+Initializer 
+
+用reference frame来初始化，这个reference frame就是\+S\+L\+A\+M正式开始的第一帧 
+\begin{DoxyParams}{Parameters}
+{\em Reference\+Frame} & 参考帧 \\
+\hline
+{\em sigma} & 测量误差 \\
+\hline
+{\em iterations} & R\+A\+N\+S\+A\+C迭代次数 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199ab024871d028c2c}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199ab024871d028c2c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{Current\+Frame,  }\item[{const vector$<$ int $>$ \&}]{v\+Matches12,  }\item[{cv\+::\+Mat \&}]{R21,  }\item[{cv\+::\+Mat \&}]{t21,  }\item[{vector$<$ cv\+::\+Point3f $>$ \&}]{v\+P3D,  }\item[{vector$<$ bool $>$ \&}]{vb\+Triangulated }\end{DoxyParamCaption})}
+
+
+
+并行地计算基础矩阵和单应性矩阵，选取其中一个模型，恢复出最开始两帧之间的相对姿态以及点云 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_initializer_8h}{Initializer.\+h}}\item 
+src/\mbox{\hyperlink{_initializer_8cpp}{Initializer.\+cpp}}\end{DoxyCompactItemize}

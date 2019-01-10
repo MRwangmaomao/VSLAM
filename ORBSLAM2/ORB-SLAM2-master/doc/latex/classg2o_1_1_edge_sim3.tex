@@ -1,0 +1,112 @@
+\hypertarget{classg2o_1_1_edge_sim3}{}\section{g2o\+:\+:Edge\+Sim3 Class Reference}
+\label{classg2o_1_1_edge_sim3}\index{g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}}
+
+
+7D edge between two Vertex7  
+
+
+
+
+{\ttfamily \#include $<$types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Edge\+Sim3\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=6.000000cm]{classg2o_1_1_edge_sim3}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \mbox{\hyperlink{classg2o_1_1_edge_sim3_a5a558abf78a1213044e60993f8c8c6d3}{Edge\+Sim3}} ()
+\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_edge_sim3_a6c7ad669fa04265475cbfdba3452fcbd}{read}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classg2o_1_1_edge_sim3_ae1f72205352bf73156b70080ecfa235b}{write}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classg2o_1_1_edge_sim3_a68f55d11f6b8b210318f167d04722a8b}{compute\+Error}} ()
+\item 
+virtual double \mbox{\hyperlink{classg2o_1_1_edge_sim3_a0fd73623327838b46abdf292582da6ae}{initial\+Estimate\+Possible}} (const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \&, \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$)
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_edge_sim3_afac4cc093af6f54adb278c142f33dcca}{initial\+Estimate}} (const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \&from, \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+7D edge between two Vertex7 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_edge_sim3_a5a558abf78a1213044e60993f8c8c6d3}\label{classg2o_1_1_edge_sim3_a5a558abf78a1213044e60993f8c8c6d3}} 
+\index{g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}!Edge\+Sim3@{Edge\+Sim3}}
+\index{Edge\+Sim3@{Edge\+Sim3}!g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}}
+\subsubsection{\texorpdfstring{Edge\+Sim3()}{EdgeSim3()}}
+{\footnotesize\ttfamily g2o\+::\+Edge\+Sim3\+::\+Edge\+Sim3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_edge_sim3_a68f55d11f6b8b210318f167d04722a8b}\label{classg2o_1_1_edge_sim3_a68f55d11f6b8b210318f167d04722a8b}} 
+\index{g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}!compute\+Error@{compute\+Error}}
+\index{compute\+Error@{compute\+Error}!g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}}
+\subsubsection{\texorpdfstring{compute\+Error()}{computeError()}}
+{\footnotesize\ttfamily void g2o\+::\+Edge\+Sim3\+::compute\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a1e6d9f4128866982de5e11e03edd7775}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_sim3_afac4cc093af6f54adb278c142f33dcca}\label{classg2o_1_1_edge_sim3_afac4cc093af6f54adb278c142f33dcca}} 
+\index{g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}!initial\+Estimate@{initial\+Estimate}}
+\index{initial\+Estimate@{initial\+Estimate}!g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}}
+\subsubsection{\texorpdfstring{initial\+Estimate()}{initialEstimate()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Edge\+Sim3\+::initial\+Estimate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \&}]{,  }\item[{\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+set the estimate of the to vertex, based on the estimate of the from vertices in the edge. 
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_base_edge_a0c3d9763f1dc504627df75e0f381ca70}{g2o\+::\+Base\+Edge$<$ D, Sim3 $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_sim3_a0fd73623327838b46abdf292582da6ae}\label{classg2o_1_1_edge_sim3_a0fd73623327838b46abdf292582da6ae}} 
+\index{g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}!initial\+Estimate\+Possible@{initial\+Estimate\+Possible}}
+\index{initial\+Estimate\+Possible@{initial\+Estimate\+Possible}!g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}}
+\subsubsection{\texorpdfstring{initial\+Estimate\+Possible()}{initialEstimatePossible()}}
+{\footnotesize\ttfamily virtual double g2o\+::\+Edge\+Sim3\+::initial\+Estimate\+Possible (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \&}]{from,  }\item[{\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+override in your class if it\textquotesingle{}s possible to initialize the vertices in certain combinations. The return value may correspond to the cost for initiliaizng the vertex but should be positive if the initialization is possible and negative if not possible. 
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a1cef6ffa0f82f1ad3dd3d7a9f04425ee}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_sim3_a6c7ad669fa04265475cbfdba3452fcbd}\label{classg2o_1_1_edge_sim3_a6c7ad669fa04265475cbfdba3452fcbd}} 
+\index{g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}!read@{read}}
+\index{read@{read}!g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool g2o\+::\+Edge\+Sim3\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a30cf69b762a06aa35e796d8af71632b0}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_edge_sim3_ae1f72205352bf73156b70080ecfa235b}\label{classg2o_1_1_edge_sim3_ae1f72205352bf73156b70080ecfa235b}} 
+\index{g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}!write@{write}}
+\index{write@{write}!g2o\+::\+Edge\+Sim3@{g2o\+::\+Edge\+Sim3}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily bool g2o\+::\+Edge\+Sim3\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+write the vertex to a stream 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a804b9a2178249b9297c55b8fbbeda56e}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{types__seven__dof__expmap_8h}{types\+\_\+seven\+\_\+dof\+\_\+expmap.\+h}}\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{types__seven__dof__expmap_8cpp}{types\+\_\+seven\+\_\+dof\+\_\+expmap.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,45 @@
+\hypertarget{_o_r_bextractor_8cpp}{}\section{src/\+O\+R\+Bextractor.cpp File Reference}
+\label{_o_r_bextractor_8cpp}\index{src/\+O\+R\+Bextractor.\+cpp@{src/\+O\+R\+Bextractor.\+cpp}}
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/features2d/features2d.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include \char`\"{}O\+R\+Bextractor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2}{O\+R\+B\+\_\+\+S\+L\+A\+M2}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_o_r_bextractor_8cpp_a35931865021519a9d7a2a4d2f196e684}{G\+E\+T\+\_\+\+V\+A\+L\+UE}}(idx)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a557e5c298c5f7164667f083494c2197a}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE}} = 31
+\item 
+const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_aa09849ae679bf2392b097abd710d8d7f}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+H\+A\+L\+F\+\_\+\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE}} = 15
+\item 
+const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_aec00f1ad4dea35755e3af4404282cd3b}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 19
+\item 
+const float \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a8015b470ffeb885a0c90837a03b3210f}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::factor\+PI}} = (float)(C\+V\+\_\+\+PI/180.f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_o_r_bextractor_8cpp_a35931865021519a9d7a2a4d2f196e684}\label{_o_r_bextractor_8cpp_a35931865021519a9d7a2a4d2f196e684}} 
+\index{O\+R\+Bextractor.\+cpp@{O\+R\+Bextractor.\+cpp}!G\+E\+T\+\_\+\+V\+A\+L\+UE@{G\+E\+T\+\_\+\+V\+A\+L\+UE}}
+\index{G\+E\+T\+\_\+\+V\+A\+L\+UE@{G\+E\+T\+\_\+\+V\+A\+L\+UE}!O\+R\+Bextractor.\+cpp@{O\+R\+Bextractor.\+cpp}}
+\subsubsection{\texorpdfstring{G\+E\+T\+\_\+\+V\+A\+L\+UE}{GET\_VALUE}}
+{\footnotesize\ttfamily \#define G\+E\+T\+\_\+\+V\+A\+L\+UE(\begin{DoxyParamCaption}\item[{}]{idx }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+center[cvRound(pattern[idx].x*b + pattern[idx].y*a)*step + \(\backslash\)
+               cvRound(pattern[idx].x*a - pattern[idx].y*b)]
+\end{DoxyCode}

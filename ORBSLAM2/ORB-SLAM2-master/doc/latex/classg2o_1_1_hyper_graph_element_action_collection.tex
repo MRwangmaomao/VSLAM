@@ -1,0 +1,128 @@
+\hypertarget{classg2o_1_1_hyper_graph_element_action_collection}{}\section{g2o\+:\+:Hyper\+Graph\+Element\+Action\+Collection Class Reference}
+\label{classg2o_1_1_hyper_graph_element_action_collection}\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+
+
+collection of actions  
+
+
+
+
+{\ttfamily \#include $<$hyper\+\_\+graph\+\_\+action.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Hyper\+Graph\+Element\+Action\+Collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classg2o_1_1_hyper_graph_element_action_collection}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection_a6af1ca2dfcdc0894eb594c68135dd614}{Hyper\+Graph\+Element\+Action\+Collection}} (const std\+::string \&name\+\_\+)
+\begin{DoxyCompactList}\small\item\em constructor. name\+\_\+ is the name of the action e.\+g.\+draw). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection_ad55fc899922f91c1446d9d69f343c7ab}{$\sim$\+Hyper\+Graph\+Element\+Action\+Collection}} ()
+\begin{DoxyCompactList}\small\item\em destructor\+: it deletes all actions in the pool. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$ \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection_a1388f0d6629501c1b80035f80c56efbe}{operator()}} (\mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$element, \mbox{\hyperlink{structg2o_1_1_hyper_graph_element_action_1_1_parameters}{Parameters}} $\ast$parameters)
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$ \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection_a4cb9b20a8b1aac8eb018ef6fc4ec0dfc}{operator()}} (const \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$element, \mbox{\hyperlink{structg2o_1_1_hyper_graph_element_action_1_1_parameters}{Parameters}} $\ast$parameters)
+\begin{DoxyCompactList}\small\item\em redefine this to do the action stuff. If successful, the action returns a pointer to itself \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_abc889fc90ae1bbb63d90c7993777417a}{Action\+Map}} \& \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection_a26d57ddd0079ed7181fbb322c9a8106c}{action\+Map}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection_a9eb641e9c9bb22f3540dc98c2c750ea9}{register\+Action}} (\mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$action)
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection_a6dc646c0dd8fbf9b54fb8161348af5e6}{unregister\+Action}} (\mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$action)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_abc889fc90ae1bbb63d90c7993777417a}{Action\+Map}} \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_collection_a637c13fca95eacab38ee82eedd3669e4}{\+\_\+action\+Map}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+collection of actions 
+
+collection of actions calls contains homogeneous actions operating on different types all collected actions have the same name and should have the same functionality 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_element_action_collection_a6af1ca2dfcdc0894eb594c68135dd614}\label{classg2o_1_1_hyper_graph_element_action_collection_a6af1ca2dfcdc0894eb594c68135dd614}} 
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}!Hyper\+Graph\+Element\+Action\+Collection@{Hyper\+Graph\+Element\+Action\+Collection}}
+\index{Hyper\+Graph\+Element\+Action\+Collection@{Hyper\+Graph\+Element\+Action\+Collection}!g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\subsubsection{\texorpdfstring{Hyper\+Graph\+Element\+Action\+Collection()}{HyperGraphElementActionCollection()}}
+{\footnotesize\ttfamily g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::\+Hyper\+Graph\+Element\+Action\+Collection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+constructor. name\+\_\+ is the name of the action e.\+g.\+draw). 
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_element_action_collection_ad55fc899922f91c1446d9d69f343c7ab}\label{classg2o_1_1_hyper_graph_element_action_collection_ad55fc899922f91c1446d9d69f343c7ab}} 
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}!````~Hyper\+Graph\+Element\+Action\+Collection@{$\sim$\+Hyper\+Graph\+Element\+Action\+Collection}}
+\index{````~Hyper\+Graph\+Element\+Action\+Collection@{$\sim$\+Hyper\+Graph\+Element\+Action\+Collection}!g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\subsubsection{\texorpdfstring{$\sim$\+Hyper\+Graph\+Element\+Action\+Collection()}{~HyperGraphElementActionCollection()}}
+{\footnotesize\ttfamily g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::$\sim$\+Hyper\+Graph\+Element\+Action\+Collection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+destructor\+: it deletes all actions in the pool. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_element_action_collection_a26d57ddd0079ed7181fbb322c9a8106c}\label{classg2o_1_1_hyper_graph_element_action_collection_a26d57ddd0079ed7181fbb322c9a8106c}} 
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}!action\+Map@{action\+Map}}
+\index{action\+Map@{action\+Map}!g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\subsubsection{\texorpdfstring{action\+Map()}{actionMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_abc889fc90ae1bbb63d90c7993777417a}{Action\+Map}}\& g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::action\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_element_action_collection_a1388f0d6629501c1b80035f80c56efbe}\label{classg2o_1_1_hyper_graph_element_action_collection_a1388f0d6629501c1b80035f80c56efbe}} 
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}!operator()@{operator()}}
+\index{operator()@{operator()}!g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$ g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::operator() (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$}]{element,  }\item[{\mbox{\hyperlink{structg2o_1_1_hyper_graph_element_action_1_1_parameters}{Hyper\+Graph\+Element\+Action\+::\+Parameters}} $\ast$}]{params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+calling functions, they return a pointer to the instance of action in action\+Map that was active on element 
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_a2faab4a1cdaf5fc010cb9c8627b7d361}{g2o\+::\+Hyper\+Graph\+Element\+Action}}.
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_element_action_collection_a4cb9b20a8b1aac8eb018ef6fc4ec0dfc}\label{classg2o_1_1_hyper_graph_element_action_collection_a4cb9b20a8b1aac8eb018ef6fc4ec0dfc}} 
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}!operator()@{operator()}}
+\index{operator()@{operator()}!g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$ g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structg2o_1_1_hyper_graph_1_1_hyper_graph_element}{Hyper\+Graph\+::\+Hyper\+Graph\+Element}} $\ast$}]{element,  }\item[{\mbox{\hyperlink{structg2o_1_1_hyper_graph_element_action_1_1_parameters}{Hyper\+Graph\+Element\+Action\+::\+Parameters}} $\ast$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+redefine this to do the action stuff. If successful, the action returns a pointer to itself 
+
+
+
+Reimplemented from \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_a0dc2ff77e22791e32810d2c43b7154ad}{g2o\+::\+Hyper\+Graph\+Element\+Action}}.
+
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_element_action_collection_a9eb641e9c9bb22f3540dc98c2c750ea9}\label{classg2o_1_1_hyper_graph_element_action_collection_a9eb641e9c9bb22f3540dc98c2c750ea9}} 
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}!register\+Action@{register\+Action}}
+\index{register\+Action@{register\+Action}!g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\subsubsection{\texorpdfstring{register\+Action()}{registerAction()}}
+{\footnotesize\ttfamily bool g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::register\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+inserts an action in the pool. The action should have the same name of the container. returns false on failure (the container has a different name than the action); \mbox{\Hypertarget{classg2o_1_1_hyper_graph_element_action_collection_a6dc646c0dd8fbf9b54fb8161348af5e6}\label{classg2o_1_1_hyper_graph_element_action_collection_a6dc646c0dd8fbf9b54fb8161348af5e6}} 
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}!unregister\+Action@{unregister\+Action}}
+\index{unregister\+Action@{unregister\+Action}!g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\subsubsection{\texorpdfstring{unregister\+Action()}{unregisterAction()}}
+{\footnotesize\ttfamily bool g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::unregister\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action}{Hyper\+Graph\+Element\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_hyper_graph_element_action_collection_a637c13fca95eacab38ee82eedd3669e4}\label{classg2o_1_1_hyper_graph_element_action_collection_a637c13fca95eacab38ee82eedd3669e4}} 
+\index{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}!\+\_\+action\+Map@{\+\_\+action\+Map}}
+\index{\+\_\+action\+Map@{\+\_\+action\+Map}!g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection@{g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection}}
+\subsubsection{\texorpdfstring{\+\_\+action\+Map}{\_actionMap}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classg2o_1_1_hyper_graph_element_action_abc889fc90ae1bbb63d90c7993777417a}{Action\+Map}} g2o\+::\+Hyper\+Graph\+Element\+Action\+Collection\+::\+\_\+action\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{hyper__graph__action_8h}{hyper\+\_\+graph\+\_\+action.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{hyper__graph__action_8cpp}{hyper\+\_\+graph\+\_\+action.\+cpp}}\end{DoxyCompactItemize}

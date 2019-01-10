@@ -1,0 +1,308 @@
+\hypertarget{classg2o_1_1_base_edge}{}\section{g2o\+:\+:Base\+Edge$<$ D, E $>$ Class Template Reference}
+\label{classg2o_1_1_base_edge}\index{g2o\+::\+Base\+Edge$<$ D, E $>$@{g2o\+::\+Base\+Edge$<$ D, E $>$}}
+
+
+{\ttfamily \#include $<$base\+\_\+edge.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Base\+Edge$<$ D, E $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.040174cm]{classg2o_1_1_base_edge}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef E \mbox{\hyperlink{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement}}
+\item 
+typedef Matrix$<$ double, D, 1 $>$ \mbox{\hyperlink{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector}}
+\item 
+typedef Matrix$<$ double, D, D $>$ \mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_edge_a5efd0eb7e76a7f1ad723e7a5896a54d5}{Base\+Edge}} ()
+\item 
+virtual \mbox{\hyperlink{classg2o_1_1_base_edge_a92a5cba950b867f9ff10b8154291087c}{$\sim$\+Base\+Edge}} ()
+\item 
+virtual double \mbox{\hyperlink{classg2o_1_1_base_edge_a8316137ded4396a2dbf7529d83888400}{chi2}} () const
+\begin{DoxyCompactList}\small\item\em computes the chi2 based on the cached error value, only valid after compute\+Error has been called. \end{DoxyCompactList}\item 
+virtual const double $\ast$ \mbox{\hyperlink{classg2o_1_1_base_edge_ad99fce6bad0207979b6211ac0d589015}{error\+Data}} () const
+\begin{DoxyCompactList}\small\item\em returns the error vector cached after calling the compute\+Error; \end{DoxyCompactList}\item 
+virtual double $\ast$ \mbox{\hyperlink{classg2o_1_1_base_edge_ab80452c1134036928a2af6303412a3c4}{error\+Data}} ()
+\item 
+const \mbox{\hyperlink{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector}} \& \mbox{\hyperlink{classg2o_1_1_base_edge_ab5a17b29aa9be942157e089bb363a46c}{error}} () const
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector}} \& \mbox{\hyperlink{classg2o_1_1_base_edge_ad0a9e3b6d5490c8f4af794c77742faae}{error}} ()
+\item 
+const \mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}} \& \mbox{\hyperlink{classg2o_1_1_base_edge_a405f8d52738e557a0860b52ac67a005b}{information}} () const
+\begin{DoxyCompactList}\small\item\em information matrix of the constraint \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}} \& \mbox{\hyperlink{classg2o_1_1_base_edge_addff9120320d63504e07bfe17f1d04a7}{information}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_base_edge_a9bb871a94d2413ec3113a147417f2dc4}{set\+Information}} (const \mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}} \&\mbox{\hyperlink{classg2o_1_1_base_edge_a405f8d52738e557a0860b52ac67a005b}{information}})
+\item 
+virtual const double $\ast$ \mbox{\hyperlink{classg2o_1_1_base_edge_acf02f0d69998b75b207bc102f079d5b8}{information\+Data}} () const
+\begin{DoxyCompactList}\small\item\em returns the memory of the information matrix, usable for example with a Eigen\+::\+Map$<$\+Matrix\+Xd$>$ \end{DoxyCompactList}\item 
+virtual double $\ast$ \mbox{\hyperlink{classg2o_1_1_base_edge_a72ae9d215d6abc892f735e3d3ab81a88}{information\+Data}} ()
+\item 
+const \mbox{\hyperlink{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement}} \& \mbox{\hyperlink{classg2o_1_1_base_edge_a8e890d43f491afdd035713ff176ddd5c}{measurement}} () const
+\begin{DoxyCompactList}\small\item\em accessor functions for the measurement represented by the edge \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_edge_a24aae7b4fc35d311158f104cfdd95aeb}{set\+Measurement}} (const \mbox{\hyperlink{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement}} \&m)
+\item 
+virtual int \mbox{\hyperlink{classg2o_1_1_base_edge_a6776919120a8eaca8e4b9d0e6b8a421d}{rank}} () const
+\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_base_edge_a0c3d9763f1dc504627df75e0f381ca70}{initial\+Estimate}} (const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \&, \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{classg2o_1_1_base_edge_ab4812acb21e0b9de80dc6d676e71cb70}{Dimension}} = D
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}} \mbox{\hyperlink{classg2o_1_1_base_edge_a069937ed6fadf557368cd0fce7ab2f59}{robust\+Information}} (const Eigen\+::\+Vector3d \&rho)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement}} \mbox{\hyperlink{classg2o_1_1_base_edge_af2a6ab1df6e91601b4cab23e0e99e034}{\+\_\+measurement}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}} \mbox{\hyperlink{classg2o_1_1_base_edge_a49f11e3d1eaa8e666e1d4d3607279377}{\+\_\+information}}
+\item 
+\mbox{\hyperlink{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector}} \mbox{\hyperlink{classg2o_1_1_base_edge_af31f4b0a67bb12b4de4a32dc42467836}{\+\_\+error}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}\label{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!Error\+Vector@{Error\+Vector}}
+\index{Error\+Vector@{Error\+Vector}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{Error\+Vector}{ErrorVector}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+typedef Matrix$<$double, D, 1$>$ \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::\mbox{\hyperlink{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}\label{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!Information\+Type@{Information\+Type}}
+\index{Information\+Type@{Information\+Type}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{Information\+Type}{InformationType}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+typedef Matrix$<$double, D, D$>$ \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::\mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}\label{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{Measurement}{Measurement}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+typedef E \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::\mbox{\hyperlink{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a5efd0eb7e76a7f1ad723e7a5896a54d5}\label{classg2o_1_1_base_edge_a5efd0eb7e76a7f1ad723e7a5896a54d5}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!Base\+Edge@{Base\+Edge}}
+\index{Base\+Edge@{Base\+Edge}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{Base\+Edge()}{BaseEdge()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::\mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a92a5cba950b867f9ff10b8154291087c}\label{classg2o_1_1_base_edge_a92a5cba950b867f9ff10b8154291087c}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!````~Base\+Edge@{$\sim$\+Base\+Edge}}
+\index{````~Base\+Edge@{$\sim$\+Base\+Edge}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{$\sim$\+Base\+Edge()}{~BaseEdge()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::$\sim$\mbox{\hyperlink{classg2o_1_1_base_edge}{Base\+Edge}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a8316137ded4396a2dbf7529d83888400}\label{classg2o_1_1_base_edge_a8316137ded4396a2dbf7529d83888400}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!chi2@{chi2}}
+\index{chi2@{chi2}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{chi2()}{chi2()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual double \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::chi2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+computes the chi2 based on the cached error value, only valid after compute\+Error has been called. 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a182bd2c109d50283c638d9b295f2f3d7}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_ab5a17b29aa9be942157e089bb363a46c}\label{classg2o_1_1_base_edge_ab5a17b29aa9be942157e089bb363a46c}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!error@{error}}
+\index{error@{error}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+const \mbox{\hyperlink{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector}}\& \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_ad0a9e3b6d5490c8f4af794c77742faae}\label{classg2o_1_1_base_edge_ad0a9e3b6d5490c8f4af794c77742faae}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!error@{error}}
+\index{error@{error}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{error()}{error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector}}\& \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_ad99fce6bad0207979b6211ac0d589015}\label{classg2o_1_1_base_edge_ad99fce6bad0207979b6211ac0d589015}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!error\+Data@{error\+Data}}
+\index{error\+Data@{error\+Data}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{error\+Data()}{errorData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual const double$\ast$ \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::error\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+returns the error vector cached after calling the compute\+Error; 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a5f2a4b6efa2d0ae600f94a28a6ba58cf}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_ab80452c1134036928a2af6303412a3c4}\label{classg2o_1_1_base_edge_ab80452c1134036928a2af6303412a3c4}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!error\+Data@{error\+Data}}
+\index{error\+Data@{error\+Data}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{error\+Data()}{errorData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual double$\ast$ \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::error\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a460a0cb0256b0a91edb131e25181f57b}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a405f8d52738e557a0860b52ac67a005b}\label{classg2o_1_1_base_edge_a405f8d52738e557a0860b52ac67a005b}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!information@{information}}
+\index{information@{information}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{information()}{information()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+const \mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}}\& \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+information matrix of the constraint 
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_addff9120320d63504e07bfe17f1d04a7}\label{classg2o_1_1_base_edge_addff9120320d63504e07bfe17f1d04a7}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!information@{information}}
+\index{information@{information}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{information()}{information()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}}\& \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_acf02f0d69998b75b207bc102f079d5b8}\label{classg2o_1_1_base_edge_acf02f0d69998b75b207bc102f079d5b8}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!information\+Data@{information\+Data}}
+\index{information\+Data@{information\+Data}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{information\+Data()}{informationData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual const double$\ast$ \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::information\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+returns the memory of the information matrix, usable for example with a Eigen\+::\+Map$<$\+Matrix\+Xd$>$ 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_ab5b315b3e0a6c4e29074b2c924460417}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a72ae9d215d6abc892f735e3d3ab81a88}\label{classg2o_1_1_base_edge_a72ae9d215d6abc892f735e3d3ab81a88}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!information\+Data@{information\+Data}}
+\index{information\+Data@{information\+Data}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{information\+Data()}{informationData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual double$\ast$ \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::information\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a99de4bbb57e3c5e7321f150a45d1cb12}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a0c3d9763f1dc504627df75e0f381ca70}\label{classg2o_1_1_base_edge_a0c3d9763f1dc504627df75e0f381ca70}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!initial\+Estimate@{initial\+Estimate}}
+\index{initial\+Estimate@{initial\+Estimate}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{initial\+Estimate()}{initialEstimate()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual void \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::initial\+Estimate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_hyper_graph_a703938cdb4bb636860eed55a2489d70c}{Optimizable\+Graph\+::\+Vertex\+Set}} \&}]{from,  }\item[{\mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex}{Optimizable\+Graph\+::\+Vertex}} $\ast$}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+set the estimate of the to vertex, based on the estimate of the from vertices in the edge. 
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_edge_a9519f8892e97f03daacb44ea50ac7f4e}{g2o\+::\+Optimizable\+Graph\+::\+Edge}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classg2o_1_1_edge_sim3_afac4cc093af6f54adb278c142f33dcca}{g2o\+::\+Edge\+Sim3}}, \mbox{\hyperlink{classg2o_1_1_base_unary_edge_a3d3311901116092cf817b094f6a0b44b}{g2o\+::\+Base\+Unary\+Edge$<$ D, E, Vertex\+Xi $>$}}, \mbox{\hyperlink{classg2o_1_1_base_unary_edge_a3d3311901116092cf817b094f6a0b44b}{g2o\+::\+Base\+Unary\+Edge$<$ 2, Vector2d, Vertex\+S\+E3\+Expmap $>$}}, and \mbox{\hyperlink{classg2o_1_1_base_unary_edge_a3d3311901116092cf817b094f6a0b44b}{g2o\+::\+Base\+Unary\+Edge$<$ 3, Vector3d, Vertex\+S\+E3\+Expmap $>$}}.
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a8e890d43f491afdd035713ff176ddd5c}\label{classg2o_1_1_base_edge_a8e890d43f491afdd035713ff176ddd5c}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!measurement@{measurement}}
+\index{measurement@{measurement}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{measurement()}{measurement()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+const \mbox{\hyperlink{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement}}\& \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::measurement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+accessor functions for the measurement represented by the edge 
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a6776919120a8eaca8e4b9d0e6b8a421d}\label{classg2o_1_1_base_edge_a6776919120a8eaca8e4b9d0e6b8a421d}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!rank@{rank}}
+\index{rank@{rank}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{rank()}{rank()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual int \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a069937ed6fadf557368cd0fce7ab2f59}\label{classg2o_1_1_base_edge_a069937ed6fadf557368cd0fce7ab2f59}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!robust\+Information@{robust\+Information}}
+\index{robust\+Information@{robust\+Information}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{robust\+Information()}{robustInformation()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}} \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::robust\+Information (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{rho }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+calculate the robust information matrix by updating the information matrix of the error \mbox{\Hypertarget{classg2o_1_1_base_edge_a9bb871a94d2413ec3113a147417f2dc4}\label{classg2o_1_1_base_edge_a9bb871a94d2413ec3113a147417f2dc4}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!set\+Information@{set\+Information}}
+\index{set\+Information@{set\+Information}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{set\+Information()}{setInformation()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+void \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::set\+Information (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}} \&}]{information }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a24aae7b4fc35d311158f104cfdd95aeb}\label{classg2o_1_1_base_edge_a24aae7b4fc35d311158f104cfdd95aeb}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!set\+Measurement@{set\+Measurement}}
+\index{set\+Measurement@{set\+Measurement}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{set\+Measurement()}{setMeasurement()}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+virtual void \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::set\+Measurement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_base_edge_af31f4b0a67bb12b4de4a32dc42467836}\label{classg2o_1_1_base_edge_af31f4b0a67bb12b4de4a32dc42467836}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!\+\_\+error@{\+\_\+error}}
+\index{\+\_\+error@{\+\_\+error}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+error}{\_error}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_edge_af5b558dd24e4be2e437563cae4b3550d}{Error\+Vector}} \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::\+\_\+error\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_a49f11e3d1eaa8e666e1d4d3607279377}\label{classg2o_1_1_base_edge_a49f11e3d1eaa8e666e1d4d3607279377}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!\+\_\+information@{\+\_\+information}}
+\index{\+\_\+information@{\+\_\+information}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+information}{\_information}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_edge_a2e5a33343ac3f189d8a7d5ee4d8b73fc}{Information\+Type}} \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::\+\_\+information\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_af2a6ab1df6e91601b4cab23e0e99e034}\label{classg2o_1_1_base_edge_af2a6ab1df6e91601b4cab23e0e99e034}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!\+\_\+measurement@{\+\_\+measurement}}
+\index{\+\_\+measurement@{\+\_\+measurement}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{\+\_\+measurement}{\_measurement}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+\mbox{\hyperlink{classg2o_1_1_base_edge_a2c148abba650a20b8c7eed75d3e2211e}{Measurement}} \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::\+\_\+measurement\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classg2o_1_1_base_edge_ab4812acb21e0b9de80dc6d676e71cb70}\label{classg2o_1_1_base_edge_ab4812acb21e0b9de80dc6d676e71cb70}} 
+\index{g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}!Dimension@{Dimension}}
+\index{Dimension@{Dimension}!g2o\+::\+Base\+Edge@{g2o\+::\+Base\+Edge}}
+\subsubsection{\texorpdfstring{Dimension}{Dimension}}
+{\footnotesize\ttfamily template$<$int D, typename E$>$ \\
+const int \mbox{\hyperlink{classg2o_1_1_base_edge}{g2o\+::\+Base\+Edge}}$<$ D, E $>$\+::Dimension = D\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{base__edge_8h}{base\+\_\+edge.\+h}}\end{DoxyCompactItemize}

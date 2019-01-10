@@ -1,0 +1,61 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_pn_psolver}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:Pn\+Psolver Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_pn_psolver}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}}
+
+
+{\ttfamily \#include $<$Pn\+Psolver.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_pn_psolver_a7b4cad992a43620e027bfb4bc9ef24f8}{Pn\+Psolver}} (const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&F, const vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&vp\+Map\+Point\+Matches)
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_pn_psolver_ad40b921779ed92bfb6b017a76e4d88aa}{$\sim$\+Pn\+Psolver}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_pn_psolver_adff29377dcc77891a33113080b6b1eb7}{Set\+Ransac\+Parameters}} (double probability=0.\+99, int min\+Inliers=8, int max\+Iterations=300, int min\+Set=4, float epsilon=0.\+4, float th2=5.\+991)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_pn_psolver_a784429037a79cb53923f4db181a4d115}{find}} (vector$<$ bool $>$ \&vb\+Inliers, int \&n\+Inliers)
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_pn_psolver_abbef2ac776747661112246e85667f452}{iterate}} (int n\+Iterations, bool \&b\+No\+More, vector$<$ bool $>$ \&vb\+Inliers, int \&n\+Inliers)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_pn_psolver_a7b4cad992a43620e027bfb4bc9ef24f8}\label{class_o_r_b___s_l_a_m2_1_1_pn_psolver_a7b4cad992a43620e027bfb4bc9ef24f8}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}!Pn\+Psolver@{Pn\+Psolver}}
+\index{Pn\+Psolver@{Pn\+Psolver}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}}
+\subsubsection{\texorpdfstring{Pn\+Psolver()}{PnPsolver()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver\+::\+Pn\+Psolver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&}]{F,  }\item[{const vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} $\ast$$>$ \&}]{vp\+Map\+Point\+Matches }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_pn_psolver_ad40b921779ed92bfb6b017a76e4d88aa}\label{class_o_r_b___s_l_a_m2_1_1_pn_psolver_ad40b921779ed92bfb6b017a76e4d88aa}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}!````~Pn\+Psolver@{$\sim$\+Pn\+Psolver}}
+\index{````~Pn\+Psolver@{$\sim$\+Pn\+Psolver}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}}
+\subsubsection{\texorpdfstring{$\sim$\+Pn\+Psolver()}{~PnPsolver()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver\+::$\sim$\+Pn\+Psolver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_pn_psolver_a784429037a79cb53923f4db181a4d115}\label{class_o_r_b___s_l_a_m2_1_1_pn_psolver_a784429037a79cb53923f4db181a4d115}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}!find@{find}}
+\index{find@{find}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver\+::find (\begin{DoxyParamCaption}\item[{vector$<$ bool $>$ \&}]{vb\+Inliers,  }\item[{int \&}]{n\+Inliers }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_pn_psolver_abbef2ac776747661112246e85667f452}\label{class_o_r_b___s_l_a_m2_1_1_pn_psolver_abbef2ac776747661112246e85667f452}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}!iterate@{iterate}}
+\index{iterate@{iterate}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}}
+\subsubsection{\texorpdfstring{iterate()}{iterate()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver\+::iterate (\begin{DoxyParamCaption}\item[{int}]{n\+Iterations,  }\item[{bool \&}]{b\+No\+More,  }\item[{vector$<$ bool $>$ \&}]{vb\+Inliers,  }\item[{int \&}]{n\+Inliers }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_pn_psolver_adff29377dcc77891a33113080b6b1eb7}\label{class_o_r_b___s_l_a_m2_1_1_pn_psolver_adff29377dcc77891a33113080b6b1eb7}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}!Set\+Ransac\+Parameters@{Set\+Ransac\+Parameters}}
+\index{Set\+Ransac\+Parameters@{Set\+Ransac\+Parameters}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver}}
+\subsubsection{\texorpdfstring{Set\+Ransac\+Parameters()}{SetRansacParameters()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Pn\+Psolver\+::\+Set\+Ransac\+Parameters (\begin{DoxyParamCaption}\item[{double}]{probability = {\ttfamily 0.99},  }\item[{int}]{min\+Inliers = {\ttfamily 8},  }\item[{int}]{max\+Iterations = {\ttfamily 300},  }\item[{int}]{min\+Set = {\ttfamily 4},  }\item[{float}]{epsilon = {\ttfamily 0.4},  }\item[{float}]{th2 = {\ttfamily 5.991} }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_pn_psolver_8h}{Pn\+Psolver.\+h}}\item 
+src/\mbox{\hyperlink{_pn_psolver_8cpp}{Pn\+Psolver.\+cpp}}\end{DoxyCompactItemize}

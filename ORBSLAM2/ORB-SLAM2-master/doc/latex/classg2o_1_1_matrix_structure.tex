@@ -1,0 +1,162 @@
+\hypertarget{classg2o_1_1_matrix_structure}{}\section{g2o\+:\+:Matrix\+Structure Class Reference}
+\label{classg2o_1_1_matrix_structure}\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+
+
+representing the structure of a matrix in column compressed structure (only the upper triangular part of the matrix)  
+
+
+
+
+{\ttfamily \#include $<$matrix\+\_\+structure.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classg2o_1_1_matrix_structure_aa016529c47ff242c5547301041360b5e}{Matrix\+Structure}} ()
+\item 
+\mbox{\hyperlink{classg2o_1_1_matrix_structure_a64d784cf6c4415145e012368ec4d42c1}{$\sim$\+Matrix\+Structure}} ()
+\item 
+void \mbox{\hyperlink{classg2o_1_1_matrix_structure_aeda2f4fd97499545773af331cd2c10f2}{alloc}} (int n\+\_\+, int nz)
+\item 
+void \mbox{\hyperlink{classg2o_1_1_matrix_structure_a4bc9281fa8ae82dab908506fe0819498}{free}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_matrix_structure_a10f96bf6fbe278620b5507fb5b18cfdd}{write}} (const char $\ast$filename) const
+\item 
+int \mbox{\hyperlink{classg2o_1_1_matrix_structure_ae44849701c44a9327ec5ff736d5eb54b}{nz\+Max}} () const
+\begin{DoxyCompactList}\small\item\em max number of non-\/zeros blocks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_matrix_structure_aa91f296406c17ab3a826d03bf75cfea7}{n}}
+\begin{DoxyCompactList}\small\item\em A is m-\/by-\/n. n must be $>$= 0. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_matrix_structure_a9cceed2097dcbaa27ed88b7005440616}{m}}
+\begin{DoxyCompactList}\small\item\em A is m-\/by-\/n. m must be $>$= 0. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{classg2o_1_1_matrix_structure_aeeff8e78fb766a433aecbfda4a2e3ffc}{Ap}}
+\begin{DoxyCompactList}\small\item\em column pointers for A, of size n+1 \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{classg2o_1_1_matrix_structure_a7984bf429b8694070ab8db5f5852d8bb}{Aii}}
+\begin{DoxyCompactList}\small\item\em row indices of A, of size nz = Ap \mbox{[}n\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classg2o_1_1_matrix_structure_a098e58ed3d37bf957307a64f7dc55f32}{maxN}}
+\begin{DoxyCompactList}\small\item\em size of the allocated memory \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classg2o_1_1_matrix_structure_a049708086bd4123721351d0580ce5ba1}{max\+Nz}}
+\begin{DoxyCompactList}\small\item\em size of the allocated memory \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+representing the structure of a matrix in column compressed structure (only the upper triangular part of the matrix) 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_aa016529c47ff242c5547301041360b5e}\label{classg2o_1_1_matrix_structure_aa016529c47ff242c5547301041360b5e}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!Matrix\+Structure@{Matrix\+Structure}}
+\index{Matrix\+Structure@{Matrix\+Structure}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{Matrix\+Structure()}{MatrixStructure()}}
+{\footnotesize\ttfamily g2o\+::\+Matrix\+Structure\+::\+Matrix\+Structure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_a64d784cf6c4415145e012368ec4d42c1}\label{classg2o_1_1_matrix_structure_a64d784cf6c4415145e012368ec4d42c1}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!````~Matrix\+Structure@{$\sim$\+Matrix\+Structure}}
+\index{````~Matrix\+Structure@{$\sim$\+Matrix\+Structure}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{$\sim$\+Matrix\+Structure()}{~MatrixStructure()}}
+{\footnotesize\ttfamily g2o\+::\+Matrix\+Structure\+::$\sim$\+Matrix\+Structure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_aeda2f4fd97499545773af331cd2c10f2}\label{classg2o_1_1_matrix_structure_aeda2f4fd97499545773af331cd2c10f2}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!alloc@{alloc}}
+\index{alloc@{alloc}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{alloc()}{alloc()}}
+{\footnotesize\ttfamily void g2o\+::\+Matrix\+Structure\+::alloc (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+,  }\item[{int}]{nz }\end{DoxyParamCaption})}
+
+allocate space for the Matrix Structure. You may call this on an already allocated struct, it will then reallocate the memory + additional space (double the required space). \mbox{\Hypertarget{classg2o_1_1_matrix_structure_a4bc9281fa8ae82dab908506fe0819498}\label{classg2o_1_1_matrix_structure_a4bc9281fa8ae82dab908506fe0819498}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!free@{free}}
+\index{free@{free}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void g2o\+::\+Matrix\+Structure\+::free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_ae44849701c44a9327ec5ff736d5eb54b}\label{classg2o_1_1_matrix_structure_ae44849701c44a9327ec5ff736d5eb54b}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!nz\+Max@{nz\+Max}}
+\index{nz\+Max@{nz\+Max}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{nz\+Max()}{nzMax()}}
+{\footnotesize\ttfamily int g2o\+::\+Matrix\+Structure\+::nz\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+max number of non-\/zeros blocks 
+
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_a10f96bf6fbe278620b5507fb5b18cfdd}\label{classg2o_1_1_matrix_structure_a10f96bf6fbe278620b5507fb5b18cfdd}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!write@{write}}
+\index{write@{write}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily bool g2o\+::\+Matrix\+Structure\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption}) const}
+
+Write the matrix pattern to a file. File is also loadable by octave, e.\+g., then use spy(matrix) 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_a7984bf429b8694070ab8db5f5852d8bb}\label{classg2o_1_1_matrix_structure_a7984bf429b8694070ab8db5f5852d8bb}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!Aii@{Aii}}
+\index{Aii@{Aii}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{Aii}{Aii}}
+{\footnotesize\ttfamily int$\ast$ g2o\+::\+Matrix\+Structure\+::\+Aii}
+
+
+
+row indices of A, of size nz = Ap \mbox{[}n\mbox{]} 
+
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_aeeff8e78fb766a433aecbfda4a2e3ffc}\label{classg2o_1_1_matrix_structure_aeeff8e78fb766a433aecbfda4a2e3ffc}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!Ap@{Ap}}
+\index{Ap@{Ap}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{Ap}{Ap}}
+{\footnotesize\ttfamily int$\ast$ g2o\+::\+Matrix\+Structure\+::\+Ap}
+
+
+
+column pointers for A, of size n+1 
+
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_a9cceed2097dcbaa27ed88b7005440616}\label{classg2o_1_1_matrix_structure_a9cceed2097dcbaa27ed88b7005440616}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!m@{m}}
+\index{m@{m}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily int g2o\+::\+Matrix\+Structure\+::m}
+
+
+
+A is m-\/by-\/n. m must be $>$= 0. 
+
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_a098e58ed3d37bf957307a64f7dc55f32}\label{classg2o_1_1_matrix_structure_a098e58ed3d37bf957307a64f7dc55f32}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!maxN@{maxN}}
+\index{maxN@{maxN}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{maxN}{maxN}}
+{\footnotesize\ttfamily int g2o\+::\+Matrix\+Structure\+::maxN\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+size of the allocated memory 
+
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_a049708086bd4123721351d0580ce5ba1}\label{classg2o_1_1_matrix_structure_a049708086bd4123721351d0580ce5ba1}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!max\+Nz@{max\+Nz}}
+\index{max\+Nz@{max\+Nz}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{max\+Nz}{maxNz}}
+{\footnotesize\ttfamily int g2o\+::\+Matrix\+Structure\+::max\+Nz\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+size of the allocated memory 
+
+\mbox{\Hypertarget{classg2o_1_1_matrix_structure_aa91f296406c17ab3a826d03bf75cfea7}\label{classg2o_1_1_matrix_structure_aa91f296406c17ab3a826d03bf75cfea7}} 
+\index{g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}!n@{n}}
+\index{n@{n}!g2o\+::\+Matrix\+Structure@{g2o\+::\+Matrix\+Structure}}
+\subsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int g2o\+::\+Matrix\+Structure\+::n}
+
+
+
+A is m-\/by-\/n. n must be $>$= 0. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{matrix__structure_8h}{matrix\+\_\+structure.\+h}}\item 
+Thirdparty/g2o/g2o/core/\mbox{\hyperlink{matrix__structure_8cpp}{matrix\+\_\+structure.\+cpp}}\end{DoxyCompactItemize}

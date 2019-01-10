@@ -1,0 +1,317 @@
+\hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}{}\section{O\+R\+B\+\_\+\+S\+L\+A\+M2\+:\+:O\+R\+Bextractor Class Reference}
+\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+
+
+{\ttfamily \#include $<$O\+R\+Bextractor.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba190c121dcdeea1d287f69a0f496d253d29ce9b88ab80575b311b56}{H\+A\+R\+R\+I\+S\+\_\+\+S\+C\+O\+RE}} =0, 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba190c121dcdeea1d287f69a504fff69083dc0081dbb34ac5d9c00b3}{F\+A\+S\+T\+\_\+\+S\+C\+O\+RE}} =1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaa8e010415e516246e171b9bbb9f84af}{O\+R\+Bextractor}} (int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ab74b569810b3d3288c642cc48fd65c4c}{nfeatures}}, float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a13b9c3883b3fb19cb756f841cb948908}{scale\+Factor}}, int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaf5c435dfb3fb2220c3847cd5f536e2f}{nlevels}}, int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8997b404b50b563ffd2aea6b8130dd2a}{ini\+Th\+F\+A\+ST}}, int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a72fcac0df56c0bfe430475082df56823}{min\+Th\+F\+A\+ST}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaa8e010415e516246e171b9bbb9f84af}{O\+R\+Bextractor\+::\+O\+R\+Bextractor}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ab0e5801da8f6dee0261aef5cf19e73b3}{$\sim$\+O\+R\+Bextractor}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a05117a839e4261638b0413fff2dc9e1b}{operator()}} (cv\+::\+Input\+Array image, cv\+::\+Input\+Array mask, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, cv\+::\+Output\+Array descriptors)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_abaad86a9c65eed8a2f8af9604b1a53ee}{Get\+Levels}} ()
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a3352294ae4ae250a406140d2ae6f7286}{Get\+Scale\+Factor}} ()
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a977d96ed602e3a6ff036afc2f2f213fd}{Get\+Scale\+Factors}} ()
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aa56b36e338372ec7cba3945c9194da4a}{Get\+Inverse\+Scale\+Factors}} ()
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8f574b3b1314c5aa645135cb2f3dca3c}{Get\+Scale\+Sigma\+Squares}} ()
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a1ddabdd67709d7df17000cc2966c47c7}{Get\+Inverse\+Scale\+Sigma\+Squares}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a57f88e0959582dde9ae5bdee1fe3de65}{mv\+Image\+Pyramid}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a058f24d80bb0b2c7d6fc0bdd3d9144d1}{Compute\+Pyramid}} (cv\+::\+Mat image)
+\begin{DoxyCompactList}\small\item\em 构建图像金字塔 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a9a543d9b2aec1e521058ee9522937adc}{Compute\+Key\+Points\+Oct\+Tree}} (std\+::vector$<$ std\+::vector$<$ cv\+::\+Key\+Point $>$ $>$ \&all\+Keypoints)
+\item 
+std\+::vector$<$ cv\+::\+Key\+Point $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ac6b7b27447324af33fa60d6dc0c8ffa0}{Distribute\+Oct\+Tree}} (const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&v\+To\+Distribute\+Keys, const int \&minX, const int \&maxX, const int \&minY, const int \&maxY, const int \&n\+Features, const int \&level)
+\begin{DoxyCompactList}\small\item\em Orb extrator distribute oct\+Tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a56890a2032077fbfdf48687786985548}{Compute\+Key\+Points\+Old}} (std\+::vector$<$ std\+::vector$<$ cv\+::\+Key\+Point $>$ $>$ \&all\+Keypoints)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ cv\+::\+Point $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a3a2e4f9495adf52773613987f09ae9d9}{pattern}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ab74b569810b3d3288c642cc48fd65c4c}{nfeatures}}
+\item 
+double \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a13b9c3883b3fb19cb756f841cb948908}{scale\+Factor}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaf5c435dfb3fb2220c3847cd5f536e2f}{nlevels}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8997b404b50b563ffd2aea6b8130dd2a}{ini\+Th\+F\+A\+ST}}
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a72fcac0df56c0bfe430475082df56823}{min\+Th\+F\+A\+ST}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a2eef0343b411bff8681782115a279e2a}{mn\+Features\+Per\+Level}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8c75fd715b20fbaf61fce11e03729901}{umax}}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a9432037b97eccc06715383d8c34965e9}{mv\+Scale\+Factor}}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a7eeb10aded635b28fc49422348dc72d0}{mv\+Inv\+Scale\+Factor}}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a2f9c99c509a4d1408013e91f452ef953}{mv\+Level\+Sigma2}}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_af99de18a5fa2679ff1199f42b9090bf2}{mv\+Inv\+Level\+Sigma2}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba190c121dcdeea1d287f69}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba190c121dcdeea1d287f69}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+R\+R\+I\+S\+\_\+\+S\+C\+O\+RE@{H\+A\+R\+R\+I\+S\+\_\+\+S\+C\+O\+RE}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!H\+A\+R\+R\+I\+S\+\_\+\+S\+C\+O\+RE@{H\+A\+R\+R\+I\+S\+\_\+\+S\+C\+O\+RE}}}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba190c121dcdeea1d287f69a0f496d253d29ce9b88ab80575b311b56}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba190c121dcdeea1d287f69a0f496d253d29ce9b88ab80575b311b56}} 
+H\+A\+R\+R\+I\+S\+\_\+\+S\+C\+O\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+S\+T\+\_\+\+S\+C\+O\+RE@{F\+A\+S\+T\+\_\+\+S\+C\+O\+RE}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!F\+A\+S\+T\+\_\+\+S\+C\+O\+RE@{F\+A\+S\+T\+\_\+\+S\+C\+O\+RE}}}\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba190c121dcdeea1d287f69a504fff69083dc0081dbb34ac5d9c00b3}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba190c121dcdeea1d287f69a504fff69083dc0081dbb34ac5d9c00b3}} 
+F\+A\+S\+T\+\_\+\+S\+C\+O\+RE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaa8e010415e516246e171b9bbb9f84af}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaa8e010415e516246e171b9bbb9f84af}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!O\+R\+Bextractor@{O\+R\+Bextractor}}
+\index{O\+R\+Bextractor@{O\+R\+Bextractor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{O\+R\+Bextractor()}{ORBextractor()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+O\+R\+Bextractor (\begin{DoxyParamCaption}\item[{int}]{\+\_\+nfeatures,  }\item[{float}]{\+\_\+scale\+Factor,  }\item[{int}]{\+\_\+nlevels,  }\item[{int}]{\+\_\+ini\+Th\+F\+A\+ST,  }\item[{int}]{\+\_\+min\+Th\+F\+A\+ST }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaa8e010415e516246e171b9bbb9f84af}{O\+R\+Bextractor\+::\+O\+R\+Bextractor}} object. 
+
+This is a test doxygen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nfeatures} & \\
+\hline
+{\em \+\_\+scale\+Factor} & \\
+\hline
+{\em \+\_\+nlevels} & \\
+\hline
+{\em \+\_\+ini\+Th\+F\+A\+ST} & \\
+\hline
+{\em \+\_\+min\+Th\+F\+A\+ST} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ab0e5801da8f6dee0261aef5cf19e73b3}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ab0e5801da8f6dee0261aef5cf19e73b3}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!````~O\+R\+Bextractor@{$\sim$\+O\+R\+Bextractor}}
+\index{````~O\+R\+Bextractor@{$\sim$\+O\+R\+Bextractor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{$\sim$\+O\+R\+Bextractor()}{~ORBextractor()}}
+{\footnotesize\ttfamily O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::$\sim$\+O\+R\+Bextractor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a9a543d9b2aec1e521058ee9522937adc}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a9a543d9b2aec1e521058ee9522937adc}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Compute\+Key\+Points\+Oct\+Tree@{Compute\+Key\+Points\+Oct\+Tree}}
+\index{Compute\+Key\+Points\+Oct\+Tree@{Compute\+Key\+Points\+Oct\+Tree}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Compute\+Key\+Points\+Oct\+Tree()}{ComputeKeyPointsOctTree()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Compute\+Key\+Points\+Oct\+Tree (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ cv\+::\+Key\+Point $>$ $>$ \&}]{all\+Keypoints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a56890a2032077fbfdf48687786985548}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a56890a2032077fbfdf48687786985548}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Compute\+Key\+Points\+Old@{Compute\+Key\+Points\+Old}}
+\index{Compute\+Key\+Points\+Old@{Compute\+Key\+Points\+Old}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Compute\+Key\+Points\+Old()}{ComputeKeyPointsOld()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Compute\+Key\+Points\+Old (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ cv\+::\+Key\+Point $>$ $>$ \&}]{all\+Keypoints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a058f24d80bb0b2c7d6fc0bdd3d9144d1}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a058f24d80bb0b2c7d6fc0bdd3d9144d1}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Compute\+Pyramid@{Compute\+Pyramid}}
+\index{Compute\+Pyramid@{Compute\+Pyramid}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Compute\+Pyramid()}{ComputePyramid()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Compute\+Pyramid (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+构建图像金字塔 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ac6b7b27447324af33fa60d6dc0c8ffa0}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ac6b7b27447324af33fa60d6dc0c8ffa0}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Distribute\+Oct\+Tree@{Distribute\+Oct\+Tree}}
+\index{Distribute\+Oct\+Tree@{Distribute\+Oct\+Tree}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Distribute\+Oct\+Tree()}{DistributeOctTree()}}
+{\footnotesize\ttfamily vector$<$ cv\+::\+Key\+Point $>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Distribute\+Oct\+Tree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{v\+To\+Distribute\+Keys,  }\item[{const int \&}]{minX,  }\item[{const int \&}]{maxX,  }\item[{const int \&}]{minY,  }\item[{const int \&}]{maxY,  }\item[{const int \&}]{n\+Features,  }\item[{const int \&}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Orb extrator distribute oct\+Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+To\+Distribute\+Keys} & \\
+\hline
+{\em minX} & \\
+\hline
+{\em maxX} & \\
+\hline
+{\em minY} & \\
+\hline
+{\em maxY} & \\
+\hline
+{\em N} & \\
+\hline
+{\em level} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$cv\+::\+Key\+Point$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aa56b36e338372ec7cba3945c9194da4a}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aa56b36e338372ec7cba3945c9194da4a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Get\+Inverse\+Scale\+Factors@{Get\+Inverse\+Scale\+Factors}}
+\index{Get\+Inverse\+Scale\+Factors@{Get\+Inverse\+Scale\+Factors}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Get\+Inverse\+Scale\+Factors()}{GetInverseScaleFactors()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Get\+Inverse\+Scale\+Factors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a1ddabdd67709d7df17000cc2966c47c7}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a1ddabdd67709d7df17000cc2966c47c7}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Get\+Inverse\+Scale\+Sigma\+Squares@{Get\+Inverse\+Scale\+Sigma\+Squares}}
+\index{Get\+Inverse\+Scale\+Sigma\+Squares@{Get\+Inverse\+Scale\+Sigma\+Squares}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Get\+Inverse\+Scale\+Sigma\+Squares()}{GetInverseScaleSigmaSquares()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Get\+Inverse\+Scale\+Sigma\+Squares (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_abaad86a9c65eed8a2f8af9604b1a53ee}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_abaad86a9c65eed8a2f8af9604b1a53ee}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Get\+Levels@{Get\+Levels}}
+\index{Get\+Levels@{Get\+Levels}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Get\+Levels()}{GetLevels()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Get\+Levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a3352294ae4ae250a406140d2ae6f7286}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a3352294ae4ae250a406140d2ae6f7286}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Get\+Scale\+Factor@{Get\+Scale\+Factor}}
+\index{Get\+Scale\+Factor@{Get\+Scale\+Factor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Get\+Scale\+Factor()}{GetScaleFactor()}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Get\+Scale\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a977d96ed602e3a6ff036afc2f2f213fd}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a977d96ed602e3a6ff036afc2f2f213fd}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Get\+Scale\+Factors@{Get\+Scale\+Factors}}
+\index{Get\+Scale\+Factors@{Get\+Scale\+Factors}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Get\+Scale\+Factors()}{GetScaleFactors()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Get\+Scale\+Factors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8f574b3b1314c5aa645135cb2f3dca3c}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8f574b3b1314c5aa645135cb2f3dca3c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!Get\+Scale\+Sigma\+Squares@{Get\+Scale\+Sigma\+Squares}}
+\index{Get\+Scale\+Sigma\+Squares@{Get\+Scale\+Sigma\+Squares}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{Get\+Scale\+Sigma\+Squares()}{GetScaleSigmaSquares()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::\+Get\+Scale\+Sigma\+Squares (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a05117a839e4261638b0413fff2dc9e1b}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a05117a839e4261638b0413fff2dc9e1b}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!operator()@{operator()}}
+\index{operator()@{operator()}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::operator() (\begin{DoxyParamCaption}\item[{cv\+::\+Input\+Array}]{image,  }\item[{cv\+::\+Input\+Array}]{mask,  }\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints,  }\item[{cv\+::\+Output\+Array}]{descriptors }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8997b404b50b563ffd2aea6b8130dd2a}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8997b404b50b563ffd2aea6b8130dd2a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!ini\+Th\+F\+A\+ST@{ini\+Th\+F\+A\+ST}}
+\index{ini\+Th\+F\+A\+ST@{ini\+Th\+F\+A\+ST}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{ini\+Th\+F\+A\+ST}{iniThFAST}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::ini\+Th\+F\+A\+ST\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a72fcac0df56c0bfe430475082df56823}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a72fcac0df56c0bfe430475082df56823}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!min\+Th\+F\+A\+ST@{min\+Th\+F\+A\+ST}}
+\index{min\+Th\+F\+A\+ST@{min\+Th\+F\+A\+ST}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{min\+Th\+F\+A\+ST}{minThFAST}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::min\+Th\+F\+A\+ST\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a2eef0343b411bff8681782115a279e2a}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a2eef0343b411bff8681782115a279e2a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!mn\+Features\+Per\+Level@{mn\+Features\+Per\+Level}}
+\index{mn\+Features\+Per\+Level@{mn\+Features\+Per\+Level}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{mn\+Features\+Per\+Level}{mnFeaturesPerLevel}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::mn\+Features\+Per\+Level\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a57f88e0959582dde9ae5bdee1fe3de65}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a57f88e0959582dde9ae5bdee1fe3de65}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!mv\+Image\+Pyramid@{mv\+Image\+Pyramid}}
+\index{mv\+Image\+Pyramid@{mv\+Image\+Pyramid}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{mv\+Image\+Pyramid}{mvImagePyramid}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Mat$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::mv\+Image\+Pyramid}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_af99de18a5fa2679ff1199f42b9090bf2}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_af99de18a5fa2679ff1199f42b9090bf2}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!mv\+Inv\+Level\+Sigma2@{mv\+Inv\+Level\+Sigma2}}
+\index{mv\+Inv\+Level\+Sigma2@{mv\+Inv\+Level\+Sigma2}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{mv\+Inv\+Level\+Sigma2}{mvInvLevelSigma2}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::mv\+Inv\+Level\+Sigma2\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a7eeb10aded635b28fc49422348dc72d0}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a7eeb10aded635b28fc49422348dc72d0}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!mv\+Inv\+Scale\+Factor@{mv\+Inv\+Scale\+Factor}}
+\index{mv\+Inv\+Scale\+Factor@{mv\+Inv\+Scale\+Factor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{mv\+Inv\+Scale\+Factor}{mvInvScaleFactor}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::mv\+Inv\+Scale\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a2f9c99c509a4d1408013e91f452ef953}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a2f9c99c509a4d1408013e91f452ef953}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!mv\+Level\+Sigma2@{mv\+Level\+Sigma2}}
+\index{mv\+Level\+Sigma2@{mv\+Level\+Sigma2}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{mv\+Level\+Sigma2}{mvLevelSigma2}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::mv\+Level\+Sigma2\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a9432037b97eccc06715383d8c34965e9}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a9432037b97eccc06715383d8c34965e9}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!mv\+Scale\+Factor@{mv\+Scale\+Factor}}
+\index{mv\+Scale\+Factor@{mv\+Scale\+Factor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{mv\+Scale\+Factor}{mvScaleFactor}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::mv\+Scale\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ab74b569810b3d3288c642cc48fd65c4c}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ab74b569810b3d3288c642cc48fd65c4c}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!nfeatures@{nfeatures}}
+\index{nfeatures@{nfeatures}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{nfeatures}{nfeatures}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::nfeatures\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaf5c435dfb3fb2220c3847cd5f536e2f}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaf5c435dfb3fb2220c3847cd5f536e2f}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!nlevels@{nlevels}}
+\index{nlevels@{nlevels}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{nlevels}{nlevels}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::nlevels\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a3a2e4f9495adf52773613987f09ae9d9}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a3a2e4f9495adf52773613987f09ae9d9}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!pattern@{pattern}}
+\index{pattern@{pattern}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{pattern}{pattern}}
+{\footnotesize\ttfamily std\+::vector$<$cv\+::\+Point$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::pattern\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a13b9c3883b3fb19cb756f841cb948908}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a13b9c3883b3fb19cb756f841cb948908}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!scale\+Factor@{scale\+Factor}}
+\index{scale\+Factor@{scale\+Factor}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{scale\+Factor}{scaleFactor}}
+{\footnotesize\ttfamily double O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::scale\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8c75fd715b20fbaf61fce11e03729901}\label{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a8c75fd715b20fbaf61fce11e03729901}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}!umax@{umax}}
+\index{umax@{umax}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor}}
+\subsubsection{\texorpdfstring{umax}{umax}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::umax\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_o_r_bextractor_8h}{O\+R\+Bextractor.\+h}}\item 
+src/\mbox{\hyperlink{_o_r_bextractor_8cpp}{O\+R\+Bextractor.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,116 @@
+\hypertarget{classg2o_1_1_vertex_s_e3_expmap}{}\section{g2o\+:\+:Vertex\+S\+E3\+Expmap Class Reference}
+\label{classg2o_1_1_vertex_s_e3_expmap}\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+
+
+S\+E3 Vertex parameterized internally with a transformation matrix and externally with its exponential map.  
+
+
+
+
+{\ttfamily \#include $<$types\+\_\+six\+\_\+dof\+\_\+expmap.\+h$>$}
+
+Inheritance diagram for g2o\+:\+:Vertex\+S\+E3\+Expmap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classg2o_1_1_vertex_s_e3_expmap}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_a15fc8c37a0d056a562d4df12c872f62a}{Vertex\+S\+E3\+Expmap}} ()
+\item 
+bool \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_a4f5913373d24ea5963fffc6830406a52}{read}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em read the vertex from a stream, i.\+e., the internal state of the vertex \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_ac1dfa6c71532f2e0bed236220bc1b604}{write}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em write the vertex to a stream \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_a0d12948c1fb058698bc58177db3806b1}{set\+To\+Origin\+Impl}} ()
+\begin{DoxyCompactList}\small\item\em sets the node to the origin (used in the multilevel stuff) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classg2o_1_1_vertex_s_e3_expmap_a52592993e7ab5de6fe4bb0f9e00c4d39}{oplus\+Impl}} (const double $\ast$update\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+S\+E3 Vertex parameterized internally with a transformation matrix and externally with its exponential map. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classg2o_1_1_vertex_s_e3_expmap_a15fc8c37a0d056a562d4df12c872f62a}\label{classg2o_1_1_vertex_s_e3_expmap_a15fc8c37a0d056a562d4df12c872f62a}} 
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!Vertex\+S\+E3\+Expmap@{Vertex\+S\+E3\+Expmap}}
+\index{Vertex\+S\+E3\+Expmap@{Vertex\+S\+E3\+Expmap}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection{\texorpdfstring{Vertex\+S\+E3\+Expmap()}{VertexSE3Expmap()}}
+{\footnotesize\ttfamily g2o\+::\+Vertex\+S\+E3\+Expmap\+::\+Vertex\+S\+E3\+Expmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classg2o_1_1_vertex_s_e3_expmap_a52592993e7ab5de6fe4bb0f9e00c4d39}\label{classg2o_1_1_vertex_s_e3_expmap_a52592993e7ab5de6fe4bb0f9e00c4d39}} 
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!oplus\+Impl@{oplus\+Impl}}
+\index{oplus\+Impl@{oplus\+Impl}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection{\texorpdfstring{oplus\+Impl()}{oplusImpl()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Vertex\+S\+E3\+Expmap\+::oplus\+Impl (\begin{DoxyParamCaption}\item[{const double $\ast$}]{update\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+$ T \leftarrow exp(\hat{\xi})T $ 
+\begin{DoxyParams}{Parameters}
+{\em update\+\_\+} & $ \xi $ = \mbox{[}w1 w2 w3 v1 v2 v3\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+这里增量乘在左边 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+jlblanco2010geometry3d\+\_\+techrep.\+pdf 10.\+2 ~\newline
+ 左乘右乘只是每次更新得到的增量的符号是不一样的,最终结果相同 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a4537a46afb8d12c3f18c88ba9601c625}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_vertex_s_e3_expmap_a4f5913373d24ea5963fffc6830406a52}\label{classg2o_1_1_vertex_s_e3_expmap_a4f5913373d24ea5963fffc6830406a52}} 
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!read@{read}}
+\index{read@{read}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool g2o\+::\+Vertex\+S\+E3\+Expmap\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+read the vertex from a stream, i.\+e., the internal state of the vertex 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a356c40d33c3f1e07afa938dfb4870230}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_vertex_s_e3_expmap_a0d12948c1fb058698bc58177db3806b1}\label{classg2o_1_1_vertex_s_e3_expmap_a0d12948c1fb058698bc58177db3806b1}} 
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}}
+\index{set\+To\+Origin\+Impl@{set\+To\+Origin\+Impl}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection{\texorpdfstring{set\+To\+Origin\+Impl()}{setToOriginImpl()}}
+{\footnotesize\ttfamily virtual void g2o\+::\+Vertex\+S\+E3\+Expmap\+::set\+To\+Origin\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+sets the node to the origin (used in the multilevel stuff) 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_abd5fe36815f27a9c174ad41c2070c247}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+\mbox{\Hypertarget{classg2o_1_1_vertex_s_e3_expmap_ac1dfa6c71532f2e0bed236220bc1b604}\label{classg2o_1_1_vertex_s_e3_expmap_ac1dfa6c71532f2e0bed236220bc1b604}} 
+\index{g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}!write@{write}}
+\index{write@{write}!g2o\+::\+Vertex\+S\+E3\+Expmap@{g2o\+::\+Vertex\+S\+E3\+Expmap}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily bool g2o\+::\+Vertex\+S\+E3\+Expmap\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+write the vertex to a stream 
+
+
+
+Implements \mbox{\hyperlink{classg2o_1_1_optimizable_graph_1_1_vertex_a4cac277db656fddb5f844d9009d601eb}{g2o\+::\+Optimizable\+Graph\+::\+Vertex}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{types__six__dof__expmap_8h}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+h}}\item 
+Thirdparty/g2o/g2o/types/\mbox{\hyperlink{types__six__dof__expmap_8cpp}{types\+\_\+six\+\_\+dof\+\_\+expmap.\+cpp}}\end{DoxyCompactItemize}
