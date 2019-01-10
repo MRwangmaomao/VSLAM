@@ -28,6 +28,13 @@ namespace ORB_SLAM2
 
 long unsigned int KeyFrame::nNextId=0;
 
+/**
+ * @brief Construct a new Key Frame:: Key Frame object
+ * 
+ * @param F 
+ * @param pMap 
+ * @param pKFDB 
+ */
 KeyFrame::KeyFrame(Frame &F, Map *pMap, KeyFrameDatabase *pKFDB):
     mnFrameId(F.mnId),  mTimeStamp(F.mTimeStamp), mnGridCols(FRAME_GRID_COLS), mnGridRows(FRAME_GRID_ROWS),
     mfGridElementWidthInv(F.mfGridElementWidthInv), mfGridElementHeightInv(F.mfGridElementHeightInv),
@@ -73,6 +80,11 @@ void KeyFrame::ComputeBoW()
     }
 }
 
+/**
+ * @brief 将左目相机中心转到立体相机中心
+ * 
+ * @param Tcw_ 
+ */
 void KeyFrame::SetPose(const cv::Mat &Tcw_)
 {
     unique_lock<mutex> lock(mMutexPose);
@@ -93,12 +105,22 @@ void KeyFrame::SetPose(const cv::Mat &Tcw_)
     Cw = Twc*center;
 }
 
+/**
+ * @brief 返回该关键帧的位姿变换矩阵，相机坐标系到世界坐标系
+ * 
+ * @return cv::Mat 
+ */
 cv::Mat KeyFrame::GetPose()
 {
     unique_lock<mutex> lock(mMutexPose);
     return Tcw.clone();
 }
 
+/**
+ * @brief 返回该关键帧位姿变换的逆矩阵，世界坐标系到相机坐标系
+ * 
+ * @return cv::Mat 
+ */
 cv::Mat KeyFrame::GetPoseInverse()
 {
     unique_lock<mutex> lock(mMutexPose);
