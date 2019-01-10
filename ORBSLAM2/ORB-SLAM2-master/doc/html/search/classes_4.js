@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['edge',['Edge',['../classg2o_1_1_hyper_graph_1_1_edge.html',1,'g2o::HyperGraph::Edge'],['../classg2o_1_1_optimizable_graph_1_1_edge.html',1,'g2o::OptimizableGraph::Edge']]],
+  ['edge',['Edge',['../classg2o_1_1_optimizable_graph_1_1_edge.html',1,'g2o::OptimizableGraph::Edge'],['../classg2o_1_1_hyper_graph_1_1_edge.html',1,'g2o::HyperGraph::Edge']]],
   ['edgeidcompare',['EdgeIDCompare',['../structg2o_1_1_optimizable_graph_1_1_edge_i_d_compare.html',1,'g2o::OptimizableGraph']]],
   ['edgeinversesim3projectxyz',['EdgeInverseSim3ProjectXYZ',['../classg2o_1_1_edge_inverse_sim3_project_x_y_z.html',1,'g2o']]],
   ['edgese3projectxyz',['EdgeSE3ProjectXYZ',['../classg2o_1_1_edge_s_e3_project_x_y_z.html',1,'g2o']]],

@@ -29,6 +29,7 @@
 namespace ORB_SLAM2
 {
 
+
 class ExtractorNode
 {
 public:
@@ -42,6 +43,10 @@ public:
     bool bNoMore;
 };
 
+/**
+ * @brief 提取一幅图像的特征点和描述子
+ * 
+ */
 class ORBextractor
 {
 public:

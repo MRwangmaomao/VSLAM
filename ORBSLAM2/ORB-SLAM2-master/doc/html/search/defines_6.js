@@ -22,7 +22,6 @@ var searchData=
   ['g2o_5fregister_5ftype_5fgroup',['G2O_REGISTER_TYPE_GROUP',['../factory_8h.html#a9f8975b0ea19f8c04d6ba983a5a3ca35',1,'factory.h']]],
   ['g2o_5frobust_5fkernel_5ffactory_5fexport',['G2O_ROBUST_KERNEL_FACTORY_EXPORT',['../robust__kernel__factory_8h.html#a2197d9563f6d29b47971e4ad16c2ffcf',1,'robust_kernel_factory.h']]],
   ['g2o_5frobust_5fkernel_5ffactory_5fimport',['G2O_ROBUST_KERNEL_FACTORY_IMPORT',['../robust__kernel__factory_8h.html#a13f6eb912b19652422d3e3e7e7c41c14',1,'robust_kernel_factory.h']]],
-  ['g2o_5fshared_5flibs',['G2O_SHARED_LIBS',['../g2o_2config_8h.html#af1be723b44fa43179e75bdcd05c7dbd2',1,'config.h']]],
   ['g2o_5fuse_5foptimization_5falgorithm',['G2O_USE_OPTIMIZATION_ALGORITHM',['../optimization__algorithm__factory_8h.html#a5e2ec0694bdcbe2d89c3194b017dc6a0',1,'optimization_algorithm_factory.h']]],
   ['g2o_5fuse_5foptimization_5flibrary',['G2O_USE_OPTIMIZATION_LIBRARY',['../optimization__algorithm__factory_8h.html#ae57d464827ff178ae08cb64e93e12cf6',1,'optimization_algorithm_factory.h']]],
   ['g2o_5fuse_5frobust_5fkernel',['G2O_USE_ROBUST_KERNEL',['../robust__kernel__factory_8h.html#ab56433f8002af3facebfa87587af842f',1,'robust_kernel_factory.h']]],

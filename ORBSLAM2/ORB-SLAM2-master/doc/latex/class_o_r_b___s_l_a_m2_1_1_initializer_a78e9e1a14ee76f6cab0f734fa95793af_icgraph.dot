@@ -1,0 +1,15 @@
+digraph "ORB_SLAM2::Initializer::DecomposeE"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node27 [label="ORB_SLAM2::Initializer\l::DecomposeE",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node27 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node28 [label="ORB_SLAM2::Initializer\l::ReconstructF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a60796f88f1b3e981ad925a8b566f6315",tooltip="从F恢复R t "];
+  Node28 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node29 [label="ORB_SLAM2::Initializer\l::Initialize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a40d41840e2bdb7199ab024871d028c2c",tooltip="并行地计算基础矩阵和单应性矩阵，选取其中一个模型，恢复出最开始两帧之间的相对姿态以及点云 ..."];
+  Node29 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node30 [label="ORB_SLAM2::Tracking\l::MonocularInitialization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a7e81c68bb6ced27fcbfa2edec38ef6e0",tooltip="单目的地图初始化 "];
+  Node30 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node31 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+}

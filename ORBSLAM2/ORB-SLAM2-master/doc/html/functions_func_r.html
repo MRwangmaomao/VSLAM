@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: Class Members - Functions</title>
+<title>ORB-SLAM2: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -96,8 +97,14 @@ $(function() {
 , <a class="el" href="classg2o_1_1_vertex_s_e3_expmap.html#a4f5913373d24ea5963fffc6830406a52">g2o::VertexSE3Expmap</a>
 , <a class="el" href="classg2o_1_1_vertex_sim3_expmap.html#a16b4ef216ad1c4709a6fc6aa452d8e61">g2o::VertexSim3Expmap</a>
 </li>
-<li>Rectify()
-: <a class="el" href="class_rectify.html#af902b42675372fe6d368d7db9f8f4aeb">Rectify</a>
+<li>ReconstructF()
+: <a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a60796f88f1b3e981ad925a8b566f6315">ORB_SLAM2::Initializer</a>
+</li>
+<li>ReconstructH()
+: <a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#addc1c05d3b7a5ae35805f69b50f368ea">ORB_SLAM2::Initializer</a>
+</li>
+<li>Refine()
+: <a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a19710728d61dcf1caa32f31d140f3327">ORB_SLAM2::PnPsolver</a>
 </li>
 <li>refreshPropertyPtrs()
 : <a class="el" href="classg2o_1_1_draw_action.html#a9556cd6f8d1f842d45e046e1770699b0">g2o::DrawAction</a>
@@ -126,6 +133,9 @@ $(function() {
 </li>
 <li>RegisterTypeProxy()
 : <a class="el" href="classg2o_1_1_register_type_proxy.html#a179d0d498d8a53f9432d1635019705f5">g2o::RegisterTypeProxy&lt; T &gt;</a>
+</li>
+<li>relative_error()
+: <a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ab3247415c8c4ff0a5df74096907eac10">ORB_SLAM2::PnPsolver</a>
 </li>
 <li>Release()
 : <a class="el" href="class_o_r_b___s_l_a_m2_1_1_local_mapping.html#aec0950308ba2d828d9dc16d5be34e654">ORB_SLAM2::LocalMapping</a>
@@ -156,6 +166,9 @@ $(function() {
 <li>ReplaceMapPointMatch()
 : <a class="el" href="class_o_r_b___s_l_a_m2_1_1_key_frame.html#a35779a4eb4f5cec346780bbbdf377298">ORB_SLAM2::KeyFrame</a>
 </li>
+<li>reprojection_error()
+: <a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a8d0ecb37dd35686ae16ff2cdb277cd82">ORB_SLAM2::PnPsolver</a>
+</li>
 <li>RequestFinish()
 : <a class="el" href="class_o_r_b___s_l_a_m2_1_1_local_mapping.html#ac22bd2b73269435e04c353190eae7c13">ORB_SLAM2::LocalMapping</a>
 , <a class="el" href="class_o_r_b___s_l_a_m2_1_1_loop_closing.html#aa271039dcafe7cc053f72ba541bc499b">ORB_SLAM2::LoopClosing</a>
@@ -178,6 +191,9 @@ $(function() {
 <li>Reset()
 : <a class="el" href="class_o_r_b___s_l_a_m2_1_1_system.html#a33f5eb6f33d14cdda2a889fe06d6619e">ORB_SLAM2::System</a>
 , <a class="el" href="class_o_r_b___s_l_a_m2_1_1_tracking.html#a899967ca49b1c3446854ecce3873323c">ORB_SLAM2::Tracking</a>
+</li>
+<li>reset_correspondences()
+: <a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a78dcd4d88b5ebae795d8c214932c4089">ORB_SLAM2::PnPsolver</a>
 </li>
 <li>ResetIfRequested()
 : <a class="el" href="class_o_r_b___s_l_a_m2_1_1_local_mapping.html#a3fe34beadb62eaa9446c96d27a5d12c9">ORB_SLAM2::LocalMapping</a>
@@ -239,7 +255,7 @@ $(function() {
 : <a class="el" href="classg2o_1_1_robust_kernel_factory.html#af1df5179d6823881c9c3531640029eae">g2o::RobustKernelFactory</a>
 </li>
 <li>RobustKernelScaleDelta()
-: <a class="el" href="classg2o_1_1_robust_kernel_scale_delta.html#a537a88b2ff5432fb9e1ad2aaa85f60b9">g2o::RobustKernelScaleDelta</a>
+: <a class="el" href="classg2o_1_1_robust_kernel_scale_delta.html#acffeae7f685e69018f5b0222155a6eb2">g2o::RobustKernelScaleDelta</a>
 </li>
 <li>rotation()
 : <a class="el" href="classg2o_1_1_s_e3_quat.html#a7345da50450b60ae725083fbdb85eb7d">g2o::SE3Quat</a>
@@ -251,10 +267,10 @@ $(function() {
 , <a class="el" href="classg2o_1_1_sparse_block_matrix_hash_map.html#a9a22f09766c630673066c4ae71be7772">g2o::SparseBlockMatrixHashMap&lt; MatrixType &gt;</a>
 </li>
 <li>RowBlock()
-: <a class="el" href="structg2o_1_1_sparse_block_matrix_c_c_s_1_1_row_block.html#a78e2ec549fa14a225280b94022d05cea">g2o::SparseBlockMatrixCCS&lt; MatrixType &gt;::RowBlock</a>
+: <a class="el" href="structg2o_1_1_sparse_block_matrix_c_c_s_1_1_row_block.html#a0c9f288219a7fd8ad58c1dd2214734f5">g2o::SparseBlockMatrixCCS&lt; MatrixType &gt;::RowBlock</a>
 </li>
 <li>rowBlockIndices()
-: <a class="el" href="classg2o_1_1_sparse_block_matrix.html#a03a2cfdb856c2dac4875889d55ecda84">g2o::SparseBlockMatrix&lt; MatrixType &gt;</a>
+: <a class="el" href="classg2o_1_1_sparse_block_matrix.html#a4fff500693b46e4f62a2f828934d198c">g2o::SparseBlockMatrix&lt; MatrixType &gt;</a>
 , <a class="el" href="classg2o_1_1_sparse_block_matrix_c_c_s.html#aafbd3a59409bcf2d518cda71d8a33229">g2o::SparseBlockMatrixCCS&lt; MatrixType &gt;</a>
 , <a class="el" href="classg2o_1_1_sparse_block_matrix_hash_map.html#a0175c628d15ff70edbcfc843639b66ae">g2o::SparseBlockMatrixHashMap&lt; MatrixType &gt;</a>
 </li>
@@ -281,7 +297,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:38 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

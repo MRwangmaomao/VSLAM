@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: ORB_SLAM2::Initializer Class Reference</title>
+<title>ORB-SLAM2: ORB_SLAM2::Initializer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -67,6 +68,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_o_r_b___s_l_a_m2_1_1_initializer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ORB_SLAM2::Initializer Class Reference</div>  </div>
@@ -86,10 +90,105 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a40d41840e2bdb7199ab024871d028c2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a40d41840e2bdb7199ab024871d028c2c">Initialize</a> (const <a class="el" href="class_o_r_b___s_l_a_m2_1_1_frame.html">Frame</a> &amp;CurrentFrame, const vector&lt; int &gt; &amp;vMatches12, cv::Mat &amp;R21, cv::Mat &amp;t21, vector&lt; cv::Point3f &gt; &amp;vP3D, vector&lt; bool &gt; &amp;vbTriangulated)</td></tr>
 <tr class="memdesc:a40d41840e2bdb7199ab024871d028c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">并行地计算基础矩阵和单应性矩阵，选取其中一个模型，恢复出最开始两帧之间的相对姿态以及点云  <a href="#a40d41840e2bdb7199ab024871d028c2c">More...</a><br /></td></tr>
 <tr class="separator:a40d41840e2bdb7199ab024871d028c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:ad0bf21297bc6271e7d014ce41d6ff7d4"><td class="memItemLeft" align="right" valign="top">typedef pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ad0bf21297bc6271e7d014ce41d6ff7d4">Match</a></td></tr>
+<tr class="separator:ad0bf21297bc6271e7d014ce41d6ff7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5b0465b2affed7453d30dd85672e9093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a5b0465b2affed7453d30dd85672e9093">FindHomography</a> (vector&lt; bool &gt; &amp;vbMatchesInliers, float &amp;score, cv::Mat &amp;H21)</td></tr>
+<tr class="memdesc:a5b0465b2affed7453d30dd85672e9093"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算单应矩阵  <a href="#a5b0465b2affed7453d30dd85672e9093">More...</a><br /></td></tr>
+<tr class="separator:a5b0465b2affed7453d30dd85672e9093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387c406706472859415c0e7a3594ea04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a387c406706472859415c0e7a3594ea04">FindFundamental</a> (vector&lt; bool &gt; &amp;vbInliers, float &amp;score, cv::Mat &amp;F21)</td></tr>
+<tr class="memdesc:a387c406706472859415c0e7a3594ea04"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算基础矩阵  <a href="#a387c406706472859415c0e7a3594ea04">More...</a><br /></td></tr>
+<tr class="separator:a387c406706472859415c0e7a3594ea04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d5aa375ed03336cc0dc981861b15da"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a16d5aa375ed03336cc0dc981861b15da">ComputeH21</a> (const vector&lt; cv::Point2f &gt; &amp;vP1, const vector&lt; cv::Point2f &gt; &amp;vP2)</td></tr>
+<tr class="memdesc:a16d5aa375ed03336cc0dc981861b15da"><td class="mdescLeft">&#160;</td><td class="mdescRight">从特征点匹配求homography（normalized DLT）  <a href="#a16d5aa375ed03336cc0dc981861b15da">More...</a><br /></td></tr>
+<tr class="separator:a16d5aa375ed03336cc0dc981861b15da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca077af095ae1de08ebb473af670d1d"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#aaca077af095ae1de08ebb473af670d1d">ComputeF21</a> (const vector&lt; cv::Point2f &gt; &amp;vP1, const vector&lt; cv::Point2f &gt; &amp;vP2)</td></tr>
+<tr class="memdesc:aaca077af095ae1de08ebb473af670d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">从特征点匹配求fundamental matrix（normalized 8点法）  <a href="#aaca077af095ae1de08ebb473af670d1d">More...</a><br /></td></tr>
+<tr class="separator:aaca077af095ae1de08ebb473af670d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ac8374ca2a993b8cddc88703ffbe9a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ac2ac8374ca2a993b8cddc88703ffbe9a">CheckHomography</a> (const cv::Mat &amp;H21, const cv::Mat &amp;H12, vector&lt; bool &gt; &amp;vbMatchesInliers, float sigma)</td></tr>
+<tr class="memdesc:ac2ac8374ca2a993b8cddc88703ffbe9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">对给定的homography matrix打分  <a href="#ac2ac8374ca2a993b8cddc88703ffbe9a">More...</a><br /></td></tr>
+<tr class="separator:ac2ac8374ca2a993b8cddc88703ffbe9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8b74679a5cb1af16c07c8a00c8e8c0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a1c8b74679a5cb1af16c07c8a00c8e8c0">CheckFundamental</a> (const cv::Mat &amp;F21, vector&lt; bool &gt; &amp;vbMatchesInliers, float sigma)</td></tr>
+<tr class="memdesc:a1c8b74679a5cb1af16c07c8a00c8e8c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">对给定的fundamental matrix打分  <a href="#a1c8b74679a5cb1af16c07c8a00c8e8c0">More...</a><br /></td></tr>
+<tr class="separator:a1c8b74679a5cb1af16c07c8a00c8e8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60796f88f1b3e981ad925a8b566f6315"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a60796f88f1b3e981ad925a8b566f6315">ReconstructF</a> (vector&lt; bool &gt; &amp;vbMatchesInliers, cv::Mat &amp;F21, cv::Mat &amp;K, cv::Mat &amp;R21, cv::Mat &amp;t21, vector&lt; cv::Point3f &gt; &amp;vP3D, vector&lt; bool &gt; &amp;vbTriangulated, float minParallax, int minTriangulated)</td></tr>
+<tr class="memdesc:a60796f88f1b3e981ad925a8b566f6315"><td class="mdescLeft">&#160;</td><td class="mdescRight">从F恢复R t  <a href="#a60796f88f1b3e981ad925a8b566f6315">More...</a><br /></td></tr>
+<tr class="separator:a60796f88f1b3e981ad925a8b566f6315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc1c05d3b7a5ae35805f69b50f368ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#addc1c05d3b7a5ae35805f69b50f368ea">ReconstructH</a> (vector&lt; bool &gt; &amp;vbMatchesInliers, cv::Mat &amp;H21, cv::Mat &amp;K, cv::Mat &amp;R21, cv::Mat &amp;t21, vector&lt; cv::Point3f &gt; &amp;vP3D, vector&lt; bool &gt; &amp;vbTriangulated, float minParallax, int minTriangulated)</td></tr>
+<tr class="memdesc:addc1c05d3b7a5ae35805f69b50f368ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">从H恢复R t  <a href="#addc1c05d3b7a5ae35805f69b50f368ea">More...</a><br /></td></tr>
+<tr class="separator:addc1c05d3b7a5ae35805f69b50f368ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bdf78e0f16be44b5ab312aac5cac5af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a3bdf78e0f16be44b5ab312aac5cac5af">Triangulate</a> (const cv::KeyPoint &amp;kp1, const cv::KeyPoint &amp;kp2, const cv::Mat &amp;P1, const cv::Mat &amp;P2, cv::Mat &amp;x3D)</td></tr>
+<tr class="memdesc:a3bdf78e0f16be44b5ab312aac5cac5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">给定投影矩阵P1,P2和图像上的点kp1,kp2，从而恢复3D坐标  <a href="#a3bdf78e0f16be44b5ab312aac5cac5af">More...</a><br /></td></tr>
+<tr class="separator:a3bdf78e0f16be44b5ab312aac5cac5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ce7aa73741d900d2becc0d8f14c1af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a44ce7aa73741d900d2becc0d8f14c1af">Normalize</a> (const vector&lt; cv::KeyPoint &gt; &amp;vKeys, vector&lt; cv::Point2f &gt; &amp;vNormalizedPoints, cv::Mat &amp;T)</td></tr>
+<tr class="separator:a44ce7aa73741d900d2becc0d8f14c1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e79f6486468cde9abd87b873d840e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a72e79f6486468cde9abd87b873d840e7">CheckRT</a> (const cv::Mat &amp;R, const cv::Mat &amp;t, const vector&lt; cv::KeyPoint &gt; &amp;vKeys1, const vector&lt; cv::KeyPoint &gt; &amp;vKeys2, const vector&lt; <a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ad0bf21297bc6271e7d014ce41d6ff7d4">Match</a> &gt; &amp;vMatches12, vector&lt; bool &gt; &amp;vbInliers, const cv::Mat &amp;K, vector&lt; cv::Point3f &gt; &amp;vP3D, float th2, vector&lt; bool &gt; &amp;vbGood, float &amp;parallax)</td></tr>
+<tr class="memdesc:a72e79f6486468cde9abd87b873d840e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">进行cheirality check，从而进一步找出F分解后最合适的解  <a href="#a72e79f6486468cde9abd87b873d840e7">More...</a><br /></td></tr>
+<tr class="separator:a72e79f6486468cde9abd87b873d840e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e9e1a14ee76f6cab0f734fa95793af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a78e9e1a14ee76f6cab0f734fa95793af">DecomposeE</a> (const cv::Mat &amp;E, cv::Mat &amp;R1, cv::Mat &amp;R2, cv::Mat &amp;t)</td></tr>
+<tr class="memdesc:a78e9e1a14ee76f6cab0f734fa95793af"><td class="mdescLeft">&#160;</td><td class="mdescRight">分解Essential矩阵  <a href="#a78e9e1a14ee76f6cab0f734fa95793af">More...</a><br /></td></tr>
+<tr class="separator:a78e9e1a14ee76f6cab0f734fa95793af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa4a8bce28d125446b4607f12041c7c13"><td class="memItemLeft" align="right" valign="top">vector&lt; cv::KeyPoint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#aa4a8bce28d125446b4607f12041c7c13">mvKeys1</a></td></tr>
+<tr class="memdesc:aa4a8bce28d125446b4607f12041c7c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储Reference Frame中的特征点  <a href="#aa4a8bce28d125446b4607f12041c7c13">More...</a><br /></td></tr>
+<tr class="separator:aa4a8bce28d125446b4607f12041c7c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034e9d495b47667f3e0bf0bc3190ff05"><td class="memItemLeft" align="right" valign="top">vector&lt; cv::KeyPoint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a034e9d495b47667f3e0bf0bc3190ff05">mvKeys2</a></td></tr>
+<tr class="memdesc:a034e9d495b47667f3e0bf0bc3190ff05"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储Current Frame中的特征点  <a href="#a034e9d495b47667f3e0bf0bc3190ff05">More...</a><br /></td></tr>
+<tr class="separator:a034e9d495b47667f3e0bf0bc3190ff05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ef04be7036e4629a8b3fa05c7327f5"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ad0bf21297bc6271e7d014ce41d6ff7d4">Match</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ac4ef04be7036e4629a8b3fa05c7327f5">mvMatches12</a></td></tr>
+<tr class="memdesc:ac4ef04be7036e4629a8b3fa05c7327f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match的数据结构是pair,mvMatches12只记录Reference到Current匹配上的特征点对  <a href="#ac4ef04be7036e4629a8b3fa05c7327f5">More...</a><br /></td></tr>
+<tr class="separator:ac4ef04be7036e4629a8b3fa05c7327f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a90762e82702f06f6999672ebaa4cb8"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a3a90762e82702f06f6999672ebaa4cb8">mvbMatched1</a></td></tr>
+<tr class="memdesc:a3a90762e82702f06f6999672ebaa4cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录Reference Frame的每个特征点在Current Frame是否有匹配的特征点  <a href="#a3a90762e82702f06f6999672ebaa4cb8">More...</a><br /></td></tr>
+<tr class="separator:a3a90762e82702f06f6999672ebaa4cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a557fe4d78becc1dda7a26c71d2254336"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a557fe4d78becc1dda7a26c71d2254336">mK</a></td></tr>
+<tr class="memdesc:a557fe4d78becc1dda7a26c71d2254336"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机内参  <a href="#a557fe4d78becc1dda7a26c71d2254336">More...</a><br /></td></tr>
+<tr class="separator:a557fe4d78becc1dda7a26c71d2254336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad588868e84cb1b7e256928dd0d50baee"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ad588868e84cb1b7e256928dd0d50baee">mSigma</a></td></tr>
+<tr class="separator:ad588868e84cb1b7e256928dd0d50baee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af4e0e177bb75879dac174b758ce7d4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a7af4e0e177bb75879dac174b758ce7d4">mSigma2</a></td></tr>
+<tr class="memdesc:a7af4e0e177bb75879dac174b758ce7d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">测量误差  <a href="#a7af4e0e177bb75879dac174b758ce7d4">More...</a><br /></td></tr>
+<tr class="separator:a7af4e0e177bb75879dac174b758ce7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9647dedc212bd1fe05084ec7875a05"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a8d9647dedc212bd1fe05084ec7875a05">mMaxIterations</a></td></tr>
+<tr class="memdesc:a8d9647dedc212bd1fe05084ec7875a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">算Fundamental和Homography矩阵时RANSAC迭代次数  <a href="#a8d9647dedc212bd1fe05084ec7875a05">More...</a><br /></td></tr>
+<tr class="separator:a8d9647dedc212bd1fe05084ec7875a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572144f600b28828d4772b0470206afe"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#a572144f600b28828d4772b0470206afe">mvSets</a></td></tr>
+<tr class="memdesc:a572144f600b28828d4772b0470206afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">二维容器，外层容器的大小为迭代次数，内层容器大小为每次迭代算H或F矩阵需要的点  <a href="#a572144f600b28828d4772b0470206afe">More...</a><br /></td></tr>
+<tr class="separator:a572144f600b28828d4772b0470206afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>单目SLAM初始化相关，双目和RGBD不会使用这个类 </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ad0bf21297bc6271e7d014ce41d6ff7d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0bf21297bc6271e7d014ce41d6ff7d4">&#9670;&nbsp;</a></span>Match</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef pair&lt;int,int&gt; <a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ad0bf21297bc6271e7d014ce41d6ff7d4">ORB_SLAM2::Initializer::Match</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac492345a970665cd8a1b1d8cf41d44af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac492345a970665cd8a1b1d8cf41d44af">&#9670;&nbsp;</a></span>Initializer()</h2>
 
@@ -135,6 +234,449 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1c8b74679a5cb1af16c07c8a00c8e8c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8b74679a5cb1af16c07c8a00c8e8c0">&#9670;&nbsp;</a></span>CheckFundamental()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ORB_SLAM2::Initializer::CheckFundamental </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>F21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbMatchesInliers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sigma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对给定的fundamental matrix打分 </p>
+<dl class="section see"><dt>See also</dt><dd><ul>
+<li>Author's paper - IV. AUTOMATIC MAP INITIALIZATION （2）</li>
+<li>Multiple View Geometry in Computer Vision - symmetric transfer errors: 4.2.2 Geometric distance</li>
+<li>Multiple View Geometry in Computer Vision - model selection 4.7.1 RANSAC </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="ac2ac8374ca2a993b8cddc88703ffbe9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ac8374ca2a993b8cddc88703ffbe9a">&#9670;&nbsp;</a></span>CheckHomography()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ORB_SLAM2::Initializer::CheckHomography </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>H21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>H12</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbMatchesInliers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>sigma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对给定的homography matrix打分 </p>
+<dl class="section see"><dt>See also</dt><dd><ul>
+<li>Author's paper - IV. AUTOMATIC MAP INITIALIZATION （2）</li>
+<li>Multiple View Geometry in Computer Vision - symmetric transfer errors: 4.2.2 Geometric distance</li>
+<li>Multiple View Geometry in Computer Vision - model selection 4.7.1 RANSAC </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="a72e79f6486468cde9abd87b873d840e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e79f6486468cde9abd87b873d840e7">&#9670;&nbsp;</a></span>CheckRT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::Initializer::CheckRT </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>R</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; cv::KeyPoint &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vKeys1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; cv::KeyPoint &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vKeys2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; <a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ad0bf21297bc6271e7d014ce41d6ff7d4">Match</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vMatches12</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbInliers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; cv::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vP3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>th2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbGood</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>parallax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>进行cheirality check，从而进一步找出F分解后最合适的解 </p>
+
+</div>
+</div>
+<a id="aaca077af095ae1de08ebb473af670d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca077af095ae1de08ebb473af670d1d">&#9670;&nbsp;</a></span>ComputeF21()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat ORB_SLAM2::Initializer::ComputeF21 </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; cv::Point2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vP1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; cv::Point2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vP2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从特征点匹配求fundamental matrix（normalized 8点法） </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vP1</td><td>归一化后的点, in reference frame </td></tr>
+    <tr><td class="paramname">vP2</td><td>归一化后的点, in current frame </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>基础矩阵 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Multiple View Geometry in Computer Vision - Algorithm 11.1 p282 (中文版 p191) </dd></dl>
+
+</div>
+</div>
+<a id="a16d5aa375ed03336cc0dc981861b15da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d5aa375ed03336cc0dc981861b15da">&#9670;&nbsp;</a></span>ComputeH21()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat ORB_SLAM2::Initializer::ComputeH21 </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; cv::Point2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vP1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; cv::Point2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vP2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从特征点匹配求homography（normalized DLT） </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vP1</td><td>归一化后的点, in reference frame </td></tr>
+    <tr><td class="paramname">vP2</td><td>归一化后的点, in current frame </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>单应矩阵 </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Multiple View Geometry in Computer Vision - Algorithm 4.2 p109 </dd></dl>
+
+</div>
+</div>
+<a id="a78e9e1a14ee76f6cab0f734fa95793af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e9e1a14ee76f6cab0f734fa95793af">&#9670;&nbsp;</a></span>DecomposeE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::Initializer::DecomposeE </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>R1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>R2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>分解Essential矩阵 </p>
+<p>F矩阵通过结合内参可以得到Essential矩阵，分解E矩阵将得到4组解 <br />
+这4组解分别为[R1,t],[R1,-t],[R2,t],[R2,-t] </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">E</td><td>Essential Matrix </td></tr>
+    <tr><td class="paramname">R1</td><td>Rotation Matrix 1 </td></tr>
+    <tr><td class="paramname">R2</td><td>Rotation Matrix 2 </td></tr>
+    <tr><td class="paramname">t</td><td>Translation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>Multiple View Geometry in Computer Vision - Result 9.19 p259 </dd></dl>
+
+</div>
+</div>
+<a id="a387c406706472859415c0e7a3594ea04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a387c406706472859415c0e7a3594ea04">&#9670;&nbsp;</a></span>FindFundamental()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::Initializer::FindFundamental </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbMatchesInliers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>F21</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算基础矩阵 </p>
+<p>假设场景为非平面情况下通过前两帧求取Fundamental矩阵(current frame 2 到 reference frame 1),并得到该模型的评分 </p>
+
+</div>
+</div>
+<a id="a5b0465b2affed7453d30dd85672e9093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b0465b2affed7453d30dd85672e9093">&#9670;&nbsp;</a></span>FindHomography()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::Initializer::FindHomography </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbMatchesInliers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>H21</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算单应矩阵 </p>
+<p>假设场景为平面情况下通过前两帧求取Homography矩阵(current frame 2 到 reference frame 1),并得到该模型的评分 </p>
+
+</div>
+</div>
 <a id="a40d41840e2bdb7199ab024871d028c2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40d41840e2bdb7199ab024871d028c2c">&#9670;&nbsp;</a></span>Initialize()</h2>
 
@@ -189,14 +731,520 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a44ce7aa73741d900d2becc0d8f14c1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ce7aa73741d900d2becc0d8f14c1af">&#9670;&nbsp;</a></span>Normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::Initializer::Normalize </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; cv::KeyPoint &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vKeys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; cv::Point2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vNormalizedPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>T</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>＠brief 归一化特征点到同一尺度（作为normalize DLT的输入）</p>
+<p>[x' y' 1]' = T * [x y 1]' <br />
+归一化后x', y'的均值为0，sum(abs(x_i'-0))=1，sum(abs((y_i'-0))=1</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vKeys</td><td>特征点在图像上的坐标 </td></tr>
+    <tr><td class="paramname">vNormalizedPoints</td><td>特征点归一化后的坐标 </td></tr>
+    <tr><td class="paramname">T</td><td>将特征点归一化的矩阵 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a60796f88f1b3e981ad925a8b566f6315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60796f88f1b3e981ad925a8b566f6315">&#9670;&nbsp;</a></span>ReconstructF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ORB_SLAM2::Initializer::ReconstructF </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbMatchesInliers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>F21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>R21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>t21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; cv::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vP3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbTriangulated</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>minParallax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minTriangulated</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从F恢复R t </p>
+<p>度量重构</p><ol type="1">
+<li>由Fundamental矩阵结合相机内参K，得到Essential矩阵: <img class="formulaInl" alt="$ E = k'^T F k $" src="form_0.png"/></li>
+<li>SVD分解得到R t</li>
+<li>进行cheirality check, 从四个解中找出最合适的解</li>
+</ol>
+<dl class="section see"><dt>See also</dt><dd>Multiple View Geometry in Computer Vision - Result 9.19 p259 </dd></dl>
+
+</div>
+</div>
+<a id="addc1c05d3b7a5ae35805f69b50f368ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc1c05d3b7a5ae35805f69b50f368ea">&#9670;&nbsp;</a></span>ReconstructH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ORB_SLAM2::Initializer::ReconstructH </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbMatchesInliers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>H21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>K</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>R21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>t21</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; cv::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vP3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vbTriangulated</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>minParallax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minTriangulated</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从H恢复R t </p>
+<dl class="section see"><dt>See also</dt><dd><ul>
+<li>Faugeras et al, Motion and structure from motion in a piecewise planar environment. International Journal of Pattern Recognition and Artificial Intelligence, 1988.</li>
+<li>Deeper understanding of the homography decomposition for vision-based control </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="a3bdf78e0f16be44b5ab312aac5cac5af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdf78e0f16be44b5ab312aac5cac5af">&#9670;&nbsp;</a></span>Triangulate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::Initializer::Triangulate </td>
+          <td>(</td>
+          <td class="paramtype">const cv::KeyPoint &amp;&#160;</td>
+          <td class="paramname"><em>kp1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::KeyPoint &amp;&#160;</td>
+          <td class="paramname"><em>kp2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>P1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>P2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>x3D</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>给定投影矩阵P1,P2和图像上的点kp1,kp2，从而恢复3D坐标 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kp1</td><td>特征点, in reference frame </td></tr>
+    <tr><td class="paramname">kp2</td><td>特征点, in current frame </td></tr>
+    <tr><td class="paramname">P1</td><td>投影矩阵P1 </td></tr>
+    <tr><td class="paramname">P2</td><td>投影矩阵P２ </td></tr>
+    <tr><td class="paramname">x3D</td><td>三维点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>Multiple View Geometry in Computer Vision - 12.2 Linear triangulation methods p312 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a557fe4d78becc1dda7a26c71d2254336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a557fe4d78becc1dda7a26c71d2254336">&#9670;&nbsp;</a></span>mK</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat ORB_SLAM2::Initializer::mK</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>相机内参 </p>
+
+</div>
+</div>
+<a id="a8d9647dedc212bd1fe05084ec7875a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d9647dedc212bd1fe05084ec7875a05">&#9670;&nbsp;</a></span>mMaxIterations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::Initializer::mMaxIterations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>算Fundamental和Homography矩阵时RANSAC迭代次数 </p>
+
+</div>
+</div>
+<a id="ad588868e84cb1b7e256928dd0d50baee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad588868e84cb1b7e256928dd0d50baee">&#9670;&nbsp;</a></span>mSigma</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ORB_SLAM2::Initializer::mSigma</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7af4e0e177bb75879dac174b758ce7d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af4e0e177bb75879dac174b758ce7d4">&#9670;&nbsp;</a></span>mSigma2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ORB_SLAM2::Initializer::mSigma2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>测量误差 </p>
+
+</div>
+</div>
+<a id="a3a90762e82702f06f6999672ebaa4cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a90762e82702f06f6999672ebaa4cb8">&#9670;&nbsp;</a></span>mvbMatched1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;bool&gt; ORB_SLAM2::Initializer::mvbMatched1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录Reference Frame的每个特征点在Current Frame是否有匹配的特征点 </p>
+
+</div>
+</div>
+<a id="aa4a8bce28d125446b4607f12041c7c13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a8bce28d125446b4607f12041c7c13">&#9670;&nbsp;</a></span>mvKeys1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;cv::KeyPoint&gt; ORB_SLAM2::Initializer::mvKeys1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>存储Reference Frame中的特征点 </p>
+
+</div>
+</div>
+<a id="a034e9d495b47667f3e0bf0bc3190ff05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034e9d495b47667f3e0bf0bc3190ff05">&#9670;&nbsp;</a></span>mvKeys2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;cv::KeyPoint&gt; ORB_SLAM2::Initializer::mvKeys2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>存储Current Frame中的特征点 </p>
+
+</div>
+</div>
+<a id="ac4ef04be7036e4629a8b3fa05c7327f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ef04be7036e4629a8b3fa05c7327f5">&#9670;&nbsp;</a></span>mvMatches12</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html#ad0bf21297bc6271e7d014ce41d6ff7d4">Match</a>&gt; ORB_SLAM2::Initializer::mvMatches12</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Match的数据结构是pair,mvMatches12只记录Reference到Current匹配上的特征点对 </p>
+
+</div>
+</div>
+<a id="a572144f600b28828d4772b0470206afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572144f600b28828d4772b0470206afe">&#9670;&nbsp;</a></span>mvSets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;vector&lt;size_t&gt; &gt; ORB_SLAM2::Initializer::mvSets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>二维容器，外层容器的大小为迭代次数，内层容器大小为每次迭代算H或F矩阵需要的点 </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_initializer_8h_source.html">Initializer.h</a></li>
-<li>src/<a class="el" href="_initializer_8cpp.html">Initializer.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/include/<a class="el" href="_initializer_8h_source.html">Initializer.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/src/<a class="el" href="_initializer_8cpp.html">Initializer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:34 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

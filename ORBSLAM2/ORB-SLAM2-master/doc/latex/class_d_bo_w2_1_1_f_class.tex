@@ -15,6 +15,27 @@ Inheritance diagram for D\+Bo\+W2\+:\+:F\+Class\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_d_bo_w2_1_1_f_class}
 \end{center}
 \end{figure}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef const T\+Descriptor $\ast$ \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_a9c94e662003f61413fd542d67b45c3a9}{p\+Descriptor}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_a2f5859fa3acdf4f2a8a64d7e09de54ab}{mean\+Value}} (const std\+::vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_a9c94e662003f61413fd542d67b45c3a9}{p\+Descriptor}} $>$ \&descriptors, T\+Descriptor \&mean)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_a56d4737dd67258389c808dbd10befa8c}{distance}} (const T\+Descriptor \&a, const T\+Descriptor \&b)
+\item 
+static std\+::string \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_aeb2561d74f7d9057c0887c12350f00c2}{to\+String}} (const T\+Descriptor \&a)
+\item 
+static void \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_a0f27985bf4c13f0a6c12ebc4822c1217}{from\+String}} (T\+Descriptor \&a, const std\+::string \&s)
+\item 
+static void \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_a28a6ac7c718818f7a068a4aaae3e3b45}{to\+Mat32F}} (const std\+::vector$<$ T\+Descriptor $>$ \&descriptors, cv\+::\+Mat \&mat)
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -22,6 +43,87 @@ Generic class to encapsulate functions to manage descriptors.
 
 This class must be inherited. Derived classes can be used as the parameter F when creating Templated structures (\mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{Templated\+Vocabulary}}, Templated\+Database, ...) 
 
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_f_class_a9c94e662003f61413fd542d67b45c3a9}\label{class_d_bo_w2_1_1_f_class_a9c94e662003f61413fd542d67b45c3a9}} 
+\index{D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}!p\+Descriptor@{p\+Descriptor}}
+\index{p\+Descriptor@{p\+Descriptor}!D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}}
+\subsubsection{\texorpdfstring{p\+Descriptor}{pDescriptor}}
+{\footnotesize\ttfamily typedef const T\+Descriptor$\ast$ \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_a9c94e662003f61413fd542d67b45c3a9}{D\+Bo\+W2\+::\+F\+Class\+::p\+Descriptor}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_f_class_a56d4737dd67258389c808dbd10befa8c}\label{class_d_bo_w2_1_1_f_class_a56d4737dd67258389c808dbd10befa8c}} 
+\index{D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}!distance@{distance}}
+\index{distance@{distance}!D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}}
+\subsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily static double D\+Bo\+W2\+::\+F\+Class\+::distance (\begin{DoxyParamCaption}\item[{const T\+Descriptor \&}]{a,  }\item[{const T\+Descriptor \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Calculates the distance between two descriptors 
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+distance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_f_class_a0f27985bf4c13f0a6c12ebc4822c1217}\label{class_d_bo_w2_1_1_f_class_a0f27985bf4c13f0a6c12ebc4822c1217}} 
+\index{D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}!from\+String@{from\+String}}
+\index{from\+String@{from\+String}!D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}}
+\subsubsection{\texorpdfstring{from\+String()}{fromString()}}
+{\footnotesize\ttfamily static void D\+Bo\+W2\+::\+F\+Class\+::from\+String (\begin{DoxyParamCaption}\item[{T\+Descriptor \&}]{a,  }\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Returns a descriptor from a string 
+\begin{DoxyParams}{Parameters}
+{\em a} & descriptor \\
+\hline
+{\em s} & string version \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_f_class_a2f5859fa3acdf4f2a8a64d7e09de54ab}\label{class_d_bo_w2_1_1_f_class_a2f5859fa3acdf4f2a8a64d7e09de54ab}} 
+\index{D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}!mean\+Value@{mean\+Value}}
+\index{mean\+Value@{mean\+Value}!D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}}
+\subsubsection{\texorpdfstring{mean\+Value()}{meanValue()}}
+{\footnotesize\ttfamily virtual void D\+Bo\+W2\+::\+F\+Class\+::mean\+Value (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_f_class_a9c94e662003f61413fd542d67b45c3a9}{p\+Descriptor}} $>$ \&}]{descriptors,  }\item[{T\+Descriptor \&}]{mean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}
+
+Calculates the mean value of a set of descriptors 
+\begin{DoxyParams}{Parameters}
+{\em descriptors} & \\
+\hline
+{\em mean} & mean descriptor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_f_class_a28a6ac7c718818f7a068a4aaae3e3b45}\label{class_d_bo_w2_1_1_f_class_a28a6ac7c718818f7a068a4aaae3e3b45}} 
+\index{D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}!to\+Mat32F@{to\+Mat32F}}
+\index{to\+Mat32F@{to\+Mat32F}!D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}}
+\subsubsection{\texorpdfstring{to\+Mat32\+F()}{toMat32F()}}
+{\footnotesize\ttfamily static void D\+Bo\+W2\+::\+F\+Class\+::to\+Mat32F (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T\+Descriptor $>$ \&}]{descriptors,  }\item[{cv\+::\+Mat \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Returns a mat with the descriptors in float format 
+\begin{DoxyParams}{Parameters}
+{\em descriptors} & \\
+\hline
+{\em mat} & (out) NxL 32F matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_bo_w2_1_1_f_class_aeb2561d74f7d9057c0887c12350f00c2}\label{class_d_bo_w2_1_1_f_class_aeb2561d74f7d9057c0887c12350f00c2}} 
+\index{D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!D\+Bo\+W2\+::\+F\+Class@{D\+Bo\+W2\+::\+F\+Class}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily static std\+::string D\+Bo\+W2\+::\+F\+Class\+::to\+String (\begin{DoxyParamCaption}\item[{const T\+Descriptor \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Returns a string version of the descriptor 
+\begin{DoxyParams}{Parameters}
+{\em a} & descriptor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string version 
+\end{DoxyReturn}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\mbox{\hyperlink{_f_class_8h}{F\+Class.\+h}}\end{DoxyCompactItemize}
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/\+Thirdparty/\+D\+Bo\+W2/\+D\+Bo\+W2/\mbox{\hyperlink{_f_class_8h}{F\+Class.\+h}}\end{DoxyCompactItemize}

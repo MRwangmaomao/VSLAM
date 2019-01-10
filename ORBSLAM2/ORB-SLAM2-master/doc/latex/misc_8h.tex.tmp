@@ -1,0 +1,202 @@
+\hypertarget{misc_8h}{}\section{D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/\+Thirdparty/g2o/g2o/stuff/misc.h File Reference}
+\label{misc_8h}\index{D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/\+Thirdparty/g2o/g2o/stuff/misc.\+h@{D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/\+Thirdparty/g2o/g2o/stuff/misc.\+h}}
+
+
+some general case utility functions  
+
+
+{\ttfamily \#include \char`\"{}macros.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for misc.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structg2o_1_1_force_linker}{g2o\+::\+Force\+Linker}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{misc_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\#define {\bfseries M\+\_\+\+PI}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{misc_8h_a3be76fea59d320255e89425439f18f48}{g2o\+::\+Force\+Link\+Function}}) (void)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{misc_8h_ada3127f4fe72b228407fabe23b72a50b}{g2o\+::square}} (T x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{misc_8h_a586ee8937cdc8de49303abd1611da387}{g2o\+::hypot}} (T x, T y)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{misc_8h_ac2989135761e62b40066193a11950d21}{g2o\+::hypot\+\_\+sqr}} (T x, T y)
+\item 
+double \mbox{\hyperlink{misc_8h_a8f29adce7d7b9855e1d0ba43835c34b3}{g2o\+::deg2rad}} (double degree)
+\item 
+double \mbox{\hyperlink{misc_8h_a3965702cbb6051fa2bdb0c75c0358126}{g2o\+::rad2deg}} (double rad)
+\item 
+double \mbox{\hyperlink{misc_8h_a9f036eb4c147ddf174aa56fa031f3867}{g2o\+::normalize\+\_\+theta}} (double theta)
+\item 
+double \mbox{\hyperlink{misc_8h_a9ae48fc8caba4b009642ca53d69a3b98}{g2o\+::inverse\+\_\+theta}} (double th)
+\item 
+double \mbox{\hyperlink{misc_8h_a25f6d3c7415a89f7a5bc1875a7fa5009}{g2o\+::average\+\_\+angle}} (double theta1, double theta2)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{misc_8h_a821ae3df8a97b37daf8804ef3a26ef1d}{g2o\+::sign}} (T x)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{misc_8h_a50939862674314724dd800c41f82e7fe}{g2o\+::clamp}} (T l, T x, T u)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{misc_8h_a207912b4849eaff934f6384bc79d07ce}{g2o\+::wrap}} (T l, T x, T u)
+\item 
+bool \mbox{\hyperlink{misc_8h_a123840a60e0d1dde58088d15a1e1fffa}{g2o\+::array\+Has\+NaN}} (const double $\ast$array, int size, int $\ast$nan\+Index=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+some general case utility functions 
+
+This file specifies some general case utility functions 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{misc_8h_file_a3be76fea59d320255e89425439f18f48}\label{misc_8h_file_a3be76fea59d320255e89425439f18f48}} 
+\index{misc.\+h@{misc.\+h}!Force\+Link\+Function@{Force\+Link\+Function}}
+\index{Force\+Link\+Function@{Force\+Link\+Function}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{Force\+Link\+Function}{ForceLinkFunction}}
+{\footnotesize\ttfamily typedef void($\ast$  g2o\+::\+Force\+Link\+Function) (void)}
+
+The following two functions are used to force linkage with static libraries. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{misc_8h_file_a123840a60e0d1dde58088d15a1e1fffa}\label{misc_8h_file_a123840a60e0d1dde58088d15a1e1fffa}} 
+\index{misc.\+h@{misc.\+h}!array\+Has\+NaN@{array\+Has\+NaN}}
+\index{array\+Has\+NaN@{array\+Has\+NaN}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{array\+Has\+Na\+N()}{arrayHasNaN()}}
+{\footnotesize\ttfamily bool g2o\+::array\+Has\+NaN (\begin{DoxyParamCaption}\item[{const double $\ast$}]{array,  }\item[{int}]{size,  }\item[{int $\ast$}]{nan\+Index = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+tests whether there is a NaN in the array Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{misc_8h_file_a25f6d3c7415a89f7a5bc1875a7fa5009}\label{misc_8h_file_a25f6d3c7415a89f7a5bc1875a7fa5009}} 
+\index{misc.\+h@{misc.\+h}!average\+\_\+angle@{average\+\_\+angle}}
+\index{average\+\_\+angle@{average\+\_\+angle}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{average\+\_\+angle()}{average\_angle()}}
+{\footnotesize\ttfamily double g2o\+::average\+\_\+angle (\begin{DoxyParamCaption}\item[{double}]{theta1,  }\item[{double}]{theta2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+average two angles Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{misc_8h_file_a50939862674314724dd800c41f82e7fe}\label{misc_8h_file_a50939862674314724dd800c41f82e7fe}} 
+\index{misc.\+h@{misc.\+h}!clamp@{clamp}}
+\index{clamp@{clamp}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{clamp()}{clamp()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::clamp (\begin{DoxyParamCaption}\item[{T}]{l,  }\item[{T}]{x,  }\item[{T}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+clamp x to the interval \mbox{[}l, u\mbox{]} Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{misc_8h_file_a8f29adce7d7b9855e1d0ba43835c34b3}\label{misc_8h_file_a8f29adce7d7b9855e1d0ba43835c34b3}} 
+\index{misc.\+h@{misc.\+h}!deg2rad@{deg2rad}}
+\index{deg2rad@{deg2rad}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{deg2rad()}{deg2rad()}}
+{\footnotesize\ttfamily double g2o\+::deg2rad (\begin{DoxyParamCaption}\item[{double}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+convert from degree to radian Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{misc_8h_file_a586ee8937cdc8de49303abd1611da387}\label{misc_8h_file_a586ee8937cdc8de49303abd1611da387}} 
+\index{misc.\+h@{misc.\+h}!hypot@{hypot}}
+\index{hypot@{hypot}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{hypot()}{hypot()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::hypot (\begin{DoxyParamCaption}\item[{T}]{x,  }\item[{T}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the hypot of x and y Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{misc_8h_file_ac2989135761e62b40066193a11950d21}\label{misc_8h_file_ac2989135761e62b40066193a11950d21}} 
+\index{misc.\+h@{misc.\+h}!hypot\+\_\+sqr@{hypot\+\_\+sqr}}
+\index{hypot\+\_\+sqr@{hypot\+\_\+sqr}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{hypot\+\_\+sqr()}{hypot\_sqr()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::hypot\+\_\+sqr (\begin{DoxyParamCaption}\item[{T}]{x,  }\item[{T}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the squared hypot of x and y Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{misc_8h_file_a9ae48fc8caba4b009642ca53d69a3b98}\label{misc_8h_file_a9ae48fc8caba4b009642ca53d69a3b98}} 
+\index{misc.\+h@{misc.\+h}!inverse\+\_\+theta@{inverse\+\_\+theta}}
+\index{inverse\+\_\+theta@{inverse\+\_\+theta}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{inverse\+\_\+theta()}{inverse\_theta()}}
+{\footnotesize\ttfamily double g2o\+::inverse\+\_\+theta (\begin{DoxyParamCaption}\item[{double}]{th }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+inverse of an angle, i.\+e., +180 degree Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{misc_8h_file_a9f036eb4c147ddf174aa56fa031f3867}\label{misc_8h_file_a9f036eb4c147ddf174aa56fa031f3867}} 
+\index{misc.\+h@{misc.\+h}!normalize\+\_\+theta@{normalize\+\_\+theta}}
+\index{normalize\+\_\+theta@{normalize\+\_\+theta}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{normalize\+\_\+theta()}{normalize\_theta()}}
+{\footnotesize\ttfamily double g2o\+::normalize\+\_\+theta (\begin{DoxyParamCaption}\item[{double}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+normalize the angle Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{misc_8h_file_a3965702cbb6051fa2bdb0c75c0358126}\label{misc_8h_file_a3965702cbb6051fa2bdb0c75c0358126}} 
+\index{misc.\+h@{misc.\+h}!rad2deg@{rad2deg}}
+\index{rad2deg@{rad2deg}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{rad2deg()}{rad2deg()}}
+{\footnotesize\ttfamily double g2o\+::rad2deg (\begin{DoxyParamCaption}\item[{double}]{rad }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+convert from radian to degree Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{misc_8h_file_a821ae3df8a97b37daf8804ef3a26ef1d}\label{misc_8h_file_a821ae3df8a97b37daf8804ef3a26ef1d}} 
+\index{misc.\+h@{misc.\+h}!sign@{sign}}
+\index{sign@{sign}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int g2o\+::sign (\begin{DoxyParamCaption}\item[{T}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+sign function. \begin{DoxyReturn}{Returns}
+the sign of x. +1 for x $>$ 0, -\/1 for x $<$ 0, 0 for x == 0 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+\mbox{\Hypertarget{misc_8h_file_ada3127f4fe72b228407fabe23b72a50b}\label{misc_8h_file_ada3127f4fe72b228407fabe23b72a50b}} 
+\index{misc.\+h@{misc.\+h}!square@{square}}
+\index{square@{square}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{square()}{square()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::square (\begin{DoxyParamCaption}\item[{T}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the square value Here is the call graph for this function\+:
+% FIG 22
+Here is the caller graph for this function\+:
+% FIG 23
+\mbox{\Hypertarget{misc_8h_file_a207912b4849eaff934f6384bc79d07ce}\label{misc_8h_file_a207912b4849eaff934f6384bc79d07ce}} 
+\index{misc.\+h@{misc.\+h}!wrap@{wrap}}
+\index{wrap@{wrap}!misc.\+h@{misc.\+h}}
+\subsubsection{\texorpdfstring{wrap()}{wrap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T g2o\+::wrap (\begin{DoxyParamCaption}\item[{T}]{l,  }\item[{T}]{x,  }\item[{T}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+wrap x to be in the interval \mbox{[}l, u\mbox{]} Here is the call graph for this function\+:
+% FIG 24
+Here is the caller graph for this function\+:
+% FIG 25

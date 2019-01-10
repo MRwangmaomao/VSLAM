@@ -48,14 +48,14 @@ linear solver using dense cholesky decomposition
 \index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!Linear\+Solver\+Dense@{Linear\+Solver\+Dense}}
 \index{Linear\+Solver\+Dense@{Linear\+Solver\+Dense}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
 \subsubsection{\texorpdfstring{Linear\+Solver\+Dense()}{LinearSolverDense()}}
-{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Matrix\+Type$>$ \\
 \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{g2o\+::\+Linear\+Solver\+Dense}}$<$ Matrix\+Type $>$\+::\mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{Linear\+Solver\+Dense}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classg2o_1_1_linear_solver_dense_a2b3cbb77fa958bf322b98e38ec3e29c2}\label{classg2o_1_1_linear_solver_dense_a2b3cbb77fa958bf322b98e38ec3e29c2}} 
 \index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!````~Linear\+Solver\+Dense@{$\sim$\+Linear\+Solver\+Dense}}
 \index{````~Linear\+Solver\+Dense@{$\sim$\+Linear\+Solver\+Dense}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
 \subsubsection{\texorpdfstring{$\sim$\+Linear\+Solver\+Dense()}{~LinearSolverDense()}}
-{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Matrix\+Type$>$ \\
 virtual \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{g2o\+::\+Linear\+Solver\+Dense}}$<$ Matrix\+Type $>$\+::$\sim$\mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{Linear\+Solver\+Dense}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
@@ -65,7 +65,7 @@ virtual \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{g2o\+::\+Linear\+Solv
 \index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!init@{init}}
 \index{init@{init}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
 \subsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Matrix\+Type$>$ \\
 virtual bool \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{g2o\+::\+Linear\+Solver\+Dense}}$<$ Matrix\+Type $>$\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 init for operating on matrices with a different non-\/zero pattern like before 
@@ -76,7 +76,7 @@ Implements \mbox{\hyperlink{classg2o_1_1_linear_solver_aebd961a94ef6de1bc66d2ca4
 \index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!solve@{solve}}
 \index{solve@{solve}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
 \subsubsection{\texorpdfstring{solve()}{solve()}}
-{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Matrix\+Type$>$ \\
 bool \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{g2o\+::\+Linear\+Solver\+Dense}}$<$ Matrix\+Type $>$\+::solve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classg2o_1_1_sparse_block_matrix}{Sparse\+Block\+Matrix}}$<$ Matrix\+Type $>$ \&}]{A,  }\item[{double $\ast$}]{x,  }\item[{double $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 Assumes that A is the same matrix for several calls. Among other assumptions, the non-\/zero pattern does not change! If the matrix changes call \mbox{\hyperlink{classg2o_1_1_linear_solver_dense_a24f68ecd4b022269dbfc4d990eb5c57b}{init()}} before. solve system Ax = b, x and b have to allocated beforehand!! 
@@ -90,25 +90,25 @@ Implements \mbox{\hyperlink{classg2o_1_1_linear_solver_aa44b40826d50203c8ce2ff25
 \index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!\+\_\+cholesky@{\+\_\+cholesky}}
 \index{\+\_\+cholesky@{\+\_\+cholesky}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
 \subsubsection{\texorpdfstring{\+\_\+cholesky}{\_cholesky}}
-{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Matrix\+Type$>$ \\
 Eigen\+::\+L\+D\+LT$<$Eigen\+::\+Matrix\+Xd$>$ \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{g2o\+::\+Linear\+Solver\+Dense}}$<$ Matrix\+Type $>$\+::\+\_\+cholesky\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classg2o_1_1_linear_solver_dense_a5ca6a1f2358ce0620dbdbae3fdc9fc99}\label{classg2o_1_1_linear_solver_dense_a5ca6a1f2358ce0620dbdbae3fdc9fc99}} 
 \index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!\+\_\+H@{\+\_\+H}}
 \index{\+\_\+H@{\+\_\+H}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
 \subsubsection{\texorpdfstring{\+\_\+H}{\_H}}
-{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Matrix\+Type$>$ \\
 Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{g2o\+::\+Linear\+Solver\+Dense}}$<$ Matrix\+Type $>$\+::\+\_\+H\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classg2o_1_1_linear_solver_dense_a2d82ac52c9c24501cccee3ef3cb575fe}\label{classg2o_1_1_linear_solver_dense_a2d82ac52c9c24501cccee3ef3cb575fe}} 
 \index{g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}!\+\_\+reset@{\+\_\+reset}}
 \index{\+\_\+reset@{\+\_\+reset}!g2o\+::\+Linear\+Solver\+Dense@{g2o\+::\+Linear\+Solver\+Dense}}
 \subsubsection{\texorpdfstring{\+\_\+reset}{\_reset}}
-{\footnotesize\ttfamily template$<$typename Matrix\+Type $>$ \\
+{\footnotesize\ttfamily template$<$typename Matrix\+Type$>$ \\
 bool \mbox{\hyperlink{classg2o_1_1_linear_solver_dense}{g2o\+::\+Linear\+Solver\+Dense}}$<$ Matrix\+Type $>$\+::\+\_\+reset\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Thirdparty/g2o/g2o/solvers/\mbox{\hyperlink{linear__solver__dense_8h}{linear\+\_\+solver\+\_\+dense.\+h}}\end{DoxyCompactItemize}
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/\+Thirdparty/g2o/g2o/solvers/\mbox{\hyperlink{linear__solver__dense_8h}{linear\+\_\+solver\+\_\+dense.\+h}}\end{DoxyCompactItemize}

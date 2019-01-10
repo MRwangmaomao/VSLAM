@@ -1,0 +1,17 @@
+digraph "DBoW2::operator&lt;&lt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="DBoW2::operator\<\<",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="DBoW2::TemplatedVocabulary\l::getBranchingFactor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a027d367760c39de816bee5ff0d969837"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="DBoW2::TemplatedVocabulary\l::getDepthLevels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a5a7d1b3ad0c705705d516a9a144e3f38"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="DBoW2::TemplatedVocabulary\l::getWeightingType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#aadb9343da87e0f00ed3da401c59132b2"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="DBoW2::TemplatedVocabulary\l::getScoringType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#ad830e1e3e547e5d9d45971662afca3d5"];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="DBoW2::TemplatedVocabulary\l::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a8baad280d6daf74ee43d7cd911363137"];
+}

@@ -1,0 +1,9 @@
+digraph "ORB_SLAM2::Frame::GetFeaturesInArea"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node16 [label="ORB_SLAM2::Frame::GetFeatures\lInArea",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="ORB_SLAM2::ORBmatcher\l::SearchByProjection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher.html#a0dba0b2bed7d16ca56e27ff4df00f557",tooltip="通过投影，对上一帧的特征点进行跟踪 "];
+}

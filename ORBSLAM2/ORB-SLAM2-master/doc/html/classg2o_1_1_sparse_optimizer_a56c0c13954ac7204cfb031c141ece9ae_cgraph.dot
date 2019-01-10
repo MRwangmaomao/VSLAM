@@ -1,0 +1,9 @@
+digraph "g2o::SparseOptimizer::initializeOptimization"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node53 [label="g2o::SparseOptimizer\l::initializeOptimization",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node53 -> Node54 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node54 [label="g2o::HyperGraph::Edge\l::vertices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_edge.html#aba1717ff01f972bd39ba992c0d9d9e04"];
+}

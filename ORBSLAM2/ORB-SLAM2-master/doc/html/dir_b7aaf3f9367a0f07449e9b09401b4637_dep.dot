@@ -1,0 +1,11 @@
+digraph "D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_62a53d30c17c36057e41412a1a4f77b8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="g2o" fontname="Helvetica", fontsize="10", URL="dir_62a53d30c17c36057e41412a1a4f77b8.html"]
+  dir_b7aaf3f9367a0f07449e9b09401b4637 [shape=box, label="core", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b7aaf3f9367a0f07449e9b09401b4637.html"];
+  }
+  dir_8060ee540022a2c52e71c5c2c8062ae1 [shape=box label="stuff" URL="dir_8060ee540022a2c52e71c5c2c8062ae1.html"];
+  dir_b7aaf3f9367a0f07449e9b09401b4637->dir_8060ee540022a2c52e71c5c2c8062ae1 [headlabel="11", labeldistance=1.5 headhref="dir_000008_000010.html"];
+}

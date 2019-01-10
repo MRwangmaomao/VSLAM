@@ -1,0 +1,20 @@
+digraph "g2o::SparseOptimizer::initializeOptimization"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node67 [label="g2o::SparseOptimizer\l::initializeOptimization",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node67 -> Node68 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node68 [label="g2o::HyperGraph::Vertex\l::edges",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_vertex.html#a3794ff3310c1dc05619bf0b77eaa4caa",tooltip="returns the set of hyper-edges that are leaving/entering in this vertex "];
+  Node67 -> Node69 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="g2o::HyperGraph::Edge\l::vertices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_edge.html#aba1717ff01f972bd39ba992c0d9d9e04"];
+  Node67 -> Node70 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 [label="g2o::OptimizableGraph\l::Vertex::estimateDimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#ae9d94367931458af6ca3d5589801b1e6"];
+  Node67 -> Node71 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node71 [label="g2o::OptimizableGraph\l::Vertex::getEstimateData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a7303e52b5e41a0b5ee8751cce4095a57"];
+  Node67 -> Node72 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node72 [label="g2o::arrayHasNaN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$misc_8h.html#a123840a60e0d1dde58088d15a1e1fffa"];
+  Node72 -> Node72 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node67 -> Node73 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node73 [label="g2o::HyperGraph::Vertex::id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_vertex.html#a48191960395856d1b686287489e53da3",tooltip="returns the id "];
+}

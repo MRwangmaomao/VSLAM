@@ -37,6 +37,10 @@ namespace ORB_SLAM2
 class Tracking;
 class Viewer;
 
+/**
+ * @brief 用于画出当前帧的位姿和地图点
+ * 
+ */
 class FrameDrawer
 {
 public:

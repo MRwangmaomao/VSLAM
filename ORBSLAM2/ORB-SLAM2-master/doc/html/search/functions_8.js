@@ -9,7 +9,7 @@ var searchData=
   ['hessianindex',['hessianIndex',['../classg2o_1_1_optimizable_graph_1_1_vertex.html#a05a371cfa6314d0f2d209289b01cc922',1,'g2o::OptimizableGraph::Vertex']]],
   ['hkmeansstep',['HKmeansStep',['../class_d_bo_w2_1_1_templated_vocabulary.html#ab79623d30a8550414e1f4bf916869f05',1,'DBoW2::TemplatedVocabulary']]],
   ['hyperdijkstra',['HyperDijkstra',['../structg2o_1_1_hyper_dijkstra.html#a55e844f4b596290cb36a0d9fe4140966',1,'g2o::HyperDijkstra']]],
-  ['hypergraph',['HyperGraph',['../classg2o_1_1_hyper_graph.html#a833632b111cfc7cf08b842ae3cb43d41',1,'g2o::HyperGraph']]],
+  ['hypergraph',['HyperGraph',['../classg2o_1_1_hyper_graph.html#a833632b111cfc7cf08b842ae3cb43d41',1,'g2o::HyperGraph::HyperGraph()'],['../classg2o_1_1_hyper_graph.html#ab19a6e0681e2b30d48740cebf553c7eb',1,'g2o::HyperGraph::HyperGraph(const HyperGraph &amp;)']]],
   ['hypergraphactionlibrary',['HyperGraphActionLibrary',['../classg2o_1_1_hyper_graph_action_library.html#a68fe0eee5bdda62e6929c3ee2b4b38f1',1,'g2o::HyperGraphActionLibrary']]],
   ['hypergraphelementaction',['HyperGraphElementAction',['../classg2o_1_1_hyper_graph_element_action.html#a1230bdd21f7c2b2c71e7206b59d81fd5',1,'g2o::HyperGraphElementAction']]],
   ['hypergraphelementactioncollection',['HyperGraphElementActionCollection',['../classg2o_1_1_hyper_graph_element_action_collection.html#a6af1ca2dfcdc0894eb594c68135dd614',1,'g2o::HyperGraphElementActionCollection']]],

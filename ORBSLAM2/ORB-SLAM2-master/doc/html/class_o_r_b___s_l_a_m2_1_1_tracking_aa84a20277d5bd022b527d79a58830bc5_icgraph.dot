@@ -1,0 +1,11 @@
+digraph "ORB_SLAM2::Tracking::UpdateLastFrame"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node334 [label="ORB_SLAM2::Tracking\l::UpdateLastFrame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node334 -> Node335 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node335 [label="ORB_SLAM2::Tracking\l::TrackWithMotionModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#aca19f1d69b30a6c6e49281d422ac8298",tooltip="根据匀速度模型对上一帧的MapPoints进行跟踪 "];
+  Node335 -> Node336 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node336 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+}

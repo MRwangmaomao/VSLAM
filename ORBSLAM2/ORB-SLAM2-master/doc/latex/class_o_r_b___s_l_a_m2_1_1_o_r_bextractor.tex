@@ -19,7 +19,7 @@ enum \{ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a5f326a8b3ba1
 \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ab0e5801da8f6dee0261aef5cf19e73b3}{$\sim$\+O\+R\+Bextractor}} ()
 \item 
 void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a05117a839e4261638b0413fff2dc9e1b}{operator()}} (cv\+::\+Input\+Array image, cv\+::\+Input\+Array mask, std\+::vector$<$ cv\+::\+Key\+Point $>$ \&keypoints, cv\+::\+Output\+Array descriptors)
-\item 
+\begin{DoxyCompactList}\small\item\em 计算描述子 \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_abaad86a9c65eed8a2f8af9604b1a53ee}{Get\+Levels}} ()
 \item 
 float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a3352294ae4ae250a406140d2ae6f7286}{Get\+Scale\+Factor}} ()
@@ -41,11 +41,11 @@ std\+::vector$<$ cv\+::\+Mat $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a058f24d80bb0b2c7d6fc0bdd3d9144d1}{Compute\+Pyramid}} (cv\+::\+Mat image)
-\begin{DoxyCompactList}\small\item\em 构建图像金字塔 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 构建图像金字塔 远出看是角点的地方，进出看可能不是角点了，这个问题成为尺度不变性，需要构建图像金字塔解决。 通过在每一层金字塔上检测角点和角点的方向来实现。总层数为nlevels。计算得到每层的图像存到mv\+Image\+Pyramid容器中 图像金字塔的计算通过resize函数实现 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a9a543d9b2aec1e521058ee9522937adc}{Compute\+Key\+Points\+Oct\+Tree}} (std\+::vector$<$ std\+::vector$<$ cv\+::\+Key\+Point $>$ $>$ \&all\+Keypoints)
 \item 
 std\+::vector$<$ cv\+::\+Key\+Point $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_ac6b7b27447324af33fa60d6dc0c8ffa0}{Distribute\+Oct\+Tree}} (const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&v\+To\+Distribute\+Keys, const int \&minX, const int \&maxX, const int \&minY, const int \&maxY, const int \&n\+Features, const int \&level)
-\begin{DoxyCompactList}\small\item\em Orb extrator distribute oct\+Tree. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Orb extrator distribute oct\+Tree 计算fast特征点并进行筛选 先用(max\+X-\/minX)/(max\+Y-\/minY)来确定四叉数有几个初始节点，这里有 bug，如果输入的是一张宽高比小于0.5 的图像， n\+Ini 计算得到 0，下一步计算 hX 会报错，例如round(640/480)=1,所以只有一个初始节点，(\+U\+L,\+U\+R,\+B\+L,\+B\+R)就会分布到被裁掉边界后的图像的四个角。 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_a56890a2032077fbfdf48687786985548}{Compute\+Key\+Points\+Old}} (std\+::vector$<$ std\+::vector$<$ cv\+::\+Key\+Point $>$ $>$ \&all\+Keypoints)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
@@ -105,8 +105,6 @@ F\+A\+S\+T\+\_\+\+S\+C\+O\+RE&\\
 
 Construct a new \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor_aaa8e010415e516246e171b9bbb9f84af}{O\+R\+Bextractor\+::\+O\+R\+Bextractor}} object. 
 
-This is a test doxygen.
-
 
 \begin{DoxyParams}{Parameters}
 {\em \+\_\+nfeatures} & \\
@@ -149,7 +147,7 @@ This is a test doxygen.
 
 
 
-构建图像金字塔 
+构建图像金字塔 远出看是角点的地方，进出看可能不是角点了，这个问题成为尺度不变性，需要构建图像金字塔解决。 通过在每一层金字塔上检测角点和角点的方向来实现。总层数为nlevels。计算得到每层的图像存到mv\+Image\+Pyramid容器中 图像金字塔的计算通过resize函数实现 
 
 
 \begin{DoxyParams}{Parameters}
@@ -164,7 +162,7 @@ This is a test doxygen.
 
 
 
-Orb extrator distribute oct\+Tree. 
+Orb extrator distribute oct\+Tree 计算fast特征点并进行筛选 先用(max\+X-\/minX)/(max\+Y-\/minY)来确定四叉数有几个初始节点，这里有 bug，如果输入的是一张宽高比小于0.5 的图像， n\+Ini 计算得到 0，下一步计算 hX 会报错，例如round(640/480)=1,所以只有一个初始节点，(\+U\+L,\+U\+R,\+B\+L,\+B\+R)就会分布到被裁掉边界后的图像的四个角。 
 
 
 \begin{DoxyParams}{Parameters}
@@ -228,6 +226,21 @@ vector$<$cv\+::\+Key\+Point$>$
 \subsubsection{\texorpdfstring{operator()()}{operator()()}}
 {\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+O\+R\+Bextractor\+::operator() (\begin{DoxyParamCaption}\item[{cv\+::\+Input\+Array}]{image,  }\item[{cv\+::\+Input\+Array}]{mask,  }\item[{std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{keypoints,  }\item[{cv\+::\+Output\+Array}]{descriptors }\end{DoxyParamCaption})}
 
+
+
+计算描述子 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+image} & \\
+\hline
+{\em \+\_\+mask} & \\
+\hline
+{\em \+\_\+keypoints} & \\
+\hline
+{\em \+\_\+descriptors} & \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}
@@ -313,5 +326,5 @@ vector$<$cv\+::\+Key\+Point$>$
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{_o_r_bextractor_8h}{O\+R\+Bextractor.\+h}}\item 
-src/\mbox{\hyperlink{_o_r_bextractor_8cpp}{O\+R\+Bextractor.\+cpp}}\end{DoxyCompactItemize}
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/include/\mbox{\hyperlink{_o_r_bextractor_8h}{O\+R\+Bextractor.\+h}}\item 
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/src/\mbox{\hyperlink{_o_r_bextractor_8cpp}{O\+R\+Bextractor.\+cpp}}\end{DoxyCompactItemize}

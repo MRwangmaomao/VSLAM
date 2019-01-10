@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="DBoW2::GeneralScoring",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_general_scoring.html",tooltip="Base class of scoring functions. "];
+}

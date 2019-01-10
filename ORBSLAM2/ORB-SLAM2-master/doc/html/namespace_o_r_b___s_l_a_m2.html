@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: ORB_SLAM2 Namespace Reference</title>
+<title>ORB-SLAM2: ORB_SLAM2 Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -64,6 +65,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ORB_SLAM2 Namespace Reference</div>  </div>
@@ -76,10 +78,13 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供了一些常见的转换  <a href="class_o_r_b___s_l_a_m2_1_1_converter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_extractor_node.html">ExtractorNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">提取一幅图像的特征点和描述子  <a href="class_o_r_b___s_l_a_m2_1_1_extractor_node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_frame.html">Frame</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">对一帧图像进行描述  <a href="class_o_r_b___s_l_a_m2_1_1_frame.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_frame_drawer.html">FrameDrawer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于画出当前帧的位姿和地图点  <a href="class_o_r_b___s_l_a_m2_1_1_frame_drawer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_initializer.html">Initializer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">单目SLAM初始化相关，双目和RGBD不会使用这个类  <a href="class_o_r_b___s_l_a_m2_1_1_initializer.html#details">More...</a><br /></td></tr>
@@ -104,6 +109,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html">ORBextractor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher.html">ORBmatcher</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">对提取的特征点进行匹配  <a href="class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html">PnPsolver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,16 +127,35 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a2fafba714858cab1bb18d438e2e83c5d"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_d_bo_w2_1_1_templated_vocabulary.html">DBoW2::TemplatedVocabulary</a>&lt; <a class="el" href="class_d_bo_w2_1_1_f_o_r_b.html#aef9b966d0293836fab9f55f1799ce0ed">DBoW2::FORB::TDescriptor</a>, <a class="el" href="class_d_bo_w2_1_1_f_o_r_b.html">DBoW2::FORB</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a2fafba714858cab1bb18d438e2e83c5d">ORBVocabulary</a></td></tr>
 <tr class="separator:a2fafba714858cab1bb18d438e2e83c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac570dbdaae2d483745515b5022fd6820"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#ac570dbdaae2d483745515b5022fd6820">IC_Angle</a> (const Mat &amp;image, Point2f pt, const vector&lt; int &gt; &amp;u_max)</td></tr>
+<tr class="memdesc:ac570dbdaae2d483745515b5022fd6820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast角点不具有方向性，需要赋予其方向，灰度质心法计算特征点的旋转 计算特征点的灰度质心，计算半径为HALF_PATCH_SIZE=15 计算m_10和m_01。其中m_01需要注意图像边界 最后根据反三角函数计算出旋转角度  <a href="#ac570dbdaae2d483745515b5022fd6820">More...</a><br /></td></tr>
+<tr class="separator:ac570dbdaae2d483745515b5022fd6820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932693f631bfe871700d02c72e14c6cd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a932693f631bfe871700d02c72e14c6cd">computeOrbDescriptor</a> (const KeyPoint &amp;kpt, const Mat &amp;img, const Point *pattern, uchar *desc)</td></tr>
+<tr class="memdesc:a932693f631bfe871700d02c72e14c6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算orb描述子  <a href="#a932693f631bfe871700d02c72e14c6cd">More...</a><br /></td></tr>
+<tr class="separator:a932693f631bfe871700d02c72e14c6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40adb6b621d7c2dd9d2961ba88e445c8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a40adb6b621d7c2dd9d2961ba88e445c8">computeOrientation</a> (const Mat &amp;image, vector&lt; KeyPoint &gt; &amp;keypoints, const vector&lt; int &gt; &amp;umax)</td></tr>
+<tr class="memdesc:a40adb6b621d7c2dd9d2961ba88e445c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算图像中每个特征角点的旋转方向  <a href="#a40adb6b621d7c2dd9d2961ba88e445c8">More...</a><br /></td></tr>
+<tr class="separator:a40adb6b621d7c2dd9d2961ba88e445c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad90997cdb916a99c644c0959e08cf4df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#ad90997cdb916a99c644c0959e08cf4df">computeDescriptors</a> (const Mat &amp;image, vector&lt; KeyPoint &gt; &amp;keypoints, Mat &amp;descriptors, const vector&lt; Point &gt; &amp;pattern)</td></tr>
+<tr class="separator:ad90997cdb916a99c644c0959e08cf4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a557e5c298c5f7164667f083494c2197a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a557e5c298c5f7164667f083494c2197a">PATCH_SIZE</a> = 31</td></tr>
+<tr class="memdesc:a557e5c298c5f7164667f083494c2197a"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算灰度质心用到的匹配点数  <a href="#a557e5c298c5f7164667f083494c2197a">More...</a><br /></td></tr>
 <tr class="separator:a557e5c298c5f7164667f083494c2197a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa09849ae679bf2392b097abd710d8d7f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#aa09849ae679bf2392b097abd710d8d7f">HALF_PATCH_SIZE</a> = 15</td></tr>
 <tr class="separator:aa09849ae679bf2392b097abd710d8d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec00f1ad4dea35755e3af4404282cd3b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#aec00f1ad4dea35755e3af4404282cd3b">EDGE_THRESHOLD</a> = 19</td></tr>
+<tr class="memdesc:aec00f1ad4dea35755e3af4404282cd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">边界阈值  <a href="#aec00f1ad4dea35755e3af4404282cd3b">More...</a><br /></td></tr>
 <tr class="separator:aec00f1ad4dea35755e3af4404282cd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8015b470ffeb885a0c90837a03b3210f"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a8015b470ffeb885a0c90837a03b3210f">factorPI</a> = (float)(CV_PI/180.f)</td></tr>
 <tr class="separator:a8015b470ffeb885a0c90837a03b3210f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd21ee063eca2b0bc3f5e76ceba0492"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a8dd21ee063eca2b0bc3f5e76ceba0492">bit_pattern_31_</a> [256 *4]</td></tr>
+<tr class="memdesc:a8dd21ee063eca2b0bc3f5e76ceba0492"><td class="mdescLeft">&#160;</td><td class="mdescRight">bit_pattern_31_  <a href="#a8dd21ee063eca2b0bc3f5e76ceba0492">More...</a><br /></td></tr>
+<tr class="separator:a8dd21ee063eca2b0bc3f5e76ceba0492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file is part of ORB-SLAM2.</p>
@@ -165,7 +190,246 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad90997cdb916a99c644c0959e08cf4df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90997cdb916a99c644c0959e08cf4df">&#9670;&nbsp;</a></span>computeDescriptors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ORB_SLAM2::computeDescriptors </td>
+          <td>(</td>
+          <td class="paramtype">const Mat &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; KeyPoint &gt; &amp;&#160;</td>
+          <td class="paramname"><em>keypoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Mat &amp;&#160;</td>
+          <td class="paramname"><em>descriptors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; Point &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a932693f631bfe871700d02c72e14c6cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932693f631bfe871700d02c72e14c6cd">&#9670;&nbsp;</a></span>computeOrbDescriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ORB_SLAM2::computeOrbDescriptor </td>
+          <td>(</td>
+          <td class="paramtype">const KeyPoint &amp;&#160;</td>
+          <td class="paramname"><em>kpt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Mat &amp;&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Point *&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uchar *&#160;</td>
+          <td class="paramname"><em>desc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算orb描述子 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kpt</td><td></td></tr>
+    <tr><td class="paramname">img</td><td></td></tr>
+    <tr><td class="paramname">pattern</td><td></td></tr>
+    <tr><td class="paramname">desc</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40adb6b621d7c2dd9d2961ba88e445c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40adb6b621d7c2dd9d2961ba88e445c8">&#9670;&nbsp;</a></span>computeOrientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ORB_SLAM2::computeOrientation </td>
+          <td>(</td>
+          <td class="paramtype">const Mat &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; KeyPoint &gt; &amp;&#160;</td>
+          <td class="paramname"><em>keypoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>umax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算图像中每个特征角点的旋转方向 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td></td></tr>
+    <tr><td class="paramname">keypoints</td><td></td></tr>
+    <tr><td class="paramname">umax</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac570dbdaae2d483745515b5022fd6820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac570dbdaae2d483745515b5022fd6820">&#9670;&nbsp;</a></span>IC_Angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float ORB_SLAM2::IC_Angle </td>
+          <td>(</td>
+          <td class="paramtype">const Mat &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Point2f&#160;</td>
+          <td class="paramname"><em>pt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>u_max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fast角点不具有方向性，需要赋予其方向，灰度质心法计算特征点的旋转 计算特征点的灰度质心，计算半径为HALF_PATCH_SIZE=15 计算m_10和m_01。其中m_01需要注意图像边界 最后根据反三角函数计算出旋转角度 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td></td></tr>
+    <tr><td class="paramname">pt</td><td></td></tr>
+    <tr><td class="paramname">u_max</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+<p>计算图像的m_10矩</p>
+<p>计算图像的m_01矩</p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a8dd21ee063eca2b0bc3f5e76ceba0492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd21ee063eca2b0bc3f5e76ceba0492">&#9670;&nbsp;</a></span>bit_pattern_31_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::bit_pattern_31_[256 *4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bit_pattern_31_ </p>
+
+</div>
+</div>
 <a id="aec00f1ad4dea35755e3af4404282cd3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec00f1ad4dea35755e3af4404282cd3b">&#9670;&nbsp;</a></span>EDGE_THRESHOLD</h2>
 
@@ -177,6 +441,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>边界阈值 </p>
 
 </div>
 </div>
@@ -220,12 +486,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>计算灰度质心用到的匹配点数 </p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:34 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

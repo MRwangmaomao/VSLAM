@@ -1,0 +1,17 @@
+digraph "g2o::OptimizationAlgorithmWithHessian::init"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="g2o::OptimizationAlgorithm\lWithHessian::init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="g2o::Solver::setWriteDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#ad3ef2a487d991363ba86af2840b0d7cd"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="g2o::SparseOptimizer\l::activeVertices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_optimizer.html#a9843e19ec85c9f6598e52d7223e54e75",tooltip="the vertices active in the current optimization "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="g2o::OptimizableGraph\l::Vertex::marginalized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a216d79149edcfa9f666140205159fde8",tooltip="true => this node is marginalized out during the optimization "];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="g2o::Solver::supportsSchur",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#a36c68f7bc0b8864ee7722bc3c06de554"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="g2o::Solver::init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#a532174e1ee53642880d2d59c128b037b"];
+}

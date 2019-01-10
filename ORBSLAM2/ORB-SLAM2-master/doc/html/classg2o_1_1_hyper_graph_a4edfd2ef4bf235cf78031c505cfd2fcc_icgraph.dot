@@ -1,0 +1,27 @@
+digraph "g2o::HyperGraph::edges"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node39 [label="g2o::HyperGraph::edges",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node39 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="ORB_SLAM2::Optimizer\l::PoseOptimization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_optimizer.html#a7415d78b8a2323b88e108fa1ea3bf2d3",tooltip="Pose Only Optimization. "];
+  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="ORB_SLAM2::Tracking\l::TrackReferenceKeyFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a737c5409c93844353561a0fe724ed1c2",tooltip="对参考关键帧的MapPoints进行跟踪 "];
+  Node41 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+  Node40 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="ORB_SLAM2::Tracking\l::TrackWithMotionModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#aca19f1d69b30a6c6e49281d422ac8298",tooltip="根据匀速度模型对上一帧的MapPoints进行跟踪 "];
+  Node43 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="ORB_SLAM2::Tracking\l::TrackLocalMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af670c614f4e10d58c9f7aad9865b5c08",tooltip="对Local Map的MapPoints进行跟踪 "];
+  Node44 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="g2o::JacobianWorkspace\l::updateSize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_jacobian_workspace.html#ae3d715bd25e196d8db81661ef0fbd09b"];
+  Node39 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="g2o::OptimizableGraph\l::chi2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1_optimizable_graph.html#af0d53383e22347aba1bf76c1ce492f51",tooltip="returns the chi2 of the current configuration "];
+  Node39 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="g2o::OptimizableGraph\l::addGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1_optimizable_graph.html#acea1342d9ab0bf717710c8f78b74ff25",tooltip="adds all edges and vertices of the graph g to this graph. "];
+  Node39 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="g2o::OptimizableGraph\l::verifyInformationMatrices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1_optimizable_graph.html#a23dbb64bd31deb3952d4149518e663ce"];
+}

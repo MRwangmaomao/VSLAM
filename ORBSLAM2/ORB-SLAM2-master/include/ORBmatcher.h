@@ -33,7 +33,10 @@
 
 namespace ORB_SLAM2
 {
-
+/**
+ * @brief 对提取的特征点进行匹配
+ * 
+ */
 class ORBmatcher
 {    
 public:

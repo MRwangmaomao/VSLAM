@@ -1,0 +1,13 @@
+digraph "ORB_SLAM2::ORBmatcher::Fuse"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="ORB_SLAM2::ORBmatcher\l::Fuse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ORB_SLAM2::MapPoint\l::IsInKeyFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#a7a8c48a885598ba4da3b188791dfd009",tooltip="check MapPoint is in keyframe "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ORB_SLAM2::MapPoint\l::AddObservation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#a37277ee3c7d8657976e749ab920bb13f",tooltip="添加观测 "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="ORB_SLAM2::KeyFrame\l::AddMapPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a16ea4f0cfa1ca411bb3382107fe69d2d",tooltip="Add MapPoint to KeyFrame. "];
+}

@@ -3,6 +3,7 @@ var searchData=
   ['g2o_5fattribute_5fdeprecated',['G2O_ATTRIBUTE_DEPRECATED',['../classg2o_1_1_optimizable_graph_1_1_vertex.html#a8f22181a161d724e95631d5da742b66a',1,'g2o::OptimizableGraph::Vertex::G2O_ATTRIBUTE_DEPRECATED(tempIndex() const)'],['../classg2o_1_1_optimizable_graph_1_1_vertex.html#abdcd545b6870b37135b055d18dae7a36',1,'g2o::OptimizableGraph::Vertex::G2O_ATTRIBUTE_DEPRECATED(setTempIndex(int ti))']]],
   ['g2obatchstatistics',['G2OBatchStatistics',['../structg2o_1_1_g2_o_batch_statistics.html#a99b348cf1d6a913ab6683c44b36a8c55',1,'g2o::G2OBatchStatistics']]],
   ['gaugefreedom',['gaugeFreedom',['../classg2o_1_1_sparse_optimizer.html#ac99e785f4822dd540b389ea179ce4f06',1,'g2o::SparseOptimizer']]],
+  ['gauss_5fnewton',['gauss_newton',['../class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a4b2b11d8afbf638d8cd48d739b071073',1,'ORB_SLAM2::PnPsolver']]],
   ['get',['get',['../class_d_utils_1_1_random_1_1_unrepeated_randomizer.html#ae1bf6a140e322962f65b2c98dc07a3ac',1,'DUtils::Random::UnrepeatedRandomizer']]],
   ['get_5fmonotonic_5ftime',['get_monotonic_time',['../namespaceg2o.html#af1595a641cd3ed21c3d9739c72a39422',1,'g2o']]],
   ['get_5ftime',['get_time',['../namespaceg2o.html#a6baa8fdfd973b5b970df14f14fd5d844',1,'g2o']]],
@@ -70,11 +71,8 @@ var searchData=
   ['getworldpos',['GetWorldPos',['../class_o_r_b___s_l_a_m2_1_1_map_point.html#a0e59b21447d5d889b39ad2fcc1b1db49',1,'ORB_SLAM2::MapPoint']]],
   ['globalbundleadjustemnt',['GlobalBundleAdjustemnt',['../class_o_r_b___s_l_a_m2_1_1_optimizer.html#aaa9b8a4c16296bf2981b0aaf4ee3189c',1,'ORB_SLAM2::Optimizer']]],
   ['globalstats',['globalStats',['../structg2o_1_1_g2_o_batch_statistics.html#a85d57b829bde666635a26d52e17f20b5',1,'g2o::G2OBatchStatistics']]],
-  ['grabimage',['GrabImage',['../class_image_grabber.html#a66758ed685acbf1a7e77b3325001e47c',1,'ImageGrabber']]],
   ['grabimagemonocular',['GrabImageMonocular',['../class_o_r_b___s_l_a_m2_1_1_tracking.html#ad3de28bf6f7638c4da2248c9d595f394',1,'ORB_SLAM2::Tracking']]],
   ['grabimagergbd',['GrabImageRGBD',['../class_o_r_b___s_l_a_m2_1_1_tracking.html#a99cf542c9a7cc551745877cc11ce8ef9',1,'ORB_SLAM2::Tracking']]],
   ['grabimagestereo',['GrabImageStereo',['../class_o_r_b___s_l_a_m2_1_1_tracking.html#a7cba47a41978fc1c83f47547813aff2c',1,'ORB_SLAM2::Tracking']]],
-  ['grabrgbd',['GrabRGBD',['../class_image_grabber.html#ab6df23b898365aa3df99628e4c925aee',1,'ImageGrabber']]],
-  ['grabstereo',['GrabStereo',['../class_image_grabber.html#a640450feb6e5df2cb0b2aae7574367c2',1,'ImageGrabber']]],
   ['graph',['graph',['../classg2o_1_1_cache.html#a1a4480a445469d2d02b8db449e6cb57c',1,'g2o::Cache::graph()'],['../classg2o_1_1_cache_container.html#a4bf79d27bb9ae377446dfa7fd048b06d',1,'g2o::CacheContainer::graph()'],['../classg2o_1_1_estimate_propagator.html#a97064a86789b496b590f4848fdb59bc8',1,'g2o::EstimatePropagator::graph()'],['../structg2o_1_1_hyper_dijkstra.html#a578a9eb1874d9802dbd37a2f1681c196',1,'g2o::HyperDijkstra::graph()'],['../classg2o_1_1_optimizable_graph_1_1_vertex.html#a8cf4be7e2442444d9d43a80cc8388b1e',1,'g2o::OptimizableGraph::Vertex::graph() const'],['../classg2o_1_1_optimizable_graph_1_1_vertex.html#a3f845c6f0ba9a87ab15caaddba5a4037',1,'g2o::OptimizableGraph::Vertex::graph()'],['../classg2o_1_1_optimizable_graph_1_1_edge.html#a3684190bf8e99f39f58ffadd0dfa6b05',1,'g2o::OptimizableGraph::Edge::graph()'],['../classg2o_1_1_optimizable_graph_1_1_edge.html#a06fdc51c984cf0050df376ca30c881e3',1,'g2o::OptimizableGraph::Edge::graph() const']]]
 ];

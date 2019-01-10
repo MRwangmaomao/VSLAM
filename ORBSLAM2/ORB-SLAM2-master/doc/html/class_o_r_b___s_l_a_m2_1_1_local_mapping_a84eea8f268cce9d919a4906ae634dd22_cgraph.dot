@@ -1,0 +1,37 @@
+digraph "ORB_SLAM2::LocalMapping::ProcessNewKeyFrame"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node32 [label="ORB_SLAM2::LocalMapping\l::ProcessNewKeyFrame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node32 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="ORB_SLAM2::KeyFrame\l::ComputeBoW",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#ac376017c23823c05a6bb851ffb2fdd8f",tooltip="Bag of Words Representation. "];
+  Node33 -> Node34 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="ORB_SLAM2::Converter\l::toDescriptorVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_converter.html#abef47701eefdbc74c2c1625c140963fd",tooltip="一个描述子矩阵到一串单行的描述子向量 "];
+  Node33 -> Node35 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="DBoW2::TemplatedVocabulary\l::transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a01de3bebec37624439c7d3baf6651ff0"];
+  Node35 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="DBoW2::BowVector::addWeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#a3ac92a805b252c93dc6535240d02df47"];
+  Node35 -> Node37 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="DBoW2::BowVector::addIfNot\lExist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#a5ddf10e444d10425e5bd3568dc7ffe5e"];
+  Node35 -> Node38 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="DBoW2::BowVector::normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#acd2dd34023e3053a4cc75d70c8b6ac13"];
+  Node32 -> Node39 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="ORB_SLAM2::KeyFrame\l::GetMapPointMatches",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#aabc5f6491c32999d9f546669737547bf",tooltip="Get MapPoint Matches. "];
+  Node32 -> Node40 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="ORB_SLAM2::MapPoint\l::IsInKeyFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#a7a8c48a885598ba4da3b188791dfd009",tooltip="check MapPoint is in keyframe "];
+  Node32 -> Node41 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="ORB_SLAM2::MapPoint\l::AddObservation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#a37277ee3c7d8657976e749ab920bb13f",tooltip="添加观测 "];
+  Node32 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="ORB_SLAM2::MapPoint\l::UpdateNormalAndDepth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#ac5b8e4ec6a7737860af57058bdd16124",tooltip="更新平均观测方向以及观测距离范围 "];
+  Node32 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="ORB_SLAM2::MapPoint\l::ComputeDistinctiveDescriptors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#ab4c3dfd8f5f05a4b1888021f1fac3d84",tooltip="计算具有代表的描述子 "];
+  Node32 -> Node44 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="ORB_SLAM2::KeyFrame\l::UpdateConnections",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#afe7026956c91d4e0a01812be9dc7e8d5",tooltip="更新图的连接 "];
+  Node44 -> Node45 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="ORB_SLAM2::KeyFrame\l::AddConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a8d21a23485b7c104a73d6ad3cccf4e93",tooltip="为关键帧之间添加连接 "];
+  Node45 -> Node46 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="ORB_SLAM2::KeyFrame\l::UpdateBestCovisibles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a09cb8502509c136536bf8d45793f8872",tooltip="按照权重对连接的关键帧进行排序 "];
+  Node32 -> Node47 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="ORB_SLAM2::Map::AddKeyFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map.html#a688de3b072e0176bb288bb70d36cd0e9",tooltip="Insert KeyFrame in the map. "];
+}

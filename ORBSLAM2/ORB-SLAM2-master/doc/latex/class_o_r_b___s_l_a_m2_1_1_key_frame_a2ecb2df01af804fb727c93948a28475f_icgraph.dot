@@ -1,0 +1,23 @@
+digraph "ORB_SLAM2::KeyFrame::GetBestCovisibilityKeyFrames"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node42 [label="ORB_SLAM2::KeyFrame\l::GetBestCovisibilityKeyFrames",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node42 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node43 [label="ORB_SLAM2::KeyFrameDatabase\l::DetectLoopCandidates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame_database.html#a2d396aae02c4318ea8c7e7eff8059c69",tooltip="在闭环检测中找到与该关键帧可能闭环的关键帧 "];
+  Node42 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 [label="ORB_SLAM2::KeyFrameDatabase\l::DetectRelocalizationCandidates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame_database.html#a008586e4d07ece0d948d0f1633447a2b",tooltip="在重定位中找到与该帧相似的关键帧 "];
+  Node42 -> Node45 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node45 [label="ORB_SLAM2::LocalMapping\l::CreateNewMapPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_local_mapping.html#ac06b513357429d9eff89e29d2ae58d6c"];
+  Node42 -> Node46 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node46 [label="ORB_SLAM2::LocalMapping\l::SearchInNeighbors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_local_mapping.html#a5d5e0bc6fd15d9a6bf1ca8a258f104f1"];
+  Node42 -> Node47 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node47 [label="ORB_SLAM2::Tracking\l::UpdateLocalKeyFrames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a42bed56bbbe8282eb77733e7168d8599",tooltip="更新局部关键帧，called by UpdateLocalMap() "];
+  Node47 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node48 [label="ORB_SLAM2::Tracking\l::UpdateLocalMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a22723e9972c18a888dd51a82eec27b0a",tooltip="更新LocalMap "];
+  Node48 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node49 [label="ORB_SLAM2::Tracking\l::TrackLocalMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af670c614f4e10d58c9f7aad9865b5c08",tooltip="对Local Map的MapPoints进行跟踪 "];
+  Node49 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node50 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+}

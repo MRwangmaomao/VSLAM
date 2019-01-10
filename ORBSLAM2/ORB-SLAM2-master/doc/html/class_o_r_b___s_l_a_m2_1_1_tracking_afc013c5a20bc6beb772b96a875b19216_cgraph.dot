@@ -1,0 +1,9 @@
+digraph "ORB_SLAM2::Tracking::NeedNewKeyFrame"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node86 [label="ORB_SLAM2::Tracking\l::NeedNewKeyFrame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node86 -> Node87 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node87 [label="ORB_SLAM2::KeyFrame\l::TrackedMapPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a729cbf2c84db5cbfdda98a9612f8cd0b",tooltip="关键帧中，大于等于minObs的MapPoints的数量 minObs就是一个阈值，大于minObs就表示该MapPoint是一个高质量�..."];
+}

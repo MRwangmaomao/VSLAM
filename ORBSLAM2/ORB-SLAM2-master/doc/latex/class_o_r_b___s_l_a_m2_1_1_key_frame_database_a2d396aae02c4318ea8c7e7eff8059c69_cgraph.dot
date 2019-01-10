@@ -1,0 +1,13 @@
+digraph "ORB_SLAM2::KeyFrameDatabase::DetectLoopCandidates"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="ORB_SLAM2::KeyFrameDatabase\l::DetectLoopCandidates",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ORB_SLAM2::KeyFrame\l::GetConnectedKeyFrames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#af4ffdf4441477a36c42d6605c573f1cf",tooltip="得到与该关键帧连接的关键帧 "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="DBoW2::TemplatedVocabulary\l::score",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#aedde9cc3255e41fd0441055eeb640346"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="ORB_SLAM2::KeyFrame\l::GetBestCovisibilityKeyFrames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a2ecb2df01af804fb727c93948a28475f",tooltip="得到与该关键帧连接的前N个关键帧(已按权值排序) "];
+}

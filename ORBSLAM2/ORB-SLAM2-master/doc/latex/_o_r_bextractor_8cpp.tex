@@ -1,5 +1,5 @@
-\hypertarget{_o_r_bextractor_8cpp}{}\section{src/\+O\+R\+Bextractor.cpp File Reference}
-\label{_o_r_bextractor_8cpp}\index{src/\+O\+R\+Bextractor.\+cpp@{src/\+O\+R\+Bextractor.\+cpp}}
+\hypertarget{_o_r_bextractor_8cpp}{}\section{D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/src/\+O\+R\+Bextractor.cpp File Reference}
+\label{_o_r_bextractor_8cpp}\index{D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/src/\+O\+R\+Bextractor.\+cpp@{D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/src/\+O\+R\+Bextractor.\+cpp}}
 {\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\newline
 {\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\newline
 {\ttfamily \#include $<$opencv2/features2d/features2d.\+hpp$>$}\newline
@@ -18,17 +18,30 @@
 \item 
 \#define \mbox{\hyperlink{_o_r_bextractor_8cpp_a35931865021519a9d7a2a4d2f196e684}{G\+E\+T\+\_\+\+V\+A\+L\+UE}}(idx)
 \end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_ac570dbdaae2d483745515b5022fd6820}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+I\+C\+\_\+\+Angle}} (const Mat \&image, Point2f pt, const vector$<$ int $>$ \&u\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Fast角点不具有方向性，需要赋予其方向，灰度质心法计算特征点的旋转 计算特征点的灰度质心，计算半径为\+H\+A\+L\+F\+\_\+\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE=15 计算m\+\_\+10和m\+\_\+01。其中m\+\_\+01需要注意图像边界 最后根据反三角函数计算出旋转角度 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a932693f631bfe871700d02c72e14c6cd}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::compute\+Orb\+Descriptor}} (const Key\+Point \&kpt, const Mat \&img, const Point $\ast$pattern, uchar $\ast$desc)
+\begin{DoxyCompactList}\small\item\em 计算orb描述子 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a40adb6b621d7c2dd9d2961ba88e445c8}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::compute\+Orientation}} (const Mat \&image, vector$<$ Key\+Point $>$ \&keypoints, const vector$<$ int $>$ \&umax)
+\begin{DoxyCompactList}\small\item\em 计算图像中每个特征角点的旋转方向 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_ad90997cdb916a99c644c0959e08cf4df}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::compute\+Descriptors}} (const Mat \&image, vector$<$ Key\+Point $>$ \&keypoints, Mat \&descriptors, const vector$<$ Point $>$ \&pattern)
+\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a557e5c298c5f7164667f083494c2197a}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE}} = 31
-\item 
+\begin{DoxyCompactList}\small\item\em 计算灰度质心用到的匹配点数 \end{DoxyCompactList}\item 
 const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_aa09849ae679bf2392b097abd710d8d7f}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+H\+A\+L\+F\+\_\+\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE}} = 15
 \item 
 const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_aec00f1ad4dea35755e3af4404282cd3b}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 19
-\item 
+\begin{DoxyCompactList}\small\item\em 边界阈值 \end{DoxyCompactList}\item 
 const float \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a8015b470ffeb885a0c90837a03b3210f}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::factor\+PI}} = (float)(C\+V\+\_\+\+PI/180.f)
-\end{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a8dd21ee063eca2b0bc3f5e76ceba0492}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::bit\+\_\+pattern\+\_\+31\+\_\+}} \mbox{[}256 $\ast$4\mbox{]}
+\begin{DoxyCompactList}\small\item\em bit\+\_\+pattern\+\_\+31\+\_\+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}

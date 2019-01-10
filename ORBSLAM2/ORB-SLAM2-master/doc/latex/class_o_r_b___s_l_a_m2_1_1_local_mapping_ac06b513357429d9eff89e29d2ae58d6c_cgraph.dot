@@ -1,0 +1,29 @@
+digraph "ORB_SLAM2::LocalMapping::CreateNewMapPoints"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node6 [label="ORB_SLAM2::LocalMapping\l::CreateNewMapPoints",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="ORB_SLAM2::KeyFrame\l::GetBestCovisibilityKeyFrames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a2ecb2df01af804fb727c93948a28475f",tooltip="得到与该关键帧连接的前N个关键帧(已按权值排序) "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="ORB_SLAM2::LocalMapping\l::CheckNewKeyFrames",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_local_mapping.html#a27db88f75fe6f2bd43b0bd0769d56462",tooltip="查看列表中是否有等待被插入的关键帧 "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="ORB_SLAM2::KeyFrame\l::ComputeSceneMedianDepth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#aa4c5f9ea38d377cfa70d441e184803ae",tooltip="评估当前关键帧场景深度，q=2表示中值 "];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="ORB_SLAM2::LocalMapping\l::ComputeF12",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_local_mapping.html#ac72419089ac268253671b8da2ec12c21"];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="ORB_SLAM2::ORBmatcher\l::SearchForTriangulation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher.html#a0ecb7f018e9184c67c4a48ad8616217d",tooltip="利用基本矩阵F12，在两个关键帧之间未匹配的特征点中产生新的3d点 "];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="ORB_SLAM2::KeyFrame\l::UnprojectStereo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a0d2dc03ca0d62fc5585773e43d503e79",tooltip="Backprojects a keypoint (if stereo/depth info available) into 3D world coordinates. "];
+  Node6 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="ORB_SLAM2::MapPoint\l::AddObservation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#a37277ee3c7d8657976e749ab920bb13f",tooltip="添加观测 "];
+  Node6 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="ORB_SLAM2::KeyFrame\l::AddMapPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a16ea4f0cfa1ca411bb3382107fe69d2d",tooltip="Add MapPoint to KeyFrame. "];
+  Node6 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="ORB_SLAM2::MapPoint\l::ComputeDistinctiveDescriptors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#ab4c3dfd8f5f05a4b1888021f1fac3d84",tooltip="计算具有代表的描述子 "];
+  Node6 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="ORB_SLAM2::MapPoint\l::UpdateNormalAndDepth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#ac5b8e4ec6a7737860af57058bdd16124",tooltip="更新平均观测方向以及观测距离范围 "];
+  Node6 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="ORB_SLAM2::Map::AddMapPoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map.html#a2d8e1b4376778dfe32df90ec00b599e3",tooltip="Insert MapPoint in the map. "];
+}

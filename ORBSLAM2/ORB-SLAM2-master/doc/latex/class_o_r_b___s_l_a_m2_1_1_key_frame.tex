@@ -8,13 +8,13 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_a6b2fd06ed5e4a8f9546c515db554bcb6}{Key\+Frame}} (\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&F, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$p\+Map, \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_database}{Key\+Frame\+Database}} $\ast$p\+K\+F\+DB)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct a new Key \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}}\+:\+: Key \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_aa799150fa33f3b9a404226454b96c95a}{Set\+Pose}} (const cv\+::\+Mat \&\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_a8dc31ef9a08d34ecb196f3e58a2c09b9}{Tcw}})
-\item 
+\begin{DoxyCompactList}\small\item\em 将左目相机中心转到立体相机中心 \end{DoxyCompactList}\item 
 cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_a49b5e212c1335cf585eaf6bbc4fed85c}{Get\+Pose}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 返回该关键帧的位姿变换矩阵，相机坐标系到世界坐标系 \end{DoxyCompactList}\item 
 cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_a03be061f5dac65d360d65c6e8a63532f}{Get\+Pose\+Inverse}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 返回该关键帧位姿变换的逆矩阵，世界坐标系到相机坐标系 \end{DoxyCompactList}\item 
 cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_a535f0f7db34aca7c55ddadc2ad9f4a5f}{Get\+Camera\+Center}} ()
 \item 
 cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_aac7e26797d9b3e7ef4acd656056ff4ce}{Get\+Stereo\+Center}} ()
@@ -264,6 +264,19 @@ std\+::mutex \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame_acb19a0cf32ad
 
 
 
+Construct a new Key \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}}\+:\+: Key \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & \\
+\hline
+{\em p\+Map} & \\
+\hline
+{\em p\+K\+F\+DB} & \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_a2394adfb627d9cf87ed8da78f6b0d709}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_a2394adfb627d9cf87ed8da78f6b0d709}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}!Add\+Child@{Add\+Child}}
@@ -479,12 +492,26 @@ Get \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} Matches.
 \subsubsection{\texorpdfstring{Get\+Pose()}{GetPose()}}
 {\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+::\+Get\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+返回该关键帧的位姿变换矩阵，相机坐标系到世界坐标系 
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_a03be061f5dac65d360d65c6e8a63532f}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_a03be061f5dac65d360d65c6e8a63532f}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}!Get\+Pose\+Inverse@{Get\+Pose\+Inverse}}
 \index{Get\+Pose\+Inverse@{Get\+Pose\+Inverse}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}}
 \subsubsection{\texorpdfstring{Get\+Pose\+Inverse()}{GetPoseInverse()}}
 {\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+::\+Get\+Pose\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+返回该关键帧位姿变换的逆矩阵，世界坐标系到相机坐标系 
+
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_a43cdfc1cebc87d949ae6e9a0202b0f1b}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_a43cdfc1cebc87d949ae6e9a0202b0f1b}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}!Get\+Rotation@{Get\+Rotation}}
 \index{Get\+Rotation@{Get\+Rotation}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}}
@@ -586,8 +613,17 @@ Get \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_point}{Map\+Point}} Matches.
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}!Set\+Pose@{Set\+Pose}}
 \index{Set\+Pose@{Set\+Pose}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}}
 \subsubsection{\texorpdfstring{Set\+Pose()}{SetPose()}}
-{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+::\+Set\+Pose (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{Tcw }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame\+::\+Set\+Pose (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{Tcw\+\_\+ }\end{DoxyParamCaption})}
 
+
+
+将左目相机中心转到立体相机中心 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tcw\+\_\+} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_key_frame_a729cbf2c84db5cbfdda98a9612f8cd0b}\label{class_o_r_b___s_l_a_m2_1_1_key_frame_a729cbf2c84db5cbfdda98a9612f8cd0b}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}!Tracked\+Map\+Points@{Tracked\+Map\+Points}}
 \index{Tracked\+Map\+Points@{Tracked\+Map\+Points}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Key\+Frame}}
@@ -1117,5 +1153,5 @@ Vector of nodes with indexes of local features.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{_key_frame_8h}{Key\+Frame.\+h}}\item 
-src/\mbox{\hyperlink{_key_frame_8cpp}{Key\+Frame.\+cpp}}\end{DoxyCompactItemize}
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/include/\mbox{\hyperlink{_key_frame_8h}{Key\+Frame.\+h}}\item 
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/src/\mbox{\hyperlink{_key_frame_8cpp}{Key\+Frame.\+cpp}}\end{DoxyCompactItemize}

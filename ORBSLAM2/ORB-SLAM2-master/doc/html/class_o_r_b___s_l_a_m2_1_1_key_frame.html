@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: ORB_SLAM2::KeyFrame Class Reference</title>
+<title>ORB-SLAM2: ORB_SLAM2::KeyFrame Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -82,12 +83,16 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b2fd06ed5e4a8f9546c515db554bcb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_key_frame.html#a6b2fd06ed5e4a8f9546c515db554bcb6">KeyFrame</a> (<a class="el" href="class_o_r_b___s_l_a_m2_1_1_frame.html">Frame</a> &amp;F, <a class="el" href="class_o_r_b___s_l_a_m2_1_1_map.html">Map</a> *pMap, <a class="el" href="class_o_r_b___s_l_a_m2_1_1_key_frame_database.html">KeyFrameDatabase</a> *pKFDB)</td></tr>
+<tr class="memdesc:a6b2fd06ed5e4a8f9546c515db554bcb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Key <a class="el" href="class_o_r_b___s_l_a_m2_1_1_frame.html" title="对一帧图像进行描述 ">Frame</a>:: Key <a class="el" href="class_o_r_b___s_l_a_m2_1_1_frame.html" title="对一帧图像进行描述 ">Frame</a> object.  <a href="#a6b2fd06ed5e4a8f9546c515db554bcb6">More...</a><br /></td></tr>
 <tr class="separator:a6b2fd06ed5e4a8f9546c515db554bcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa799150fa33f3b9a404226454b96c95a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_key_frame.html#aa799150fa33f3b9a404226454b96c95a">SetPose</a> (const cv::Mat &amp;<a class="el" href="class_o_r_b___s_l_a_m2_1_1_key_frame.html#a8dc31ef9a08d34ecb196f3e58a2c09b9">Tcw</a>)</td></tr>
+<tr class="memdesc:aa799150fa33f3b9a404226454b96c95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将左目相机中心转到立体相机中心  <a href="#aa799150fa33f3b9a404226454b96c95a">More...</a><br /></td></tr>
 <tr class="separator:aa799150fa33f3b9a404226454b96c95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49b5e212c1335cf585eaf6bbc4fed85c"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_key_frame.html#a49b5e212c1335cf585eaf6bbc4fed85c">GetPose</a> ()</td></tr>
+<tr class="memdesc:a49b5e212c1335cf585eaf6bbc4fed85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回该关键帧的位姿变换矩阵，相机坐标系到世界坐标系  <a href="#a49b5e212c1335cf585eaf6bbc4fed85c">More...</a><br /></td></tr>
 <tr class="separator:a49b5e212c1335cf585eaf6bbc4fed85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03be061f5dac65d360d65c6e8a63532f"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_key_frame.html#a03be061f5dac65d360d65c6e8a63532f">GetPoseInverse</a> ()</td></tr>
+<tr class="memdesc:a03be061f5dac65d360d65c6e8a63532f"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回该关键帧位姿变换的逆矩阵，世界坐标系到相机坐标系  <a href="#a03be061f5dac65d360d65c6e8a63532f">More...</a><br /></td></tr>
 <tr class="separator:a03be061f5dac65d360d65c6e8a63532f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a535f0f7db34aca7c55ddadc2ad9f4a5f"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_key_frame.html#a535f0f7db34aca7c55ddadc2ad9f4a5f">GetCameraCenter</a> ()</td></tr>
 <tr class="separator:a535f0f7db34aca7c55ddadc2ad9f4a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -379,6 +384,16 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct a new Key <a class="el" href="class_o_r_b___s_l_a_m2_1_1_frame.html" title="对一帧图像进行描述 ">Frame</a>:: Key <a class="el" href="class_o_r_b___s_l_a_m2_1_1_frame.html" title="对一帧图像进行描述 ">Frame</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">F</td><td></td></tr>
+    <tr><td class="paramname">pMap</td><td></td></tr>
+    <tr><td class="paramname">pKFDB</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -876,6 +891,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>返回该关键帧的位姿变换矩阵，相机坐标系到世界坐标系 </p>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat </dd></dl>
+
 </div>
 </div>
 <a id="a03be061f5dac65d360d65c6e8a63532f"></a>
@@ -892,6 +910,9 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>返回该关键帧位姿变换的逆矩阵，世界坐标系到相机坐标系 </p>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat </dd></dl>
 
 </div>
 </div>
@@ -1181,11 +1202,19 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void ORB_SLAM2::KeyFrame::SetPose </td>
           <td>(</td>
           <td class="paramtype">const cv::Mat &amp;&#160;</td>
-          <td class="paramname"><em>Tcw</em></td><td>)</td>
+          <td class="paramname"><em>Tcw_</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>将左目相机中心转到立体相机中心 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Tcw_</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2548,13 +2577,13 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_key_frame_8h_source.html">KeyFrame.h</a></li>
-<li>src/<a class="el" href="_key_frame_8cpp.html">KeyFrame.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/include/<a class="el" href="_key_frame_8h_source.html">KeyFrame.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/src/<a class="el" href="_key_frame_8cpp.html">KeyFrame.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:34 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

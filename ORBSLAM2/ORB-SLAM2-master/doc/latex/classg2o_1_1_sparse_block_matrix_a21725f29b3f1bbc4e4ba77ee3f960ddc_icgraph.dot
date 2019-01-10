@@ -1,0 +1,9 @@
+digraph "g2o::SparseBlockMatrix::writeOctave"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node19 [label="g2o::SparseBlockMatrix\l::writeOctave",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="g2o::LinearSolverEigen\l::solve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_linear_solver_eigen.html#ae4ac566af324a238a31145c1e50b52e1"];
+}

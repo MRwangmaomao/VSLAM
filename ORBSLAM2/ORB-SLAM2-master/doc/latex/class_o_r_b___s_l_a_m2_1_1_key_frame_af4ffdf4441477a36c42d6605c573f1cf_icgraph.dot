@@ -1,0 +1,11 @@
+digraph "ORB_SLAM2::KeyFrame::GetConnectedKeyFrames"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node52 [label="ORB_SLAM2::KeyFrame\l::GetConnectedKeyFrames",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node52 -> Node53 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node53 [label="ORB_SLAM2::KeyFrameDatabase\l::DetectLoopCandidates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame_database.html#a2d396aae02c4318ea8c7e7eff8059c69",tooltip="在闭环检测中找到与该关键帧可能闭环的关键帧 "];
+  Node52 -> Node54 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node54 [label="ORB_SLAM2::LoopClosing\l::CorrectLoop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_loop_closing.html#aa007e0678582ec0de5d71280d23af540",tooltip="闭环 "];
+}

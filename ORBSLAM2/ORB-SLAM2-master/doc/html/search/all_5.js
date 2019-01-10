@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['edge',['Edge',['../classg2o_1_1_hyper_graph_1_1_edge.html',1,'g2o::HyperGraph::Edge'],['../classg2o_1_1_optimizable_graph_1_1_edge.html',1,'g2o::OptimizableGraph::Edge'],['../classg2o_1_1_hyper_graph.html#a59ab1fe84b0728a65a0ba15fce9b9cf7',1,'g2o::HyperGraph::Edge()'],['../structg2o_1_1_optimizable_graph.html#a59cf44f3f3182a367ee4525412c7940a',1,'g2o::OptimizableGraph::Edge()'],['../classg2o_1_1_hyper_graph_1_1_edge.html#a891618b34652837ef0bee7084db81f2e',1,'g2o::HyperGraph::Edge::Edge()'],['../classg2o_1_1_optimizable_graph_1_1_edge.html#a6568eb7f3b3e4299473ec3230199aa70',1,'g2o::OptimizableGraph::Edge::Edge()'],['../classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry.html#a7082664efdadcd6031ab441830cb7ac4',1,'g2o::EstimatePropagator::AdjacencyMapEntry::edge()'],['../structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry.html#a4531caf2e8ceb2d86ba7dbadbc82341c',1,'g2o::HyperDijkstra::AdjacencyMapEntry::edge()']]],
+  ['edge',['Edge',['../classg2o_1_1_optimizable_graph_1_1_edge.html',1,'g2o::OptimizableGraph::Edge'],['../classg2o_1_1_hyper_graph_1_1_edge.html',1,'g2o::HyperGraph::Edge'],['../classg2o_1_1_hyper_graph.html#a59ab1fe84b0728a65a0ba15fce9b9cf7',1,'g2o::HyperGraph::Edge()'],['../structg2o_1_1_optimizable_graph.html#a59cf44f3f3182a367ee4525412c7940a',1,'g2o::OptimizableGraph::Edge()'],['../classg2o_1_1_hyper_graph_1_1_edge.html#a891618b34652837ef0bee7084db81f2e',1,'g2o::HyperGraph::Edge::Edge()'],['../classg2o_1_1_optimizable_graph_1_1_edge.html#a6568eb7f3b3e4299473ec3230199aa70',1,'g2o::OptimizableGraph::Edge::Edge()'],['../classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry.html#a7082664efdadcd6031ab441830cb7ac4',1,'g2o::EstimatePropagator::AdjacencyMapEntry::edge()'],['../structg2o_1_1_hyper_dijkstra_1_1_adjacency_map_entry.html#a4531caf2e8ceb2d86ba7dbadbc82341c',1,'g2o::HyperDijkstra::AdjacencyMapEntry::edge()']]],
   ['edge_5fthreshold',['EDGE_THRESHOLD',['../namespace_o_r_b___s_l_a_m2.html#aec00f1ad4dea35755e3af4404282cd3b',1,'ORB_SLAM2']]],
   ['edgecontainer',['EdgeContainer',['../structg2o_1_1_optimizable_graph.html#a2b43e807ae6d61ef8749ca1ef7c25f62',1,'g2o::OptimizableGraph']]],
   ['edgeidcompare',['EdgeIDCompare',['../structg2o_1_1_optimizable_graph_1_1_edge_i_d_compare.html',1,'g2o::OptimizableGraph']]],
@@ -33,6 +33,7 @@ var searchData=
   ['estimate',['estimate',['../classg2o_1_1_base_vertex.html#afea20bbcf50eb2a7d9d598b3eae49172',1,'g2o::BaseVertex']]],
   ['estimate_5fpropagator_2ecpp',['estimate_propagator.cpp',['../estimate__propagator_8cpp.html',1,'']]],
   ['estimate_5fpropagator_2eh',['estimate_propagator.h',['../estimate__propagator_8h.html',1,'']]],
+  ['estimate_5fr_5fand_5ft',['estimate_R_and_t',['../class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#abf90f06f1d7218d8200b2682817ed08a',1,'ORB_SLAM2::PnPsolver']]],
   ['estimatedimension',['estimateDimension',['../classg2o_1_1_optimizable_graph_1_1_vertex.html#ae9d94367931458af6ca3d5589801b1e6',1,'g2o::OptimizableGraph::Vertex']]],
   ['estimatepropagator',['EstimatePropagator',['../classg2o_1_1_estimate_propagator.html',1,'g2o::EstimatePropagator'],['../classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry.html#a84fd16bbb058a331370b1b9983896264',1,'g2o::EstimatePropagator::AdjacencyMapEntry::EstimatePropagator()'],['../classg2o_1_1_estimate_propagator.html#af245037ba41bfb02d531c11f5de4f7e8',1,'g2o::EstimatePropagator::EstimatePropagator()']]],
   ['estimatepropagatorcost',['EstimatePropagatorCost',['../classg2o_1_1_estimate_propagator_cost.html',1,'g2o::EstimatePropagatorCost'],['../classg2o_1_1_estimate_propagator_cost.html#aebd56e3597a99b225bc3799ec8145bc9',1,'g2o::EstimatePropagatorCost::EstimatePropagatorCost()']]],
@@ -40,7 +41,7 @@ var searchData=
   ['estimatetype',['EstimateType',['../classg2o_1_1_base_vertex.html#aaffb179a0d591da4769ec7c3fc7f7daa',1,'g2o::BaseVertex']]],
   ['etrackingstate',['eTrackingState',['../class_o_r_b___s_l_a_m2_1_1_tracking.html#a3995b5e23b910c6ee30b7fe21732fe36',1,'ORB_SLAM2::Tracking']]],
   ['exp',['exp',['../classg2o_1_1_s_e3_quat.html#a374a05b202889d09d5a3a25e0fb6c103',1,'g2o::SE3Quat']]],
-  ['export',['EXPORT',['../_d_bo_w2_2_d_utils_2config_8h.html#a3472d8cdbb788d5f1815b3522595bc49',1,'config.h']]],
+  ['export',['EXPORT',['../config_8h.html#a3472d8cdbb788d5f1815b3522595bc49',1,'config.h']]],
   ['extractorb',['ExtractORB',['../class_o_r_b___s_l_a_m2_1_1_frame.html#a626aef981e9fd9caff63bf93f1abf47f',1,'ORB_SLAM2::Frame']]],
   ['extractornode',['ExtractorNode',['../class_o_r_b___s_l_a_m2_1_1_extractor_node.html',1,'ORB_SLAM2::ExtractorNode'],['../class_o_r_b___s_l_a_m2_1_1_extractor_node.html#af1920a7d5f8166debdd4a7fe4a15a8e9',1,'ORB_SLAM2::ExtractorNode::ExtractorNode()']]]
 ];

@@ -1,0 +1,11 @@
+digraph "g2o::SparseBlockMatrixHashMap::addBlock"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="g2o::SparseBlockMatrixHash\lMap::addBlock",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="g2o::SparseBlockMatrixHash\lMap::rowsOfBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix_hash_map.html#afd5e53b51549fbe1c71d96f986120b65",tooltip="how many rows does the block at block-row r has? "];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="g2o::SparseBlockMatrixHash\lMap::colsOfBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix_hash_map.html#a7f9538beeea7bed6300e864dbefccff5",tooltip="how many cols does the block at block-col c has? "];
+}

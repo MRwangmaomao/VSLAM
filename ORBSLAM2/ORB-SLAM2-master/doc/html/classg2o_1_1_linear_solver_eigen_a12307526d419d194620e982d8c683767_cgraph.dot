@@ -1,0 +1,17 @@
+digraph "g2o::LinearSolverEigen::computeSymbolicDecomposition"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="g2o::LinearSolverEigen\l::computeSymbolicDecomposition",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="g2o::SparseBlockMatrix\l::blockCols",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#ab818f8923b845d08a38e8de1145fbb65",tooltip="the block matrices per block-column "];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="g2o::SparseBlockMatrix\l::rows",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#aaad7b1558369203795419345ee014852",tooltip="rows of the matrix "];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="g2o::SparseBlockMatrix\l::cols",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#ac9dfcc991976a6c21dcbed961f06282d",tooltip="columns of the matrix "];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="g2o::SparseBlockMatrix\l::colBaseOfBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#a502857f0a792ad37055964705a983590",tooltip="where does the col at block-col r starts? "];
+  Node0 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="g2o::SparseBlockMatrix\l::colsOfBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#afe3ef87aecd7a76eab27e91131dbe0c1",tooltip="how many cols does the block at block-col c has? "];
+}

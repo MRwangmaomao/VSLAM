@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: g2o::ScopedOpenMPMutex Class Reference</title>
+<title>ORB-SLAM2: g2o::ScopedOpenMPMutex Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -67,6 +68,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classg2o_1_1_scoped_open_m_p_mutex-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">g2o::ScopedOpenMPMutex Class Reference</div>  </div>
@@ -84,12 +87,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abb18bffae04b138447870b58ab158f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3c190c5fba832ce48db9edf6ea10552"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_scoped_open_m_p_mutex.html#af3c190c5fba832ce48db9edf6ea10552">~ScopedOpenMPMutex</a> ()</td></tr>
 <tr class="separator:af3c190c5fba832ce48db9edf6ea10552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab293e6a549bb2a546e53ebd9a1b7c2aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_scoped_open_m_p_mutex.html#ab293e6a549bb2a546e53ebd9a1b7c2aa">ScopedOpenMPMutex</a> (const <a class="el" href="classg2o_1_1_scoped_open_m_p_mutex.html">ScopedOpenMPMutex</a> &amp;)</td></tr>
+<tr class="separator:ab293e6a549bb2a546e53ebd9a1b7c2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c41c4feafc825eae71097d2e6896fb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_scoped_open_m_p_mutex.html#a9c41c4feafc825eae71097d2e6896fb5">operator=</a> (const <a class="el" href="classg2o_1_1_scoped_open_m_p_mutex.html">ScopedOpenMPMutex</a> &amp;)</td></tr>
+<tr class="separator:a9c41c4feafc825eae71097d2e6896fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6fc0c5ebf1c40a7de6821f9ba78ea68f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classg2o_1_1_open_m_p_mutex.html">OpenMPMutex</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_scoped_open_m_p_mutex.html#a6fc0c5ebf1c40a7de6821f9ba78ea68f">_mutex</a></td></tr>
+<tr class="separator:a6fc0c5ebf1c40a7de6821f9ba78ea68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>lock a mutex within a scope </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abb18bffae04b138447870b58ab158f56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb18bffae04b138447870b58ab158f56">&#9670;&nbsp;</a></span>ScopedOpenMPMutex()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb18bffae04b138447870b58ab158f56">&#9670;&nbsp;</a></span>ScopedOpenMPMutex() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,13 +154,89 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab293e6a549bb2a546e53ebd9a1b7c2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab293e6a549bb2a546e53ebd9a1b7c2aa">&#9670;&nbsp;</a></span>ScopedOpenMPMutex() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">g2o::ScopedOpenMPMutex::ScopedOpenMPMutex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classg2o_1_1_scoped_open_m_p_mutex.html">ScopedOpenMPMutex</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9c41c4feafc825eae71097d2e6896fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c41c4feafc825eae71097d2e6896fb5">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void g2o::ScopedOpenMPMutex::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classg2o_1_1_scoped_open_m_p_mutex.html">ScopedOpenMPMutex</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6fc0c5ebf1c40a7de6821f9ba78ea68f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc0c5ebf1c40a7de6821f9ba78ea68f">&#9670;&nbsp;</a></span>_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classg2o_1_1_open_m_p_mutex.html">OpenMPMutex</a>* const g2o::ScopedOpenMPMutex::_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="openmp__mutex_8h_source.html">openmp_mutex.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="openmp__mutex_8h_source.html">openmp_mutex.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:25 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

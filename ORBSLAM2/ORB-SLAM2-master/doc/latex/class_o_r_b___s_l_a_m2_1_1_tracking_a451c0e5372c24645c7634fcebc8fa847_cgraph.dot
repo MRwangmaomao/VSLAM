@@ -1,0 +1,13 @@
+digraph "ORB_SLAM2::Tracking::SearchLocalPoints"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node90 [label="ORB_SLAM2::Tracking\l::SearchLocalPoints",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node90 -> Node91 [color="midnightblue",fontsize="10",style="solid"];
+  Node91 [label="ORB_SLAM2::MapPoint\l::IncreaseVisible",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_map_point.html#a0a234f5bd6bc19a9ea55fad0c9e6db5f",tooltip="Increase Visible. "];
+  Node90 -> Node92 [color="midnightblue",fontsize="10",style="solid"];
+  Node92 [label="ORB_SLAM2::Frame::isInFrustum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_frame.html#a0929e100e3380dba1baba12dfa8904c4",tooltip="判断一个点是否在视野内 "];
+  Node90 -> Node93 [color="midnightblue",fontsize="10",style="solid"];
+  Node93 [label="ORB_SLAM2::ORBmatcher\l::SearchByProjection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher.html#ae43d042858a3a3ca4238bb4ca519f196",tooltip="通过投影，对Local MapPoint进行跟踪 "];
+}

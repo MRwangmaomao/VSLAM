@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: DBoW2::FClass Class Reference</title>
+<title>ORB-SLAM2: DBoW2::FClass Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -66,6 +67,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="class_d_bo_w2_1_1_f_class-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DBoW2::FClass Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -85,16 +89,268 @@ Inheritance diagram for DBoW2::FClass:</div>
 <area href="class_d_bo_w2_1_1_f_o_r_b.html" title="Functions to manipulate ORB descriptors. " alt="DBoW2::FORB" shape="rect" coords="0,56,99,80"/>
 </map>
  </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a9c94e662003f61413fd542d67b45c3a9"><td class="memItemLeft" align="right" valign="top">typedef const TDescriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_bo_w2_1_1_f_class.html#a9c94e662003f61413fd542d67b45c3a9">pDescriptor</a></td></tr>
+<tr class="separator:a9c94e662003f61413fd542d67b45c3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a2f5859fa3acdf4f2a8a64d7e09de54ab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_bo_w2_1_1_f_class.html#a2f5859fa3acdf4f2a8a64d7e09de54ab">meanValue</a> (const std::vector&lt; <a class="el" href="class_d_bo_w2_1_1_f_class.html#a9c94e662003f61413fd542d67b45c3a9">pDescriptor</a> &gt; &amp;descriptors, TDescriptor &amp;mean)=0</td></tr>
+<tr class="separator:a2f5859fa3acdf4f2a8a64d7e09de54ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a56d4737dd67258389c808dbd10befa8c"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_bo_w2_1_1_f_class.html#a56d4737dd67258389c808dbd10befa8c">distance</a> (const TDescriptor &amp;a, const TDescriptor &amp;b)</td></tr>
+<tr class="separator:a56d4737dd67258389c808dbd10befa8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2561d74f7d9057c0887c12350f00c2"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_bo_w2_1_1_f_class.html#aeb2561d74f7d9057c0887c12350f00c2">toString</a> (const TDescriptor &amp;a)</td></tr>
+<tr class="separator:aeb2561d74f7d9057c0887c12350f00c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f27985bf4c13f0a6c12ebc4822c1217"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_bo_w2_1_1_f_class.html#a0f27985bf4c13f0a6c12ebc4822c1217">fromString</a> (TDescriptor &amp;a, const std::string &amp;s)</td></tr>
+<tr class="separator:a0f27985bf4c13f0a6c12ebc4822c1217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a6ac7c718818f7a068a4aaae3e3b45"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_d_bo_w2_1_1_f_class.html#a28a6ac7c718818f7a068a4aaae3e3b45">toMat32F</a> (const std::vector&lt; TDescriptor &gt; &amp;descriptors, cv::Mat &amp;mat)</td></tr>
+<tr class="separator:a28a6ac7c718818f7a068a4aaae3e3b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic class to encapsulate functions to manage descriptors. </p>
 <p>This class must be inherited. Derived classes can be used as the parameter F when creating Templated structures (<a class="el" href="class_d_bo_w2_1_1_templated_vocabulary.html" title="Generic Vocabulary. ">TemplatedVocabulary</a>, TemplatedDatabase, ...) </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>Thirdparty/DBoW2/DBoW2/<a class="el" href="_f_class_8h_source.html">FClass.h</a></li>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a9c94e662003f61413fd542d67b45c3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c94e662003f61413fd542d67b45c3a9">&#9670;&nbsp;</a></span>pDescriptor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef const TDescriptor* <a class="el" href="class_d_bo_w2_1_1_f_class.html#a9c94e662003f61413fd542d67b45c3a9">DBoW2::FClass::pDescriptor</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a56d4737dd67258389c808dbd10befa8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d4737dd67258389c808dbd10befa8c">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double DBoW2::FClass::distance </td>
+          <td>(</td>
+          <td class="paramtype">const TDescriptor &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TDescriptor &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the distance between two descriptors </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>distance </dd></dl>
+
+</div>
+</div>
+<a id="a0f27985bf4c13f0a6c12ebc4822c1217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f27985bf4c13f0a6c12ebc4822c1217">&#9670;&nbsp;</a></span>fromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void DBoW2::FClass::fromString </td>
+          <td>(</td>
+          <td class="paramtype">TDescriptor &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a descriptor from a string </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>descriptor </td></tr>
+    <tr><td class="paramname">s</td><td>string version </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f5859fa3acdf4f2a8a64d7e09de54ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5859fa3acdf4f2a8a64d7e09de54ab">&#9670;&nbsp;</a></span>meanValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void DBoW2::FClass::meanValue </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_d_bo_w2_1_1_f_class.html#a9c94e662003f61413fd542d67b45c3a9">pDescriptor</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>descriptors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TDescriptor &amp;&#160;</td>
+          <td class="paramname"><em>mean</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Calculates the mean value of a set of descriptors </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptors</td><td></td></tr>
+    <tr><td class="paramname">mean</td><td>mean descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28a6ac7c718818f7a068a4aaae3e3b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a6ac7c718818f7a068a4aaae3e3b45">&#9670;&nbsp;</a></span>toMat32F()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void DBoW2::FClass::toMat32F </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; TDescriptor &gt; &amp;&#160;</td>
+          <td class="paramname"><em>descriptors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a mat with the descriptors in float format </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descriptors</td><td></td></tr>
+    <tr><td class="paramname">mat</td><td>(out) NxL 32F matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb2561d74f7d9057c0887c12350f00c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb2561d74f7d9057c0887c12350f00c2">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string DBoW2::FClass::toString </td>
+          <td>(</td>
+          <td class="paramtype">const TDescriptor &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns a string version of the descriptor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string version </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/DBoW2/DBoW2/<a class="el" href="_f_class_8h_source.html">FClass.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:48:17 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

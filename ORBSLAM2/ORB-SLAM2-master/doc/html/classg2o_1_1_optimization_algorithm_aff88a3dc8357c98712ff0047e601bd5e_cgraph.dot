@@ -1,0 +1,9 @@
+digraph "g2o::OptimizationAlgorithm::setOptimizer"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node8 [label="g2o::OptimizationAlgorithm\l::setOptimizer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="g2o::OptimizationAlgorithm\l::optimizer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimization_algorithm.html#a040b3e3fd814d9928fa73ae6e98cedc5",tooltip="return the optimizer operating on "];
+}

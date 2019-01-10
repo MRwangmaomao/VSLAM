@@ -1,0 +1,13 @@
+digraph "g2o::LinearSolver&lt; MatrixType &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="g2o::LinearSolver\<\l MatrixType \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="g2o::LinearSolverCCS\l\< MatrixType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_linear_solver_c_c_s.html",tooltip="Solver with faster iterating structure for the linear matrix. "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="g2o::LinearSolverDense\l\< MatrixType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_linear_solver_dense.html",tooltip="linear solver using dense cholesky decomposition "];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="g2o::LinearSolverEigen\l\< MatrixType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_linear_solver_eigen.html",tooltip="linear solver which uses the sparse Cholesky solver from Eigen "];
+}

@@ -1,0 +1,9 @@
+digraph "DBoW2::TemplatedVocabulary::getWeightingType"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node38 [label="DBoW2::TemplatedVocabulary\l::getWeightingType",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node38 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="DBoW2::operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_d_bo_w2.html#aecdf616fe16d2cf09f521a603b9d43f1"];
+}

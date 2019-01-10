@@ -1,0 +1,18 @@
+digraph "D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6238d635334f7e809f450ee18181fd21 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="g2o" fontname="Helvetica", fontsize="10", URL="dir_6238d635334f7e809f450ee18181fd21.html"]
+  subgraph clusterdir_62a53d30c17c36057e41412a1a4f77b8 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_62a53d30c17c36057e41412a1a4f77b8.html"];
+    dir_62a53d30c17c36057e41412a1a4f77b8 [shape=plaintext label="g2o"];
+    dir_b7aaf3f9367a0f07449e9b09401b4637 [shape=box label="core" color="black" fillcolor="white" style="filled" URL="dir_b7aaf3f9367a0f07449e9b09401b4637.html"];
+    dir_39861191ef66519c765a3f62ed95a37f [shape=box label="solvers" color="black" fillcolor="white" style="filled" URL="dir_39861191ef66519c765a3f62ed95a37f.html"];
+    dir_8060ee540022a2c52e71c5c2c8062ae1 [shape=box label="stuff" color="black" fillcolor="white" style="filled" URL="dir_8060ee540022a2c52e71c5c2c8062ae1.html"];
+    dir_1e6c3abd33ecc5404f9a57f0945c0244 [shape=box label="types" color="black" fillcolor="white" style="filled" URL="dir_1e6c3abd33ecc5404f9a57f0945c0244.html"];
+  }
+  }
+  dir_b7aaf3f9367a0f07449e9b09401b4637->dir_8060ee540022a2c52e71c5c2c8062ae1 [headlabel="11", labeldistance=1.5 headhref="dir_000008_000010.html"];
+  dir_39861191ef66519c765a3f62ed95a37f->dir_8060ee540022a2c52e71c5c2c8062ae1 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000010.html"];
+}

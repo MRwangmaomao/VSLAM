@@ -26,6 +26,25 @@ void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a872b93687086460e398
 \item 
 \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}} $\ast$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_aa10e7a80919749c11774eb84219f0a4b}{mp\+Map}}
 \end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_af26fb341deb8fac97ff3c19e61326f21}{m\+Key\+Frame\+Size}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_afbdf0b3ccfbbbcec719d6c8b2ed5832d}{m\+Key\+Frame\+Line\+Width}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a3ba8aa0b866fc4bfde76d5e8f592be7b}{m\+Graph\+Line\+Width}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_ad98a7d7b4aaee890a41696bef0786b84}{m\+Point\+Size}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a485491f1257e132b10a4d129b4f3f9ce}{m\+Camera\+Size}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a9d9d5a9b0b0c73ac47288bb31ab02487}{m\+Camera\+Line\+Width}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a1df47d70a2609cd77d7be569d053e908}{m\+Camera\+Pose}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_adf8ac349e12a7ae5b8c7e4af7a806ee5}{m\+Mutex\+Camera}}
+\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -77,15 +96,63 @@ void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map_drawer_a872b93687086460e398
 
 
 \subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_a9d9d5a9b0b0c73ac47288bb31ab02487}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_a9d9d5a9b0b0c73ac47288bb31ab02487}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!m\+Camera\+Line\+Width@{m\+Camera\+Line\+Width}}
+\index{m\+Camera\+Line\+Width@{m\+Camera\+Line\+Width}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{m\+Camera\+Line\+Width}{mCameraLineWidth}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::m\+Camera\+Line\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_a1df47d70a2609cd77d7be569d053e908}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_a1df47d70a2609cd77d7be569d053e908}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!m\+Camera\+Pose@{m\+Camera\+Pose}}
+\index{m\+Camera\+Pose@{m\+Camera\+Pose}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{m\+Camera\+Pose}{mCameraPose}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::m\+Camera\+Pose\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_a485491f1257e132b10a4d129b4f3f9ce}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_a485491f1257e132b10a4d129b4f3f9ce}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!m\+Camera\+Size@{m\+Camera\+Size}}
+\index{m\+Camera\+Size@{m\+Camera\+Size}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{m\+Camera\+Size}{mCameraSize}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::m\+Camera\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_a3ba8aa0b866fc4bfde76d5e8f592be7b}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_a3ba8aa0b866fc4bfde76d5e8f592be7b}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!m\+Graph\+Line\+Width@{m\+Graph\+Line\+Width}}
+\index{m\+Graph\+Line\+Width@{m\+Graph\+Line\+Width}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{m\+Graph\+Line\+Width}{mGraphLineWidth}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::m\+Graph\+Line\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_afbdf0b3ccfbbbcec719d6c8b2ed5832d}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_afbdf0b3ccfbbbcec719d6c8b2ed5832d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!m\+Key\+Frame\+Line\+Width@{m\+Key\+Frame\+Line\+Width}}
+\index{m\+Key\+Frame\+Line\+Width@{m\+Key\+Frame\+Line\+Width}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{m\+Key\+Frame\+Line\+Width}{mKeyFrameLineWidth}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::m\+Key\+Frame\+Line\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_af26fb341deb8fac97ff3c19e61326f21}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_af26fb341deb8fac97ff3c19e61326f21}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!m\+Key\+Frame\+Size@{m\+Key\+Frame\+Size}}
+\index{m\+Key\+Frame\+Size@{m\+Key\+Frame\+Size}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{m\+Key\+Frame\+Size}{mKeyFrameSize}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::m\+Key\+Frame\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_adf8ac349e12a7ae5b8c7e4af7a806ee5}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_adf8ac349e12a7ae5b8c7e4af7a806ee5}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!m\+Mutex\+Camera@{m\+Mutex\+Camera}}
+\index{m\+Mutex\+Camera@{m\+Mutex\+Camera}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{m\+Mutex\+Camera}{mMutexCamera}}
+{\footnotesize\ttfamily std\+::mutex O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::m\+Mutex\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_aa10e7a80919749c11774eb84219f0a4b}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_aa10e7a80919749c11774eb84219f0a4b}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!mp\+Map@{mp\+Map}}
 \index{mp\+Map@{mp\+Map}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
 \subsubsection{\texorpdfstring{mp\+Map}{mpMap}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_map}{Map}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::mp\+Map}
 
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_map_drawer_ad98a7d7b4aaee890a41696bef0786b84}\label{class_o_r_b___s_l_a_m2_1_1_map_drawer_ad98a7d7b4aaee890a41696bef0786b84}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}!m\+Point\+Size@{m\+Point\+Size}}
+\index{m\+Point\+Size@{m\+Point\+Size}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer}}
+\subsubsection{\texorpdfstring{m\+Point\+Size}{mPointSize}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Map\+Drawer\+::m\+Point\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{_map_drawer_8h}{Map\+Drawer.\+h}}\item 
-src/\mbox{\hyperlink{_map_drawer_8cpp}{Map\+Drawer.\+cpp}}\end{DoxyCompactItemize}
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/include/\mbox{\hyperlink{_map_drawer_8h}{Map\+Drawer.\+h}}\item 
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/src/\mbox{\hyperlink{_map_drawer_8cpp}{Map\+Drawer.\+cpp}}\end{DoxyCompactItemize}

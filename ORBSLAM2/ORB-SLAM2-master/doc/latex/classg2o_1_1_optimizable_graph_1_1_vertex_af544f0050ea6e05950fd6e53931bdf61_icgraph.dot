@@ -1,0 +1,9 @@
+digraph "g2o::OptimizableGraph::Vertex::copyB"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="g2o::OptimizableGraph\l::Vertex::copyB",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="g2o::BlockSolver::buildSystem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_block_solver.html#a2654a8d52f38e5ce23720a8de302e2e7"];
+}

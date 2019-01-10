@@ -1,0 +1,25 @@
+digraph "g2o::OptimizableGraph::Vertex"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="g2o::OptimizableGraph\l::Vertex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="g2o::HyperGraph::Vertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_vertex.html",tooltip="abstract Vertex, your types must derive from that one "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="g2o::HyperGraph::HyperGraph\lElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1_hyper_graph_1_1_hyper_graph_element.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="g2o::BaseVertex\< 3,\l Vector3d \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_base_vertex.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="g2o::VertexSBAPointXYZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_vertex_s_b_a_point_x_y_z.html",tooltip="Point vertex, XYZ. "];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="g2o::BaseVertex\< 6,\l SE3Quat \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_base_vertex.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="g2o::VertexSE3Expmap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_vertex_s_e3_expmap.html",tooltip="SE3 Vertex parameterized internally with a transformation matrix and externally with its exponential ..."];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="g2o::BaseVertex\< 7,\l Sim3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_base_vertex.html"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="g2o::VertexSim3Expmap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_vertex_sim3_expmap.html",tooltip="Sim3 Vertex, (x,y,z,qw,qx,qy,qz) the parameterization for the increments constructed is a 7d vector (..."];
+  Node0 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="g2o::BaseVertex\< D, T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_base_vertex.html",tooltip="Templatized BaseVertex. "];
+}

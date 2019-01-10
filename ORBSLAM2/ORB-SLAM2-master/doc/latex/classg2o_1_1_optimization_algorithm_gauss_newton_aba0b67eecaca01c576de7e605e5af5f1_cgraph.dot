@@ -1,0 +1,26 @@
+digraph "g2o::OptimizationAlgorithmGaussNewton::solve"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5 [label="g2o::OptimizationAlgorithm\lGaussNewton::solve",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="g2o::Solver::optimizer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#a266bc31d289e824de6166522579ed385",tooltip="the optimizer (graph) on which the solver works "];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="g2o::SparseOptimizer\l::computeActiveErrors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_optimizer.html#a09572668aa85b75a5bebf7b66401ce8f"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="g2o::arrayHasNaN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$misc_8h.html#a123840a60e0d1dde58088d15a1e1fffa"];
+  Node8 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="g2o::OptimizableGraph\l::Edge::errorData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_edge.html#a5f2a4b6efa2d0ae600f94a28a6ba58cf",tooltip="returns the error vector cached after calling the computeError; "];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="g2o::OptimizableGraph\l::Edge::dimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_edge.html#a0eb19697e201bd195c45ca78d55fd041",tooltip="returns the dimensions of the error function "];
+  Node5 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="g2o::Solver::buildStructure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#a6c93ac0f528ffe05867d33150c54f46f"];
+  Node5 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="g2o::Solver::buildSystem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#ac1565e85d5ca68a87ad7f06f8164a8c0"];
+  Node5 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="g2o::Solver::solve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#a9c359a886db57f2f81e54a2113f3bd38"];
+  Node5 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="g2o::Solver::x",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#acb097d8568624a1f3af4dba808e5593b",tooltip="return x, the solution vector "];
+}

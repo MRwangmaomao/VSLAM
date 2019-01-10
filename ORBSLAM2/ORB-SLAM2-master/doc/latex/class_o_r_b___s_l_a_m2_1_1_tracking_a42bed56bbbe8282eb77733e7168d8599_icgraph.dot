@@ -1,0 +1,13 @@
+digraph "ORB_SLAM2::Tracking::UpdateLocalKeyFrames"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node339 [label="ORB_SLAM2::Tracking\l::UpdateLocalKeyFrames",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node339 -> Node340 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node340 [label="ORB_SLAM2::Tracking\l::UpdateLocalMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a22723e9972c18a888dd51a82eec27b0a",tooltip="更新LocalMap "];
+  Node340 -> Node341 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node341 [label="ORB_SLAM2::Tracking\l::TrackLocalMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af670c614f4e10d58c9f7aad9865b5c08",tooltip="对Local Map的MapPoints进行跟踪 "];
+  Node341 -> Node342 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node342 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+}

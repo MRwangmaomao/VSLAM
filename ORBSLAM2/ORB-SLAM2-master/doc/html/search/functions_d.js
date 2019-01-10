@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main',['main',['../mono__euroc_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mono_euroc.cc'],['../mono__kitti_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mono_kitti.cc'],['../mono__tum_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;mono_tum.cc'],['../rgbd__tum_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;rgbd_tum.cc'],['../ros__mono_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;ros_mono.cc'],['../ros__rgbd_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;ros_rgbd.cc'],['../ros__stereo_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;ros_stereo.cc'],['../stereo___eu_ro_c_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;stereo_EuRoC.cpp'],['../stereo__kitti_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;stereo_kitti.cpp'],['../run__zed_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;run_zed.cpp'],['../sparse__block__matrix__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;sparse_block_matrix_test.cpp'],['../bin__vocabulary_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;bin_vocabulary.cpp']]],
+  ['main',['main',['../sparse__block__matrix__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'sparse_block_matrix_test.cpp']]],
   ['makeproperty',['makeProperty',['../classg2o_1_1_property_map.html#add6e602dcd651b8883c30c350d23692f',1,'g2o::PropertyMap']]],
   ['map',['map',['../classg2o_1_1_s_e3_quat.html#a6b2c679d255e1adc8e734215703cf01c',1,'g2o::SE3Quat::map()'],['../structg2o_1_1_sim3.html#a577ba985864cab536688123df6063b39',1,'g2o::Sim3::map()'],['../class_o_r_b___s_l_a_m2_1_1_map.html#a1ab4040dee1287a387124b7d52ac8a02',1,'ORB_SLAM2::Map::Map()']]],
   ['mapdrawer',['MapDrawer',['../class_o_r_b___s_l_a_m2_1_1_map_drawer.html#a649a10671736e192e85a6d824d776fc1',1,'ORB_SLAM2::MapDrawer']]],
@@ -10,11 +10,12 @@ var searchData=
   ['mappointsinmap',['MapPointsInMap',['../class_o_r_b___s_l_a_m2_1_1_map.html#ad2d7846734c8cb0421d67ff3907649ad',1,'ORB_SLAM2::Map']]],
   ['marginalcovariancecholesky',['MarginalCovarianceCholesky',['../classg2o_1_1_marginal_covariance_cholesky.html#a1fab5946726badbb38c2b2aa54a0118c',1,'g2o::MarginalCovarianceCholesky']]],
   ['marginalized',['marginalized',['../classg2o_1_1_optimizable_graph_1_1_vertex.html#a216d79149edcfa9f666140205159fde8',1,'g2o::OptimizableGraph::Vertex']]],
+  ['mat_5fto_5fquat',['mat_to_quat',['../class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a54b16a3fb045afe5425c004ec7b5fa21',1,'ORB_SLAM2::PnPsolver']]],
   ['matrixelem',['MatrixElem',['../structg2o_1_1_matrix_elem.html#a023cdda7c4681cd4867b9205e345e0e5',1,'g2o::MatrixElem']]],
   ['matrixstructure',['MatrixStructure',['../classg2o_1_1_matrix_structure.html#aa016529c47ff242c5547301041360b5e',1,'g2o::MatrixStructure']]],
   ['maxdimension',['maxDimension',['../structg2o_1_1_optimizable_graph.html#aec95bac1366d39b40703f2aca375f505',1,'g2o::OptimizableGraph']]],
   ['maxtrialsafterfailure',['maxTrialsAfterFailure',['../classg2o_1_1_optimization_algorithm_levenberg.html#a5d467a866c6ee90aaed9b4ccaf29e5e5',1,'g2o::OptimizationAlgorithmLevenberg']]],
-  ['meanvalue',['meanValue',['../class_d_bo_w2_1_1_f_o_r_b.html#a9d78adf3c5c6fe8f2e8668e247acf5cc',1,'DBoW2::FORB']]],
+  ['meanvalue',['meanValue',['../class_d_bo_w2_1_1_f_class.html#a2f5859fa3acdf4f2a8a64d7e09de54ab',1,'DBoW2::FClass::meanValue()'],['../class_d_bo_w2_1_1_f_o_r_b.html#a9d78adf3c5c6fe8f2e8668e247acf5cc',1,'DBoW2::FORB::meanValue()']]],
   ['measurement',['measurement',['../classg2o_1_1_base_edge.html#a8e890d43f491afdd035713ff176ddd5c',1,'g2o::BaseEdge']]],
   ['measurementdimension',['measurementDimension',['../classg2o_1_1_optimizable_graph_1_1_edge.html#a3441f5e149c30c50ce8557574ac7d1a8',1,'g2o::OptimizableGraph::Edge']]],
   ['minimalestimatedimension',['minimalEstimateDimension',['../classg2o_1_1_optimizable_graph_1_1_vertex.html#ae14027b23254032d30319eeb7f487ca5',1,'g2o::OptimizableGraph::Vertex']]],

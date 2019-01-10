@@ -11,7 +11,6 @@ var searchData=
   ['base_5fvertex_2ehpp',['base_vertex.hpp',['../base__vertex_8hpp.html',1,'']]],
   ['batch_5fstats_2ecpp',['batch_stats.cpp',['../batch__stats_8cpp.html',1,'']]],
   ['batch_5fstats_2eh',['batch_stats.h',['../batch__stats_8h.html',1,'']]],
-  ['bin_5fvocabulary_2ecpp',['bin_vocabulary.cpp',['../bin__vocabulary_8cpp.html',1,'']]],
   ['block_5fsolver_2eh',['block_solver.h',['../block__solver_8h.html',1,'']]],
   ['block_5fsolver_2ehpp',['block_solver.hpp',['../block__solver_8hpp.html',1,'']]],
   ['bowvector_2ecpp',['BowVector.cpp',['../_bow_vector_8cpp.html',1,'']]],

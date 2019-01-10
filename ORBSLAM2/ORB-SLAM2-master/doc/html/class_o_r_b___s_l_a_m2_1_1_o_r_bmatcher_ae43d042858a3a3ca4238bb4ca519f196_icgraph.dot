@@ -1,0 +1,18 @@
+digraph "ORB_SLAM2::ORBmatcher::SearchByProjection"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14 [label="ORB_SLAM2::ORBmatcher\l::SearchByProjection",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="ORB_SLAM2::LoopClosing\l::ComputeSim3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_loop_closing.html#ab4fcf814eed5b5dd2aec96454561b078",tooltip="计算当前帧与闭环帧的Sim3变换等 "];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="ORB_SLAM2::Tracking\l::TrackWithMotionModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#aca19f1d69b30a6c6e49281d422ac8298",tooltip="根据匀速度模型对上一帧的MapPoints进行跟踪 "];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+  Node14 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="ORB_SLAM2::Tracking\l::SearchLocalPoints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a451c0e5372c24645c7634fcebc8fa847",tooltip="对Local MapPoints进行跟踪 "];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="ORB_SLAM2::Tracking\l::TrackLocalMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af670c614f4e10d58c9f7aad9865b5c08",tooltip="对Local Map的MapPoints进行跟踪 "];
+  Node19 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

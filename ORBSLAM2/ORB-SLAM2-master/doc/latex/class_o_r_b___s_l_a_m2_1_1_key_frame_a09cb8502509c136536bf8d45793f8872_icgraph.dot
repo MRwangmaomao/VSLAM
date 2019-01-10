@@ -1,0 +1,23 @@
+digraph "ORB_SLAM2::KeyFrame::UpdateBestCovisibles"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node115 [label="ORB_SLAM2::KeyFrame\l::UpdateBestCovisibles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node115 -> Node116 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node116 [label="ORB_SLAM2::KeyFrame\l::AddConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a8d21a23485b7c104a73d6ad3cccf4e93",tooltip="为关键帧之间添加连接 "];
+  Node116 -> Node117 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node117 [label="ORB_SLAM2::KeyFrame\l::UpdateConnections",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#afe7026956c91d4e0a01812be9dc7e8d5",tooltip="更新图的连接 "];
+  Node117 -> Node118 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node118 [label="ORB_SLAM2::LocalMapping\l::ProcessNewKeyFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_local_mapping.html#a84eea8f268cce9d919a4906ae634dd22",tooltip="处理列表中的关键帧 "];
+  Node117 -> Node119 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node119 [label="ORB_SLAM2::LocalMapping\l::SearchInNeighbors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_local_mapping.html#a5d5e0bc6fd15d9a6bf1ca8a258f104f1"];
+  Node117 -> Node120 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node120 [label="ORB_SLAM2::LoopClosing\l::CorrectLoop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_loop_closing.html#aa007e0678582ec0de5d71280d23af540",tooltip="闭环 "];
+  Node117 -> Node121 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node121 [label="ORB_SLAM2::Tracking\l::CreateInitialMapMonocular",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#afeb077c81cd700d779348b80698086e8",tooltip="CreateInitialMapMonocular. "];
+  Node121 -> Node122 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node122 [label="ORB_SLAM2::Tracking\l::MonocularInitialization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a7e81c68bb6ced27fcbfa2edec38ef6e0",tooltip="单目的地图初始化 "];
+  Node122 -> Node123 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node123 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+}

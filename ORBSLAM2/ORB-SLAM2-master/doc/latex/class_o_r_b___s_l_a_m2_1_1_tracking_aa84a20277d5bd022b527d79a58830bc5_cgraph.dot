@@ -1,0 +1,15 @@
+digraph "ORB_SLAM2::Tracking::UpdateLastFrame"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node329 [label="ORB_SLAM2::Tracking\l::UpdateLastFrame",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node329 -> Node330 [color="midnightblue",fontsize="10",style="solid"];
+  Node330 [label="ORB_SLAM2::Frame::SetPose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_frame.html#a95cf2ea68735ef3e8c2d820eada11bf4",tooltip="Set the camera pose. "];
+  Node330 -> Node331 [color="midnightblue",fontsize="10",style="solid"];
+  Node331 [label="ORB_SLAM2::Frame::Update\lPoseMatrices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_frame.html#a0a18d3024a23f6fa2cab9c7d987598c2",tooltip="Computes rotation, translation and camera center matrices from the camera pose. "];
+  Node329 -> Node332 [color="midnightblue",fontsize="10",style="solid"];
+  Node332 [label="ORB_SLAM2::KeyFrame\l::GetPose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a49b5e212c1335cf585eaf6bbc4fed85c",tooltip="返回该关键帧的位姿变换矩阵，相机坐标系到世界坐标系 "];
+  Node329 -> Node333 [color="midnightblue",fontsize="10",style="solid"];
+  Node333 [label="ORB_SLAM2::Frame::Unproject\lStereo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_frame.html#a46084d187e1fc60181e1c72f77c733ca",tooltip="Backprojects a keypoint (if stereo/depth info available) into 3D world coordinates. "];
+}

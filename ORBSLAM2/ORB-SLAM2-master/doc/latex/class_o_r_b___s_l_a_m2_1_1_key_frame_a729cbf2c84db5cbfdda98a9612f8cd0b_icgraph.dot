@@ -1,0 +1,11 @@
+digraph "ORB_SLAM2::KeyFrame::TrackedMapPoints"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node108 [label="ORB_SLAM2::KeyFrame\l::TrackedMapPoints",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node108 -> Node109 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node109 [label="ORB_SLAM2::Tracking\l::NeedNewKeyFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#afc013c5a20bc6beb772b96a875b19216",tooltip="断当前帧是否为关键帧 "];
+  Node109 -> Node110 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node110 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+}

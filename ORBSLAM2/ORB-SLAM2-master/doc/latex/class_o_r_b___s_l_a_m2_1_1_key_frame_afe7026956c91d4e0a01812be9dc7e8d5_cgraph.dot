@@ -1,0 +1,11 @@
+digraph "ORB_SLAM2::KeyFrame::UpdateConnections"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node124 [label="ORB_SLAM2::KeyFrame\l::UpdateConnections",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node124 -> Node125 [color="midnightblue",fontsize="10",style="solid"];
+  Node125 [label="ORB_SLAM2::KeyFrame\l::AddConnection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a8d21a23485b7c104a73d6ad3cccf4e93",tooltip="为关键帧之间添加连接 "];
+  Node125 -> Node126 [color="midnightblue",fontsize="10",style="solid"];
+  Node126 [label="ORB_SLAM2::KeyFrame\l::UpdateBestCovisibles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame.html#a09cb8502509c136536bf8d45793f8872",tooltip="按照权重对连接的关键帧进行排序 "];
+}

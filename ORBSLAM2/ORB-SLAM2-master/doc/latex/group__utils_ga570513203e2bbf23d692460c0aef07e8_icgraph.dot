@@ -1,0 +1,9 @@
+digraph "g2o::readLine"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="g2o::readLine",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="g2o::ParameterContainer\l::read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_parameter_container.html#ae5883ac8e2313cab310cf067b0ba12bf",tooltip="read parameters from a stream "];
+}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: g2o::RobustKernelTukey Class Reference</title>
+<title>ORB-SLAM2: g2o::RobustKernelTukey Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -67,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classg2o_1_1_robust_kernel_tukey-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">g2o::RobustKernelTukey Class Reference</div>  </div>
@@ -104,6 +106,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8d85269635c436fca51324d7cb16a798 inherit pub_methods_classg2o_1_1_robust_kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affb1dacfd8507540281ff3af2ae6eeb8 inherit pub_methods_classg2o_1_1_robust_kernel"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_robust_kernel.html#affb1dacfd8507540281ff3af2ae6eeb8">delta</a> () const</td></tr>
 <tr class="separator:affb1dacfd8507540281ff3af2ae6eeb8 inherit pub_methods_classg2o_1_1_robust_kernel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a3964d90966fa04e5d8002c1c52bda718"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_robust_kernel_tukey.html#a3964d90966fa04e5d8002c1c52bda718">_deltaSqr</a></td></tr>
+<tr class="separator:a3964d90966fa04e5d8002c1c52bda718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addca0bfe5d4cafbe0a030c645efd2754"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_robust_kernel_tukey.html#addca0bfe5d4cafbe0a030c645efd2754">_invDeltaSqr</a></td></tr>
+<tr class="separator:addca0bfe5d4cafbe0a030c645efd2754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -192,14 +201,59 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3964d90966fa04e5d8002c1c52bda718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3964d90966fa04e5d8002c1c52bda718">&#9670;&nbsp;</a></span>_deltaSqr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float g2o::RobustKernelTukey::_deltaSqr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addca0bfe5d4cafbe0a030c645efd2754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addca0bfe5d4cafbe0a030c645efd2754">&#9670;&nbsp;</a></span>_invDeltaSqr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float g2o::RobustKernelTukey::_invDeltaSqr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="robust__kernel__impl_8h_source.html">robust_kernel_impl.h</a></li>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="robust__kernel__impl_8cpp.html">robust_kernel_impl.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="robust__kernel__impl_8h_source.html">robust_kernel_impl.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="robust__kernel__impl_8cpp.html">robust_kernel_impl.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:25 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

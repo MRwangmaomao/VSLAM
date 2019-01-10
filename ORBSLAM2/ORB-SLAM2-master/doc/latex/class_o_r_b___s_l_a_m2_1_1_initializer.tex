@@ -16,10 +16,72 @@
 \begin{DoxyCompactList}\small\item\em 给定参考帧构造\+Initializer \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199ab024871d028c2c}{Initialize}} (const \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} \&Current\+Frame, const vector$<$ int $>$ \&v\+Matches12, cv\+::\+Mat \&R21, cv\+::\+Mat \&t21, vector$<$ cv\+::\+Point3f $>$ \&v\+P3D, vector$<$ bool $>$ \&vb\+Triangulated)
 \begin{DoxyCompactList}\small\item\em 并行地计算基础矩阵和单应性矩阵，选取其中一个模型，恢复出最开始两帧之间的相对姿态以及点云 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef pair$<$ int, int $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ad0bf21297bc6271e7d014ce41d6ff7d4}{Match}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a5b0465b2affed7453d30dd85672e9093}{Find\+Homography}} (vector$<$ bool $>$ \&vb\+Matches\+Inliers, float \&score, cv\+::\+Mat \&H21)
+\begin{DoxyCompactList}\small\item\em 计算单应矩阵 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a387c406706472859415c0e7a3594ea04}{Find\+Fundamental}} (vector$<$ bool $>$ \&vb\+Inliers, float \&score, cv\+::\+Mat \&F21)
+\begin{DoxyCompactList}\small\item\em 计算基础矩阵 \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a16d5aa375ed03336cc0dc981861b15da}{Compute\+H21}} (const vector$<$ cv\+::\+Point2f $>$ \&v\+P1, const vector$<$ cv\+::\+Point2f $>$ \&v\+P2)
+\begin{DoxyCompactList}\small\item\em 从特征点匹配求homography（normalized D\+L\+T） \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_aaca077af095ae1de08ebb473af670d1d}{Compute\+F21}} (const vector$<$ cv\+::\+Point2f $>$ \&v\+P1, const vector$<$ cv\+::\+Point2f $>$ \&v\+P2)
+\begin{DoxyCompactList}\small\item\em 从特征点匹配求fundamental matrix（normalized 8点法） \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ac2ac8374ca2a993b8cddc88703ffbe9a}{Check\+Homography}} (const cv\+::\+Mat \&H21, const cv\+::\+Mat \&H12, vector$<$ bool $>$ \&vb\+Matches\+Inliers, float sigma)
+\begin{DoxyCompactList}\small\item\em 对给定的homography matrix打分 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a1c8b74679a5cb1af16c07c8a00c8e8c0}{Check\+Fundamental}} (const cv\+::\+Mat \&F21, vector$<$ bool $>$ \&vb\+Matches\+Inliers, float sigma)
+\begin{DoxyCompactList}\small\item\em 对给定的fundamental matrix打分 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a60796f88f1b3e981ad925a8b566f6315}{ReconstructF}} (vector$<$ bool $>$ \&vb\+Matches\+Inliers, cv\+::\+Mat \&F21, cv\+::\+Mat \&K, cv\+::\+Mat \&R21, cv\+::\+Mat \&t21, vector$<$ cv\+::\+Point3f $>$ \&v\+P3D, vector$<$ bool $>$ \&vb\+Triangulated, float min\+Parallax, int min\+Triangulated)
+\begin{DoxyCompactList}\small\item\em 从\+F恢复R t \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_addc1c05d3b7a5ae35805f69b50f368ea}{ReconstructH}} (vector$<$ bool $>$ \&vb\+Matches\+Inliers, cv\+::\+Mat \&H21, cv\+::\+Mat \&K, cv\+::\+Mat \&R21, cv\+::\+Mat \&t21, vector$<$ cv\+::\+Point3f $>$ \&v\+P3D, vector$<$ bool $>$ \&vb\+Triangulated, float min\+Parallax, int min\+Triangulated)
+\begin{DoxyCompactList}\small\item\em 从\+H恢复R t \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a3bdf78e0f16be44b5ab312aac5cac5af}{Triangulate}} (const cv\+::\+Key\+Point \&kp1, const cv\+::\+Key\+Point \&kp2, const cv\+::\+Mat \&P1, const cv\+::\+Mat \&P2, cv\+::\+Mat \&x3D)
+\begin{DoxyCompactList}\small\item\em 给定投影矩阵\+P1,P2和图像上的点kp1,kp2，从而恢复3\+D坐标 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a44ce7aa73741d900d2becc0d8f14c1af}{Normalize}} (const vector$<$ cv\+::\+Key\+Point $>$ \&v\+Keys, vector$<$ cv\+::\+Point2f $>$ \&v\+Normalized\+Points, cv\+::\+Mat \&T)
+\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a72e79f6486468cde9abd87b873d840e7}{Check\+RT}} (const cv\+::\+Mat \&R, const cv\+::\+Mat \&t, const vector$<$ cv\+::\+Key\+Point $>$ \&v\+Keys1, const vector$<$ cv\+::\+Key\+Point $>$ \&v\+Keys2, const vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ad0bf21297bc6271e7d014ce41d6ff7d4}{Match}} $>$ \&v\+Matches12, vector$<$ bool $>$ \&vb\+Inliers, const cv\+::\+Mat \&K, vector$<$ cv\+::\+Point3f $>$ \&v\+P3D, float th2, vector$<$ bool $>$ \&vb\+Good, float \&parallax)
+\begin{DoxyCompactList}\small\item\em 进行cheirality check，从而进一步找出\+F分解后最合适的解 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a78e9e1a14ee76f6cab0f734fa95793af}{DecomposeE}} (const cv\+::\+Mat \&E, cv\+::\+Mat \&R1, cv\+::\+Mat \&R2, cv\+::\+Mat \&t)
+\begin{DoxyCompactList}\small\item\em 分解\+Essential矩阵 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ cv\+::\+Key\+Point $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_aa4a8bce28d125446b4607f12041c7c13}{mv\+Keys1}}
+\begin{DoxyCompactList}\small\item\em 存储\+Reference Frame中的特征点 \end{DoxyCompactList}\item 
+vector$<$ cv\+::\+Key\+Point $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a034e9d495b47667f3e0bf0bc3190ff05}{mv\+Keys2}}
+\begin{DoxyCompactList}\small\item\em 存储\+Current Frame中的特征点 \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ad0bf21297bc6271e7d014ce41d6ff7d4}{Match}} $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ac4ef04be7036e4629a8b3fa05c7327f5}{mv\+Matches12}}
+\begin{DoxyCompactList}\small\item\em Match的数据结构是pair,mv\+Matches12只记录\+Reference到\+Current匹配上的特征点对 \end{DoxyCompactList}\item 
+vector$<$ bool $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a3a90762e82702f06f6999672ebaa4cb8}{mvb\+Matched1}}
+\begin{DoxyCompactList}\small\item\em 记录\+Reference Frame的每个特征点在\+Current Frame是否有匹配的特征点 \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a557fe4d78becc1dda7a26c71d2254336}{mK}}
+\begin{DoxyCompactList}\small\item\em 相机内参 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ad588868e84cb1b7e256928dd0d50baee}{m\+Sigma}}
+\item 
+float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a7af4e0e177bb75879dac174b758ce7d4}{m\+Sigma2}}
+\begin{DoxyCompactList}\small\item\em 测量误差 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a8d9647dedc212bd1fe05084ec7875a05}{m\+Max\+Iterations}}
+\begin{DoxyCompactList}\small\item\em 算\+Fundamental和\+Homography矩阵时\+R\+A\+N\+S\+A\+C迭代次数 \end{DoxyCompactList}\item 
+vector$<$ vector$<$ size\+\_\+t $>$ $>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a572144f600b28828d4772b0470206afe}{mv\+Sets}}
+\begin{DoxyCompactList}\small\item\em 二维容器，外层容器的大小为迭代次数，内层容器大小为每次迭代算\+H或\+F矩阵需要的点 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 单目\+S\+L\+A\+M初始化相关，双目和\+R\+G\+B\+D不会使用这个类 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_ad0bf21297bc6271e7d014ce41d6ff7d4}\label{class_o_r_b___s_l_a_m2_1_1_initializer_ad0bf21297bc6271e7d014ce41d6ff7d4}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Match@{Match}}
+\index{Match@{Match}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Match}{Match}}
+{\footnotesize\ttfamily typedef pair$<$int,int$>$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ad0bf21297bc6271e7d014ce41d6ff7d4}{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Match}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_ac492345a970665cd8a1b1d8cf41d44af}\label{class_o_r_b___s_l_a_m2_1_1_initializer_ac492345a970665cd8a1b1d8cf41d44af}} 
@@ -44,7 +106,144 @@ bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199a
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199ab024871d028c2c}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199ab024871d028c2c}} 
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a1c8b74679a5cb1af16c07c8a00c8e8c0}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a1c8b74679a5cb1af16c07c8a00c8e8c0}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Check\+Fundamental@{Check\+Fundamental}}
+\index{Check\+Fundamental@{Check\+Fundamental}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Check\+Fundamental()}{CheckFundamental()}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Check\+Fundamental (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{F21,  }\item[{vector$<$ bool $>$ \&}]{vb\+Matches\+Inliers,  }\item[{float}]{sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+对给定的fundamental matrix打分 
+
+\begin{DoxySeeAlso}{See also}
+
+\begin{DoxyItemize}
+\item Author\textquotesingle{}s paper -\/ IV. A\+U\+T\+O\+M\+A\+T\+IC M\+AP I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+ON （2）
+\item Multiple View Geometry in Computer Vision -\/ symmetric transfer errors\+: 4.\+2.\+2 Geometric distance
+\item Multiple View Geometry in Computer Vision -\/ model selection 4.\+7.\+1 R\+A\+N\+S\+AC 
+\end{DoxyItemize}
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_ac2ac8374ca2a993b8cddc88703ffbe9a}\label{class_o_r_b___s_l_a_m2_1_1_initializer_ac2ac8374ca2a993b8cddc88703ffbe9a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Check\+Homography@{Check\+Homography}}
+\index{Check\+Homography@{Check\+Homography}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Check\+Homography()}{CheckHomography()}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Check\+Homography (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{H21,  }\item[{const cv\+::\+Mat \&}]{H12,  }\item[{vector$<$ bool $>$ \&}]{vb\+Matches\+Inliers,  }\item[{float}]{sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+对给定的homography matrix打分 
+
+\begin{DoxySeeAlso}{See also}
+
+\begin{DoxyItemize}
+\item Author\textquotesingle{}s paper -\/ IV. A\+U\+T\+O\+M\+A\+T\+IC M\+AP I\+N\+I\+T\+I\+A\+L\+I\+Z\+A\+T\+I\+ON （2）
+\item Multiple View Geometry in Computer Vision -\/ symmetric transfer errors\+: 4.\+2.\+2 Geometric distance
+\item Multiple View Geometry in Computer Vision -\/ model selection 4.\+7.\+1 R\+A\+N\+S\+AC 
+\end{DoxyItemize}
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a72e79f6486468cde9abd87b873d840e7}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a72e79f6486468cde9abd87b873d840e7}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Check\+RT@{Check\+RT}}
+\index{Check\+RT@{Check\+RT}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Check\+R\+T()}{CheckRT()}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Check\+RT (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{R,  }\item[{const cv\+::\+Mat \&}]{t,  }\item[{const vector$<$ cv\+::\+Key\+Point $>$ \&}]{v\+Keys1,  }\item[{const vector$<$ cv\+::\+Key\+Point $>$ \&}]{v\+Keys2,  }\item[{const vector$<$ \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ad0bf21297bc6271e7d014ce41d6ff7d4}{Match}} $>$ \&}]{v\+Matches12,  }\item[{vector$<$ bool $>$ \&}]{vb\+Inliers,  }\item[{const cv\+::\+Mat \&}]{K,  }\item[{vector$<$ cv\+::\+Point3f $>$ \&}]{v\+P3D,  }\item[{float}]{th2,  }\item[{vector$<$ bool $>$ \&}]{vb\+Good,  }\item[{float \&}]{parallax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+进行cheirality check，从而进一步找出\+F分解后最合适的解 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_aaca077af095ae1de08ebb473af670d1d}\label{class_o_r_b___s_l_a_m2_1_1_initializer_aaca077af095ae1de08ebb473af670d1d}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Compute\+F21@{Compute\+F21}}
+\index{Compute\+F21@{Compute\+F21}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Compute\+F21()}{ComputeF21()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Compute\+F21 (\begin{DoxyParamCaption}\item[{const vector$<$ cv\+::\+Point2f $>$ \&}]{v\+P1,  }\item[{const vector$<$ cv\+::\+Point2f $>$ \&}]{v\+P2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+从特征点匹配求fundamental matrix（normalized 8点法） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+P1} & 归一化后的点, in reference frame \\
+\hline
+{\em v\+P2} & 归一化后的点, in current frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+基础矩阵 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Multiple View Geometry in Computer Vision -\/ Algorithm 11.\+1 p282 (中文版 p191) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a16d5aa375ed03336cc0dc981861b15da}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a16d5aa375ed03336cc0dc981861b15da}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Compute\+H21@{Compute\+H21}}
+\index{Compute\+H21@{Compute\+H21}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Compute\+H21()}{ComputeH21()}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Compute\+H21 (\begin{DoxyParamCaption}\item[{const vector$<$ cv\+::\+Point2f $>$ \&}]{v\+P1,  }\item[{const vector$<$ cv\+::\+Point2f $>$ \&}]{v\+P2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+从特征点匹配求homography（normalized D\+L\+T） 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+P1} & 归一化后的点, in reference frame \\
+\hline
+{\em v\+P2} & 归一化后的点, in current frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+单应矩阵 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Multiple View Geometry in Computer Vision -\/ Algorithm 4.\+2 p109 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a78e9e1a14ee76f6cab0f734fa95793af}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a78e9e1a14ee76f6cab0f734fa95793af}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!DecomposeE@{DecomposeE}}
+\index{DecomposeE@{DecomposeE}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Decompose\+E()}{DecomposeE()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+DecomposeE (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{E,  }\item[{cv\+::\+Mat \&}]{R1,  }\item[{cv\+::\+Mat \&}]{R2,  }\item[{cv\+::\+Mat \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+分解\+Essential矩阵 
+
+F矩阵通过结合内参可以得到\+Essential矩阵，分解\+E矩阵将得到4组解 ~\newline
+这4组解分别为\mbox{[}R1,t\mbox{]},\mbox{[}R1,-\/t\mbox{]},\mbox{[}R2,t\mbox{]},\mbox{[}R2,-\/t\mbox{]} 
+\begin{DoxyParams}{Parameters}
+{\em E} & Essential Matrix \\
+\hline
+{\em R1} & Rotation Matrix 1 \\
+\hline
+{\em R2} & Rotation Matrix 2 \\
+\hline
+{\em t} & Translation \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Multiple View Geometry in Computer Vision -\/ Result 9.\+19 p259 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a387c406706472859415c0e7a3594ea04}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a387c406706472859415c0e7a3594ea04}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Find\+Fundamental@{Find\+Fundamental}}
+\index{Find\+Fundamental@{Find\+Fundamental}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Find\+Fundamental()}{FindFundamental()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Find\+Fundamental (\begin{DoxyParamCaption}\item[{vector$<$ bool $>$ \&}]{vb\+Matches\+Inliers,  }\item[{float \&}]{score,  }\item[{cv\+::\+Mat \&}]{F21 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+计算基础矩阵 
+
+假设场景为非平面情况下通过前两帧求取\+Fundamental矩阵(current frame 2 到 reference frame 1),并得到该模型的评分 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a5b0465b2affed7453d30dd85672e9093}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a5b0465b2affed7453d30dd85672e9093}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Find\+Homography@{Find\+Homography}}
+\index{Find\+Homography@{Find\+Homography}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Find\+Homography()}{FindHomography()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Find\+Homography (\begin{DoxyParamCaption}\item[{vector$<$ bool $>$ \&}]{vb\+Matches\+Inliers,  }\item[{float \&}]{score,  }\item[{cv\+::\+Mat \&}]{H21 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+计算单应矩阵 
+
+假设场景为平面情况下通过前两帧求取\+Homography矩阵(current frame 2 到 reference frame 1),并得到该模型的评分 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199ab024871d028c2c}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199ab024871d028c2c}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Initialize@{Initialize}}
 \index{Initialize@{Initialize}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
 \subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
@@ -54,9 +253,181 @@ bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_a40d41840e2bdb7199a
 
 并行地计算基础矩阵和单应性矩阵，选取其中一个模型，恢复出最开始两帧之间的相对姿态以及点云 
 
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a44ce7aa73741d900d2becc0d8f14c1af}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a44ce7aa73741d900d2becc0d8f14c1af}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Normalize (\begin{DoxyParamCaption}\item[{const vector$<$ cv\+::\+Key\+Point $>$ \&}]{v\+Keys,  }\item[{vector$<$ cv\+::\+Point2f $>$ \&}]{v\+Normalized\+Points,  }\item[{cv\+::\+Mat \&}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+＠brief 归一化特征点到同一尺度（作为normalize D\+L\+T的输入）
+
+\mbox{[}x\textquotesingle{} y\textquotesingle{} 1\mbox{]}\textquotesingle{} = T $\ast$ \mbox{[}x y 1\mbox{]}\textquotesingle{} ~\newline
+归一化后x\textquotesingle{}, y\textquotesingle{}的均值为0，sum(abs(x\+\_\+i\textquotesingle{}-\/0))=1，sum(abs((y\+\_\+i\textquotesingle{}-\/0))=1
+
+
+\begin{DoxyParams}{Parameters}
+{\em v\+Keys} & 特征点在图像上的坐标 \\
+\hline
+{\em v\+Normalized\+Points} & 特征点归一化后的坐标 \\
+\hline
+{\em T} & 将特征点归一化的矩阵 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a60796f88f1b3e981ad925a8b566f6315}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a60796f88f1b3e981ad925a8b566f6315}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!ReconstructF@{ReconstructF}}
+\index{ReconstructF@{ReconstructF}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Reconstruct\+F()}{ReconstructF()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+ReconstructF (\begin{DoxyParamCaption}\item[{vector$<$ bool $>$ \&}]{vb\+Matches\+Inliers,  }\item[{cv\+::\+Mat \&}]{F21,  }\item[{cv\+::\+Mat \&}]{K,  }\item[{cv\+::\+Mat \&}]{R21,  }\item[{cv\+::\+Mat \&}]{t21,  }\item[{vector$<$ cv\+::\+Point3f $>$ \&}]{v\+P3D,  }\item[{vector$<$ bool $>$ \&}]{vb\+Triangulated,  }\item[{float}]{min\+Parallax,  }\item[{int}]{min\+Triangulated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+从\+F恢复R t 
+
+度量重构
+\begin{DoxyEnumerate}
+\item 由\+Fundamental矩阵结合相机内参\+K，得到\+Essential矩阵\+: $ E = k'^T F k $
+\item S\+V\+D分解得到R t
+\item 进行cheirality check, 从四个解中找出最合适的解
+\end{DoxyEnumerate}
+
+\begin{DoxySeeAlso}{See also}
+Multiple View Geometry in Computer Vision -\/ Result 9.\+19 p259 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_addc1c05d3b7a5ae35805f69b50f368ea}\label{class_o_r_b___s_l_a_m2_1_1_initializer_addc1c05d3b7a5ae35805f69b50f368ea}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!ReconstructH@{ReconstructH}}
+\index{ReconstructH@{ReconstructH}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Reconstruct\+H()}{ReconstructH()}}
+{\footnotesize\ttfamily bool O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+ReconstructH (\begin{DoxyParamCaption}\item[{vector$<$ bool $>$ \&}]{vb\+Matches\+Inliers,  }\item[{cv\+::\+Mat \&}]{H21,  }\item[{cv\+::\+Mat \&}]{K,  }\item[{cv\+::\+Mat \&}]{R21,  }\item[{cv\+::\+Mat \&}]{t21,  }\item[{vector$<$ cv\+::\+Point3f $>$ \&}]{v\+P3D,  }\item[{vector$<$ bool $>$ \&}]{vb\+Triangulated,  }\item[{float}]{min\+Parallax,  }\item[{int}]{min\+Triangulated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+从\+H恢复R t 
+
+\begin{DoxySeeAlso}{See also}
+
+\begin{DoxyItemize}
+\item Faugeras et al, Motion and structure from motion in a piecewise planar environment. International Journal of Pattern Recognition and Artificial Intelligence, 1988.
+\item Deeper understanding of the homography decomposition for vision-\/based control 
+\end{DoxyItemize}
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a3bdf78e0f16be44b5ab312aac5cac5af}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a3bdf78e0f16be44b5ab312aac5cac5af}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!Triangulate@{Triangulate}}
+\index{Triangulate@{Triangulate}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{Triangulate()}{Triangulate()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::\+Triangulate (\begin{DoxyParamCaption}\item[{const cv\+::\+Key\+Point \&}]{kp1,  }\item[{const cv\+::\+Key\+Point \&}]{kp2,  }\item[{const cv\+::\+Mat \&}]{P1,  }\item[{const cv\+::\+Mat \&}]{P2,  }\item[{cv\+::\+Mat \&}]{x3D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+给定投影矩阵\+P1,P2和图像上的点kp1,kp2，从而恢复3\+D坐标 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kp1} & 特征点, in reference frame \\
+\hline
+{\em kp2} & 特征点, in current frame \\
+\hline
+{\em P1} & 投影矩阵\+P1 \\
+\hline
+{\em P2} & 投影矩阵\+P２ \\
+\hline
+{\em x3D} & 三维点 \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Multiple View Geometry in Computer Vision -\/ 12.\+2 Linear triangulation methods p312 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a557fe4d78becc1dda7a26c71d2254336}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a557fe4d78becc1dda7a26c71d2254336}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!mK@{mK}}
+\index{mK@{mK}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{mK}{mK}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::mK\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+相机内参 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a8d9647dedc212bd1fe05084ec7875a05}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a8d9647dedc212bd1fe05084ec7875a05}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!m\+Max\+Iterations@{m\+Max\+Iterations}}
+\index{m\+Max\+Iterations@{m\+Max\+Iterations}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{m\+Max\+Iterations}{mMaxIterations}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::m\+Max\+Iterations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+算\+Fundamental和\+Homography矩阵时\+R\+A\+N\+S\+A\+C迭代次数 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_ad588868e84cb1b7e256928dd0d50baee}\label{class_o_r_b___s_l_a_m2_1_1_initializer_ad588868e84cb1b7e256928dd0d50baee}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!m\+Sigma@{m\+Sigma}}
+\index{m\+Sigma@{m\+Sigma}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{m\+Sigma}{mSigma}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::m\+Sigma\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a7af4e0e177bb75879dac174b758ce7d4}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a7af4e0e177bb75879dac174b758ce7d4}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!m\+Sigma2@{m\+Sigma2}}
+\index{m\+Sigma2@{m\+Sigma2}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{m\+Sigma2}{mSigma2}}
+{\footnotesize\ttfamily float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::m\+Sigma2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+测量误差 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a3a90762e82702f06f6999672ebaa4cb8}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a3a90762e82702f06f6999672ebaa4cb8}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!mvb\+Matched1@{mvb\+Matched1}}
+\index{mvb\+Matched1@{mvb\+Matched1}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{mvb\+Matched1}{mvbMatched1}}
+{\footnotesize\ttfamily vector$<$bool$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::mvb\+Matched1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+记录\+Reference Frame的每个特征点在\+Current Frame是否有匹配的特征点 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_aa4a8bce28d125446b4607f12041c7c13}\label{class_o_r_b___s_l_a_m2_1_1_initializer_aa4a8bce28d125446b4607f12041c7c13}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!mv\+Keys1@{mv\+Keys1}}
+\index{mv\+Keys1@{mv\+Keys1}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{mv\+Keys1}{mvKeys1}}
+{\footnotesize\ttfamily vector$<$cv\+::\+Key\+Point$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::mv\+Keys1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+存储\+Reference Frame中的特征点 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a034e9d495b47667f3e0bf0bc3190ff05}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a034e9d495b47667f3e0bf0bc3190ff05}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!mv\+Keys2@{mv\+Keys2}}
+\index{mv\+Keys2@{mv\+Keys2}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{mv\+Keys2}{mvKeys2}}
+{\footnotesize\ttfamily vector$<$cv\+::\+Key\+Point$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::mv\+Keys2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+存储\+Current Frame中的特征点 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_ac4ef04be7036e4629a8b3fa05c7327f5}\label{class_o_r_b___s_l_a_m2_1_1_initializer_ac4ef04be7036e4629a8b3fa05c7327f5}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!mv\+Matches12@{mv\+Matches12}}
+\index{mv\+Matches12@{mv\+Matches12}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{mv\+Matches12}{mvMatches12}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer_ad0bf21297bc6271e7d014ce41d6ff7d4}{Match}}$>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::mv\+Matches12\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Match的数据结构是pair,mv\+Matches12只记录\+Reference到\+Current匹配上的特征点对 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_initializer_a572144f600b28828d4772b0470206afe}\label{class_o_r_b___s_l_a_m2_1_1_initializer_a572144f600b28828d4772b0470206afe}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}!mv\+Sets@{mv\+Sets}}
+\index{mv\+Sets@{mv\+Sets}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer}}
+\subsubsection{\texorpdfstring{mv\+Sets}{mvSets}}
+{\footnotesize\ttfamily vector$<$vector$<$size\+\_\+t$>$ $>$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Initializer\+::mv\+Sets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+二维容器，外层容器的大小为迭代次数，内层容器大小为每次迭代算\+H或\+F矩阵需要的点 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{_initializer_8h}{Initializer.\+h}}\item 
-src/\mbox{\hyperlink{_initializer_8cpp}{Initializer.\+cpp}}\end{DoxyCompactItemize}
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/include/\mbox{\hyperlink{_initializer_8h}{Initializer.\+h}}\item 
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/src/\mbox{\hyperlink{_initializer_8cpp}{Initializer.\+cpp}}\end{DoxyCompactItemize}

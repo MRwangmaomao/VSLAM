@@ -2,6 +2,11 @@
 \label{class_o_r_b___s_l_a_m2_1_1_frame}\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
 
 
+对一帧图像进行描述  
+
+
+
+
 {\ttfamily \#include $<$Frame.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -139,7 +144,30 @@ static float \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_ac63dd82413eba002
 \item 
 static bool \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_a9f57238f88850695d8cf032b5af0dad6}{mb\+Initial\+Computations}} =true
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_a2a97fc690d8c1cd5e975d19440a31657}{Undistort\+Key\+Points}} ()
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_a420f0369833f856df1973410ea39b335}{Compute\+Image\+Bounds}} (const cv\+::\+Mat \&im\+Left)
+\item 
+void \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_aa3ba21cd44638b322db024cba2b9c19e}{Assign\+Features\+To\+Grid}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_a3923c4b0fc83ab5fdba34ddd823621c6}{m\+Rcw}}
+\begin{DoxyCompactList}\small\item\em Rotation from world to camera. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_a31b2fa3a66f2855ec0c71c9ba34cfa8f}{mtcw}}
+\begin{DoxyCompactList}\small\item\em Translation from world to camera. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_afda03a992077579e0ed3c20240eef276}{m\+Rwc}}
+\begin{DoxyCompactList}\small\item\em Rotation from camera to world. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_a4315630bb510b424d8b089975135199a}{m\+Ow}}
+\begin{DoxyCompactList}\small\item\em mtwc,Translation from camera to world \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+对一帧图像进行描述 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_aa43d601e841ddb7a9f100b0b9afd3b10}\label{class_o_r_b___s_l_a_m2_1_1_frame_aa43d601e841ddb7a9f100b0b9afd3b10}} 
@@ -179,6 +207,12 @@ Copy constructor.
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_aa3ba21cd44638b322db024cba2b9c19e}\label{class_o_r_b___s_l_a_m2_1_1_frame_aa3ba21cd44638b322db024cba2b9c19e}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!Assign\+Features\+To\+Grid@{Assign\+Features\+To\+Grid}}
+\index{Assign\+Features\+To\+Grid@{Assign\+Features\+To\+Grid}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
+\subsubsection{\texorpdfstring{Assign\+Features\+To\+Grid()}{AssignFeaturesToGrid()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::\+Assign\+Features\+To\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_ac748d2318f9a409406dba4910ff5ef8e}\label{class_o_r_b___s_l_a_m2_1_1_frame_ac748d2318f9a409406dba4910ff5ef8e}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!Compute\+BoW@{Compute\+BoW}}
 \index{Compute\+BoW@{Compute\+BoW}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
@@ -192,6 +226,12 @@ Bag of Words Representation.
 计算词包m\+Bow\+Vec和m\+Feat\+Vec，其中m\+Feat\+Vec记录了属于第i个node（在第4层）的ni个描述子 \begin{DoxySeeAlso}{See also}
 Create\+Initial\+Map\+Monocular() Track\+Reference\+Key\+Frame() Relocalization() 
 \end{DoxySeeAlso}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a420f0369833f856df1973410ea39b335}\label{class_o_r_b___s_l_a_m2_1_1_frame_a420f0369833f856df1973410ea39b335}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!Compute\+Image\+Bounds@{Compute\+Image\+Bounds}}
+\index{Compute\+Image\+Bounds@{Compute\+Image\+Bounds}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
+\subsubsection{\texorpdfstring{Compute\+Image\+Bounds()}{ComputeImageBounds()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::\+Compute\+Image\+Bounds (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{im\+Left }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a2818781adf6aec30b8bd8783ba228dce}\label{class_o_r_b___s_l_a_m2_1_1_frame_a2818781adf6aec30b8bd8783ba228dce}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!Compute\+Stereo\+From\+R\+G\+BD@{Compute\+Stereo\+From\+R\+G\+BD}}
 \index{Compute\+Stereo\+From\+R\+G\+BD@{Compute\+Stereo\+From\+R\+G\+BD}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
@@ -299,6 +339,12 @@ Set the camera pose.
 {\em Tcw} & Transformation from world to camera \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a2a97fc690d8c1cd5e975d19440a31657}\label{class_o_r_b___s_l_a_m2_1_1_frame_a2a97fc690d8c1cd5e975d19440a31657}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!Undistort\+Key\+Points@{Undistort\+Key\+Points}}
+\index{Undistort\+Key\+Points@{Undistort\+Key\+Points}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
+\subsubsection{\texorpdfstring{Undistort\+Key\+Points()}{UndistortKeyPoints()}}
+{\footnotesize\ttfamily void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::\+Undistort\+Key\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a46084d187e1fc60181e1c72f77c733ca}\label{class_o_r_b___s_l_a_m2_1_1_frame_a46084d187e1fc60181e1c72f77c733ca}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!Unproject\+Stereo@{Unproject\+Stereo}}
 \index{Unproject\+Stereo@{Unproject\+Stereo}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
@@ -490,6 +536,16 @@ Current \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} id.
 \subsubsection{\texorpdfstring{mn\+Scale\+Levels}{mnScaleLevels}}
 {\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::mn\+Scale\+Levels}
 
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a4315630bb510b424d8b089975135199a}\label{class_o_r_b___s_l_a_m2_1_1_frame_a4315630bb510b424d8b089975135199a}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!m\+Ow@{m\+Ow}}
+\index{m\+Ow@{m\+Ow}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
+\subsubsection{\texorpdfstring{m\+Ow}{mOw}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::m\+Ow\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+mtwc,Translation from camera to world 
+
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a5c4f28562114c30c6276f2e42aac6607}\label{class_o_r_b___s_l_a_m2_1_1_frame_a5c4f28562114c30c6276f2e42aac6607}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!mp\+O\+R\+Bextractor\+Left@{mp\+O\+R\+Bextractor\+Left}}
 \index{mp\+O\+R\+Bextractor\+Left@{mp\+O\+R\+Bextractor\+Left}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
@@ -514,6 +570,26 @@ Current \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} id.
 \subsubsection{\texorpdfstring{mp\+Reference\+KF}{mpReferenceKF}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}$\ast$ O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::mp\+Reference\+KF}
 
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a3923c4b0fc83ab5fdba34ddd823621c6}\label{class_o_r_b___s_l_a_m2_1_1_frame_a3923c4b0fc83ab5fdba34ddd823621c6}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!m\+Rcw@{m\+Rcw}}
+\index{m\+Rcw@{m\+Rcw}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
+\subsubsection{\texorpdfstring{m\+Rcw}{mRcw}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::m\+Rcw\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rotation from world to camera. 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_afda03a992077579e0ed3c20240eef276}\label{class_o_r_b___s_l_a_m2_1_1_frame_afda03a992077579e0ed3c20240eef276}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!m\+Rwc@{m\+Rwc}}
+\index{m\+Rwc@{m\+Rwc}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
+\subsubsection{\texorpdfstring{m\+Rwc}{mRwc}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::m\+Rwc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rotation from camera to world. 
+
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a3be6708cfd359fae30307f9408abd6f9}\label{class_o_r_b___s_l_a_m2_1_1_frame_a3be6708cfd359fae30307f9408abd6f9}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!m\+Tcw@{m\+Tcw}}
 \index{m\+Tcw@{m\+Tcw}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
@@ -523,6 +599,16 @@ Current \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} id.
 
 
 相机姿态 世界坐标系到相机坐标坐标系的变换矩阵 
+
+\mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a31b2fa3a66f2855ec0c71c9ba34cfa8f}\label{class_o_r_b___s_l_a_m2_1_1_frame_a31b2fa3a66f2855ec0c71c9ba34cfa8f}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!mtcw@{mtcw}}
+\index{mtcw@{mtcw}!O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}}
+\subsubsection{\texorpdfstring{mtcw}{mtcw}}
+{\footnotesize\ttfamily cv\+::\+Mat O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame\+::mtcw\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Translation from world to camera. 
 
 \mbox{\Hypertarget{class_o_r_b___s_l_a_m2_1_1_frame_a15e0251e1e18b84f385ad817f0e8ba1a}\label{class_o_r_b___s_l_a_m2_1_1_frame_a15e0251e1e18b84f385ad817f0e8ba1a}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame@{O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+Frame}!m\+Th\+Depth@{m\+Th\+Depth}}
@@ -626,5 +712,5 @@ Next \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}} id.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{_frame_8h}{Frame.\+h}}\item 
-src/\mbox{\hyperlink{_frame_8cpp}{Frame.\+cpp}}\end{DoxyCompactItemize}
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/include/\mbox{\hyperlink{_frame_8h}{Frame.\+h}}\item 
+D\+:/github/\+V\+S\+L\+A\+M/\+O\+R\+B\+S\+L\+A\+M2/\+O\+R\+B-\/\+S\+L\+A\+M2-\/master/src/\mbox{\hyperlink{_frame_8cpp}{Frame.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+digraph "g2o::EdgeStereoSE3ProjectXYZ::linearizeOplus"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node9 [label="g2o::EdgeStereoSE3Project\lXYZ::linearizeOplus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="g2o::BaseVertex::estimate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_base_vertex.html#afea20bbcf50eb2a7d9d598b3eae49172",tooltip="return the current estimate of the vertex "];
+}

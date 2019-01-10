@@ -1,0 +1,23 @@
+digraph "g2o::LinearSolverEigen::solve"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="g2o::LinearSolverEigen\l::solve",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="g2o::SparseBlockMatrix\l::rows",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#aaad7b1558369203795419345ee014852",tooltip="rows of the matrix "];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="g2o::SparseBlockMatrix\l::cols",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#ac9dfcc991976a6c21dcbed961f06282d",tooltip="columns of the matrix "];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="g2o::LinearSolverEigen\l::computeSymbolicDecomposition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_linear_solver_eigen.html#a12307526d419d194620e982d8c683767"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="g2o::SparseBlockMatrix\l::blockCols",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#ab818f8923b845d08a38e8de1145fbb65",tooltip="the block matrices per block-column "];
+  Node13 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="g2o::SparseBlockMatrix\l::colBaseOfBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#a502857f0a792ad37055964705a983590",tooltip="where does the col at block-col r starts? "];
+  Node13 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="g2o::SparseBlockMatrix\l::colsOfBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#afe3ef87aecd7a76eab27e91131dbe0c1",tooltip="how many cols does the block at block-col c has? "];
+  Node10 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="g2o::SparseBlockMatrix\l::writeOctave",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#a21725f29b3f1bbc4e4ba77ee3f960ddc"];
+}

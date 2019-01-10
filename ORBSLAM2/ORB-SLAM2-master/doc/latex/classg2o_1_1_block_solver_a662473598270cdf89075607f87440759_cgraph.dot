@@ -1,0 +1,23 @@
+digraph "g2o::BlockSolver::updateStructure"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node51 [label="g2o::BlockSolver::update\lStructure",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node51 -> Node52 [color="midnightblue",fontsize="10",style="solid"];
+  Node52 [label="g2o::OptimizableGraph\l::Vertex::dimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a86feed80301950b100142575b48e4fca",tooltip="dimension of the estimated state belonging to this node "];
+  Node51 -> Node53 [color="midnightblue",fontsize="10",style="solid"];
+  Node53 [label="g2o::OptimizableGraph\l::Vertex::marginalized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a216d79149edcfa9f666140205159fde8",tooltip="true => this node is marginalized out during the optimization "];
+  Node51 -> Node54 [color="midnightblue",fontsize="10",style="solid"];
+  Node54 [label="g2o::OptimizableGraph\l::Vertex::setColInHessian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#aa605891d46b99ed97accf659f10bc8d5",tooltip="set the row of this vertex in the Hessian "];
+  Node51 -> Node55 [color="midnightblue",fontsize="10",style="solid"];
+  Node55 [label="g2o::OptimizableGraph\l::Vertex::hessianIndex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a05a371cfa6314d0f2d209289b01cc922",tooltip="temporary index of this node in the parameter vector obtained from linearization "];
+  Node51 -> Node56 [color="midnightblue",fontsize="10",style="solid"];
+  Node56 [label="g2o::OptimizableGraph\l::Vertex::mapHessianMemory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a1008c0f7981a9fb11be3e3df5c4a9758"];
+  Node51 -> Node57 [color="midnightblue",fontsize="10",style="solid"];
+  Node57 [label="g2o::HyperGraph::Edge\l::vertices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_edge.html#aba1717ff01f972bd39ba992c0d9d9e04"];
+  Node51 -> Node58 [color="midnightblue",fontsize="10",style="solid"];
+  Node58 [label="g2o::HyperGraph::Edge\l::vertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_edge.html#ab644c1c4e38a0112db1435fbc0233f25"];
+  Node51 -> Node59 [color="midnightblue",fontsize="10",style="solid"];
+  Node59 [label="g2o::OptimizableGraph\l::Edge::mapHessianMemory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_edge.html#a3bd233fd552daa166039acf47b69a5a7"];
+}

@@ -1,0 +1,11 @@
+digraph "D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_08235c883c2d11e586a63e6645937db5 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_08235c883c2d11e586a63e6645937db5.html"];
+    dir_08235c883c2d11e586a63e6645937db5 [shape=plaintext label="Thirdparty"];
+    dir_d1a1b6b9a428c17d660585cf3877a970 [shape=box label="DBoW2" color="red" fillcolor="white" style="filled" URL="dir_d1a1b6b9a428c17d660585cf3877a970.html"];
+    dir_6238d635334f7e809f450ee18181fd21 [shape=box label="g2o" color="red" fillcolor="white" style="filled" URL="dir_6238d635334f7e809f450ee18181fd21.html"];
+  }
+}

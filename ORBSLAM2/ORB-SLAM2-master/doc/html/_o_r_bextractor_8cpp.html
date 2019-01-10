@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: src/ORBextractor.cpp File Reference</title>
+<title>ORB-SLAM2: D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/src/ORBextractor.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -68,6 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ORBextractor.cpp File Reference</div>  </div>
@@ -92,16 +94,35 @@ Macros</h2></td></tr>
 <tr class="memitem:a35931865021519a9d7a2a4d2f196e684"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_o_r_bextractor_8cpp.html#a35931865021519a9d7a2a4d2f196e684">GET_VALUE</a>(idx)</td></tr>
 <tr class="separator:a35931865021519a9d7a2a4d2f196e684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac570dbdaae2d483745515b5022fd6820"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#ac570dbdaae2d483745515b5022fd6820">ORB_SLAM2::IC_Angle</a> (const Mat &amp;image, Point2f pt, const vector&lt; int &gt; &amp;u_max)</td></tr>
+<tr class="memdesc:ac570dbdaae2d483745515b5022fd6820"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fast角点不具有方向性，需要赋予其方向，灰度质心法计算特征点的旋转 计算特征点的灰度质心，计算半径为HALF_PATCH_SIZE=15 计算m_10和m_01。其中m_01需要注意图像边界 最后根据反三角函数计算出旋转角度  <a href="namespace_o_r_b___s_l_a_m2.html#ac570dbdaae2d483745515b5022fd6820">More...</a><br /></td></tr>
+<tr class="separator:ac570dbdaae2d483745515b5022fd6820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932693f631bfe871700d02c72e14c6cd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a932693f631bfe871700d02c72e14c6cd">ORB_SLAM2::computeOrbDescriptor</a> (const KeyPoint &amp;kpt, const Mat &amp;img, const Point *pattern, uchar *desc)</td></tr>
+<tr class="memdesc:a932693f631bfe871700d02c72e14c6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算orb描述子  <a href="namespace_o_r_b___s_l_a_m2.html#a932693f631bfe871700d02c72e14c6cd">More...</a><br /></td></tr>
+<tr class="separator:a932693f631bfe871700d02c72e14c6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40adb6b621d7c2dd9d2961ba88e445c8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a40adb6b621d7c2dd9d2961ba88e445c8">ORB_SLAM2::computeOrientation</a> (const Mat &amp;image, vector&lt; KeyPoint &gt; &amp;keypoints, const vector&lt; int &gt; &amp;umax)</td></tr>
+<tr class="memdesc:a40adb6b621d7c2dd9d2961ba88e445c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算图像中每个特征角点的旋转方向  <a href="namespace_o_r_b___s_l_a_m2.html#a40adb6b621d7c2dd9d2961ba88e445c8">More...</a><br /></td></tr>
+<tr class="separator:a40adb6b621d7c2dd9d2961ba88e445c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad90997cdb916a99c644c0959e08cf4df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#ad90997cdb916a99c644c0959e08cf4df">ORB_SLAM2::computeDescriptors</a> (const Mat &amp;image, vector&lt; KeyPoint &gt; &amp;keypoints, Mat &amp;descriptors, const vector&lt; Point &gt; &amp;pattern)</td></tr>
+<tr class="separator:ad90997cdb916a99c644c0959e08cf4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a557e5c298c5f7164667f083494c2197a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a557e5c298c5f7164667f083494c2197a">ORB_SLAM2::PATCH_SIZE</a> = 31</td></tr>
+<tr class="memdesc:a557e5c298c5f7164667f083494c2197a"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算灰度质心用到的匹配点数  <a href="namespace_o_r_b___s_l_a_m2.html#a557e5c298c5f7164667f083494c2197a">More...</a><br /></td></tr>
 <tr class="separator:a557e5c298c5f7164667f083494c2197a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa09849ae679bf2392b097abd710d8d7f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#aa09849ae679bf2392b097abd710d8d7f">ORB_SLAM2::HALF_PATCH_SIZE</a> = 15</td></tr>
 <tr class="separator:aa09849ae679bf2392b097abd710d8d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec00f1ad4dea35755e3af4404282cd3b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#aec00f1ad4dea35755e3af4404282cd3b">ORB_SLAM2::EDGE_THRESHOLD</a> = 19</td></tr>
+<tr class="memdesc:aec00f1ad4dea35755e3af4404282cd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">边界阈值  <a href="namespace_o_r_b___s_l_a_m2.html#aec00f1ad4dea35755e3af4404282cd3b">More...</a><br /></td></tr>
 <tr class="separator:aec00f1ad4dea35755e3af4404282cd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8015b470ffeb885a0c90837a03b3210f"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a8015b470ffeb885a0c90837a03b3210f">ORB_SLAM2::factorPI</a> = (float)(CV_PI/180.f)</td></tr>
 <tr class="separator:a8015b470ffeb885a0c90837a03b3210f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd21ee063eca2b0bc3f5e76ceba0492"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_o_r_b___s_l_a_m2.html#a8dd21ee063eca2b0bc3f5e76ceba0492">ORB_SLAM2::bit_pattern_31_</a> [256 *4]</td></tr>
+<tr class="memdesc:a8dd21ee063eca2b0bc3f5e76ceba0492"><td class="mdescLeft">&#160;</td><td class="mdescRight">bit_pattern_31_  <a href="namespace_o_r_b___s_l_a_m2.html#a8dd21ee063eca2b0bc3f5e76ceba0492">More...</a><br /></td></tr>
+<tr class="separator:a8dd21ee063eca2b0bc3f5e76ceba0492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a35931865021519a9d7a2a4d2f196e684"></a>
@@ -125,7 +146,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:48:13 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

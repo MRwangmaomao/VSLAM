@@ -1,0 +1,15 @@
+digraph "DBoW2::TemplatedVocabulary::transform"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node106 [label="DBoW2::TemplatedVocabulary\l::transform",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node106 -> Node107 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="DBoW2::BowVector::addWeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#a3ac92a805b252c93dc6535240d02df47"];
+  Node106 -> Node108 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 [label="DBoW2::FeatureVector\l::addFeature",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_feature_vector.html#ae9554bfcbebc85439616de08f47f2238"];
+  Node106 -> Node109 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node109 [label="DBoW2::BowVector::addIfNot\lExist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#a5ddf10e444d10425e5bd3568dc7ffe5e"];
+  Node106 -> Node110 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node110 [label="DBoW2::BowVector::normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#acd2dd34023e3053a4cc75d70c8b6ac13"];
+}

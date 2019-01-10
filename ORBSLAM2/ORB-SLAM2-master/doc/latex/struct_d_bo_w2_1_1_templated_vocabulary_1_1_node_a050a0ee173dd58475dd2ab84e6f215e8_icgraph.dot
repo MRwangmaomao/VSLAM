@@ -1,0 +1,15 @@
+digraph "DBoW2::TemplatedVocabulary::Node::isLeaf"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5 [label="DBoW2::TemplatedVocabulary\l::Node::isLeaf",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="DBoW2::TemplatedVocabulary\l::getWordsFromNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a809f881020a2b953664b1f528828551e"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="DBoW2::TemplatedVocabulary\l::saveToTextFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a1338b014b856d0a17e71010f6488548e"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="DBoW2::TemplatedVocabulary\l::saveToBinaryFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a256d9aaeb91b2ca9e626e3bc76359579"];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="DBoW2::TemplatedVocabulary\l::save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a3039529c46f02b795450f4fba2207339"];
+}

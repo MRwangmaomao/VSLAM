@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: g2o::Solver Class Reference</title>
+<title>ORB-SLAM2: g2o::Solver Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -69,6 +70,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classg2o_1_1_solver-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">g2o::Solver Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -176,12 +178,19 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8b7f6d4e00e3734f5ed9bd3dfac201a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a1492959487c279747a8f3097a5f04e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_solver.html#a6a1492959487c279747a8f3097a5f04e">_additionalVectorSpace</a></td></tr>
 <tr class="separator:a6a1492959487c279747a8f3097a5f04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a040c384f90e39504853a29648a71bc25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_solver.html#a040c384f90e39504853a29648a71bc25">Solver</a> (const <a class="el" href="classg2o_1_1_solver.html">Solver</a> &amp;)</td></tr>
+<tr class="separator:a040c384f90e39504853a29648a71bc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a6b5b126e7bef1c99dff89567f2eff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classg2o_1_1_solver.html">Solver</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_solver.html#a19a6b5b126e7bef1c99dff89567f2eff">operator=</a> (const <a class="el" href="classg2o_1_1_solver.html">Solver</a> &amp;)</td></tr>
+<tr class="separator:a19a6b5b126e7bef1c99dff89567f2eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic interface for a sparse solver operating on a graph which solves one iteration of the linearized objective function. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af097bdf5c8dc4bb017a2cec4038d5a56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af097bdf5c8dc4bb017a2cec4038d5a56">&#9670;&nbsp;</a></span>Solver()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af097bdf5c8dc4bb017a2cec4038d5a56">&#9670;&nbsp;</a></span>Solver() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,6 +225,32 @@ Protected Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a040c384f90e39504853a29648a71bc25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a040c384f90e39504853a29648a71bc25">&#9670;&nbsp;</a></span>Solver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">g2o::Solver::Solver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classg2o_1_1_solver.html">Solver</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -459,6 +494,32 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>the system is Levenberg-Marquardt </p>
+
+</div>
+</div>
+<a id="a19a6b5b126e7bef1c99dff89567f2eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a6b5b126e7bef1c99dff89567f2eff">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classg2o_1_1_solver.html">Solver</a>&amp; g2o::Solver::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classg2o_1_1_solver.html">Solver</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1111,13 +1172,13 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="solver_8h_source.html">solver.h</a></li>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="solver_8cpp.html">solver.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="solver_8h_source.html">solver.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="solver_8cpp.html">solver.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:26 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

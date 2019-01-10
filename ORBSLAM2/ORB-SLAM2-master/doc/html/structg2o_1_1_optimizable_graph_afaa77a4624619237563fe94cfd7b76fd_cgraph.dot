@@ -1,0 +1,15 @@
+digraph "g2o::OptimizableGraph::setRenamedTypesFromString"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node57 [label="g2o::OptimizableGraph\l::setRenamedTypesFromString",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node57 -> Node58 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node58 [label="g2o::Factory::instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_factory.html#a8a1f33e017c5ad59399cef48972578ae",tooltip="return the instance "];
+  Node57 -> Node59 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node59 [label="g2o::strSplit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__utils.html#ga0a56de67e98afa3f8307e7b4ddb4cc83"];
+  Node57 -> Node60 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node60 [label="g2o::trim",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__utils.html#ga437d185a62afe16a99f27f3b12e108d7"];
+  Node57 -> Node61 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node61 [label="g2o::Factory::knowsTag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_factory.html#a20292a9c8417303fec92057826ba2430"];
+}

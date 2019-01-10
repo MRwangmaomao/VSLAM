@@ -1,0 +1,11 @@
+digraph "g2o::BlockSolver::solve"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node45 [label="g2o::BlockSolver::solve",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node45 -> Node46 [color="midnightblue",fontsize="10",style="solid"];
+  Node46 [label="g2o::SparseBlockMatrix\l::blockCols",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix.html#ab818f8923b845d08a38e8de1145fbb65",tooltip="the block matrices per block-column "];
+  Node45 -> Node47 [color="midnightblue",fontsize="10",style="solid"];
+  Node47 [label="g2o::SparseBlockMatrixCCS\l::blockCols",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_block_matrix_c_c_s.html#a30586863195a37c6ac87d7fb17376ee7",tooltip="the block matrices per block-column "];
+}

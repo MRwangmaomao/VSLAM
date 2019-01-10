@@ -1,0 +1,33 @@
+digraph "g2o::OptimizableGraph::addVertex"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node26 [label="g2o::OptimizableGraph\l::addVertex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node26 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node27 [label="ORB_SLAM2::Optimizer\l::BundleAdjustment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_optimizer.html#aac6bf926792ed8a013d64897879a89ec",tooltip="bundle adjustment Optimization "];
+  Node26 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node28 [label="ORB_SLAM2::Optimizer\l::PoseOptimization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_optimizer.html#a7415d78b8a2323b88e108fa1ea3bf2d3",tooltip="Pose Only Optimization. "];
+  Node28 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node29 [label="ORB_SLAM2::Tracking\l::TrackReferenceKeyFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a737c5409c93844353561a0fe724ed1c2",tooltip="对参考关键帧的MapPoints进行跟踪 "];
+  Node29 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node30 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+  Node28 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node31 [label="ORB_SLAM2::Tracking\l::TrackWithMotionModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#aca19f1d69b30a6c6e49281d422ac8298",tooltip="根据匀速度模型对上一帧的MapPoints进行跟踪 "];
+  Node31 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node28 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node32 [label="ORB_SLAM2::Tracking\l::TrackLocalMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af670c614f4e10d58c9f7aad9865b5c08",tooltip="对Local Map的MapPoints进行跟踪 "];
+  Node32 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node26 -> Node33 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node33 [label="ORB_SLAM2::Optimizer\l::LocalBundleAdjustment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_optimizer.html#ab70e0b4f366b65a0c1ae8b2def19d339",tooltip="Local Bundle Adjustment. "];
+  Node26 -> Node34 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node34 [label="ORB_SLAM2::Optimizer\l::OptimizeEssentialGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_optimizer.html#a5a53ab409feed7f92547eb79a2d7f6e9",tooltip="闭环检测后，EssentialGraph优化 "];
+  Node34 -> Node35 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node35 [label="ORB_SLAM2::LoopClosing\l::CorrectLoop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_loop_closing.html#aa007e0678582ec0de5d71280d23af540",tooltip="闭环 "];
+  Node26 -> Node36 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node36 [label="ORB_SLAM2::Optimizer\l::OptimizeSim3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_optimizer.html#a91fbb960965c99e9802a5de45515813c",tooltip="形成闭环时进行Sim3优化 "];
+  Node36 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node37 [label="ORB_SLAM2::LoopClosing\l::ComputeSim3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_loop_closing.html#ab4fcf814eed5b5dd2aec96454561b078",tooltip="计算当前帧与闭环帧的Sim3变换等 "];
+  Node26 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node38 [label="g2o::OptimizableGraph\l::addGraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1_optimizable_graph.html#acea1342d9ab0bf717710c8f78b74ff25",tooltip="adds all edges and vertices of the graph g to this graph. "];
+}

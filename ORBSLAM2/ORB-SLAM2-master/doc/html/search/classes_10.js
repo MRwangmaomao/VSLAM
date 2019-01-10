@@ -1,7 +1,6 @@
 var searchData=
 [
   ['random',['Random',['../class_d_utils_1_1_random.html',1,'DUtils']]],
-  ['rectify',['Rectify',['../class_rectify.html',1,'']]],
   ['registeractionproxy',['RegisterActionProxy',['../classg2o_1_1_register_action_proxy.html',1,'g2o']]],
   ['registeroptimizationalgorithmproxy',['RegisterOptimizationAlgorithmProxy',['../classg2o_1_1_register_optimization_algorithm_proxy.html',1,'g2o']]],
   ['registerrobustkernelproxy',['RegisterRobustKernelProxy',['../classg2o_1_1_register_robust_kernel_proxy.html',1,'g2o']]],

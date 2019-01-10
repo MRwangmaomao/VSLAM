@@ -70,13 +70,23 @@ using namespace std;
 
 namespace ORB_SLAM2
 {
-
+/**
+ * @brief 计算灰度质心用到的匹配点数
+ * 
+ */
 const int PATCH_SIZE = 31;
 const int HALF_PATCH_SIZE = 15;
+/**
+ * @brief 边界阈值
+ * 
+ */
 const int EDGE_THRESHOLD = 19;
 
 /**
- * @brief 计算每个角点的角度
+ * @brief Fast角点不具有方向性，需要赋予其方向，灰度质心法计算特征点的旋转
+ * 计算特征点的灰度质心，计算半径为HALF_PATCH_SIZE=15
+ * 计算m_10和m_01。其中m_01需要注意图像边界
+ * 最后根据反三角函数计算出旋转角度
  * 
  * @param image 
  * @param pt 
@@ -86,18 +96,30 @@ const int EDGE_THRESHOLD = 19;
 static float IC_Angle(const Mat& image, Point2f pt,  const vector<int> & u_max)
 {
     int m_01 = 0, m_10 = 0;
-
+    // y是行序号，i是列序号 二维单通道元素索引 返回该点的指针 
+    // cRound 返回跟参数最接近的整数值
     const uchar* center = &image.at<uchar> (cvRound(pt.y), cvRound(pt.x));
 
-    // Treat the center line differently, v=0
+    
+//我们要在一个圆域中算出m10和m01，计算步骤是先算出中间红线的m10，然后在平行于x轴算出m10和m01，一次计算相当于图像中的同个颜色的两个line。
+    // Treat the center line differently, v=0   
+    /**
+     * @brief 第一步：计算图像的m_10矩
+     * 
+     */
     for (int u = -HALF_PATCH_SIZE; u <= HALF_PATCH_SIZE; ++u)
-        m_10 += u * center[u];
+        m_10 += u * center[u];//center为数组指针
 
     // Go line by line in the circuI853lar patch
+    // 计算每行元素的个数
     int step = (int)image.step1();
-    for (int v = 1; v <= HALF_PATCH_SIZE; ++v)
+    /**
+     * @brief 第二步：计算图像的m_01矩
+     * 
+     */
+    for (int v = 1; v <= HALF_PATCH_SIZE; ++v)//v是行数
     {
-        // Proceed over the two lines
+        // Proceed over the two lines 边界处理
         int v_sum = 0;
         int d = u_max[v];
         for (int u = -d; u <= d; ++u)
@@ -108,35 +130,50 @@ static float IC_Angle(const Mat& image, Point2f pt,  const vector<int> & u_max)
         }
         m_01 += v * v_sum;
     }
-
+    /**
+     * @brief 第三步：计算并返回角度angle = arctan(m_01/m_10)
+     * 
+     * @return return 
+     */ 
     return fastAtan2((float)m_01, (float)m_10);
 }
 
 
 const float factorPI = (float)(CV_PI/180.f);
 /**
- * @brief 计算orb描述子
+ * @brief 计算当前特征点kpt的orb描述子
  * 
- * @param kpt 
- * @param img 
+ * @param kpt 特征点对象
+ * @param img 图像
  * @param pattern 
- * @param desc 
+ * @param desc 要计算的描述子
  */
 static void computeOrbDescriptor(const KeyPoint& kpt,
                                  const Mat& img, const Point* pattern,
                                  uchar* desc)
 {
-    float angle = (float)kpt.angle*factorPI;
-    float a = (float)cos(angle), b = (float)sin(angle);
+    /**
+     * @brief 第一步：得到角点的旋转角度
+     * 
+     */
+    float angle = (float)kpt.angle*factorPI;//
+    float a = (float)cos(angle), b = (float)sin(angle);//起始点
 
-    const uchar* center = &img.at<uchar>(cvRound(kpt.pt.y), cvRound(kpt.pt.x));
-    const int step = (int)img.step;
+    /**
+     * @brief 第二步：得到特征点在图像中的地址和图像的行数
+     * 
+     */
+    const uchar* center = &img.at<uchar>(cvRound(kpt.pt.y), cvRound(kpt.pt.x));//特征点在图像中的地址
+    const int step = (int)img.step;//计算图像行数
 
-    #define GET_VALUE(idx) \
+    #define GET_VALUE(idx) \ //计算得到
         center[cvRound(pattern[idx].x*b + pattern[idx].y*a)*step + \
-               cvRound(pattern[idx].x*a - pattern[idx].y*b)]
+               cvRound(pattern[idx].x*a - pattern[idx].y*b)]//方括号中的内容相当于地址
 
-
+    /**
+     * @brief 比较关键点附近相邻两个点的关系，总共比较了32*8组，每个特征点存储了32*8位的描述子
+     * 
+     */ 
     for (int i = 0; i < 32; ++i, pattern += 16)
     {
         int t0, t1, val;
@@ -429,58 +466,82 @@ static int bit_pattern_31_[256*4] =
 
 /** @brief Construct a new ORBextractor::ORBextractor object
  * 
- * This is a test doxygen.
  * 
- * @param _nfeatures 
- * @param _scaleFactor 
- * @param _nlevels 
- * @param _iniThFAST 
- * @param _minThFAST 
+ * 
+ * @param _nfeatures 特征点数，TUM数据集设置为了1000，可以视情况而定
+ * @param _scaleFactor 两层金字塔之间的尺度因子，我们设置为1.2
+ * @param _nlevels 图像金字塔总的层数，我们设置为8
+ * @param _iniThFAST Fast角点图像被划分为网格。在每个细胞处提取FAST，施加最小响应。首先我们强加iniThFAST。如果没有检测到拐角，我们施加较低的minThFAST值如果图像对比度低，可以降低这些值 
+ * @param _minThFAST Fast角点图像被划分为网格。在每个细胞处提取FAST，施加最大响应。
  */
 ORBextractor::ORBextractor(int _nfeatures, float _scaleFactor, int _nlevels,
          int _iniThFAST, int _minThFAST):
     nfeatures(_nfeatures), scaleFactor(_scaleFactor), nlevels(_nlevels),
     iniThFAST(_iniThFAST), minThFAST(_minThFAST)
-{
+{ 
+    /**
+     * @brief 第一步：定义每一层的尺度和逆尺度 确定每一层的特征点数，采用等比数列。
+     * 
+     * 
+     */
     mvScaleFactor.resize(nlevels);
     mvLevelSigma2.resize(nlevels);
     mvScaleFactor[0]=1.0f;
     mvLevelSigma2[0]=1.0f;
-    for(int i=1; i<nlevels; i++)
+    for(int i=1; i<nlevels; i++) //计算尺度
     {
         mvScaleFactor[i]=mvScaleFactor[i-1]*scaleFactor;
         mvLevelSigma2[i]=mvScaleFactor[i]*mvScaleFactor[i];
     }
 
-    mvInvScaleFactor.resize(nlevels);
+    
+    mvInvScaleFactor.resize(nlevels);//修改容器大小
     mvInvLevelSigma2.resize(nlevels);
-    for(int i=0; i<nlevels; i++)
+    for(int i=0; i<nlevels; i++) //计算逆尺度
     {
-        mvInvScaleFactor[i]=1.0f/mvScaleFactor[i];
+        mvInvScaleFactor[i]=1.0f/mvScaleFactor[i];//计算逆尺度因子
         mvInvLevelSigma2[i]=1.0f/mvLevelSigma2[i];
     }
 
-    mvImagePyramid.resize(nlevels);
+    mvImagePyramid.resize(nlevels); 
 
+    /**
+     * @brief 第二步：第一层特征点数，以后每一层成等比数列
+     * 
+     */
     mnFeaturesPerLevel.resize(nlevels);
     float factor = 1.0f / scaleFactor;
+
+    
     float nDesiredFeaturesPerScale = nfeatures*(1 - factor)/(1 - (float)pow((double)factor, (double)nlevels));
 
     int sumFeatures = 0;
+    /**
+     * @brief 第三步：将所有层数的特征点加起来作为总特征点
+     * 
+     */
     for( int level = 0; level < nlevels-1; level++ )
     {
         mnFeaturesPerLevel[level] = cvRound(nDesiredFeaturesPerScale);
         sumFeatures += mnFeaturesPerLevel[level];
-        nDesiredFeaturesPerScale *= factor;
+        nDesiredFeaturesPerScale *= factor;//factor为等比因子
     }
     mnFeaturesPerLevel[nlevels-1] = std::max(nfeatures - sumFeatures, 0);
 
+    /**
+     * @brief 第四步：复制训练的模板
+     * 
+     */
     const int npoints = 512;
     const Point* pattern0 = (const Point*)bit_pattern_31_;
     std::copy(pattern0, pattern0 + npoints, std::back_inserter(pattern));
 
     //This is for orientation
     // pre-compute the end of a row in a circular patch
+    /**
+     * @brief 第五步：计算方向时，每个v对应的最大的u的坐标
+     * 
+     */
     umax.resize(HALF_PATCH_SIZE + 1);
 
     int v, v0, vmax = cvFloor(HALF_PATCH_SIZE * sqrt(2.f) / 2 + 1);
@@ -499,7 +560,7 @@ ORBextractor::ORBextractor(int _nfeatures, float _scaleFactor, int _nlevels,
     }
 }
 /**
- * @brief 计算每个特征角点的旋转方向
+ * @brief 计算图像中每个特征角点的旋转方向
  * 
  * @param image 
  * @param keypoints 
@@ -573,8 +634,32 @@ void ExtractorNode::DivideNode(ExtractorNode &n1, ExtractorNode &n2, ExtractorNo
 
 }
 
+
+
+//计算fast特征点并进行筛选
+//先用(maxX-minX)/(maxY-minY)来确定四叉数有几个初始节点，这里有 bug，如果输入的是一张宽高比小于0.5 的图像，
+//nIni 计算得到 0，下一步计算 hX 会报错，例如round(640/480)=1,所以只有一个初始节点，(UL,UR,BL,BR)就会分布到被裁掉边界后的图像的四个角。
+//把所有的关键点分配给属于它的节点，当节点所分配到的关键点的个数为1时就不再进行分裂，当节点没有分配到关键点时就删除此节点。
+//再根据兴趣点分布,利用四叉树方法对图像进行划分区域，当bFinish的值为true时就不再进行区域划分，首先对目前的区域进行划分，
+ 
+//把每次划分得到的有关键点的子区域设为新的节点，将nToExpand参数加一，并插入到节点列表的前边，删除掉其父节点。
+//只要新节点中的关键点的个数超过一个，就继续划分，继续插入列表前面，继续删除父节点，直到划分的子区域中的关键点的个数是一个，
+//然后迭代器加以移动到下一个节点，继续划分区域。
+ 
+//当划分的区域即节点的个数大于关键点的个数或者分裂过程没有增加节点的个数时就将bFinish的值设为true，不再进行划分。
+//如果以上条件没有满足，但是满足((int)lNodes.size()+nToExpand*3)>N，则说明将所有节点再分裂一次可以达到要求。
+//vSizeAndPointerToNode 是前面分裂出来的子节点（n1, n2, n3, n4）中可以分裂的节点。
+//按照它们特征点的排序，先从特征点多的开始分裂，分裂的结果继续存储在 lNodes 中。每分裂一个节点都会进行一次判断，
+//如果 lNodes 中的节点数量大于所需要的特征点数量，退出整个 while(!bFinish) 循环，如果进行了一次分裂，
+//并没有增加节点数量，不玩了，退出整个 while(!bFinish) 循环。取出每一个节点(每个区域)对应的最大响应点，即我们确定的特征点。
+
+
+
 /**
  * @brief Orb extrator distribute octTree
+ * 计算fast特征点并进行筛选
+ * 先用(maxX-minX)/(maxY-minY)来确定四叉数有几个初始节点，这里有 bug，如果输入的是一张宽高比小于0.5 的图像，
+ * nIni 计算得到 0，下一步计算 hX 会报错，例如round(640/480)=1,所以只有一个初始节点，(UL,UR,BL,BR)就会分布到被裁掉边界后的图像的四个角。
  * 
  * @param vToDistributeKeys 
  * @param minX 
@@ -1097,6 +1182,14 @@ static void computeDescriptors(const Mat& image, vector<KeyPoint>& keypoints, Ma
         computeOrbDescriptor(keypoints[i], image, &pattern[0], descriptors.ptr((int)i));
 }
 
+/**
+ * @brief 计算描述子
+ * 
+ * @param _image 
+ * @param _mask 
+ * @param _keypoints 
+ * @param _descriptors 
+ */
 void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPoint>& _keypoints,
                       OutputArray _descriptors)
 { 
@@ -1164,7 +1257,10 @@ void ORBextractor::operator()( InputArray _image, InputArray _mask, vector<KeyPo
 }
 
 /**
- * @brief 构建图像金字塔
+ * @brief 构建图像金字塔 远出看是角点的地方，进出看可能不是角点了，这个问题成为尺度不变性，需要构建图像金字塔解决。
+ * 通过在每一层金字塔上检测角点和角点的方向来实现。总层数为nlevels。计算得到每层的图像存到mvImagePyramid容器中
+ * 图像金字塔的计算通过resize函数实现
+ * 
  * 
  * @param image 
  */
@@ -1181,6 +1277,7 @@ void ORBextractor::ComputePyramid(cv::Mat image)
         // Compute the resized image
         if( level != 0 )
         {
+            // 
             resize(mvImagePyramid[level-1], mvImagePyramid[level], sz, 0, 0, cv::INTER_LINEAR);
 
             copyMakeBorder(mvImagePyramid[level], temp, EDGE_THRESHOLD, EDGE_THRESHOLD, EDGE_THRESHOLD, EDGE_THRESHOLD,

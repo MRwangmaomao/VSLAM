@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: g2o::EstimatePropagator::AdjacencyMapEntry Class Reference</title>
+<title>ORB-SLAM2: g2o::EstimatePropagator::AdjacencyMapEntry Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -68,6 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -109,6 +111,13 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3558503af9d9f56088ff1593398f86d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56bfab4074fa692f03378526007758f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry.html#a56bfab4074fa692f03378526007758f7">_frontierLevel</a></td></tr>
 <tr class="separator:a56bfab4074fa692f03378526007758f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6697b7728a51b80663f843daba54e2d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry.html#a6697b7728a51b80663f843daba54e2d8">inQueue</a></td></tr>
+<tr class="separator:a6697b7728a51b80663f843daba54e2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40828826b865378855fdc26fae46af11"><td class="memItemLeft" align="right" valign="top">PriorityQueue::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_estimate_propagator_1_1_adjacency_map_entry.html#a40828826b865378855fdc26fae46af11">queueIt</a></td></tr>
+<tr class="separator:a40828826b865378855fdc26fae46af11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -436,14 +445,58 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a6697b7728a51b80663f843daba54e2d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6697b7728a51b80663f843daba54e2d8">&#9670;&nbsp;</a></span>inQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool g2o::EstimatePropagator::AdjacencyMapEntry::inQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40828826b865378855fdc26fae46af11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40828826b865378855fdc26fae46af11">&#9670;&nbsp;</a></span>queueIt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PriorityQueue::iterator g2o::EstimatePropagator::AdjacencyMapEntry::queueIt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="estimate__propagator_8h_source.html">estimate_propagator.h</a></li>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="estimate__propagator_8cpp.html">estimate_propagator.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="estimate__propagator_8h_source.html">estimate_propagator.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="estimate__propagator_8cpp.html">estimate_propagator.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:48:41 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

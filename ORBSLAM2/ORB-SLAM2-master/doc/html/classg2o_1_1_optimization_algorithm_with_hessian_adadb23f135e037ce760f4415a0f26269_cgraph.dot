@@ -1,0 +1,9 @@
+digraph "g2o::OptimizationAlgorithmWithHessian::updateStructure"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node12 [label="g2o::OptimizationAlgorithm\lWithHessian::updateStructure",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="g2o::Solver::updateStructure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_solver.html#aeca71878e37081b6138f90ac60ec1f89"];
+}

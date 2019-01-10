@@ -1,0 +1,34 @@
+digraph "g2o::BlockSolver::buildSystem"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node17 [label="g2o::BlockSolver::buildSystem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="g2o::OptimizableGraph\l::Vertex::clearQuadraticForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a803897f6bae25dece4d7e23330f0f9da"];
+  Node17 -> Node19 [color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="g2o::OptimizableGraph\l::Edge::linearizeOplus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_edge.html#a0fdad5ebfb4efec9f893b57f67e0fbe1"];
+  Node17 -> Node20 [color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="g2o::OptimizableGraph\l::Edge::constructQuadraticForm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_edge.html#a56fbf3430ddf591e3c619bdd1b7e4499"];
+  Node17 -> Node21 [color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="g2o::HyperGraph::Edge\l::vertices",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_edge.html#aba1717ff01f972bd39ba992c0d9d9e04"];
+  Node17 -> Node22 [color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="g2o::HyperGraph::Edge\l::vertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_hyper_graph_1_1_edge.html#ab644c1c4e38a0112db1435fbc0233f25"];
+  Node17 -> Node23 [color="midnightblue",fontsize="10",style="solid"];
+  Node23 [label="g2o::OptimizableGraph\l::Vertex::fixed",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a97294e6a1a573a44fe82ba36fc52c619",tooltip="true => this node is fixed during the optimization "];
+  Node17 -> Node24 [color="midnightblue",fontsize="10",style="solid"];
+  Node24 [label="g2o::arrayHasNaN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$misc_8h.html#a123840a60e0d1dde58088d15a1e1fffa"];
+  Node24 -> Node24 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 -> Node25 [color="midnightblue",fontsize="10",style="solid"];
+  Node25 [label="g2o::JacobianWorkspace\l::workspaceForVertex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_jacobian_workspace.html#ad68c37d7779d3a034bc1b864cd98690b"];
+  Node17 -> Node26 [color="midnightblue",fontsize="10",style="solid"];
+  Node26 [label="g2o::OptimizableGraph\l::Edge::dimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_edge.html#a0eb19697e201bd195c45ca78d55fd041",tooltip="returns the dimensions of the error function "];
+  Node17 -> Node27 [color="midnightblue",fontsize="10",style="solid"];
+  Node27 [label="g2o::OptimizableGraph\l::Vertex::dimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a86feed80301950b100142575b48e4fca",tooltip="dimension of the estimated state belonging to this node "];
+  Node17 -> Node28 [color="midnightblue",fontsize="10",style="solid"];
+  Node28 [label="g2o::OptimizableGraph\l::Vertex::colInHessian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a4d22b2e6832ae2ec040bfc0acb4cabb9",tooltip="get the row of this vertex in the Hessian "];
+  Node17 -> Node29 [color="midnightblue",fontsize="10",style="solid"];
+  Node29 [label="g2o::OptimizableGraph\l::Vertex::marginalized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a216d79149edcfa9f666140205159fde8",tooltip="true => this node is marginalized out during the optimization "];
+  Node17 -> Node30 [color="midnightblue",fontsize="10",style="solid"];
+  Node30 [label="g2o::OptimizableGraph\l::Vertex::copyB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#af544f0050ea6e05950fd6e53931bdf61"];
+}

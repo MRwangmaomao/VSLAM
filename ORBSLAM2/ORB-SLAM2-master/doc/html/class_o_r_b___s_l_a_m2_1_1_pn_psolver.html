@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: ORB_SLAM2::PnPsolver Class Reference</title>
+<title>ORB-SLAM2: ORB_SLAM2::PnPsolver Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -67,6 +68,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_o_r_b___s_l_a_m2_1_1_pn_psolver-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ORB_SLAM2::PnPsolver Class Reference</div>  </div>
@@ -87,6 +90,148 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a784429037a79cb53923f4db181a4d115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbef2ac776747661112246e85667f452"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#abbef2ac776747661112246e85667f452">iterate</a> (int nIterations, bool &amp;bNoMore, vector&lt; bool &gt; &amp;vbInliers, int &amp;nInliers)</td></tr>
 <tr class="separator:abbef2ac776747661112246e85667f452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:abb27b1402d63ce78890d3f1ea42a75a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#abb27b1402d63ce78890d3f1ea42a75a4">CheckInliers</a> ()</td></tr>
+<tr class="separator:abb27b1402d63ce78890d3f1ea42a75a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19710728d61dcf1caa32f31d140f3327"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a19710728d61dcf1caa32f31d140f3327">Refine</a> ()</td></tr>
+<tr class="separator:a19710728d61dcf1caa32f31d140f3327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2747be485a2a87ad5a72f8431edbf77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#aa2747be485a2a87ad5a72f8431edbf77">set_maximum_number_of_correspondences</a> (const int n)</td></tr>
+<tr class="separator:aa2747be485a2a87ad5a72f8431edbf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78dcd4d88b5ebae795d8c214932c4089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a78dcd4d88b5ebae795d8c214932c4089">reset_correspondences</a> (void)</td></tr>
+<tr class="separator:a78dcd4d88b5ebae795d8c214932c4089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfff5312c244e3e6de7bc16b3a72f34b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#acfff5312c244e3e6de7bc16b3a72f34b">add_correspondence</a> (const double X, const double Y, const double Z, const double u, const double v)</td></tr>
+<tr class="separator:acfff5312c244e3e6de7bc16b3a72f34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa712661f5888f9e1f580fe7f0117e389"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#aa712661f5888f9e1f580fe7f0117e389">compute_pose</a> (double R[3][3], double T[3])</td></tr>
+<tr class="separator:aa712661f5888f9e1f580fe7f0117e389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3247415c8c4ff0a5df74096907eac10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ab3247415c8c4ff0a5df74096907eac10">relative_error</a> (double &amp;rot_err, double &amp;transl_err, const double Rtrue[3][3], const double ttrue[3], const double Rest[3][3], const double test[3])</td></tr>
+<tr class="separator:ab3247415c8c4ff0a5df74096907eac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be5e2c8a40397fb9a7c7457be95c407"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a2be5e2c8a40397fb9a7c7457be95c407">print_pose</a> (const double R[3][3], const double t[3])</td></tr>
+<tr class="separator:a2be5e2c8a40397fb9a7c7457be95c407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0ecb37dd35686ae16ff2cdb277cd82"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a8d0ecb37dd35686ae16ff2cdb277cd82">reprojection_error</a> (const double R[3][3], const double t[3])</td></tr>
+<tr class="separator:a8d0ecb37dd35686ae16ff2cdb277cd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c51e43d16d52747facbaca93fcd583"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a42c51e43d16d52747facbaca93fcd583">choose_control_points</a> (void)</td></tr>
+<tr class="separator:a42c51e43d16d52747facbaca93fcd583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e35c1813d1a76d6b2a1664ac7080dcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a1e35c1813d1a76d6b2a1664ac7080dcd">compute_barycentric_coordinates</a> (void)</td></tr>
+<tr class="separator:a1e35c1813d1a76d6b2a1664ac7080dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc37bbb1cc4e575d83fb7503136a542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a8cc37bbb1cc4e575d83fb7503136a542">fill_M</a> (CvMat *M, const int row, const double *<a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a868ef3e00710a5541d50a15af7be2a20">alphas</a>, const double u, const double v)</td></tr>
+<tr class="separator:a8cc37bbb1cc4e575d83fb7503136a542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c58e214a0016e1e58cbc1afd9eb5eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ac4c58e214a0016e1e58cbc1afd9eb5eb">compute_ccs</a> (const double *betas, const double *ut)</td></tr>
+<tr class="separator:ac4c58e214a0016e1e58cbc1afd9eb5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb37c568bb09293bb679d84bb4d2796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#abeb37c568bb09293bb679d84bb4d2796">compute_pcs</a> (void)</td></tr>
+<tr class="separator:abeb37c568bb09293bb679d84bb4d2796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33413cd4dc6f3e963cf49997baa40c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#af33413cd4dc6f3e963cf49997baa40c2">solve_for_sign</a> (void)</td></tr>
+<tr class="separator:af33413cd4dc6f3e963cf49997baa40c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d36f0e15dfca9c0ecfff91149882232"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a6d36f0e15dfca9c0ecfff91149882232">find_betas_approx_1</a> (const CvMat *L_6x10, const CvMat *Rho, double *betas)</td></tr>
+<tr class="separator:a6d36f0e15dfca9c0ecfff91149882232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d7f0790ebd99fdc012971dd9a78e65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a95d7f0790ebd99fdc012971dd9a78e65">find_betas_approx_2</a> (const CvMat *L_6x10, const CvMat *Rho, double *betas)</td></tr>
+<tr class="separator:a95d7f0790ebd99fdc012971dd9a78e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80a1580251b4368156fb0e0d36a7ac2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#af80a1580251b4368156fb0e0d36a7ac2">find_betas_approx_3</a> (const CvMat *L_6x10, const CvMat *Rho, double *betas)</td></tr>
+<tr class="separator:af80a1580251b4368156fb0e0d36a7ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9290df9524ca70b3127ea3408fb7b0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ac9290df9524ca70b3127ea3408fb7b0d">qr_solve</a> (CvMat *A, CvMat *b, CvMat *X)</td></tr>
+<tr class="separator:ac9290df9524ca70b3127ea3408fb7b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd58911fc21c6255ac5c541b8e4540ac"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#afd58911fc21c6255ac5c541b8e4540ac">dot</a> (const double *v1, const double *v2)</td></tr>
+<tr class="separator:afd58911fc21c6255ac5c541b8e4540ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af117c07b4d7b9b5990f98f33d19482d3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#af117c07b4d7b9b5990f98f33d19482d3">dist2</a> (const double *p1, const double *p2)</td></tr>
+<tr class="separator:af117c07b4d7b9b5990f98f33d19482d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f8ccb85a3c8341efae307892caad37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#af2f8ccb85a3c8341efae307892caad37">compute_rho</a> (double *rho)</td></tr>
+<tr class="separator:af2f8ccb85a3c8341efae307892caad37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2118dab6bee4303e80c0ca109f3b2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#add2118dab6bee4303e80c0ca109f3b2c">compute_L_6x10</a> (const double *ut, double *l_6x10)</td></tr>
+<tr class="separator:add2118dab6bee4303e80c0ca109f3b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2b11d8afbf638d8cd48d739b071073"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a4b2b11d8afbf638d8cd48d739b071073">gauss_newton</a> (const CvMat *L_6x10, const CvMat *Rho, double current_betas[4])</td></tr>
+<tr class="separator:a4b2b11d8afbf638d8cd48d739b071073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae07f773bf3dc205377bd31afa24702a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#aae07f773bf3dc205377bd31afa24702a">compute_A_and_b_gauss_newton</a> (const double *l_6x10, const double *rho, double cb[4], CvMat *A, CvMat *b)</td></tr>
+<tr class="separator:aae07f773bf3dc205377bd31afa24702a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab893a05c84790a0344d20df7eab604e0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ab893a05c84790a0344d20df7eab604e0">compute_R_and_t</a> (const double *ut, const double *betas, double R[3][3], double t[3])</td></tr>
+<tr class="separator:ab893a05c84790a0344d20df7eab604e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf90f06f1d7218d8200b2682817ed08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#abf90f06f1d7218d8200b2682817ed08a">estimate_R_and_t</a> (double R[3][3], double t[3])</td></tr>
+<tr class="separator:abf90f06f1d7218d8200b2682817ed08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71c8d15e2c605918bae4bc53dc99904"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#aa71c8d15e2c605918bae4bc53dc99904">copy_R_and_t</a> (const double R_dst[3][3], const double t_dst[3], double R_src[3][3], double t_src[3])</td></tr>
+<tr class="separator:aa71c8d15e2c605918bae4bc53dc99904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b16a3fb045afe5425c004ec7b5fa21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a54b16a3fb045afe5425c004ec7b5fa21">mat_to_quat</a> (const double R[3][3], double q[4])</td></tr>
+<tr class="separator:a54b16a3fb045afe5425c004ec7b5fa21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aed7cb3c5dcf35bb2e6074679ba2a76e3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#aed7cb3c5dcf35bb2e6074679ba2a76e3">uc</a></td></tr>
+<tr class="separator:aed7cb3c5dcf35bb2e6074679ba2a76e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c88482e4f7fb0ca8519a4897c936f4f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a8c88482e4f7fb0ca8519a4897c936f4f">vc</a></td></tr>
+<tr class="separator:a8c88482e4f7fb0ca8519a4897c936f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65e2f3506f97dd52f00be073209acd1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#af65e2f3506f97dd52f00be073209acd1">fu</a></td></tr>
+<tr class="separator:af65e2f3506f97dd52f00be073209acd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e47e678a18e47e29a3d9b6842222eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a97e47e678a18e47e29a3d9b6842222eb">fv</a></td></tr>
+<tr class="separator:a97e47e678a18e47e29a3d9b6842222eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053e3eea03b62181aa944c9fc20d5bfa"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a053e3eea03b62181aa944c9fc20d5bfa">pws</a></td></tr>
+<tr class="separator:a053e3eea03b62181aa944c9fc20d5bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc95fe222dcfad864207925e2783e9ce"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#afc95fe222dcfad864207925e2783e9ce">us</a></td></tr>
+<tr class="separator:afc95fe222dcfad864207925e2783e9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868ef3e00710a5541d50a15af7be2a20"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a868ef3e00710a5541d50a15af7be2a20">alphas</a></td></tr>
+<tr class="separator:a868ef3e00710a5541d50a15af7be2a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac832e2ede20f3a111a29b4d1c24b0587"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ac832e2ede20f3a111a29b4d1c24b0587">pcs</a></td></tr>
+<tr class="separator:ac832e2ede20f3a111a29b4d1c24b0587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c44ad1754b7d0817470a96156d5772a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a7c44ad1754b7d0817470a96156d5772a">maximum_number_of_correspondences</a></td></tr>
+<tr class="separator:a7c44ad1754b7d0817470a96156d5772a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e762455c896cbc55bd81c77af87941f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a2e762455c896cbc55bd81c77af87941f">number_of_correspondences</a></td></tr>
+<tr class="separator:a2e762455c896cbc55bd81c77af87941f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce97bf95ac136a37e0ddbfced436d44"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#acce97bf95ac136a37e0ddbfced436d44">cws</a> [4][3]</td></tr>
+<tr class="separator:acce97bf95ac136a37e0ddbfced436d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada47673e9ff64787eda1412e35056627"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ada47673e9ff64787eda1412e35056627">ccs</a> [4][3]</td></tr>
+<tr class="separator:ada47673e9ff64787eda1412e35056627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa2e7f95408450609eba8509f0d5571"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a7aa2e7f95408450609eba8509f0d5571">cws_determinant</a></td></tr>
+<tr class="separator:a7aa2e7f95408450609eba8509f0d5571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a53aa206e4d1f799db01b5b2ef622fe"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_o_r_b___s_l_a_m2_1_1_map_point.html">MapPoint</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a4a53aa206e4d1f799db01b5b2ef622fe">mvpMapPointMatches</a></td></tr>
+<tr class="separator:a4a53aa206e4d1f799db01b5b2ef622fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b3ccfff0f500c9e73efcb57d84474a"><td class="memItemLeft" align="right" valign="top">vector&lt; cv::Point2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#af3b3ccfff0f500c9e73efcb57d84474a">mvP2D</a></td></tr>
+<tr class="separator:af3b3ccfff0f500c9e73efcb57d84474a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db84340cb13eff1148839ce5e77105b"><td class="memItemLeft" align="right" valign="top">vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a7db84340cb13eff1148839ce5e77105b">mvSigma2</a></td></tr>
+<tr class="separator:a7db84340cb13eff1148839ce5e77105b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8498b32728a10f7e7ec834576ded87cf"><td class="memItemLeft" align="right" valign="top">vector&lt; cv::Point3f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a8498b32728a10f7e7ec834576ded87cf">mvP3Dw</a></td></tr>
+<tr class="separator:a8498b32728a10f7e7ec834576ded87cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d7d867978e933e5456c24a6f7433b0"><td class="memItemLeft" align="right" valign="top">vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#aa8d7d867978e933e5456c24a6f7433b0">mvKeyPointIndices</a></td></tr>
+<tr class="separator:aa8d7d867978e933e5456c24a6f7433b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66b8221ddd57480e0cff4fdf305f052"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ab66b8221ddd57480e0cff4fdf305f052">mRi</a> [3][3]</td></tr>
+<tr class="separator:ab66b8221ddd57480e0cff4fdf305f052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55a5403377e0072fb551472b4698889"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ad55a5403377e0072fb551472b4698889">mti</a> [3]</td></tr>
+<tr class="separator:ad55a5403377e0072fb551472b4698889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a833616003399bd9392a403b789cfac41"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a833616003399bd9392a403b789cfac41">mTcwi</a></td></tr>
+<tr class="separator:a833616003399bd9392a403b789cfac41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bf8d10dff819b6f243b0b297627729"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a99bf8d10dff819b6f243b0b297627729">mvbInliersi</a></td></tr>
+<tr class="separator:a99bf8d10dff819b6f243b0b297627729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94dae01b8088d82477c6f18b32d8b7b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a94dae01b8088d82477c6f18b32d8b7b0">mnInliersi</a></td></tr>
+<tr class="separator:a94dae01b8088d82477c6f18b32d8b7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd174db02cc77182c187ceef74931f02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#acd174db02cc77182c187ceef74931f02">mnIterations</a></td></tr>
+<tr class="separator:acd174db02cc77182c187ceef74931f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9419f0917d2e1db0c1a76fe97cb4c326"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a9419f0917d2e1db0c1a76fe97cb4c326">mvbBestInliers</a></td></tr>
+<tr class="separator:a9419f0917d2e1db0c1a76fe97cb4c326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa93341b33e4cb4a03b354e95aaa19e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#aaa93341b33e4cb4a03b354e95aaa19e4">mnBestInliers</a></td></tr>
+<tr class="separator:aaa93341b33e4cb4a03b354e95aaa19e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8090b33033ca9d0026113f2c1454fc8"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ab8090b33033ca9d0026113f2c1454fc8">mBestTcw</a></td></tr>
+<tr class="separator:ab8090b33033ca9d0026113f2c1454fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c081e732bbda232ccfff28ca9fc75e"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#af6c081e732bbda232ccfff28ca9fc75e">mRefinedTcw</a></td></tr>
+<tr class="separator:af6c081e732bbda232ccfff28ca9fc75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6688392be55984a41e6f540fea5f6a49"><td class="memItemLeft" align="right" valign="top">vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a6688392be55984a41e6f540fea5f6a49">mvbRefinedInliers</a></td></tr>
+<tr class="separator:a6688392be55984a41e6f540fea5f6a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4055d308ba46690499985cc082389ea1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a4055d308ba46690499985cc082389ea1">mnRefinedInliers</a></td></tr>
+<tr class="separator:a4055d308ba46690499985cc082389ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130dcfc77d6c98b3f172d1f26d6df37b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a130dcfc77d6c98b3f172d1f26d6df37b">N</a></td></tr>
+<tr class="separator:a130dcfc77d6c98b3f172d1f26d6df37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3470afc96c454059aa0d826b1982570f"><td class="memItemLeft" align="right" valign="top">vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a3470afc96c454059aa0d826b1982570f">mvAllIndices</a></td></tr>
+<tr class="separator:a3470afc96c454059aa0d826b1982570f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9716f832c8f6190e66e0f36d9cac09b8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a9716f832c8f6190e66e0f36d9cac09b8">mRansacProb</a></td></tr>
+<tr class="separator:a9716f832c8f6190e66e0f36d9cac09b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5694fcb7d9f017ebc25cf096c2459923"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a5694fcb7d9f017ebc25cf096c2459923">mRansacMinInliers</a></td></tr>
+<tr class="separator:a5694fcb7d9f017ebc25cf096c2459923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c7c904ed5e57d7672a0884dae5f3252"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a6c7c904ed5e57d7672a0884dae5f3252">mRansacMaxIts</a></td></tr>
+<tr class="separator:a6c7c904ed5e57d7672a0884dae5f3252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa364e0f3b317e9d0a27c956096c52a03"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#aa364e0f3b317e9d0a27c956096c52a03">mRansacEpsilon</a></td></tr>
+<tr class="separator:aa364e0f3b317e9d0a27c956096c52a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9af481b97b3bfd60f60371af7a534ff"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#ae9af481b97b3bfd60f60371af7a534ff">mRansacTh</a></td></tr>
+<tr class="separator:ae9af481b97b3bfd60f60371af7a534ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02709ce4b9dbd8b7537a13365af2a3db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a02709ce4b9dbd8b7537a13365af2a3db">mRansacMinSet</a></td></tr>
+<tr class="separator:a02709ce4b9dbd8b7537a13365af2a3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e20aadb635e38bbc034c8a3ad1917b5"><td class="memItemLeft" align="right" valign="top">vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_pn_psolver.html#a4e20aadb635e38bbc034c8a3ad1917b5">mvMaxError</a></td></tr>
+<tr class="separator:a4e20aadb635e38bbc034c8a3ad1917b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7b4cad992a43620e027bfb4bc9ef24f8"></a>
@@ -135,6 +280,609 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acfff5312c244e3e6de7bc16b3a72f34b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfff5312c244e3e6de7bc16b3a72f34b">&#9670;&nbsp;</a></span>add_correspondence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::add_correspondence </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>Y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>Z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb27b1402d63ce78890d3f1ea42a75a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb27b1402d63ce78890d3f1ea42a75a4">&#9670;&nbsp;</a></span>CheckInliers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::CheckInliers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42c51e43d16d52747facbaca93fcd583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42c51e43d16d52747facbaca93fcd583">&#9670;&nbsp;</a></span>choose_control_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::choose_control_points </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae07f773bf3dc205377bd31afa24702a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae07f773bf3dc205377bd31afa24702a">&#9670;&nbsp;</a></span>compute_A_and_b_gauss_newton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::compute_A_and_b_gauss_newton </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>l_6x10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>cb</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CvMat *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CvMat *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e35c1813d1a76d6b2a1664ac7080dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e35c1813d1a76d6b2a1664ac7080dcd">&#9670;&nbsp;</a></span>compute_barycentric_coordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::compute_barycentric_coordinates </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4c58e214a0016e1e58cbc1afd9eb5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c58e214a0016e1e58cbc1afd9eb5eb">&#9670;&nbsp;</a></span>compute_ccs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::compute_ccs </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>betas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>ut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add2118dab6bee4303e80c0ca109f3b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add2118dab6bee4303e80c0ca109f3b2c">&#9670;&nbsp;</a></span>compute_L_6x10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::compute_L_6x10 </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>ut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>l_6x10</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abeb37c568bb09293bb679d84bb4d2796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb37c568bb09293bb679d84bb4d2796">&#9670;&nbsp;</a></span>compute_pcs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::compute_pcs </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa712661f5888f9e1f580fe7f0117e389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa712661f5888f9e1f580fe7f0117e389">&#9670;&nbsp;</a></span>compute_pose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::compute_pose </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>R</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>T</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab893a05c84790a0344d20df7eab604e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab893a05c84790a0344d20df7eab604e0">&#9670;&nbsp;</a></span>compute_R_and_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::compute_R_and_t </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>ut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>betas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>R</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2f8ccb85a3c8341efae307892caad37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f8ccb85a3c8341efae307892caad37">&#9670;&nbsp;</a></span>compute_rho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::compute_rho </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>rho</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa71c8d15e2c605918bae4bc53dc99904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71c8d15e2c605918bae4bc53dc99904">&#9670;&nbsp;</a></span>copy_R_and_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::copy_R_and_t </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>R_dst</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>t_dst</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>R_src</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t_src</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af117c07b4d7b9b5990f98f33d19482d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af117c07b4d7b9b5990f98f33d19482d3">&#9670;&nbsp;</a></span>dist2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::dist2 </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd58911fc21c6255ac5c541b8e4540ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd58911fc21c6255ac5c541b8e4540ac">&#9670;&nbsp;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::dot </td>
+          <td>(</td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf90f06f1d7218d8200b2682817ed08a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf90f06f1d7218d8200b2682817ed08a">&#9670;&nbsp;</a></span>estimate_R_and_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::estimate_R_and_t </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>R</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cc37bbb1cc4e575d83fb7503136a542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc37bbb1cc4e575d83fb7503136a542">&#9670;&nbsp;</a></span>fill_M()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::fill_M </td>
+          <td>(</td>
+          <td class="paramtype">CvMat *&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>alphas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a784429037a79cb53923f4db181a4d115"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a784429037a79cb53923f4db181a4d115">&#9670;&nbsp;</a></span>find()</h2>
 
@@ -159,6 +907,174 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d36f0e15dfca9c0ecfff91149882232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d36f0e15dfca9c0ecfff91149882232">&#9670;&nbsp;</a></span>find_betas_approx_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::find_betas_approx_1 </td>
+          <td>(</td>
+          <td class="paramtype">const CvMat *&#160;</td>
+          <td class="paramname"><em>L_6x10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CvMat *&#160;</td>
+          <td class="paramname"><em>Rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>betas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95d7f0790ebd99fdc012971dd9a78e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d7f0790ebd99fdc012971dd9a78e65">&#9670;&nbsp;</a></span>find_betas_approx_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::find_betas_approx_2 </td>
+          <td>(</td>
+          <td class="paramtype">const CvMat *&#160;</td>
+          <td class="paramname"><em>L_6x10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CvMat *&#160;</td>
+          <td class="paramname"><em>Rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>betas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af80a1580251b4368156fb0e0d36a7ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80a1580251b4368156fb0e0d36a7ac2">&#9670;&nbsp;</a></span>find_betas_approx_3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::find_betas_approx_3 </td>
+          <td>(</td>
+          <td class="paramtype">const CvMat *&#160;</td>
+          <td class="paramname"><em>L_6x10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CvMat *&#160;</td>
+          <td class="paramname"><em>Rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>betas</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b2b11d8afbf638d8cd48d739b071073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b2b11d8afbf638d8cd48d739b071073">&#9670;&nbsp;</a></span>gauss_newton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::gauss_newton </td>
+          <td>(</td>
+          <td class="paramtype">const CvMat *&#160;</td>
+          <td class="paramname"><em>L_6x10</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const CvMat *&#160;</td>
+          <td class="paramname"><em>Rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>current_betas</em>[4]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -199,6 +1115,293 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54b16a3fb045afe5425c004ec7b5fa21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b16a3fb045afe5425c004ec7b5fa21">&#9670;&nbsp;</a></span>mat_to_quat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::mat_to_quat </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>R</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>q</em>[4]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2be5e2c8a40397fb9a7c7457be95c407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2be5e2c8a40397fb9a7c7457be95c407">&#9670;&nbsp;</a></span>print_pose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::print_pose </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>R</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>t</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9290df9524ca70b3127ea3408fb7b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9290df9524ca70b3127ea3408fb7b0d">&#9670;&nbsp;</a></span>qr_solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::qr_solve </td>
+          <td>(</td>
+          <td class="paramtype">CvMat *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CvMat *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CvMat *&#160;</td>
+          <td class="paramname"><em>X</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19710728d61dcf1caa32f31d140f3327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19710728d61dcf1caa32f31d140f3327">&#9670;&nbsp;</a></span>Refine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ORB_SLAM2::PnPsolver::Refine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3247415c8c4ff0a5df74096907eac10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3247415c8c4ff0a5df74096907eac10">&#9670;&nbsp;</a></span>relative_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::relative_error </td>
+          <td>(</td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>rot_err</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>transl_err</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>Rtrue</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>ttrue</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>Rest</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>test</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d0ecb37dd35686ae16ff2cdb277cd82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d0ecb37dd35686ae16ff2cdb277cd82">&#9670;&nbsp;</a></span>reprojection_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::reprojection_error </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>R</em>[3][3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>t</em>[3]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78dcd4d88b5ebae795d8c214932c4089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78dcd4d88b5ebae795d8c214932c4089">&#9670;&nbsp;</a></span>reset_correspondences()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::reset_correspondences </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2747be485a2a87ad5a72f8431edbf77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2747be485a2a87ad5a72f8431edbf77">&#9670;&nbsp;</a></span>set_maximum_number_of_correspondences()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::set_maximum_number_of_correspondences </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -255,14 +1458,899 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af33413cd4dc6f3e963cf49997baa40c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33413cd4dc6f3e963cf49997baa40c2">&#9670;&nbsp;</a></span>solve_for_sign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ORB_SLAM2::PnPsolver::solve_for_sign </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a868ef3e00710a5541d50a15af7be2a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868ef3e00710a5541d50a15af7be2a20">&#9670;&nbsp;</a></span>alphas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double * ORB_SLAM2::PnPsolver::alphas</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada47673e9ff64787eda1412e35056627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada47673e9ff64787eda1412e35056627">&#9670;&nbsp;</a></span>ccs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::ccs[4][3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acce97bf95ac136a37e0ddbfced436d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce97bf95ac136a37e0ddbfced436d44">&#9670;&nbsp;</a></span>cws</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::cws[4][3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aa2e7f95408450609eba8509f0d5571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa2e7f95408450609eba8509f0d5571">&#9670;&nbsp;</a></span>cws_determinant</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::cws_determinant</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af65e2f3506f97dd52f00be073209acd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65e2f3506f97dd52f00be073209acd1">&#9670;&nbsp;</a></span>fu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::fu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97e47e678a18e47e29a3d9b6842222eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e47e678a18e47e29a3d9b6842222eb">&#9670;&nbsp;</a></span>fv</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::fv</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c44ad1754b7d0817470a96156d5772a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c44ad1754b7d0817470a96156d5772a">&#9670;&nbsp;</a></span>maximum_number_of_correspondences</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::maximum_number_of_correspondences</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8090b33033ca9d0026113f2c1454fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8090b33033ca9d0026113f2c1454fc8">&#9670;&nbsp;</a></span>mBestTcw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat ORB_SLAM2::PnPsolver::mBestTcw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa93341b33e4cb4a03b354e95aaa19e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa93341b33e4cb4a03b354e95aaa19e4">&#9670;&nbsp;</a></span>mnBestInliers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::mnBestInliers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94dae01b8088d82477c6f18b32d8b7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94dae01b8088d82477c6f18b32d8b7b0">&#9670;&nbsp;</a></span>mnInliersi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::mnInliersi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd174db02cc77182c187ceef74931f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd174db02cc77182c187ceef74931f02">&#9670;&nbsp;</a></span>mnIterations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::mnIterations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4055d308ba46690499985cc082389ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4055d308ba46690499985cc082389ea1">&#9670;&nbsp;</a></span>mnRefinedInliers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::mnRefinedInliers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa364e0f3b317e9d0a27c956096c52a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa364e0f3b317e9d0a27c956096c52a03">&#9670;&nbsp;</a></span>mRansacEpsilon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ORB_SLAM2::PnPsolver::mRansacEpsilon</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c7c904ed5e57d7672a0884dae5f3252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c7c904ed5e57d7672a0884dae5f3252">&#9670;&nbsp;</a></span>mRansacMaxIts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::mRansacMaxIts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5694fcb7d9f017ebc25cf096c2459923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5694fcb7d9f017ebc25cf096c2459923">&#9670;&nbsp;</a></span>mRansacMinInliers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::mRansacMinInliers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02709ce4b9dbd8b7537a13365af2a3db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02709ce4b9dbd8b7537a13365af2a3db">&#9670;&nbsp;</a></span>mRansacMinSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::mRansacMinSet</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9716f832c8f6190e66e0f36d9cac09b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9716f832c8f6190e66e0f36d9cac09b8">&#9670;&nbsp;</a></span>mRansacProb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::mRansacProb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9af481b97b3bfd60f60371af7a534ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9af481b97b3bfd60f60371af7a534ff">&#9670;&nbsp;</a></span>mRansacTh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ORB_SLAM2::PnPsolver::mRansacTh</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6c081e732bbda232ccfff28ca9fc75e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c081e732bbda232ccfff28ca9fc75e">&#9670;&nbsp;</a></span>mRefinedTcw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat ORB_SLAM2::PnPsolver::mRefinedTcw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab66b8221ddd57480e0cff4fdf305f052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66b8221ddd57480e0cff4fdf305f052">&#9670;&nbsp;</a></span>mRi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::mRi[3][3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a833616003399bd9392a403b789cfac41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a833616003399bd9392a403b789cfac41">&#9670;&nbsp;</a></span>mTcwi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat ORB_SLAM2::PnPsolver::mTcwi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad55a5403377e0072fb551472b4698889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55a5403377e0072fb551472b4698889">&#9670;&nbsp;</a></span>mti</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::mti[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3470afc96c454059aa0d826b1982570f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3470afc96c454059aa0d826b1982570f">&#9670;&nbsp;</a></span>mvAllIndices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;size_t&gt; ORB_SLAM2::PnPsolver::mvAllIndices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9419f0917d2e1db0c1a76fe97cb4c326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9419f0917d2e1db0c1a76fe97cb4c326">&#9670;&nbsp;</a></span>mvbBestInliers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;bool&gt; ORB_SLAM2::PnPsolver::mvbBestInliers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99bf8d10dff819b6f243b0b297627729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99bf8d10dff819b6f243b0b297627729">&#9670;&nbsp;</a></span>mvbInliersi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;bool&gt; ORB_SLAM2::PnPsolver::mvbInliersi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6688392be55984a41e6f540fea5f6a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6688392be55984a41e6f540fea5f6a49">&#9670;&nbsp;</a></span>mvbRefinedInliers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;bool&gt; ORB_SLAM2::PnPsolver::mvbRefinedInliers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8d7d867978e933e5456c24a6f7433b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8d7d867978e933e5456c24a6f7433b0">&#9670;&nbsp;</a></span>mvKeyPointIndices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;size_t&gt; ORB_SLAM2::PnPsolver::mvKeyPointIndices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e20aadb635e38bbc034c8a3ad1917b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e20aadb635e38bbc034c8a3ad1917b5">&#9670;&nbsp;</a></span>mvMaxError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;float&gt; ORB_SLAM2::PnPsolver::mvMaxError</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3b3ccfff0f500c9e73efcb57d84474a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b3ccfff0f500c9e73efcb57d84474a">&#9670;&nbsp;</a></span>mvP2D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;cv::Point2f&gt; ORB_SLAM2::PnPsolver::mvP2D</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8498b32728a10f7e7ec834576ded87cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8498b32728a10f7e7ec834576ded87cf">&#9670;&nbsp;</a></span>mvP3Dw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;cv::Point3f&gt; ORB_SLAM2::PnPsolver::mvP3Dw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a53aa206e4d1f799db01b5b2ef622fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a53aa206e4d1f799db01b5b2ef622fe">&#9670;&nbsp;</a></span>mvpMapPointMatches</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_o_r_b___s_l_a_m2_1_1_map_point.html">MapPoint</a>*&gt; ORB_SLAM2::PnPsolver::mvpMapPointMatches</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7db84340cb13eff1148839ce5e77105b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db84340cb13eff1148839ce5e77105b">&#9670;&nbsp;</a></span>mvSigma2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;float&gt; ORB_SLAM2::PnPsolver::mvSigma2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a130dcfc77d6c98b3f172d1f26d6df37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a130dcfc77d6c98b3f172d1f26d6df37b">&#9670;&nbsp;</a></span>N</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::N</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e762455c896cbc55bd81c77af87941f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e762455c896cbc55bd81c77af87941f">&#9670;&nbsp;</a></span>number_of_correspondences</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ORB_SLAM2::PnPsolver::number_of_correspondences</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac832e2ede20f3a111a29b4d1c24b0587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac832e2ede20f3a111a29b4d1c24b0587">&#9670;&nbsp;</a></span>pcs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double * ORB_SLAM2::PnPsolver::pcs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a053e3eea03b62181aa944c9fc20d5bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053e3eea03b62181aa944c9fc20d5bfa">&#9670;&nbsp;</a></span>pws</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* ORB_SLAM2::PnPsolver::pws</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed7cb3c5dcf35bb2e6074679ba2a76e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed7cb3c5dcf35bb2e6074679ba2a76e3">&#9670;&nbsp;</a></span>uc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::uc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc95fe222dcfad864207925e2783e9ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc95fe222dcfad864207925e2783e9ce">&#9670;&nbsp;</a></span>us</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double * ORB_SLAM2::PnPsolver::us</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c88482e4f7fb0ca8519a4897c936f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c88482e4f7fb0ca8519a4897c936f4f">&#9670;&nbsp;</a></span>vc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ORB_SLAM2::PnPsolver::vc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_pn_psolver_8h_source.html">PnPsolver.h</a></li>
-<li>src/<a class="el" href="_pn_psolver_8cpp.html">PnPsolver.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/include/<a class="el" href="_pn_psolver_8h_source.html">PnPsolver.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/src/<a class="el" href="_pn_psolver_8cpp.html">PnPsolver.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:34 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

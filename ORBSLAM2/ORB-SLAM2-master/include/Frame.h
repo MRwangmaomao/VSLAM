@@ -40,6 +40,10 @@ namespace ORB_SLAM2
 class MapPoint;
 class KeyFrame;
 
+/**
+ * @brief 对一帧图像进行描述
+ * 
+ */
 class Frame
 {
 public:

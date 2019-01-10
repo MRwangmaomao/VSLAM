@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: g2o::OptimizationAlgorithm Class Reference</title>
+<title>ORB-SLAM2: g2o::OptimizationAlgorithm Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -68,6 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classg2o_1_1_optimization_algorithm-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">g2o::OptimizationAlgorithm Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -130,12 +132,19 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae37b494f69b483a3fcafa944e987e325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classg2o_1_1_property_map.html">PropertyMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_optimization_algorithm.html#ae37b494f69b483a3fcafa944e987e325">_properties</a></td></tr>
 <tr class="memdesc:ae37b494f69b483a3fcafa944e987e325"><td class="mdescLeft">&#160;</td><td class="mdescRight">the properties of your solver, use this to store the parameters of your solver  <a href="#ae37b494f69b483a3fcafa944e987e325">More...</a><br /></td></tr>
 <tr class="separator:ae37b494f69b483a3fcafa944e987e325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af4bf8ed80e63df3f1a066e8b0098eb27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_optimization_algorithm.html#af4bf8ed80e63df3f1a066e8b0098eb27">OptimizationAlgorithm</a> (const <a class="el" href="classg2o_1_1_optimization_algorithm.html">OptimizationAlgorithm</a> &amp;)</td></tr>
+<tr class="separator:af4bf8ed80e63df3f1a066e8b0098eb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d342220fa0b1588e21f61959ff414a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classg2o_1_1_optimization_algorithm.html">OptimizationAlgorithm</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_optimization_algorithm.html#a74d342220fa0b1588e21f61959ff414a">operator=</a> (const <a class="el" href="classg2o_1_1_optimization_algorithm.html">OptimizationAlgorithm</a> &amp;)</td></tr>
+<tr class="separator:a74d342220fa0b1588e21f61959ff414a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generic interface for a non-linear solver operating on a graph. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a205013e0425b7bbae01cd16caf500ebb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a205013e0425b7bbae01cd16caf500ebb">&#9670;&nbsp;</a></span>OptimizationAlgorithm()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a205013e0425b7bbae01cd16caf500ebb">&#9670;&nbsp;</a></span>OptimizationAlgorithm() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,6 +179,32 @@ Protected Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4bf8ed80e63df3f1a066e8b0098eb27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bf8ed80e63df3f1a066e8b0098eb27">&#9670;&nbsp;</a></span>OptimizationAlgorithm() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">g2o::OptimizationAlgorithm::OptimizationAlgorithm </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classg2o_1_1_optimization_algorithm.html">OptimizationAlgorithm</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -242,6 +277,32 @@ Protected Attributes</h2></td></tr>
 <p>initialize the solver, called once before the first call to <a class="el" href="classg2o_1_1_optimization_algorithm.html#ab174deeeb2551ceaf715ea09f0f9c077">solve()</a> </p>
 
 <p>Implemented in <a class="el" href="classg2o_1_1_optimization_algorithm_with_hessian.html#ae067a9c2961718dc8a37e3b8478b6d01">g2o::OptimizationAlgorithmWithHessian</a>.</p>
+
+</div>
+</div>
+<a id="a74d342220fa0b1588e21f61959ff414a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d342220fa0b1588e21f61959ff414a">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classg2o_1_1_optimization_algorithm.html">OptimizationAlgorithm</a>&amp; g2o::OptimizationAlgorithm::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classg2o_1_1_optimization_algorithm.html">OptimizationAlgorithm</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -543,13 +604,13 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="optimization__algorithm_8h_source.html">optimization_algorithm.h</a></li>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="optimization__algorithm_8cpp.html">optimization_algorithm.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="optimization__algorithm_8h_source.html">optimization_algorithm.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="optimization__algorithm_8cpp.html">optimization_algorithm.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:07 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

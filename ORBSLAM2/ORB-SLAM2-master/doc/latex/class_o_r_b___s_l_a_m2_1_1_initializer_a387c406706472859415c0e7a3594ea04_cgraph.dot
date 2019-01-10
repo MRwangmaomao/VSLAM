@@ -1,0 +1,13 @@
+digraph "ORB_SLAM2::Initializer::FindFundamental"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node32 [label="ORB_SLAM2::Initializer\l::FindFundamental",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node32 -> Node33 [color="midnightblue",fontsize="10",style="solid"];
+  Node33 [label="ORB_SLAM2::Initializer\l::Normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a44ce7aa73741d900d2becc0d8f14c1af"];
+  Node32 -> Node34 [color="midnightblue",fontsize="10",style="solid"];
+  Node34 [label="ORB_SLAM2::Initializer\l::ComputeF21",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#aaca077af095ae1de08ebb473af670d1d",tooltip="从特征点匹配求fundamental matrix（normalized 8点法） "];
+  Node32 -> Node35 [color="midnightblue",fontsize="10",style="solid"];
+  Node35 [label="ORB_SLAM2::Initializer\l::CheckFundamental",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a1c8b74679a5cb1af16c07c8a00c8e8c0",tooltip="对给定的fundamental matrix打分 "];
+}

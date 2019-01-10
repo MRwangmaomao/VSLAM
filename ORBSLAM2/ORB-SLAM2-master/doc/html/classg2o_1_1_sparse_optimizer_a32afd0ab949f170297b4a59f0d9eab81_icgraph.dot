@@ -1,0 +1,11 @@
+digraph "g2o::SparseOptimizer::setForceStopFlag"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node95 [label="g2o::SparseOptimizer\l::setForceStopFlag",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node95 -> Node96 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="ORB_SLAM2::Optimizer\l::BundleAdjustment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_optimizer.html#aac6bf926792ed8a013d64897879a89ec",tooltip="bundle adjustment Optimization "];
+  Node95 -> Node97 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node97 [label="ORB_SLAM2::Optimizer\l::LocalBundleAdjustment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_optimizer.html#ab70e0b4f366b65a0c1ae8b2def19d339",tooltip="Local Bundle Adjustment. "];
+}

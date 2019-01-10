@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: g2o::HyperGraph Class Reference</title>
+<title>ORB-SLAM2: g2o::HyperGraph Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -71,6 +72,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classg2o_1_1_hyper_graph-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">g2o::HyperGraph Class Reference</div>  </div>
@@ -163,6 +165,13 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a83132c77c8d0896581d168cbc72f673a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe4ae6e9ef05c8bded2b1b30e1886b36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classg2o_1_1_hyper_graph.html#a5e2970e236c0dcb4eff7c205d7b6b4ae">EdgeSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_hyper_graph.html#afe4ae6e9ef05c8bded2b1b30e1886b36">_edges</a></td></tr>
 <tr class="separator:afe4ae6e9ef05c8bded2b1b30e1886b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab19a6e0681e2b30d48740cebf553c7eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_hyper_graph.html#ab19a6e0681e2b30d48740cebf553c7eb">HyperGraph</a> (const <a class="el" href="classg2o_1_1_hyper_graph.html">HyperGraph</a> &amp;)</td></tr>
+<tr class="separator:ab19a6e0681e2b30d48740cebf553c7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace0adc6b03e56bf6b554368d49dcf88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classg2o_1_1_hyper_graph.html">HyperGraph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classg2o_1_1_hyper_graph.html#aace0adc6b03e56bf6b554368d49dcf88">operator=</a> (const <a class="el" href="classg2o_1_1_hyper_graph.html">HyperGraph</a> &amp;)</td></tr>
+<tr class="separator:aace0adc6b03e56bf6b554368d49dcf88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that models a directed Hyper-Graph. An hyper graph is a graph where an edge can connect one or more nodes. Both Vertices and Edges of an hyoper graph derive from the same class <a class="el" href="structg2o_1_1_hyper_graph_1_1_hyper_graph_element.html">HyperGraphElement</a>, thus one can implement generic algorithms that operate transparently on edges or vertices (see <a class="el" href="classg2o_1_1_hyper_graph_action.html" title="Abstract action that operates on an entire graph. ">HyperGraphAction</a>).</p>
@@ -240,7 +249,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a833632b111cfc7cf08b842ae3cb43d41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a833632b111cfc7cf08b842ae3cb43d41">&#9670;&nbsp;</a></span>HyperGraph()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a833632b111cfc7cf08b842ae3cb43d41">&#9670;&nbsp;</a></span>HyperGraph() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,6 +291,32 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>destroys the hyper-graph and all the vertices of the graph </p>
+
+</div>
+</div>
+<a id="ab19a6e0681e2b30d48740cebf553c7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19a6e0681e2b30d48740cebf553c7eb">&#9670;&nbsp;</a></span>HyperGraph() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">g2o::HyperGraph::HyperGraph </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classg2o_1_1_hyper_graph.html">HyperGraph</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -459,6 +494,32 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the set of edges of the hyper graph </dd></dl>
+
+</div>
+</div>
+<a id="aace0adc6b03e56bf6b554368d49dcf88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace0adc6b03e56bf6b554368d49dcf88">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classg2o_1_1_hyper_graph.html">HyperGraph</a>&amp; g2o::HyperGraph::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classg2o_1_1_hyper_graph.html">HyperGraph</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -686,13 +747,13 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="hyper__graph_8h_source.html">hyper_graph.h</a></li>
-<li>Thirdparty/g2o/g2o/core/<a class="el" href="hyper__graph_8cpp.html">hyper_graph.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="hyper__graph_8h_source.html">hyper_graph.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/Thirdparty/g2o/g2o/core/<a class="el" href="hyper__graph_8cpp.html">hyper_graph.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:48:47 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

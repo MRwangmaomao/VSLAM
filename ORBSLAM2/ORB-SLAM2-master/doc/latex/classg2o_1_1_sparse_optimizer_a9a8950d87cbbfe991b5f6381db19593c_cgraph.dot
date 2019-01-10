@@ -1,0 +1,13 @@
+digraph "g2o::SparseOptimizer::activeRobustChi2"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="g2o::SparseOptimizer\l::activeRobustChi2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="g2o::OptimizableGraph\l::Edge::robustKernel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_edge.html#a4fe9c69dc5275ca661e793aca6e2d93c",tooltip="if NOT NULL, error of this edge will be robustifed with the kernel "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="g2o::RobustKernel::\lrobustify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_robust_kernel.html#ab47b071a0cfe466be063f0104bc41d0f"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="g2o::OptimizableGraph\l::Edge::chi2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_edge.html#a182bd2c109d50283c638d9b295f2f3d7",tooltip="computes the chi2 based on the cached error value, only valid after computeError has been called..."];
+}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ORB_SLAM2_doxygen: ORB_SLAM2::ORBextractor Class Reference</title>
+<title>ORB-SLAM2: ORB_SLAM2::ORBextractor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">ORB_SLAM2_doxygen
+   <div id="projectname">ORB-SLAM2
+   &#160;<span id="projectnumber">2.0</span>
    </div>
   </td>
  </tr>
@@ -94,6 +95,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab0e5801da8f6dee0261aef5cf19e73b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html#ab0e5801da8f6dee0261aef5cf19e73b3">~ORBextractor</a> ()</td></tr>
 <tr class="separator:ab0e5801da8f6dee0261aef5cf19e73b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05117a839e4261638b0413fff2dc9e1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html#a05117a839e4261638b0413fff2dc9e1b">operator()</a> (cv::InputArray image, cv::InputArray mask, std::vector&lt; cv::KeyPoint &gt; &amp;keypoints, cv::OutputArray descriptors)</td></tr>
+<tr class="memdesc:a05117a839e4261638b0413fff2dc9e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算描述子  <a href="#a05117a839e4261638b0413fff2dc9e1b">More...</a><br /></td></tr>
 <tr class="separator:a05117a839e4261638b0413fff2dc9e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaad86a9c65eed8a2f8af9604b1a53ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html#abaad86a9c65eed8a2f8af9604b1a53ee">GetLevels</a> ()</td></tr>
 <tr class="separator:abaad86a9c65eed8a2f8af9604b1a53ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,12 +118,12 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a058f24d80bb0b2c7d6fc0bdd3d9144d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html#a058f24d80bb0b2c7d6fc0bdd3d9144d1">ComputePyramid</a> (cv::Mat image)</td></tr>
-<tr class="memdesc:a058f24d80bb0b2c7d6fc0bdd3d9144d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建图像金字塔  <a href="#a058f24d80bb0b2c7d6fc0bdd3d9144d1">More...</a><br /></td></tr>
+<tr class="memdesc:a058f24d80bb0b2c7d6fc0bdd3d9144d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建图像金字塔 远出看是角点的地方，进出看可能不是角点了，这个问题成为尺度不变性，需要构建图像金字塔解决。 通过在每一层金字塔上检测角点和角点的方向来实现。总层数为nlevels。计算得到每层的图像存到mvImagePyramid容器中 图像金字塔的计算通过resize函数实现  <a href="#a058f24d80bb0b2c7d6fc0bdd3d9144d1">More...</a><br /></td></tr>
 <tr class="separator:a058f24d80bb0b2c7d6fc0bdd3d9144d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a543d9b2aec1e521058ee9522937adc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html#a9a543d9b2aec1e521058ee9522937adc">ComputeKeyPointsOctTree</a> (std::vector&lt; std::vector&lt; cv::KeyPoint &gt; &gt; &amp;allKeypoints)</td></tr>
 <tr class="separator:a9a543d9b2aec1e521058ee9522937adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6b7b27447324af33fa60d6dc0c8ffa0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; cv::KeyPoint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html#ac6b7b27447324af33fa60d6dc0c8ffa0">DistributeOctTree</a> (const std::vector&lt; cv::KeyPoint &gt; &amp;vToDistributeKeys, const int &amp;minX, const int &amp;maxX, const int &amp;minY, const int &amp;maxY, const int &amp;nFeatures, const int &amp;level)</td></tr>
-<tr class="memdesc:ac6b7b27447324af33fa60d6dc0c8ffa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orb extrator distribute octTree.  <a href="#ac6b7b27447324af33fa60d6dc0c8ffa0">More...</a><br /></td></tr>
+<tr class="memdesc:ac6b7b27447324af33fa60d6dc0c8ffa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orb extrator distribute octTree 计算fast特征点并进行筛选 先用(maxX-minX)/(maxY-minY)来确定四叉数有几个初始节点，这里有 bug，如果输入的是一张宽高比小于0.5 的图像， nIni 计算得到 0，下一步计算 hX 会报错，例如round(640/480)=1,所以只有一个初始节点，(UL,UR,BL,BR)就会分布到被裁掉边界后的图像的四个角。  <a href="#ac6b7b27447324af33fa60d6dc0c8ffa0">More...</a><br /></td></tr>
 <tr class="separator:ac6b7b27447324af33fa60d6dc0c8ffa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56890a2032077fbfdf48687786985548"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html#a56890a2032077fbfdf48687786985548">ComputeKeyPointsOld</a> (std::vector&lt; std::vector&lt; cv::KeyPoint &gt; &gt; &amp;allKeypoints)</td></tr>
 <tr class="separator:a56890a2032077fbfdf48687786985548"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,7 +220,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="class_o_r_b___s_l_a_m2_1_1_o_r_bextractor.html#aaa8e010415e516246e171b9bbb9f84af" title="Construct a new ORBextractor::ORBextractor object. ">ORBextractor::ORBextractor</a> object. </p>
-<p>This is a test doxygen.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_nfeatures</td><td></td></tr>
@@ -334,7 +335,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>构建图像金字塔 </p>
+<p>构建图像金字塔 远出看是角点的地方，进出看可能不是角点了，这个问题成为尺度不变性，需要构建图像金字塔解决。 通过在每一层金字塔上检测角点和角点的方向来实现。总层数为nlevels。计算得到每层的图像存到mvImagePyramid容器中 图像金字塔的计算通过resize函数实现 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td></td></tr>
@@ -408,7 +409,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Orb extrator distribute octTree. </p>
+<p>Orb extrator distribute octTree 计算fast特征点并进行筛选 先用(maxX-minX)/(maxY-minY)来确定四叉数有几个初始节点，这里有 bug，如果输入的是一张宽高比小于0.5 的图像， nIni 计算得到 0，下一步计算 hX 会报错，例如round(640/480)=1,所以只有一个初始节点，(UL,UR,BL,BR)就会分布到被裁掉边界后的图像的四个角。 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vToDistributeKeys</td><td></td></tr>
@@ -612,6 +613,17 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>计算描述子 </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_image</td><td></td></tr>
+    <tr><td class="paramname">_mask</td><td></td></tr>
+    <tr><td class="paramname">_keypoints</td><td></td></tr>
+    <tr><td class="paramname">_descriptors</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -895,13 +907,13 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_o_r_bextractor_8h_source.html">ORBextractor.h</a></li>
-<li>src/<a class="el" href="_o_r_bextractor_8cpp.html">ORBextractor.cpp</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/include/<a class="el" href="_o_r_bextractor_8h_source.html">ORBextractor.h</a></li>
+<li>D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/src/<a class="el" href="_o_r_bextractor_8cpp.html">ORBextractor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 10 2019 21:49:34 for ORB-SLAM2 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.14
 </small></address>

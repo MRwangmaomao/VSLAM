@@ -1,0 +1,13 @@
+digraph "g2o::OptimizationAlgorithmLevenberg::computeLambdaInit"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="g2o::OptimizationAlgorithm\lLevenberg::computeLambdaInit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="g2o::SparseOptimizer\l::indexMapping",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_sparse_optimizer.html#a93e11150d513979a6367518ecaf26e02",tooltip="the index mapping of the vertices "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="g2o::OptimizableGraph\l::Vertex::dimension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#a86feed80301950b100142575b48e4fca",tooltip="dimension of the estimated state belonging to this node "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="g2o::OptimizableGraph\l::Vertex::hessian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classg2o_1_1_optimizable_graph_1_1_vertex.html#af46fa4f0baa4c87e29b137f24e713acb",tooltip="get the element from the hessian matrix "];
+}

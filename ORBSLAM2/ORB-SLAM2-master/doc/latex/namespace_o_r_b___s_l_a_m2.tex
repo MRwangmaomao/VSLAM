@@ -6,11 +6,11 @@
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_converter}{Converter}}
 \begin{DoxyCompactList}\small\item\em 提供了一些常见的转换 \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_extractor_node}{Extractor\+Node}}
-\item 
+\begin{DoxyCompactList}\small\item\em 提取一幅图像的特征点和描述子 \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame}{Frame}}
-\item 
+\begin{DoxyCompactList}\small\item\em 对一帧图像进行描述 \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_frame_drawer}{Frame\+Drawer}}
-\item 
+\begin{DoxyCompactList}\small\item\em 用于画出当前帧的位姿和地图点 \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_initializer}{Initializer}}
 \begin{DoxyCompactList}\small\item\em 单目\+S\+L\+A\+M初始化相关，双目和\+R\+G\+B\+D不会使用这个类 \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_key_frame}{Key\+Frame}}
@@ -32,7 +32,7 @@ class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_optimizer}{Optimizer}}
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bextractor}{O\+R\+Bextractor}}
 \item 
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_o_r_bmatcher}{O\+R\+Bmatcher}}
-\item 
+\begin{DoxyCompactList}\small\item\em 对提取的特征点进行匹配 \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_pn_psolver}{Pn\+Psolver}}
 \item 
 class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_sim3_solver}{Sim3\+Solver}}
@@ -48,17 +48,30 @@ class \mbox{\hyperlink{class_o_r_b___s_l_a_m2_1_1_viewer}{Viewer}}
 \item 
 typedef \mbox{\hyperlink{class_d_bo_w2_1_1_templated_vocabulary}{D\+Bo\+W2\+::\+Templated\+Vocabulary}}$<$ \mbox{\hyperlink{class_d_bo_w2_1_1_f_o_r_b_aef9b966d0293836fab9f55f1799ce0ed}{D\+Bo\+W2\+::\+F\+O\+R\+B\+::\+T\+Descriptor}}, \mbox{\hyperlink{class_d_bo_w2_1_1_f_o_r_b}{D\+Bo\+W2\+::\+F\+O\+RB}} $>$ \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a2fafba714858cab1bb18d438e2e83c5d}{O\+R\+B\+Vocabulary}}
 \end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_ac570dbdaae2d483745515b5022fd6820}{I\+C\+\_\+\+Angle}} (const Mat \&image, Point2f pt, const vector$<$ int $>$ \&u\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Fast角点不具有方向性，需要赋予其方向，灰度质心法计算特征点的旋转 计算特征点的灰度质心，计算半径为\+H\+A\+L\+F\+\_\+\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE=15 计算m\+\_\+10和m\+\_\+01。其中m\+\_\+01需要注意图像边界 最后根据反三角函数计算出旋转角度 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a932693f631bfe871700d02c72e14c6cd}{compute\+Orb\+Descriptor}} (const Key\+Point \&kpt, const Mat \&img, const Point $\ast$pattern, uchar $\ast$desc)
+\begin{DoxyCompactList}\small\item\em 计算orb描述子 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a40adb6b621d7c2dd9d2961ba88e445c8}{compute\+Orientation}} (const Mat \&image, vector$<$ Key\+Point $>$ \&keypoints, const vector$<$ int $>$ \&umax)
+\begin{DoxyCompactList}\small\item\em 计算图像中每个特征角点的旋转方向 \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_ad90997cdb916a99c644c0959e08cf4df}{compute\+Descriptors}} (const Mat \&image, vector$<$ Key\+Point $>$ \&keypoints, Mat \&descriptors, const vector$<$ Point $>$ \&pattern)
+\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a557e5c298c5f7164667f083494c2197a}{P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE}} = 31
-\item 
+\begin{DoxyCompactList}\small\item\em 计算灰度质心用到的匹配点数 \end{DoxyCompactList}\item 
 const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_aa09849ae679bf2392b097abd710d8d7f}{H\+A\+L\+F\+\_\+\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE}} = 15
 \item 
 const int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_aec00f1ad4dea35755e3af4404282cd3b}{E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}} = 19
-\item 
+\begin{DoxyCompactList}\small\item\em 边界阈值 \end{DoxyCompactList}\item 
 const float \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a8015b470ffeb885a0c90837a03b3210f}{factor\+PI}} = (float)(C\+V\+\_\+\+PI/180.f)
-\end{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{namespace_o_r_b___s_l_a_m2_a8dd21ee063eca2b0bc3f5e76ceba0492}{bit\+\_\+pattern\+\_\+31\+\_\+}} \mbox{[}256 $\ast$4\mbox{]}
+\begin{DoxyCompactList}\small\item\em bit\+\_\+pattern\+\_\+31\+\_\+ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -103,12 +116,99 @@ The views and conclusions contained in the software and documentation are those 
 
 
 
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespace_o_r_b___s_l_a_m2_ad90997cdb916a99c644c0959e08cf4df}\label{namespace_o_r_b___s_l_a_m2_ad90997cdb916a99c644c0959e08cf4df}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}!compute\+Descriptors@{compute\+Descriptors}}
+\index{compute\+Descriptors@{compute\+Descriptors}!O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}}
+\subsubsection{\texorpdfstring{compute\+Descriptors()}{computeDescriptors()}}
+{\footnotesize\ttfamily static void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::compute\+Descriptors (\begin{DoxyParamCaption}\item[{const Mat \&}]{image,  }\item[{vector$<$ Key\+Point $>$ \&}]{keypoints,  }\item[{Mat \&}]{descriptors,  }\item[{const vector$<$ Point $>$ \&}]{pattern }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{namespace_o_r_b___s_l_a_m2_a932693f631bfe871700d02c72e14c6cd}\label{namespace_o_r_b___s_l_a_m2_a932693f631bfe871700d02c72e14c6cd}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}!compute\+Orb\+Descriptor@{compute\+Orb\+Descriptor}}
+\index{compute\+Orb\+Descriptor@{compute\+Orb\+Descriptor}!O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}}
+\subsubsection{\texorpdfstring{compute\+Orb\+Descriptor()}{computeOrbDescriptor()}}
+{\footnotesize\ttfamily static void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::compute\+Orb\+Descriptor (\begin{DoxyParamCaption}\item[{const Key\+Point \&}]{kpt,  }\item[{const Mat \&}]{img,  }\item[{const Point $\ast$}]{pattern,  }\item[{uchar $\ast$}]{desc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+计算orb描述子 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kpt} & \\
+\hline
+{\em img} & \\
+\hline
+{\em pattern} & \\
+\hline
+{\em desc} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_o_r_b___s_l_a_m2_a40adb6b621d7c2dd9d2961ba88e445c8}\label{namespace_o_r_b___s_l_a_m2_a40adb6b621d7c2dd9d2961ba88e445c8}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}!compute\+Orientation@{compute\+Orientation}}
+\index{compute\+Orientation@{compute\+Orientation}!O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}}
+\subsubsection{\texorpdfstring{compute\+Orientation()}{computeOrientation()}}
+{\footnotesize\ttfamily static void O\+R\+B\+\_\+\+S\+L\+A\+M2\+::compute\+Orientation (\begin{DoxyParamCaption}\item[{const Mat \&}]{image,  }\item[{vector$<$ Key\+Point $>$ \&}]{keypoints,  }\item[{const vector$<$ int $>$ \&}]{umax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+计算图像中每个特征角点的旋转方向 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+{\em keypoints} & \\
+\hline
+{\em umax} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespace_o_r_b___s_l_a_m2_ac570dbdaae2d483745515b5022fd6820}\label{namespace_o_r_b___s_l_a_m2_ac570dbdaae2d483745515b5022fd6820}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}!I\+C\+\_\+\+Angle@{I\+C\+\_\+\+Angle}}
+\index{I\+C\+\_\+\+Angle@{I\+C\+\_\+\+Angle}!O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}}
+\subsubsection{\texorpdfstring{I\+C\+\_\+\+Angle()}{IC\_Angle()}}
+{\footnotesize\ttfamily static float O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+I\+C\+\_\+\+Angle (\begin{DoxyParamCaption}\item[{const Mat \&}]{image,  }\item[{Point2f}]{pt,  }\item[{const vector$<$ int $>$ \&}]{u\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Fast角点不具有方向性，需要赋予其方向，灰度质心法计算特征点的旋转 计算特征点的灰度质心，计算半径为\+H\+A\+L\+F\+\_\+\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE=15 计算m\+\_\+10和m\+\_\+01。其中m\+\_\+01需要注意图像边界 最后根据反三角函数计算出旋转角度 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+{\em pt} & \\
+\hline
+{\em u\+\_\+max} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+计算图像的m\+\_\+10矩
+
+计算图像的m\+\_\+01矩
+
 \subsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_o_r_b___s_l_a_m2_a8dd21ee063eca2b0bc3f5e76ceba0492}\label{namespace_o_r_b___s_l_a_m2_a8dd21ee063eca2b0bc3f5e76ceba0492}} 
+\index{O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}!bit\+\_\+pattern\+\_\+31\+\_\+@{bit\+\_\+pattern\+\_\+31\+\_\+}}
+\index{bit\+\_\+pattern\+\_\+31\+\_\+@{bit\+\_\+pattern\+\_\+31\+\_\+}!O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}}
+\subsubsection{\texorpdfstring{bit\+\_\+pattern\+\_\+31\+\_\+}{bit\_pattern\_31\_}}
+{\footnotesize\ttfamily int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::bit\+\_\+pattern\+\_\+31\+\_\+\mbox{[}256 $\ast$4\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+bit\+\_\+pattern\+\_\+31\+\_\+ 
+
 \mbox{\Hypertarget{namespace_o_r_b___s_l_a_m2_aec00f1ad4dea35755e3af4404282cd3b}\label{namespace_o_r_b___s_l_a_m2_aec00f1ad4dea35755e3af4404282cd3b}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}!E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
 \index{E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}}
 \subsubsection{\texorpdfstring{E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}{EDGE\_THRESHOLD}}
 {\footnotesize\ttfamily const int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+E\+D\+G\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD = 19}
+
+
+
+边界阈值 
 
 \mbox{\Hypertarget{namespace_o_r_b___s_l_a_m2_a8015b470ffeb885a0c90837a03b3210f}\label{namespace_o_r_b___s_l_a_m2_a8015b470ffeb885a0c90837a03b3210f}} 
 \index{O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}!factor\+PI@{factor\+PI}}
@@ -127,4 +227,8 @@ The views and conclusions contained in the software and documentation are those 
 \index{P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE@{P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE}!O\+R\+B\+\_\+\+S\+L\+A\+M2@{O\+R\+B\+\_\+\+S\+L\+A\+M2}}
 \subsubsection{\texorpdfstring{P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE}{PATCH\_SIZE}}
 {\footnotesize\ttfamily const int O\+R\+B\+\_\+\+S\+L\+A\+M2\+::\+P\+A\+T\+C\+H\+\_\+\+S\+I\+ZE = 31}
+
+
+
+计算灰度质心用到的匹配点数 
 

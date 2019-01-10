@@ -1,0 +1,11 @@
+digraph "DBoW2::TemplatedVocabulary::score"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node80 [label="DBoW2::TemplatedVocabulary\l::score",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node80 -> Node81 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node81 [label="ORB_SLAM2::KeyFrameDatabase\l::DetectLoopCandidates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame_database.html#a2d396aae02c4318ea8c7e7eff8059c69",tooltip="在闭环检测中找到与该关键帧可能闭环的关键帧 "];
+  Node80 -> Node82 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node82 [label="ORB_SLAM2::KeyFrameDatabase\l::DetectRelocalizationCandidates",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_key_frame_database.html#a008586e4d07ece0d948d0f1633447a2b",tooltip="在重定位中找到与该帧相似的关键帧 "];
+}

@@ -1,0 +1,17 @@
+digraph "ORB_SLAM2::Frame::ComputeBoW"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="ORB_SLAM2::Frame::ComputeBoW",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ORB_SLAM2::Converter\l::toDescriptorVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_converter.html#abef47701eefdbc74c2c1625c140963fd",tooltip="一个描述子矩阵到一串单行的描述子向量 "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="DBoW2::TemplatedVocabulary\l::transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_templated_vocabulary.html#a01de3bebec37624439c7d3baf6651ff0"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="DBoW2::BowVector::addWeight",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#a3ac92a805b252c93dc6535240d02df47"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="DBoW2::BowVector::addIfNot\lExist",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#a5ddf10e444d10425e5bd3568dc7ffe5e"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="DBoW2::BowVector::normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_d_bo_w2_1_1_bow_vector.html#acd2dd34023e3053a4cc75d70c8b6ac13"];
+}

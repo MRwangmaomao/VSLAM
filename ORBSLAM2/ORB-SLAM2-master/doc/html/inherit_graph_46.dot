@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="g2o::OptimizableGraph\l::VertexIDCompare",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structg2o_1_1_optimizable_graph_1_1_vertex_i_d_compare.html",tooltip="order vertices based on their ID "];
+}

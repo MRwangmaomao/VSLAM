@@ -1,0 +1,13 @@
+digraph "ORB_SLAM2::Initializer::FindHomography"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node40 [label="ORB_SLAM2::Initializer\l::FindHomography",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node40 -> Node41 [color="midnightblue",fontsize="10",style="solid"];
+  Node41 [label="ORB_SLAM2::Initializer\l::Normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a44ce7aa73741d900d2becc0d8f14c1af"];
+  Node40 -> Node42 [color="midnightblue",fontsize="10",style="solid"];
+  Node42 [label="ORB_SLAM2::Initializer\l::ComputeH21",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a16d5aa375ed03336cc0dc981861b15da",tooltip="从特征点匹配求homography（normalized DLT） "];
+  Node40 -> Node43 [color="midnightblue",fontsize="10",style="solid"];
+  Node43 [label="ORB_SLAM2::Initializer\l::CheckHomography",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#ac2ac8374ca2a993b8cddc88703ffbe9a",tooltip="对给定的homography matrix打分 "];
+}

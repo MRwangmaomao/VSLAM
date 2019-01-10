@@ -6,7 +6,7 @@ var searchData=
   ['node',['Node',['../struct_d_bo_w2_1_1_templated_vocabulary_1_1_node.html#a1339ee00108c4c652cd1ca55a37c3fd3',1,'DBoW2::TemplatedVocabulary::Node::Node()'],['../struct_d_bo_w2_1_1_templated_vocabulary_1_1_node.html#a9f1fcb620025ba6103a47e5c2b169cd6',1,'DBoW2::TemplatedVocabulary::Node::Node(NodeId _id)']]],
   ['nonzeroblocks',['nonZeroBlocks',['../classg2o_1_1_sparse_block_matrix.html#a3f9e289e4039e668d33ad565a637e39a',1,'g2o::SparseBlockMatrix']]],
   ['nonzeros',['nonZeros',['../classg2o_1_1_sparse_block_matrix.html#a06dc97167a923119bdf99818033104d8',1,'g2o::SparseBlockMatrix']]],
-  ['normalize',['normalize',['../class_d_bo_w2_1_1_bow_vector.html#acd2dd34023e3053a4cc75d70c8b6ac13',1,'DBoW2::BowVector']]],
+  ['normalize',['Normalize',['../class_o_r_b___s_l_a_m2_1_1_initializer.html#a44ce7aa73741d900d2becc0d8f14c1af',1,'ORB_SLAM2::Initializer::Normalize()'],['../class_d_bo_w2_1_1_bow_vector.html#acd2dd34023e3053a4cc75d70c8b6ac13',1,'DBoW2::BowVector::normalize()']]],
   ['normalize_5ftheta',['normalize_theta',['../namespaceg2o.html#a9f036eb4c147ddf174aa56fa031f3867',1,'g2o']]],
   ['normalizerotation',['normalizeRotation',['../classg2o_1_1_s_e3_quat.html#a0e2c54c6dfdaa71b677556a9d8e4e88a',1,'g2o::SE3Quat']]],
   ['numparameters',['numParameters',['../classg2o_1_1_optimizable_graph_1_1_edge.html#ae7da26fd36246411bc53ca008bc24fcf',1,'g2o::OptimizableGraph::Edge']]],

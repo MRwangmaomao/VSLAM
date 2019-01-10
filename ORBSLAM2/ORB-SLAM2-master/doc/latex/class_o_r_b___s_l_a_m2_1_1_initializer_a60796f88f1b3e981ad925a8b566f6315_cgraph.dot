@@ -1,0 +1,13 @@
+digraph "ORB_SLAM2::Initializer::ReconstructF"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node55 [label="ORB_SLAM2::Initializer\l::ReconstructF",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node55 -> Node56 [color="midnightblue",fontsize="10",style="solid"];
+  Node56 [label="ORB_SLAM2::Initializer\l::DecomposeE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a78e9e1a14ee76f6cab0f734fa95793af",tooltip="分解Essential矩阵 "];
+  Node55 -> Node57 [color="midnightblue",fontsize="10",style="solid"];
+  Node57 [label="ORB_SLAM2::Initializer\l::CheckRT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a72e79f6486468cde9abd87b873d840e7",tooltip="进行cheirality check，从而进一步找出F分解后最合适的解 "];
+  Node57 -> Node58 [color="midnightblue",fontsize="10",style="solid"];
+  Node58 [label="ORB_SLAM2::Initializer\l::Triangulate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_initializer.html#a3bdf78e0f16be44b5ab312aac5cac5af",tooltip="给定投影矩阵P1,P2和图像上的点kp1,kp2，从而恢复3D坐标 "];
+}

@@ -1,0 +1,19 @@
+digraph "ORB_SLAM2::Frame::UnprojectStereo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node37 [label="ORB_SLAM2::Frame::Unproject\lStereo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node37 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node38 [label="ORB_SLAM2::Tracking\l::StereoInitialization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#ad3da849e4204d766e5db4ac47b52132c",tooltip="双目和rgbd的地图初始化 "];
+  Node38 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node39 [label="ORB_SLAM2::Tracking\l::Track",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#af1f2c9c533642d8c33854540e90d1918",tooltip="Main tracking function. It is independent of the input sensor. "];
+  Node37 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node40 [label="ORB_SLAM2::Tracking\l::UpdateLastFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#aa84a20277d5bd022b527d79a58830bc5",tooltip="双目或rgbd摄像头根据深度值为上一帧产生新的MapPoints "];
+  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node41 [label="ORB_SLAM2::Tracking\l::TrackWithMotionModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#aca19f1d69b30a6c6e49281d422ac8298",tooltip="根据匀速度模型对上一帧的MapPoints进行跟踪 "];
+  Node41 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node37 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node42 [label="ORB_SLAM2::Tracking\l::CreateNewKeyFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_o_r_b___s_l_a_m2_1_1_tracking.html#a8c7fb6c4b1f952524512023df690bf4d",tooltip="创建新的关键帧 "];
+  Node42 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}
