@@ -538,6 +538,7 @@ ORBextractor::ORBextractor(int _nfeatures, float _scaleFactor, int _nlevels,
 
     //This is for orientation
     // pre-compute the end of a row in a circular patch
+
     /**
      * @brief 第五步：计算方向时，每个v对应的最大的u的坐标
      * 
@@ -576,6 +577,14 @@ static void computeOrientation(const Mat& image, vector<KeyPoint>& keypoints, co
     }
 }
 
+/**
+ * @brief 分支节点 迭代
+ * 
+ * @param n1 
+ * @param n2 
+ * @param n3 
+ * @param n4 
+ */
 void ExtractorNode::DivideNode(ExtractorNode &n1, ExtractorNode &n2, ExtractorNode &n3, ExtractorNode &n4)
 {
     const int halfX = ceil(static_cast<float>(UR.x-UL.x)/2);
