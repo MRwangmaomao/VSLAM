@@ -19,3 +19,4 @@
 [【泡泡机器人公开课】第六十四课：DSO原理详解 by 刘海伟](https://mp.weixin.qq.com/s/xjDJ5QSjkuqLNTY0GEyP2Q)
 
 -----
+[DSO 中的Windowed Optimization](https://blog.csdn.net/heyijia0327/article/details/53707261)
