@@ -522,11 +522,11 @@ ORBextractor::ORBextractor(int _nfeatures, float _scaleFactor, int _nlevels,
      */
     for( int level = 0; level < nlevels-1; level++ )
     {
-        mnFeaturesPerLevel[level] = cvRound(nDesiredFeaturesPerScale);
-        sumFeatures += mnFeaturesPerLevel[level];
-        nDesiredFeaturesPerScale *= factor;//factor为等比因子
+        mnFeaturesPerLevel[level] = cvRound(nDesiredFeaturesPerScale);//取整数
+        sumFeatures += mnFeaturesPerLevel[level];//计算总的特征点
+        nDesiredFeaturesPerScale *= factor;//factor为等比因子，计算下一层的特征点，特征点数量为等比数列
     }
-    mnFeaturesPerLevel[nlevels-1] = std::max(nfeatures - sumFeatures, 0);
+    mnFeaturesPerLevel[nlevels-1] = std::max(nfeatures - sumFeatures, 0);//
 
     /**
      * @brief 第四步：复制训练的模板
@@ -910,20 +910,37 @@ vector<cv::KeyPoint> ORBextractor::DistributeOctTree(const vector<cv::KeyPoint>&
     return vResultKeys;
 }
 
+/**
+ * @brief 计算关键点的八叉数
+ * 
+ * @param allKeypoints 
+ */
 void ORBextractor::ComputeKeyPointsOctTree(vector<vector<KeyPoint> >& allKeypoints)
 {
+    /**
+     * @brief 1. 重新定义关键点allkeypoints的二维度容器
+     * 大小为nlevels
+     * 
+     */
     allKeypoints.resize(nlevels);
 
     const float W = 30;
 
     // 对每一层图像做处理
+    /**
+     * @brief 2. 对每一层图像做处理
+     * 
+     */
     for (int level = 0; level < nlevels; ++level)
     {
         const int minBorderX = EDGE_THRESHOLD-3;
         const int minBorderY = minBorderX;
         const int maxBorderX = mvImagePyramid[level].cols-EDGE_THRESHOLD+3;
         const int maxBorderY = mvImagePyramid[level].rows-EDGE_THRESHOLD+3;
-
+        /**
+         * @brief 
+         * 
+         */
         vector<cv::KeyPoint> vToDistributeKeys;
         vToDistributeKeys.reserve(nfeatures*10);
 
