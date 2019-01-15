@@ -51,9 +51,9 @@ void readParameters(ros::NodeHandle &n)
 
     fsSettings["imu_topic"] >> IMU_TOPIC;
 
-    SOLVER_TIME = fsSettings["max_solver_time"];
-    NUM_ITERATIONS = fsSettings["max_num_iterations"];
-    MIN_PARALLAX = fsSettings["keyframe_parallax"];
+    SOLVER_TIME = fsSettings["max_solver_time"];//优化中的最大求解时间
+    NUM_ITERATIONS = fsSettings["max_num_iterations"];//优化中的最大迭代次数
+    MIN_PARALLAX = fsSettings["keyframe_parallax"];//关键帧选择阈值 
     MIN_PARALLAX = MIN_PARALLAX / FOCAL_LENGTH;
 
     std::string OUTPUT_PATH;
@@ -63,17 +63,17 @@ void readParameters(ros::NodeHandle &n)
     std::ofstream fout(VINS_RESULT_PATH, std::ios::out);
     fout.close();
 
-    ACC_N = fsSettings["acc_n"];//噪声
-    ACC_W = fsSettings["acc_w"];//漂移
-    GYR_N = fsSettings["gyr_n"];
-    GYR_W = fsSettings["gyr_w"];
-    G.z() = fsSettings["g_norm"];
+    ACC_N = fsSettings["acc_n"];//噪声 
+    ACC_W = fsSettings["acc_w"];//加速度计偏置随机游走噪声标准差
+    GYR_N = fsSettings["gyr_n"];//陀螺仪测量噪声标准差
+    GYR_W = fsSettings["gyr_w"];//陀螺仪偏置随机游走噪声标准差
+    G.z() = fsSettings["g_norm"];//重力大小
     ROW = fsSettings["image_height"];
     COL = fsSettings["image_width"];
     ROS_INFO("ROW: %f COL: %f ", ROW, COL);
 
-    ESTIMATE_EXTRINSIC = fsSettings["estimate_extrinsic"];
-    if (ESTIMATE_EXTRINSIC == 2)
+    ESTIMATE_EXTRINSIC = fsSettings["estimate_extrinsic"];//IMU和相机之间的外部参数 是否需要标定
+    if (ESTIMATE_EXTRINSIC == 2)//需要标定IMU和相机之间的外参
     {
         ROS_WARN("have no prior about extrinsic param, calibrate extrinsic param");
         RIC.push_back(Eigen::Matrix3d::Identity());
@@ -88,20 +88,21 @@ void readParameters(ros::NodeHandle &n)
             ROS_WARN(" Optimize extrinsic param around initial guess!");
             EX_CALIB_RESULT_PATH = OUTPUT_PATH + "/extrinsic_parameter.csv";
         }
-        if (ESTIMATE_EXTRINSIC == 0)
+        if (ESTIMATE_EXTRINSIC == 0)//获取精确的外参
             ROS_WARN(" fix extrinsic param ");
 
         cv::Mat cv_R, cv_T;
-        fsSettings["extrinsicRotation"] >> cv_R;
-        fsSettings["extrinsicTranslation"] >> cv_T;
+        fsSettings["extrinsicRotation"] >> cv_R;//IMu和相机之间的旋转矩阵
+        fsSettings["extrinsicTranslation"] >> cv_T;//IMU和相机之间的平移向量
         Eigen::Matrix3d eigen_R;
         Eigen::Vector3d eigen_T;
         cv::cv2eigen(cv_R, eigen_R);
         cv::cv2eigen(cv_T, eigen_T);
         Eigen::Quaterniond Q(eigen_R);
-        eigen_R = Q.normalized();
+        eigen_R = Q.normalized();//转化为四元数形式
         RIC.push_back(eigen_R);
         TIC.push_back(eigen_T);
+        //打印外参
         ROS_INFO_STREAM("Extrinsic_R : " << std::endl << RIC[0]);
         ROS_INFO_STREAM("Extrinsic_T : " << std::endl << TIC[0].transpose());
         
@@ -112,16 +113,16 @@ void readParameters(ros::NodeHandle &n)
     BIAS_GYR_THRESHOLD = 0.1;
 
     TD = fsSettings["td"];
-    ESTIMATE_TD = fsSettings["estimate_td"];
+    ESTIMATE_TD = fsSettings["estimate_td"];//在线估计相机和IMU之间的时间偏差
     if (ESTIMATE_TD)
         ROS_INFO_STREAM("Unsynchronized sensors, online estimate time offset, initial td: " << TD);
     else
         ROS_INFO_STREAM("Synchronized sensors, fix time offset: " << TD);
 
-    ROLLING_SHUTTER = fsSettings["rolling_shutter"];
+    ROLLING_SHUTTER = fsSettings["rolling_shutter"];//是否是卷帘快门相机
     if (ROLLING_SHUTTER)
     {
-        TR = fsSettings["rolling_shutter_tr"];
+        TR = fsSettings["rolling_shutter_tr"];//卷帘相机中读取每帧图像的时间
         ROS_INFO_STREAM("rolling shutter camera, read out time per line: " << TR);
     }
     else
