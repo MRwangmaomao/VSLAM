@@ -21,7 +21,7 @@ prev_img的用处是光流跟踪后用prev_img和frow_img根据Fundamental Matri
 ## 前端的具体操作：
  
 #### step1
-开启"feature_tracker" ros节点，获取前端的配置参数readParameters()以及镜头参数。执行读取图像回调函数img_callback()，读取图像
+开启"feature_tracker" ros节点，获取前端的配置参数readParameters()以及镜头参数。执行读取图像回调函数img_callback()，读取图像，检测图像接收频率，频率稳定时可以发送当前图像，否则复位pub_count。
 #### step2:自适应直方图均衡
 cv::creatCLAHE()对输入图像做自适应直方图均衡。
 #### step3:光流跟踪

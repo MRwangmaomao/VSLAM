@@ -63,8 +63,8 @@ void readParameters(ros::NodeHandle &n)
     std::ofstream fout(VINS_RESULT_PATH, std::ios::out);
     fout.close();
 
-    ACC_N = fsSettings["acc_n"];
-    ACC_W = fsSettings["acc_w"];
+    ACC_N = fsSettings["acc_n"];//噪声
+    ACC_W = fsSettings["acc_w"];//漂移
     GYR_N = fsSettings["gyr_n"];
     GYR_W = fsSettings["gyr_w"];
     G.z() = fsSettings["g_norm"];
