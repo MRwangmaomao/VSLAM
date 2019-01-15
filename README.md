@@ -6,6 +6,7 @@
 |--|--|--|
 | 单目 | [DSO](https://github.com/MRwangmaomao/VSLAM/tree/master/DSO) || 
 | 单目、双目、RGBD | [ORB-SLAM2](https://github.com/MRwangmaomao/VSLAM/tree/master/ORBSLAM2) | 注释链接(file:///D:/github/VSLAM/ORBSLAM2/ORB-SLAM2-master/doc/html/index.html)|
+| 单目、双目 | [VINS](https://github.com/MRwangmaomao/VSLAM/tree/master/VINS) | |
 ----
 
 ## SLAM Overview
