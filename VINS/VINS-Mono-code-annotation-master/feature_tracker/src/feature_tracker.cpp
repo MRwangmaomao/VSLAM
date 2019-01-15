@@ -110,8 +110,11 @@ void FeatureTracker::readImage(const cv::Mat &_img)
     TicToc t_r;
 
     if (EQUALIZE)
-    {
-        //使用createCLAHE对图像进行自适应直方图均衡化
+    { 
+        /**
+         * @brief 使用createCLAHE对图像进行自适应直方图均衡化
+         * 
+         */
         cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE(3.0, cv::Size(8, 8));
         TicToc t_c;
         clahe->apply(_img, img);
@@ -136,8 +139,11 @@ void FeatureTracker::readImage(const cv::Mat &_img)
         TicToc t_o;
         vector<uchar> status;
         vector<float> err;
-        //calcOpticalFlowPyrLK() LK金字塔光流法 
-        //ref: https://docs.opencv.org/3.1.0/d7/d8b/tutorial_py_lucas_kanade.html
+        /**
+         * @brief calcOpticalFlowPyrLK() LK金字塔光流法 
+         * ref: https://docs.opencv.org/3.1.0/d7/d8b/tutorial_py_lucas_kanade.html
+         * 
+         */  
         cv::calcOpticalFlowPyrLK(cur_img, forw_img, cur_pts, forw_pts, status, err, cv::Size(21, 21), 3);
 
         //清理vector中无法追踪到的特征点
@@ -255,7 +261,7 @@ void FeatureTracker::readIntrinsicParameter(const string &calib_file)
 }
 
 /**
- * @breif Visualize undistortedPoints Points
+ * @breif Visualize undistortedPoints Points可视化矫正的点
 */
 void FeatureTracker::showUndistortion(const string &name)
 {
@@ -294,7 +300,7 @@ void FeatureTracker::showUndistortion(const string &name)
 }
 
 /**
- * @breif undistortedPoints Points
+ * @breif undistortedPoints Points矫正特征点
 */
 vector<cv::Point2f> FeatureTracker::undistortedPoints()
 {

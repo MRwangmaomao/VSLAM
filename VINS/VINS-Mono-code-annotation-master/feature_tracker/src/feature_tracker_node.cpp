@@ -20,16 +20,17 @@ FeatureTracker trackerData[NUM_OF_CAM];
 double first_image_time;
 int pub_count = 1;
 bool first_image_flag = true;
-
+ 
 /**
  * @brief ROS的图像回调函数，对新来的图像进行特征点追踪，发布
- * 
  * 使用createCLAHE对图像进行自适应直方图均衡化
  * calcOpticalFlowPyrLK() LK金字塔光流法，生成tracking的特征点
  * undistroted特征点
  * 然后把追踪的特征点发布到名字为pub_img的话题下，图像发布在在pub_match下
  * 被追踪的特征点是有全局唯一的ID的，后面就方便做匹配了
-*/
+ * 
+ * @param img_msg 
+ */
 void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
 {
     if(first_image_flag)
@@ -38,7 +39,10 @@ void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
         first_image_time = img_msg->header.stamp.toSec();
     }
 
-    // frequency control
+    /**
+     * @brief 发布频率控制，确保频率大于FREQ
+     * 
+     */
     if (round(1.0 * pub_count / (img_msg->header.stamp.toSec() - first_image_time)) <= FREQ)
     {
         PUB_THIS_FRAME = true;
@@ -52,12 +56,22 @@ void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
     else
         PUB_THIS_FRAME = false;
 
+    /**
+     * @brief 通过cv_bridge::toCvCopy将sensor_msgs::ImageConstPtr转换为cv::Mat（cv_bridge::CvImageConstPtr）的指针
+     * 
+     */
     cv_bridge::CvImageConstPtr ptr = cv_bridge::toCvCopy(img_msg, sensor_msgs::image_encodings::MONO8);
     cv::Mat show_img = ptr->image;
     TicToc t_r;
+    
+    /**
+     * @brief 使用createCLAHE对图像进行自适应直方图均衡化
+     * LK金字塔光流法 
+     * 
+     */  
     for (int i = 0; i < NUM_OF_CAM; i++)
     {
-        ROS_DEBUG("processing camera %d", i);
+        ROS_DEBUG("processing camera %d", i); 
         if (i != 1 || !STEREO_TRACK)
             trackerData[i].readImage(ptr->image.rowRange(ROW * i, ROW * (i + 1)));
         else
@@ -65,6 +79,7 @@ void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
             //双目
             if (EQUALIZE)
             {
+                
                 cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE();
                 clahe->apply(ptr->image.rowRange(ROW * i, ROW * (i + 1)), trackerData[i].cur_img);
             }
@@ -124,8 +139,11 @@ void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
             }
         }
     }
-
-    //更新全局ID
+ 
+    /**
+     * @brief 更新全局ID
+     *  
+     */
     for (unsigned int i = 0;; i++)
     {
         bool completed = false;
@@ -135,8 +153,11 @@ void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
         if (!completed)
             break;
     }
-
-    //发布当前帧，包括id和undistorted后的点，和u,v点
+ 
+    /**
+     * @brief 发布当前帧，包括id和undistorted后的点，和u,v点
+     * 
+     */
    if (PUB_THIS_FRAME)
    {
         pub_count++;
@@ -211,9 +232,12 @@ void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
             {
                 cv::Mat tmp_img = stereo_img.rowRange(i * ROW, (i + 1) * ROW);
                 cv::cvtColor(show_img, tmp_img, CV_GRAY2RGB);
+                /**
+                 * @brief 显示追踪状态，越红越好，越蓝越不行
+                 * 
+                 */
                 if (i != 1 || !STEREO_TRACK)
-                {
-                    //显示追踪状态，越红越好，越蓝越不行
+                { 
                     for (unsigned int j = 0; j < trackerData[i].cur_pts.size(); j++)
                     {
                         double len = std::min(1.0, 1.0 * trackerData[i].track_cnt[j] / WINDOW_SIZE);
