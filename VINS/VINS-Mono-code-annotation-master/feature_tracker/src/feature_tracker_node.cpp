@@ -63,7 +63,7 @@ void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
     cv_bridge::CvImageConstPtr ptr = cv_bridge::toCvCopy(img_msg, sensor_msgs::image_encodings::MONO8);
     cv::Mat show_img = ptr->image;
     TicToc t_r;
-    
+
     /**
      * @brief 使用createCLAHE对图像进行自适应直方图均衡化
      * LK金字塔光流法 
@@ -270,11 +270,26 @@ void img_callback(const sensor_msgs::ImageConstPtr &img_msg)
     ROS_INFO("whole feature tracker processing costs: %f", t_r.toc());
 }
 
+/**
+ * @brief 主函数，从这里开始运行
+ * 
+ * @param argc 
+ * @param argv 
+ * @return int 
+ */
 int main(int argc, char **argv)
 {
+    /**
+     * @brief 初始化ros节点
+     * 
+     */
     ros::init(argc, argv, "feature_tracker");
     ros::NodeHandle n("~");
     ros::console::set_logger_level(ROSCONSOLE_DEFAULT_NAME, ros::console::levels::Info);
+    /**
+     * @brief 获取配置参数
+     * 
+     */
     readParameters(n);
 
     for (int i = 0; i < NUM_OF_CAM; i++)
