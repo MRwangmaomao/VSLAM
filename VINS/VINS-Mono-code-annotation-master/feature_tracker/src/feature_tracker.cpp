@@ -2,6 +2,9 @@
 
 int FeatureTracker::n_id = 0;
 
+/**
+ * @breif 判断特征点是非在范围内
+*/
 bool inBorder(const cv::Point2f &pt)
 {
     const int BORDER_SIZE = 1;
@@ -10,6 +13,9 @@ bool inBorder(const cv::Point2f &pt)
     return BORDER_SIZE <= img_x && img_x < COL - BORDER_SIZE && BORDER_SIZE <= img_y && img_y < ROW - BORDER_SIZE;
 }
 
+/**
+ * @breif 去除无法追踪的特征
+*/
 void reduceVector(vector<cv::Point2f> &v, vector<uchar> status)
 {
     int j = 0;
@@ -19,6 +25,9 @@ void reduceVector(vector<cv::Point2f> &v, vector<uchar> status)
     v.resize(j);
 }
 
+/**
+ * @breif 去除无法追踪的特征
+*/
 void reduceVector(vector<int> &v, vector<uchar> status)
 {
     int j = 0;
@@ -28,11 +37,15 @@ void reduceVector(vector<int> &v, vector<uchar> status)
     v.resize(j);
 }
 
-
 FeatureTracker::FeatureTracker()
 {
 }
 
+/**
+ * @brief 对图像使用光流法进行特征点跟踪
+ * 
+ * 按照被追踪到的次数排序，然后加上mask去掉部分点，主要是针对鱼眼相机
+*/
 void FeatureTracker::setMask()
 {
     if(FISHEYE)
@@ -68,6 +81,10 @@ void FeatureTracker::setMask()
     }
 }
 
+
+/**
+ * @brief 添加新的特征点
+*/
 void FeatureTracker::addPoints()
 {
     for (auto &p : n_pts)
@@ -78,14 +95,23 @@ void FeatureTracker::addPoints()
     }
 }
 
-void FeatureTracker::readImage(const cv::Mat &_img, double _cur_time)
+/**
+ * @brief 对新来的图像使用光流法进行特征点跟踪
+ * 
+ * optional: 使用createCLAHE对图像进行自适应直方图均衡化
+ * calcOpticalFlowPyrLK() LK金字塔光流法
+ * 设置mask，在setMask()函数中
+ * goodFeaturesToTrack()添加一些特征点，确保每帧都有足够的特征点
+ * addPoints()添加新的追踪点
+*/
+void FeatureTracker::readImage(const cv::Mat &_img)
 {
     cv::Mat img;
     TicToc t_r;
-    cur_time = _cur_time;
 
     if (EQUALIZE)
     {
+        //使用createCLAHE对图像进行自适应直方图均衡化
         cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE(3.0, cv::Size(8, 8));
         TicToc t_c;
         clahe->apply(_img, img);
@@ -110,8 +136,11 @@ void FeatureTracker::readImage(const cv::Mat &_img, double _cur_time)
         TicToc t_o;
         vector<uchar> status;
         vector<float> err;
+        //calcOpticalFlowPyrLK() LK金字塔光流法 
+        //ref: https://docs.opencv.org/3.1.0/d7/d8b/tutorial_py_lucas_kanade.html
         cv::calcOpticalFlowPyrLK(cur_img, forw_img, cur_pts, forw_pts, status, err, cv::Size(21, 21), 3);
 
+        //清理vector中无法追踪到的特征点
         for (int i = 0; i < int(forw_pts.size()); i++)
             if (status[i] && !inBorder(forw_pts[i]))
                 status[i] = 0;
@@ -119,19 +148,21 @@ void FeatureTracker::readImage(const cv::Mat &_img, double _cur_time)
         reduceVector(cur_pts, status);
         reduceVector(forw_pts, status);
         reduceVector(ids, status);
-        reduceVector(cur_un_pts, status);
         reduceVector(track_cnt, status);
         ROS_DEBUG("temporal optical flow costs: %fms", t_o.toc());
     }
 
-    for (auto &n : track_cnt)
-        n++;
-
     if (PUB_THIS_FRAME)
     {
         rejectWithF();
+
+        //在光流追踪成功就记被追踪+1，数值代表被追踪的次数，数值越大，说明被追踪的就越久
+        for (auto &n : track_cnt)
+            n++;
+
         ROS_DEBUG("set mask begins");
         TicToc t_m;
+        //为下面的goodFeaturesToTrack保证相邻的特征点之间要相隔30个像素,设置mask image
         setMask();
         ROS_DEBUG("set mask costs %fms", t_m.toc());
 
@@ -146,7 +177,8 @@ void FeatureTracker::readImage(const cv::Mat &_img, double _cur_time)
                 cout << "mask type wrong " << endl;
             if (mask.size() != forw_img.size())
                 cout << "wrong size " << endl;
-            cv::goodFeaturesToTrack(forw_img, n_pts, MAX_CNT - forw_pts.size(), 0.01, MIN_DIST, mask);
+            //上面通过光流法找到一些对应点，这里是为了确保每个帧有足够点，然后调用addPoint添加点
+            cv::goodFeaturesToTrack(forw_img, n_pts, MAX_CNT - forw_pts.size(), 0.1, MIN_DIST, mask);
         }
         else
             n_pts.clear();
@@ -156,30 +188,31 @@ void FeatureTracker::readImage(const cv::Mat &_img, double _cur_time)
         TicToc t_a;
         addPoints();
         ROS_DEBUG("selectFeature costs: %fms", t_a.toc());
+
+        prev_img = forw_img;
+        prev_pts = forw_pts;
     }
-    prev_img = cur_img;
-    prev_pts = cur_pts;
-    prev_un_pts = cur_un_pts;
     cur_img = forw_img;
     cur_pts = forw_pts;
-    undistortedPoints();
-    prev_time = cur_time;
 }
 
+/**
+ * @breif 通过前后两帧的追踪计算F矩阵，通过F矩阵去除Outliers
+*/
 void FeatureTracker::rejectWithF()
 {
     if (forw_pts.size() >= 8)
     {
         ROS_DEBUG("FM ransac begins");
         TicToc t_f;
-        vector<cv::Point2f> un_cur_pts(cur_pts.size()), un_forw_pts(forw_pts.size());
-        for (unsigned int i = 0; i < cur_pts.size(); i++)
+        vector<cv::Point2f> un_prev_pts(prev_pts.size()), un_forw_pts(forw_pts.size());
+        for (unsigned int i = 0; i < prev_pts.size(); i++)
         {
             Eigen::Vector3d tmp_p;
-            m_camera->liftProjective(Eigen::Vector2d(cur_pts[i].x, cur_pts[i].y), tmp_p);
+            m_camera->liftProjective(Eigen::Vector2d(prev_pts[i].x, prev_pts[i].y), tmp_p);
             tmp_p.x() = FOCAL_LENGTH * tmp_p.x() / tmp_p.z() + COL / 2.0;
             tmp_p.y() = FOCAL_LENGTH * tmp_p.y() / tmp_p.z() + ROW / 2.0;
-            un_cur_pts[i] = cv::Point2f(tmp_p.x(), tmp_p.y());
+            un_prev_pts[i] = cv::Point2f(tmp_p.x(), tmp_p.y());
 
             m_camera->liftProjective(Eigen::Vector2d(forw_pts[i].x, forw_pts[i].y), tmp_p);
             tmp_p.x() = FOCAL_LENGTH * tmp_p.x() / tmp_p.z() + COL / 2.0;
@@ -188,12 +221,11 @@ void FeatureTracker::rejectWithF()
         }
 
         vector<uchar> status;
-        cv::findFundamentalMat(un_cur_pts, un_forw_pts, cv::FM_RANSAC, F_THRESHOLD, 0.99, status);
-        int size_a = cur_pts.size();
+        cv::findFundamentalMat(un_prev_pts, un_forw_pts, cv::FM_RANSAC, F_THRESHOLD, 0.99, status);
+        int size_a = prev_pts.size();
         reduceVector(prev_pts, status);
         reduceVector(cur_pts, status);
         reduceVector(forw_pts, status);
-        reduceVector(cur_un_pts, status);
         reduceVector(ids, status);
         reduceVector(track_cnt, status);
         ROS_DEBUG("FM ransac: %d -> %lu: %f", size_a, forw_pts.size(), 1.0 * forw_pts.size() / size_a);
@@ -201,6 +233,9 @@ void FeatureTracker::rejectWithF()
     }
 }
 
+/**
+ * @breif 更新ID
+*/
 bool FeatureTracker::updateID(unsigned int i)
 {
     if (i < ids.size())
@@ -219,6 +254,9 @@ void FeatureTracker::readIntrinsicParameter(const string &calib_file)
     m_camera = CameraFactory::instance()->generateCameraFromYamlFile(calib_file);
 }
 
+/**
+ * @breif Visualize undistortedPoints Points
+*/
 void FeatureTracker::showUndistortion(const string &name)
 {
     cv::Mat undistortedImg(ROW + 600, COL + 600, CV_8UC1, cv::Scalar(0));
@@ -255,52 +293,20 @@ void FeatureTracker::showUndistortion(const string &name)
     cv::waitKey(0);
 }
 
-void FeatureTracker::undistortedPoints()
+/**
+ * @breif undistortedPoints Points
+*/
+vector<cv::Point2f> FeatureTracker::undistortedPoints()
 {
-    cur_un_pts.clear();
-    cur_un_pts_map.clear();
+    vector<cv::Point2f> un_pts;
     //cv::undistortPoints(cur_pts, un_pts, K, cv::Mat());
     for (unsigned int i = 0; i < cur_pts.size(); i++)
     {
         Eigen::Vector2d a(cur_pts[i].x, cur_pts[i].y);
         Eigen::Vector3d b;
         m_camera->liftProjective(a, b);
-        cur_un_pts.push_back(cv::Point2f(b.x() / b.z(), b.y() / b.z()));
-        cur_un_pts_map.insert(make_pair(ids[i], cv::Point2f(b.x() / b.z(), b.y() / b.z())));
-        //printf("cur pts id %d %f %f", ids[i], cur_un_pts[i].x, cur_un_pts[i].y);
+        un_pts.push_back(cv::Point2f(b.x() / b.z(), b.y() / b.z()));
     }
-    // caculate points velocity
-    if (!prev_un_pts_map.empty())
-    {
-        double dt = cur_time - prev_time;
-        pts_velocity.clear();
-        for (unsigned int i = 0; i < cur_un_pts.size(); i++)
-        {
-            if (ids[i] != -1)
-            {
-                std::map<int, cv::Point2f>::iterator it;
-                it = prev_un_pts_map.find(ids[i]);
-                if (it != prev_un_pts_map.end())
-                {
-                    double v_x = (cur_un_pts[i].x - it->second.x) / dt;
-                    double v_y = (cur_un_pts[i].y - it->second.y) / dt;
-                    pts_velocity.push_back(cv::Point2f(v_x, v_y));
-                }
-                else
-                    pts_velocity.push_back(cv::Point2f(0, 0));
-            }
-            else
-            {
-                pts_velocity.push_back(cv::Point2f(0, 0));
-            }
-        }
-    }
-    else
-    {
-        for (unsigned int i = 0; i < cur_pts.size(); i++)
-        {
-            pts_velocity.push_back(cv::Point2f(0, 0));
-        }
-    }
-    prev_un_pts_map = cur_un_pts_map;
+
+    return un_pts;
 }
