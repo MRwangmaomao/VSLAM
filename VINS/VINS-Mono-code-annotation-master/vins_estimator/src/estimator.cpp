@@ -125,6 +125,15 @@ void Estimator::processIMU(double dt, const Vector3d &linear_acceleration, const
     gyr_0 = angular_velocity;
 }
 
+/**
+ * @brief 处理接收的图像特征点数据
+ * 功能：
+ * 1.在线标定
+ * 2.初始化VIO，滑动窗口中塞满了才进行初始化,如果初始化成功，就进行紧耦合优化和
+ * 
+ * @param image 输入为一帧图像(单目为一帧，多目为多帧)的特征点字典map
+ * @param header 输入std_msgs的帧头
+ */
 void Estimator::processImage(const map<int, vector<pair<int, Eigen::Matrix<double, 7, 1>>>> &image, const std_msgs::Header &header)
 {
     ROS_DEBUG("new image coming ------------------------------------------");
@@ -1066,6 +1075,10 @@ void Estimator::optimization()
     ROS_DEBUG("whole time for ceres: %f", t_whole.toc());
 }
 
+/**
+ * @brief 滑动窗口
+ * 
+ */
 void Estimator::slideWindow()
 {
     TicToc t_margin;
