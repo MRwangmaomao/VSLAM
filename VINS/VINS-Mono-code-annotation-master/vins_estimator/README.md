@@ -54,16 +54,32 @@ https://blog.csdn.net/lancelot_vim/article/details/77888788
   
 在两帧视觉帧之间，往往有很多IMU的采集数据，其中计算速度积分的时候需要相机当前位姿，将当前位置引入到世界坐标系$C_Ws$，从p时刻数字积分一次得到p+1时刻，然后根据公式乘以p时刻相机位姿得到世界坐标系，最终导致要对k时刻开始的每一个时刻的相机pose求导，计算代价很大，由于状态变了，积分的值也会跟着变，每优化一次就要重新算一次积分。 
 
-![yujifen](https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/IMU_and_Camera_relationship.jpg)   
-
-
-    Vector3d un_acc_0 = Rs[j] * (acc_0 - Bas[j]) - g;
-    Vector3d un_gyr = 0.5 * (gyr_0 + angular_velocity) - Bgs[j];
-    Rs[j] *= Utility::deltaQ(un_gyr * dt).toRotationMatrix();         // 滑动窗口中各帧在世界坐标系下的旋转    
-    Vector3d un_acc_1 = Rs[j] * (linear_acceleration - Bas[j]) - g;
+##### 中点积分  
+$$w=(w_0+w_1)/2+bg -->更新角速率$$ 
+$$R=R_0 \times \frac{w}{2} -->更新旋转$$ 
+$$a_0=R_0(a_0^{'}-ba) -->上一次载体的加速度$$ 
+$$a_1=R_0(a_1^{'}-ba) -->当前载体的加速度$$ 
+$$a=(a_0+a_1)/2 -->更新加速度$$ 
+$$\Delta P=\Delta P^{'}+\Delta V^{'}\times dt + \frac{1}{2}a\Delta t^2 -->更新位移$$
+$$\Delta V=\Delta V^{'} + a\Delta t -->更新速度$$  
+对应代码(factor/interation_base.h midPointIntegration()函数)  
+      
+    Vector3d un_acc_0 = delta_q * (_acc_0 - linearized_ba);
+    Vector3d un_gyr = 0.5 * (_gyr_0 + _gyr_1) - linearized_bg;
+    result_delta_q = delta_q * Quaterniond(1, un_gyr(0) * _dt / 2, un_gyr(1) * _dt / 2, un_gyr(2) * _dt / 2);
+    Vector3d un_acc_1 = result_delta_q * (_acc_1 - linearized_ba);
     Vector3d un_acc = 0.5 * (un_acc_0 + un_acc_1);
-    Ps[j] += dt * Vs[j] + 0.5 * dt * dt * un_acc;                     // 滑动窗口中各帧在世界坐标系下的位置
-    Vs[j] += dt * un_acc;                                             // 滑动窗口中各帧在世界坐标系下的速度
+    result_delta_p = delta_p + delta_v * _dt + 0.5 * un_acc * _dt * _dt;
+    result_delta_v = delta_v + un_acc * _dt;
+    result_linearized_ba = linearized_ba;
+    result_linearized_bg = linearized_bg;    
+
+
+![yujifen](https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/IMU_and_Camera_relationship.jpg)   
+ 
+
+##### 雅可比矩阵
+
 ----
 
 ## 4 滑动窗口的维护 Estimator::slideWindow()
@@ -115,7 +131,7 @@ https://blog.csdn.net/lancelot_vim/article/details/77888788
 
 ### 6.2 相机和IMU外参的旋转  
 用机器人手眼标定的方法计算出外参中的旋转。  
-其中$q_{b_{k+1}^{b_k}}$
+其中$q_{b_{k+1}^{b_k}}$是陀螺仪预积分得到的，$q_{C_{k+1}^{C_k}}$是用8点法对前后帧对应的特征点进行计算得到的，
 
 ### 6.3 计算陀螺仪的偏移
 在SFM中已经根据连续图像的相对旋转计算出相机和IMU间的外参旋转了，现在要根据
