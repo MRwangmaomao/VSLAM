@@ -48,10 +48,10 @@ https://blog.csdn.net/LilyNothing/article/details/79113841
 https://blog.csdn.net/lancelot_vim/article/details/77888788
 ##### 为什么需要预积分  
 在两帧视觉帧之间，往往有很多IMU的采集数据，其中计算速度积分的时候需要相机当前位姿，将当前位置引入到世界坐标系$C_Ws$，从p时刻数字积分一次得到p+1时刻，然后根据公式乘以p时刻相机位姿得到世界坐标系，最终导致要对k时刻开始的每一个时刻的相机pose求导，计算代价很大，由于状态变了，积分的值也会跟着变，每优化一次就要重新算一次积分。
-<div align="center">![Screenshot from 2018-04-12 10:51:38.png](https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/%E9%A2%84%E7%A7%AF%E5%88%86IMU%E4%B8%8ECamera%E5%85%B3%E7%B3%BB%E5%9B%BE.jpg)   
+<div align="center">![Screenshot from 2018-04-12 10:51:38.png](https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/IMU_and_Camera_relationship.jpg)   
 条件随机场模型示意图 </div> 
 ----
-
+https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/OKVIS%E9%A2%84%E7%A7%AF%E5%88%86.png
 ## 滑动窗口的维护
 
 ----
