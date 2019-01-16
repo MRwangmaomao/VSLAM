@@ -6,4 +6,5 @@
 [VINS技术路线与代码详解](https://blog.csdn.net/wangshuailpp/article/details/78461171)  
 [视觉−惯性导航融合SLAM方案](https://github.com/Ewenwan/MVision/tree/master/vSLAM/VIO)  
 [视觉惯性单目SLAM](https://blog.csdn.net/myarrow/article/details/54694472)  
-[vio_data_simulation VIO数据测试仿真](https://github.com/Ewenwan/vio_data_simulation)
+[vio_data_simulation VIO数据测试仿真](https://github.com/Ewenwan/vio_data_simulation)  
+[VINS-mono详细解读](https://www.cnblogs.com/ilekoaiq/p/8836970.html)
