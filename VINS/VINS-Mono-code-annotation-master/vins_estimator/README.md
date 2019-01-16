@@ -44,8 +44,10 @@
 
 ## 预积分 factor/integration_base.h 
 参考:  
-https://blog.csdn.net/LilyNothing/article/details/79113841
+https://blog.csdn.net/LilyNothing/article/details/79113841  
+
 https://blog.csdn.net/lancelot_vim/article/details/77888788
+
 ##### 为什么需要预积分  
 ![1](https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/OKVIS_pre_integration.png)
   
