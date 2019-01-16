@@ -237,7 +237,7 @@ class IntegrationBase
     std::vector<Eigen::Vector3d> acc_buf;
     std::vector<Eigen::Vector3d> gyr_buf;
 
-};
+};//class IntegrationBase
 /*
 
     void eulerIntegration(double _dt, const Eigen::Vector3d &_acc_0, const Eigen::Vector3d &_gyr_0,
