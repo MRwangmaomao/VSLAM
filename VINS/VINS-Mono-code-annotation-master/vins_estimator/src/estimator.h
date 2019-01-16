@@ -123,7 +123,7 @@ class Estimator
 
     // 存储所有的ImageFrame对象（每读取一帧图像就会构建ImageFrame对象）
     // 键是图像帧的时间戳，值是ImageFrame对象，ImageFrame对象中保存了图像帧的位姿，相应的预积分和图像特征点信息
-    map<double, ImageFrame> all_image_frame; 
+    map<double, ImageFrame> all_image_frame; //滑动窗中的所有图像帧
     IntegrationBase *tmp_pre_integration; // 用于在创建ImageFrame对象时，把该指针赋给imageframe.pre_integration
 
     //relocalization variable

@@ -1075,6 +1075,13 @@ void Estimator::optimization()
     ROS_DEBUG("whole time for ceres: %f", t_whole.toc());
 }
 
+
+//   old         滑动窗中的关键帧              new
+//  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+//                                            <-- 进来一个新的图像帧
+//    最终效果：
+//    新的图像帧是关键帧：  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 新的图像帧 | - |                                                          
+//    新的图像帧不是关键帧：| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 新的图像帧 |     
 /**
  * @brief 滑动窗口
  * 
@@ -1082,13 +1089,19 @@ void Estimator::optimization()
 void Estimator::slideWindow()
 {
     TicToc t_margin;
+    /**
+     * @brief 检测到关键帧，把新的关键帧压入到窗口里面第10个位置，然后其它的关键帧都往前移动
+     * 
+     */
     if (marginalization_flag == MARGIN_OLD)
     {
         double t_0 = Headers[0].stamp.toSec();
         back_R0 = Rs[0];
         back_P0 = Ps[0];
+        //滑动窗口存满
         if (frame_count == WINDOW_SIZE)
-        {
+        {   
+            //更新滑动窗中的内容，将其往后移动
             for (int i = 0; i < WINDOW_SIZE; i++)
             {
                 Rs[i].swap(Rs[i + 1]);
@@ -1112,7 +1125,8 @@ void Estimator::slideWindow()
             Rs[WINDOW_SIZE] = Rs[WINDOW_SIZE - 1];
             Bas[WINDOW_SIZE] = Bas[WINDOW_SIZE - 1];
             Bgs[WINDOW_SIZE] = Bgs[WINDOW_SIZE - 1];
-
+ 
+            //新的滑动窗 清除滑动窗中最新帧的内容
             delete pre_integrations[WINDOW_SIZE];
             pre_integrations[WINDOW_SIZE] = new IntegrationBase{acc_0, gyr_0, Bas[WINDOW_SIZE], Bgs[WINDOW_SIZE]};
 
@@ -1120,27 +1134,32 @@ void Estimator::slideWindow()
             linear_acceleration_buf[WINDOW_SIZE].clear();
             angular_velocity_buf[WINDOW_SIZE].clear();
 
-            if (true || solver_flag == INITIAL)
+            if (true || solver_flag == INITIAL)// 
             {
-                map<double, ImageFrame>::iterator it_0;
-                it_0 = all_image_frame.find(t_0);
-                delete it_0->second.pre_integration;
+                map<double, ImageFrame>::iterator it_0;//当前帧
+                it_0 = all_image_frame.find(t_0);//找到具有相同时间戳的帧
+                delete it_0->second.pre_integration;//删除预积分内容
                 it_0->second.pre_integration = nullptr;
  
                 for (map<double, ImageFrame>::iterator it = all_image_frame.begin(); it != it_0; ++it)
                 {
                     if (it->second.pre_integration)
                         delete it->second.pre_integration;
-                    it->second.pre_integration = NULL;
+                    it->second.pre_integration = NULL; //删除预积分内容
                 }
 
                 all_image_frame.erase(all_image_frame.begin(), it_0);
-                all_image_frame.erase(t_0);
+                all_image_frame.erase(t_0);//删除t_0
 
             }
             slideWindowOld();
         }
     }
+    /**
+     * @brief 特征点的平均相对位移小于阈值，不是关键帧。
+     * 把之前第10帧边缘化掉，这个新的一帧替换成第10帧
+     * 
+     */
     else
     {
         if (frame_count == WINDOW_SIZE)

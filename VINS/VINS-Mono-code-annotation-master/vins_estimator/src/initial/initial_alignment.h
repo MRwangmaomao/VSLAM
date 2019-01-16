@@ -9,7 +9,11 @@
 
 using namespace Eigen;
 using namespace std;
-
+/**
+ * @brief 图像帧对象
+ * 保存了：当前帧的特征点、当前帧位姿R和t、时间戳、预积分、是否是关键帧
+ * 
+ */
 class ImageFrame
 {
     public:
