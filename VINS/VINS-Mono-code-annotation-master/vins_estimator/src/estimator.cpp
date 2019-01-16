@@ -211,9 +211,9 @@ void Estimator::processImage(const map<int, vector<pair<int, Eigen::Matrix<doubl
     {
         TicToc t_solve;
         solveOdometry(); // 紧耦合优化的入口函数
-        ROS_DEBUG("solver costs: %fms", t_solve.toc());
+        ROS_DEBUG("solver costs: %fms", t_solve.toc());//优化的时间
 
-        // 失效检测，如果失效则重启VINS系统
+        // 失效检测，如果失效则重启VINS系统 判断失效
         if (failureDetection())
         {
             ROS_WARN("failure detection!");
