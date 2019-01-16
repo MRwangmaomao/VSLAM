@@ -51,6 +51,26 @@ class IntegrationBase
             propagate(dt_buf[i], acc_buf[i], gyr_buf[i]);
     }
 
+    /**
+     * @brief 中点积分
+     * 
+     * @param _dt 当前IMU数据和前一个IMU数据的时间差
+     * @param _acc_0 前一个IMU加速度计数据
+     * @param _gyr_0 前一个IMU陀螺仪数据
+     * @param _acc_1 当前IMU加速度计数据
+     * @param _gyr_1 当前IMU陀螺仪数据
+     * @param delta_p 前一个IMU预积分测量值
+     * @param delta_q 
+     * @param delta_v 
+     * @param linearized_ba 前一个ba和bg
+     * @param linearized_bg 
+     * @param result_delta_p 输出当前IMU预积分测量值
+     * @param result_delta_q 
+     * @param result_delta_v 
+     * @param result_linearized_ba 当前ba和bg
+     * @param result_linearized_bg 
+     * @param update_jacobian 
+     */
     void midPointIntegration(double _dt, 
                             const Eigen::Vector3d &_acc_0, const Eigen::Vector3d &_gyr_0,
                             const Eigen::Vector3d &_acc_1, const Eigen::Vector3d &_gyr_1,
