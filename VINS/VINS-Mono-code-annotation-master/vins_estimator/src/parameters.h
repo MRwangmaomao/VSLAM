@@ -57,6 +57,7 @@ enum StateOrder
     O_BG = 12
 };
 
+//噪声顺序
 enum NoiseOrder
 {
     O_AN = 0,

@@ -78,7 +78,70 @@ $$\Delta V=\Delta V^{'} + a\Delta t -->更新速度$$
 ![yujifen](https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/IMU_and_Camera_relationship.jpg)   
  
 
-##### 雅可比矩阵
+##### 误差状态方程
+公式的推导详细看[VINS-Mono详解](https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/paper/VINS-Mono%E8%AF%A6%E8%A7%A3.pdf)
+中的2.2和2.3部分。
+雅克比矩阵初始为单位矩阵，协方差矩阵初始为0矩阵。  
+
+当加速度计和陀螺仪的偏置发生微小改变时，就可以根据雅克比矩阵对预计积分项进行修正，避免重复积分。
+
+设置F和V矩阵 
+
+    MatrixXd F = MatrixXd::Zero(15, 15);
+    F.block<3, 3>(0, 0) = Matrix3d::Identity();
+    F.block<3, 3>(0, 3) = -0.25 * delta_q.toRotationMatrix() * R_a_0_x * _dt * _dt + 
+                            -0.25 * result_delta_q.toRotationMatrix() * R_a_1_x * (Matrix3d::Identity() - R_w_x * _dt) * _dt * _dt;
+    F.block<3, 3>(0, 6) = MatrixXd::Identity(3,3) * _dt;
+    F.block<3, 3>(0, 9) = -0.25 * (delta_q.toRotationMatrix() + result_delta_q.toRotationMatrix()) * _dt * _dt;
+    F.block<3, 3>(0, 12) = -0.25 * result_delta_q.toRotationMatrix() * R_a_1_x * _dt * _dt * -_dt;
+    F.block<3, 3>(3, 3) = Matrix3d::Identity() - R_w_x * _dt;
+    F.block<3, 3>(3, 12) = -1.0 * MatrixXd::Identity(3,3) * _dt;
+    F.block<3, 3>(6, 3) = -0.5 * delta_q.toRotationMatrix() * R_a_0_x * _dt + 
+                            -0.5 * result_delta_q.toRotationMatrix() * R_a_1_x * (Matrix3d::Identity() - R_w_x * _dt) * _dt;
+    F.block<3, 3>(6, 6) = Matrix3d::Identity();
+    F.block<3, 3>(6, 9) = -0.5 * (delta_q.toRotationMatrix() + result_delta_q.toRotationMatrix()) * _dt;
+    F.block<3, 3>(6, 12) = -0.5 * result_delta_q.toRotationMatrix() * R_a_1_x * _dt * -_dt;
+    F.block<3, 3>(9, 9) = Matrix3d::Identity();
+    F.block<3, 3>(12, 12) = Matrix3d::Identity();
+    //cout<<"A"<<endl<<A<<endl;
+
+    MatrixXd V = MatrixXd::Zero(15,18);
+    V.block<3, 3>(0, 0) =  0.25 * delta_q.toRotationMatrix() * _dt * _dt;
+    V.block<3, 3>(0, 3) =  0.25 * -result_delta_q.toRotationMatrix() * R_a_1_x  * _dt * _dt * 0.5 * _dt;
+    V.block<3, 3>(0, 6) =  0.25 * result_delta_q.toRotationMatrix() * _dt * _dt;
+    V.block<3, 3>(0, 9) =  V.block<3, 3>(0, 3);
+    V.block<3, 3>(3, 3) =  0.5 * MatrixXd::Identity(3,3) * _dt;
+    V.block<3, 3>(3, 9) =  0.5 * MatrixXd::Identity(3,3) * _dt;
+    V.block<3, 3>(6, 0) =  0.5 * delta_q.toRotationMatrix() * _dt;
+    V.block<3, 3>(6, 3) =  0.5 * -result_delta_q.toRotationMatrix() * R_a_1_x  * _dt * 0.5 * _dt;
+    V.block<3, 3>(6, 6) =  0.5 * result_delta_q.toRotationMatrix() * _dt;
+    V.block<3, 3>(6, 9) =  V.block<3, 3>(6, 3);
+    V.block<3, 3>(9, 12) = MatrixXd::Identity(3,3) * _dt;
+    V.block<3, 3>(12, 15) = MatrixXd::Identity(3,3) * _dt;
+
+
+
+更新雅克比矩阵和协方差矩阵   
+
+    jacobian = F * jacobian; //更新雅可比矩阵
+    covariance = F * covariance * F.transpose() + V * noise * V.transpose(); //更新协方差矩阵
+
+计算残差
+    
+    Eigen::Vector3d dba = Bai - linearized_ba;
+    Eigen::Vector3d dbg = Bgi - linearized_bg;
+
+    Eigen::Quaterniond corrected_delta_q = delta_q * Utility::deltaQ(dq_dbg * dbg);//对旋转进行校正
+    Eigen::Vector3d corrected_delta_v = delta_v + dv_dba * dba + dv_dbg * dbg;//对速度进行校正
+    Eigen::Vector3d corrected_delta_p = delta_p + dp_dba * dba + dp_dbg * dbg;//对位移进行校正
+
+    //计算残差
+    residuals.block<3, 1>(O_P, 0) = Qi.inverse() * (0.5 * G * sum_dt * sum_dt + Pj - Pi - Vi * sum_dt) - corrected_delta_p;
+    residuals.block<3, 1>(O_R, 0) = 2 * (corrected_delta_q.inverse() * (Qi.inverse() * Qj)).vec();
+    residuals.block<3, 1>(O_V, 0) = Qi.inverse() * (G * sum_dt + Vj - Vi) - corrected_delta_v;
+    residuals.block<3, 1>(O_BA, 0) = Baj - Bai;
+    residuals.block<3, 1>(O_BG, 0) = Bgj - Bgi;
+
 
 ----
 
