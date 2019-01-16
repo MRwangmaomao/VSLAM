@@ -53,6 +53,15 @@ https://blog.csdn.net/lancelot_vim/article/details/77888788
 在两帧视觉帧之间，往往有很多IMU的采集数据，其中计算速度积分的时候需要相机当前位姿，将当前位置引入到世界坐标系$C_Ws$，从p时刻数字积分一次得到p+1时刻，然后根据公式乘以p时刻相机位姿得到世界坐标系，最终导致要对k时刻开始的每一个时刻的相机pose求导，计算代价很大，由于状态变了，积分的值也会跟着变，每优化一次就要重新算一次积分。 
 
 ![yujifen](https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/IMU_and_Camera_relationship.jpg)   
+
+
+    Vector3d un_acc_0 = Rs[j] * (acc_0 - Bas[j]) - g;
+    Vector3d un_gyr = 0.5 * (gyr_0 + angular_velocity) - Bgs[j];
+    Rs[j] *= Utility::deltaQ(un_gyr * dt).toRotationMatrix();         // 滑动窗口中各帧在世界坐标系下的旋转    
+    Vector3d un_acc_1 = Rs[j] * (linear_acceleration - Bas[j]) - g;
+    Vector3d un_acc = 0.5 * (un_acc_0 + un_acc_1);
+    Ps[j] += dt * Vs[j] + 0.5 * dt * dt * un_acc;                     // 滑动窗口中各帧在世界坐标系下的位置
+    Vs[j] += dt * un_acc;                                             // 滑动窗口中各帧在世界坐标系下的速度
 ----
 
 ## 滑动窗口的维护

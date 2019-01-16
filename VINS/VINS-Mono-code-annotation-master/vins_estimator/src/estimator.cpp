@@ -91,19 +91,22 @@ void Estimator::processIMU(double dt, const Vector3d &linear_acceleration, const
         gyr_0 = angular_velocity;
     }
 
-    if (!pre_integrations[frame_count])
+    // 滑动窗口中每帧图像对应一个IntegrationBase对象
+    if (!pre_integrations[frame_count]) // 最新帧在滑动窗口中的索引（0，1，2，... ，WINDOW_SIZE）
     {
         pre_integrations[frame_count] = new IntegrationBase{acc_0, gyr_0, Bas[frame_count], Bgs[frame_count]};
     }
     if (frame_count != 0) // 在初始化时，第一帧图像特征点数据没有对应的预积分
     {
-        pre_integrations[frame_count]->push_back(dt, linear_acceleration, angular_velocity);
+        pre_integrations[frame_count]->push_back(dt, linear_acceleration, angular_velocity);//指针数组
         //if(solver_flag != NON_LINEAR)
-            tmp_pre_integration->push_back(dt, linear_acceleration, angular_velocity);
+            tmp_pre_integration->push_back(dt, linear_acceleration, angular_velocity);//指针
+            // tmp_pre_integration  用于在创建ImageFrame对象时，把该指针赋给imageframe.pre_integration
 
-        dt_buf[frame_count].push_back(dt);
-        linear_acceleration_buf[frame_count].push_back(linear_acceleration);
-        angular_velocity_buf[frame_count].push_back(angular_velocity);
+        // 滑动窗口中每一帧图像对应的预积分所用到的IMU数据存在3个缓存中
+        dt_buf[frame_count].push_back(dt);// IMU数据对应的时间间隔
+        linear_acceleration_buf[frame_count].push_back(linear_acceleration);// 加速度计测量值
+        angular_velocity_buf[frame_count].push_back(angular_velocity);// 陀螺仪测量值
 
         // 用IMU数据进行积分，当积完一个measurement中所有IMU数据后，就得到了对应图像帧在世界坐标系中的Ps、Vs、Rs
         // 下面这一部分的积分，在没有成功完成初始化时似乎是没有意义的，因为在没有成功初始化时，对IMU数据来说是没有世界坐标系的
@@ -111,12 +114,13 @@ void Estimator::processIMU(double dt, const Vector3d &linear_acceleration, const
         int j = frame_count;         
         Vector3d un_acc_0 = Rs[j] * (acc_0 - Bas[j]) - g;
         Vector3d un_gyr = 0.5 * (gyr_0 + angular_velocity) - Bgs[j];
-        Rs[j] *= Utility::deltaQ(un_gyr * dt).toRotationMatrix();
+        Rs[j] *= Utility::deltaQ(un_gyr * dt).toRotationMatrix();         // 滑动窗口中各帧在世界坐标系下的旋转    
         Vector3d un_acc_1 = Rs[j] * (linear_acceleration - Bas[j]) - g;
         Vector3d un_acc = 0.5 * (un_acc_0 + un_acc_1);
-        Ps[j] += dt * Vs[j] + 0.5 * dt * dt * un_acc;
-        Vs[j] += dt * un_acc;
+        Ps[j] += dt * Vs[j] + 0.5 * dt * dt * un_acc;                     // 滑动窗口中各帧在世界坐标系下的位置
+        Vs[j] += dt * un_acc;                                             // 滑动窗口中各帧在世界坐标系下的速度 
     }
+    // reload acc and gyr
     acc_0 = linear_acceleration;
     gyr_0 = angular_velocity;
 }
