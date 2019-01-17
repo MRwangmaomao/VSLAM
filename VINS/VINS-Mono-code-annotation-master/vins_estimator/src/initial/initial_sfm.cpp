@@ -20,7 +20,17 @@ void GlobalSFM::triangulatePoint(Eigen::Matrix<double, 3, 4> &Pose0, Eigen::Matr
 	point_3d(2) = triangulated_point(2) / triangulated_point(3);
 }
 
-// PNP求解位姿
+// 
+/**
+ * @brief PNP求解位姿
+ * 
+ * @param R_initial 
+ * @param P_initial 
+ * @param i 
+ * @param sfm_f 
+ * @return true 
+ * @return false 
+ */
 bool GlobalSFM::solveFrameByPnP(Matrix3d &R_initial, Vector3d &P_initial, int i,
 								vector<SFMFeature> &sfm_f)
 {
