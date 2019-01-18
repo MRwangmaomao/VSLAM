@@ -224,6 +224,13 @@ VectorXd FeatureManager::getDepthVector()
     return dep_vec;
 }
 
+/**
+ * @brief 
+ * 
+ * @param Ps 
+ * @param tic 
+ * @param ric 
+ */
 void FeatureManager::triangulate(Vector3d Ps[], Vector3d tic[], Matrix3d ric[])
 {
     for (auto &it_per_id : feature) // 对于每个id的特征点
