@@ -426,8 +426,13 @@ bool Estimator::initialStructure()
     }
 
 }
-
-// visual-inertial alignment：视觉SFM的结果与IMU预积分结果对齐
+ 
+/**
+ * @brief 视觉SFM的结果与IMU预积分结果对齐
+ * 
+ * @return true 
+ * @return false 
+ */
 bool Estimator::visualInitialAlign()
 {
     TicToc t_g;
@@ -542,6 +547,10 @@ bool Estimator::relativePose(Matrix3d &relative_R, Vector3d &relative_T, int &l)
     return false;
 }
 
+/**
+ * @brief 紧耦合优化
+ * 
+ */
 void Estimator::solveOdometry()
 {
     if (frame_count < WINDOW_SIZE)
@@ -741,7 +750,10 @@ bool Estimator::failureDetection()
     return false;
 }
 
-
+/**
+ * @brief 滑动窗口紧耦合优化
+ * 
+ */
 void Estimator::optimization()
 {
     ceres::Problem problem;

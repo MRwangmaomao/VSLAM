@@ -427,6 +427,12 @@ void process()
     }
 }
 
+/**
+ * @brief 命令行线程
+ * s 保存位姿图
+ * n 新的数据集
+ * 
+ */
 void command()
 {
     if (!LOOP_CLOSURE)
@@ -520,7 +526,10 @@ int main(int argc, char **argv)
     }
 
     fsSettings.release();
-
+/**
+ * @brief 订阅消息
+ * 
+ */
     ros::Subscriber sub_imu_forward = n.subscribe("/vins_estimator/imu_propagate", 2000, imu_forward_callback);
     ros::Subscriber sub_vio = n.subscribe("/vins_estimator/odometry", 2000, vio_callback);
     ros::Subscriber sub_image = n.subscribe(IMAGE_TOPIC, 2000, image_callback);
@@ -535,6 +544,10 @@ int main(int argc, char **argv)
     pub_vio_path = n.advertise<nav_msgs::Path>("no_loop_path", 1000);
     pub_match_points = n.advertise<sensor_msgs::PointCloud>("match_points", 100);
 
+/**
+ * @brief 多线程
+ * 
+ */
     std::thread measurement_process;
     std::thread keyboard_command_process;
 
