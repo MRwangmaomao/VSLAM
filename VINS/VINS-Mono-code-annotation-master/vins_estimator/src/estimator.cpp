@@ -154,6 +154,8 @@ void Estimator::processImage(const map<int, vector<pair<int, Eigen::Matrix<doubl
     ROS_DEBUG("number of feature: %d", f_manager.getFeatureCount());
     Headers[frame_count] = header;
 
+
+    //添加 imageframe（包括当前帧特征点信息，当前初始状态，预积分对象）
     ImageFrame imageframe(image, header.stamp.toSec());
     imageframe.pre_integration = tmp_pre_integration;
     all_image_frame.insert(make_pair(header.stamp.toSec(), imageframe)); // 每读取一帧图像特征点数据，都会存入all_image_frame
