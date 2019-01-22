@@ -192,9 +192,14 @@ $$\Delta V=\Delta V^{'} + a\Delta t -->更新速度$$
  
 ### 6.4 通过PnP求解所有帧
 
-### 6.5 视觉SFM的结果与IMU预积分结果对齐visualInitialAlign()
-在SFM中已经根据连续图像的相对旋转计算出相机和IMU间的外参旋转了，现在要根据
+### 6.5 视觉SFM的结果与IMU预积分结果对齐visualInitialAlign()（这部分内容详细看论文）
+视觉SFM的结果与IMU预积分结果对齐 initial/initial_aligment.cpp
+根据视觉SFM的结果来校正陀螺仪的Bias，注意得到了新的Bias后对应的预积分需要repropagate,对应代码中的solveGyroscopeBias()函数
 
+初始化速度、重力向量和尺度因子，这一部分对应代码initial_aligment.cpp中的LinearAlignment()
+
+
+重力细化 
 
 
 
@@ -204,7 +209,7 @@ $$\Delta V=\Delta V^{'} + a\Delta t -->更新速度$$
 
 ## 8 VIO紧耦合优化 
  
- 
+### 8.1 滑动窗口紧耦合优化 
 
 ## rviz可视化
 
