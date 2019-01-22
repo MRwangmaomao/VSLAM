@@ -555,6 +555,7 @@ void Estimator::solveOdometry()
 {
     if (frame_count < WINDOW_SIZE)
         return;
+    //需要紧耦合优化
     if (solver_flag == NON_LINEAR)
     {
         // 三角化
@@ -760,12 +761,16 @@ void Estimator::optimization()
     ceres::LossFunction *loss_function;
     //loss_function = new ceres::HuberLoss(1.0);
     loss_function = new ceres::CauchyLoss(1.0);
+
+    // 添加要优化的变量（camera的pose，imu的biases）
     for (int i = 0; i < WINDOW_SIZE + 1; i++)
     {
         ceres::LocalParameterization *local_parameterization = new PoseLocalParameterization();
         problem.AddParameterBlock(para_Pose[i], SIZE_POSE, local_parameterization);
         problem.AddParameterBlock(para_SpeedBias[i], SIZE_SPEEDBIAS);
     }
+
+    // 添加camera和IMU的坐标变换的变量
     for (int i = 0; i < NUM_OF_CAM; i++)
     {
         ceres::LocalParameterization *local_parameterization = new PoseLocalParameterization();
@@ -785,8 +790,9 @@ void Estimator::optimization()
     }
 
     TicToc t_whole, t_prepare;
+    // 把要优化的变量转化为数组的形式
     vector2double();
-
+    // 添加上一次边缘化的parameter blocks
     if (last_marginalization_info)
     {
         // construct new marginlization_factor
@@ -795,6 +801,7 @@ void Estimator::optimization()
                                  last_marginalization_parameter_blocks);
     }
 
+    // 添加当前滑动窗中的优化变量
     for (int i = 0; i < WINDOW_SIZE; i++)
     {
         int j = i + 1;
@@ -805,8 +812,10 @@ void Estimator::optimization()
     }
     int f_m_cnt = 0;
     int feature_index = -1;
+    //遍历滑动窗中的帧数
     for (auto &it_per_id : f_manager.feature)
-    {
+    { 
+        //每一帧图像feature的个数
         it_per_id.used_num = it_per_id.feature_per_frame.size();
         if (!(it_per_id.used_num >= 2 && it_per_id.start_frame < WINDOW_SIZE - 2))
             continue;
@@ -817,6 +826,7 @@ void Estimator::optimization()
         
         Vector3d pts_i = it_per_id.feature_per_frame[0].point;
 
+        // 遍历每一帧图像所有的feature
         for (auto &it_per_frame : it_per_id.feature_per_frame)
         {
             imu_j++;
@@ -853,6 +863,7 @@ void Estimator::optimization()
     ROS_DEBUG("visual measurement count: %d", f_m_cnt);
     ROS_DEBUG("prepare for ceres: %f", t_prepare.toc());
 
+    //回环检测
     if(relocalization_info)
     {
         //printf("set relocalization factor! \n");
@@ -888,10 +899,10 @@ void Estimator::optimization()
     }
 
     ceres::Solver::Options options;
-
+    //线性求解类型 Dense schur
     options.linear_solver_type = ceres::DENSE_SCHUR;
     //options.num_threads = 2;
-    options.trust_region_strategy_type = ceres::DOGLEG;
+    options.trust_region_strategy_type = ceres::DOGLEG;//信赖域类型
     options.max_num_iterations = NUM_ITERATIONS;
     //options.use_explicit_schur_complement = true;
     //options.minimizer_progress_to_stdout = true;
@@ -910,7 +921,9 @@ void Estimator::optimization()
     double2vector();
 
     TicToc t_whole_marginalization;
-    if (marginalization_flag == MARGIN_OLD)
+    // 这里边缘化有两个策略，如果在滑动窗口中第二近的frame是关键帧则丢弃sliding windows 中最老的帧，否则丢弃
+    // 该帧。无论丢弃哪一帧，都需要边缘化
+    if (marginalization_flag == MARGIN_OLD) //这里丢弃老的一帧
     {
         MarginalizationInfo *marginalization_info = new MarginalizationInfo();
         vector2double();
@@ -1016,8 +1029,8 @@ void Estimator::optimization()
         last_marginalization_info = marginalization_info;
         last_marginalization_parameter_blocks = parameter_blocks;
         
-    }
-    else
+    }//丢弃老的一帧
+    else//丢弃新的一帧
     {
         if (last_marginalization_info &&
             std::count(std::begin(last_marginalization_parameter_blocks), std::end(last_marginalization_parameter_blocks), para_Pose[WINDOW_SIZE - 1]))
