@@ -16,6 +16,15 @@ class IMUFactor : public ceres::SizedCostFunction<15, 7, 9, 7, 9>
     IMUFactor(IntegrationBase* _pre_integration):pre_integration(_pre_integration)
     {
     }
+    /**
+     * @brief 返回雅克比矩阵和残差向量
+     * 
+     * @param parameters 
+     * @param residuals 
+     * @param jacobians 
+     * @return true 
+     * @return false 
+     */
     virtual bool Evaluate(double const *const *parameters, double *residuals, double **jacobians) const
     {
 
@@ -57,13 +66,14 @@ class IMUFactor : public ceres::SizedCostFunction<15, 7, 9, 7, 9>
         }
 #endif
 
-        Eigen::Map<Eigen::Matrix<double, 15, 1>> residual(residuals);
+        Eigen::Map<Eigen::Matrix<double, 15, 1>> residual(residuals);//残差
         residual = pre_integration->evaluate(Pi, Qi, Vi, Bai, Bgi,
-                                            Pj, Qj, Vj, Baj, Bgj);
+                                            Pj, Qj, Vj, Baj, Bgj);//使用带噪声的结果计算得到残差
 
+        //协方差矩阵 将其做LLT分解 
         Eigen::Matrix<double, 15, 15> sqrt_info = Eigen::LLT<Eigen::Matrix<double, 15, 15>>(pre_integration->covariance.inverse()).matrixL().transpose();
         //sqrt_info.setIdentity();
-        residual = sqrt_info * residual;
+        residual = sqrt_info * residual; //马氏距离加权后得到的残差
 
         if (jacobians)
         {
@@ -102,14 +112,14 @@ class IMUFactor : public ceres::SizedCostFunction<15, 7, 9, 7, 9>
 
                 jacobian_pose_i = sqrt_info * jacobian_pose_i;
 
-                if (jacobian_pose_i.maxCoeff() > 1e8 || jacobian_pose_i.minCoeff() < -1e8)
+                if (jacobian_pose_i.maxCoeff() > 1e8 || jacobian_pose_i.minCoeff() < -1e8)//病态矩阵
                 {
                     ROS_WARN("numerical unstable in preintegration");
                     //std::cout << sqrt_info << std::endl;
                     //ROS_BREAK();
                 }
             }
-            if (jacobians[1])
+            if (jacobians[1])//矩阵块1 详细推导参考 VINS_Mono详解 pdf
             {
                 Eigen::Map<Eigen::Matrix<double, 15, 9, Eigen::RowMajor>> jacobian_speedbias_i(jacobians[1]);
                 jacobian_speedbias_i.setZero();

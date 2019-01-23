@@ -18,6 +18,15 @@ ProjectionFactor::ProjectionFactor(const Eigen::Vector3d &_pts_i, const Eigen::V
 #endif
 };
 
+/**
+ * @brief 视觉投影测量残差估计
+ * 
+ * @param parameters 待优化的变量
+ * @param residuals 残差
+ * @param jacobians 关于残差的雅克比矩阵
+ * @return true 
+ * @return false 
+ */
 bool ProjectionFactor::Evaluate(double const *const *parameters, double *residuals, double **jacobians) const
 {
     TicToc tic_toc;
@@ -30,8 +39,12 @@ bool ProjectionFactor::Evaluate(double const *const *parameters, double *residua
     Eigen::Vector3d tic(parameters[2][0], parameters[2][1], parameters[2][2]);
     Eigen::Quaterniond qic(parameters[2][6], parameters[2][3], parameters[2][4], parameters[2][5]);
 
-    double inv_dep_i = parameters[3][0];
+    double inv_dep_i = parameters[3][0];//逆深度
 
+    /**
+     * @brief 
+     * 
+     */
     Eigen::Vector3d pts_camera_i = pts_i / inv_dep_i;
     Eigen::Vector3d pts_imu_i = qic * pts_camera_i + tic;
     Eigen::Vector3d pts_w = Qi * pts_imu_i + Pi;
@@ -96,6 +109,7 @@ bool ProjectionFactor::Evaluate(double const *const *parameters, double *residua
         }
         if (jacobians[2])
         {
+            // 残差关于外参的雅克比
             Eigen::Map<Eigen::Matrix<double, 2, 7, Eigen::RowMajor>> jacobian_ex_pose(jacobians[2]);
             Eigen::Matrix<double, 3, 6> jaco_ex;
             jaco_ex.leftCols<3>() = ric.transpose() * (Rj.transpose() * Ri - Eigen::Matrix3d::Identity());
@@ -107,6 +121,7 @@ bool ProjectionFactor::Evaluate(double const *const *parameters, double *residua
         }
         if (jacobians[3])
         {
+            //残差关于深度的雅克比
             Eigen::Map<Eigen::Vector2d> jacobian_feature(jacobians[3]);
 #if 1
             jacobian_feature = reduce * ric.transpose() * Rj.transpose() * Ri * ric * pts_i * -1.0 / (inv_dep_i * inv_dep_i);
@@ -118,7 +133,7 @@ bool ProjectionFactor::Evaluate(double const *const *parameters, double *residua
     sum_t += tic_toc.toc();
 
     return true;
-}
+}//Evalute
 
 void ProjectionFactor::check(double **parameters)
 {

@@ -14,7 +14,7 @@ void Estimator::setParameter()
         ric[i] = RIC[i];
     }
     f_manager.setRic(ric);
-    ProjectionFactor::sqrt_info = FOCAL_LENGTH / 1.5 * Matrix2d::Identity();
+    ProjectionFactor::sqrt_info = FOCAL_LENGTH / 1.5 * Matrix2d::Identity();//协方差矩阵
     ProjectionTdFactor::sqrt_info = FOCAL_LENGTH / 1.5 * Matrix2d::Identity();
     td = TD;
 }
@@ -783,6 +783,8 @@ void Estimator::optimization()
         else
             ROS_DEBUG("estimate extinsic param");
     }
+
+    //是否对相机与IMU的时间延迟进行优化
     if (ESTIMATE_TD)
     {
         problem.AddParameterBlock(para_Td[0], 1);
@@ -800,19 +802,19 @@ void Estimator::optimization()
         problem.AddResidualBlock(marginalization_factor, NULL,
                                  last_marginalization_parameter_blocks);
     }
-
-    // 添加当前滑动窗中的优化变量
+    
+    // 添加当前滑动窗中的优化变量  添加IMU测量残差 
     for (int i = 0; i < WINDOW_SIZE; i++)
     {
         int j = i + 1;
         if (pre_integrations[j]->sum_dt > 10.0)
             continue;
-        IMUFactor* imu_factor = new IMUFactor(pre_integrations[j]);
+        IMUFactor* imu_factor = new IMUFactor(pre_integrations[j]);//添加IMU 
         problem.AddResidualBlock(imu_factor, NULL, para_Pose[i], para_SpeedBias[i], para_Pose[j], para_SpeedBias[j]);
     }
     int f_m_cnt = 0;
     int feature_index = -1;
-    //遍历滑动窗中的帧数
+    //遍历滑动窗中的帧数  添加视觉测量残差
     for (auto &it_per_id : f_manager.feature)
     { 
         //每一帧图像feature的个数
@@ -826,7 +828,7 @@ void Estimator::optimization()
         
         Vector3d pts_i = it_per_id.feature_per_frame[0].point;
 
-        // 遍历每一帧图像所有的feature
+        // 遍历每一帧图像所有的feature 
         for (auto &it_per_frame : it_per_id.feature_per_frame)
         {
             imu_j++;
@@ -898,6 +900,10 @@ void Estimator::optimization()
 
     }
 
+    /**
+     * @brief ceres 求解
+     * 
+     */
     ceres::Solver::Options options;
     //线性求解类型 Dense schur
     options.linear_solver_type = ceres::DENSE_SCHUR;
