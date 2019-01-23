@@ -611,7 +611,7 @@ void Estimator::vector2double()
     if (ESTIMATE_TD)
         para_Td[0][0] = td;
 }
-
+//数据转换，因为ceres使用数值数组
 void Estimator::double2vector()
 {
     Vector3d origin_R0 = Utility::R2ypr(Rs[0]);
@@ -753,6 +753,10 @@ bool Estimator::failureDetection()
 
 /**
  * @brief 滑动窗口紧耦合优化
+ *  基于滑动窗口的紧耦合的非线性优化
+ *  1.添加要优化的变量 也就是滑动窗口的位置para_Pose[0:n] 速度和Bias para_SpeedBias[0:n]一共15个自由度，IMU的外参也可以加进来估计
+ *  2.添加残差，残差项分为4块 先验残差+IMU残差+视觉残差+闭环检测的残差
+ *  3.根据倒数第二帧是不是关键帧确定marginization的结果，下面有详细解释
  * 
  */
 void Estimator::optimization()
@@ -762,7 +766,8 @@ void Estimator::optimization()
     //loss_function = new ceres::HuberLoss(1.0);
     loss_function = new ceres::CauchyLoss(1.0);
 
-    // 添加要优化的变量（camera的pose，imu的biases）
+    //添加sliding window frame的state，(pose,v,q,ba,bg),因为ceres用的是double数组，
+    //所以在下面用vector2double做类型装换，把原来的Ps Vs Bgs Bas转到para_Pose para_SpeedBias下 
     for (int i = 0; i < WINDOW_SIZE + 1; i++)
     {
         ceres::LocalParameterization *local_parameterization = new PoseLocalParameterization();
@@ -770,7 +775,7 @@ void Estimator::optimization()
         problem.AddParameterBlock(para_SpeedBias[i], SIZE_SPEEDBIAS);
     }
 
-    // 添加camera和IMU的坐标变换的变量
+    //camera IMU的外参也添加到估计
     for (int i = 0; i < NUM_OF_CAM; i++)
     {
         ceres::LocalParameterization *local_parameterization = new PoseLocalParameterization();
@@ -794,7 +799,20 @@ void Estimator::optimization()
     TicToc t_whole, t_prepare;
     // 把要优化的变量转化为数组的形式
     vector2double();
-    // 添加上一次边缘化的parameter blocks
+    
+    /**
+     * @brief 
+     * 添加marginalization的residual
+     * 这个marginalization的结构是始终存在的
+     * 随着下面marginazation的结构更新
+     * last_marginalization_parameter_blocks对应的是还在sliding window的变量
+     * 
+     * 关于这一部分的理解，请看heyijia大神的BLOG:http://blog.csdn.net/heyijia0327/article/details/53707261,可能是说的最清楚的一个了
+     * 这里可以这样理解，下面会添加对IMU和视觉的残差，但是，这些对应的变量实际上跟之前被margin掉的变量是有约束的
+     * 这里的last_marginalization_parameter_blocks就是保存的这些变量，也就是heyijia博客中对应的Xb变量，
+     * last_marginalization_info中对应的是Xb对应的测量Zb，这里用先验来表示这个约束，整个margin部分实际上就是在维护这个结构：
+     *
+     */
     if (last_marginalization_info)
     {
         // construct new marginlization_factor
@@ -803,6 +821,14 @@ void Estimator::optimization()
                                  last_marginalization_parameter_blocks);
     }
     
+    /**
+     * @brief 
+     * 这里IMU项和camera项之间是有一个系数，这个系数就是他们各自的协方差矩阵：
+     * IMU的协方差是预积分的协方差(IMUFactor::Evaluate，中添加IMU协方差，求解jacobian矩阵)，
+     * 而camera的测量残差则是一个固定的系数（f/1.5）
+     * 添加IMU的residual
+     * 
+     */
     // 添加当前滑动窗中的优化变量  添加IMU测量残差 
     for (int i = 0; i < WINDOW_SIZE; i++)
     {
@@ -865,7 +891,7 @@ void Estimator::optimization()
     ROS_DEBUG("visual measurement count: %d", f_m_cnt);
     ROS_DEBUG("prepare for ceres: %f", t_prepare.toc());
 
-    //回环检测
+    // 添加闭环的参数和residual
     if(relocalization_info)
     {
         //printf("set relocalization factor! \n");
@@ -919,6 +945,8 @@ void Estimator::optimization()
         options.max_solver_time_in_seconds = SOLVER_TIME;
     TicToc t_solver;
     ceres::Solver::Summary summary;
+
+    // 求解完成
     ceres::Solve(options, &problem, &summary);
     //cout << summary.BriefReport() << endl;
     ROS_DEBUG("Iterations : %d", static_cast<int>(summary.iterations.size()));
@@ -929,11 +957,26 @@ void Estimator::optimization()
     TicToc t_whole_marginalization;
     // 这里边缘化有两个策略，如果在滑动窗口中第二近的frame是关键帧则丢弃sliding windows 中最老的帧，否则丢弃
     // 该帧。无论丢弃哪一帧，都需要边缘化
+
+    /**
+     * @brief  margin部分，如果倒数第二帧是关键帧：
+     * 1.把之前存的残差部分加进来 
+     * 2.把与当前要margin掉帧所有相关的残差项都加进来，IMU,vision 
+     * 3.preMarginalize-> 调用Evaluate计算所有ResidualBlock的残差，
+     *   parameter_block_data parameter_block_idx parameter_block_size是marinazation中存参数块的容器(unordered_map),key都是addr,
+     *   分别对应这些参数的data，在稀疏矩阵A中的index(要被margin掉的参数会被移到前面)，A中的大小
+     * 4.Marginalize->多线程构造Hx=b的结构，H是边缘化后的结果，First Esitimate Jacobian,在X0处线性化
+     * 5.margin结束，调整参数块在下一次window中对应的位置（往前移一格），注意这里是指针，
+     * 后面slideWindow中会赋新值，这里只是提前占座（知乎上有人问：https://www.zhihu.com/question/63754583/answer/259699612）
+     * 
+     */
+
     if (marginalization_flag == MARGIN_OLD) //这里丢弃老的一帧
     {
+        
         MarginalizationInfo *marginalization_info = new MarginalizationInfo();
         vector2double();
-
+        //把之前存的残差部分加进来 
         if (last_marginalization_info)
         {
             vector<int> drop_set;
@@ -952,6 +995,7 @@ void Estimator::optimization()
             marginalization_info->addResidualBlockInfo(residual_block_info);
         }
 
+        //把与当前要margin掉帧所有相关的残差项都加进来，IMU,vision 
         {
             if (pre_integrations[1]->sum_dt < 10.0)
             {
@@ -1008,14 +1052,17 @@ void Estimator::optimization()
             }
         }
 
+        //preMarginalize-> 调用Evaluate计算所有ResidualBlock的残差
         TicToc t_pre_margin;
         marginalization_info->preMarginalize();
         ROS_DEBUG("pre marginalization %f ms", t_pre_margin.toc());
         
+        //Marginalize->多线程构造Hx=b的结构，H是边缘化后的结果，First Esitimate Jacobian,在X0处线性化
         TicToc t_margin;
         marginalization_info->marginalize();
         ROS_DEBUG("marginalization %f ms", t_margin.toc());
 
+        //margin结束，调整参数块在下一次window中对应的位置（往前移一格），注意这里是指针
         std::unordered_map<long, double *> addr_shift;
         for (int i = 1; i <= WINDOW_SIZE; i++)
         {
@@ -1036,12 +1083,21 @@ void Estimator::optimization()
         last_marginalization_parameter_blocks = parameter_blocks;
         
     }//丢弃老的一帧
+    /**
+     * @brief 如果倒数第二帧不是关键帧 
+     * 1.保留该帧的IMU测量，margin该帧的visual
+     * 2.premargin
+     * 3.marginalize
+     * 4.滑动窗口移动（去掉倒数第二个）
+     * 
+     */
     else//丢弃新的一帧
     {
         if (last_marginalization_info &&
             std::count(std::begin(last_marginalization_parameter_blocks), std::end(last_marginalization_parameter_blocks), para_Pose[WINDOW_SIZE - 1]))
         {
-
+            
+            //保留该帧的IMU测量，margin该帧的visual
             MarginalizationInfo *marginalization_info = new MarginalizationInfo();
             vector2double();
             if (last_marginalization_info)
@@ -1062,16 +1118,19 @@ void Estimator::optimization()
                 marginalization_info->addResidualBlockInfo(residual_block_info);
             }
 
+            //premargin
             TicToc t_pre_margin;
             ROS_DEBUG("begin marginalization");
             marginalization_info->preMarginalize();
             ROS_DEBUG("end pre marginalization, %f ms", t_pre_margin.toc());
 
+            //marginalize
             TicToc t_margin;
             ROS_DEBUG("begin marginalization");
             marginalization_info->marginalize();
             ROS_DEBUG("end marginalization, %f ms", t_margin.toc());
             
+            //滑动窗口移动（去掉倒数第二个）
             std::unordered_map<long, double *> addr_shift;
             for (int i = 0; i <= WINDOW_SIZE; i++)
             {
