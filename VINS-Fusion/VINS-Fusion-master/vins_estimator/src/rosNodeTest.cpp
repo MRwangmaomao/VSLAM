@@ -77,7 +77,7 @@ void sync_process()
             cv::Mat image0, image1;
             std_msgs::Header header;
             double time = 0;
-            m_buf.lock();
+            m_buf.lock();//防止图像接收和剔除冲突的线程锁
             if (!img0_buf.empty() && !img1_buf.empty())
             {
                 double time0 = img0_buf.front()->header.stamp.toSec();
@@ -89,7 +89,7 @@ void sync_process()
                 }
                 else if(time0 > time1)
                 {
-                    img1_buf.pop();
+                    img1_buf.pop();//队列存储方式的优点，将最早时间的图像帧剔除
                     printf("throw img1\n");
                 }
                 else
