@@ -1,0 +1,2 @@
+mbot_description
+-DCATKIN_DEVEL_PREFIX=/home/wpr/code/VSLAM/ROS/机器人系统设计/mbot_catkin/devel -DCMAKE_INSTALL_PREFIX=/home/wpr/code/VSLAM/ROS/机器人系统设计/mbot_catkin/install -G Unix Makefiles

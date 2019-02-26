@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ddbe2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ddbe2.dir/build.make CMakeFiles/cmTC_ddbe2.dir/build
+make[1]: Entering directory '/home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ddbe2.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_ddbe2.dir/CheckSymbolExists.c.o   -c /home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ddbe2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddbe2.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ddbe2.dir/CheckSymbolExists.c.o  -o cmTC_ddbe2 -rdynamic 
+CMakeFiles/cmTC_ddbe2.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ddbe2.dir/build.make:97: recipe for target 'cmTC_ddbe2' failed
+make[1]: *** [cmTC_ddbe2] Error 1
+make[1]: Leaving directory '/home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ddbe2/fast' failed
+make: *** [cmTC_ddbe2/fast] Error 2
+
+File /home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5f808/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5f808.dir/build.make CMakeFiles/cmTC_5f808.dir/build
+make[1]: Entering directory '/home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f808.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5f808.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5f808
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f808.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5f808.dir/CheckFunctionExists.c.o  -o cmTC_5f808 -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_5f808.dir/build.make:97: recipe for target 'cmTC_5f808' failed
+make[1]: *** [cmTC_5f808] Error 1
+make[1]: Leaving directory '/home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5f808/fast' failed
+make: *** [cmTC_5f808/fast] Error 2
+
+

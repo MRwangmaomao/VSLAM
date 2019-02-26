@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/devel
+
+Name: learning_tf
+Description: Description of learning_tf
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS基础/learningcommunicate/devel/lib 
+Requires: 
