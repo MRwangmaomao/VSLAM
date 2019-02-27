@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC   -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/wpr/code/VSLAM/ROS/ROS2basic/catkincommunicate/build/gtest/gtest/src -lpthread -Wl,-rpath,/home/wpr/code/VSLAM/ROS/ROS2basic/catkincommunicate/build/gtest/gtest/src 

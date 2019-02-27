@@ -1,0 +1,2 @@
+communicate:learning_tf
+-DCATKIN_DEVEL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS2basic/catkincommunicate/devel -DCMAKE_INSTALL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS2basic/catkincommunicate/install -G Unix Makefiles

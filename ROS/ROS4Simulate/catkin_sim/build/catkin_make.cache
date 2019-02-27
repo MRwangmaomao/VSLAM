@@ -1,0 +1,2 @@
+arbotix_ros/arbotix:arbotix_ros/arbotix_controllers:arbotix_ros/arbotix_firmware:arbotix_ros/arbotix_msgs:arbotix_ros/arbotix_python:arbotix_ros/arbotix_sensors:mbot_description:mbot_teleop
+-DCATKIN_DEVEL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel -DCMAKE_INSTALL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/install -G Unix Makefiles

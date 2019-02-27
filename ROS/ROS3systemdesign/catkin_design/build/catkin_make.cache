@@ -1,0 +1,2 @@
+mbot_description
+-DCATKIN_DEVEL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS3systemdesign/catkin_design/devel -DCMAKE_INSTALL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS3systemdesign/catkin_design/install -G Unix Makefiles

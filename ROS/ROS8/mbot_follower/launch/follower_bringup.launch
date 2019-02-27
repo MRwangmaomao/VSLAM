@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find mbot_follower)/launch/include/velocity_smoother.launch.xml"/>
+		
+	<node pkg="mbot_follower" type="follower" name="follower"  output="screen"/>
+</launch>

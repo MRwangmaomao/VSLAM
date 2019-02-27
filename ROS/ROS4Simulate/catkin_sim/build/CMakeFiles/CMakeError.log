@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6d838/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6d838.dir/build.make CMakeFiles/cmTC_6d838.dir/build
+make[1]: Entering directory '/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d838.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6d838.dir/CheckSymbolExists.c.o   -c /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6d838
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d838.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6d838.dir/CheckSymbolExists.c.o  -o cmTC_6d838 -rdynamic 
+CMakeFiles/cmTC_6d838.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6d838.dir/build.make:97: recipe for target 'cmTC_6d838' failed
+make[1]: *** [cmTC_6d838] Error 1
+make[1]: Leaving directory '/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6d838/fast' failed
+make: *** [cmTC_6d838/fast] Error 2
+
+File /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b2d5b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b2d5b.dir/build.make CMakeFiles/cmTC_b2d5b.dir/build
+make[1]: Entering directory '/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b2d5b.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b2d5b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b2d5b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2d5b.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_b2d5b.dir/CheckFunctionExists.c.o  -o cmTC_b2d5b -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b2d5b.dir/build.make:97: recipe for target 'cmTC_b2d5b' failed
+make[1]: *** [cmTC_b2d5b] Error 1
+make[1]: Leaving directory '/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b2d5b/fast' failed
+make: *** [cmTC_b2d5b/fast] Error 2
+
+

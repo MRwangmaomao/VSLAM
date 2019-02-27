@@ -1,0 +1,6 @@
+<launch>
+    <node name="gmapping_node" pkg="gmapping" type="slam_gmapping" respawn="false" >
+        <remap to="base_scan" from="scan"/>
+        <param name="odom_frame" value="odom_combined" />
+    </node>
+</launch>

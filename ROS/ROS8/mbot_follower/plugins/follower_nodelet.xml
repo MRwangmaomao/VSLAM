@@ -1,0 +1,7 @@
+<library path="lib/libfollower_nodelet">
+  	<class name="follower/FollowerNodelet" type="follower::FollowerNodelet" base_class_type="nodelet::Nodelet">  
+        <description>
+           this is follower nodelet.
+        </description>
+        </class>
+</library>

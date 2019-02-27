@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot name="arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/gazebo/mbot_base_pro_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/lidar_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/kinect_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/imu_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/sonar_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/gps_gazebo.xacro" />
+    <xacro:include filename="$(find mbot_description)/urdf/xacro/sensors/velodyne_gazebo.xacro" />
+
+    <xacro:property name="lidar_offset_x" value="0" />
+    <xacro:property name="lidar_offset_y" value="0" />
+    <xacro:property name="lidar_offset_z" value="0.105" />
+
+    <xacro:property name="kinect_offset_x" value="0.12" />
+    <xacro:property name="kinect_offset_y" value="0" />
+    <xacro:property name="kinect_offset_z" value="0.20" />
+
+    <xacro:property name="sonar_offset_x" value="0.19" />
+    <xacro:property name="sonar_offset_y" value="0" />
+    <xacro:property name="sonar_offset_z" value="0.05" />
+
+    <xacro:property name="velodyne_offset_x" value="0" />
+    <xacro:property name="velodyne_offset_y" value="0" />
+    <xacro:property name="velodyne_offset_z" value="0.25" />
+
+    <!-- lidar -->
+    <joint name="lidar_joint" type="fixed">
+        <origin xyz="${lidar_offset_x} ${lidar_offset_y} ${lidar_offset_z}" rpy="0 0 0" />
+        <parent link="base_link"/>
+        <child link="laser_link"/>
+    </joint>
+
+    <xacro:rplidar prefix="laser"/>
+
+    <!-- kinect -->
+    <joint name="kinect_joint" type="fixed">
+        <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="0 0 0" />
+        <parent link="base_link"/>
+        <child link="kinect_link"/>
+    </joint>
+
+    <xacro:kinect_camera prefix="kinect"/>
+
+    <!-- sonar -->
+    <joint name="sonar_joint" type="fixed">
+        <origin xyz="${sonar_offset_x} ${sonar_offset_y} ${sonar_offset_z}" rpy="0 0 0" />
+        <parent link="base_link"/>
+        <child link="sonar_link"/>
+    </joint>
+
+    <xacro:sonar prefix="sonar"/>
+
+    <!-- velodyne -->
+    <joint name="velodyne_joint" type="fixed">
+        <origin xyz="${velodyne_offset_x} ${velodyne_offset_y} ${velodyne_offset_z}" rpy="0 0 0" />
+        <parent link="base_link"/>
+        <child link="velodyne_link"/>
+    </joint>
+
+    <xacro:velodyne prefix="velodyne"/>
+
+    <!-- imu -->
+    <xacro:imu prefix="imu"/>
+
+    <!-- gps -->
+    <xacro:gps prefix="gps"/>
+
+    <mbot_base_gazebo/>
+
+</robot>

@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS2basic/catkincommunicate/install
+
+Name: communicate
+Description: Description of communicate
+Version: 0.0.0
+Cflags: -I/home/wpr/code/VSLAM/ROS/ROS2basic/catkincommunicate/install/include
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS2basic/catkincommunicate/install/lib 
+Requires: roscpp rospy std_msgs message_runtime
