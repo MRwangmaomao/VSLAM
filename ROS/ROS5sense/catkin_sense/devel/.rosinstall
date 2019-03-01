@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/wpr/code/VSLAM/ROS/ROS5sense/catkin_sense/devel/setup.sh

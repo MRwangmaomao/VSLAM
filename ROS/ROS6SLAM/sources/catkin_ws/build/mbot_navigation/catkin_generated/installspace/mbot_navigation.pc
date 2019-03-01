@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_ws/install
+
+Name: mbot_navigation
+Description: Description of mbot_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_ws/install/lib 
+Requires: 

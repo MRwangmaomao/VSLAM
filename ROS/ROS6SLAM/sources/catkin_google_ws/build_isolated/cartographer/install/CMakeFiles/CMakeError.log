@@ -1,0 +1,39 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_google_ws/build_isolated/cartographer/install/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_32c5e"
+[1/2] Building C object CMakeFiles/cmTC_32c5e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_32c5e
+FAILED: : && /usr/bin/cc     CMakeFiles/cmTC_32c5e.dir/CheckSymbolExists.c.o  -o cmTC_32c5e  -rdynamic && :
+CMakeFiles/cmTC_32c5e.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+File /home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_google_ws/build_isolated/cartographer/install/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_google_ws/build_isolated/cartographer/install/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/ninja" "cmTC_ba462"
+[1/2] Building C object CMakeFiles/cmTC_ba462.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_ba462
+FAILED: : && /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create   CMakeFiles/cmTC_ba462.dir/CheckFunctionExists.c.o  -o cmTC_ba462  -rdynamic -lpthreads && :
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+

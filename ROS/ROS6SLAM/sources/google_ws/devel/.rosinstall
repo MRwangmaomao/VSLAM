@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/google_ws/devel/setup.sh

@@ -124,6 +124,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/arbotix_ros/arbotix_sensors/cmake_install.cmake")
   include("/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/arbotix_ros/arbotix_msgs/cmake_install.cmake")
   include("/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/mbot_teleop/cmake_install.cmake")
+  include("/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/mbot_gazebo/cmake_install.cmake")
   include("/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/mbot_description/cmake_install.cmake")
 
 endif()

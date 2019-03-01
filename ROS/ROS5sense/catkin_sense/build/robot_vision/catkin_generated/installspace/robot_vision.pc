@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS5sense/catkin_sense/install
+
+Name: robot_vision
+Description: Description of robot_vision
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS5sense/catkin_sense/install/lib 
+Requires: 

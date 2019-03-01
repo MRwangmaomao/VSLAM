@@ -1,0 +1,2 @@
+cartographer:cartographer_ros/cartographer_ros:cartographer_ros/cartographer_ros_msgs:cartographer_ros/cartographer_rviz:ceres-solver
+-DCATKIN_DEVEL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/google_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/google_ws/install -G Unix Makefiles
