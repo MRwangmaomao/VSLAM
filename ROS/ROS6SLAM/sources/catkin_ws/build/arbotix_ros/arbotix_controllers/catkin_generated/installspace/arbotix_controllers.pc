@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_ws/install
+
+Name: arbotix_controllers
+Description: Description of arbotix_controllers
+Version: 0.10.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_ws/install/lib 
+Requires: 

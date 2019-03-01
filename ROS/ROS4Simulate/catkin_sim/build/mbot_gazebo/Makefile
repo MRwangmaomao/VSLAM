@@ -271,6 +271,21 @@ control_toolbox_generate_messages_cpp/fast:
 .PHONY : control_toolbox_generate_messages_cpp/fast
 
 # Convenience name for target.
+mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/rule:
+	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/rule
+.PHONY : mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/rule
+
+# Convenience name for target.
+control_toolbox_gencfg: mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/rule
+
+.PHONY : control_toolbox_gencfg
+
+# fast build rule for target.
+control_toolbox_gencfg/fast:
+	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/build.make mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/build
+.PHONY : control_toolbox_gencfg/fast
+
+# Convenience name for target.
 mbot_gazebo/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
 .PHONY : mbot_gazebo/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
@@ -329,111 +344,6 @@ gazebo_ros_gencfg: mbot_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/rule
 gazebo_ros_gencfg/fast:
 	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/build.make mbot_gazebo/CMakeFiles/gazebo_ros_gencfg.dir/build
 .PHONY : gazebo_ros_gencfg/fast
-
-# Convenience name for target.
-mbot_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : mbot_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: mbot_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make mbot_gazebo/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/rule:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/rule
-.PHONY : mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/rule
-
-# Convenience name for target.
-control_toolbox_gencfg: mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/rule
-
-.PHONY : control_toolbox_gencfg
-
-# fast build rule for target.
-control_toolbox_gencfg/fast:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/build.make mbot_gazebo/CMakeFiles/control_toolbox_gencfg.dir/build
-.PHONY : control_toolbox_gencfg/fast
-
-# Convenience name for target.
-mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f CMakeFiles/Makefile2 mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build && $(MAKE) -f mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make mbot_gazebo/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 # Convenience name for target.
 mbot_gazebo/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
@@ -1365,17 +1275,11 @@ help:
 	@echo "... control_toolbox_generate_messages_lisp"
 	@echo "... control_toolbox_generate_messages_eus"
 	@echo "... control_toolbox_generate_messages_cpp"
+	@echo "... control_toolbox_gencfg"
 	@echo "... controller_manager_msgs_generate_messages_nodejs"
 	@echo "... controller_manager_msgs_generate_messages_lisp"
 	@echo "... controller_manager_msgs_generate_messages_cpp"
 	@echo "... gazebo_ros_gencfg"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... control_toolbox_gencfg"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... controller_manager_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"

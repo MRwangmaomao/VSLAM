@@ -467,6 +467,54 @@ nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 
+//Value Computed by CMake
+rbx1_BINARY_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/rbx1/rbx1
+
+//Value Computed by CMake
+rbx1_SOURCE_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/src/rbx1/rbx1
+
+//Value Computed by CMake
+rbx1_apps_BINARY_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/rbx1/rbx1_apps
+
+//Value Computed by CMake
+rbx1_apps_SOURCE_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/src/rbx1/rbx1_apps
+
+//Value Computed by CMake
+rbx1_bringup_BINARY_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/rbx1/rbx1_bringup
+
+//Value Computed by CMake
+rbx1_bringup_SOURCE_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/src/rbx1/rbx1_bringup
+
+//Value Computed by CMake
+rbx1_description_BINARY_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/rbx1/rbx1_description
+
+//Value Computed by CMake
+rbx1_description_SOURCE_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/src/rbx1/rbx1_description
+
+//Value Computed by CMake
+rbx1_dynamixels_BINARY_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/rbx1/rbx1_dynamixels
+
+//Value Computed by CMake
+rbx1_dynamixels_SOURCE_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/src/rbx1/rbx1_dynamixels
+
+//Value Computed by CMake
+rbx1_nav_BINARY_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/rbx1/rbx1_nav
+
+//Value Computed by CMake
+rbx1_nav_SOURCE_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/src/rbx1/rbx1_nav
+
+//Value Computed by CMake
+rbx1_speech_BINARY_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/rbx1/rbx1_speech
+
+//Value Computed by CMake
+rbx1_speech_SOURCE_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/src/rbx1/rbx1_speech
+
+//Value Computed by CMake
+rbx1_vision_BINARY_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/build/rbx1/rbx1_vision
+
+//Value Computed by CMake
+rbx1_vision_SOURCE_DIR:STATIC=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/src/rbx1/rbx1_vision
+
 //The directory containing a CMake configuration file for realtime_tools.
 realtime_tools_DIR:PATH=/opt/ros/kinetic/share/realtime_tools/cmake
 
@@ -647,7 +695,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

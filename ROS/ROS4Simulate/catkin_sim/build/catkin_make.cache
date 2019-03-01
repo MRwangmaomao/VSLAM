@@ -1,2 +1,2 @@
-arbotix_ros/arbotix:arbotix_ros/arbotix_controllers:arbotix_ros/arbotix_firmware:arbotix_ros/arbotix_msgs:arbotix_ros/arbotix_python:arbotix_ros/arbotix_sensors:mbot_description:mbot_gazebo:mbot_teleop
+arbotix_ros/arbotix:arbotix_ros/arbotix_controllers:arbotix_ros/arbotix_firmware:arbotix_ros/arbotix_msgs:arbotix_ros/arbotix_python:arbotix_ros/arbotix_sensors:mbot_description:mbot_gazebo:mbot_teleop:rbx1/rbx1:rbx1/rbx1_apps:rbx1/rbx1_bringup:rbx1/rbx1_description:rbx1/rbx1_dynamixels:rbx1/rbx1_nav:rbx1/rbx1_speech:rbx1/rbx1_vision
 -DCATKIN_DEVEL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel -DCMAKE_INSTALL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/install -G Unix Makefiles

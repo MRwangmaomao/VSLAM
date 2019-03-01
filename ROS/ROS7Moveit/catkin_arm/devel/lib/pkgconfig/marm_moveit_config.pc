@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS7Moveit/catkin_arm/devel
+
+Name: marm_moveit_config
+Description: Description of marm_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS7Moveit/catkin_arm/devel/lib 
+Requires: 

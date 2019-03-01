@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS7Moveit/catkin_arm/devel
+
+Name: marm_gazebo
+Description: Description of marm_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS7Moveit/catkin_arm/devel/lib 
+Requires: 

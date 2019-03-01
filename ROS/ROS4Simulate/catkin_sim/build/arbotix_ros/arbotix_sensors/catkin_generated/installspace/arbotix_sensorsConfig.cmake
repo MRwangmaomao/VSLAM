@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/install/lib;/home/wpr/catkin/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/install/lib;/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_rbx1/devel/lib;/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_ws/devel/lib;/home/wpr/catkin/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

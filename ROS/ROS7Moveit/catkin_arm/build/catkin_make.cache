@@ -1,0 +1,2 @@
+marm_description:marm_gazebo:marm_moveit_config:marm_planning
+-DCATKIN_DEVEL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS7Moveit/catkin_arm/devel -DCMAKE_INSTALL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS7Moveit/catkin_arm/install -G Unix Makefiles

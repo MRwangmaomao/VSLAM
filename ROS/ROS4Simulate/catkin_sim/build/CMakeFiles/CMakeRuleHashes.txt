@@ -5,6 +5,8 @@
 22b731990163118b93b2d748ac1de490 /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/include/arbotix_msgs/Relax.h
 53f2fbea9323dab47d76870a314a2e00 /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/include/arbotix_msgs/SetSpeed.h
 55331fbd2bb373d8cda7e1daa46f0f41 /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/include/arbotix_msgs/SetupChannel.h
+5831911df5d692e39b4aa29b8356873c /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/include/rbx1_nav/CalibrateAngularConfig.h
+165c26a53022303f8c012fe867f727aa /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/include/rbx1_nav/CalibrateLinearConfig.h
 9252501812e5516559286ab2904a57d0 /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/lib/python2.7/dist-packages/arbotix_msgs/msg/_Analog.py
 42fc5c1fc0fba80ccabdf36d0f50685e /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/lib/python2.7/dist-packages/arbotix_msgs/msg/_Digital.py
 22011ce9707660e47f3df1ef90a4346e /home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/lib/python2.7/dist-packages/arbotix_msgs/msg/__init__.py
@@ -44,3 +46,4 @@ b42348d8098921f32f681759b3098422 arbotix_ros/arbotix_msgs/CMakeFiles/_arbotix_ms
 80f1c81e74f61b3888b6b4fa1ed04d23 arbotix_ros/arbotix_msgs/CMakeFiles/arbotix_msgs_generate_messages_lisp
 80f1c81e74f61b3888b6b4fa1ed04d23 arbotix_ros/arbotix_msgs/CMakeFiles/arbotix_msgs_generate_messages_nodejs
 80f1c81e74f61b3888b6b4fa1ed04d23 arbotix_ros/arbotix_msgs/CMakeFiles/arbotix_msgs_generate_messages_py
+d0b4d3815b843d2cc0f945efb26a6ecf rbx1/rbx1_nav/CMakeFiles/rbx1_nav_gencfg

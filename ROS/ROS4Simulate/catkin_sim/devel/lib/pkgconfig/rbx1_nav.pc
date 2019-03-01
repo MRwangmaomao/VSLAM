@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel
+
+Name: rbx1_nav
+Description: Description of rbx1_nav
+Version: 0.4.0
+Cflags: -I/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/include
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/devel/lib 
+Requires: dynamic_reconfigure

@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS7Moveit/catkin_arm/install
+
+Name: marm_planning
+Description: Description of marm_planning
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS7Moveit/catkin_arm/install/lib 
+Requires: 

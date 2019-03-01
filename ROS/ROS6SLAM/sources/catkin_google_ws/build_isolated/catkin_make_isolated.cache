@@ -1,2 +1,0 @@
-cartographer:cartographer_ros/cartographer_ros:cartographer_ros/cartographer_ros_msgs:cartographer_ros/cartographer_rviz:ceres-solver
--G Ninja -DCATKIN_DEVEL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_google_ws/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_google_ws/install_isolated

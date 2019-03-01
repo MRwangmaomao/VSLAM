@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/install
+
+Name: rbx1_dynamixels
+Description: Description of rbx1_dynamixels
+Version: 0.4.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS4Simulate/catkin_sim/install/lib 
+Requires: 

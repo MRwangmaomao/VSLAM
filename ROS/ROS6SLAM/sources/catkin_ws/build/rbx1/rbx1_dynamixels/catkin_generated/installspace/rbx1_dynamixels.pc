@@ -1,0 +1,8 @@
+prefix=/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_ws/install
+
+Name: rbx1_dynamixels
+Description: Description of rbx1_dynamixels
+Version: 0.4.0
+Cflags: 
+Libs: -L/home/wpr/code/VSLAM/ROS/ROS6SLAM/sources/catkin_ws/install/lib 
+Requires: 
