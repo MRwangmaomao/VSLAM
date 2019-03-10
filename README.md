@@ -11,7 +11,7 @@
 ----
 
 ## SLAM Overview
-
+[波士顿等移动机器人的视觉算法解析](https://www.roboticschina.com/news/2346.html)
 ----
 ## SLAM-Book 14 lesson
 
