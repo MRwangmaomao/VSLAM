@@ -1,5 +1,45 @@
 # VSLAM
 ----
+## 综述
+[关于slam](https://blog.csdn.net/yimingsilence/article/details/51701944)
+
+[SLAM简介](https://zhuanlan.zhihu.com/p/21381490)
+
+[SLAM的前世今生 终于有人说清楚了](https://www.leiphone.com/news/201605/5etiwlnkWnx7x0zb.html)
+
+[SLAM第一篇：基础知识](https://www.leiphone.com/news/201609/iAe3f8qmRHXavgSl.html?viewType=weixin)
+
+[移动机器人视觉里程计综述](http://html.rhhz.net/ZDHXBZWB/html/2018-3-385.htm#outline_anchor_20)
+
+
+
+## 基础知识
+### 数学基础
+
+半闲居士系列：
+
+* [视觉SLAM中的数学基础 第一篇](http://www.cnblogs.com/gaoxiang12/p/5113334.html)--3D空间的位置表示
+* [视觉SLAM中的数学基础 第二篇](http://www.cnblogs.com/gaoxiang12/p/5120175.html)--四元数
+* [视觉SLAM中的数学基础 第三篇](http://www.cnblogs.com/gaoxiang12/p/5137454.html)--李群与李代数
+
+PCL点云:
+* [如何查找和利用PCL库学习资源的一些心得](https://blog.csdn.net/shine_cherise/article/details/79285162)
+* [具体案例源码参考](https://github.com/Ewenwan/MVision/tree/master/PCL_APP/Basic)
+* 
+
+图优化：
+* [graph slam tutorial : 从推导到应用1](https://blog.csdn.net/heyijia0327/article/details/47686523)
+* [graph slam tutorial ：从推导到应用２](https://blog.csdn.net/heyijia0327/article/details/47731631)
+* 
+## 提升
+
+## 优秀文章
+
+## 大牛实验室和组织的网站
+
+## VSLAM方案
+
+
 ## Vision SLAM study and research
 
 |适用类型|方案|代码注释|  
