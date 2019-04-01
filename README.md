@@ -16,6 +16,9 @@
 
 [那些珍贵的「视觉SLAM」课程资料总结（补充版/完整版）](https://mp.weixin.qq.com/s/kAdGdWDlw15ZmLzG56DOOA)
 
+[漫谈SLAM技术（上）](https://cloud.tencent.com/developer/article/1005894) 
+[漫谈SLAM技术（下）](https://cloud.tencent.com/developer/article/1005893)
+
 ## 比较好的学习平台
 
 [B站泡泡机器人](http://space.bilibili.com/38737757/#!/)
@@ -25,6 +28,11 @@
 [易科机器人实验室](http://blog.exbot.net/)
 
 [Awesome SLAM](https://github.com/kanster/awesome-slam#courses-lectures-and-workshops)
+
+[图像处理与计算机视觉](http://www.ipcv.org/)
+
+[大牛的博客](https://github.com/antkillerfarm/antkillerfarm.github.com)
+
 
 ----
 ## 基础知识
@@ -57,35 +65,43 @@ Marginalization
 
 BA优化
 
+[ROS学习](ROS/readme.md)
 
-半闲居士系列：
-
+半闲居士系列
 * [视觉SLAM中的数学基础 第一篇](http://www.cnblogs.com/gaoxiang12/p/5113334.html)--3D空间的位置表示
 * [视觉SLAM中的数学基础 第二篇](http://www.cnblogs.com/gaoxiang12/p/5120175.html)--四元数
 * [视觉SLAM中的数学基础 第三篇](http://www.cnblogs.com/gaoxiang12/p/5137454.html)--李群与李代数
 
-PCL点云:
+PCL点云
 * [如何查找和利用PCL库学习资源的一些心得](https://blog.csdn.net/shine_cherise/article/details/79285162)
 * [具体案例源码参考](https://github.com/Ewenwan/MVision/tree/master/PCL_APP/Basic)
 * 
 
-图优化：
+图优化
 * [graph slam tutorial : 从推导到应用1](https://blog.csdn.net/heyijia0327/article/details/47686523)
 * [graph slam tutorial ：从推导到应用２](https://blog.csdn.net/heyijia0327/article/details/47731631)
 
 [找工作面试准备](aboutInteview.md)
 
+[图像处理基本算法代码](http://www.cnblogs.com/Imageshop/p/3430742.html)
+
 ![slam脑图](application/image/SLAM脑图.jpg) 
 
 ----
 ## 提升
-
-[一个简单的视觉里程计实现]()
- 
+  
 [一起做RGB-D SLAM](http://www.cnblogs.com/gaoxiang12/p/4462518.html)
-## 优秀文章
+
 
 [SLAM代码（设计模式）](https://blog.csdn.net/wendox/article/details/53454768)和[SLAM代码（设计模式2）](https://blog.csdn.net/wendox/article/details/53489982)
+
+[视觉跟踪算法](https://github.com/DragonFive/opencv_TLD)
+
+[有代码的论文](https://github.com/Ewenwan/pwc#2017)
+
+
+## 优秀文章
+
 
 ## 大牛实验室和组织的网站
 [机器人领域牛人列表](http://www.slamcn.org/index.php/%E6%9C%BA%E5%99%A8%E4%BA%BA%E9%A2%86%E5%9F%9F%E7%89%9B%E4%BA%BA%E5%88%97%E8%A1%A8)
