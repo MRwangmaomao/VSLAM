@@ -24,6 +24,8 @@ pnp
 
 随机抽样一致性算法
 
+
+![slam脑图](application/image/SLAM脑图.jpg)
 ### 数学基础
 
 半闲居士系列：
