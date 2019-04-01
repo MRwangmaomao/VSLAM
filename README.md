@@ -14,6 +14,16 @@
 
 
 ## 基础知识
+
+三维空间的刚体运动
+相机参数标定
+高斯牛顿，LM非线性优化方法
+pnp
+
+特征点提取
+
+随机抽样一致性算法
+
 ### 数学基础
 
 半闲居士系列：
@@ -51,7 +61,9 @@ PCL点云:
 ----
 
 ## SLAM Overview
+
 [波士顿等移动机器人的视觉算法解析](https://www.roboticschina.com/news/2346.html)
+
 ----
 ## SLAM-Book 14 lesson
 
